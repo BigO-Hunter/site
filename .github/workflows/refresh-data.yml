@@ -12,7 +12,7 @@ jobs:
   refresh:
     if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     env:
       BIGOSPEEDRUN_DATA_DIR: data
     permissions:
@@ -40,12 +40,15 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: .refresh-venv/bin/python data/refresh.py
+      # A writer step ends its whole process group before its step timeout (timeout, then SIGKILL after 20 s):
+      # on 2026-10-31 (run 41247474659) the direct import outlived its step and wrote a board and a source
+      # file while the tests ran. The guard step below fails the job if any writer is still alive.
       - name: Refresh direct submission issues and PRs
         continue-on-error: true
-        timeout-minutes: 8
+        timeout-minutes: 15
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: .refresh-venv/bin/python data/direct_refresh.py
+        run: timeout -k 20s 14m .refresh-venv/bin/python data/direct_refresh.py
       # Anonymous GETs to prove2.me campaign pages and the formalpedia export. A held
       # board keeps its last import and exits 0; data/prove2me.json records the hold and
       # the dead-man check (watch repo, prove2me-import) alerts the lead from it.
@@ -53,7 +56,7 @@ jobs:
         id: prove2me
         continue-on-error: true
         timeout-minutes: 5
-        run: .refresh-venv/bin/python data/prove2me_import.py
+        run: timeout -k 20s 4m .refresh-venv/bin/python data/prove2me_import.py
       # One GET per review pull request of an Other bounds row that is not merged yet
       # (data/other_reviews.py): a merge turns the claim into Human Verified at the next build.
       - name: Read the status of the review pull requests
@@ -61,7 +64,7 @@ jobs:
         timeout-minutes: 3
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: .refresh-venv/bin/python data/other_reviews.py
+        run: timeout -k 20s 2m .refresh-venv/bin/python data/other_reviews.py
       # The platypii Lean note on the IM OpenAI row (data/platypii_lean.py, GET only). A
       # network failure keeps the last state; a held check fails the review step.
       - name: Check the platypii Lean note
@@ -69,7 +72,15 @@ jobs:
         timeout-minutes: 5
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: .refresh-venv/bin/python data/platypii_lean.py
+        run: timeout -k 20s 4m .refresh-venv/bin/python data/platypii_lean.py
+      # No writer may still run: validate and the tests below read data that must not change under them. The
+      # bracket keeps pgrep from matching this step's own shell.
+      - name: Fail if a data writer still runs
+        run: |
+          if pgrep -af '[d]ata/(direct_refresh|prove2me_import|platypii_lean|other_reviews)\.py'; then
+            echo 'A data writer is still running after its step ended.'
+            exit 1
+          fi
       # A new result that jumps implausibly past the published best leaves its board
       # until the lead approves it in data/review-decisions.json (data/review_hold.py).
       - name: Hold implausible new results for lead review
