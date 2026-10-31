@@ -872,6 +872,47 @@
         "checked_at": "2026-10-22T13:32:43.335095Z",
         "receipt_path": "sources/direct-pr-41-39777069258-1-final.json"
       }
+    },
+    {
+      "id": "direct-pr-90",
+      "kind": "improvement",
+      "score": "30201659/10000000000",
+      "score_relation": "attained",
+      "tier": "verified",
+      "submitted_at": "2026-10-31T21:56:15Z",
+      "spec_version": "1",
+      "title": "zeph1912 direct dft submission",
+      "authors": [
+        {
+          "name": "zeph1912",
+          "url": "https://github.com/zeph1912"
+        }
+      ],
+      "predecessors": [],
+      "submission_url": "https://github.com/bigospeedrun/verifier/pull/90",
+      "source_commit": "3ec9ac7ba29d72991eaa07b4c2b46b1a4adcaa2a",
+      "artifact": {
+        "path": "sources/direct-pr-90-submission.json",
+        "sha256": "96052139a5e33b5c955310dee696ba326639b51af990d855795b0cd137018672"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/bigospeedrun/verifier/pull/90",
+        "theorem": "Race.bound",
+        "certificate_path": null
+      },
+      "dependencies": [],
+      "upstream_status": "merged",
+      "upstream_status_at": "2026-10-31T23:09:43Z",
+      "site_observed_at": "2026-10-31T23:25:43Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/bigospeedrun/verifier/blob/3ec9ac7ba29d72991eaa07b4c2b46b1a4adcaa2a/submissions/dft/zeph1912-rank-moment-refinement/Submission.lean"
+      },
+      "rerun_status": {
+        "state": "passed",
+        "checked_at": "2026-10-31T23:09:28.196940Z",
+        "receipt_path": "sources/direct-pr-90-41247474839-1-lean.json"
+      }
     }
   ],
   "record_metadata": {
@@ -1294,7 +1335,26 @@
       "credit_note": "This is HalitZiyaKARTAL's own Lean Verified 26159999/10000000000 proof (submission #40) with different Fourier and certificate files, which raises the proved saving to 0.0030103. The construction is Jacob Sussman's (submission #29): 348 of this proof's 430 files are byte-identical to his, and HalitZiyaKARTAL changed the other 82, which hold the Fourier files, the certificate data and the exported bound.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39777069258",
       "verification": "passed"
+    },
+    "direct-pr-90": {
+      "checked_at": "2026-10-31",
+      "source_url": "https://github.com/bigospeedrun/verifier/blob/3ec9ac7ba29d72991eaa07b4c2b46b1a4adcaa2a/submissions/dft/zeph1912-rank-moment-refinement/Submission.lean",
+      "repo": "bigospeedrun/verifier",
+      "site_badge": false,
+      "eligible_for_record": true,
+      "proof_status": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+      "upstream_tier": "verified",
+      "site_tier": "verified",
+      "comparison_key": "exact-dft/uniform-exact-arithmetic/v1",
+      "publication_date": "2026-10-31T21:56:15Z",
+      "publication_date_precision": "date-time",
+      "publication_date_role": "Submission opened",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/90",
+      "direct_submission": true,
+      "route": "pull_request",
+      "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41247474839",
+      "verification": "passed"
     }
   },
-  "updated_at": "2026-10-31T00:29:04Z"
+  "updated_at": "2026-10-31T23:25:43Z"
 }

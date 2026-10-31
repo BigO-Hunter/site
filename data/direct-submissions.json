@@ -1091,6 +1091,36 @@
         "source_file": "Submission.lean"
       }
     },
+    "direct-pr-90": {
+      "route": "pull_request",
+      "submission": {
+        "schema_version": 1,
+        "problem": "dft",
+        "bound": "30201659/10000000000",
+        "repo_url": "https://github.com/bigospeedrun/verifier",
+        "commit": "3ec9ac7ba29d72991eaa07b4c2b46b1a4adcaa2a",
+        "authors": [],
+        "source_subdir": "submissions/dft/zeph1912-rank-moment-refinement"
+      },
+      "verification": {
+        "decision": "lean-verified",
+        "reason": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+        "checked_at": "2026-10-31T23:09:28.196940Z",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41247474839",
+        "receipt_path": "sources/direct-pr-90-41247474839-1-lean.json",
+        "receipt_sha256": "0c682a2286ccd38cc34143b6304d44ba70f5f1a7fa6053d7405e537d8d4a8439",
+        "policy_hash": "ba11ed684455cf40ede7170f29d041e8c845dd6155cc9d4fb0b8ee1511ad4847",
+        "result_artifact_id": 13061466660,
+        "controller_fingerprint": "28d75d18abd8ebec27c85d6ca695246f60df30e7b928f78c9670e2103a72ca39",
+        "pr_identity": {
+          "number": 90,
+          "head": "3ec9ac7ba29d72991eaa07b4c2b46b1a4adcaa2a",
+          "changed_files_sha256": "6fac40de152b7f4bd7ff54c3ade904977ac2b2a255d7f61d1715b20101edb0b4",
+          "controller": "3da05dadea41d09965962584aa1c9e951e3601de"
+        },
+        "source_file": "Submission.lean"
+      }
+    },
     "direct-pr-52": {
       "route": "pull_request",
       "submission": {

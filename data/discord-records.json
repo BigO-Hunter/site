@@ -4257,7 +4257,7 @@
         "slug": "exact-dft",
         "name": "Fourier Transform",
         "url": "https://bigospeedrun.com/exact-dft",
-        "leader": "direct-pr-41",
+        "leader": "direct-pr-90",
         "direction": "higher",
         "records": [
           {
@@ -4441,6 +4441,16 @@
               "Halit Ziya KARTAL"
             ],
             "bound": "O(n log^(1 - 0.0030103) n)"
+          },
+          {
+            "id": "direct-pr-90",
+            "score": "30201659/10000000000",
+            "relation": "attained",
+            "evidence": "Lean Verified",
+            "authors": [
+              "Zhihao \"Zephyr\" Yao"
+            ],
+            "bound": "O(n log^(1 - 0.0030201659) n)"
           }
         ],
         "table": "big-o"
@@ -6677,7 +6687,8 @@
     "[\"other-block-sensitivity\",\"prove2me-2-13981:2.13981\",\"2.13981\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6167\",\"625729/200000000\",\"attained\"]:record",
     "[\"other-binary-polynomial-multiplication\",\"arpcs:1/274877906944\",\"1/274877906944\",\"attained\"]:record",
-    "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:7/2\",\"7/2\",\"attained\"]:record"
+    "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:7/2\",\"7/2\",\"attained\"]:record",
+    "[\"exact-dft\",\"direct-pr-90\",\"30201659/10000000000\",\"attained\"]:lean"
   ],
   "deferred": [
     {
