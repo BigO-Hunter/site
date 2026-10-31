@@ -77,7 +77,7 @@ jobs:
       # bracket keeps pgrep from matching this step's own shell.
       - name: Fail if a data writer still runs
         run: |
-          if pgrep -af '[d]ata/(direct_refresh|prove2me_import|platypii_lean|other_reviews)\.py'; then
+          if pgrep -af '[d]ata/(direct_refresh|prove2me_import|platypii_lean|other_reviews)\.py|[s]cripts/(refresh-authors\.mjs|discord-records\.ts|x-records\.ts)'; then
             echo 'A data writer is still running after its step ended.'
             exit 1
           fi
@@ -98,7 +98,14 @@ jobs:
         timeout-minutes: 3
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: node scripts/refresh-authors.mjs
+        run: timeout -k 20s 2m node scripts/refresh-authors.mjs
+      # The same guard after each step that writes or sends: build, commit and the post logs must not race it.
+      - name: Fail if the author refresh still runs
+        run: |
+          if pgrep -af '[d]ata/(direct_refresh|prove2me_import|platypii_lean|other_reviews)\.py|[s]cripts/(refresh-authors\.mjs|discord-records\.ts|x-records\.ts)'; then
+            echo 'A writer or sender is still running after its step ended.'
+            exit 1
+          fi
       - name: Check, test, and build
         run: |
           npm run check
@@ -134,7 +141,14 @@ jobs:
         env:
           DISCORD_RECORDS_WEBHOOK: ${{ secrets.DISCORD_RECORDS_WEBHOOK }}
           DISCORD_RECORDS_OTHER_WEBHOOK: ${{ secrets.DISCORD_RECORDS_OTHER_WEBHOOK }}
-        run: node --experimental-strip-types scripts/discord-records.ts send "$RUNNER_TEMP/discord-records.json"
+        run: timeout -k 20s 2m node --experimental-strip-types scripts/discord-records.ts send "$RUNNER_TEMP/discord-records.json"
+      - name: Fail if the Discord sender still runs
+        if: ${{ always() && steps.records-send.outcome != 'skipped' && steps.records-send.outcome != '' }}
+        run: |
+          if pgrep -af '[d]ata/(direct_refresh|prove2me_import|platypii_lean|other_reviews)\.py|[s]cripts/(refresh-authors\.mjs|discord-records\.ts|x-records\.ts)'; then
+            echo 'A writer or sender is still running after its step ended.'
+            exit 1
+          fi
       - name: Commit accepted record posts
         if: ${{ always() && steps.records-send.outcome != 'skipped' && steps.records-send.outcome != '' }}
         env:
@@ -185,7 +199,14 @@ jobs:
           X_API_KEY_SECRET: ${{ secrets.X_API_KEY_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-        run: node --experimental-strip-types scripts/x-records.ts send "$RUNNER_TEMP/x-records.json"
+        run: timeout -k 20s 2m node --experimental-strip-types scripts/x-records.ts send "$RUNNER_TEMP/x-records.json"
+      - name: Fail if the X sender still runs
+        if: ${{ always() && steps.x-send.outcome != 'skipped' && steps.x-send.outcome != '' }}
+        run: |
+          if pgrep -af '[d]ata/(direct_refresh|prove2me_import|platypii_lean|other_reviews)\.py|[s]cripts/(refresh-authors\.mjs|discord-records\.ts|x-records\.ts)'; then
+            echo 'A writer or sender is still running after its step ended.'
+            exit 1
+          fi
       - name: Commit X delivery results
         if: ${{ always() && steps.x-send.outcome != 'skipped' && steps.x-send.outcome != '' }}
         env:
