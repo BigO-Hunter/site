@@ -965,8 +965,8 @@
     "id": "2116560776617927077"
   },
   "[\"exact-dft\",\"direct-pr-90\",\"30201659/10000000000\",\"attained\"]:lean": {
-    "status": "unknown",
-    "at": "2026-10-31T23:30:12.770Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-10-31T23:30:14.451Z",
+    "id": "2116674134897782881"
   }
 }
