@@ -6334,6 +6334,54 @@
             "display": "O(n\\log^{1-2^{-38}}n)"
           }
         ]
+      },
+      {
+        "slug": "other-explicit-circuit-lower-bound",
+        "name": "Explicit circuit lower bound",
+        "url": "https://bigospeedrun.com/other/explicit-circuit-lower-bound",
+        "leader": "mishra-santhanam:7/2",
+        "table": "other-bounds",
+        "direction": "higher",
+        "records": [
+          {
+            "id": "find-golovnev-hirsch-kulikov:259/86",
+            "score": "259/86",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Magnus Gausdal Find",
+              "Alexander Golovnev",
+              "Edward Hirsch",
+              "Alexander Kulikov"
+            ],
+            "bound": "(3+tfrac186)n-o(n)",
+            "display": "(3+\\tfrac{1}{86})n-o(n)"
+          },
+          {
+            "id": "li-yang:31/10",
+            "score": "31/10",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Jiatu Li",
+              "Tianqi Yang"
+            ],
+            "bound": "3.1n-o(n)",
+            "display": "3.1n-o(n)"
+          },
+          {
+            "id": "mishra-santhanam:7/2",
+            "score": "7/2",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Om Swostik Mishra",
+              "Rahul Santhanam"
+            ],
+            "bound": "3.5n-o(n)",
+            "display": "3.5n-o(n)"
+          }
+        ]
       }
     ]
   },
@@ -6628,7 +6676,8 @@
     "[\"other-catalan\",\"direct-issue-87:6602911/12500\",\"6602911/12500\",\"attained\"]:lean",
     "[\"other-block-sensitivity\",\"prove2me-2-13981:2.13981\",\"2.13981\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6167\",\"625729/200000000\",\"attained\"]:record",
-    "[\"other-binary-polynomial-multiplication\",\"arpcs:1/274877906944\",\"1/274877906944\",\"attained\"]:record"
+    "[\"other-binary-polynomial-multiplication\",\"arpcs:1/274877906944\",\"1/274877906944\",\"attained\"]:record",
+    "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:7/2\",\"7/2\",\"attained\"]:record"
   ],
   "deferred": [
     {
