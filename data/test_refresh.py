@@ -661,6 +661,10 @@ class RefreshTests(unittest.TestCase):
         # Hourly imports create receipt files before this test and before commit.
         # Copy those files too, because current board JSON already references them.
         tracked=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard'],cwd=source,text=True).splitlines()
+        # Read every file once, now. A writer that runs while this test runs (the direct import, if it outlives its step
+        # timeout) can change a board and add a source file between the two subtests: the second copy would then hold a
+        # board that names a file the listing above did not (run 41247474659, 2026-10-31).
+        snapshot={rel:(source/rel).read_bytes() for rel in tracked}
         def api(path,params=None):
             if path.endswith('/pulls'):return []  # incremental listing: nothing updated
             repo='/'.join(path.split('/')[1:3]);suffix='__head.json' if '/commits/' in path else '__repo.json'
@@ -683,7 +687,7 @@ class RefreshTests(unittest.TestCase):
             with self.subTest(nested=nested),tempfile.TemporaryDirectory(dir=refresh.git_state_dir()) as temp:
                 repo=Path(temp);data=repo/'data' if nested else repo;data.mkdir(exist_ok=True)
                 for rel in tracked:
-                    target=data/rel;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source/rel,target)
+                    target=data/rel;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(snapshot[rel])
                 intake=refresh.load(data,'sources/intake.json');intake.pop('fingerprint',None);refresh.dump(data,'sources/intake.json',intake)
                 def git(*args):return subprocess.run(['git',*args],cwd=repo,check=True,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
                 git('init','-q');git('add','.')
