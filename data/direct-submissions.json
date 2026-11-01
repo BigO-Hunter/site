@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-95": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "catalan",
+        "repo_url": "https://github.com/darkhipo/catalan-constant-gen5",
+        "commit": "e6e7bf6797eddf2561798e76ca3f64cb67291f89",
+        "bound": "5282327/10000",
+        "authors": []
+      }
+    },
     "direct-issue-93": {
       "route": "issue",
       "submission": {
@@ -3403,6 +3414,11 @@
     "61": {
       "version": "b49554ccdc4a0a7ef8d1bd81b8a98a22ccc2616d6b7d689f5ddfec03f71bdc65",
       "updated_at": "2026-10-25T01:56:56Z",
+      "not_verified": false
+    },
+    "95": {
+      "version": "525895f3e4ad6b4b5b9e0f0954789678669678755a1bcde4d320897e036873db",
+      "updated_at": "2026-11-01T20:10:38Z",
       "not_verified": false
     }
   }
