@@ -1,5 +1,6 @@
 import {readFileSync, writeFileSync, renameSync, mkdirSync, existsSync, unlinkSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {avatarDue, avatarCheckedAt} from './avatar-due.mjs';
 
 // Public profile fields only. A failed lookup preserves the last checked profile.
 const destination = 'src/lib/author-profiles.json';
@@ -21,10 +22,13 @@ const removeAvatar = key => {
  if (path && existsSync(path)) unlinkSync(path);
  delete avatars[key];
 };
-async function refreshAvatar(key, profile) {
+async function refreshAvatar(key, profile, checkedAt) {
  if (!/^[a-z0-9-]+$/.test(key)) return;
  // Organization accounts (OpenAI, Anthropic, community repos) show initials, not a logo.
  if (profile.type !== 'User') return removeAvatar(key);
+ // At most one download per login every 7 days (scripts/avatar-due.mjs): the CDN's two encodings of one
+ // picture would otherwise change the site build, and the image, every hour.
+ if (!avatarDue({login: key, have: avatars[key], fileExists: avatars[key] && existsSync(`public${avatars[key]}`), checkedAt, now: Date.now()})) return 'kept';
  const url = new URL(profile.avatar_url);
  if (url.protocol !== 'https:' || url.hostname !== 'avatars.githubusercontent.com') throw new Error('Unexpected avatar host');
  // GitHub resizes on its side; 48 px covers the largest mark at twice its size.
@@ -35,10 +39,11 @@ async function refreshAvatar(key, profile) {
  const type = imageType(bytes);
  if (!type || bytes.length > 200000) throw new Error('Unexpected avatar file');
  const path = `/avatars/${key}-${createHash('sha256').update(bytes).digest('hex').slice(0, 10)}.${type}`;
- if (avatars[key] === path && existsSync(`public${path}`)) return;
+ if (avatars[key] === path && existsSync(`public${path}`)) return 'fetched';
  removeAvatar(key);
  writeFileSync(`public${path}`, bytes);
  avatars[key] = path;
+ return 'fetched';
 }
 const logins = new Set(['dugongue']);
 // Supporters are kept by hand in src/lib/supporters.json; their avatars self-host like the others.
@@ -59,14 +64,18 @@ for (const login of [...logins].sort()) {
     const response = await fetch(`https://api.github.com/users/${encodeURIComponent(login)}`, {headers, signal: AbortSignal.timeout(15000)});
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const profile = await response.json();
-    profiles[login.toLowerCase()] = {
+    const key = login.toLowerCase();
+    const avatarAt = profiles[key]?.avatar_checked_at;
+    profiles[key] = {
       login: profile.login,
       name: profile.name?.trim() || profile.login,
       twitter_username: /^[a-zA-Z0-9_]{1,15}$/.test(profile.twitter_username ?? '') ? profile.twitter_username : null,
       checked_at: new Date().toISOString(),
+      ...(avatarAt ? {avatar_checked_at: avatarAt} : {}),
     };
     // A failed avatar download keeps the last copy; the profile above stays current.
-    await refreshAvatar(login.toLowerCase(), profile).catch(error => console.warn(`Could not refresh avatar for ${login}: ${error.message}`));
+    const outcome = await refreshAvatar(key, profile, avatarAt).catch(error => console.warn(`Could not refresh avatar for ${login}: ${error.message}`));
+    if (outcome === 'fetched') profiles[key].avatar_checked_at = avatarCheckedAt(key, Date.now(), avatarAt);
   } catch {
     failures++;
     console.warn(`Could not refresh public profile for ${login}; retained cached profile or login fallback.`);
