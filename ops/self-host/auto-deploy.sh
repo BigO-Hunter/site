@@ -23,9 +23,16 @@
 #   BOS_TAG             the tag to follow; optional, default main. A rehearsal follows
 #                       rehearsal-good or rehearsal-bad (site-image-rehearsal.yml), which
 #                       never move main.
+# Old images: nothing else removes the images a deploy pulls, and about 30 a day pile up. After a
+# SUCCESSFUL deploy (never after a rollback, in a stopped or held tick) the tick removes the old images
+# of BOS_IMAGE and of nothing else (a Wall Game or Hosted image never matches the repository name). It
+# keeps the running image, the rollback image (previous.env) and the 5 newest, removes at most 25 per
+# tick, one at a time, never with -f and never with docker system or image prune, and logs each removal.
+#   auto-deploy.sh --prune-images [--apply] [--max N]
+# lists what a tick would remove (dry run); --apply removes up to N (default 25) under the deploy lock.
 # For a local run and the tests: BOS_ROOT, BOS_ENV_DIR, BOS_UNIT_DIR, BOS_SYSTEMCTL,
 # BOS_DOCKER, BOS_REGISTRY (registry base URL), BOS_GITHUB_API, BOS_PROBE (a command that
-# prints the running image digest, instead of asking Docker), BOS_SOCKET.
+# prints the running image digest, instead of asking Docker), BOS_SOCKET, BOS_PRUNE_SLEEP.
 set -euo pipefail
 umask 077
 
@@ -40,6 +47,11 @@ main() {
   socket=${BOS_SOCKET:-/run/bigospeedrun/site.sock}
   here=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
   state=$root/auto-deploy
+
+  if [[ ${1:-} == --prune-images ]]; then
+    prune_command "${@:2}"
+    return
+  fi
 
   # The status fields. `result` is this tick's outcome; the attempt fields are the last
   # deploy attempt's, kept across ticks. `deployed` and `target` are commits (the image's
@@ -78,6 +90,10 @@ main() {
 
   select_target || return 0
   deploy_target
+  if [[ $result == deployed ]]; then
+    write_status # the deploy result is visible before the clean-up starts
+    prune_images apply "${BOS_PRUNE_MAX:-25}" "$digest" || true
+  fi
 }
 
 say() { printf '%s auto-deploy: %s\n' "$(date -u +%FT%TZ)" "$*"; }
@@ -299,6 +315,81 @@ deploy_target() {
     fi
   fi
   echo "$result" >"$state/attempt-result"
+}
+
+# Remove the old images of $image. $1 is apply or dry-run, $2 the most to remove, $3 the digest of the deploy
+# target (kept even when it is not among the newest: a pending image is never removed before it deploys).
+# A failure here is logged and never changes the deploy result.
+prune_images() {
+  local mode=$1 max=$2 target=${3:-} rows created repo digest keep seen=" " newest=0 kept=0 removed=0 failed=0 left=0 wrap=()
+  # previous.env is absent until the first deploy of this install; sed then fails, which is not an error here.
+  keep=" $(release_digest "$root/release.env" || true) $(release_digest "$root/previous.env" || true) "
+  [[ $target =~ ^sha256:[0-9a-f]{64}$ ]] && keep+="$target "
+  command -v nice >/dev/null && wrap+=(nice -n 19)
+  command -v ionice >/dev/null && wrap+=(ionice -c 3)
+  command -v timeout >/dev/null && wrap+=(timeout 120)
+  if ! rows=$("$docker" image ls --no-trunc --digests --format '{{.CreatedAt}}|{{.Repository}}|{{.Digest}}' "$image" 2>/dev/null); then
+    say "prune: could not list the images of $image"
+    return 1
+  fi
+  # Newest first, by the time as a number: the text carries a zone that changes with daylight saving time.
+  # A time that does not parse counts as the newest, so such an image is kept.
+  rows=$(while IFS='|' read -r created repo digest; do
+    stamp=$(date -d "${created% *}" +%s 2>/dev/null) || stamp=9999999999
+    printf '%s|%s|%s|%s\n' "$stamp" "$created" "$repo" "$digest"
+  done <<<"$rows" | sort -t'|' -k1,1nr)
+  while IFS='|' read -r stamp created repo digest; do
+    # Only this repository, by its exact name, and only a real digest.
+    [[ $repo == "$image" && $digest =~ ^sha256:[0-9a-f]{64}$ && $seen != *" $digest "* ]] || continue
+    seen+="$digest "
+    if [[ $keep == *" $digest "* ]]; then
+      kept=$((kept + 1))
+      continue
+    fi
+    if ((newest < 5)); then
+      newest=$((newest + 1)); kept=$((kept + 1))
+      continue
+    fi
+    if ((removed + failed >= max)); then
+      left=$((left + 1))
+      continue
+    fi
+    if [[ $mode != apply ]]; then
+      say "prune: would remove $image@$digest (created $created)"
+      removed=$((removed + 1))
+      continue
+    fi
+    if "${wrap[@]}" "$docker" image rm "$image@$digest" >/dev/null 2>&1; then
+      removed=$((removed + 1))
+      say "prune: removed $image@$digest (created $created)"
+    else
+      failed=$((failed + 1))
+      say "prune: could not remove $image@$digest (in use?)"
+    fi
+    sleep "${BOS_PRUNE_SLEEP:-1}"
+  done <<<"$rows"
+  say "prune ($mode): kept $kept, $([[ $mode == apply ]] && echo removed || echo would remove) $removed, failed $failed, left $left"
+}
+
+# auto-deploy.sh --prune-images [--apply] [--max N]: the clean-up by hand, under the deploy lock.
+prune_command() {
+  local mode=dry-run max="" target
+  while (($#)); do
+    case $1 in
+    --apply) mode=apply ;;
+    --max) shift; [[ ${1:-} =~ ^[1-9][0-9]{0,3}$ ]] || { echo "usage: auto-deploy.sh --prune-images [--apply] [--max N]" >&2; return 2; }; max=$1 ;;
+    *) echo "usage: auto-deploy.sh --prune-images [--apply] [--max N]" >&2; return 2 ;;
+    esac
+    shift
+  done
+  # A dry run lists everything; an apply removes at most 25 unless --max says more.
+  [[ -n $max ]] || { [[ $mode == apply ]] && max=25 || max=100000; }
+  config || return 1
+  exec 9>"$root/deploy.lock"
+  flock -n 9 || { say "prune: a deploy tick holds the lock; try again"; return 1; }
+  # The target is the registry's current tag; if the registry cannot be read, only the other rules apply.
+  target=$(main_digest 2>/dev/null) || { target=""; say "prune: the registry's $tag digest could not be read; the target is not pinned"; }
+  prune_images "$mode" "$max" "$target"
 }
 
 # Nothing unattended runs again until an operator deletes the marker.
