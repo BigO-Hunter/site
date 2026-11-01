@@ -4876,7 +4876,7 @@
         "slug": "other-quasi-riemann",
         "name": "Quasi-Riemann hypothesis",
         "url": "https://bigospeedrun.com/other/quasi-riemann",
-        "leader": "josephbebel:8733819666133/10000000000000",
+        "leader": "DevinWatson:87338196661320751993/100000000000000000000",
         "table": "other-bounds",
         "direction": "lower",
         "records": [
@@ -5286,6 +5286,28 @@
             ],
             "bound": "θ ≤ 0.8733819666133",
             "display": "0.8733819666133"
+          },
+          {
+            "id": "josephbebel:5458637291332547/6250000000000000",
+            "score": "5458637291332547/6250000000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Joseph Bebel"
+            ],
+            "bound": "θ ≤ 0.87338196661320752",
+            "display": "0.87338196661320752"
+          },
+          {
+            "id": "DevinWatson:87338196661320751993/100000000000000000000",
+            "score": "87338196661320751993/100000000000000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Devin Watson"
+            ],
+            "bound": "θ ≤ 0.87338196661320751993",
+            "display": "0.87338196661320751993"
           }
         ]
       },
@@ -6688,7 +6710,8 @@
     "[\"integer-multiplication\",\"crocswap-pr-6167\",\"625729/200000000\",\"attained\"]:record",
     "[\"other-binary-polynomial-multiplication\",\"arpcs:1/274877906944\",\"1/274877906944\",\"attained\"]:record",
     "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:7/2\",\"7/2\",\"attained\"]:record",
-    "[\"exact-dft\",\"direct-pr-90\",\"30201659/10000000000\",\"attained\"]:lean"
+    "[\"exact-dft\",\"direct-pr-90\",\"30201659/10000000000\",\"attained\"]:lean",
+    "[\"other-quasi-riemann\",\"DevinWatson:87338196661320751993/100000000000000000000\",\"87338196661320751993/100000000000000000000\",\"attained\"]:record"
   ],
   "deferred": [
     {
