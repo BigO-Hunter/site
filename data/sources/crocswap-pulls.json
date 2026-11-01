@@ -122155,5 +122155,194 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6336,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6336",
+    "title": "Prove the sharp paid-moment floor for independent four-contact centre…",
+    "state": "open",
+    "created_at": "2026-11-01T14:02:42Z",
+    "updated_at": "2026-11-01T14:04:35Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "605035a6424e53d4236c2699e7aca5fa84d6c24f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6337,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6337",
+    "title": "Cursor/g20 moved correction frame 9d0c",
+    "state": "open",
+    "created_at": "2026-11-01T14:02:46Z",
+    "updated_at": "2026-11-01T14:04:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "3b58db981b87f090f2a63886edf78bf641b049ae"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6338,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6338",
+    "title": "Prove idle helpers do not lower the span-(m+1) line bound",
+    "state": "open",
+    "created_at": "2026-11-01T14:02:48Z",
+    "updated_at": "2026-11-01T14:05:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "3351f1b59db9c094877227bad16ccd4597bbc8c1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6339,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6339",
+    "title": "Cursor/h25 g12 identity cleanup 5d9d",
+    "state": "open",
+    "created_at": "2026-11-01T14:03:01Z",
+    "updated_at": "2026-11-01T14:05:11Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "608ad23adc6c01264c8195daf7f18e29c17464a7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6340,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6340",
+    "title": "Price the r=16 cubic repair against sixteen eager shears (no κ)",
+    "state": "open",
+    "created_at": "2026-11-01T14:03:28Z",
+    "updated_at": "2026-11-01T14:05:18Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "3d7bbbcc469d66ce23bc8a12f528aae3f5c5089e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6341,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6341",
+    "title": "Record that the #5718 boundary functionals differ and force cleanup o…",
+    "state": "open",
+    "created_at": "2026-11-01T14:03:30Z",
+    "updated_at": "2026-11-01T14:04:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "4ede2382e0bad5dc5932443451b9bcef569ed2ea"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6342,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6342",
+    "title": "Certify a 624-cell two-round stock for the ell=2 typed-H witness",
+    "state": "open",
+    "created_at": "2026-11-01T14:03:33Z",
+    "updated_at": "2026-11-01T14:04:16Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "f744101c871914c767982484f06bf49cd5ef5d82"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6343,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6343",
+    "title": "Record that the selected pricing rejects the PR5708 component as admi…",
+    "state": "open",
+    "created_at": "2026-11-01T14:03:35Z",
+    "updated_at": "2026-11-01T14:04:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "79ca0621851cc6dcf7705b097d11d816a3e1df41"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6344,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6344",
+    "title": "Record that the PR6335 W2/W4 identities do not close N1.",
+    "state": "open",
+    "created_at": "2026-11-01T14:03:37Z",
+    "updated_at": "2026-11-01T14:04:42Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "5778b35a4ca2453e4955e8203a1a3b1cfeb5935b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

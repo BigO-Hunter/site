@@ -942,8 +942,8 @@
         "certificate_path": null
       },
       "dependencies": [],
-      "upstream_status": "open",
-      "upstream_status_at": "2026-11-01T12:48:05Z",
+      "upstream_status": "merged",
+      "upstream_status_at": "2026-11-01T14:00:40Z",
       "site_observed_at": "2026-11-01T13:26:07Z",
       "source": {
         "kind": "repo-artifact",
@@ -1396,7 +1396,7 @@
       "source_url": "https://github.com/bigospeedrun/verifier/tree/524a8af8a277ca50c1237068c2b45430a03f547e/submissions/dft/halitziyakartal-halitziyav5-pre-pi",
       "repo": "bigospeedrun/verifier",
       "site_badge": false,
-      "eligible_for_record": false,
+      "eligible_for_record": true,
       "proof_status": "Submitted bound; independent verification has not passed.",
       "upstream_tier": "claimed",
       "site_tier": "claimed",
@@ -1407,8 +1407,8 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/91",
       "direct_submission": true,
       "route": "pull_request",
-      "verification": "pending"
+      "verification": "held"
     }
   },
-  "updated_at": "2026-11-01T13:26:07Z"
+  "updated_at": "2026-11-01T14:23:26Z"
 }
