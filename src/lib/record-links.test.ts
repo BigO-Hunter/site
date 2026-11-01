@@ -5,6 +5,11 @@ test('authors use only published profile names and X handles, with login fallbac
  assert.deepEqual(authorFromProfile({name:'Unverified name',url:'https://github.com/Example/repo'},{}),{name:'Example',login:'Example',url:'https://github.com/Example',twitterUsername:undefined});
  assert.equal(authorFromProfile({name:'old',url:'https://github.com/Example'},{example:{name:'Published name',login:'example',twitter_username:'published'}}).twitterUsername,'published');
 });
+test('a profile name that is only punctuation gives the login, so every post and page names the author',()=>{
+ const author=authorFromProfile({name:'-',url:'https://github.com/Wang-jiong-han/x'},{'wang-jiong-han':{name:'-',login:'Wang-jiong-han',twitter_username:null}});
+ assert.equal(author.name,'Wang-jiong-han');
+ assert.equal(authorFromProfile({name:'-',url:'https://github.com/Example'},{example:{name:'.',login:'example',twitter_username:null}}).name,'Example');
+});
 test('evidence links distinguish publication, accepted review and verifier receipt',()=>{
  const record={submission_url:'https://github.com/CrocSwap/integer-mult-bounds/pull/42',rerun_status:{receipt_path:'sources/receipt.json'}};
  assert.equal(recordEvidenceUrl('claimed',record,'https://example.org/paper'),'https://example.org/paper');

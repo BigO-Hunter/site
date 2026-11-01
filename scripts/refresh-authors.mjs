@@ -1,6 +1,7 @@
 import {readFileSync, writeFileSync, renameSync, mkdirSync, existsSync, unlinkSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {avatarDue, avatarCheckedAt} from './avatar-due.mjs';
+import {profileName} from '../src/lib/profile-name.ts';
 
 // Public profile fields only. A failed lookup preserves the last checked profile.
 const destination = 'src/lib/author-profiles.json';
@@ -68,7 +69,7 @@ for (const login of [...logins].sort()) {
     const avatarAt = profiles[key]?.avatar_checked_at;
     profiles[key] = {
       login: profile.login,
-      name: profile.name?.trim() || profile.login,
+      name: profileName(profile.name, profile.login),
       twitter_username: /^[a-zA-Z0-9_]{1,15}$/.test(profile.twitter_username ?? '') ? profile.twitter_username : null,
       checked_at: new Date().toISOString(),
       ...(avatarAt ? {avatar_checked_at: avatarAt} : {}),

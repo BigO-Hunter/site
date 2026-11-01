@@ -98,7 +98,7 @@ jobs:
         timeout-minutes: 3
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: timeout -k 20s 2m node scripts/refresh-authors.mjs
+        run: timeout -k 20s 2m node --experimental-strip-types scripts/refresh-authors.mjs
       # The same guard after each step that writes or sends: build, commit and the post logs must not race it.
       - name: Fail if the author refresh still runs
         run: |

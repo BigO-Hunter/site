@@ -1,6 +1,7 @@
 import type {Author, Link} from './types';
 import type {EvidenceLevel} from './evidence';
 import {receiptPageUrl} from './receipt.ts';
+import {profileName} from './profile-name.ts';
 
 type Profile = {login: string; name: string; twitter_username: string | null};
 export function authorFromProfile(author: Link, profiles: Record<string, Profile>, avatars: Record<string, string> = {}): Author {
@@ -8,7 +9,7 @@ export function authorFromProfile(author: Link, profiles: Record<string, Profile
  if (!login) return author;
  const profile = profiles[login.toLowerCase()];
  const avatar = avatars[login.toLowerCase()];
- return {name: profile?.name || login, login: profile?.login || login,
+ return {name: profileName(profile?.name, login), login: profile?.login || login,
   url: `https://github.com/${profile?.login || login}`,
   twitterUsername: profile?.twitter_username || undefined, ...(avatar ? {avatar} : {})};
 }
