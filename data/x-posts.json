@@ -978,5 +978,15 @@
     "status": "posted",
     "at": "2026-11-01T14:28:18.639Z",
     "id": "2116900141592383503"
+  },
+  "[\"exact-dft\",\"direct-pr-91\",\"312780997/100000000000\",\"attained\"]:lean": {
+    "status": "unknown",
+    "at": "2026-11-01T14:45:12.804Z",
+    "reason": "reserved before API send"
+  },
+  "[\"3sum\",\"direct-issue-92\",\"96013971/50000000\",\"attained\"]:lean": {
+    "status": "unknown",
+    "at": "2026-11-01T14:45:12.804Z",
+    "reason": "reserved before API send"
   }
 }
