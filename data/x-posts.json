@@ -968,5 +968,10 @@
     "status": "posted",
     "at": "2026-10-31T23:30:14.451Z",
     "id": "2116674134897782881"
+  },
+  "[\"other-quasi-riemann\",\"DevinWatson:87338196661320751993/100000000000000000000\",\"87338196661320751993/100000000000000000000\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-01T02:29:16.764Z",
+    "reason": "reserved before API send"
   }
 }
