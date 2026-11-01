@@ -997,8 +997,8 @@
     "deleted_reason": "The text said \"Player: -\" (the GitHub profile name of Wang-jiong-han is \"-\"); reposted with the login (#92)."
   },
   "[\"3sum\",\"direct-issue-92\",\"96013971/50000000\",\"attained\"]:lean": {
-    "status": "unknown",
-    "at": "2026-11-01T16:31:08.334Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-01T16:31:10.016Z",
+    "id": "2116931059325575468"
   }
 }
