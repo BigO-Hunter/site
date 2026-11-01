@@ -1648,5 +1648,14 @@
     "authors": [
       "Zhihao \"Zephyr\" Yao"
     ]
+  },
+  {
+    "key": "[\"other-quasi-riemann\",\"DevinWatson:87338196661320751993/100000000000000000000\",\"87338196661320751993/100000000000000000000\",\"attained\"]:record",
+    "text": "**New claim** | **Quasi-Riemann hypothesis** | `θ ≤ 0.87338196661320751993` | by Devin Watson | Claimed | [bigospeedrun.com/other/quasi-riemann](https://bigospeedrun.com/other/quasi-riemann)",
+    "x_text": "New claim!\n\nProblem: Quasi-Riemann hypothesis\nNew value: θ ≤ 0.87338196661320751993\nPlayer: Devin Watson\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-01T02:29:15.388Z",
+    "authors": [
+      "Devin Watson"
+    ]
   }
 ]
