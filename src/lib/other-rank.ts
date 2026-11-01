@@ -22,17 +22,33 @@ export function otherClaimNumber(claim: Pick<Claim, 'display' | 'value'>): numbe
 
 const same = (a: number, b: number) => Math.abs(a - b) <= 1e-9 * Math.max(Math.abs(a), Math.abs(b));
 
+// Claims that differ by less than a float can tell (the quasi-Riemann claims of 2026-10-31 differ by 7e-20) are
+// ordered by their exact fractions, when both have one that agrees with the number read from the display.
+// Otherwise they tie, as before.
+function exactFraction({claim, number}: {claim: Claim; number: number | null}): [bigint, bigint] | null {
+  const m = /^\s*(\d+)\s*\/\s*(\d+)\s*$/.exec(claim.value);
+  if (!m || number === null || BigInt(m[2]) === 0n) return null;
+  const fraction = Number(m[1]) / Number(m[2]);
+  return Math.abs(fraction - number) <= 1e-6 * Math.max(Math.abs(fraction), Math.abs(number)) ? [BigInt(m[1]), BigInt(m[2])] : null;
+}
+const compareExact = (a: [bigint, bigint], b: [bigint, bigint]) => { const d = a[0] * b[1] - b[0] * a[1]; return d < 0n ? -1 : d > 0n ? 1 : 0; };
+
 export function rankOtherClaims<C extends Claim>(claims: C[], direction: string): {claim: C; rank: number; tie: boolean}[] {
-  const entries = claims.map((claim, index) => ({claim, index, number: otherClaimNumber(claim)}));
+  const entries = claims.map((claim, index) => {
+    const number = otherClaimNumber(claim);
+    return {claim, index, number, exact: exactFraction({claim, number})};
+  });
   const sign = direction === 'higher' ? -1 : 1;
   const known = entries.every(e => e.number !== null);
-  const sorted = [...entries].sort((a, b) => known
-    ? sign * (a.number! - b.number!) * (same(a.number!, b.number!) ? 0 : 1) || a.index - b.index
-    : b.index - a.index);
+  const order = (a: typeof entries[number], b: typeof entries[number]) => {
+    if (!same(a.number!, b.number!)) return sign * (a.number! - b.number!);
+    return a.exact && b.exact ? sign * compareExact(a.exact, b.exact) : 0;
+  };
+  const sorted = [...entries].sort((a, b) => known ? order(a, b) || a.index - b.index : b.index - a.index);
   let rank = 0;
   return sorted.map((entry, i) => {
     const prev = sorted[i - 1];
-    const tie = known && i > 0 && same(entry.number!, prev.number!);
+    const tie = known && i > 0 && order(entry, prev) === 0;
     if (!tie) rank = i + 1;
     return {claim: entry.claim, rank, tie};
   });

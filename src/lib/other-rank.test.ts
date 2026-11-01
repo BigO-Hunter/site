@@ -39,3 +39,13 @@ test('on every Other bounds row, rank 1 is the leader', () => {
     assert.ok(ranked.filter(r => r.rank === 1).some(r => r.claim === leader || (r.claim.value === leader.value && r.claim.handle === leader.handle)), `${family.slug}: rank 1 is not the leader ${leader.value}`);
   }
 });
+
+test('claims closer than a float can tell are ordered by their exact fractions', () => {
+  const rows = [claim('0.8733819666133', '8733819666133/10000000000000', '2026-10-30'), claim('0.87338196661320752', '5458637291332547/6250000000000000', '2026-10-31'), claim('0.87338196661320751993', '87338196661320751993/100000000000000000000', '2026-10-31T17')];
+  assert.deepEqual(rankOtherClaims(rows, 'lower').map(r => [r.claim.display, r.rank, r.tie]), [['0.87338196661320751993', 1, false], ['0.87338196661320752', 2, false], ['0.8733819666133', 3, false]]);
+  // Equal exact values still tie, earliest first; a value that disagrees with its display keeps the float order.
+  const equal = rankOtherClaims([claim('0.5', '1/2', '2026-10-01'), claim('0.5', '2/4', '2026-10-02')], 'lower');
+  assert.deepEqual(equal.map(r => [r.claim.date, r.rank, r.tie]), [['2026-10-01', 1, false], ['2026-10-02', 1, true]]);
+  const odd = rankOtherClaims([claim('0.5', '1/3', '2026-10-01'), claim('0.4999999999', '1/2', '2026-10-02')], 'lower');
+  assert.deepEqual(odd.map(r => [r.claim.display, r.rank, r.tie]), [['0.5', 1, false], ['0.4999999999', 1, true]]);
+});
