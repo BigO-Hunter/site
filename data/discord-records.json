@@ -4619,7 +4619,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "-"
+              "Wang-jiong-han"
             ],
             "bound": "O(n^1.92027942)"
           },
