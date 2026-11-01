@@ -990,8 +990,8 @@
     "id": "2116904412207534178"
   },
   "[\"other-average-sensitivity\",\"direct-issue-93:90295/28292\",\"90295/28292\",\"attained\"]:lean": {
-    "status": "unknown",
-    "at": "2026-11-01T15:34:01.558Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-01T15:34:03.191Z",
+    "id": "2116916686188323307"
   }
 }
