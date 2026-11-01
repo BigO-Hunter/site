@@ -122344,5 +122344,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6345,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6345",
+    "title": "No new κ: a price-null fibre of PR6167's word (per-rank helper−paid invariant)",
+    "state": "open",
+    "created_at": "2026-11-01T14:19:49Z",
+    "updated_at": "2026-11-01T14:25:23Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "776bd2ecf9cb18a88a0db27e43a2e876856e9fd9"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

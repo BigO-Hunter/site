@@ -117684,6 +117684,33 @@
       "claim_files_head": "5778b35a4ca2453e4955e8203a1a3b1cfeb5935b",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6345,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "No new κ: a price-null fibre of PR6167's word (per-rank helper−paid invariant)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6345",
+      "submitted_at": "2026-11-01T14:19:49Z",
+      "updated_at": "2026-11-01T14:25:23Z",
+      "source_commit": "776bd2ecf9cb18a88a0db27e43a2e876856e9fd9",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-01T14:19:49Z",
+      "checked_at": "2026-11-01",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "776bd2ecf9cb18a88a0db27e43a2e876856e9fd9",
+      "claim_text": "c5e463d89834ddf1e3d8db36b239860d3bc6895ae45c755acd7d4a21ce06d700",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-frontier-symmetric-ladders/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "776bd2ecf9cb18a88a0db27e43a2e876856e9fd9",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
