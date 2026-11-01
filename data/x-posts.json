@@ -984,14 +984,16 @@
     "at": "2026-11-01T14:45:14.637Z",
     "id": "2116904402963292266"
   },
-  "[\"3sum\",\"direct-issue-92\",\"96013971/50000000\",\"attained\"]:lean": {
-    "status": "posted",
-    "at": "2026-11-01T14:45:16.891Z",
-    "id": "2116904412207534178"
-  },
   "[\"other-average-sensitivity\",\"direct-issue-93:90295/28292\",\"90295/28292\",\"attained\"]:lean": {
     "status": "posted",
     "at": "2026-11-01T15:34:03.191Z",
     "id": "2116916686188323307"
+  },
+  "[\"3sum\",\"direct-issue-92\",\"96013971/50000000\",\"attained\"]:lean#deleted-2116904412207534178": {
+    "status": "posted",
+    "at": "2026-11-01T14:45:16.891Z",
+    "id": "2116904412207534178",
+    "deleted_at": "2026-11-01T15:55:26Z",
+    "deleted_reason": "The text said \"Player: -\" (the GitHub profile name of Wang-jiong-han is \"-\"); reposted with the login (#92)."
   }
 }

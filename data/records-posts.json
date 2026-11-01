@@ -1678,11 +1678,11 @@
   },
   {
     "key": "[\"3sum\",\"direct-issue-92\",\"96013971/50000000\",\"attained\"]:lean",
-    "text": "**New record** | **3SUM** | `O(n^1.92027942)` | by - | Lean Verified | [bigospeedrun.com/3sum](https://bigospeedrun.com/3sum)",
-    "x_text": "New record!\n\nProblem: 3SUM\nNew value: O(n^1.92027942)\nPlayer: -\nStatus: Lean Verified",
+    "text": "**New record** | **3SUM** | `O(n^1.92027942)` | by Wang-jiong-han | Lean Verified | [bigospeedrun.com/3sum](https://bigospeedrun.com/3sum)",
+    "x_text": "New record!\n\nProblem: 3SUM\nNew value: O(n^1.92027942)\nPlayer: Wang-jiong-han\nStatus: Lean Verified",
     "posted_at": "2026-11-01T14:45:11.242Z",
     "authors": [
-      "-"
+      "Wang-jiong-han"
     ]
   },
   {

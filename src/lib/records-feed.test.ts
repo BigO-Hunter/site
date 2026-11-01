@@ -7,6 +7,16 @@ import type {FeedSnapshot,FeedBoard,FeedRecord} from './records-feed.ts';
 const row=(id='a',evidence='Claimed',score='1/1000'):FeedRecord=>({id,evidence,score,relation:'attained',authors:['Alice'],bound:plainBound('exact-dft',score)});
 const board=(records=[row()],leader='a'):FeedBoard=>({slug:'exact-dft',name:'Fourier Transform',url:'https://bigospeedrun.com/exact-dft',leader,records});
 const snapshot=(b=board()):FeedSnapshot=>({schema_version:1,boards:[b]});
+test('correcting the text or authors of a logged post does not make its record post again',()=>{
+ const initial=baseline(snapshot());const next=snapshot(board([row('a','Lean Verified')],'a'));
+ assert.equal(plan(initial,next).messages.length,1,'control: with no logged post the upgrade posts');
+ const key='["exact-dft","a","1/1000","attained"]:lean';
+ const logged=(text:string,authors:string[])=>[{key,text,x_text:`New record!\n\nProblem: Fourier Transform\nNew value: 1/1000\nPlayer: ${authors[0]}\nStatus: Lean Verified`,posted_at:'2026-11-01T14:45:11.242Z',authors}];
+ for(const posts of [logged('by -',['-']),logged('by Wang-jiong-han',['Wang-jiong-han'])]){
+  assert.equal(plan(initial,next,posts).messages.length,0);
+  const done=plan(initial,next);assert.equal(plan(done.state,next,posts).messages.length,0);
+ }
+});
 test('baseline and unchanged refresh send nothing; a new leader sends once',()=>{
  const initial=baseline(snapshot());assert.equal(plan(initial,snapshot()).messages.length,0);
  const next=snapshot(board([row(),row('b','Claimed','1/900')],'b'));
