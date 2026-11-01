@@ -156,6 +156,35 @@ class DirectImportTests(unittest.TestCase):
         with self.assertRaises(gate.Rejected):
             gate.normalize(dict(sub,bound='100000001'))
 
+    def test_subset_sum_target_and_reviewed_statement(self):
+        # Opened 2026-11-01 after its smoke (verifier run 41353572059, issue #98, darkhipo's 3/4 proof). The smoke
+        # receipt's generated challenge for bound 3/4 has sha256 9b6ba189...: a reviewed test vector only. 3/4 is above
+        # the board's range (the classical 1/2), so it is never imported.
+        trust=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
+        profile=trust['profiles']['subset-sum']
+        raw=(FIXTURES/gate.statement_fixture(trust,profile['challenge_file'])).read_bytes()
+        self.assertEqual(gate.sha(raw),profile['challenge_sha256'])
+        self.assertEqual((profile['challenge_file'],profile['maximum'],profile['lean_toolchain'],profile['manifest_file']),
+                         ('challenges/subset-sum/Statement.lean','1','leanprover/lean4:v4.34.1','profiles/lake-manifest.json'))
+        self.assertNotIn('runner',profile)
+        generated=gate.challenge_bytes(dict(problem='subset-sum',bound='3/4'),raw)
+        self.assertTrue(generated.endswith(b'theorem Race.bound : BigOSpeedrun.SubsetSum.SolvedInTime ((3 : Rat) / 4) := by\n  sorry\n'))
+        self.assertEqual(gate.sha(generated),'9b6ba1899bc6cc4389edde0ff7c845b4a27e349ee4fafe93df480c09241da08b')
+        sub=dict(schema_version=1,problem='subset-sum',bound='3/4',repo_url='https://github.com/u/p',commit='a'*40,authors=[])
+        for bound in ['3/4','51/100','1']:
+            with self.subTest(bound=bound),self.assertRaises(gate.Rejected):gate.normalize(dict(sub,bound=bound))
+        for bound in ['1/2','49/100','0']:
+            with self.subTest(bound=bound):self.assertEqual(gate.normalize(dict(sub,bound=bound))['bound'],bound)
+
+    def test_each_profile_reads_its_own_reviewed_statement(self):
+        # Catalan and Subset Sum both name their statement Statement.lean: statement_fixtures keeps the copies apart.
+        trust=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
+        names={key:gate.statement_fixture(trust,p['challenge_file']) for key,p in trust['profiles'].items()}
+        self.assertEqual((names['catalan'],names['subset-sum']),('Statement.lean','SubsetSumStatement.lean'))
+        for key,profile in trust['profiles'].items():
+            with self.subTest(profile=key):
+                self.assertEqual(gate.sha((FIXTURES/names[key]).read_bytes()),profile['challenge_sha256'])
+
     def test_early_issue_binds_publisher_stage_and_pending_reason(self):
         self.trust[self.revision]['publisher_workflow_id']=43
         publisher=dict(self.run,id=456,workflow_id=43,path='.github/workflows/pr-publish.yml',event='workflow_run',html_url='https://github.com/bigospeedrun/verifier/actions/runs/456')
@@ -298,6 +327,12 @@ class DirectImportTests(unittest.TestCase):
                      json.dumps(self.env['submission']),self.issue['body'].replace('### Bound','### Unknown')]:
             with self.subTest(body=body),self.assertRaises(gate.Rejected):gate.parse_body(body)
         self.assertEqual(gate.parse_body(self.issue['body'].replace('\n','\r\n')),self.env['submission'])
+        # Blank lines after the last field are allowed, as in the verifier (issue #94: an edited form ended with '\n\n').
+        body=self.issue['body'].rstrip('\n')
+        for end in ['','\n','\n\n','\n\n\n','\r\n\r\n']:
+            with self.subTest(end=end):self.assertEqual(gate.parse_body(body+end),self.env['submission'])
+        for end in ['\n\nx','\n \n',' \n','\n\n### Authors\n\nName\n\n']:
+            with self.subTest(end=end),self.assertRaises(gate.Rejected):gate.parse_body(body+end)
 
     def test_actual_contract_fixtures_remain_nonimportable(self):
         for name in ['generic-envelope.json','replayed-envelope.json']:

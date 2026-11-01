@@ -22,7 +22,10 @@ PROBLEMS = {'dft': ('exact-dft/uniform-exact-arithmetic', 1),
             # An Other bounds row with a trusted statement (verifier PR #15): a coefficient from 0 to 8.
             'average-sensitivity': ('other/average-sensitivity', 8),
             # An Other bounds row (verifier profile catalan, split build): an irrationality exponent from 0 to 10^8.
-            'catalan': ('other/catalan', 100000000)}
+            'catalan': ('other/catalan', 100000000),
+            # A board (verifier profile subset-sum, opened 2026-11-01): the exponent alpha of O(2^(alpha n)). The
+            # profile allows up to 1; the board's range ends at the classical 1/2, so a weaker bound gets no row.
+            'subset-sum': ('subset-sum/randomized-word-ram', Fraction(1, 2))}
 MAX_BYTES = 2_000_000
 
 class Rejected(ValueError):
@@ -50,6 +53,12 @@ def read_json(raw):
         return json.loads(raw, object_pairs_hook=unique)
     except (ValueError, UnicodeError) as error:
         raise Rejected('Invalid JSON') from error
+
+def statement_fixture(config, path):
+    """The file name of the vendored copy of a reviewed statement in data/direct-fixtures. Two profiles can
+    share a file name (catalan and subset-sum both use Statement.lean), so statement_fixtures in
+    data/direct-trust.json names a copy by its challenge path; other copies keep the file name."""
+    return config.get('statement_fixtures', {}).get(path) or path.rsplit('/', 1)[-1]
 
 def is_test_submission(github_item, *payloads):
     """Shared exclusion for issue/PR receipts and any future open-claim reader.
@@ -94,7 +103,9 @@ def normalize(value):
 
 def parse_body(body):
     require(isinstance(body, str) and len(body.encode()) <= 4096, 'Invalid issue form size')
-    pattern = r'\A### Problem\n\n([^\n]+)\n\n### Repository URL\n\n([^\n]+)\n\n### Commit SHA\n\n([^\n]+)\n\n### Bound\n\n([^\n]+)\n?\Z'
+    # Blank lines after the last field are allowed, as in the verifier (issue #94, 2026-11-01: an edited form
+    # ended with '\n\n').
+    pattern = r'\A### Problem\n\n([^\n]+)\n\n### Repository URL\n\n([^\n]+)\n\n### Commit SHA\n\n([^\n]+)\n\n### Bound\n\n([^\n]+)\n*\Z'
     match = re.fullmatch(pattern, body.replace('\r\n', '\n'))
     require(match is not None, 'Invalid four-field issue form')
     problem, repo, commit, bound = match.groups()
@@ -148,6 +159,8 @@ theorem Race.bound : ∃ order solve W, DFTProgram order solve W ∧
         target = f'theorem Race.bound : BigOSpeedrun.AverageSensitivity.Bound (({n} : ℚ) / {d}) := by\n  sorry\n'
     elif submission['problem'] == 'catalan':
         target = f'theorem Race.bound : BigOSpeedrun.Catalan.Bound (({n} : ℚ) / {d}) := by\n  sorry\n'
+    elif submission['problem'] == 'subset-sum':
+        target = f'theorem Race.bound : BigOSpeedrun.SubsetSum.SolvedInTime (({n} : Rat) / {d}) := by\n  sorry\n'
     else:
         problem = 'ThreeSum' if submission['problem'] == '3sum' else 'APSP'
         target = f'theorem Race.bound : EndStatement.{problem}.SolvedInTime (({n} : Rat) / {d}) := by\n  sorry\n'

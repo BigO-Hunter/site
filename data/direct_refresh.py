@@ -17,13 +17,13 @@ from fractions import Fraction
 from datetime import datetime, timezone
 from direct_github import GitHub, GitHubError
 from direct_import import (REPOSITORY, PROBLEMS, Rejected, require, read_json, sha,
-    canonical, parse_body, is_test_submission, validate_result)
-from pr_record_binding import apply_bindings
+    canonical, parse_body, is_test_submission, validate_result, statement_fixture)
+from pr_record_binding import apply_bindings, SLUGS
 from refresh import is_silent_draft
 from direct_pr import PREFIX, archive_members, inspect_pr, validate_pr_result
 
 ROOT=Path(__file__).resolve().parent
-SLUGS={'dft':'exact-dft','3sum':'3sum','apsp':'apsp'}
+# SLUGS (pr_record_binding.py): the boards whose direct results are rows of the board file.
 # Other bounds rows with a trusted verifier statement: a Lean Verified result (from the Lean checkpoint
 # on, as on the boards; a later nanoda rejection removes it) becomes a claim of the row in
 # direct-other.json (merged by src/lib/other-merge.ts); an open, failed or held submission is not
@@ -78,7 +78,7 @@ class Importer:
                 path=profile['challenge_file']
                 if path in policy['statements']:continue
                 # The reviewed statement bytes are vendored, never chosen by the submission.
-                raw=(self.root/'direct-fixtures'/Path(path).name).read_bytes()
+                raw=(self.root/'direct-fixtures'/statement_fixture(self.config,path)).read_bytes()
                 require(sha(raw)==profile['challenge_sha256'],'Reviewed statement hash mismatch')
                 policy['statements'][path]=raw
             self.trust[revision]=policy

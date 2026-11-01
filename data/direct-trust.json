@@ -113,7 +113,27 @@
       "maximum": "100000000",
       "upstream_commit": "50672b810873d8371b2b6bdd0057bb6cb2e3da24",
       "runner": "github-split"
+    },
+    "subset-sum": {
+      "challenge_file": "challenges/subset-sum/Statement.lean",
+      "challenge_sha256": "80bc6d282676fc056a220968a727ab983b8c5a280cb0d9f24561bb3c90867517",
+      "lean_toolchain": "leanprover/lean4:v4.34.1",
+      "manifest_file": "profiles/lake-manifest.json",
+      "tools_file": "profiles/tools.json",
+      "solution_module": "Submission",
+      "source_roots": [
+        "Submission"
+      ],
+      "theorem_names": [
+        "Race.bound"
+      ],
+      "bound_kind": "exponent",
+      "maximum": "1",
+      "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
     }
+  },
+  "statement_fixtures": {
+    "challenges/subset-sum/Statement.lean": "SubsetSumStatement.lean"
   },
   "controller_blobs": {
     ".github/ISSUE_TEMPLATE/lean-submission.yml": {

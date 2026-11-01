@@ -29,7 +29,7 @@ class LiveIssueReceiptTests(unittest.TestCase):
         with zipfile.ZipFile(io.BytesIO(self.result)) as zipped:self.env=json.loads(zipped.read('direct-submission.json'))
         policy=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
         self.assertIn(self.run['head_sha'],policy['previous_controller_blobs'])
-        policy['statements']={p['challenge_file']:(FIXTURES/Path(p['challenge_file']).name).read_bytes() for p in policy['profiles'].values()}
+        policy['statements']={p['challenge_file']:(FIXTURES/gate.statement_fixture(policy,p['challenge_file'])).read_bytes() for p in policy['profiles'].values()}
         self.trust={self.run['head_sha']:policy}
 
     def check(self,issue=None):
@@ -81,7 +81,7 @@ class LivePRReceiptTests(unittest.TestCase):
         self.files=archive_members(self.proof,self.api['proof_artifact'])
         self.env=json.loads(archive_members(self.result,self.api['result_artifact'])[self.env_name])
         policy=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
-        policy['statements']={p['challenge_file']:(FIXTURES/Path(p['challenge_file']).name).read_bytes() for p in policy['profiles'].values()}
+        policy['statements']={p['challenge_file']:(FIXTURES/gate.statement_fixture(policy,p['challenge_file'])).read_bytes() for p in policy['profiles'].values()}
         for key in ['run','publisher']:self.assertIn(self.api[key]['head_sha'],[policy['reviewed_commit'],*policy['previous_controller_blobs']])
         self.trust={self.api['run']['head_sha']:policy,self.api['publisher']['head_sha']:policy}
 

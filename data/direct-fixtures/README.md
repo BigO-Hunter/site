@@ -104,3 +104,8 @@ excluding submission folders, its only changes from 038a82c are two documentatio
 links (AGENTS.md and README.md) and docs/new-statements.md. It is now an exact
 additional controller snapshot; no verifier code or workflow identity changed.
 This does not approve later controller revisions automatically.
+
+Statement copies are named after their challenge file, except where two profiles share a file name.
+`statement_fixtures` in data/direct-trust.json then names the copy by challenge path
+(`direct_import.statement_fixture`). Catalan keeps Statement.lean (sha256 9ba7370f). Subset Sum
+(challenges/subset-sum/Statement.lean, sha256 80bc6d28, verifier 56c9b1e, 2026-11-01) is SubsetSumStatement.lean.

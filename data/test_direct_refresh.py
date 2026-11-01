@@ -42,7 +42,11 @@ class RefreshTests(unittest.TestCase):
             entries=[dict(path=p,type='blob',**v) for p,v in blobs.items()]+[dict(path=p,type='blob',sha='f'*40,mode='100644') for p in extra]
             api=DiscoveryAPI();api.json=lambda path,params=None:dict(tree=entries+[dict(path='auto-research',type='tree',sha='e'*40,mode='040000')])
             return r.Importer(api)
-        importer(['auto-research.md','auto-research/notes.md','auto-research/a/b.json','submissions/dft/x/Main.lean']).trusted('a'*40)
+        trust=importer(['auto-research.md','auto-research/notes.md','auto-research/a/b.json','submissions/dft/x/Main.lean']).trusted('a'*40)['a'*40]
+        # Catalan and Subset Sum both name their statement Statement.lean; each profile gets its own reviewed bytes.
+        for profile in trust['profiles'].values():
+            self.assertEqual(d.sha(trust['statements'][profile['challenge_file']]),profile['challenge_sha256'])
+        self.assertIn('challenges/subset-sum/Statement.lean',trust['statements'])
         for path in ['scripts/new.py','auto-research.md.py','auto-research-2/x.md','docs/auto-research.md']:
             with self.subTest(path=path),self.assertRaises(d.Rejected):importer([path]).trusted('a'*40)
 
@@ -277,6 +281,31 @@ class RefreshTests(unittest.TestCase):
             meta=json.loads(files['exact-dft.json'])['record_metadata']['direct-issue-5']
             self.assertEqual(meta['verification'],'failed')
 
+    def test_a_subset_sum_result_is_a_row_of_the_subset_sum_board(self):
+        # Opened 2026-11-01 (verifier #94): a direct Subset Sum result is a board row, as on 3SUM, not an Other bounds claim.
+        body=self.issue()['body'].replace('### Problem\n\ndft','### Problem\n\nsubset-sum').replace('1/1000','12/25')
+        sub=d.parse_body(body);self.assertEqual((sub['problem'],sub['bound']),('subset-sum','12/25'))
+        proof=dict(checked_at='2026-11-01T00:00:00Z',receipt_path='sources/direct-issue-99-receipt.json',receipt_url='https://github.com/bigospeedrun/verifier/actions/runs/1',reason='Lean and nanoda passed; permitted-axiom audit passed')
+        claim=dict(route='issue',item=dict(self.issue(99),body=body),submission=sub,verification=proof)
+        row,meta,_=r.row_for('direct-issue-99',claim,'2026-11-01T00:00:00Z')
+        self.assertEqual((row['score'],row['tier'],meta['comparison_key']),('12/25','verified','subset-sum/randomized-word-ram/v1'))
+        fixtures=json.loads((ROOT/'direct-fixtures/board-snapshots.json').read_text())
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            for slug in r.SLUGS.values():(root/(slug+'.json')).write_bytes(r.json_bytes(fixtures[slug]))
+            (root/'registry.json').write_bytes(r.json_bytes({'checked_at':'2026-10-10','updated_at':'2026-10-10T00:00:00Z'}))
+            files=r.prepare(root,{'direct-issue-99':claim},{},'2026-11-01T00:00:00Z')
+            board=json.loads(files['subset-sum.json'])
+            self.assertEqual(board['record_metadata']['direct-issue-99']['verification'],'passed')
+            self.assertEqual([x['id'] for x in board['records']][-1],'direct-issue-99')
+            for slug in ['exact-dft','3sum','apsp']:self.assertNotIn(slug+'.json',files)
+            self.assertEqual(json.loads(files['direct-other.json'])['boards'],{})
+            # The record gate reads the row (lower is better): 12/25 leads, so 12/25 again does not qualify, 47/100 does.
+            gate=d.current_record_gate('subset-sum',files['subset-sum.json'],'b'*40,'2026-11-01T00:00:00Z')
+            self.assertEqual((gate['score'],gate['leader_ids'],gate['any_lean_verified_at_bound']),('12/25',['direct-issue-99'],True))
+            self.assertFalse(d.qualifies_for_run(sub,gate))
+            self.assertTrue(d.qualifies_for_run(dict(sub,bound='47/100'),gate))
+
     def test_a_draft_verifier_pr_created_from_5270_on_is_not_a_claim_until_ready(self):
         pr=dict(number=60,state='open',merged=False,draft=True,labels=[],head={'sha':'a'*40},user={'login':'alice'},created_at='2026-10-24T00:00:00Z',html_url='https://github.com/bigospeedrun/verifier/pull/60')
         sub=dict(d.parse_body(self.issue()['body']),source_subdir='submissions/dft/alice-proof')
@@ -504,10 +533,10 @@ class RefreshTests(unittest.TestCase):
         self.assertIn('BigOSpeedrun.Catalan.Bound (1091)',listed[0]['proofScope'])
         # No board row for it, and prepare writes the file.
         temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup);root=Path(temp.name)
-        for name in ['exact-dft.json','3sum.json','apsp.json','registry.json','direct-trust.json']:(root/name).write_bytes((ROOT/name).read_bytes())
+        for name in [*(slug+'.json' for slug in r.SLUGS.values()),'registry.json','direct-trust.json']:(root/name).write_bytes((ROOT/name).read_bytes())
         files=r.prepare(root,{'direct-issue-60':claims['direct-issue-60']},{},'2026-10-23T12:00:00Z',{},json.loads((ROOT/'direct-trust.json').read_text()))
         self.assertEqual(json.loads(files['direct-other.json'])['boards'],boards)
-        for slug in ['exact-dft','3sum','apsp']:
+        for slug in r.SLUGS.values():
             if slug+'.json' in files:self.assertNotIn('direct-issue-60',files[slug+'.json'].decode())
 
     def test_final_ambiguous_cannot_reuse_early_pass(self):
