@@ -977,6 +977,58 @@
           ],
           "proofScope": "Yes; lean proves the all-Dirichlet theorem. The author reports a local Lean build with only the standard axioms. The tracker's prepare, test, verify and admission checks passed on the head, and the tracker's maintainer merged the pull request on 2026-10-30. No independent rerun.",
           "bound": "\\theta\\le 0.8733819666133"
+        },
+        {
+          "author": "Joseph Bebel",
+          "handle": "josephbebel",
+          "value": "5458637291332547/6250000000000000",
+          "display": "0.87338196661320752",
+          "date": "2026-10-30T23:03:24-07:00",
+          "dateSource": "https://github.com/GTimG/QuasiRiemannTracker/pull/101",
+          "dateKind": "first-stated",
+          "url": "https://github.com/GTimG/QuasiRiemannTracker/blob/20a4c9a5afb5e6c63f9320ccdf765912fb1f29f1/submissions/2026-10-31-positive-gap-contact-return/src/Candidate/Main.lean#L9-L14",
+          "lean": true,
+          "leanNote": "Yes; lean proves the all-Dirichlet theorem. The author reports a local Lean build with only the standard axioms. The tracker's prepare, test, verify and admission checks passed on the head. The pull request is open and not merged. No independent rerun.",
+          "evidence": "claimed",
+          "review": {
+            "pr": 101,
+            "status": "open"
+          },
+          "note": "The author says it takes the seed and selected-energy theorems of PR #99 at smaller fixed positive gaps, keeps the count cap and the five count windows of PR #99, retunes the height and lowers the reserve and the conductor extension, which takes the return to within 7.1e-20 of the limiting contact of this count scheme. It builds on PR #99, the physical return of PR #98, Arvi's PR #97, the author's PR #93 and Sil's fourth-power source construction, and on OpenAI, Hailey Collet, Sil, Arvi and Jacob Sussman. The PR says 182 of its 236 Lean modules are byte-identical to PR #99's. It is 0.00000000000009248 below PR #99.",
+          "authors": [
+            {
+              "name": "Joseph Bebel",
+              "url": "https://github.com/josephbebel"
+            }
+          ],
+          "proofScope": "Yes; lean proves the all-Dirichlet theorem. The author reports a local Lean build with only the standard axioms. The tracker's prepare, test, verify and admission checks passed on the head. The pull request is open and not merged. No independent rerun.",
+          "bound": "\\theta\\le 0.87338196661320752"
+        },
+        {
+          "author": "Devin Watson",
+          "handle": "DevinWatson",
+          "value": "87338196661320751993/100000000000000000000",
+          "display": "0.87338196661320751993",
+          "date": "2026-10-31T09:57:19-07:00",
+          "dateSource": "https://github.com/GTimG/QuasiRiemannTracker/pull/102",
+          "dateKind": "first-stated",
+          "url": "https://github.com/GTimG/QuasiRiemannTracker/blob/ad7b7edd47bee2fdff34165da5cc14cc0331db2c/submissions/2026-10-31-saddle-closure-selected-gap/src/Candidate/Main.lean#L9-L14",
+          "lean": true,
+          "leanNote": "Yes; lean proves the all-Dirichlet theorem. The tracker's prepare, test, verify and admission checks passed on the head. The pull request is open and not merged. No independent rerun.",
+          "evidence": "claimed",
+          "review": {
+            "pr": 102,
+            "status": "open"
+          },
+          "note": "The author says it tightens the reserve of the fourth-power seed and the selected-energy gap to 1e-20, tightens the return reserve and the top conductor step to 1e-22, and deepens one edge cover, which closes to within 9.7322e-22 of the limiting contact of this count scheme. The PR says 224 of its 236 Lean files are identical to the submission of PR #99. The tracker metadata also names Joseph Bebel as an author. It builds on Joseph Bebel's PR #93, PR #98 and PR #99, Arvi's PR #97, and on Jacob Sussman, Sil, Hailey Collet and OpenAI. It is 0.00000000000000007 below PR #101.",
+          "authors": [
+            {
+              "name": "Devin Watson",
+              "url": "https://github.com/DevinWatson"
+            }
+          ],
+          "proofScope": "Yes; lean proves the all-Dirichlet theorem. The tracker's prepare, test, verify and admission checks passed on the head. The pull request is open and not merged. No independent rerun.",
+          "bound": "\\theta\\le 0.87338196661320751993"
         }
       ],
       "repos": [
@@ -1053,7 +1105,7 @@
           "note": "A limit for the original \\(7/8\\) proof only: with its four audited inequalities fixed and only the geometry varied, the zero-free threshold stays at least \\(4638705/5301659\\approx 0.8749535\\). The repository says this is no barrier for other methods; the tracker results below that value change those inequalities, for example with marked zero counting."
         }
       ],
-      "bestHandle": "josephbebel"
+      "bestHandle": "DevinWatson"
     },
     {
       "family": "005",
