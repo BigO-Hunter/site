@@ -1684,5 +1684,14 @@
     "authors": [
       "-"
     ]
+  },
+  {
+    "key": "[\"other-average-sensitivity\",\"direct-issue-93:90295/28292\",\"90295/28292\",\"attained\"]:lean",
+    "text": "**New record** | **Average sensitivity** | `AS(f) ≤ 3.19154d sqrt(n)` | by Dmitri I. Arkhipov | Lean Verified | [bigospeedrun.com/other/average-sensitivity](https://bigospeedrun.com/other/average-sensitivity)",
+    "x_text": "New record!\n\nProblem: Average sensitivity\nNew value: AS(f) ≤ 3.19154d sqrt(n)\nPlayer: Dmitri I. Arkhipov\nStatus: Lean Verified",
+    "posted_at": "2026-11-01T15:34:00.226Z",
+    "authors": [
+      "Dmitri I. Arkhipov"
+    ]
   }
 ]
