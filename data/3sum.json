@@ -745,8 +745,8 @@
       },
       "rerun_status": {
         "state": "passed",
-        "checked_at": "2026-11-01T14:20:20.671471Z",
-        "receipt_path": "sources/direct-issue-92-41308731612-1-lean.json"
+        "checked_at": "2026-11-01T14:37:00.381140Z",
+        "receipt_path": "sources/direct-issue-92-41308731612-1.json"
       }
     },
     {
@@ -1088,7 +1088,7 @@
       "repo": "Wang-jiong-han/3sum-weighted-cache",
       "site_badge": false,
       "eligible_for_record": false,
-      "proof_status": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+      "proof_status": "Lean and nanoda passed; permitted-axiom audit passed",
       "upstream_tier": "verified",
       "site_tier": "verified",
       "comparison_key": "3sum/word-ram/v1",
@@ -1120,5 +1120,5 @@
       "verification": "pending"
     }
   },
-  "updated_at": "2026-11-01T14:39:21Z"
+  "updated_at": "2026-11-01T15:27:54Z"
 }

@@ -5,6 +5,6 @@
   "description": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
   "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308731612",
   "artifact_path": "sources/direct-pr-91-41308731612-1-lean.zip",
-  "artifact_sha256": "8bb13a93161b2e5d7e303ecc56b01c761970e1d556336c2b8593fcd022b183b1",
+  "artifact_sha256": "b8d16386d68b6173e15d48161e2de5e3db33ed853c846f2cbd5cff98d32050b3",
   "source_receipt_path": "sources/direct-pr-91-41308731612-1-lean-source.json"
 }

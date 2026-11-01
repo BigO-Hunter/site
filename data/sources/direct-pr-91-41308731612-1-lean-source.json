@@ -3,9 +3,9 @@
     "disposition": "merge",
     "importable": true,
     "merge_commit": "88689b6dd9b7fca0b969f9593e3a4721d4ef11be",
-    "publisher_commit": "2a6ae741709099f78357e47a4be5b5f70ae19722",
+    "publisher_commit": "88689b6dd9b7fca0b969f9593e3a4721d4ef11be",
     "publisher_run_attempt": "1",
-    "publisher_run_id": "41308814710",
+    "publisher_run_id": "41317102520",
     "reason": "lean_and_axiom_passed_nanoda_pending",
     "receipt": {
       "artifact_sha256": {
@@ -3128,7 +3128,7 @@
     "test_only": false,
     "verification_stage": "lean",
     "verifier_commit": "2a6ae741709099f78357e47a4be5b5f70ae19722",
-    "workflow_conclusion": null,
+    "workflow_conclusion": "success",
     "workflow_path": ".github/workflows/submissions.yml"
   },
   "verification_run": {
@@ -3362,23 +3362,23 @@
     }
   },
   "result_artifact": {
-    "id": 13087800498,
-    "node_id": "MDg6QXJ0aWZhY3QxMzA4NzgwMDQ5OA==",
-    "name": "pr-submission-41308731612-1-publisher-41308814710-1",
-    "size_in_bytes": 27259,
-    "url": "https://api.github.com/repos/bigospeedrun/verifier/actions/artifacts/13087800498",
-    "archive_download_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/artifacts/13087800498/zip",
+    "id": 13087803102,
+    "node_id": "MDg6QXJ0aWZhY3QxMzA4NzgwMzEwMg==",
+    "name": "pr-submission-41308731612-1-publisher-41317102520-1",
+    "size_in_bytes": 21766,
+    "url": "https://api.github.com/repos/bigospeedrun/verifier/actions/artifacts/13087803102",
+    "archive_download_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/artifacts/13087803102/zip",
     "expired": false,
-    "digest": "sha256:bd6ec4488dc7c14f1f0bd2581d735acf837acdec5f7810c141d99841620ebb00",
-    "created_at": "2026-11-01T14:20:45Z",
-    "updated_at": "2026-11-01T14:20:45Z",
-    "expires_at": "2027-01-30T12:56:09Z",
+    "digest": "sha256:274380bc4c43e5d2ad69c691be6df1c2d33daf748328ed56cd5cd5bbedebfce2",
+    "created_at": "2026-11-01T14:37:40Z",
+    "updated_at": "2026-11-01T14:37:40Z",
+    "expires_at": "2027-01-30T14:37:18Z",
     "workflow_run": {
-      "id": 41308814710,
+      "id": 41317102520,
       "repository_id": 1413001192,
       "head_repository_id": 1413001192,
       "head_branch": "main",
-      "head_sha": "2a6ae741709099f78357e47a4be5b5f70ae19722"
+      "head_sha": "88689b6dd9b7fca0b969f9593e3a4721d4ef11be"
     }
   },
   "proof_artifact": {
@@ -3402,25 +3402,25 @@
     }
   },
   "publisher_run": {
-    "id": 41308814710,
+    "id": 41317102520,
     "name": "Publish submission PR result",
-    "node_id": "WFR_kwLOVDiv6M8AAAAJnjJ9dg",
+    "node_id": "WFR_kwLOVDiv6M8AAAAJnrDzuA",
     "head_branch": "main",
-    "head_sha": "2a6ae741709099f78357e47a4be5b5f70ae19722",
+    "head_sha": "88689b6dd9b7fca0b969f9593e3a4721d4ef11be",
     "path": ".github/workflows/pr-publish.yml",
     "display_title": "Publish submission PR result",
-    "run_number": 2440,
+    "run_number": 2449,
     "event": "workflow_run",
     "status": "completed",
     "conclusion": "success",
     "workflow_id": 380847965,
-    "check_suite_id": 111958454010,
-    "check_suite_node_id": "CS_kwDOVDiv6M8AAAAaET5u-g",
-    "url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41308814710",
-    "html_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308814710",
+    "check_suite_id": 111979905644,
+    "check_suite_node_id": "CS_kwDOVDiv6M8AAAAaEoXCbA",
+    "url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41317102520",
+    "html_url": "https://github.com/bigospeedrun/verifier/actions/runs/41317102520",
     "pull_requests": [],
-    "created_at": "2026-11-01T12:56:09Z",
-    "updated_at": "2026-11-01T14:20:49Z",
+    "created_at": "2026-11-01T14:37:18Z",
+    "updated_at": "2026-11-01T14:37:43Z",
     "actor": {
       "login": "Wang-jiong-han",
       "id": 80233558,
@@ -3444,7 +3444,7 @@
     },
     "run_attempt": 1,
     "referenced_workflows": [],
-    "run_started_at": "2026-11-01T12:56:09Z",
+    "run_started_at": "2026-11-01T14:37:18Z",
     "triggering_actor": {
       "login": "Wang-jiong-han",
       "id": 80233558,
@@ -3466,22 +3466,22 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "jobs_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41308814710/jobs",
-    "logs_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41308814710/logs",
-    "check_suite_url": "https://api.github.com/repos/bigospeedrun/verifier/check-suites/111958454010",
-    "artifacts_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41308814710/artifacts",
-    "cancel_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41308814710/cancel",
-    "rerun_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41308814710/rerun",
+    "jobs_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41317102520/jobs",
+    "logs_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41317102520/logs",
+    "check_suite_url": "https://api.github.com/repos/bigospeedrun/verifier/check-suites/111979905644",
+    "artifacts_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41317102520/artifacts",
+    "cancel_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41317102520/cancel",
+    "rerun_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/runs/41317102520/rerun",
     "previous_attempt_url": null,
     "workflow_url": "https://api.github.com/repos/bigospeedrun/verifier/actions/workflows/380847965",
     "head_commit": {
-      "id": "2a6ae741709099f78357e47a4be5b5f70ae19722",
-      "tree_id": "95a3646b70b8fc6ac191ea3ea75a6af598637d57",
-      "message": "DFT submission: saving 30201659/10000000000 (#90)\n\nAdd submissions/dft/zeph1912-rank-moment-refinement, a numerical\nrefinement of the rate certificate in HalitZiyaKARTAL's #41\n(submissions/dft/halitziyakartal-halitziyav4-logception).\n\nThe P16A8Z circuit, its rank multisets, the strict tensor engine,\nSussman's mixed-target recursion and the Fourier reduction are unchanged.\nTighter rational enclosures of the rank moments (sixth/fifth-order\nexponential bounds with finite-series logarithm certificates) and a\ntensor power of 11640 instead of 7760 certify the rate\nC = 60403319/20000000000 (0.00302016595), above the C0 = 4719/1562500\ncertified in #41. Race.bound is proved at the saving 30201659/10000000000\n(about 0.0030201659) through the seam saving 3020165925/10^12.\n\nFiles: 411 of the 462 Lean files are byte-identical to #41; 3 OpenAI\nmodel files change only their Mathlib import; 15 are modified and 33\nare new. Source credits are kept in the file headers.\n\nArtifact:\nhttps://github.com/zeph1912/Discrete-Fourier-Transform-Refinement-2026_10_31\n(commit 8cd46642a51103b1462051c75102b4089340dff2),\nZenodo DOI 10.5281/zenodo.23843356.\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
-      "timestamp": "2026-10-31T23:09:42Z",
+      "id": "88689b6dd9b7fca0b969f9593e3a4721d4ef11be",
+      "tree_id": "42676fa6ba2aabb9b2b16324bd5e8c1b2b9c4fec",
+      "message": "DFT submission: saving 312780997/100000000000 (#91)\n\nCo-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>",
+      "timestamp": "2026-11-01T14:00:39Z",
       "author": {
-        "name": "Zhihao \"Zephyr\" Yao",
-        "email": "zeph1912@users.noreply.github.com"
+        "name": "Halit Ziya KARTAL",
+        "email": "37115441+HalitZiyaKARTAL@users.noreply.github.com"
       },
       "committer": {
         "name": "GitHub",

@@ -1,6 +1,48 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-93": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "average-sensitivity",
+        "repo_url": "https://github.com/darkhipo/average-sensitivity-lean",
+        "commit": "78fe0e65b6915143f3a8055f2444b8ec44b806b2",
+        "bound": "90295/28292",
+        "authors": []
+      },
+      "verification": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-93-3425883405089089d5a640c7e183b131e4f62fba7dba0a694d8dd6a57a0db93c",
+        "problem_id": "other/average-sensitivity",
+        "score": "90295/28292",
+        "score_relation": "attained",
+        "source_commit": "78fe0e65b6915143f3a8055f2444b8ec44b806b2",
+        "source_url": "https://github.com/darkhipo/average-sensitivity-lean",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41317134688",
+        "checked_at": "2026-11-01T14:45:37.100619Z",
+        "issue_created_at": "2026-11-01T13:18:56Z",
+        "issue_updated_at_at_verification": "2026-11-01T14:37:51Z",
+        "issue_updated_at_at_import": "2026-11-01T14:46:06Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-93-41317134688-1.json",
+        "receipt_sha256": "45cf1930eede2414130f9498d356b3ec65c0db3236a0ad8d338551817425c243",
+        "policy_hash": "dc178b391ed56e5a2695a5b3e3aa4bb8cf22ed2df6221c7ad5f69f1188980d93",
+        "result_artifact_id": 13087898105,
+        "controller_fingerprint": "e3155697ac20f833d9cbdea6faac499707bedb55f8433742cd92d95be319d9eb",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
+    },
     "direct-issue-92": {
       "route": "issue",
       "submission": {
@@ -13,7 +55,7 @@
       },
       "verification": {
         "decision": "lean-verified",
-        "reason": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
         "id": "direct-92-73a0093671b4867cbc105ba6d320279fb64df313cf4bd8f119a691a8b9161d0e",
         "problem_id": "3sum/word-ram",
         "score": "96013971/50000000",
@@ -24,20 +66,20 @@
         "workflow_conclusion": "success",
         "issue_submitter": "Wang-jiong-han",
         "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308731612",
-        "checked_at": "2026-11-01T14:20:20.671471Z",
+        "checked_at": "2026-11-01T14:37:00.381140Z",
         "issue_created_at": "2026-11-01T12:55:00Z",
         "issue_updated_at_at_verification": "2026-11-01T12:55:11Z",
-        "issue_updated_at_at_import": "2026-11-01T14:20:43Z",
+        "issue_updated_at_at_import": "2026-11-01T14:37:24Z",
         "derivation_hold": false,
         "review_required": [
           "authorship",
           "first publication date",
           "historical record eligibility"
         ],
-        "receipt_path": "sources/direct-issue-92-41308731612-1-lean.json",
-        "receipt_sha256": "a7a442e521d4c5c70450c2979499b93aa04a696095739d5974fdca99e7e85d3c",
+        "receipt_path": "sources/direct-issue-92-41308731612-1.json",
+        "receipt_sha256": "44df8adaf2bf494f16062489dbc52812fc37e240bd4f3e9b8282a3f353d268ea",
         "policy_hash": "dc178b391ed56e5a2695a5b3e3aa4bb8cf22ed2df6221c7ad5f69f1188980d93",
-        "result_artifact_id": 13087800498,
+        "result_artifact_id": 13087294627,
         "controller_fingerprint": "28d75d18abd8ebec27c85d6ca695246f60df30e7b928f78c9670e2103a72ca39",
         "pr_identity": null,
         "source_file": "Submission.lean"
@@ -1146,13 +1188,13 @@
       },
       "verification": {
         "decision": "lean-verified",
-        "reason": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
-        "checked_at": "2026-11-01T14:00:06.690460Z",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "checked_at": "2026-11-01T14:17:55.153322Z",
         "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308731612",
-        "receipt_path": "sources/direct-pr-91-41308731612-1-lean.json",
-        "receipt_sha256": "c96fd013c1f84e83b70b2cf813ac145228c0635e4c58015955687e4bcca5fab6",
+        "receipt_path": "sources/direct-pr-91-41308731612-1-final.json",
+        "receipt_sha256": "724f3617dd1b24e10fb61aebc38d887131d3890d8bb5ce6707320e29b81b2965",
         "policy_hash": "dc178b391ed56e5a2695a5b3e3aa4bb8cf22ed2df6221c7ad5f69f1188980d93",
-        "result_artifact_id": 13087800498,
+        "result_artifact_id": 13087372779,
         "controller_fingerprint": "28d75d18abd8ebec27c85d6ca695246f60df30e7b928f78c9670e2103a72ca39",
         "pr_identity": {
           "number": 91,
@@ -3134,6 +3176,123 @@
           "changed_files_sha256": "6fac40de152b7f4bd7ff54c3ade904977ac2b2a255d7f61d1715b20101edb0b4",
           "controller": "3da05dadea41d09965962584aa1c9e951e3601de"
         },
+        "source_file": "Submission.lean"
+      }
+    },
+    "direct-issue-92:73a0093671b4867cbc105ba6d320279fb64df313cf4bd8f119a691a8b9161d0e": {
+      "key": "direct-issue-92",
+      "submission": {
+        "schema_version": 1,
+        "problem": "3sum",
+        "repo_url": "https://github.com/Wang-jiong-han/3sum-weighted-cache",
+        "commit": "ac885d10bdbf723c3e0549198f9345bedf2a4131",
+        "bound": "96013971/50000000",
+        "authors": []
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-92-73a0093671b4867cbc105ba6d320279fb64df313cf4bd8f119a691a8b9161d0e",
+        "problem_id": "3sum/word-ram",
+        "score": "96013971/50000000",
+        "score_relation": "attained",
+        "source_commit": "ac885d10bdbf723c3e0549198f9345bedf2a4131",
+        "source_url": "https://github.com/Wang-jiong-han/3sum-weighted-cache",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "Wang-jiong-han",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308731612",
+        "checked_at": "2026-11-01T14:37:00.381140Z",
+        "issue_created_at": "2026-11-01T12:55:00Z",
+        "issue_updated_at_at_verification": "2026-11-01T12:55:11Z",
+        "issue_updated_at_at_import": "2026-11-01T14:37:24Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-92-41308731612-1.json",
+        "receipt_sha256": "44df8adaf2bf494f16062489dbc52812fc37e240bd4f3e9b8282a3f353d268ea",
+        "policy_hash": "dc178b391ed56e5a2695a5b3e3aa4bb8cf22ed2df6221c7ad5f69f1188980d93",
+        "result_artifact_id": 13087294627,
+        "controller_fingerprint": "28d75d18abd8ebec27c85d6ca695246f60df30e7b928f78c9670e2103a72ca39",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
+    },
+    "direct-pr-91:1e158188e7fd9048ce4e19f27e4d4b3a25d544e797a8976637f5f9cf25ee629b": {
+      "key": "direct-pr-91",
+      "submission": {
+        "schema_version": 1,
+        "problem": "dft",
+        "bound": "312780997/100000000000",
+        "repo_url": "https://github.com/bigospeedrun/verifier",
+        "commit": "524a8af8a277ca50c1237068c2b45430a03f547e",
+        "authors": [],
+        "source_subdir": "submissions/dft/halitziyakartal-halitziyav5-pre-pi"
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "checked_at": "2026-11-01T14:17:55.153322Z",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308731612",
+        "receipt_path": "sources/direct-pr-91-41308731612-1-final.json",
+        "receipt_sha256": "724f3617dd1b24e10fb61aebc38d887131d3890d8bb5ce6707320e29b81b2965",
+        "policy_hash": "dc178b391ed56e5a2695a5b3e3aa4bb8cf22ed2df6221c7ad5f69f1188980d93",
+        "result_artifact_id": 13087372779,
+        "controller_fingerprint": "28d75d18abd8ebec27c85d6ca695246f60df30e7b928f78c9670e2103a72ca39",
+        "pr_identity": {
+          "number": 91,
+          "head": "524a8af8a277ca50c1237068c2b45430a03f547e",
+          "changed_files_sha256": "e758a0b161e4cce2bf2933d08d8d191bea4b1ff1f9f1b31b7118f15be68fc926",
+          "controller": "2a6ae741709099f78357e47a4be5b5f70ae19722"
+        },
+        "source_file": "Submission.lean"
+      }
+    },
+    "direct-issue-93:3425883405089089d5a640c7e183b131e4f62fba7dba0a694d8dd6a57a0db93c": {
+      "key": "direct-issue-93",
+      "submission": {
+        "schema_version": 1,
+        "problem": "average-sensitivity",
+        "repo_url": "https://github.com/darkhipo/average-sensitivity-lean",
+        "commit": "78fe0e65b6915143f3a8055f2444b8ec44b806b2",
+        "bound": "90295/28292",
+        "authors": []
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-93-3425883405089089d5a640c7e183b131e4f62fba7dba0a694d8dd6a57a0db93c",
+        "problem_id": "other/average-sensitivity",
+        "score": "90295/28292",
+        "score_relation": "attained",
+        "source_commit": "78fe0e65b6915143f3a8055f2444b8ec44b806b2",
+        "source_url": "https://github.com/darkhipo/average-sensitivity-lean",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41317134688",
+        "checked_at": "2026-11-01T14:45:37.100619Z",
+        "issue_created_at": "2026-11-01T13:18:56Z",
+        "issue_updated_at_at_verification": "2026-11-01T14:37:51Z",
+        "issue_updated_at_at_import": "2026-11-01T14:46:06Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-93-41317134688-1.json",
+        "receipt_sha256": "45cf1930eede2414130f9498d356b3ec65c0db3236a0ad8d338551817425c243",
+        "policy_hash": "dc178b391ed56e5a2695a5b3e3aa4bb8cf22ed2df6221c7ad5f69f1188980d93",
+        "result_artifact_id": 13087898105,
+        "controller_fingerprint": "e3155697ac20f833d9cbdea6faac499707bedb55f8433742cd92d95be319d9eb",
+        "pr_identity": null,
         "source_file": "Submission.lean"
       }
     }
