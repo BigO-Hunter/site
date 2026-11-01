@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-92": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "3sum",
+        "repo_url": "https://github.com/Wang-jiong-han/3sum-weighted-cache",
+        "commit": "ac885d10bdbf723c3e0549198f9345bedf2a4131",
+        "bound": "96013971/50000000",
+        "authors": []
+      }
+    },
     "direct-issue-87": {
       "route": "issue",
       "submission": {
@@ -1089,6 +1100,18 @@
         "controller_fingerprint": "f057a976d6b2a02473b2f063da5db8b092543d439eef09692b214de8811ac15f",
         "pr_identity": null,
         "source_file": "Submission.lean"
+      }
+    },
+    "direct-pr-91": {
+      "route": "pull_request",
+      "submission": {
+        "schema_version": 1,
+        "problem": "dft",
+        "bound": "312780997/100000000000",
+        "repo_url": "https://github.com/bigospeedrun/verifier",
+        "commit": "524a8af8a277ca50c1237068c2b45430a03f547e",
+        "authors": [],
+        "source_subdir": "submissions/dft/halitziyakartal-halitziyav5-pre-pi"
       }
     },
     "direct-pr-90": {
@@ -3174,10 +3197,10 @@
       "updated_at": "2026-10-25T01:56:56Z",
       "not_verified": false
     },
-    "89": {
-      "version": "35eb019b30dd71d522803a3e28890fccf43494369f9f2cf80421c698f2cdea8e",
-      "updated_at": "2026-10-31T14:54:15Z",
-      "not_verified": true
+    "92": {
+      "version": "73a0093671b4867cbc105ba6d320279fb64df313cf4bd8f119a691a8b9161d0e",
+      "updated_at": "2026-11-01T12:55:56Z",
+      "not_verified": false
     }
   }
 }
