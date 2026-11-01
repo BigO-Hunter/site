@@ -191,7 +191,30 @@ class PlatypiiTests(unittest.TestCase):
         with unittest.mock.patch.object(pl.urllib.request, 'urlopen', lambda *a, **k: Response(raw.getvalue())):
             self.assertEqual([n for n, _ in pl.lean_files('s')], ['F0.lean', 'F1.lean', 'F2.lean'])
             with unittest.mock.patch.object(pl, 'MAX_LEAN_BYTES', 100):
-                with self.assertRaises(ValueError): pl.lean_files('s')
+                with self.assertRaises(ValueError): list(pl.lean_files('s'))
+            with unittest.mock.patch.object(pl, 'MAX_TARBALL', 20):
+                with self.assertRaises(ValueError): list(pl.lean_files('s'))
+
+    def test_a_large_repository_is_scanned_one_file_at_a_time(self):
+        # 2026-11-02: the author's repo grew to 11,222 files and 183.6 MB (9 MB on 2026-10-15), past the old 256 MB
+        # decompressed cap in a few weeks. The scan streams the archive and keeps one file in memory, so the caps are
+        # 256 MB compressed and 1 GB of .lean. This test reads lazily: only the files taken so far are decompressed.
+        raw = io.BytesIO()
+        with tarfile.open(fileobj=raw, mode='w:gz') as tf:
+            for i in range(5):
+                data = f'-- file {i}\n'.encode(); info = tarfile.TarInfo(f'repo-sha/F{i}.lean'); info.size = len(data); tf.addfile(info, io.BytesIO(data))
+        reads = []
+        class Response(io.BytesIO):
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+            def read(self, size=-1): reads.append(size); return super().read(size)
+        with unittest.mock.patch.object(pl.urllib.request, 'urlopen', lambda *a, **k: Response(raw.getvalue())):
+            files = pl.lean_files('s')
+            self.assertEqual(reads, [], 'nothing is read before the first file is asked for')
+            self.assertEqual(next(files)[0], 'F0.lean')
+            self.assertEqual(pl.unsafe_tokens(files), [])
+        self.assertGreaterEqual(pl.MAX_LEAN_BYTES, 1024 * 1024 * 1024)
+        self.assertGreaterEqual(pl.MAX_TARBALL, 256 * 1024 * 1024)
 
     def test_review_check_lists_a_wait_and_exits_zero(self):
         import review_hold

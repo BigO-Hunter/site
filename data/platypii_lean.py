@@ -32,8 +32,11 @@ STATEMENT = 'IntegerMultBounds/MathlibTM2/Statement.lean'
 THEOREM = 'IntegerMultBounds/MathlibTM2/Theorem.lean'
 # Reviewed 2026-10-17: the same file at 9f18143 and a8e85a1.
 STATEMENT_SHA256 = 'fdefddb6fe2870e6c2c5f45dd4ac02ef93dee3171ebaaa86e3d059cf0a57c0d5'
-MAX_TARBALL = 64 * 1024 * 1024
-MAX_LEAN_BYTES = 256 * 1024 * 1024  # decompressed .lean total (9 MB on 2026-10-15)
+# The tarball is read as a stream and one file at a time is kept in memory, so the caps bound time and abuse, not
+# memory. 2026-11-02: 25.7 MB compressed, 183.6 MB of .lean in 11,222 files (9 MB on 2026-10-15); scanning them takes
+# about 13 s and 40 MB of memory. The step has a 4 minute limit: 1 GB of .lean is about 75 s.
+MAX_TARBALL = 256 * 1024 * 1024
+MAX_LEAN_BYTES = 1024 * 1024 * 1024  # decompressed .lean total
 # The prove2.me import (prove2me_import.py) puts its sentence first and writes 'Separately, a Lean proof'.
 NOTE = re.compile(r'(Separately, a|A) Lean proof of a (?:stronger )?saving, kappa = .*?we have not rerun it\.')
 CI_TEXT = {'success': "the author's CI on that commit passed",
@@ -76,29 +79,36 @@ def safe_text(value, cap=300):
     text = ' '.join(ascii(str(value))[1:-1].replace('\\n', ' ').replace('\\r', ' ').replace('\\t', ' ').split())
     return text if len(text) <= cap else text[:cap - 3] + '...'
 
+class _Counted:
+    """Reads from a response and refuses more than MAX_TARBALL compressed bytes."""
+    def __init__(self, response): self.response = response; self.count = 0
+    def read(self, size=-1):
+        data = self.response.read(size)
+        self.count += len(data)
+        if self.count > MAX_TARBALL:
+            raise ValueError('tarball over the size cap')
+        return data
+
 def lean_files(sha):
-    """(path, text) of every .lean file at sha, from the source tarball (GET, in memory)."""
+    """(path, text) of every .lean file at sha, from the source tarball (GET, streamed: one file in memory at a time).
+    A generator: errors (404, size caps, a bad archive) are raised while it is read."""
     request = urllib.request.Request(f'https://api.github.com/repos/{REPO}/tarball/{sha}',
                                      headers={'Accept': 'application/vnd.github+json', 'User-Agent': 'bigospeedrun-data',
                                               **({'Authorization': 'Bearer ' + os.environ['GITHUB_TOKEN']} if os.environ.get('GITHUB_TOKEN') else {})})
     try:
-        with urllib.request.urlopen(request, timeout=120) as response:
-            raw = response.read(MAX_TARBALL + 1)
+        response = urllib.request.urlopen(request, timeout=120)
     except urllib.error.HTTPError as error:
         if error.code == 404:
             raise ValueError('source tarball not found (HTTP 404)') from None
         raise
-    if len(raw) > MAX_TARBALL:
-        raise ValueError('tarball over the size cap')
-    out = []; total = 0
-    with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as tf:
+    total = 0
+    with response, tarfile.open(fileobj=_Counted(response), mode='r|gz') as tf:
         for m in tf:
             if m.isfile() and m.name.endswith('.lean'):
                 total += m.size
                 if total > MAX_LEAN_BYTES:
                     raise ValueError('Lean sources over the size cap')
-                out.append((m.name.split('/', 1)[1] if '/' in m.name else m.name, tf.extractfile(m).read().decode('utf-8', 'replace')))
-    return out
+                yield (m.name.split('/', 1)[1] if '/' in m.name else m.name, tf.extractfile(m).read().decode('utf-8', 'replace'))
 
 def ci_text(sha, get=api):
     runs = get(f'repos/{REPO}/commits/{sha}/check-runs').get('check_runs', [])
