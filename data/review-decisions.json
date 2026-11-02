@@ -539,6 +539,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-02T03:37:00Z",
       "note": "aliromman's own package research/p104-input-lift-tree-composition/ (RESULT.json, no CLAIM.json) states price.kappa 15749/5000000 = 0.00314980, the title's value (+4.7e-7 over #6348's 0.00314933, which it composes with #6349's input lifts), on canonical base 7c49fe3. Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-02T02:48:50Z, and not in CrocSwap's ledger yet. Open: Claimed, new IM leader over #6348 (one New claim post expected). Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6436,
+      "head": "526737c2efd72e9b2ecc967cd213895e26457f0a",
+      "score": "164318869572062111374401/50000000000000000000000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-02T23:39:00Z",
+      "note": "ChaloupeMusic's own package research/mixed-root-third-anchor-composition/ (19 files, RESULT.json, no CLAIM.json) states price.kappa 164318869572062111374401/50000000000000000000000000 = 0.00328637739144124222748802, the title's value (+1.626e-7 over #6398's 0.00328621476572836015146308), on a branch that is a direct child of #6398's head dee2663b. Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-02T23:11:51Z, and not in CrocSwap's ledger. The queue reason came from the stack: against main the PR adds five packages with a RESULT.json; four belong to its open parent #6398, and only the third-anchor package is its own. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
