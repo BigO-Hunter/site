@@ -5455,7 +5455,7 @@
         "slug": "other-catalan",
         "name": "Catalan’s constant",
         "url": "https://bigospeedrun.com/other/catalan",
-        "leader": "direct-issue-103:1056463/2000",
+        "leader": "slitsey:410",
         "table": "other-bounds",
         "direction": "lower",
         "records": [
@@ -5700,6 +5700,17 @@
             ],
             "bound": "μ(G) ≤ 528.2315",
             "display": "528.2315"
+          },
+          {
+            "id": "slitsey:410",
+            "score": "410",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "S. Litsey"
+            ],
+            "bound": "μ(G) ≤ 410",
+            "display": "410"
           }
         ]
       },
@@ -6907,6 +6918,13 @@
       "slug": "integer-multiplication",
       "authors": [
         "aigent-marius"
+      ]
+    },
+    {
+      "key": "[\"other-catalan\",\"slitsey:410\",\"410\",\"attained\"]:record",
+      "slug": "other-catalan",
+      "authors": [
+        "S. Litsey"
       ]
     }
   ]

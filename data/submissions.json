@@ -118387,6 +118387,44 @@
       "claim_files_head": "247b5c319b9f58fe9ee61dbf80697f8a9a429831",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6376,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Independently audit PR6372 two-anchor scalar boundary and endpoint",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6376",
+      "submitted_at": "2026-11-02T17:22:45Z",
+      "updated_at": "2026-11-02T17:22:45Z",
+      "source_commit": "027250a7b84349506112b7e8e36f1014848b37cf",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T17:22:45Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "027250a7b84349506112b7e8e36f1014848b37cf",
+      "claim_text": "b0b38a449e9df1f61349c93d5810a92b7a9b91f37d44204b4ac14f7254647986",
+      "claim_files": [],
+      "claim_files_head": "027250a7b84349506112b7e8e36f1014848b37cf",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6377,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Archive Linux 7 channel source audit with bounded static replay",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6377",
+      "submitted_at": "2026-11-02T17:23:07Z",
+      "updated_at": "2026-11-02T17:23:07Z",
+      "source_commit": "2a26450dea25d7648b585befce5ed375857a8f90",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T17:23:07Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }

@@ -122974,5 +122974,47 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6376,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6376",
+    "title": "Independently audit PR6372 two-anchor scalar boundary and endpoint",
+    "state": "open",
+    "created_at": "2026-11-02T17:22:45Z",
+    "updated_at": "2026-11-02T17:22:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "027250a7b84349506112b7e8e36f1014848b37cf"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6377,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6377",
+    "title": "Archive Linux 7 channel source audit with bounded static replay",
+    "state": "open",
+    "created_at": "2026-11-02T17:23:07Z",
+    "updated_at": "2026-11-02T17:23:07Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "2a26450dea25d7648b585befce5ed375857a8f90"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]
