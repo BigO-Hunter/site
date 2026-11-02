@@ -1702,5 +1702,14 @@
     "authors": [
       "Ali Romman"
     ]
+  },
+  {
+    "key": "[\"other-catalan\",\"direct-issue-95:5282327/10000\",\"5282327/10000\",\"attained\"]:lean",
+    "text": "**New record** | **Catalan’s constant** | `μ(G) ≤ 528.2327` | by Dmitri I. Arkhipov | Lean Verified | [bigospeedrun.com/other/catalan](https://bigospeedrun.com/other/catalan)",
+    "x_text": "New record!\n\nProblem: Catalan’s constant\nNew value: μ(G) ≤ 528.2327\nPlayer: Dmitri I. Arkhipov\nStatus: Lean Verified",
+    "posted_at": "2026-11-02T03:33:16.010Z",
+    "authors": [
+      "Dmitri I. Arkhipov"
+    ]
   }
 ]
