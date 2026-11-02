@@ -555,6 +555,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-02T23:45:00Z",
       "note": "aliromman's package research/mixed-root-contact-composition/ (RESULT.json, no CLAIM.json) states price.kappa 82155369143209003786577/25000000000000000000000000 = 0.00328621476572836015146308, the value the PR body gives as its complete claim (+4.28455% over #6375's 0.00315120; the title states no kappa). The PR adds four packages with a RESULT.json: this one is the final composition; query-root (0.00328467) and source-composition (0.00328551) are earlier checkpoints of the same stack, and root-headroom states no kappa and says new_kappa_increment false. #6436 and #6453 both cite this exact value as #6398's. Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-02T20:45:04Z. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6453,
+      "head": "b1a3e525793eca35c56324aa7ffd0b714cf606d4",
+      "score": "1643507/500000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-02T23:45:00Z",
+      "note": "ChaloupeMusic's own package research/p104-third-anchor-clean-mixed-root/ (RESULT.json, no CLAIM.json) states conditional_kappa 0.003287014 and complete_cost.kappa 1643507/500000000, the title's value (+1.65e-7 over #6417's 0.003286849), on a branch that is a direct child of #6417's head df683ace. Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-02T23:34:54Z. Against main the PR also shows #6417's package p104-clean-mixed-root, which #6417 holds, so the third-anchor package is the only own one. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
