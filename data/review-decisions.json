@@ -547,6 +547,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-02T23:39:00Z",
       "note": "ChaloupeMusic's own package research/mixed-root-third-anchor-composition/ (19 files, RESULT.json, no CLAIM.json) states price.kappa 164318869572062111374401/50000000000000000000000000 = 0.00328637739144124222748802, the title's value (+1.626e-7 over #6398's 0.00328621476572836015146308), on a branch that is a direct child of #6398's head dee2663b. Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-02T23:11:51Z, and not in CrocSwap's ledger. The queue reason came from the stack: against main the PR adds five packages with a RESULT.json; four belong to its open parent #6398, and only the third-anchor package is its own. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6398,
+      "head": "dee2663ba0918be86993fd9d63c8d64b020f4c83",
+      "score": "82155369143209003786577/25000000000000000000000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-02T23:45:00Z",
+      "note": "aliromman's package research/mixed-root-contact-composition/ (RESULT.json, no CLAIM.json) states price.kappa 82155369143209003786577/25000000000000000000000000 = 0.00328621476572836015146308, the value the PR body gives as its complete claim (+4.28455% over #6375's 0.00315120; the title states no kappa). The PR adds four packages with a RESULT.json: this one is the final composition; query-root (0.00328467) and source-composition (0.00328551) are earlier checkpoints of the same stack, and root-headroom states no kappa and says new_kappa_increment false. #6436 and #6453 both cite this exact value as #6398's. Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-02T20:45:04Z. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
