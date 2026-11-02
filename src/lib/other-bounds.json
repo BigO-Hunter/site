@@ -2406,7 +2406,7 @@
           "lean": true,
           "leanNote": "Yes; main obstruction and later repair theorem.",
           "evidence": "claimed",
-          "note": "",
+          "note": "The README says erebos-labs proves in Lean that a fixed \\(4\\times 4\\) pattern has no polynomial ordered removal bound, by sparse-zero localization for every ordered copy, including unpinned embeddings. It builds on OpenAI's signed-tree construction and the exact \\(4\\times 4\\) candidate from Vladimir Reshetnikov's ProveIt repository; the construction and the protected-selection distance method come from these sources.",
           "authors": [
             {
               "name": "erebos-labs",
@@ -2428,7 +2428,7 @@
           "lean": true,
           "leanNote": "Author-supplied Lean theorem; source inspected, no independent rerun.",
           "evidence": "claimed",
-          "note": "",
+          "note": "The README says Ryan Shea reduces the pattern from erebos-labs' \\(4\\times 4\\) to \\(3\\times 4\\) with an asymmetric anchor encoding, nonuniform extra ones and a full-copy localization argument, and that the main theorem is checked in Lean. The tree, threshold entries, protected sampling and propagation are OpenAI's.",
           "authors": [
             {
               "name": "Ryan Shea",
@@ -2450,7 +2450,7 @@
           "lean": true,
           "leanNote": "Author-supplied Lean theorem; source inspected, no independent rerun.",
           "evidence": "claimed",
-          "note": "",
+          "note": "The README says Ryan Shea reduces the pattern from Ryan Shea's earlier \\(3\\times 4\\) to the \\(3\\times 3\\) crown with one anchor on each axis, suffix column anchors, vertical-dummy ones and a new all-copy classification, and that the qualitative theorem is checked in Lean. The tree, threshold entries, protected sampling and propagation are OpenAI's; erebos-labs' \\(4\\times 4\\) theorem came earlier.",
           "authors": [
             {
               "name": "Ryan Shea",
