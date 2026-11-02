@@ -5445,7 +5445,7 @@
         "slug": "other-catalan",
         "name": "Catalan’s constant",
         "url": "https://bigospeedrun.com/other/catalan",
-        "leader": "direct-issue-95:5282327/10000",
+        "leader": "direct-issue-103:1056463/2000",
         "table": "other-bounds",
         "direction": "lower",
         "records": [
@@ -5679,6 +5679,17 @@
             ],
             "bound": "μ(G) ≤ 528.2327",
             "display": "528.2327"
+          },
+          {
+            "id": "direct-issue-103:1056463/2000",
+            "score": "1056463/2000",
+            "relation": "attained",
+            "evidence": "Lean Verified",
+            "authors": [
+              "Dmitri I. Arkhipov"
+            ],
+            "bound": "μ(G) ≤ 528.2315",
+            "display": "528.2315"
           }
         ]
       },
@@ -6876,7 +6887,8 @@
     "[\"integer-multiplication\",\"crocswap-pr-6353\",\"315057/100000000\",\"attained\"]:record",
     "[\"subset-sum\",\"direct-issue-94\",\"3/4\",\"attained\"]:lean",
     "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:record",
-    "[\"integer-multiplication\",\"crocswap-pr-6372\",\"315087/100000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6372\",\"315087/100000000\",\"attained\"]:record",
+    "[\"other-catalan\",\"direct-issue-103:1056463/2000\",\"1056463/2000\",\"attained\"]:lean"
   ],
   "deferred": [
     {

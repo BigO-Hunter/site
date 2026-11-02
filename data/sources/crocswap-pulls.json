@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-02T15:05:36Z",
+    "updated_at": "2026-11-02T15:19:47Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -122915,10 +122915,10 @@
   {
     "number": 6373,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6373",
-    "title": "V03: add the bounded prefix caller and refusal controls\\n",
+    "title": "V03: add the bounded prefix caller and refusal controls",
     "state": "open",
     "created_at": "2026-11-02T15:08:43Z",
-    "updated_at": "2026-11-02T15:08:43Z",
+    "updated_at": "2026-11-02T15:21:38Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122936,10 +122936,10 @@
   {
     "number": 6374,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6374",
-    "title": "V03: add owned-directory prefix stage preparation\\n",
+    "title": "V03: add owned-directory prefix stage preparation",
     "state": "open",
     "created_at": "2026-11-02T15:10:40Z",
-    "updated_at": "2026-11-02T15:10:40Z",
+    "updated_at": "2026-11-02T15:21:39Z",
     "closed_at": null,
     "merged_at": null,
     "user": {

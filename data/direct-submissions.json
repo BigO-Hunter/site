@@ -21,6 +21,37 @@
         "commit": "47a36df5197a19e5f6378bd2043d41d0f516064d",
         "bound": "1056463/2000",
         "authors": []
+      },
+      "verification": {
+        "decision": "lean-verified",
+        "reason": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+        "id": "direct-103-24b038c3760bffc19411fd03a051fc76647621900a0a37b7271b86f8f8ab6c00",
+        "problem_id": "other/catalan",
+        "score": "1056463/2000",
+        "score_relation": "attained",
+        "source_commit": "47a36df5197a19e5f6378bd2043d41d0f516064d",
+        "source_url": "https://github.com/darkhipo/catalan-constant-gen5",
+        "authors": [],
+        "workflow_conclusion": null,
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41431550617",
+        "checked_at": "2026-11-02T15:33:42.247168Z",
+        "issue_created_at": "2026-11-02T07:19:15Z",
+        "issue_updated_at_at_verification": "2026-11-02T07:20:48Z",
+        "issue_updated_at_at_import": "2026-11-02T15:33:49Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-103-41431550617-1-lean.json",
+        "receipt_sha256": "226d4265ed0b5c48936ccb8c4c645f2a7444fd87518ac78c51b6d5e86008e9ca",
+        "policy_hash": "eb6da8399ff1ee46f5a21e788aa635189d03195edf24c0e62d65af0cac62c0bc",
+        "result_artifact_id": 13156955102,
+        "controller_fingerprint": "a05030a1e19e63fb20f927bbad26b4ab5902c49e7fe84d2470b23b1599f5300e",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
       }
     },
     "direct-issue-99": {
@@ -3669,11 +3700,6 @@
     "101": {
       "version": "6f6b4fc5c8c20fb806b01b94c4d408331a72ea82bb5aa37fd52db8f29134ec4c",
       "updated_at": "2026-11-02T07:24:42Z",
-      "not_verified": false
-    },
-    "103": {
-      "version": "24b038c3760bffc19411fd03a051fc76647621900a0a37b7271b86f8f8ab6c00",
-      "updated_at": "2026-11-02T10:47:36Z",
       "not_verified": false
     },
     "104": {

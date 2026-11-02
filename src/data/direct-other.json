@@ -1,6 +1,79 @@
 {
   "schema_version": 1,
   "boards": {
+    "other-catalan": {
+      "claims": [
+        {
+          "author": "darkhipo",
+          "handle": "direct-issue-103",
+          "value": "1056463/2000",
+          "display": "528.2315",
+          "date": "2026-11-02T07:19:15Z",
+          "dateSource": "https://github.com/bigospeedrun/verifier/issues/103",
+          "dateKind": "first-stated",
+          "url": "https://github.com/bigospeedrun/verifier/issues/103",
+          "lean": true,
+          "evidence": "lean-verified",
+          "note": "",
+          "authors": [
+            {
+              "name": "darkhipo",
+              "url": "https://github.com/darkhipo"
+            }
+          ],
+          "leanNote": "Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).",
+          "proofScope": "The verifier checked Race.bound : BigOSpeedrun.Catalan.Bound (1056463/2000) at commit 47a36df5197a19e5f6378bd2043d41d0f516064d of https://github.com/darkhipo/catalan-constant-gen5.",
+          "bound": "\\mu(G)\\le 528.2315",
+          "receiptPath": "sources/direct-issue-103-41431550617-1-lean.json"
+        },
+        {
+          "author": "1337isnot1337",
+          "handle": "direct-issue-87",
+          "value": "6602911/12500",
+          "display": "528.23288",
+          "date": "2026-10-30T22:09:11Z",
+          "dateSource": "https://github.com/bigospeedrun/verifier/issues/87",
+          "dateKind": "first-stated",
+          "url": "https://github.com/bigospeedrun/verifier/issues/87",
+          "lean": true,
+          "evidence": "lean-verified",
+          "note": "Cinna Davis lowers the bound on the irrationality exponent of Catalan's constant from S. Litsey's \\(532\\) to \\(\\mu(G)\\le 528.23288\\) with a different quadrature node construction, a degree-130 polynomial on a trimmed support, and exact rational certificates. The proof reuses S. Litsey's determinant construction, arithmetic estimates, nonvanishing theorem and energy witnesses. It also builds on OpenAI's irrationality proof and Marcos Costa Santos Carreira's parameterized construction.",
+          "authors": [
+            {
+              "name": "1337isnot1337",
+              "url": "https://github.com/1337isnot1337"
+            }
+          ],
+          "leanNote": "Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).",
+          "proofScope": "The verifier checked Race.bound : BigOSpeedrun.Catalan.Bound (6602911/12500) at commit 3c4515314bda407d032cb55f60bfc56b03c1d3f9 of https://github.com/1337isnot1337/catalan-constant.",
+          "bound": "\\mu(G)\\le 528.23288",
+          "receiptPath": "sources/direct-issue-87-41136174571-1.json"
+        },
+        {
+          "author": "darkhipo",
+          "handle": "direct-issue-95",
+          "value": "5282327/10000",
+          "display": "528.2327",
+          "date": "2026-11-01T20:03:04Z",
+          "dateSource": "https://github.com/bigospeedrun/verifier/issues/95",
+          "dateKind": "first-stated",
+          "url": "https://github.com/bigospeedrun/verifier/issues/95",
+          "lean": true,
+          "evidence": "lean-verified",
+          "note": "Dmitri I. Arkhipov lowers Cinna Davis's Lean Verified bound \\(\\mu(G)\\le 528.23288\\) to \\(\\mu(G)\\le 528.2327\\) with a newly generated degree-130 quadrature polynomial, a two-band Zolotarev construction, and its circle certificate. The rest of the proof is Cinna Davis's, with S. Litsey's design and OpenAI's irrationality argument.",
+          "authors": [
+            {
+              "name": "darkhipo",
+              "url": "https://github.com/darkhipo"
+            }
+          ],
+          "leanNote": "Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).",
+          "proofScope": "The verifier checked Race.bound : BigOSpeedrun.Catalan.Bound (5282327/10000) at commit e6e7bf6797eddf2561798e76ca3f64cb67291f89 of https://github.com/darkhipo/catalan-constant-gen5.",
+          "bound": "\\mu(G)\\le 528.2327",
+          "receiptPath": "sources/direct-issue-95-41356905042-1.json"
+        }
+      ]
+    },
     "other-average-sensitivity": {
       "claims": [
         {
@@ -301,56 +374,6 @@
           "proofScope": "The verifier checked Race.bound : BigOSpeedrun.AverageSensitivity.Bound (90295/28292) at commit 78fe0e65b6915143f3a8055f2444b8ec44b806b2 of https://github.com/darkhipo/average-sensitivity-lean.",
           "bound": "\\mathrm{AS}(f)\\le 3.191539d\\sqrt n",
           "receiptPath": "sources/direct-issue-93-41317134688-1.json"
-        }
-      ]
-    },
-    "other-catalan": {
-      "claims": [
-        {
-          "author": "1337isnot1337",
-          "handle": "direct-issue-87",
-          "value": "6602911/12500",
-          "display": "528.23288",
-          "date": "2026-10-30T22:09:11Z",
-          "dateSource": "https://github.com/bigospeedrun/verifier/issues/87",
-          "dateKind": "first-stated",
-          "url": "https://github.com/bigospeedrun/verifier/issues/87",
-          "lean": true,
-          "evidence": "lean-verified",
-          "note": "Cinna Davis lowers the bound on the irrationality exponent of Catalan's constant from S. Litsey's \\(532\\) to \\(\\mu(G)\\le 528.23288\\) with a different quadrature node construction, a degree-130 polynomial on a trimmed support, and exact rational certificates. The proof reuses S. Litsey's determinant construction, arithmetic estimates, nonvanishing theorem and energy witnesses. It also builds on OpenAI's irrationality proof and Marcos Costa Santos Carreira's parameterized construction.",
-          "authors": [
-            {
-              "name": "1337isnot1337",
-              "url": "https://github.com/1337isnot1337"
-            }
-          ],
-          "leanNote": "Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).",
-          "proofScope": "The verifier checked Race.bound : BigOSpeedrun.Catalan.Bound (6602911/12500) at commit 3c4515314bda407d032cb55f60bfc56b03c1d3f9 of https://github.com/1337isnot1337/catalan-constant.",
-          "bound": "\\mu(G)\\le 528.23288",
-          "receiptPath": "sources/direct-issue-87-41136174571-1.json"
-        },
-        {
-          "author": "darkhipo",
-          "handle": "direct-issue-95",
-          "value": "5282327/10000",
-          "display": "528.2327",
-          "date": "2026-11-01T20:03:04Z",
-          "dateSource": "https://github.com/bigospeedrun/verifier/issues/95",
-          "dateKind": "first-stated",
-          "url": "https://github.com/bigospeedrun/verifier/issues/95",
-          "lean": true,
-          "evidence": "lean-verified",
-          "note": "Dmitri I. Arkhipov lowers Cinna Davis's Lean Verified bound \\(\\mu(G)\\le 528.23288\\) to \\(\\mu(G)\\le 528.2327\\) with a newly generated degree-130 quadrature polynomial, a two-band Zolotarev construction, and its circle certificate. The rest of the proof is Cinna Davis's, with S. Litsey's design and OpenAI's irrationality argument.",
-          "authors": [
-            {
-              "name": "darkhipo",
-              "url": "https://github.com/darkhipo"
-            }
-          ],
-          "leanNote": "Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).",
-          "proofScope": "The verifier checked Race.bound : BigOSpeedrun.Catalan.Bound (5282327/10000) at commit e6e7bf6797eddf2561798e76ca3f64cb67291f89 of https://github.com/darkhipo/catalan-constant-gen5.",
-          "bound": "\\mu(G)\\le 528.2327",
-          "receiptPath": "sources/direct-issue-95-41356905042-1.json"
         }
       ]
     }
