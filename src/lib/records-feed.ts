@@ -137,8 +137,10 @@ export function plainTex(tex:string):string {
  s=s.replace(/\\sqrt\s*([A-Za-z0-9])/g,' sqrt($1)').replace(/\\lfloor\s*/g,' floor(').replace(/\s*\\rfloor/g,')');
  const symbols:Record<string,string>={le:'≤',leq:'≤',ge:'≥',geq:'≥',approx:'≈',cdot:'·',times:' × ',theta:'θ',mu:'μ',eta:'η',gamma:'γ',sigma:'σ',dagger:'†',
   varepsilon:'ε',epsilon:'ε',infty:'∞',lt:'<',gt:'>'};
- s=s.replace(/\\([A-Za-z]+)( ?)/g,(all,w,space)=>w in symbols?symbols[w]:w+space);
- s=s.replace(/([_^])\{([^{}]*)\}/g,(all,op,e)=>op+(/^[\w.]+$/.test(e)?e:'('+e+')'));
+ // A command name right after a letter or digit keeps a space: n\log n is 'n log n', not 'nlog n'.
+ s=s.replace(/\\([A-Za-z]+)( ?)/g,(all,w,space,at,text)=>w in symbols?symbols[w]:(/[A-Za-z0-9]/.test(text[at-1]??'')?' ':'')+w+space);
+ // Innermost first, so a nested exponent keeps its grouping: ^{1-2^{-38}} is ^(1-2^(-38)).
+ for(let before='';before!==s;){before=s;s=s.replace(/([_^])\{([^{}]*)\}/g,(all,op,e)=>op+(/^[\w.]+$/.test(e)?e:'('+e+')'));}
  s=s.replace(/[{}\\]/g,'');
  return s.replace(/\s*(≤|≥|≈|<|>|=)\s*/g,' $1 ').replace(/\(\s+/g,'(').replace(/\s+\)/g,')').replace(/\s+/g,' ').trim();
 }

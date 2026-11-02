@@ -369,6 +369,10 @@ test('an Other bounds row becomes a feed board with its own slug, table, leader 
  assert.equal(plainTex('\\mathrm{AS}(f)\\le 3.762d\\sqrt n'),'AS(f) ≤ 3.762d sqrt(n)');
  assert.equal(plainTex('\\mathbb{E}[R]\\ge 5.1\\cdot10^{-10}\\,\\mathbb{E}[\\mathrm{OPT}]'),'E[R] ≥ 5.1·10^(-10) E[OPT]');
  assert.equal(plainTex('1{,}000'),'1,000');
+ // A command name after a letter or digit keeps a space, and a nested exponent keeps its grouping (the F2 row, 2026-11-02).
+ assert.equal(plainTex('O(n\\log^{1-2^{-38}}n)'),'O(n log^(1-2^(-38))n)');
+ assert.equal(plainTex('O(n\\log n\\,4^{\\log^*n})'),'O(n log n 4^(log^*n))');
+ assert.equal(plainTex('2\\log\\log n'),'2 log log n');
 });
 test('Other bounds boards are seeded on first sight: old leaders never post, a later leader posts to its table',()=>{
  const main=board();const start=Date.parse('2026-10-16T00:00:00Z');
