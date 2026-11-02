@@ -1720,5 +1720,14 @@
     "authors": [
       "Ali Romman"
     ]
+  },
+  {
+    "key": "[\"subset-sum\",\"direct-issue-94\",\"3/4\",\"attained\"]:lean",
+    "text": "**Record verified** | **Subset Sum** | `O(2^(0.75n))` | by Dmitri I. Arkhipov | Lean Verified | [bigospeedrun.com/subset-sum](https://bigospeedrun.com/subset-sum)",
+    "x_text": "Record verified!\n\nProblem: Subset Sum\nValue: O(2^(0.75n))\nPlayer: Dmitri I. Arkhipov\nStatus: Lean Verified",
+    "posted_at": "2026-11-02T09:32:42.881Z",
+    "authors": [
+      "Dmitri I. Arkhipov"
+    ]
   }
 ]
