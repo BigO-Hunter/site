@@ -178,7 +178,7 @@
       "dependencies": [
         {
           "id": "upstream-lemmas-and-moments",
-          "statement": "The bound is conditional on the isolation and implementation lemmas, the alias arguments and the continuous moment inequalities of a-kapila's manuscript, which are unverified Claimed work. The Lean files prove the new numerical margins and the certificate transfer, with the original moment bounds as hypotheses; no site rerun.",
+          "statement": "The bound depends on the isolation and implementation lemmas, the alias arguments and the continuous moment inequalities of Annanay Kapila's manuscript. They are unverified Claimed work. The Lean files prove the new numerical margins and the certificate transfer, with the original moment bounds as hypotheses; we did not rerun them.",
           "source_url": "https://github.com/a-kapila/maths-proofs/blob/44c34961b56784c220a6e913cc068d57dc37c5a3/subset-sum/PROOF_0.4877.tex#L56-L66",
           "status": "unverified"
         }
@@ -223,7 +223,7 @@
       "dependencies": [
         {
           "id": "upstream-lemmas-and-moments",
-          "statement": "The bound is conditional on the isolation and implementation lemmas, the alias arguments and the original continuous moment inequalities of the OpenAI and a-kapila constructions, which are unverified written work. The new filter-3 boundary rule is proved in the note only; there is no Lean proof and no site rerun.",
+          "statement": "The bound depends on the isolation and implementation lemmas, the alias arguments and the continuous moment inequalities of OpenAI's and Annanay Kapila's constructions. They are unverified written work. The new filter-3 boundary rule is proved in a written note only; there is no Lean proof, and we did not rerun anything.",
           "source_url": "https://github.com/a-kapila/maths-proofs/blob/44c34961b56784c220a6e913cc068d57dc37c5a3/subset-sum/PROOF_0.4877.tex#L56-L66",
           "status": "unverified"
         }
@@ -304,7 +304,7 @@
       "open_race": false,
       "license_status": "No license file; source files are not copied, only their hashes",
       "credits": "Joshua Wharton (QFEX). Refines the parameters of Annanay Kapila's manuscript (a-kapila/maths-proofs), which builds on OpenAI result #138, Subset Sum in Time O(2^(0.49n)). The materials were prepared with ChatGPT, per the repository README.",
-      "credit_note": "This is Annanay Kapila's Claimed Subset Sum construction with refined internal parameters, which lowers the exponent from 0.4877 to 0.487676. The algorithm and the proof steps are Annanay Kapila's; Joshua Wharton changed the parameters, transferred the moment certificates to them and added exact numerical checks with a Lean proof of those parts. The bound stays conditional on the original lemmas and moment inequalities, which are not verified."
+      "credit_note": "Joshua Wharton changes the internal parameters of Annanay Kapila's Claimed Subset Sum construction, transfers the moment certificates to them and adds exact numerical checks with a Lean proof of those parts. This lowers the exponent from 0.4877 to 0.487676. The algorithm and the proof steps are Annanay Kapila's."
     },
     "yannouli-subset-sum-0-4876723-2026": {
       "checked_at": "2026-10-21",
@@ -329,7 +329,7 @@
       "open_race": false,
       "license_status": "No license file; source files are not copied, only their hashes",
       "credits": "Yanni Bills (GitHub yannouli). Refines the parameters of Joshua Wharton's conditional note, which refines Annanay Kapila's manuscript (a-kapila/maths-proofs), which builds on OpenAI result #138, Subset Sum in Time O(2^(0.49n)). AI assistance is acknowledged in the note.",
-      "credit_note": "This is Joshua Wharton's conditional Subset Sum construction (itself a refinement of Annanay Kapila's Claimed 0.4877) with a new boundary rule for filter 3's certificates and new parameters, which lowers the exponent from 0.487676 to 0.4876723. The algorithm and the inherited premises are OpenAI's and Annanay Kapila's; Joshua Wharton supplied the earlier parameter and certificate transfer. The bound stays conditional on the original lemmas and moment inequalities, which are not verified."
+      "credit_note": "Yanni Bills refines Joshua Wharton's Subset Sum construction (itself a refinement of Annanay Kapila's Claimed 0.4877) and lowers the exponent from 0.487676 to 0.4876723. The algorithm is OpenAI's and Annanay Kapila's; Joshua Wharton supplied the earlier parameters and certificate transfer."
     }
   },
   "updated_at": "2026-10-21T19:30:00Z"

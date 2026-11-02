@@ -343,7 +343,7 @@
       "dependencies": [
         {
           "id": "community-network-and-fourier-transfer",
-          "statement": "Jain round-eleven finite network, physical interfaces, and written all-length Fourier transfer; independent review and end-to-end formal verification pending.",
+          "statement": "Swapnil round-eleven finite network, physical interfaces, and written all-length Fourier transfer; independent review and end-to-end formal verification pending.",
           "source_url": "https://github.com/shea256/fourier-transform-below-nlogn/blob/53f03853aea8caf46de7cc9d93efc9bb034bb4c7/paper/framework.md",
           "status": "unverified"
         }
@@ -1101,7 +1101,7 @@
       "comparison_status": "Written scope matches the problem: all positive lengths, exact complex arithmetic, unrestricted coefficients, supplied root of order below 1024n^3, logarithmic-word indices, charged scalar preparation, initialization and movement. Formal equivalence and transfer correctness not independently verified.",
       "scope": "Every positive length; exact complex arithmetic, specified root, and O(log(n+2))-bit integer/address words. Scalar preparation, schedule construction, index work and movement are charged. No finite-precision, numerical-stability or bit-complexity claim.",
       "exact_statement": "Proposed all-length exact DFT in O(n (log n)^(1-67/100000)), conditional on the finite network and Fourier transfer.",
-      "credits": "Ryan Shea; Jain round-eleven integration with community network credits described in the pinned result record. README discloses AI assistance.",
+      "credits": "Ryan Shea; Swapnil round-eleven integration with community network credits described in the pinned result record. README discloses AI assistance.",
       "license_status": "No repository-root license file at inspected commit; vendored material has separate notices",
       "publication_date_precision": "date-time",
       "publication_date_role": "Commit first stating this README bound, not scientific priority",
@@ -1235,7 +1235,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/19",
       "direct_submission": true,
       "route": "issue",
-      "credit_note": "This is canghaimeng's Lean Verified 63/50000 proof (submission #16) with a regenerated rate certificate and larger saving constants, which raises the proved saving to 0.0012654. The construction and the proof steps are canghaimeng's; Hrishik Sai Bojnal changed only the rate certificate and those constants.",
+      "credit_note": "Hrishik Sai Bojnal raises the proved saving to 0.0012654 by regenerating the rate certificate and enlarging the saving constants of canghaimeng's Lean Verified 63/50000 proof. The construction and the proof steps are canghaimeng's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39211915423",
       "verification": "passed"
     },
@@ -1255,7 +1255,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/30",
       "direct_submission": true,
       "route": "issue",
-      "credit_note": "This is Hrishik Sai Bojnal's Lean Verified 6327/5000000 proof (submission #19) with a new helper bank schedule, packed across all 72 sub-stages into 4,757 banks instead of 4,824, and a fourth-order moment certificate, which raises the proved saving to 0.0012661185. The C588AT construction and the other proof steps are canghaimeng's (submission #16); Parker L changed 27 of its 363 Lean files, which hold the bank schedule, the moment bound, the rate certificate and the saving constants.",
+      "credit_note": "Parker Loflin raises the proved saving to 0.0012661185 with a new helper bank schedule and a fourth-order moment certificate in Hrishik Sai Bojnal's Lean Verified 6327/5000000 proof. The schedule packs all 72 sub-stages into 4,757 banks instead of 4,824. The construction and the other proof steps are canghaimeng's; Parker Loflin changed 27 of the 363 Lean files of the proof, which hold the bank schedule, the moment bound, the rate certificate and the saving constants.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39515983587",
       "verification": "passed"
     },
@@ -1313,7 +1313,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/37",
       "direct_submission": true,
       "route": "pull_request",
-      "credit_note": "This is Jacob Sussman's Lean Verified 3577409/2000000000 proof (submission #29) re-run on a different helper storage table, which raises the proved saving to 0.0017887049. The construction and the proof steps are Jacob Sussman's; Parker L changed 24 of its 449 files, which hold that table, its instance files, the manifest and the exported bound.",
+      "credit_note": "Parker Loflin raises the proved saving to 0.0017887049 by re-running Jacob Sussman's Lean Verified 3577409/2000000000 proof on a different helper storage table. The construction and the proof steps are Jacob Sussman's; Parker Loflin changed 24 of the 449 files of the proof, which hold that table, the instance files, the manifest and the exported bound.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39710519853",
       "verification": "passed"
     },
@@ -1333,7 +1333,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/38",
       "direct_submission": true,
       "route": "pull_request",
-      "credit_note": "This is Jacob Sussman's Lean Verified 3577409/2000000000 proof (submission #29) with different helper storage tables and Fourier files, which raises the proved saving to 0.001959540039. The construction is Jacob Sussman's: 411 of this proof's 477 files are byte-identical to his, and HalitZiyaKARTAL changed or added the other 66, which hold those tables, the Fourier files, the manifest and the exported bound.",
+      "credit_note": "Halit Ziya KARTAL raises the proved saving to 0.001959540039 with different helper storage tables and Fourier files in Jacob Sussman's Lean Verified 3577409/2000000000 proof. The construction is Jacob Sussman's: 411 of the 477 files of this proof are byte-identical to those of Jacob Sussman's proof, and Halit Ziya KARTAL changed or added the other 66, which hold those tables, the Fourier files, the manifest and the exported bound.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39746589640",
       "verification": "passed"
     },
@@ -1353,7 +1353,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/40",
       "direct_submission": true,
       "route": "pull_request",
-      "credit_note": "This is Jacob Sussman's Lean Verified 3577409/2000000000 proof (submission #29) with different Fourier, tensor and storage files, which raises the proved saving to 0.0026159999. The construction is Jacob Sussman's: 386 of this proof's 429 files are byte-identical to his, and HalitZiyaKARTAL changed or added the other 43, which hold those files, the manifest and the exported bound.",
+      "credit_note": "Halit Ziya KARTAL raises the proved saving to 0.0026159999 with different Fourier, tensor and storage files in Jacob Sussman's Lean Verified 3577409/2000000000 proof. The construction is Jacob Sussman's: 386 of the 429 files of this proof are byte-identical to those of Jacob Sussman's proof, and Halit Ziya KARTAL changed or added the other 43, which hold those files, the manifest and the exported bound.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39765675382",
       "verification": "passed"
     },
@@ -1373,7 +1373,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/41",
       "direct_submission": true,
       "route": "pull_request",
-      "credit_note": "This is HalitZiyaKARTAL's own Lean Verified 26159999/10000000000 proof (submission #40) with different Fourier and certificate files, which raises the proved saving to 0.0030103. The construction is Jacob Sussman's (submission #29): 348 of this proof's 430 files are byte-identical to his, and HalitZiyaKARTAL changed the other 82, which hold the Fourier files, the certificate data and the exported bound.",
+      "credit_note": "Halit Ziya KARTAL raises the proved saving to 0.0030103 with different Fourier and certificate files in their own Lean Verified 26159999/10000000000 proof. The construction is Jacob Sussman's: 348 of the 430 files of this proof are byte-identical to those of Jacob Sussman's proof, and Halit Ziya KARTAL changed the other 82, which hold the Fourier files, the certificate data and the exported bound.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39777069258",
       "verification": "passed"
     },

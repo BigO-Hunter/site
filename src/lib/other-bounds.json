@@ -433,7 +433,7 @@
           "bound": "\\theta\\le 0.874828524351"
         },
         {
-          "author": "ArviFoxy",
+          "author": "Arvi",
           "handle": "ArviFoxy",
           "value": "174963413/200000000",
           "display": "0.874817065",
@@ -451,7 +451,7 @@
           "note": "The author says it adds a second affine step for the low children on top of the PR #63 ledger and Collet's affine step, and that the new bound is 174963413/200000000 (equal to 0.874817065).",
           "authors": [
             {
-              "name": "ArviFoxy",
+              "name": "Arvi",
               "url": "https://github.com/ArviFoxy"
             }
           ],
@@ -474,7 +474,7 @@
             "pr": 68,
             "status": "open"
           },
-          "note": "The author says it uses five finite affine stages and builds on ArviFoxy's two-level affine construction (PR #67), Gao's balanced marked ledger (PR #63) and Collet's affine step.",
+          "note": "The author says it uses five finite affine stages and builds on Arvi's two-level affine construction (PR #67), Gao's balanced marked ledger (PR #63) and Collet's affine step.",
           "authors": [
             {
               "name": "Zhongpai Gao",
@@ -500,7 +500,7 @@
             "pr": 69,
             "status": "open"
           },
-          "note": "The author says it starts from the merged PR #67 (ArviFoxy's two-level affine construction) and proves the bound by a finite ordinary-source induction with exact scalar certificates. It is 0.0000357 below the merged PR #68.",
+          "note": "The author says it starts from the merged PR #67 (Arvi's two-level affine construction) and proves the bound by a finite ordinary-source induction with exact scalar certificates. It is 0.0000357 below the merged PR #68.",
           "authors": [
             {
               "name": "Hailey Collet",
@@ -656,7 +656,7 @@
             "pr": 83,
             "status": "open"
           },
-          "note": "The author says it starts from the fourth-power source of its PR #74, with the broadened interface of ArviFoxy's PR #76, and combines cube-free common-divisor averaging with a width-dependent density split. A finite bootstrap and two density-split transitions give a stronger ordinary source moment, and an all-shift physical return with exact rational certificates closes the bound. It builds on OpenAI's framework, the source, counting and return machinery of Hailey Collet's PR #69, and ArviFoxy's all-shift return technique (PR #76). It is 0.0006125 below PR #76.",
+          "note": "The author says it starts from the fourth-power source of its PR #74, with the broadened interface of Arvi's PR #76, and combines cube-free common-divisor averaging with a width-dependent density split. A finite bootstrap and two density-split transitions give a stronger ordinary source moment, and an all-shift physical return with exact rational certificates closes the bound. It builds on OpenAI's framework, the source, counting and return machinery of Hailey Collet's PR #69, and Arvi's all-shift return technique (PR #76). It is 0.0006125 below PR #76.",
           "authors": [
             {
               "name": "Sil",
@@ -682,7 +682,7 @@
             "pr": 84,
             "status": "open"
           },
-          "note": "The author says it is Sil's density-split proof (PR #83) with one more variable-density transition, and re-certifies the final all-shift physical return. It builds on Sil's PR #83 and PR #74, ArviFoxy's PR #76, Hailey Collet's PR #69 and OpenAI's framework. It is 0.0000100 below PR #83.",
+          "note": "The author says it is Sil's density-split proof (PR #83) with one more variable-density transition, and re-certifies the final all-shift physical return. It builds on Sil's PR #83 and PR #74, Arvi's PR #76, Hailey Collet's PR #69 and OpenAI's framework. It is 0.0000100 below PR #83.",
           "authors": [
             {
               "name": "Rohan Arun",
@@ -708,7 +708,7 @@
             "pr": 85,
             "status": "open"
           },
-          "note": "The author says it extends rohanarun's PR #84 with a fourth variable-density transition and a re-certified all-shift physical return. It builds on the framework and machinery of OpenAI, Sil, Hailey Collet, ArviFoxy and rohanarun. It is 0.0000040 below PR #84.",
+          "note": "The author says it extends Rohan Arun's PR #84 with a fourth variable-density transition and a re-certified all-shift physical return. It builds on the framework and machinery of OpenAI, Sil, Hailey Collet, Arvi and Rohan Arun. It is 0.0000040 below PR #84.",
           "authors": [
             {
               "name": "SovereignSteak",
@@ -734,7 +734,7 @@
             "pr": 86,
             "status": "open"
           },
-          "note": "The author says it keeps Sil's density-split proof (PR #83) and runs its steps more times in smaller pieces: 30 native steps, the subface step and 46 small variable-density transitions, with new return constants and regenerated certificates. It builds on Sil's PR #74 and PR #83, ArviFoxy's PR #76, Hailey Collet's PR #69 and OpenAI's framework. It is 0.0000292 below PR #84.",
+          "note": "The author says it keeps Sil's density-split proof (PR #83) and runs its steps more times in smaller pieces: 30 native steps, the subface step and 46 small variable-density transitions, with new return constants and regenerated certificates. It builds on Sil's PR #74 and PR #83, Arvi's PR #76, Hailey Collet's PR #69 and OpenAI's framework. It is 0.0000292 below PR #84.",
           "authors": [
             {
               "name": "Jacob Sussman",
@@ -760,7 +760,7 @@
             "pr": 89,
             "status": "open"
           },
-          "note": "The author says it widens the density range of the density-split source, so that its HIGH branch also covers q from 1/2 to 3/4, and extends Jacob Sussman's PR #86 fine chain by fifteen transitions, with a re-certified all-shift physical return. It builds on OpenAI's framework, Hailey Collet's machinery, Sil's fourth-power and density-split construction, ArviFoxy's all-shift return, Jacob Sussman's fine chain and rohanarun's earlier work. It is 0.0000093 below PR #86.",
+          "note": "The author says it widens the density range of the density-split source, so that its HIGH branch also covers q from 1/2 to 3/4, and extends Jacob Sussman's PR #86 fine chain by fifteen transitions, with a re-certified all-shift physical return. It builds on OpenAI's framework, Hailey Collet's machinery, Sil's fourth-power and density-split construction, Arvi's all-shift return, Jacob Sussman's fine chain and Rohan Arun's earlier work. It is 0.0000093 below PR #86.",
           "authors": [
             {
               "name": "SovereignSteak",
@@ -786,7 +786,7 @@
             "pr": 90,
             "status": "open"
           },
-          "note": "The author says it refines the count-source chain of Jacob Sussman's PR #86 with 59 exact transitions, using the widened density interface of its PR #89, and includes the lemmas it needs from PR #89 under separate names. It builds on OpenAI, Hailey Collet, Sil, ArviFoxy, Jacob Sussman and rohanarun. It is 0.0000097 below PR #86. The tracker files say the argument keeps the preprint's 7/8 theorem and the inherited analytic machinery; the Lean theorem has no extra hypothesis.",
+          "note": "The author says it refines the count-source chain of Jacob Sussman's PR #86 with 59 exact transitions, using the widened density interface of its PR #89, and includes the lemmas it needs from PR #89 under separate names. It builds on OpenAI, Hailey Collet, Sil, Arvi, Jacob Sussman and Rohan Arun. It is 0.0000097 below PR #86. The tracker files say the argument keeps the preprint's 7/8 theorem and the inherited analytic machinery; the Lean theorem has no extra hypothesis.",
           "authors": [
             {
               "name": "SovereignSteak",
@@ -812,7 +812,7 @@
             "pr": 91,
             "status": "open"
           },
-          "note": "The author says it combines four exact improvements: finer count and physical source chains from Jacob Sussman's PR #86 and a smaller reserve in the LOW payment, with the widened density lemmas of its PRs #89 and #90. It builds on OpenAI, Hailey Collet, Sil, ArviFoxy, Jacob Sussman and rohanarun. It is 0.000000934 below PR #90. The tracker files say the argument keeps the preprint's 7/8 theorem and the inherited analytic machinery; the Lean theorem has no extra hypothesis.",
+          "note": "The author says it combines four exact improvements: finer count and physical source chains from Jacob Sussman's PR #86 and a smaller reserve in the LOW payment, with the widened density lemmas of its PRs #89 and #90. It builds on OpenAI, Hailey Collet, Sil, Arvi, Jacob Sussman and Rohan Arun. It is 0.000000934 below PR #90. The tracker files say the argument keeps the preprint's 7/8 theorem and the inherited analytic machinery; the Lean theorem has no extra hypothesis.",
           "authors": [
             {
               "name": "SovereignSteak",
@@ -838,7 +838,7 @@
             "pr": 92,
             "status": "open"
           },
-          "note": "The author says it combines ten exact improvements of PR #91: finer count and physical source chains from Jacob Sussman's PR #86, smaller reserves in the return and the floor row, and a re-certified return height. It builds on OpenAI, Hailey Collet, Sil, ArviFoxy, Jacob Sussman and rohanarun, and on its own PRs #89, #90 and #91. It is 0.00000082136 below PR #91. The tracker files say the argument keeps the preprint's 7/8 theorem and the inherited analytic machinery; the Lean theorem has no extra hypothesis.",
+          "note": "The author says it combines ten exact improvements of PR #91: finer count and physical source chains from Jacob Sussman's PR #86, smaller reserves in the return and the floor row, and a re-certified return height. It builds on OpenAI, Hailey Collet, Sil, Arvi, Jacob Sussman and Rohan Arun, and on its own PRs #89, #90 and #91. It is 0.00000082136 below PR #91. The tracker files say the argument keeps the preprint's 7/8 theorem and the inherited analytic machinery; the Lean theorem has no extra hypothesis.",
           "authors": [
             {
               "name": "SovereignSteak",
@@ -864,7 +864,7 @@
             "pr": 93,
             "status": "open"
           },
-          "note": "The author says it combines a selected ordinary-source sextic norm, a mixed zero-detector and slot count and a pointwise price with a smaller amplitude gap, with 4,526 finite source transitions and a certified 28-window return. It builds on OpenAI, Hailey Collet, ArviFoxy, Sil and Jacob Sussman. It is 0.00001055464 below PR #92.",
+          "note": "The author says it combines a selected ordinary-source sextic norm, a mixed zero-detector and slot count and a pointwise price with a smaller amplitude gap, with 4,526 finite source transitions and a certified 28-window return. It builds on OpenAI, Hailey Collet, Arvi, Sil and Jacob Sussman. It is 0.00001055464 below PR #92.",
           "authors": [
             {
               "name": "Joseph Bebel",
@@ -1072,7 +1072,7 @@
             "pr": 103,
             "status": "open"
           },
-          "note": "The author says the bound is the closest fraction above the limiting contact \\((777-\\sqrt{1081})/852\\) of this count scheme that fits the tracker's 256-character bound field, about \\(2.16\\cdot10^{-254}\\) above it, so no declarable fraction lies strictly between them. It takes the seed and selected-energy theorems of PR #99 at gap \\(10^{-256}\\), keeps the five count windows, and replaces the bisection of the box that holds the contact by a quadratic argument. The PR says 202 of its 237 Lean modules are byte-identical to PR #101's. It builds on PR #99, PR #98, Arvi's PR #97, the author's PR #93 and Sil's fourth-power source construction, and on OpenAI, Hailey Collet, Sil, Arvi and Jacob Sussman. It is 9.7e-22 below PR #102.",
+          "note": "The author says the bound is the closest fraction above the limiting contact \\((777-\\sqrt{1081})/852\\) of this count scheme that fits the tracker's 256-character bound field, about \\(2.16\\cdot10^{-254}\\) above it, so no declarable fraction lies strictly between them. It takes the seed and selected-energy theorems of PR #99 at gap \\(10^{-256}\\), keeps the five count windows, and replaces the bisection of the box that holds the contact by a quadratic argument. The PR says 202 of its 237 Lean modules are byte-identical to PR #101's. It builds on PR #99, PR #98, Arvi's PR #97, the author's PR #93 and Sil's fourth-power source construction, and on OpenAI, Hailey Collet, Sil, Arvi and Jacob Sussman. It is 0.00000000000000000000097 below PR #102.",
           "authors": [
             {
               "name": "Joseph Bebel",
@@ -2061,7 +2061,7 @@
               "url": "https://github.com/canghaimeng"
             }
           ],
-          "proofScope": "No Lean proof is supplied for this result. The proof is the PDF paper in the repository. Its integer certificate was replayed independently in verifier pull request 23 (by 1337isnot1337): it confirms the threshold 380/187 and puts the exponent of the construction between 2.0322 and 2.033, slightly above the shown value. The Boolean construction itself is not checked.",
+          "proofScope": "No Lean proof is supplied for this result. The proof is the PDF paper in the repository. Its integer certificate was replayed independently in verifier pull request 23 (by Cinna Davis): it confirms the threshold 380/187 and puts the exponent of the construction between 2.0322 and 2.033, slightly above the shown value. The Boolean construction itself is not checked.",
           "bound": "\\mathrm{bs}(f)\\ge s(f)^{2.032083}"
         }
       ],
@@ -2266,7 +2266,7 @@
               "url": "https://github.com/rohanarun"
             }
           ],
-          "proofScope": "No Lean proof of the claim is supplied by its author. A third party (fringewidth, verifier pull request 27) proved the algebraic steps in Lean, 21 theorems with only the standard axioms. The source's generic-grid, private-valuation and Kummer lemmas stay hypotheses there. That work found a slip at line 71 of proof.tex (the normalization uses the wrong translation); the fix is the one the source README already uses, and the bound 32 does not change.",
+          "proofScope": "No Lean proof of the claim is supplied by its author. A third party (Hrishik Sai Bojnal, verifier pull request 27) proved the algebraic steps in Lean, 21 theorems with only the standard axioms. The source's generic-grid, private-valuation and Kummer lemmas stay hypotheses there. That work found a slip at line 71 of proof.tex (the normalization uses the wrong translation); the fix is the one the source README already uses, and the bound 32 does not change.",
           "bound": "Nj\\le 32"
         }
       ],

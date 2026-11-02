@@ -450,7 +450,7 @@
       "dependencies": [
         {
           "id": "upstream-written-construction",
-          "statement": "The bound is conditional on the written proof and the word-RAM cost interpretation of shreshth-s's construction, which are unverified Claimed work. The Lean files of this repository prove only the numerical certificate and a cost-ledger theorem; no site rerun.",
+          "statement": "The bound depends on shresh's written proof and its word-RAM cost accounting, which nobody has verified. The Lean files in this repository check only the numerical certificate and a cost-ledger theorem; we did not rerun them.",
           "source_url": "https://github.com/shreshth-s/thin-matrix-results/blob/8a21eaae81599913dba562727e03a9b48c36a5b9/outputs/exponent-improvement.tex#L3132-L3137",
           "status": "unverified"
         }
@@ -816,7 +816,7 @@
       "open_race": false,
       "license_status": "No license file; source files are not copied, only their hashes",
       "credits": "Joshua Wharton (QFEX). Refines the parameters of the construction by shreshth-s (aligned Walsh embedding, polynomial query cache, composite-incidence reduction), which builds on Alman and Vassilevska Williams (arXiv:2610.06783) and Majdoddin (arXiv:2610.17420). The materials were prepared with AI assistance, per the repository README.",
-      "credit_note": "This is shresh's Claimed APSP construction with refined rational parameters, which lowers the exponent from 2.99294792 to 2.9929479187094. The algorithm and the written proof are shresh's; Joshua Wharton changed the parameters and added a numerical certificate with a Lean proof of its cost ledger. The bound stays conditional on shresh's written proof and word-RAM cost interpretation."
+      "credit_note": "Joshua Wharton changes the rational parameters of shresh's Claimed APSP construction and adds a numerical certificate, which lowers the exponent from 2.99294792 to 2.9929479187094. The algorithm and the written proof are shresh's."
     },
     "direct-issue-25": {
       "checked_at": "2026-11-02",
@@ -834,7 +834,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/25",
       "direct_submission": true,
       "route": "issue",
-      "credit_note": "This is Hrishik Sai Bojnal's Lean Verified proof (submission #13) with tighter parameters and sharper logarithm and entropy estimates, which lowers the proved exponent from 2.99556085 to 2.995560766. The algorithm and the proof steps are Li Xuanji's (submission #6); Joshua Wharton changed 17 of its 401 Lean files, which hold those parameters and estimates.",
+      "credit_note": "Joshua Wharton lowers the proved exponent from 2.99556085 to 2.995560766 with tighter parameters and sharper logarithm and entropy estimates in Hrishik Sai Bojnal's Lean Verified proof. The algorithm and the proof steps are Li Xuanji's; Joshua Wharton changed 17 of the 401 Lean files of the proof, which hold those parameters and estimates.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39494922904",
       "verification": "passed"
     },
@@ -854,7 +854,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/32",
       "direct_submission": true,
       "route": "issue",
-      "credit_note": "This is Joshua Wharton's Lean Verified 2.995560766 proof (submission #25) with rebalanced parameters and sharper margins, which lowers the proved exponent to 2.9955607647814. The algorithm and the proof steps are Li Xuanji's (submission #6), through Hrishik Sai Bojnal's 2.99556085 proof (submission #13) and Joshua Wharton's parameter refinement; Hrishik Sai Bojnal changed 16 of its 401 Lean files, which hold those parameters and margins.",
+      "credit_note": "Hrishik Sai Bojnal lowers the proved exponent to 2.9955607647814 with rebalanced parameters and sharper margins in Joshua Wharton's Lean Verified 2.995560766 proof. The algorithm and the proof steps are Li Xuanji's, through Hrishik Sai Bojnal's 2.99556085 proof and Joshua Wharton's parameter refinement; Hrishik Sai Bojnal changed 16 of the 401 Lean files of the proof, which hold those parameters and margins.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39551510823",
       "verification": "passed"
     },
@@ -874,7 +874,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/13",
       "direct_submission": true,
       "route": "pull_request",
-      "credit_note": "This is Li Xuanji's Lean Verified proof (submission #6) with the same algorithm and parameters and a sharper numerical certificate of them, which lowers the proved exponent from 2.995561 to 2.99556085. The algorithm and the proof steps are Li Xuanji's; Hrishik Sai Bojnal changed 7 of its 402 files, which hold the numerical constants and the manifest.",
+      "credit_note": "Hrishik Sai Bojnal lowers the proved exponent from 2.995561 to 2.99556085 with a sharper numerical certificate for the same algorithm and parameters of Li Xuanji's Lean Verified proof. The algorithm and the proof steps are Li Xuanji's; Hrishik Sai Bojnal changed 7 of the 402 files of the proof, which hold the numerical constants and the manifest.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38739681220",
       "verification": "passed"
     },

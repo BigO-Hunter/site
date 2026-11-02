@@ -3,91 +3,91 @@
   "notes": {
     "direct-issue-18": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/14",
-      "text": "This is c0ldzy17's Lean Verified 1.921 proof (submission #14) with smaller safety margins in its exponent constants, which lowers the proved exponent to 1.9203. The construction and the proof steps are c0ldzy17's; Hrishik Sai Bojnal changed only those constants."
+      "text": "Hrishik Sai Bojnal lowers the proved exponent to 1.9203 by shrinking the safety margins in the exponent constants of c0ldzy17's Lean Verified 1.921 proof. The construction and the proof steps are c0ldzy17's."
     },
     "direct-issue-19": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/16",
-      "text": "This is canghaimeng's Lean Verified 63/50000 proof (submission #16) with a regenerated rate certificate and larger saving constants, which raises the proved saving to 0.0012654. The construction and the proof steps are canghaimeng's; Hrishik Sai Bojnal changed only the rate certificate and those constants."
+      "text": "Hrishik Sai Bojnal raises the proved saving to 0.0012654 by regenerating the rate certificate and enlarging the saving constants of canghaimeng's Lean Verified 63/50000 proof. The construction and the proof steps are canghaimeng's."
     },
     "direct-pr-13": {
       "predecessor": "https://github.com/bigospeedrun/verifier/pull/6",
-      "text": "This is Li Xuanji's Lean Verified proof (submission #6) with the same algorithm and parameters and a sharper numerical certificate of them, which lowers the proved exponent from 2.995561 to 2.99556085. The algorithm and the proof steps are Li Xuanji's; Hrishik Sai Bojnal changed 7 of its 402 files, which hold the numerical constants and the manifest."
+      "text": "Hrishik Sai Bojnal lowers the proved exponent from 2.995561 to 2.99556085 with a sharper numerical certificate for the same algorithm and parameters of Li Xuanji's Lean Verified proof. The algorithm and the proof steps are Li Xuanji's; Hrishik Sai Bojnal changed 7 of the 402 files of the proof, which hold the numerical constants and the manifest."
     },
     "direct-issue-26": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/18",
-      "text": "This is Hrishik Sai Bojnal's Lean Verified 1.9203 proof (submission #18) with tighter logarithm and entropy certificates and strict margins, which lowers the proved exponent to 1.9202796. The construction and the proof steps are c0ldzy17's, whose 1.921 proof (submission #14) Hrishik Sai Bojnal had sharpened; Joshua Wharton changed 11 of its 1200 Lean files, which hold those estimates, the margins and the exported bound."
+      "text": "Joshua Wharton lowers the proved exponent to 1.9202796 with tighter logarithm and entropy certificates and strict margins in Hrishik Sai Bojnal's Lean Verified 1.9203 proof. The construction and the proof steps are c0ldzy17's, whose 1.921 proof Hrishik Sai Bojnal had sharpened; Joshua Wharton changed 11 of the 1200 Lean files of the proof, which hold those estimates, the margins and the exported bound."
     },
     "direct-issue-28": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/26",
-      "text": "This is Joshua Wharton's Lean Verified 1.9202796 proof (submission #26) with sharper margins in its exponent constants, which lowers the proved exponent to 1.920279461. The construction and the proof steps are c0ldzy17's, through Hrishik Sai Bojnal's 1.9203 proof (submission #18) and Joshua Wharton's tighter log and entropy certificates; Hrishik Sai Bojnal changed 16 of its 1201 Lean files, which hold the margins and the exported bound."
+      "text": "Hrishik Sai Bojnal lowers the proved exponent to 1.920279461 with sharper margins in the exponent constants of Joshua Wharton's Lean Verified 1.9202796 proof. The construction and the proof steps are c0ldzy17's, through Hrishik Sai Bojnal's 1.9203 proof and Joshua Wharton's tighter logarithm and entropy certificates; Hrishik Sai Bojnal changed 16 of the 1201 Lean files of the proof, which hold the margins and the exported bound."
     },
     "direct-issue-25": {
       "predecessor": "https://github.com/bigospeedrun/verifier/pull/13",
-      "text": "This is Hrishik Sai Bojnal's Lean Verified proof (submission #13) with tighter parameters and sharper logarithm and entropy estimates, which lowers the proved exponent from 2.99556085 to 2.995560766. The algorithm and the proof steps are Li Xuanji's (submission #6); Joshua Wharton changed 17 of its 401 Lean files, which hold those parameters and estimates."
+      "text": "Joshua Wharton lowers the proved exponent from 2.99556085 to 2.995560766 with tighter parameters and sharper logarithm and entropy estimates in Hrishik Sai Bojnal's Lean Verified proof. The algorithm and the proof steps are Li Xuanji's; Joshua Wharton changed 17 of the 401 Lean files of the proof, which hold those parameters and estimates."
     },
     "direct-issue-31": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/28",
-      "text": "This is Hrishik Sai Bojnal's own Lean Verified 1.920279461 proof (submission #28) with sharper margins, which lowers the proved exponent to 1.92027945701. The construction and the proof steps are c0ldzy17's, through Hrishik Sai Bojnal's 1.9203 proof (submission #18) and Joshua Wharton's tighter log and entropy certificates (submission #26); Hrishik Sai Bojnal changed 16 of its 1201 Lean files, which hold the margins and the exported bound."
+      "text": "Hrishik Sai Bojnal lowers the proved exponent to 1.92027945701 with sharper margins in their own Lean Verified 1.920279461 proof. The construction and the proof steps are c0ldzy17's, through Hrishik Sai Bojnal's 1.9203 proof and Joshua Wharton's tighter logarithm and entropy certificates; Hrishik Sai Bojnal changed 16 of the 1201 Lean files of the proof, which hold the margins and the exported bound."
     },
     "direct-issue-32": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/25",
-      "text": "This is Joshua Wharton's Lean Verified 2.995560766 proof (submission #25) with rebalanced parameters and sharper margins, which lowers the proved exponent to 2.9955607647814. The algorithm and the proof steps are Li Xuanji's (submission #6), through Hrishik Sai Bojnal's 2.99556085 proof (submission #13) and Joshua Wharton's parameter refinement; Hrishik Sai Bojnal changed 16 of its 401 Lean files, which hold those parameters and margins."
+      "text": "Hrishik Sai Bojnal lowers the proved exponent to 2.9955607647814 with rebalanced parameters and sharper margins in Joshua Wharton's Lean Verified 2.995560766 proof. The algorithm and the proof steps are Li Xuanji's, through Hrishik Sai Bojnal's 2.99556085 proof and Joshua Wharton's parameter refinement; Hrishik Sai Bojnal changed 16 of the 401 Lean files of the proof, which hold those parameters and margins."
     },
     "direct-issue-30": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/19",
-      "text": "This is Hrishik Sai Bojnal's Lean Verified 6327/5000000 proof (submission #19) with a new helper bank schedule, packed across all 72 sub-stages into 4,757 banks instead of 4,824, and a fourth-order moment certificate, which raises the proved saving to 0.0012661185. The C588AT construction and the other proof steps are canghaimeng's (submission #16); Parker L changed 27 of its 363 Lean files, which hold the bank schedule, the moment bound, the rate certificate and the saving constants."
+      "text": "Parker Loflin raises the proved saving to 0.0012661185 with a new helper bank schedule and a fourth-order moment certificate in Hrishik Sai Bojnal's Lean Verified 6327/5000000 proof. The schedule packs all 72 sub-stages into 4,757 banks instead of 4,824. The construction and the other proof steps are canghaimeng's; Parker Loflin changed 27 of the 363 Lean files of the proof, which hold the bank schedule, the moment bound, the rate certificate and the saving constants."
     },
     "direct-pr-37": {
       "predecessor": "https://github.com/bigospeedrun/verifier/pull/29",
-      "text": "This is Jacob Sussman's Lean Verified 3577409/2000000000 proof (submission #29) re-run on a different helper storage table, which raises the proved saving to 0.0017887049. The construction and the proof steps are Jacob Sussman's; Parker L changed 24 of its 449 files, which hold that table, its instance files, the manifest and the exported bound."
+      "text": "Parker Loflin raises the proved saving to 0.0017887049 by re-running Jacob Sussman's Lean Verified 3577409/2000000000 proof on a different helper storage table. The construction and the proof steps are Jacob Sussman's; Parker Loflin changed 24 of the 449 files of the proof, which hold that table, the instance files, the manifest and the exported bound."
     },
     "direct-pr-38": {
       "predecessor": "https://github.com/bigospeedrun/verifier/pull/29",
-      "text": "This is Jacob Sussman's Lean Verified 3577409/2000000000 proof (submission #29) with different helper storage tables and Fourier files, which raises the proved saving to 0.001959540039. The construction is Jacob Sussman's: 411 of this proof's 477 files are byte-identical to his, and HalitZiyaKARTAL changed or added the other 66, which hold those tables, the Fourier files, the manifest and the exported bound."
+      "text": "Halit Ziya KARTAL raises the proved saving to 0.001959540039 with different helper storage tables and Fourier files in Jacob Sussman's Lean Verified 3577409/2000000000 proof. The construction is Jacob Sussman's: 411 of the 477 files of this proof are byte-identical to those of Jacob Sussman's proof, and Halit Ziya KARTAL changed or added the other 66, which hold those tables, the Fourier files, the manifest and the exported bound."
     },
     "direct-pr-40": {
       "predecessor": "https://github.com/bigospeedrun/verifier/pull/29",
-      "text": "This is Jacob Sussman's Lean Verified 3577409/2000000000 proof (submission #29) with different Fourier, tensor and storage files, which raises the proved saving to 0.0026159999. The construction is Jacob Sussman's: 386 of this proof's 429 files are byte-identical to his, and HalitZiyaKARTAL changed or added the other 43, which hold those files, the manifest and the exported bound."
+      "text": "Halit Ziya KARTAL raises the proved saving to 0.0026159999 with different Fourier, tensor and storage files in Jacob Sussman's Lean Verified 3577409/2000000000 proof. The construction is Jacob Sussman's: 386 of the 429 files of this proof are byte-identical to those of Jacob Sussman's proof, and Halit Ziya KARTAL changed or added the other 43, which hold those files, the manifest and the exported bound."
     },
     "direct-pr-41": {
       "predecessor": "https://github.com/bigospeedrun/verifier/pull/40",
-      "text": "This is HalitZiyaKARTAL's own Lean Verified 26159999/10000000000 proof (submission #40) with different Fourier and certificate files, which raises the proved saving to 0.0030103. The construction is Jacob Sussman's (submission #29): 348 of this proof's 430 files are byte-identical to his, and HalitZiyaKARTAL changed the other 82, which hold the Fourier files, the certificate data and the exported bound."
+      "text": "Halit Ziya KARTAL raises the proved saving to 0.0030103 with different Fourier and certificate files in their own Lean Verified 26159999/10000000000 proof. The construction is Jacob Sussman's: 348 of the 430 files of this proof are byte-identical to those of Jacob Sussman's proof, and Halit Ziya KARTAL changed the other 82, which hold the Fourier files, the certificate data and the exported bound."
     },
     "direct-issue-54": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/49",
-      "text": "This is Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (submission #49) with its final constant lowered to \\(\\frac{37619}{10000}\\) inside the proof's own margin; no other proof step changes."
+      "text": "Dmitri I. Arkhipov lowers the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof to \\(\\frac{37619}{10000}\\), inside the proof's own margin; no other proof step changes."
     },
     "direct-issue-55": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/54",
-      "text": "This is Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (submission #49), as sharpened by darkhipo in submission #54, with a few more of its internal constants changed, so the final constant becomes \\(\\frac{2351}{625}\\); no other proof step changes."
+      "text": "Dmitri I. Arkhipov changes a few more internal constants of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already sharpened once before), so the final constant becomes \\(\\frac{2351}{625}\\); no other proof step changes."
     },
     "direct-issue-56": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/55",
-      "text": "This is Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (submission #49), as sharpened by darkhipo in submissions #54 and #55, with a few more of its internal constants changed, so the final constant becomes \\(\\frac{75231}{20000}\\); no other proof step changes."
+      "text": "Dmitri I. Arkhipov changes a few more internal constants of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already sharpened twice before), so the final constant becomes \\(\\frac{75231}{20000}\\); no other proof step changes."
     },
     "direct-issue-58": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/56",
-      "text": "This is Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (submission #49), as changed by darkhipo in submissions #54, #55 and #56, with its final constant changed to \\(\\frac{188077}{50000}\\); no other proof step changes."
+      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed three times before) to \\(\\frac{188077}{50000}\\); no other proof step changes."
     },
     "direct-issue-60": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/58",
-      "text": "This is Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (submission #49), as changed by darkhipo in submissions #54, #55, #56 and #58, with its final constant changed to \\(\\frac{37615399}{10000000}\\); no other proof step changes."
+      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed four times before) to \\(\\frac{37615399}{10000000}\\); no other proof step changes."
     },
     "direct-issue-62": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/60",
-      "text": "This is Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (submission #49), as changed by darkhipo in submissions #54, #55, #56, #58 and #60, with its final constant changed to \\(\\frac{376153979}{100000000}\\); no other proof step changes."
+      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed five times before) to \\(\\frac{376153979}{100000000}\\); no other proof step changes."
     },
     "direct-issue-63": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/62",
-      "text": "This is Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (submission #49), as changed by darkhipo in submissions #54, #55, #56, #58, #60 and #62, with its final constant changed to \\(\\frac{188076989}{50000000}\\); no other proof step changes."
+      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed six times before) to \\(\\frac{188076989}{50000000}\\); no other proof step changes."
     },
     "direct-issue-64": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/63",
-      "text": "This is Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (submission #49), as changed by darkhipo in submissions #54, #55, #56, #58, #60, #62 and #63, with its final constant changed to \\(\\frac{37615342161}{10000000000}\\); no other proof step changes."
+      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed seven times before) to \\(\\frac{37615342161}{10000000000}\\); no other proof step changes."
     },
     "direct-issue-66": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/64",
-      "text": "This builds on Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (submission #49), as changed by darkhipo in submissions #54, #55, #56, #58, #60, #62, #63 and #64, and adds a charged coupling bound and a sharper tail estimate that change its final constant to \\(\\frac{18807273}{5000000}\\)."
+      "text": "Dmitri I. Arkhipov adds a charged coupling bound and a sharper tail estimate to Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed eight times before), which changes the final constant to \\(\\frac{18807273}{5000000}\\)."
     }
   },
   "withdrawn": {
