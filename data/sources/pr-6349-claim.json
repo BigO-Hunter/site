@@ -1,0 +1,468 @@
+{
+  "base_commit": "626e936ce4d61f2584316914fc71baf96940c512",
+  "complete_cost": {
+    "compiler": {
+      "H": 65807000000000,
+      "N": "2^65807000000000",
+      "eta": {
+        "lower": "0.000000118345460840316825594594",
+        "upper": "0.000000118345460840316825594595"
+      },
+      "gap": "1/1400000000",
+      "integer_test_exponent": 47005,
+      "logarithm_power": 1024,
+      "theta": "63/64",
+      "uniform_saving": "21903807/7000000000",
+      "word_materialized": false
+    },
+    "full_forward_calls": 18,
+    "gain": "233/500000000",
+    "kappa": "3129111/1000000000",
+    "kappa_decimal": "0.003129111",
+    "margin_at_previous": {
+      "lower": "0.114166232020664834808227839008",
+      "upper": "0.114166232020664834808227839009"
+    },
+    "negative_controls": {
+      "old_BIT": "Rejected by outer inequalities",
+      "old_cutoff": "Rejected by completion-tail ratio greater than one",
+      "source_completion": "Rejected at cutoff17, floor18 and decay39/40",
+      "source_offset": "Rejected at cutoff16 with tail offset1/5"
+    },
+    "nonrecursive": {
+      "fixed_scalar_growth_bound": "At most 2^(16*26000) before native factors; a declared constant, not an attained norm.",
+      "local_paid_rank_mass": 5946,
+      "local_routes": 5326000,
+      "local_scalar": 127088,
+      "peak_owned_fields": 13,
+      "raw_budget": 1000000000,
+      "raw_scalar_upper": 184647552,
+      "tensor_native_growth_bound": "Each rank-r Gaussian has row l1 norm at most 2^(rf); use local_paid_rank_mass for the whole word."
+    },
+    "ordinary_BIT": {
+      "admitted": "17/5000",
+      "after_cover": "69/20000",
+      "atom": "1/250",
+      "before_cover": "3459/1000000",
+      "ordinary_saving": "8590884599/2500000000000",
+      "prime_rule": "odd q > 2^26*N^5 avoiding all fixed denominators and rank witnesses"
+    },
+    "outer": {
+      "functional_checks": {
+        "actual_new_BIT_stock_sublinear": "348599999253/350000000000",
+        "fixed_halo_explicit_metadata_branch": "26950000001/350000000",
+        "new_BIT_row_stock_sublinear_in_active_group": "1395799997009/1400000000000",
+        "new_semantic_group_guard": "3/1400000000"
+      },
+      "margins": {
+        "boundary_algebraic_matrix": "1916582236131013/612500000000000000",
+        "fused_gaussian": "1916582233393039/612500000000000000",
+        "global_coordinate_router": "21903797/7000000000",
+        "group_bit_router": "30665322734288609/9800000000000000000",
+        "group_scans": "699999999/700000000",
+        "main_transform": "1916581798631013/612500000000000000",
+        "microbox_face_corrections": "26950000001/350000000",
+        "polynomial_products": "1399999999/1400000000",
+        "sparse_union_movement": "250744707236131013/612500000000000000"
+      },
+      "parameters": {
+        "a": "21903797/7000000000",
+        "b": "10951901/3500000000",
+        "beta": "1399999997/1400000000",
+        "bit_saving": "17/5000",
+        "cap_xi": "556994706798631013/612500000000000000",
+        "complex_uniform_saving": "21903807/7000000000",
+        "d": "1/1400000000",
+        "epsilon": "1399999999/1400000000",
+        "kappa": "3129111/1000000000",
+        "lambda_": "1993741773/2000000000",
+        "lambda_prime": "436131013/437500000",
+        "layout": "1/1400000000",
+        "q": "1368987/437500000",
+        "r0": "1/14000000000",
+        "stop": "1/1400000000",
+        "tested_saving": "782279/250000000"
+      },
+      "strict_checks": {
+        "actual_bit_above_effective": "1896203/7000000000",
+        "actual_logarithmic_gamma_guard": "1/1400000000",
+        "actual_logarithmic_group_guard": "55505293857618987/306250000000000000",
+        "alpha_logarithm_absorption": "1/14000000000",
+        "boundary_algebraic_matrix_above_kappa": "1748631013/612500000000000000",
+        "cap_above_band": "250744706798631013/612500000000000000",
+        "cap_below_cell": "55505292763868987/612500000000000000",
+        "cap_below_phase_cell_power": "668005293201368987/612500000000000000",
+        "complex_above_effective": "1/1400000000",
+        "complex_below_one_over_32": "98423099/3500000000",
+        "complex_endpoint": "1/700000000",
+        "epsilon_below_one": "1/1400000000",
+        "epsilon_positive": "1399999999/1400000000",
+        "fine_prime_halo_umbrella": "7/2",
+        "fused_gaussian_above_kappa": "1745893039/612500000000000000",
+        "gaussian_above_main": "217381013/306250000000000000",
+        "global_coordinate_router_above_kappa": "1/350000000",
+        "global_gamma_power_slack": "9/14000000000",
+        "group_below_dimension": "1/700000000",
+        "group_bit_router_above_kappa": "34934288609/9800000000000000000",
+        "group_gauge_power_slack": "55505293835743987/306250000000000000",
+        "group_key_fits_record": "1/700000000",
+        "group_positive": "1399999997/1400000000",
+        "group_scans_above_kappa": "6978096213/7000000000",
+        "halo_covers_generic_inverse_radius": "5",
+        "improvement_over_user_baseline": "699070290400418148631/500000000000000000000000",
+        "lambda_above_internal": "1/2800000000",
+        "lambda_above_sigma": "3/2800000000",
+        "lambda_above_tau": "1/2800000000",
+        "lambda_prime_above_lambda": "1/2800000000",
+        "lambda_prime_above_leaf": "6989048099/4900000000000000000",
+        "leaf_saving_above_effective": "3489048099/4900000000000000000",
+        "main_transform_above_kappa": "1311131013/612500000000000000",
+        "membership_arithmetic_fits_record": "1/1400000000",
+        "microbox_face_corrections_above_kappa": "538978096243/7000000000",
+        "microbox_halo_volume": "110600000003/1400000000",
+        "new_complex_uniform_saving_above_b": "1/1400000000",
+        "new_semantic_guard_with_C1_one": "1/1400000000",
+        "polynomial_products_above_kappa": "3489048109/3500000000",
+        "positive_layout_slack": "1/1400000000",
+        "q_below_effective": "1/1400000000",
+        "q_below_internal": "1/1400000000",
+        "q_below_leaf": "6989048099/4900000000000000000",
+        "q_positive": "1368987/437500000",
+        "short_record_fallback": "3489048099/3500000000",
+        "source_axis_superpolynomial": "1/1400000000",
+        "sparse_union_movement_above_kappa": "248828126748631013/612500000000000000",
+        "stop_below_one": "1399999999/1400000000",
+        "stop_positive": "1/1400000000",
+        "strassen_integer_power_gap": "1951441519231",
+        "support_router_span": "3/1400000000",
+        "theta_positive_polynomial_power": "2",
+        "union_header_fits_record": "3/1400000000",
+        "union_tag_work_per_visit_fits_record": "3/1400000000"
+      }
+    },
+    "paid": {
+      "1": 41466,
+      "16": 416,
+      "2": 8226,
+      "24": 416,
+      "3": 8946,
+      "32": 416,
+      "4": 1800,
+      "40": 416,
+      "48": 416,
+      "5": 2898,
+      "56": 416,
+      "6": 144,
+      "64": 416,
+      "7": 162,
+      "72": 208,
+      "8": 18
+    },
+    "paid_calls": 66780,
+    "previous_pr6167": "625729/200000000",
+    "productive_fields": 13444,
+    "query_shears": 15,
+    "rank_mass_surplus": 760,
+    "raw_ceiling": {
+      "derivative_upper": "-183709566445935704978840182941609952096373888509850921830221383/784637716923335095479473677900958302012794430558004314112",
+      "interval": [
+        "0",
+        "17/5000"
+      ]
+    },
+    "raw_headroom": [
+      "180453/25000000000000",
+      "721813/100000000000000"
+    ],
+    "raw_root_interval": [
+      "78227955453/25000000000000",
+      "312911821813/100000000000000"
+    ],
+    "relative_gain_percent": "9320/625729",
+    "strictification": {
+      "alpha": {
+        "lower": "0.999999997753741211225010509708",
+        "upper": "0.999999997753741211225010509709"
+      },
+      "cutoff": 16,
+      "delta": {
+        "lower": "0.951057530932807200661841013951",
+        "upper": "0.951057530932807200661841013952"
+      },
+      "floor": 17,
+      "gamma": {
+        "lower": "0.975667744092639322686002893166",
+        "upper": "0.975667744092639322686002893167"
+      },
+      "normalized_paid_upper": "1048576000976562501/1048576001073741824",
+      "power": 1024,
+      "reserve": "1/1000000000000",
+      "tail_block": 128,
+      "tail_decay": "125/128",
+      "tail_offset": "1/7",
+      "tested": "782279/250000000"
+    },
+    "targets": {
+      "1": 252,
+      "145": 208,
+      "17": 416,
+      "2": 144,
+      "25": 416,
+      "3": 72,
+      "33": 416,
+      "4": 1926,
+      "41": 416,
+      "49": 416,
+      "5": 252,
+      "57": 416,
+      "6": 54,
+      "65": 416,
+      "7": 162,
+      "73": 208,
+      "8": 396,
+      "9": 6858
+    },
+    "whole_idle_jobs": 3120
+  },
+  "controls": {
+    "damaged_research/p104-frontier-compression-2/WORD.json.gz": "Exact source SHA256: research/p104-frontier-compression-2/WORD.json.gz",
+    "damaged_research/p104-retained-operand-descent/SOURCES.json": "Exact source SHA256: research/p104-retained-operand-descent/SOURCES.json",
+    "damaged_research/p104-retained-operand-descent/inputs/pr5827-source.tar": "Exact source SHA256: research/p104-retained-operand-descent/inputs/pr5827-source.tar",
+    "damaged_research/p104-retained-operand-descent/pricing.py": "Exact source SHA256: research/p104-retained-operand-descent/pricing.py",
+    "damaged_research/p104-retained-operand-descent/sources.py": "Exact source SHA256: research/p104-retained-operand-descent/sources.py",
+    "missing_carrier_move": "Scalar destination and coefficient",
+    "missing_central_translation": "Rejected by the complete Laurent endpoint",
+    "missing_first_carrier_subtraction": "All public and owned rows",
+    "missing_output_basis": "All public and owned rows",
+    "missing_second_carrier_subtraction": "All public and owned rows",
+    "missing_target_debit": "Every productive helper has a native target",
+    "old_input_chart": "Common scalar chart",
+    "unpaid_carrier_move": "Complete field and call counts",
+    "wrong_649_injection": "All public and owned rows",
+    "wrong_663_injection": "All public and owned rows",
+    "wrong_intersection": "Nested chronological transport"
+  },
+  "directions": [
+    {
+      "basis": [
+        52
+      ],
+      "departure_response": {
+        "496": "1",
+        "639": "-1",
+        "643": "-1/2"
+      },
+      "frame": 595,
+      "input_direction": {
+        "496": "1",
+        "639": "-1",
+        "643": "-1/2"
+      },
+      "primary": 496
+    },
+    {
+      "basis": [
+        82
+      ],
+      "departure_response": {
+        "198": "1",
+        "648": "-1",
+        "649": "1"
+      },
+      "frame": 597,
+      "input_direction": {
+        "648": "-1",
+        "649": "1"
+      },
+      "primary": 649
+    },
+    {
+      "basis": [
+        51
+      ],
+      "departure_response": {
+        "179": "1/2",
+        "663": "1",
+        "665": "-1"
+      },
+      "frame": 105,
+      "input_direction": {
+        "663": "1",
+        "665": "-1"
+      },
+      "primary": 663
+    },
+    {
+      "basis": [
+        30,
+        42,
+        384
+      ],
+      "departure_response": {
+        "508": "1",
+        "631": "-1",
+        "635": "-1/2"
+      },
+      "frame": 1093,
+      "input_direction": {
+        "508": "1",
+        "631": "-1",
+        "635": "-1/2"
+      },
+      "primary": 508
+    }
+  ],
+  "events": 17452,
+  "limits": [
+    "All five inherited framework assumptions remain.",
+    "The uniform word and rounded multiplier are not materialized.",
+    "Author checks do not establish independent acceptance.",
+    "The selected frontier is unchanged."
+  ],
+  "local": {
+    "endpoint_coefficients": 638401,
+    "helpers": {
+      "1": 14,
+      "2": 8,
+      "3": 4,
+      "4": 107,
+      "5": 14,
+      "6": 3,
+      "7": 9,
+      "8": 22,
+      "9": 381
+    },
+    "owned_fields": 29,
+    "owned_lifetimes": 32,
+    "paid": {
+      "1": 2217,
+      "2": 457,
+      "3": 497,
+      "4": 100,
+      "5": 161,
+      "6": 8,
+      "7": 9,
+      "8": 1
+    },
+    "paid_rank_mass": 5946,
+    "peak_owned_fields": 13,
+    "public_inputs": 770,
+    "real_scalar_allowance": 127088
+  },
+  "native": {
+    "distinct_maps": 2930,
+    "helper_normalizers": 1124,
+    "helpers": {
+      "1": 14,
+      "2": 8,
+      "3": 4,
+      "4": 107,
+      "5": 14,
+      "6": 3,
+      "7": 9,
+      "8": 22,
+      "9": 381
+    },
+    "main_adapters": 208,
+    "proof": "Every signed Pauli image and exact global phase; frame induction at every positive tensor width",
+    "recipe_payload_sha256": "18631697cf96cfcd625fd0210939bc40f095657324730955d15719b9c7385513",
+    "wrong_phase_rejected": true
+  },
+  "paid_delta": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 2,
+    "5": -4
+  },
+  "physical_caller": {
+    "central_square_columns": 53248,
+    "full_calls": 18,
+    "main_targets": {
+      "145": 208,
+      "17": 416,
+      "25": 416,
+      "33": 416,
+      "41": 416,
+      "49": 416,
+      "57": 416,
+      "65": 416,
+      "73": 208
+    },
+    "new_paid_jobs": 0,
+    "physical_contacts": 7488,
+    "ports": 104,
+    "route_payload_sha256": "7f4f0ca768ffbc4f93dcff575592c4c67411f46b4289e45b73f715a2ad47b142",
+    "tensor_rule": "Factorwise native maps; scalar signs stay outside the tensor power.",
+    "whole_idle_jobs": {
+      "16": 416,
+      "24": 416,
+      "32": 416,
+      "40": 416,
+      "48": 416,
+      "56": 416,
+      "64": 416,
+      "72": 208
+    },
+    "wrapper_sites": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25,
+      27,
+      29,
+      31
+    ]
+  },
+  "separate_columns": {
+    "arithmetic": "Dense integer rows with binary denominators; reverse chronology",
+    "coefficients": 638401,
+    "columns": 799
+  },
+  "source_local": {
+    "endpoint_coefficients": 638401,
+    "helpers": {
+      "1": 14,
+      "2": 8,
+      "3": 4,
+      "4": 107,
+      "5": 14,
+      "6": 2,
+      "7": 9,
+      "8": 19,
+      "9": 385
+    },
+    "owned_fields": 29,
+    "owned_lifetimes": 32,
+    "paid": {
+      "1": 2216,
+      "2": 456,
+      "3": 496,
+      "4": 98,
+      "5": 165,
+      "6": 8,
+      "7": 9,
+      "8": 1
+    },
+    "paid_rank_mass": 5952,
+    "peak_owned_fields": 13,
+    "public_inputs": 770,
+    "real_scalar_allowance": 127042
+  },
+  "source_margin_upper_at_new_claim": "-21724354416852642076420555890660965661122037090691207971/196159429230833773869868419475239575503198607639501078528",
+  "status": "PASS_P104_NATIVE_INPUT_LIFTING_KAPPA_003129111",
+  "target_delta": {
+    "6": 1,
+    "8": 3,
+    "9": -4
+  }
+}

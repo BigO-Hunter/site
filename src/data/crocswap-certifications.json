@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repo": "CrocSwap/integer-mult-bounds",
-  "checked_at": "2026-10-31T14:17:23Z",
+  "checked_at": "2026-11-02T02:17:29Z",
   "selected_revisions": [
     {
       "commit": "6aed8701e3e3102898c66b5dcfc28d3cfc264edc",
@@ -1409,7 +1409,7 @@
   },
   "ledger": {
     "pr-ledger": {
-      "blob": "59e5bf697b1f2031a8d64a72556ea60e1e5f7157",
+      "blob": "c93ab8c950647d6e61871ffa174ec5f064f58dd5",
       "dispositions": {
         "incorporated": [
           2,
@@ -6923,7 +6923,19 @@
           6329,
           6330,
           6331,
-          6333
+          6333,
+          6336,
+          6337,
+          6338,
+          6339,
+          6340,
+          6341,
+          6342,
+          6343,
+          6344,
+          6345,
+          6348,
+          6349
         ],
         "superseded": [
           90,
@@ -6995,7 +7007,7 @@
       }
     },
     "pr-intake-decisions": {
-      "blob": "519d80bf4c083df3a564c1b12cd8b4f3de3390a5",
+      "blob": "c39161eba92dfba20d053f820d2f87889dc3d4b3",
       "dispositions": {
         "incorporated": [
           2452,
@@ -10115,7 +10127,19 @@
           6329,
           6330,
           6331,
-          6333
+          6333,
+          6336,
+          6337,
+          6338,
+          6339,
+          6340,
+          6341,
+          6342,
+          6343,
+          6344,
+          6345,
+          6348,
+          6349
         ],
         "superseded": [
           2477

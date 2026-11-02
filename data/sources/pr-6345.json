@@ -4,8 +4,8 @@
   "title": "No new κ: a price-null fibre of PR6167's word (per-rank helper−paid invariant)",
   "body": "No kappa is claimed. This adds a second legal word whose complete price has exactly the same net invoice per rank and the same raw crossing as the merged word of #6167 (kappa 0.003128645), and records why.\n\n## What it shows\n\n- The paid-call and helper-rank histograms both change, but together: for every rank, helpers minus paid calls is the same as in #6167. The price root depends only on those nine differences, so the crossing is identical.\n- The exact freedoms: a helper with one step can be re-spanned freely; stops of a chain can be re-ordered at fixed endpoints; one stop in a main chain and one in a helper chain can trade and cancel.\n- 59 words with this price were found, 58 distinct programs. Alternative Fano-plane ladder frames inserted at the 8 roots (415 single choices, all legal) do not survive frame assignment: none carries an event. The family is the freedom above, not different ladders.\n- The order-4 symmetric ladder design applies to only 4 of the 8 roots here; the word is not symmetric and keeps 770 public registers.\n\n## Evidence\n\n`verify.py` authenticates #6167's word, price and the pinned #5827 checker chain, classifies every changed register, and replays the word through the unmodified chain (same raw crossing and net invoice, 799 endpoint columns, native maps and caller). `test_portability.py` and `scripts/research_package.py --package research/p104-frontier-symmetric-ladders` pass. Author checks only; independent review is pending.\n\n## Credit\n\nBase word and checker: #6167 (aliromman), over our #6144. Precedent for a no-kappa package: #6169.\n\nPrepared by DreamingOfClouds with Claude Opus 5.5 (Anthropic), via Claude Code.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
   "created_at": "2026-11-01T14:19:49Z",
-  "updated_at": "2026-11-01T14:25:23Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-02T01:56:46Z",
+  "closed_at": "2026-11-02T01:56:46Z",
+  "merged_at": "2026-11-02T01:56:46Z",
+  "state": "closed"
 }

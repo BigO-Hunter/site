@@ -1,3 +1,11 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pr": 6348,
+      "head": "9894015d6f380206f990ad5fd14bc49bbd26b0d0",
+      "title": "Conditional κ = 0.00314933 (+0.661%): replace the path caller with a binary query tree",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6348",
+      "reason": "The PR adds no single own research package CLAIM.json."
+    }
+  ]
 }
