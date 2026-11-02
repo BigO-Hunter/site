@@ -535,7 +535,7 @@
       "direction": "lower-is-better",
       "encoding": "rational-string",
       "minimum": "0",
-      "maximum": "1/2"
+      "maximum": "1"
     },
     "checked_at": "2026-10-08",
     "sources": [

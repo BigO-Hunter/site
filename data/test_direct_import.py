@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import unittest
 import zipfile
+from fractions import Fraction
 import direct_import as gate
 
 FIXTURES = Path(__file__).with_name('direct-fixtures')
@@ -158,8 +159,9 @@ class DirectImportTests(unittest.TestCase):
 
     def test_subset_sum_target_and_reviewed_statement(self):
         # Opened 2026-11-01 after its smoke (verifier run 41353572059, issue #98, darkhipo's 3/4 proof). The smoke
-        # receipt's generated challenge for bound 3/4 has sha256 9b6ba189...: a reviewed test vector only. 3/4 is above
-        # the board's range (the classical 1/2), so it is never imported.
+        # receipt's generated challenge for bound 3/4 has sha256 9b6ba189...: a reviewed test vector only (the smoke is
+        # test_only). The range is 0 to 1, as in the profile: a bound above the classical 1/2 is in range (Nil ruling
+        # 2026-11-02, verifier #94: the best Lean Verified bound is listed as a stepping stone).
         trust=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
         profile=trust['profiles']['subset-sum']
         raw=(FIXTURES/gate.statement_fixture(trust,profile['challenge_file'])).read_bytes()
@@ -171,10 +173,21 @@ class DirectImportTests(unittest.TestCase):
         self.assertTrue(generated.endswith(b'theorem Race.bound : BigOSpeedrun.SubsetSum.SolvedInTime ((3 : Rat) / 4) := by\n  sorry\n'))
         self.assertEqual(gate.sha(generated),'9b6ba1899bc6cc4389edde0ff7c845b4a27e349ee4fafe93df480c09241da08b')
         sub=dict(schema_version=1,problem='subset-sum',bound='3/4',repo_url='https://github.com/u/p',commit='a'*40,authors=[])
-        for bound in ['3/4','51/100','1']:
+        for bound in ['101/100','2']:
             with self.subTest(bound=bound),self.assertRaises(gate.Rejected):gate.normalize(dict(sub,bound=bound))
-        for bound in ['1/2','49/100','0']:
+        for bound in ['1','3/4','51/100','1/2','49/100','0']:
             with self.subTest(bound=bound):self.assertEqual(gate.normalize(dict(sub,bound=bound))['bound'],bound)
+
+    def test_each_board_range_is_its_profile_range(self):
+        # The site lists every bound the verifier can run (Nil ruling 2026-11-02): the import range and the board's
+        # score range end at the profile maximum.
+        trust=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
+        for key,slug in {'dft':'exact-dft','3sum':'3sum','apsp':'apsp','subset-sum':'subset-sum'}.items():
+            with self.subTest(board=slug):
+                score=json.loads((FIXTURES.parent/(slug+'.json')).read_text())['score']
+                self.assertEqual(Fraction(gate.PROBLEMS[key][1]),Fraction(trust['profiles'][key]['maximum']))
+                self.assertEqual(Fraction(score['maximum']),Fraction(trust['profiles'][key]['maximum']))
+                self.assertEqual(score['minimum'],'0')
 
     def test_each_profile_reads_its_own_reviewed_statement(self):
         # Catalan and Subset Sum both name their statement Statement.lean: statement_fixtures keeps the copies apart.
@@ -382,12 +395,29 @@ class DirectImportTests(unittest.TestCase):
         summary=gate.current_record_gate('dft',json.dumps(data).encode(),'c'*40,'2026-10-10T13:00:00Z','candidate')
         # The better Claimed row d does not gate (Nil ruling 2026-10-20); the Lean Verified a does.
         self.assertEqual(summary['leader_ids'],['a'])
-        # Without a Lean Verified row the classical baseline gates; with neither, no guess.
-        data=dict(problem_id=gate.PROBLEMS['dft'][0],score={'direction':'higher-is-better'},
-            records=[{'id':'classical-baseline','score':'1/2000'},{'id':'d','score':'1/50'}],record_metadata={'classical-baseline':{},'d':{'site_tier':'claimed'}})
-        summary=gate.current_record_gate('dft',json.dumps(data).encode(),'c'*40,'2026-10-10T13:00:00Z')
-        self.assertEqual((summary['leader_ids'],summary['any_lean_verified_at_bound']),(['classical-baseline'],False))
-        data['records']=data['records'][1:]
-        with self.assertRaises(gate.Rejected):gate.current_record_gate('dft',json.dumps(data).encode(),'c'*40,'2026-10-10T13:00:00Z')
+        # Without a Lean Verified row every bound in the range runs (Nil ruling 2026-11-02, verifier 1b1af26): the gate
+        # is the end of the range (0 on dft), leader 'profile-range', with or without a classical baseline.
+        for records in [[{'id':'classical-baseline','score':'1/2000'},{'id':'d','score':'1/50'}],[{'id':'d','score':'1/50'}]]:
+            data=dict(problem_id=gate.PROBLEMS['dft'][0],score={'direction':'higher-is-better'},
+                records=records,record_metadata={'classical-baseline':{},'d':{'site_tier':'claimed'}})
+            summary=gate.current_record_gate('dft',json.dumps(data).encode(),'c'*40,'2026-10-10T13:00:00Z')
+            self.assertEqual((summary['score'],summary['score_relation'],summary['leader_ids'],summary['any_lean_verified_at_bound']),
+                             ('0','attained',['profile-range'],False))
+
+    def test_subset_sum_runs_any_bound_in_range_until_a_lean_verified_row(self):
+        # As the verifier's test at 1b1af26: no Lean Verified row -> score 1, 'profile-range', and 4877/10000, 3/5, 3/4
+        # and 1 qualify; then a Lean Verified 3/4 row gates (3/4 again and 4/5 do not qualify, 7/10 does).
+        data=json.loads((FIXTURES.parent/'subset-sum.json').read_text())
+        summary=gate.current_record_gate('subset-sum',json.dumps(data).encode(),'c'*40,'2026-11-02T00:00:00Z')
+        self.assertEqual((summary['score'],summary['leader_ids'],summary['any_lean_verified_at_bound']),('1',['profile-range'],False))
+        sub=dict(schema_version=1,problem='subset-sum',bound='1',repo_url='https://github.com/u/p',commit='a'*40,authors=[])
+        for bound in ['4877/10000','3/5','3/4','1']:
+            with self.subTest(bound=bound):self.assertTrue(gate.qualifies_for_run(dict(sub,bound=bound),summary))
+        data['records'].append(dict(id='direct-issue-99',score='3/4',rerun_status={'state':'passed','receipt_path':'sources/proof.json'}))
+        data['record_metadata']['direct-issue-99']=dict(site_tier='verified')
+        summary=gate.current_record_gate('subset-sum',json.dumps(data).encode(),'c'*40,'2026-11-02T00:00:00Z')
+        self.assertEqual((summary['score'],summary['leader_ids'],summary['any_lean_verified_at_bound']),('3/4',['direct-issue-99'],True))
+        for bound,runs in [('3/4',False),('4/5',False),('7/10',True)]:
+            with self.subTest(bound=bound):self.assertEqual(gate.qualifies_for_run(dict(sub,bound=bound),summary),runs)
 
 if __name__=='__main__':unittest.main()

@@ -306,6 +306,30 @@ class RefreshTests(unittest.TestCase):
             self.assertFalse(d.qualifies_for_run(sub,gate))
             self.assertTrue(d.qualifies_for_run(dict(sub,bound='47/100'),gate))
 
+    def test_a_subset_sum_bound_worse_than_classic_is_listed_only_when_lean_verified(self):
+        # Nil ruling 2026-11-02 (verifier #94): the best Lean Verified bound is listed even above the classical 1/2 (a
+        # stepping stone). The lead, 2026-11-02: Lean Verified rows only; a Claimed 4/5 (open, or closed claimed-only) is not listed.
+        def claim(number,bound,proof):
+            body=self.issue()['body'].replace('### Problem\n\ndft','### Problem\n\nsubset-sum').replace('1/1000',bound)
+            item=dict(self.issue(number),body=body)
+            return dict(route='issue',item=item,submission=d.parse_body(body),**({'verification':proof} if proof else {}))
+        proof=dict(checked_at='2026-11-02T00:00:00Z',receipt_path='sources/direct-issue-99-receipt.json',receipt_url='https://github.com/bigospeedrun/verifier/actions/runs/1',reason='Lean and nanoda passed; permitted-axiom audit passed')
+        claims={'direct-issue-99':claim(99,'3/4',proof),'direct-issue-100':claim(100,'4/5',None),
+                'direct-issue-101':dict(claim(101,'4/5',None),closed=True,claimed_only=True,review_note=r.CLAIMED_ONLY_NOTE),
+                'direct-issue-102':claim(102,'1/2',None),'direct-issue-103':claim(103,'12/25',None)}
+        fixtures=json.loads((ROOT/'direct-fixtures/board-snapshots.json').read_text())
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            for slug in r.SLUGS.values():(root/(slug+'.json')).write_bytes(r.json_bytes(fixtures[slug]))
+            (root/'registry.json').write_bytes(r.json_bytes({'checked_at':'2026-10-10','updated_at':'2026-10-10T00:00:00Z'}))
+            board=json.loads(r.prepare(root,claims,{},'2026-11-02T00:00:00Z')['subset-sum.json'])
+            listed={x['id']:x['tier'] for x in board['records'] if x['id'].startswith('direct-')}
+            # A tie with the classical 1/2 is not worse, so its Claimed row is listed, as is a Claimed 12/25.
+            self.assertEqual(listed,{'direct-issue-99':'verified','direct-issue-102':'claimed','direct-issue-103':'claimed'})
+        doc=fixtures['subset-sum']
+        self.assertEqual([r.worse_than_classic(doc,b) for b in ['4/5','3/4','1/2','12/25']],[True,True,False,False])
+        self.assertEqual([r.worse_than_classic(fixtures['exact-dft'],b) for b in ['0','1/1000']],[False,False])
+
     def test_a_draft_verifier_pr_created_from_5270_on_is_not_a_claim_until_ready(self):
         pr=dict(number=60,state='open',merged=False,draft=True,labels=[],head={'sha':'a'*40},user={'login':'alice'},created_at='2026-10-24T00:00:00Z',html_url='https://github.com/bigospeedrun/verifier/pull/60')
         sub=dict(d.parse_body(self.issue()['body']),source_subdir='submissions/dft/alice-proof')

@@ -23,9 +23,10 @@ PROBLEMS = {'dft': ('exact-dft/uniform-exact-arithmetic', 1),
             'average-sensitivity': ('other/average-sensitivity', 8),
             # An Other bounds row (verifier profile catalan, split build): an irrationality exponent from 0 to 10^8.
             'catalan': ('other/catalan', 100000000),
-            # A board (verifier profile subset-sum, opened 2026-11-01): the exponent alpha of O(2^(alpha n)). The
-            # profile allows up to 1; the board's range ends at the classical 1/2, so a weaker bound gets no row.
-            'subset-sum': ('subset-sum/randomized-word-ram', Fraction(1, 2))}
+            # A board (verifier profile subset-sum, opened 2026-11-01): the exponent alpha of O(2^(alpha n)), 0 to 1
+            # as in the profile. A Lean Verified bound above the classical 1/2 is listed too (Nil ruling 2026-11-02,
+            # verifier #94: a stepping stone).
+            'subset-sum': ('subset-sum/randomized-word-ram', 1)}
 MAX_BYTES = 2_000_000
 
 class Rejected(ValueError):
@@ -307,6 +308,11 @@ def validate_kernel_receipt(receipt, names):
     return decision, reason, checked_at
 
 
+def range_end(problem):
+    """The weakest bound of a problem's range, as the verifier's range_end: the gate while its board has no
+    Lean Verified row. The range maximum, or 0 on dft, where a higher saving is better."""
+    return Fraction(0) if problem == 'dft' else Fraction(PROBLEMS[problem][1])
+
 def open_rank(problem):
     """Second key of an open endpoint: below an attained score on dft, above it elsewhere."""
     return -1 if problem == 'dft' else 1
@@ -320,13 +326,12 @@ def current_record_gate(problem, data_bytes, site_commit, checked_at, exclude_is
     direction = 'higher-is-better' if problem == 'dft' else 'lower-is-better'
     require(data.get('score', {}).get('direction') == direction, 'Board score direction mismatch')
     # Nil ruling 2026-10-20 (verifier 7f4f6bd): the gate is the best Lean Verified row; a Claimed
-    # or Human Verified row never blocks a proof run. With no Lean Verified row the classical
-    # baseline is the gate.
-    candidates, baseline = [], []
+    # or Human Verified row never blocks a proof run. With no Lean Verified row, every bound in the
+    # profile range runs (Nil ruling 2026-11-02, verifier 1b1af26): the gate is the end of the range.
+    candidates = []
     for record in data['records']:
         meta = data['record_metadata'][record['id']]
         if record['id'] == 'classical-baseline':
-            baseline.append(((Fraction(record['score']), 0), record['id'], False))
             continue
         if meta.get('reproduction_of'):
             continue
@@ -341,8 +346,8 @@ def current_record_gate(problem, data_bytes, site_commit, checked_at, exclude_is
                     and bool(record['rerun_status'].get('receipt_path')))
         if verified:
             candidates.append((key, record['id'], verified))
-    candidates = candidates or baseline
-    require(bool(candidates), 'No Lean Verified row or baseline; do not guess')
+    if not candidates:
+        candidates = [((range_end(problem), 0), 'profile-range', False)]
     leader_key = (max if problem == 'dft' else min)(row[0] for row in candidates)
     leaders = [row for row in candidates if row[0] == leader_key]
     return dict(schema_version=1, problem_id=data['problem_id'], site_commit=site_commit,

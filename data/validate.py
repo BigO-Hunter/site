@@ -84,6 +84,11 @@ for entry in registry['problems']:
   # both directions; only a baseline must be attained.
   if r.get('score_relation')=='strict-upper-bound':assert r['kind']!='baseline',r['id']
   q=Fraction(r['score']);assert str(q)==r['score'];assert Fraction(p['score']['minimum'])<=q<=Fraction(p['score']['maximum'])
+  # A row worse than the classical baseline needs Lean Verified evidence (Nil ruling 2026-11-02: a stepping stone;
+  # the lead, 2026-11-02: Lean Verified rows only). A tie is not worse.
+  classic=Fraction(next(x for x in records if x['id']=='classical-baseline')['score'])
+  if q<classic if p['score']['direction']=='higher-is-better' else q>classic:
+   assert p['record_metadata'][r['id']].get('site_tier')=='verified' and r.get('rerun_status',{}).get('state')=='passed','A row worse than the classical baseline without Lean Verified evidence: '+r['id']
   if 'source_commit' in r:assert r['source_commit']!='0'*40
   a=r['artifact'];assert a['sha256']!='0'*64;assert hashlib.sha256(safe_path(a['path']).read_bytes()).hexdigest()==a['sha256'],r['id']
   m=p['record_metadata'][r['id']]

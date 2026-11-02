@@ -402,6 +402,16 @@ def display_up(bound,places=6):
     text=f'{scaled//10**places}.{scaled%10**places:0{places}d}'.rstrip('0')
     return text+'0' if text.endswith('.') else text
 
+def worse_than_classic(doc,bound):
+    """Is the bound worse than the board's classical baseline? Nil ruling 2026-11-02 (verifier #94): the best Lean
+    Verified bound is listed even when it is worse (a stepping stone). The lead, 2026-11-02: that is for Lean
+    Verified rows only, so a direct claim without a Lean Verified result (open, held, failed or claimed-only) that is
+    worse is not listed. A tie is not worse. Only Subset Sum has a range beyond its baseline today."""
+    base=[r for r in doc['records'] if r['id']=='classical-baseline']
+    if not base:return False
+    classic,value=Fraction(base[0]['score']),Fraction(bound)
+    return value<classic if doc['score']['direction']=='higher-is-better' else value>classic
+
 def other_claims(claims,withdrawn,notes):
     """{'other-<slug>': {'claims': [...]}} for the Lean Verified direct results of Other bounds rows."""
     boards={}
@@ -435,6 +445,7 @@ def prepare(root,claims,files,now,final_states=None,config=None,claimed_cache=No
         doc['record_metadata']={k:v for k,v in doc['record_metadata'].items() if not v.get('direct_submission')}
         for key,claim in sorted(claims.items()):
             if key in suppressed or key in withdrawn or SLUGS.get(claim['submission']['problem'])!=slug:continue
+            if not claim.get('verification') and worse_than_classic(doc,claim['submission']['bound']):continue
             row,meta,source=row_for(key,claim,now,old.get(key),notes.get(key));files.update(source)
             meta['verification']=verification_state(key,claim,final_states)
             doc['records'].append(row);doc['record_metadata'][key]=meta
