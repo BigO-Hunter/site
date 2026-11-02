@@ -18,7 +18,8 @@ export function oauthHeader(c:Credentials,url=endpoint,nonce=randomBytes(24).toS
  oauth.oauth_signature=createHmac('sha1',encode(c.secret)+'&'+encode(c.tokenSecret)).update(base).digest('base64');
  return 'OAuth '+Object.entries(oauth).sort().map(([k,v])=>`${encode(k)}="${encode(v)}"`).join(', ');
 }
-export function prepare(posts:XEntry[],previous:XLog|undefined,at:string):{log:XLog;batch:XEntry[]} {
+// skip: a reason to never post an entry (logged as skipped, so it cannot post later); it does not use a batch slot.
+export function prepare(posts:XEntry[],previous:XLog|undefined,at:string,skip?:(post:XEntry)=>string|undefined):{log:XLog;batch:XEntry[]} {
  const log:XLog={...previous},batch:XEntry[]=[];
  if(previous===undefined){
   for(const post of posts)log[post.key]={status:'skipped',at,reason:'before API start'};
@@ -26,6 +27,8 @@ export function prepare(posts:XEntry[],previous:XLog|undefined,at:string):{log:X
  }
  for(const post of posts){
   if(Object.hasOwn(log,post.key))continue;
+  const reason=skip?.(post);
+  if(reason){log[post.key]={status:'skipped',at,reason};continue;}
   if(batch.length===5)break;
   log[post.key]={status:'unknown',at,reason:'reserved before API send'};
   batch.push(post);

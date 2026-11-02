@@ -23,6 +23,18 @@ statuses. It marks every existing accepted entry `skipped`, with reason
 that first workflow run. The file is created at runtime, not shipped as an empty
 map, because an empty map would enable backfill.
 
+Breakthrough bar (Nil, 2026-11-02): X does not announce a Lean Verified result
+whose bound is worse than the breakthrough that started the race on that board.
+The plan reads the board's race-start row from the feed snapshot in
+`data/discord-records.json` (the row that `isBreakthroughRecord` names, when its
+author is `OpenAI` or `Anthropic`) and compares the post's bound with it, in the
+board's direction. A worse bound is logged as `skipped` with a reason that names
+both bounds, uses no batch slot, and never posts later. An equal or better bound
+posts as before, and so does every board whose race-start row has another author
+(integer factoring). Only Lean Verified posts are held back. A score that is not
+a rational logs a warning and never stops the plan: that post goes out as before. Discord is not
+changed. The code is `src/lib/x-skip.ts`.
+
 Later plans reserve at most five unseen keys as `unknown`. The workflow commits
 and pushes these reservations before its send step can run. The sender consumes
 its temporary batch before making requests and waits at least two seconds

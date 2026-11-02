@@ -1,6 +1,8 @@
 import {existsSync,readFileSync,writeFileSync,renameSync} from 'node:fs';
 import {credentials,prepare,sendBatch} from '../src/lib/x-posts.ts';
+import {worseThanBreakthrough} from '../src/lib/x-skip.ts';
 import type {XLog,XEntry} from '../src/lib/x-posts.ts';
+import type {FeedSnapshot} from '../src/lib/records-feed.ts';
 const path='data/x-posts.json';
 const read=(file:string)=>JSON.parse(readFileSync(file,'utf8'));
 const write=(file:string,value:unknown)=>{writeFileSync(file+'.tmp',JSON.stringify(value,null,2)+'\n');renameSync(file+'.tmp',file);};
@@ -12,7 +14,9 @@ async function main(){
  if(mode==='plan'){
   const posts:XEntry[]=existsSync('data/records-posts.json')?read('data/records-posts.json'):[];
   const previous:XLog|undefined=existsSync(path)?read(path):undefined;
-  const {log,batch}=prepare(posts,previous,new Date().toISOString());
+  // The feed snapshot the Discord plan just saved: it names each board's race-start row (see x-skip.ts).
+  const snapshot:FeedSnapshot|undefined=existsSync('data/discord-records.json')?read('data/discord-records.json').snapshot:undefined;
+  const {log,batch}=prepare(posts,previous,new Date().toISOString(),post=>worseThanBreakthrough(post,snapshot));
   write(path,log);write(batchPath,batch);
   console.log(previous===undefined?'X baseline saved; existing entries skipped':`X reserved ${batch.length} entries`);
  }else{
