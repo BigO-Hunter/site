@@ -2805,6 +2805,29 @@
           ],
           "proofScope": "A written proof, with substantial AI assistance, that the author has not had reviewed by other people. No Lean proof is supplied. The same repository also claims \\(O(n\\log n)\\) for \\(\\mathbb{F}_2\\) by a different method. That bound is \\(\\kappa=0\\), weaker than this one, and it came in the same commit, so it has no row. The repository also claims \\(\\kappa=1/10000\\) for each fixed field of odd characteristic, which is a different statement.",
           "bound": "O(n\\log^{1-2^{-38}}n)"
+        },
+        {
+          "author": "Árpád Csizmadia",
+          "handle": "arpcs",
+          "agent": true,
+          "value": "1/1302",
+          "display": "O(n \\log^{1301/1302} n)",
+          "date": "2026-11-02T03:52:41Z",
+          "dateSource": "https://github.com/arpcs/finite-field-polynomial-multiplication/commit/e85bc1f6ca0ec9c13281c94b6a3e88ec2cdb4fc5",
+          "dateKind": "first-stated",
+          "url": "https://github.com/arpcs/finite-field-polynomial-multiplication/blob/e85bc1f6ca0ec9c13281c94b6a3e88ec2cdb4fc5/papers/03-best-binary/versions/0.2.1/paper.pdf",
+          "lean": false,
+          "leanNote": "No. The paper says that a complete formal proof of the main theorem remains outstanding.",
+          "evidence": "claimed",
+          "note": "The repository says Árpád Csizmadia's paired-phase paper (version 0.2.1, Theorem 1) multiplies two binary polynomials of \\(n\\) coefficient bits in \\(O(n\\log^{1-1/1302}n)\\) on the machine of our statement, a step from the author's earlier \\(2^{-38}\\) claim. It keeps the outer framework of that claim and replaces the inner construction with a finite paired-phase construction, a combination of jobs of different sizes and a new data-movement step. It builds on the cyclotomic methods of Harvey and van der Hoeven, on OpenAI's finite-network and local Fourier methods, on Jacob Sussman's mixed-job construction and on the finite precompilation and five-stage constructions of Doug Colkitt and contributors.",
+          "authors": [
+            {
+              "name": "Árpád Csizmadia",
+              "url": "https://github.com/arpcs"
+            }
+          ],
+          "proofScope": "A written proof for all input sizes (Theorem 1 of the paired-phase paper, version 0.2.1), prepared with substantial AI assistance (OpenAI Codex), that the author has not had reviewed by other people. No Lean proof is supplied. The finite certificates cover only parts of the construction, not the running-time theorem. The problem and the machine are those of our statement (CLAIM.json of the paper).",
+          "bound": "O(n \\log^{1301/1302} n)"
         }
       ],
       "repos": [
