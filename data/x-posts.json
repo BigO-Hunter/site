@@ -1037,13 +1037,13 @@
     "id": "2117306828337905990"
   },
   "[\"subset-sum\",\"direct-issue-104\",\"1/2\",\"attained\"]:lean": {
-    "status": "unknown",
-    "at": "2026-11-02T18:31:06.212Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-02T18:31:07.929Z",
+    "id": "2117323637493579932"
   },
   "[\"other-binary-polynomial-multiplication\",\"arpcs:1/1302\",\"1/1302\",\"attained\"]:record": {
-    "status": "unknown",
-    "at": "2026-11-02T18:31:06.212Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-02T18:31:10.161Z",
+    "id": "2117323646779757037"
   }
 }
