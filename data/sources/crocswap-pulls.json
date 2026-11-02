@@ -106811,7 +106811,7 @@
     "title": "Verify the L300/L301 fixed-cut shared-handoff obstruction (no new κ)",
     "state": "closed",
     "created_at": "2026-10-25T09:39:53Z",
-    "updated_at": "2026-10-26T00:58:17Z",
+    "updated_at": "2026-11-02T13:45:05Z",
     "closed_at": "2026-10-25T14:19:11Z",
     "merged_at": "2026-10-25T14:19:11Z",
     "user": {
@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-02T12:49:16Z",
+    "updated_at": "2026-11-02T13:49:05Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -122843,6 +122843,27 @@
     },
     "head": {
       "sha": "190e63e0ca5b16e45d8202bec7dc7426dc76c5dd"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6370,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6370",
+    "title": "V03: recover the complete selected import graph and original queue inputs",
+    "state": "open",
+    "created_at": "2026-11-02T13:37:52Z",
+    "updated_at": "2026-11-02T13:52:20Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "e144f3b0a440fd33efdcfa4e0bd1af059dfd4fb3"
     },
     "base": {
       "ref": "main"
