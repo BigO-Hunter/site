@@ -7,11 +7,16 @@ The notification planner compares it with `data/discord-records.json`.
 A new board leader emits one message. A record that gains Lean Verified emits one
 message, including when it is not the leader. A simultaneous new leader and Lean
 upgrade emits one message. Human Verified upgrades alone do not emit a message.
-Messages use the same decimal precision as the site tables, with scientific savings
-expanded to plain decimal text. On a savings board (Fourier Transform, Integer Multiplication) the post shows the site
-table's digits (`boundPrecision`: the fewest that keep every score of the board apart), rounded down like the site, so
-a DFT record posts 0.0031278099 for the site's 3.1278099e-3, not 0.00312 (2026-11-02). When rows agree for 20 or more
-digits the board is pinned at the cap and the post keeps the digits that separate it from the row it beats. Event keys retain exact fractions. Strict endpoints and matrix exponents
+Digits of a bound in a message (Lead, 2026-10-24 and 2026-11-02), scientific savings expanded to plain decimal text:
+- Fourier Transform and Integer Multiplication (savings): the site table's digits (`boundPrecision`: the fewest that keep
+  every score of the board apart), rounded down like the site, so a DFT record posts 0.0031278099 for the site's
+  3.1278099e-3, not 0.00312. When rows agree for 20 or more digits the board is pinned at the cap, and the post shows only the digits
+  that separate it from the row it beats (at least 3 significant digits), so it does not show 20 digits.
+- All other Big O boards (exponents) and the Lean Verified posts of Other bounds: a short post. At least 3 decimal
+  places, and more places only while the post would show the same value as the row it beats, up to the table cap.
+  The value is rounded toward the weaker bound (up on a lower-is-better board, down on a higher-is-better one), so
+  a post never claims more than the score. It can show fewer digits than the site table (1.9203 for a table value of 1.920279).
+Event keys retain exact fractions. Strict endpoints and matrix exponents
 include “for every fixed epsilon > 0”. Each message links to its board.
 
 The initial committed baseline suppresses a launch flood. Event keys include the
