@@ -523,6 +523,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-10-31T15:40:00Z",
       "note": "DreamingOfClouds' own package research/p104-root-relay-descent-2/ (16 files, RESULT.json, no CLAIM.json) states complete_cost.kappa 1564193/500000000 = 0.003128386, the title's value (+2.582e-6 over #6030's selected 0.003125804), on base 721c0382. Conditional, same sense as all CrocSwap IM rows. Merged 2026-10-29T15:44:47Z by Mister-Meeseeks. Merged by archival intake: CrocSwap's ledger lists it as partially_reviewed and main certifies no kappa for it, so the row is Claimed (Lead ruling b3). Below #6167's 0.003128645, so it is not the leader and does not post. Lead go 2026-10-31."
+    },
+    {
+      "pr": 6348,
+      "head": "9894015d6f380206f990ad5fd14bc49bbd26b0d0",
+      "score": "314933/100000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-02T03:03:00Z",
+      "note": "aliromman's own package research/balanced-query-tree/ (RESULT.json, no CLAIM.json) states price.kappa 314933/100000000 = 0.00314933, the title's value (+2.0685e-5 over #6167's 0.003128645), on canonical main 626e936. Conditional, same sense as all CrocSwap IM rows. Merged 2026-11-02T01:56:45Z by Mister-Meeseeks. It is above #6349's 0.003129111 (the top eligible row), #6167 and the selected 0.003125804, so it is the new IM leader as Claimed (one New claim post expected). Merged by archival intake: CrocSwap's ledger lists it as partially_reviewed and main certifies no kappa for it, so the row is Claimed (Lead ruling b3). Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
