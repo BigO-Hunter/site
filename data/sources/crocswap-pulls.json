@@ -15213,8 +15213,8 @@
     "closed_at": "2026-10-14T04:29:12Z",
     "merged_at": "2026-10-14T04:29:12Z",
     "user": {
-      "login": "FabrikonManufacturing",
-      "html_url": "https://github.com/FabrikonManufacturing"
+      "login": "CobaltMoth482",
+      "html_url": "https://github.com/CobaltMoth482"
     },
     "head": {
       "sha": "a3041f751114df12453afcb7ac7d0066973797fa"
@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-10-31T04:04:55Z",
+    "updated_at": "2026-11-02T00:12:17Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -122365,5 +122365,47 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6346,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6346",
+    "title": "Repair bounded G12 custody cleanup and publication-size checks",
+    "state": "open",
+    "created_at": "2026-11-01T23:48:20Z",
+    "updated_at": "2026-11-02T00:10:29Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "abff67b31fa781e950c82d95eccb6f168950943c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6347,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6347",
+    "title": "Record G12 acquisition and raw-error delivery boundaries",
+    "state": "open",
+    "created_at": "2026-11-01T23:59:58Z",
+    "updated_at": "2026-11-02T00:12:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "59140439e7f791876159e2f3838f1dead2e54953"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]
