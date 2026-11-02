@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache source components and hand off N22, P07 and P02",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-02T18:46:29Z",
+      "updated_at": "2026-11-02T20:56:56Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -118863,6 +118863,103 @@
         ]
       ],
       "claim_files_head": "2a5bc94df6d741b49afbadd36d96eb2aea0f6f1f",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6397,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Clarify C05 named closure and exact two-command consumer domain",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6397",
+      "submitted_at": "2026-11-02T20:41:58Z",
+      "updated_at": "2026-11-02T21:00:26Z",
+      "source_commit": "0b3b5d923a54808a13c3102657fc51ef2ec5ba3e",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T20:41:58Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "0b3b5d923a54808a13c3102657fc51ef2ec5ba3e",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6398,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Raise conditional κ by 4.28455% with a six-field mixed-query root",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6398",
+      "submitted_at": "2026-11-02T20:45:04Z",
+      "updated_at": "2026-11-02T21:01:19Z",
+      "source_commit": "dee2663ba0918be86993fd9d63c8d64b020f4c83",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T20:45:04Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "dee2663ba0918be86993fd9d63c8d64b020f4c83",
+      "claim_text": "89ba68666c97975aa8a05585cba1f0df7feca5f9fddf4ea6ac67a0eb00d76177",
+      "claim_files": [
+        [
+          "added",
+          "research/mixed-projector-query-root/RESULT.json"
+        ],
+        [
+          "added",
+          "research/mixed-projector-root-headroom/RESULT.json"
+        ],
+        [
+          "added",
+          "research/mixed-root-contact-composition/RESULT.json"
+        ],
+        [
+          "added",
+          "research/mixed-root-source-composition/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "dee2663ba0918be86993fd9d63c8d64b020f4c83",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6399,
+      "author": "rohanarun",
+      "author_url": "https://github.com/rohanarun",
+      "title": "Conditional κ = 0.003151787: clean donor-transport merge",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6399",
+      "submitted_at": "2026-11-02T20:55:45Z",
+      "updated_at": "2026-11-02T21:08:08Z",
+      "source_commit": "a928a7aa5ab5b21b7cf841d6d960ab2e7efd1041",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T20:55:45Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
+    },
+    {
+      "pr_number": 6400,
+      "author": "petalas",
+      "author_url": "https://github.com/petalas",
+      "title": "Prove the fixed five-call border needs two repair cuts (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6400",
+      "submitted_at": "2026-11-02T21:16:04Z",
+      "updated_at": "2026-11-02T21:16:04Z",
+      "source_commit": "121b10ff0ffba6832b805a405e9f3bdd08cdd582",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T21:16:04Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "121b10ff0ffba6832b805a405e9f3bdd08cdd582",
+      "claim_text": "bee41b47df9d96695064f88c6efd1230f13546dd98d88330e0bd4a8672898f34",
+      "claim_files": [],
+      "claim_files_head": "121b10ff0ffba6832b805a405e9f3bdd08cdd582",
       "claim_files_base": "main",
       "claim_files_result": true
     }

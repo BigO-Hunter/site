@@ -3597,7 +3597,7 @@
         ],
         "receipt_path": "sources/direct-issue-99-41393097953-1.json",
         "receipt_sha256": "cd7b9f1fc2c4981fe7046068161463ae362a1aa37bd915c67c81d9a52c790b0a",
-        "policy_hash": "c13ffa9be7f7fe328f3641953297ff59226d6dc454477a02b31d88bf36689be3",
+        "policy_hash": "130ad0290c13067b4b3160ff8155adcb4130d5764ddc4088c62d9691e98783ed",
         "result_artifact_id": 13134640016,
         "controller_fingerprint": "a05030a1e19e63fb20f927bbad26b4ab5902c49e7fe84d2470b23b1599f5300e",
         "pr_identity": null,
