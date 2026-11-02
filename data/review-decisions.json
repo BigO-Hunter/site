@@ -531,6 +531,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-02T03:03:00Z",
       "note": "aliromman's own package research/balanced-query-tree/ (RESULT.json, no CLAIM.json) states price.kappa 314933/100000000 = 0.00314933, the title's value (+2.0685e-5 over #6167's 0.003128645), on canonical main 626e936. Conditional, same sense as all CrocSwap IM rows. Merged 2026-11-02T01:56:45Z by Mister-Meeseeks. It is above #6349's 0.003129111 (the top eligible row), #6167 and the selected 0.003125804, so it is the new IM leader as Claimed (one New claim post expected). Merged by archival intake: CrocSwap's ledger lists it as partially_reviewed and main certifies no kappa for it, so the row is Claimed (Lead ruling b3). Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6350,
+      "head": "466c812fe729ed540265eeaeabc5e4a71d3440c5",
+      "score": "15749/5000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-02T03:37:00Z",
+      "note": "aliromman's own package research/p104-input-lift-tree-composition/ (RESULT.json, no CLAIM.json) states price.kappa 15749/5000000 = 0.00314980, the title's value (+4.7e-7 over #6348's 0.00314933, which it composes with #6349's input lifts), on canonical base 7c49fe3. Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-02T02:48:50Z, and not in CrocSwap's ledger yet. Open: Claimed, new IM leader over #6348 (one New claim post expected). Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
