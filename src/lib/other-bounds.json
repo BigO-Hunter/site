@@ -1595,8 +1595,8 @@
       ],
       "repos": [
         {
-          "name": "fringewidth/catalan-exponent",
-          "url": "https://github.com/fringewidth/catalan-exponent/blob/0e4877172b313a04da51c972ac91348f071b8481/README.md#L3-L40",
+          "name": "proof-factory/catalan-exponent",
+          "url": "https://github.com/proof-factory/catalan-exponent/blob/0e4877172b313a04da51c972ac91348f071b8481/README.md#L3-L40",
           "note": "Carreira's theorem with a smaller design gives \\(\\mu(G)<2401.741\\); search and certification by Claude."
         },
         {
