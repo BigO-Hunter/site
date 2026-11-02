@@ -2781,7 +2781,7 @@
               "url": "https://github.com/arpcs"
             }
           ],
-          "proofScope": "A written proof, with substantial AI assistance, that the author has not had reviewed by other people. No Lean proof is supplied. The same repository also claims \\(O(n\\log n)\\) for \\(\\mathbb{F}_2\\) by a different method, and \\(\\kappa=1/10000\\) for each fixed field of odd characteristic, which is a different statement.",
+          "proofScope": "A written proof, with substantial AI assistance, that the author has not had reviewed by other people. No Lean proof is supplied. The same repository also claims \\(O(n\\log n)\\) for \\(\\mathbb{F}_2\\) by a different method. That bound is \\(\\kappa=0\\), weaker than this one, and it came in the same commit, so it has no row. The repository also claims \\(\\kappa=1/10000\\) for each fixed field of odd characteristic, which is a different statement.",
           "bound": "O(n\\log^{1-2^{-38}}n)"
         }
       ],
