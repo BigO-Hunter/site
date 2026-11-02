@@ -119642,7 +119642,7 @@
     "title": "Certify PR6141 characteristic-five connector exclusion (independent verification; no κ)",
     "state": "open",
     "created_at": "2026-10-29T19:31:50Z",
-    "updated_at": "2026-10-29T19:39:58Z",
+    "updated_at": "2026-11-02T02:33:01Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -119650,7 +119650,7 @@
       "html_url": "https://github.com/queelius"
     },
     "head": {
-      "sha": "dd43e856dceec9a92d338345d01d4ad247ce2172"
+      "sha": "f5ebae0936f4f6fed76f66e9f5695032fb6a3f0c"
     },
     "base": {
       "ref": "main"
@@ -122414,7 +122414,7 @@
     "title": "Conditional κ = 0.00314933 (+0.661%): replace the path caller with a binary query tree",
     "state": "closed",
     "created_at": "2026-11-02T01:24:11Z",
-    "updated_at": "2026-11-02T01:56:46Z",
+    "updated_at": "2026-11-02T02:29:53Z",
     "closed_at": "2026-11-02T01:56:46Z",
     "merged_at": "2026-11-02T01:56:45Z",
     "user": {
@@ -122449,5 +122449,68 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6350,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6350",
+    "title": "Compose native input lifts with the query tree at conditional κ 0.00314980",
+    "state": "open",
+    "created_at": "2026-11-02T02:48:50Z",
+    "updated_at": "2026-11-02T02:48:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "466c812fe729ed540265eeaeabc5e4a71d3440c5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6351,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6351",
+    "title": "Clarify original G12 caught-primary and accounting scope",
+    "state": "open",
+    "created_at": "2026-11-02T03:11:26Z",
+    "updated_at": "2026-11-02T03:11:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "1e9db2d08be4551ffe0bcfc573574851530eb4ca"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6352,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6352",
+    "title": "Resolve V03 entry preflight and dependency source questions",
+    "state": "open",
+    "created_at": "2026-11-02T03:13:24Z",
+    "updated_at": "2026-11-02T03:13:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "b280be8dab15359159538e639b1d8c7deafc0612"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]

@@ -114724,15 +114724,15 @@
       "title": "Certify PR6141 characteristic-five connector exclusion (independent verification; no κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6216",
       "submitted_at": "2026-10-29T19:31:50Z",
-      "updated_at": "2026-10-29T19:39:58Z",
-      "source_commit": "dd43e856dceec9a92d338345d01d4ad247ce2172",
+      "updated_at": "2026-11-02T02:33:01Z",
+      "source_commit": "f5ebae0936f4f6fed76f66e9f5695032fb6a3f0c",
       "upstream_status": "open",
       "upstream_status_at": "2026-10-29T19:31:50Z",
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
       "note": "No research package kappa claim.",
-      "claim_head": "dd43e856dceec9a92d338345d01d4ad247ce2172",
+      "claim_head": "f5ebae0936f4f6fed76f66e9f5695032fb6a3f0c",
       "claim_text": "7773de28db57c358e4247a5e6d7ae8559487690dec172884f986fbb2ec8f6b9a",
       "claim_files": [
         [
@@ -114740,7 +114740,7 @@
           "research/connector-c5-certificate/RESULT.json"
         ]
       ],
-      "claim_files_head": "dd43e856dceec9a92d338345d01d4ad247ce2172",
+      "claim_files_head": "f5ebae0936f4f6fed76f66e9f5695032fb6a3f0c",
       "claim_files_base": "main",
       "claim_files_result": true
     },
@@ -117759,7 +117759,7 @@
       "title": "Conditional κ = 0.00314933 (+0.661%): replace the path caller with a binary query tree",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6348",
       "submitted_at": "2026-11-02T01:24:11Z",
-      "updated_at": "2026-11-02T01:56:46Z",
+      "updated_at": "2026-11-02T02:29:53Z",
       "source_commit": "9894015d6f380206f990ad5fd14bc49bbd26b0d0",
       "upstream_status": "merged",
       "upstream_status_at": "2026-11-02T01:56:45Z",
@@ -117768,7 +117768,7 @@
       "record_ids": [],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "9894015d6f380206f990ad5fd14bc49bbd26b0d0",
-      "claim_text": "20a99cd529623d73d11d4d80907a09483f51783ee56e1686d87b6ae17fe5b669",
+      "claim_text": "261d0b676409b1b0435cb14d97ca6db67142394e37b2d35143ca1be128269848",
       "review_reason": "The PR adds no single own research package CLAIM.json.",
       "claim_files": [
         [
@@ -117809,6 +117809,66 @@
       "claim_files_head": "af7cb6c67f8fc7d82a2e4aee2dd2f07481bf6690",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6350,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Compose native input lifts with the query tree at conditional κ 0.00314980",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6350",
+      "submitted_at": "2026-11-02T02:48:50Z",
+      "updated_at": "2026-11-02T02:48:50Z",
+      "source_commit": "466c812fe729ed540265eeaeabc5e4a71d3440c5",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T02:48:50Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "466c812fe729ed540265eeaeabc5e4a71d3440c5",
+      "claim_text": "2d17ce23d77b17bea71071fe9e01d71add5318e8376a6c60c08492351cc69a5c",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-input-lift-tree-composition/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "466c812fe729ed540265eeaeabc5e4a71d3440c5",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6351,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Clarify original G12 caught-primary and accounting scope",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6351",
+      "submitted_at": "2026-11-02T03:11:26Z",
+      "updated_at": "2026-11-02T03:11:26Z",
+      "source_commit": "1e9db2d08be4551ffe0bcfc573574851530eb4ca",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T03:11:26Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
+    },
+    {
+      "pr_number": 6352,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Resolve V03 entry preflight and dependency source questions",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6352",
+      "submitted_at": "2026-11-02T03:13:24Z",
+      "updated_at": "2026-11-02T03:13:24Z",
+      "source_commit": "b280be8dab15359159538e639b1d8c7deafc0612",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T03:13:24Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }
