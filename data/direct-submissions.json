@@ -3526,7 +3526,7 @@
         "checked_at": "2026-11-02T10:37:50.021184Z",
         "issue_created_at": "2026-11-02T04:10:54Z",
         "issue_updated_at_at_verification": "2026-11-02T04:13:50Z",
-        "issue_updated_at_at_import": "2026-11-02T10:52:17Z",
+        "issue_updated_at_at_import": "2026-11-02T12:46:23Z",
         "derivation_hold": false,
         "review_required": [
           "authorship",
@@ -3535,7 +3535,7 @@
         ],
         "receipt_path": "sources/direct-issue-99-41393097953-1.json",
         "receipt_sha256": "cd7b9f1fc2c4981fe7046068161463ae362a1aa37bd915c67c81d9a52c790b0a",
-        "policy_hash": "14c2168abe8a66e6ca3e37c12bf418802a7e08cb6acc43624ae275e2bade843d",
+        "policy_hash": "eb6da8399ff1ee46f5a21e788aa635189d03195edf24c0e62d65af0cac62c0bc",
         "result_artifact_id": 13134640016,
         "controller_fingerprint": "a05030a1e19e63fb20f927bbad26b4ab5902c49e7fe84d2470b23b1599f5300e",
         "pr_identity": null,
