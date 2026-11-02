@@ -43834,7 +43834,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/150",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-09T05:25:46Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DaysSky recycles bit registers on William Porter's reduced word of PR 147: the selected deferred reads run as late as the word allows, and for 3,338 pairs a dead register is moved to the entrance frame of a later deferred slot and becomes that slot. The conditional kappa is 4.71809569e-4, 1.54 percent above PR 147 and 2.36 percent above PR 144."
     },
     "crocswap-pr-151": {
       "checked_at": "2026-11-02",
@@ -44947,7 +44948,8 @@
         168,
         175
       ],
-      "upstream_selected": false
+      "upstream_selected": false,
+      "credit_note": "The maintainers published this reviewed conditional construction, coordinated frames and entrance banks, which is David Ganz's PR 186 together with PRs 181 and 175 of chafreaky and PR 168 of eumemic. It raises the selected conditional kappa from 4.72154791e-4 to 6.61885549e-4. The scope is finite certificates and written review, not a formal proof of multiplication."
     },
     "swapnil-snapshot-ea9e8685d1621a98": {
       "checked_at": "2026-10-09",
@@ -45885,7 +45887,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/259",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-10T01:55:24Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "David Ganz selects several simultaneous zero-response directions, shares donor lifts along nested chains of frames, replaces singular common frames by checked nondegenerate subframes and places the transformations at four cuts of the physical program. This admits 518 pivot entrances and removes 1,344 raw rank units. The conditional kappa is 7.11029386054035e-4, about 0.079 percent above the preceding result, and it extends eumemic's PR 249."
     },
     "crocswap-pr-260": {
       "checked_at": "2026-11-02",
@@ -46249,7 +46252,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/276",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-10T04:17:57Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds adds a new paired-cube bit word whose virtual circuit needs 1,004 fewer auxiliary roles than PR 200, and carries it through the complete five-stage completed-bank package of PR 210. The conditional kappa is 7.22869827347495e-4, 1.29 percent above the highest open claim at the time, George Lydakis's PR 275 at 7.13690108083058e-4."
     },
     "crocswap-pr-277": {
       "checked_at": "2026-11-02",
@@ -47055,7 +47059,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/309",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-10T13:29:19Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "David Ganz transports complete signed dirty-helper responses to separate legal target-component cuts, which admits ten helpers of total entrance rank 181 whose contributions need not lie in a response kernel. It composes this with 238 exact commuting addition relocations, 37 additional rank-modular response gauges, the inherited weighted gauge construction and DreamingOfClouds' stronger complex supplier of PR 304. The conditional kappa is 7.51499335697560e-4."
     },
     "crocswap-pr-310": {
       "checked_at": "2026-11-02",
@@ -50583,7 +50588,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/455",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-11T16:11:45Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "David Ganz allocates the eight replicas jointly, pooling whole residuals across replicas so that every helper stays on one physical array family, and adds program portfolios. The conditional kappa is 1.266541949425315e-3, 0.048 percent above chafreaky's PR 451. The PR does not claim to beat the higher number of rohanarun's PR 453, whose cross-family splitting the PR says PR 451 obstructs with a trace argument."
     },
     "crocswap-pr-456": {
       "checked_at": "2026-11-02",
@@ -51367,7 +51373,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/493",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-11T20:09:25Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "eumemic adds an E8 bit word with 489 helpers, where the best earlier one had 715 (PR 463), using sources as carriers. The bit side then no longer binds. Paired with the complex supplier of David Ganz's PR 471, the conditional kappa is 1.303530097714685e-3, 0.53 percent above PR 483. The pricing uses the whole-residual hosted pipeline of earlier PRs."
     },
     "crocswap-pr-494": {
       "checked_at": "2026-11-02",
@@ -51787,7 +51794,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/514",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-11T23:22:36Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "David Ganz rebuilds the partial-own factory of eumemic's PR 507 with coordinated rank-two gauge reductions on helpers 540 to 543, selecting 92 pivots instead of the reference 84. The complex supplier binds, and the bit supplier is eumemic's PR 493. The conditional kappa is 1.391523459591829e-3, 1.38 percent above the author's preceding checked construction."
     },
     "crocswap-pr-518": {
       "checked_at": "2026-11-02",
@@ -51871,7 +51879,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/523",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-12T00:26:22Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin removes eight isolated coordinate ports from the complex construction of David Ganz's PR 514 and supplies a new complete physical owner allocation. The conditional kappa is 1.457945761723368e-3, 4.77 percent above PR 514 and 4.61 percent above David Ganz's PR 518."
     },
     "crocswap-pr-527": {
       "checked_at": "2026-11-02",
