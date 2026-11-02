@@ -1752,7 +1752,7 @@
           "lean": true,
           "leanNote": "Yes; Lean changes and comparator challenge inspected; no build run.",
           "evidence": "claimed",
-          "note": "",
+          "note": "The commit message says bottlebrushes changes OpenAI's Lean formalization of the matroid prophet inequality to give \\(2^{-38}\\), with a finer exit certificate and a halved density loss.",
           "authors": [
             {
               "name": "bottlebrushes",
@@ -1796,7 +1796,7 @@
           "lean": false,
           "leanNote": "No; formalization pending.",
           "evidence": "claimed",
-          "note": "",
+          "note": "The README says Ryan Shea raises the guarantee to above \\(\\frac{51}{50}\\,2^{-31}\\), about 1.15 times the exact certificate of Ryan Shea's earlier result, which is above \\(\\frac{7}{4}\\,2^{-32}\\). Three estimates of OpenAI's construction improve: safety conditional on activation membership, the fixed scores of the activation generators and the joint mask-membership probability. The model is that of OpenAI's one-sample matroid prophet inequality.",
           "authors": [
             {
               "name": "Ryan Shea",
