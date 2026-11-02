@@ -454,8 +454,11 @@ class DirectImportTests(unittest.TestCase):
 
     def test_subset_sum_runs_any_bound_in_range_until_a_lean_verified_row(self):
         # As the verifier's test at 1b1af26: no Lean Verified row -> score 1, 'profile-range', and 4877/10000, 3/5, 3/4
-        # and 1 qualify; then a Lean Verified 3/4 row gates (3/4 again and 4/5 do not qualify, 7/10 does).
-        data=json.loads((FIXTURES.parent/'subset-sum.json').read_text())
+        # and 1 qualify; then a Lean Verified 3/4 row gates (3/4 again and 4/5 do not qualify, 7/10 does). The board is the
+        # committed snapshot, never the live data/subset-sum.json: the hourly refresh imported #94 (Lean Verified 3/4) on
+        # 2026-11-02, and a live read then failed the refresh (run 41411915788).
+        data=json.loads((FIXTURES/'board-snapshots.json').read_text())['subset-sum']
+        self.assertFalse([r for r in data['records'] if r.get('rerun_status')])
         summary=gate.current_record_gate('subset-sum',json.dumps(data).encode(),'c'*40,'2026-11-02T00:00:00Z')
         self.assertEqual((summary['score'],summary['leader_ids'],summary['any_lean_verified_at_bound']),('1',['profile-range'],False))
         sub=dict(schema_version=1,problem='subset-sum',bound='1',repo_url='https://github.com/u/p',commit='a'*40,authors=[])

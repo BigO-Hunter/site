@@ -599,7 +599,11 @@ class RefreshTests(unittest.TestCase):
         self.assertIn('BigOSpeedrun.Catalan.Bound (1091)',listed[0]['proofScope'])
         # No board row for it, and prepare writes the file.
         temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup);root=Path(temp.name)
-        for name in [*(slug+'.json' for slug in r.SLUGS.values()),'registry.json','direct-trust.json']:(root/name).write_bytes((ROOT/name).read_bytes())
+        # Committed board snapshots, not the live boards, which the hourly refresh changes.
+        fixtures=json.loads((ROOT/'direct-fixtures/board-snapshots.json').read_text())
+        for slug in r.SLUGS.values():(root/(slug+'.json')).write_bytes(r.json_bytes(fixtures[slug]))
+        (root/'registry.json').write_bytes(r.json_bytes({'checked_at':'2026-10-10','updated_at':'2026-10-10T00:00:00Z'}))
+        (root/'direct-trust.json').write_bytes((ROOT/'direct-trust.json').read_bytes())
         files=r.prepare(root,{'direct-issue-60':claims['direct-issue-60']},{},'2026-10-23T12:00:00Z',{},json.loads((ROOT/'direct-trust.json').read_text()))
         self.assertEqual(json.loads(files['direct-other.json'])['boards'],boards)
         for slug in r.SLUGS.values():
