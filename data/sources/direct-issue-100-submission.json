@@ -1,0 +1,15 @@
+{
+  "route": "issue",
+  "number": 100,
+  "url": "https://github.com/bigospeedrun/verifier/issues/100",
+  "submitter": "darkhipo",
+  "created_at": "2026-11-02T04:39:54Z",
+  "submission": {
+    "schema_version": 1,
+    "problem": "subset-sum",
+    "repo_url": "https://github.com/darkhipo/subset-sum-mitm",
+    "commit": "fccd1159daf8e41f506844d4255bdebd0ccd94cc",
+    "bound": "1/2",
+    "authors": []
+  }
+}

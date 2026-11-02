@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache source components and hand off N22, P07 and P02",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-02T04:18:03Z",
+      "updated_at": "2026-11-02T05:37:13Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -117980,6 +117980,53 @@
       "claim_text": "2512f5243729f8af15fcc44dbe6a0f6f3fa8eb5da9a91a983cd176473ab23865",
       "claim_files": [],
       "claim_files_head": "170867c0a8f92375dfc489dd090bad5daee7b090",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6358,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Observe C05 namespace prefixes through owned descriptors",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6358",
+      "submitted_at": "2026-11-02T05:28:04Z",
+      "updated_at": "2026-11-02T05:42:06Z",
+      "source_commit": "84b0e70ba4da44b7904fe8d13903c26a3a8239e1",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T05:28:04Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "84b0e70ba4da44b7904fe8d13903c26a3a8239e1",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6359,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Independently recount PR6353 recursive invoices and fixed-saving margin",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6359",
+      "submitted_at": "2026-11-02T05:29:58Z",
+      "updated_at": "2026-11-02T05:29:58Z",
+      "source_commit": "b0aa576f696596bab37817334f75237410a6204f",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T05:29:58Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "b0aa576f696596bab37817334f75237410a6204f",
+      "claim_text": "1581b4bac621b2ea3191c18021e326adccc8ec17228a7816f1406984d8fce6e8",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-joint-output-invoice-audit/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "b0aa576f696596bab37817334f75237410a6204f",
       "claim_files_base": "main",
       "claim_files_result": true
     }

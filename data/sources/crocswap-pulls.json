@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-02T04:18:03Z",
+    "updated_at": "2026-11-02T05:37:13Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -122591,6 +122591,48 @@
     },
     "head": {
       "sha": "170867c0a8f92375dfc489dd090bad5daee7b090"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6358,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6358",
+    "title": "Observe C05 namespace prefixes through owned descriptors",
+    "state": "open",
+    "created_at": "2026-11-02T05:28:04Z",
+    "updated_at": "2026-11-02T05:42:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "84b0e70ba4da44b7904fe8d13903c26a3a8239e1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6359,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6359",
+    "title": "Independently recount PR6353 recursive invoices and fixed-saving margin",
+    "state": "open",
+    "created_at": "2026-11-02T05:29:58Z",
+    "updated_at": "2026-11-02T05:29:58Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "b0aa576f696596bab37817334f75237410a6204f"
     },
     "base": {
       "ref": "main"

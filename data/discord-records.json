@@ -4881,6 +4881,20 @@
               "Yanni Bills"
             ],
             "bound": "O(2^(0.4876723n))"
+          },
+          {
+            "id": "direct-issue-100",
+            "score": "1/2",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Dmitri I. Arkhipov"
+            ],
+            "bound": "O(2^(0.5n))",
+            "verification": {
+              "state": "pending",
+              "since": "2026-11-02T04:39:54Z"
+            }
           }
         ],
         "table": "big-o"
@@ -6838,7 +6852,8 @@
     "[\"3sum\",\"direct-issue-92\",\"96013971/50000000\",\"attained\"]:record",
     "[\"other-average-sensitivity\",\"direct-issue-93:90295/28292\",\"90295/28292\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6349\",\"3129111/1000000000\",\"attained\"]:record",
-    "[\"other-catalan\",\"direct-issue-95:5282327/10000\",\"5282327/10000\",\"attained\"]:lean"
+    "[\"other-catalan\",\"direct-issue-95:5282327/10000\",\"5282327/10000\",\"attained\"]:lean",
+    "[\"integer-multiplication\",\"crocswap-pr-6353\",\"315057/100000000\",\"attained\"]:record"
   ],
   "deferred": [
     {
@@ -6846,13 +6861,6 @@
       "slug": "integer-multiplication",
       "authors": [
         "aigent-marius"
-      ]
-    },
-    {
-      "key": "[\"integer-multiplication\",\"crocswap-pr-6353\",\"315057/100000000\",\"attained\"]:record",
-      "slug": "integer-multiplication",
-      "authors": [
-        "Ali Romman"
       ]
     },
     {

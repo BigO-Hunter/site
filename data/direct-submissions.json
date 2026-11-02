@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-100": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "subset-sum",
+        "repo_url": "https://github.com/darkhipo/subset-sum-mitm",
+        "commit": "fccd1159daf8e41f506844d4255bdebd0ccd94cc",
+        "bound": "1/2",
+        "authors": []
+      }
+    },
     "direct-issue-99": {
       "route": "issue",
       "submission": {
@@ -24,7 +35,7 @@
       },
       "verification": {
         "decision": "lean-verified",
-        "reason": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+        "reason": "Lean and permitted-axiom audit passed; nanoda incomplete: timeout",
         "id": "direct-95-525895f3e4ad6b4b5b9e0f0954789678669678755a1bcde4d320897e036873db",
         "problem_id": "other/catalan",
         "score": "5282327/10000",
@@ -32,37 +43,26 @@
         "source_commit": "e6e7bf6797eddf2561798e76ca3f64cb67291f89",
         "source_url": "https://github.com/darkhipo/catalan-constant-gen5",
         "authors": [],
-        "workflow_conclusion": null,
+        "workflow_conclusion": "success",
         "issue_submitter": "darkhipo",
         "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41356905042",
-        "checked_at": "2026-11-02T02:45:31.926967Z",
+        "checked_at": "2026-11-02T05:03:50.762005Z",
         "issue_created_at": "2026-11-01T20:03:04Z",
         "issue_updated_at_at_verification": "2026-11-01T22:23:35Z",
-        "issue_updated_at_at_import": "2026-11-02T02:45:40Z",
+        "issue_updated_at_at_import": "2026-11-02T05:04:16Z",
         "derivation_hold": false,
         "review_required": [
           "authorship",
           "first publication date",
           "historical record eligibility"
         ],
-        "receipt_path": "sources/direct-issue-95-41356905042-1-lean.json",
-        "receipt_sha256": "b3273c8304e2cd58579578c0ca22eda980f70c7772172a4bea5284cd35479852",
+        "receipt_path": "sources/direct-issue-95-41356905042-1.json",
+        "receipt_sha256": "892f6e329442673719d36810024cc3efda75b5ca4c716e7004f14dec878434e4",
         "policy_hash": "2ab0d1a9f000f23e70f60526d62ea2010429225b5b0407ff45adebec02563020",
-        "result_artifact_id": 13112741326,
+        "result_artifact_id": 13117044646,
         "controller_fingerprint": "79fd0793cbbf584550848fec862ed443125563ef07590c30f0866a67bdd85391",
         "pr_identity": null,
         "source_file": "Submission.lean"
-      }
-    },
-    "direct-issue-94": {
-      "route": "issue",
-      "submission": {
-        "schema_version": 1,
-        "problem": "subset-sum",
-        "repo_url": "https://github.com/darkhipo/subset-sum-mitm",
-        "commit": "8b105f01848fc0e370abfa3a23ed5c3de463f321",
-        "bound": "3/4",
-        "authors": []
       }
     },
     "direct-issue-93": {
@@ -3359,6 +3359,49 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-issue-95:525895f3e4ad6b4b5b9e0f0954789678669678755a1bcde4d320897e036873db": {
+      "key": "direct-issue-95",
+      "submission": {
+        "schema_version": 1,
+        "problem": "catalan",
+        "repo_url": "https://github.com/darkhipo/catalan-constant-gen5",
+        "commit": "e6e7bf6797eddf2561798e76ca3f64cb67291f89",
+        "bound": "5282327/10000",
+        "authors": []
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and permitted-axiom audit passed; nanoda incomplete: timeout",
+        "id": "direct-95-525895f3e4ad6b4b5b9e0f0954789678669678755a1bcde4d320897e036873db",
+        "problem_id": "other/catalan",
+        "score": "5282327/10000",
+        "score_relation": "attained",
+        "source_commit": "e6e7bf6797eddf2561798e76ca3f64cb67291f89",
+        "source_url": "https://github.com/darkhipo/catalan-constant-gen5",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41356905042",
+        "checked_at": "2026-11-02T05:03:50.762005Z",
+        "issue_created_at": "2026-11-01T20:03:04Z",
+        "issue_updated_at_at_verification": "2026-11-01T22:23:35Z",
+        "issue_updated_at_at_import": "2026-11-02T05:04:16Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-95-41356905042-1.json",
+        "receipt_sha256": "892f6e329442673719d36810024cc3efda75b5ca4c716e7004f14dec878434e4",
+        "policy_hash": "2ab0d1a9f000f23e70f60526d62ea2010429225b5b0407ff45adebec02563020",
+        "result_artifact_id": 13117044646,
+        "controller_fingerprint": "79fd0793cbbf584550848fec862ed443125563ef07590c30f0866a67bdd85391",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -3456,6 +3499,11 @@
       "version": "3547b07cbb05d50646fe04053eab03c8185142a6",
       "updated_at": "2026-10-31T02:44:52Z",
       "claimed_only": false
+    },
+    "94": {
+      "version": "c7ed0d8cfd49e44a51c76386cce4bf81307160fc33636fb4d39d15e10c3f1309",
+      "updated_at": "2026-11-02T05:26:11Z",
+      "claimed_only": false
     }
   },
   "not_verified_cache": {
@@ -3471,12 +3519,17 @@
     },
     "94": {
       "version": "c7ed0d8cfd49e44a51c76386cce4bf81307160fc33636fb4d39d15e10c3f1309",
-      "updated_at": "2026-11-02T01:17:36Z",
+      "updated_at": "2026-11-02T05:26:11Z",
       "not_verified": false
     },
     "99": {
       "version": "c48f467d6e1ae4038a430982ef66351fee060d3dd045f268e00e1b35bea0ecf8",
-      "updated_at": "2026-11-02T04:13:50Z",
+      "updated_at": "2026-11-02T05:17:29Z",
+      "not_verified": false
+    },
+    "100": {
+      "version": "e27324fdad3cfab2f05c36333260553394cbef7a48b8e9b0abd821b1aff736bd",
+      "updated_at": "2026-11-02T04:40:06Z",
       "not_verified": false
     }
   }

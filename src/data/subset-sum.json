@@ -17,7 +17,7 @@
     "minimum": "0",
     "maximum": "1"
   },
-  "checked_at": "2026-10-08",
+  "checked_at": "2026-11-02",
   "sources": [
     {
       "url": "https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/Subset-Sum-in-Time-2-power-0-49n-October-4-2026",
@@ -229,6 +229,42 @@
         }
       ],
       "source_commit": "bf1f50f066f2c71a53293791f693f505a67a1540"
+    },
+    {
+      "id": "direct-issue-100",
+      "kind": "improvement",
+      "score": "1/2",
+      "score_relation": "attained",
+      "tier": "claimed",
+      "submitted_at": "2026-11-02T04:39:54Z",
+      "spec_version": "1",
+      "title": "darkhipo direct subset-sum submission",
+      "authors": [
+        {
+          "name": "darkhipo",
+          "url": "https://github.com/darkhipo"
+        }
+      ],
+      "predecessors": [],
+      "submission_url": "https://github.com/bigospeedrun/verifier/issues/100",
+      "source_commit": "fccd1159daf8e41f506844d4255bdebd0ccd94cc",
+      "artifact": {
+        "path": "sources/direct-issue-100-submission.json",
+        "sha256": "30d5d5231768adb1a7bdd2c36b2e46724994b35beebe61768e140889c22662cd"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/bigospeedrun/verifier/issues/100",
+        "theorem": "Race.bound",
+        "certificate_path": null
+      },
+      "dependencies": [],
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T04:39:54Z",
+      "site_observed_at": "2026-11-02T06:29:12Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/darkhipo/subset-sum-mitm/tree/fccd1159daf8e41f506844d4255bdebd0ccd94cc"
+      }
     }
   ],
   "record_metadata": {
@@ -330,7 +366,25 @@
       "license_status": "No license file; source files are not copied, only their hashes",
       "credits": "Yanni Bills (GitHub yannouli). Refines the parameters of Joshua Wharton's conditional note, which refines Annanay Kapila's manuscript (a-kapila/maths-proofs), which builds on OpenAI result #138, Subset Sum in Time O(2^(0.49n)). AI assistance is acknowledged in the note.",
       "credit_note": "Yanni Bills refines Joshua Wharton's Subset Sum construction (itself a refinement of Annanay Kapila's Claimed 0.4877) and lowers the exponent from 0.487676 to 0.4876723. The algorithm is OpenAI's and Annanay Kapila's; Joshua Wharton supplied the earlier parameters and certificate transfer."
+    },
+    "direct-issue-100": {
+      "checked_at": "2026-11-02",
+      "source_url": "https://github.com/darkhipo/subset-sum-mitm/tree/fccd1159daf8e41f506844d4255bdebd0ccd94cc",
+      "repo": "darkhipo/subset-sum-mitm",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Submitted bound; independent verification has not passed.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "comparison_key": "subset-sum/randomized-word-ram/v1",
+      "publication_date": "2026-11-02T04:39:54Z",
+      "publication_date_precision": "date-time",
+      "publication_date_role": "Submission opened",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/100",
+      "direct_submission": true,
+      "route": "issue",
+      "verification": "pending"
     }
   },
-  "updated_at": "2026-10-21T19:30:00Z"
+  "updated_at": "2026-11-02T06:29:12Z"
 }
