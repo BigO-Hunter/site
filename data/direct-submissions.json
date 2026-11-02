@@ -12,6 +12,17 @@
         "authors": []
       }
     },
+    "direct-issue-94": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "subset-sum",
+        "repo_url": "https://github.com/darkhipo/subset-sum-mitm",
+        "commit": "8b105f01848fc0e370abfa3a23ed5c3de463f321",
+        "bound": "3/4",
+        "authors": []
+      }
+    },
     "direct-issue-93": {
       "route": "issue",
       "submission": {
@@ -3414,6 +3425,11 @@
     "61": {
       "version": "b49554ccdc4a0a7ef8d1bd81b8a98a22ccc2616d6b7d689f5ddfec03f71bdc65",
       "updated_at": "2026-10-25T01:56:56Z",
+      "not_verified": false
+    },
+    "94": {
+      "version": "c7ed0d8cfd49e44a51c76386cce4bf81307160fc33636fb4d39d15e10c3f1309",
+      "updated_at": "2026-11-02T01:17:36Z",
       "not_verified": false
     },
     "95": {
