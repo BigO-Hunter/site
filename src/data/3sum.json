@@ -758,6 +758,42 @@
       }
     },
     {
+      "id": "direct-issue-99",
+      "kind": "improvement",
+      "score": "384055881637/200000000000",
+      "score_relation": "attained",
+      "tier": "claimed",
+      "submitted_at": "2026-11-02T04:10:54Z",
+      "spec_version": "1",
+      "title": "Wang-jiong-han direct 3sum submission",
+      "authors": [
+        {
+          "name": "Wang-jiong-han",
+          "url": "https://github.com/Wang-jiong-han"
+        }
+      ],
+      "predecessors": [],
+      "submission_url": "https://github.com/bigospeedrun/verifier/issues/99",
+      "source_commit": "e1ae71db2231f172c6541820e2ce0a54aa14fc64",
+      "artifact": {
+        "path": "sources/direct-issue-99-submission.json",
+        "sha256": "e5f1aba1566acebe34b99f72759de0147ecdc6c14c5de29062330b7d065200cf"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/bigospeedrun/verifier/issues/99",
+        "theorem": "Race.bound",
+        "certificate_path": null
+      },
+      "dependencies": [],
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T04:10:54Z",
+      "site_observed_at": "2026-11-02T04:27:04Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/Wang-jiong-han/3sum-weighted-cache/tree/e1ae71db2231f172c6541820e2ce0a54aa14fc64"
+      }
+    },
+    {
       "id": "direct-pr-52",
       "kind": "improvement",
       "score": "2499/1250",
@@ -951,9 +987,9 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/14",
       "direct_submission": true,
       "route": "issue",
+      "credit_note": "c0ldzy17 lowers the proved exponent from 1.962 to 1.921 in their own Lean Verified 1.962 proof, with a ternary construction whose implementation charges preprocessing, selected rows, weighted counting, collision cleanup and moment reporting. The construction builds on work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38739681220",
-      "verification": "passed",
-      "credit_note": "c0ldzy17 lowers the proved exponent from 1.962 to 1.921 in their own Lean Verified 1.962 proof, with a ternary construction whose implementation charges preprocessing, selected rows, weighted counting, collision cleanup and moment reporting. The construction builds on work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree."
+      "verification": "passed"
     },
     "direct-issue-18": {
       "checked_at": "2026-11-02",
@@ -1051,9 +1087,9 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/35",
       "direct_submission": true,
       "route": "issue",
+      "credit_note": "Hrishik Sai Bojnal lowers the proved exponent from 1.92027945701 to 1.9202794288 by rebalancing the parameters of their own Lean Verified 1.92027945701 proof. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates; Hrishik Sai Bojnal changed 32 of the 1201 Lean files of the proof.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39660258427",
-      "verification": "passed",
-      "credit_note": "Hrishik Sai Bojnal lowers the proved exponent from 1.92027945701 to 1.9202794288 by rebalancing the parameters of their own Lean Verified 1.92027945701 proof. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates; Hrishik Sai Bojnal changed 32 of the 1201 Lean files of the proof."
+      "verification": "passed"
     },
     "direct-issue-4": {
       "checked_at": "2026-11-02",
@@ -1071,9 +1107,9 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/4",
       "direct_submission": true,
       "route": "issue",
+      "credit_note": "c0ldzy17 lowers the proved exponent from Anthropic's 1.9992 to 1.962 with a new construction: prime filtering, trimmed subset representations, finite local covers, shared partial zeta transforms, balanced output queries and a charged reporting hierarchy. It uses and adapts work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38175066816",
-      "verification": "passed",
-      "credit_note": "c0ldzy17 lowers the proved exponent from Anthropic's 1.9992 to 1.962 with a new construction: prime filtering, trimmed subset representations, finite local covers, shared partial zeta transforms, balanced output queries and a charged reporting hierarchy. It uses and adapts work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree."
+      "verification": "passed"
     },
     "direct-issue-8": {
       "checked_at": "2026-11-02",
@@ -1091,9 +1127,9 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/8",
       "direct_submission": true,
       "route": "issue",
+      "credit_note": "Anchen0823 lowers the proved exponent from 1.962 to 1.960614 in c0ldzy17's Lean Verified 1.962 proof, with an expansion of 232, a quartic certificate and parameters supplied by the author, exact integer schedules, and changed execution, cost and resource proofs. The construction is c0ldzy17's; the word-RAM model and compiler sources are Anthropic's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38567645711",
-      "verification": "passed",
-      "credit_note": "Anchen0823 lowers the proved exponent from 1.962 to 1.960614 in c0ldzy17's Lean Verified 1.962 proof, with an expansion of 232, a quartic certificate and parameters supplied by the author, exact integer schedules, and changed execution, cost and resource proofs. The construction is c0ldzy17's; the word-RAM model and compiler sources are Anthropic's."
+      "verification": "passed"
     },
     "direct-issue-92": {
       "checked_at": "2026-11-02",
@@ -1111,9 +1147,27 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/92",
       "direct_submission": true,
       "route": "issue",
+      "credit_note": "Wang-jiong-han lowers the proved exponent from 1.920279429 to 1.92027942 in Hrishik Sai Bojnal's Lean Verified 3SUM proof by adding a weighted cache to its solver. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates and Hrishik Sai Bojnal's parameter refinements; the word-RAM specification and compiler come from Anthropic's formalization.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308731612",
-      "verification": "passed",
-      "credit_note": "Wang-jiong-han lowers the proved exponent from 1.920279429 to 1.92027942 in Hrishik Sai Bojnal's Lean Verified 3SUM proof by adding a weighted cache to its solver. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates and Hrishik Sai Bojnal's parameter refinements; the word-RAM specification and compiler come from Anthropic's formalization."
+      "verification": "passed"
+    },
+    "direct-issue-99": {
+      "checked_at": "2026-11-02",
+      "source_url": "https://github.com/Wang-jiong-han/3sum-weighted-cache/tree/e1ae71db2231f172c6541820e2ce0a54aa14fc64",
+      "repo": "Wang-jiong-han/3sum-weighted-cache",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Submitted bound; independent verification has not passed.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "comparison_key": "3sum/word-ram/v1",
+      "publication_date": "2026-11-02T04:10:54Z",
+      "publication_date_precision": "date-time",
+      "publication_date_role": "Submission opened",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/99",
+      "direct_submission": true,
+      "route": "issue",
+      "verification": "pending"
     },
     "direct-pr-52": {
       "checked_at": "2026-11-02",
@@ -1134,5 +1188,5 @@
       "verification": "pending"
     }
   },
-  "updated_at": "2026-11-02T00:27:26Z"
+  "updated_at": "2026-11-02T04:27:04Z"
 }

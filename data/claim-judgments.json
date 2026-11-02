@@ -258,5 +258,10 @@
     "claims_new_kappa": true,
     "confidence": "high",
     "value": "0.003129111"
+  },
+  "v2:6353:db2a20bc50bc7a8a4db931af85ce7f012ae7c3c3:e0100de3d17839532c15c08b2c041d33906fe2ebfa2e0530c63d2d3211ff3269": {
+    "claims_new_kappa": true,
+    "confidence": "high",
+    "value": "0.00315057"
   }
 }

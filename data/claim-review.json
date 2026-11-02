@@ -1,18 +1,3 @@
 {
-  "queue": [
-    {
-      "pr": 6348,
-      "head": "9894015d6f380206f990ad5fd14bc49bbd26b0d0",
-      "title": "Conditional κ = 0.00314933 (+0.661%): replace the path caller with a binary query tree",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6348",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    },
-    {
-      "pr": 6350,
-      "head": "466c812fe729ed540265eeaeabc5e4a71d3440c5",
-      "title": "Compose native input lifts with the query tree at conditional κ 0.00314980",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6350",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    }
-  ]
+  "queue": []
 }

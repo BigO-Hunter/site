@@ -1,0 +1,15 @@
+{
+  "route": "issue",
+  "number": 99,
+  "url": "https://github.com/bigospeedrun/verifier/issues/99",
+  "submitter": "Wang-jiong-han",
+  "created_at": "2026-11-02T04:10:54Z",
+  "submission": {
+    "schema_version": 1,
+    "problem": "3sum",
+    "repo_url": "https://github.com/Wang-jiong-han/3sum-weighted-cache",
+    "commit": "e1ae71db2231f172c6541820e2ce0a54aa14fc64",
+    "bound": "384055881637/200000000000",
+    "authors": []
+  }
+}
