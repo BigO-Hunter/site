@@ -58,7 +58,7 @@
             "pr": 6,
             "status": "merged"
           },
-          "note": "",
+          "note": "Akash Levy proves a zero-free half-plane at 10499/12000 with a weighted numerator, in a 228-module Lean development, below Jizhou Guo's 0.874957019. It covers zeta, every Dirichlet L-function and the finite-order Hecke L-functions of \\(\\mathbb{Q}(\\zeta_3)\\) in OpenAI's definition. It builds on OpenAI's Lean framework.",
           "authors": [
             {
               "name": "Akash Levy",
@@ -110,7 +110,7 @@
             "pr": 26,
             "status": "merged"
           },
-          "note": "",
+          "note": "Niels Mündler-Sasahara proves 0.87487 with a local fourth-moment estimate of prime cost 22/5, coherent amplification and a joint density estimate. It improves Hailey Collet's earlier boundary 0.87488664704 and builds on Hailey Collet's framework, Zhongpai Gao's local-moment work, Akash Levy's weighted numerator and OpenAI's framework.",
           "authors": [
             {
               "name": "Niels Mündler-Sasahara",
@@ -136,7 +136,7 @@
             "pr": 37,
             "status": "merged"
           },
-          "note": "",
+          "note": "Kári Rögnvaldsson replaces the 22/5 capacity slice of Niels Mündler-Sasahara's local moment by an affine capacity and feeds a revised endpoint certificate into the all-Dirichlet argument, giving 0.8748694. It also builds on Zhongpai Gao's local-moment work, Hailey Collet's framework, Akash Levy's weighted numerator and OpenAI's framework.",
           "authors": [
             {
               "name": "Kári Rögnvaldsson",
@@ -162,7 +162,7 @@
             "pr": 38,
             "status": "merged"
           },
-          "note": "",
+          "note": "Kári Rögnvaldsson reallocates the intermediate reserves of the affine local moment, which raises the allowed defect from 37/10000 to 1/250, and regenerates the endpoint arithmetic for 0.87486797. It builds on Kári Rögnvaldsson's affine-capacity proof (0.8748694), Niels Mündler-Sasahara's local moment, Zhongpai Gao's local-moment work, Hailey Collet's framework, Akash Levy's weighted numerator and OpenAI's framework.",
           "authors": [
             {
               "name": "Kári Rögnvaldsson",
@@ -188,7 +188,7 @@
             "pr": 41,
             "status": "merged"
           },
-          "note": "",
+          "note": "Zhongpai Gao refines the affine local capacity to defect 1/241 with asymmetric reserves and exact endpoint geometry, giving 0.8748673 in a 128-module Lean proof. It builds on the affine and reserve-balanced local moments of Kári Rögnvaldsson, the local moment of Niels Mündler-Sasahara, Akash Levy's weighted numerator, Hailey Collet's framework and OpenAI's framework.",
           "authors": [
             {
               "name": "Zhongpai Gao",
@@ -214,7 +214,7 @@
             "pr": 42,
             "status": "merged"
           },
-          "note": "",
+          "note": "Hailey Collet proves 0.874861 by combining the earlier moment and physical-source framework with Zhongpai Gao's local refinement, extending the density range and numerical region, and adding a common probe for the main and error estimates. It builds on OpenAI's seven-eighths framework and Akash Levy's weighted numerator.",
           "authors": [
             {
               "name": "Hailey Collet",
@@ -240,7 +240,7 @@
             "pr": 43,
             "status": "merged"
           },
-          "note": "",
+          "note": "Zhongpai Gao refines the parameters of Hailey Collet's 0.874861 construction to 0.8748598. The density split and the source and amplification parameters are coupled, exact reserves are carried through the analytic estimates, and global quadratic row certificates are new. The Lean source has 206 modules. It also builds on Akash Levy's weighted numerator and OpenAI's framework.",
           "authors": [
             {
               "name": "Zhongpai Gao",
@@ -266,7 +266,7 @@
             "pr": 48,
             "status": "merged"
           },
-          "note": "",
+          "note": "timbalud proves 0.874858 by keeping the prime-slot amplitudes in the high-zero counting and combining that gain with common-allocation width conservation; overlapping prime pools use collision partitions. It builds on Hailey Collet's 0.874861 proof, with Zhongpai Gao's 0.8748598 as the comparison bound. It also builds on Akash Levy's weighted numerator and OpenAI's framework.",
           "authors": [
             {
               "name": "timbalud",
@@ -292,7 +292,7 @@
             "pr": 50,
             "status": "merged"
           },
-          "note": "",
+          "note": "timbalud raises the marked counting gain of timbalud's 0.874858 proof by selecting the inverse and plain prime slots separately, and keeps the common-radical penalty in the allocation estimate, giving 0.8748559. It builds on that marked high-zero construction, Hailey Collet's 0.874861 proof, Akash Levy's weighted numerator and OpenAI's framework.",
           "authors": [
             {
               "name": "timbalud",
@@ -318,7 +318,7 @@
             "pr": 56,
             "status": "merged"
           },
-          "note": "",
+          "note": "DaysSky applies the affine moment of Hailey Collet's 0.874861 proof, used there only in the source row, also to the per-fiber count of the detector, with exact rational certificates, giving 0.874846. Every other estimate is that proof's, rechecked at the new endpoint.",
           "authors": [
             {
               "name": "DaysSky",
