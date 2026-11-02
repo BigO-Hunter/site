@@ -61963,5 +61963,5 @@
       "credit_note": "Ali Romman raises the conditional kappa from 0.00314980 (PR 6350) to 0.00315057 by contracting nine native helper outputs of PR 6349's supplier with a joint input and departure basis, then restoring the endpoint with paid native transports and both inverse bases. PR 6348's tree is unchanged and all 19 copies of both changes are charged. The claim is the author's own check."
     }
   },
-  "updated_at": "2026-11-02T11:18:07Z"
+  "updated_at": "2026-11-02T12:17:24Z"
 }

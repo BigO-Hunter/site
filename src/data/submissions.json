@@ -118179,6 +118179,38 @@
       "claimed_score": null,
       "record_ids": [],
       "note": "No research package kappa claim."
+    },
+    {
+      "pr_number": 6368,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "V03: verify configured prefixes with an immutable environment literal",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6368",
+      "submitted_at": "2026-11-02T12:01:25Z",
+      "updated_at": "2026-11-02T12:01:25Z",
+      "source_commit": "3a2d75adec6133a5bc3e6c4a082369101e6c1158",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T12:01:25Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
+    },
+    {
+      "pr_number": 6369,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "V03: add conditional prefix supervision without production completion",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6369",
+      "submitted_at": "2026-11-02T12:11:44Z",
+      "updated_at": "2026-11-02T12:11:44Z",
+      "source_commit": "190e63e0ca5b16e45d8202bec7dc7426dc76c5dd",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T12:11:44Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }

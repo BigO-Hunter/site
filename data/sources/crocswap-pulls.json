@@ -122806,5 +122806,47 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6368,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6368",
+    "title": "V03: verify configured prefixes with an immutable environment literal",
+    "state": "open",
+    "created_at": "2026-11-02T12:01:25Z",
+    "updated_at": "2026-11-02T12:01:25Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "3a2d75adec6133a5bc3e6c4a082369101e6c1158"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6369,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6369",
+    "title": "V03: add conditional prefix supervision without production completion",
+    "state": "open",
+    "created_at": "2026-11-02T12:11:44Z",
+    "updated_at": "2026-11-02T12:11:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "190e63e0ca5b16e45d8202bec7dc7426dc76c5dd"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]

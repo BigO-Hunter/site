@@ -23,6 +23,17 @@
         "authors": []
       }
     },
+    "direct-issue-99": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "3sum",
+        "repo_url": "https://github.com/Wang-jiong-han/3sum-weighted-cache",
+        "commit": "e1ae71db2231f172c6541820e2ce0a54aa14fc64",
+        "bound": "384055881637/200000000000",
+        "authors": []
+      }
+    },
     "direct-issue-95": {
       "route": "issue",
       "submission": {
@@ -3487,6 +3498,49 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-issue-99:c48f467d6e1ae4038a430982ef66351fee060d3dd045f268e00e1b35bea0ecf8": {
+      "key": "direct-issue-99",
+      "submission": {
+        "schema_version": 1,
+        "problem": "3sum",
+        "repo_url": "https://github.com/Wang-jiong-han/3sum-weighted-cache",
+        "commit": "e1ae71db2231f172c6541820e2ce0a54aa14fc64",
+        "bound": "384055881637/200000000000",
+        "authors": []
+      },
+      "decision": "timeout",
+      "evidence": {
+        "decision": "timeout",
+        "reason": "The proof check ran out of time; this is not a verdict on the proof",
+        "id": "direct-99-c48f467d6e1ae4038a430982ef66351fee060d3dd045f268e00e1b35bea0ecf8",
+        "problem_id": "3sum/word-ram",
+        "score": "384055881637/200000000000",
+        "score_relation": "attained",
+        "source_commit": "e1ae71db2231f172c6541820e2ce0a54aa14fc64",
+        "source_url": "https://github.com/Wang-jiong-han/3sum-weighted-cache",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "Wang-jiong-han",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41393097953",
+        "checked_at": "2026-11-02T10:37:50.021184Z",
+        "issue_created_at": "2026-11-02T04:10:54Z",
+        "issue_updated_at_at_verification": "2026-11-02T04:13:50Z",
+        "issue_updated_at_at_import": "2026-11-02T10:52:17Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-99-41393097953-1.json",
+        "receipt_sha256": "cd7b9f1fc2c4981fe7046068161463ae362a1aa37bd915c67c81d9a52c790b0a",
+        "policy_hash": "14c2168abe8a66e6ca3e37c12bf418802a7e08cb6acc43624ae275e2bade843d",
+        "result_artifact_id": 13134640016,
+        "controller_fingerprint": "a05030a1e19e63fb20f927bbad26b4ab5902c49e7fe84d2470b23b1599f5300e",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -3606,11 +3660,6 @@
       "version": "b49554ccdc4a0a7ef8d1bd81b8a98a22ccc2616d6b7d689f5ddfec03f71bdc65",
       "updated_at": "2026-10-25T01:56:56Z",
       "not_verified": false
-    },
-    "99": {
-      "version": "c48f467d6e1ae4038a430982ef66351fee060d3dd045f268e00e1b35bea0ecf8",
-      "updated_at": "2026-11-02T10:52:17Z",
-      "not_verified": true
     },
     "100": {
       "version": "e27324fdad3cfab2f05c36333260553394cbef7a48b8e9b0abd821b1aff736bd",
