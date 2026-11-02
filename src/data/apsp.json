@@ -679,7 +679,8 @@
       "open_race": false,
       "credits": "Swapnil Jain; builds on Alman and Vassilevska Williams, ImprovedExponents, and the reductions credited in the source README.",
       "license_status": "Apache-2.0; LICENSE and NOTICE retained",
-      "notes_url": "https://github.com/Swapnil-jain/threesum-derand/blob/087ece61dd9ef6108441927785b16dfda0e95284/proofs/stacked.md"
+      "notes_url": "https://github.com/Swapnil-jain/threesum-derand/blob/087ece61dd9ef6108441927785b16dfda0e95284/proofs/stacked.md",
+      "credit_note": "Swapnil lowers the deterministic APSP exponent from Alman and Vassilevska Williams' 2.99942 to 2.995943 by folding the residue instances of one Exact Triangle piece into one square product, on the all-edges route to APSP. The method and lemmas are Alman and Vassilevska Williams'. The small primes chosen one at a time follow Chan and Lewenstein; the exact leaf count and pruned encodings are qawbecrdtey's, from ImprovedExponents."
     },
     "jihoon-hyun-apsp-2026": {
       "checked_at": "2026-10-10",
@@ -769,7 +770,8 @@
       "listing_status": "research-draft",
       "open_race": false,
       "license_status": "No license file; source files are not copied, only their hashes",
-      "credits": "shresh (shreshth-s). Builds on Alman and Vassilevska Williams (arXiv:2610.06783) and Majdoddin's five-term tensor (arXiv:2610.17420)."
+      "credits": "shresh (shreshth-s). Builds on Alman and Vassilevska Williams (arXiv:2610.06783) and Majdoddin's five-term tensor (arXiv:2610.17420).",
+      "credit_note": "shresh lowers the deterministic APSP exponent to 2.99294792, from Alman and Vassilevska Williams' 2.99942, by changing the local identity, re-embedding the inputs with Walsh transforms and caching the remaining residual terms as polynomials. It builds on Ruhollah Majdoddin's five-term embedding and composite incidence certificates. The base method is Alman and Vassilevska Williams'."
     },
     "majdoddin-apsp-2026": {
       "checked_at": "2026-10-17",
@@ -792,7 +794,8 @@
       "listing_status": "research-draft",
       "open_race": false,
       "license_status": "arXiv non-exclusive license; the paper is not copied, only its hash",
-      "credits": "Ruhollah Majdoddin. Builds on Alman and Vassilevska Williams (arXiv:2610.06783) and Schönhage's five-term partial-product tensor."
+      "credits": "Ruhollah Majdoddin. Builds on Alman and Vassilevska Williams (arXiv:2610.06783) and Schönhage's five-term partial-product tensor.",
+      "credit_note": "Ruhollah Majdoddin lowers the deterministic APSP exponent from Alman and Vassilevska Williams' 2.99942 to 2.9945 plus o(1). Schönhage's five-term partial-product tensor extends their matrix theorem from eps below 0.1204 to eps below 0.172, and reductions that call the counting version of the triangle problem adaptively and build composite moduli one prime at a time keep all of its saving."
     },
     "joshuaqfex-apsp-2026": {
       "checked_at": "2026-10-20",
