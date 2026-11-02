@@ -723,7 +723,9 @@
           "url": "https://github.com/Wang-jiong-han"
         }
       ],
-      "predecessors": [],
+      "predecessors": [
+        "https://github.com/bigospeedrun/verifier/issues/35"
+      ],
       "submission_url": "https://github.com/bigospeedrun/verifier/issues/92",
       "source_commit": "ac885d10bdbf723c3e0549198f9345bedf2a4131",
       "artifact": {
@@ -1099,7 +1101,8 @@
       "direct_submission": true,
       "route": "issue",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308731612",
-      "verification": "passed"
+      "verification": "passed",
+      "credit_note": "Wang-jiong-han lowers the proved exponent from 1.920279429 to 1.92027942 in Hrishik Sai Bojnal's Lean Verified 3SUM proof by adding a weighted cache to its solver. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates and Hrishik Sai Bojnal's parameter refinements; the word-RAM specification and compiler come from Anthropic's formalization."
     },
     "direct-pr-52": {
       "checked_at": "2026-11-02",

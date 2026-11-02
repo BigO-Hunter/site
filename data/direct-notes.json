@@ -88,6 +88,30 @@
     "direct-issue-66": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/64",
       "text": "Dmitri I. Arkhipov adds a charged coupling bound and a sharper tail estimate to Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed eight times before), which changes the final constant to \\(\\frac{18807273}{5000000}\\)."
+    },
+    "direct-pr-90": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/pull/41",
+      "text": "Zhihao \"Zephyr\" Yao raises the proved saving to 0.0030201659 in Halit Ziya KARTAL's Lean Verified 0.0030103 proof, with a new rate certificate and a larger tensor power (11640 instead of 7760). The circuit is unchanged: 411 of the 462 source files are identical to that proof. The construction is Jacob Sussman's, and the constructions that the unit is built from are Cinna Davis's."
+    },
+    "direct-pr-91": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/pull/41",
+      "text": "Halit Ziya KARTAL raises the proved saving to 0.00312780997 in their own Lean Verified 0.0030103 proof by changing its supplier of helper slots to the P104 word that CubeJerry published in CrocSwap's integer-multiplication repository, built on work by DreamingOfClouds and Ali Romman. The controller unit and the engine come from that proof: the construction is Jacob Sussman's, and the unit's controller is Cinna Davis's."
+    },
+    "direct-issue-92": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/issues/35",
+      "text": "Wang-jiong-han lowers the proved exponent from 1.920279429 to 1.92027942 in Hrishik Sai Bojnal's Lean Verified 3SUM proof by adding a weighted cache to its solver. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates and Hrishik Sai Bojnal's parameter refinements; the word-RAM specification and compiler come from Anthropic's formalization."
+    },
+    "direct-issue-93": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/issues/70",
+      "text": "Dmitri I. Arkhipov lowers the coefficient from 3.191588785 to 3.191538244 in their own Lean Verified proof by using a 20-digit lower bound for \\(\\pi\\) in place of a 4-digit one; no new lemma is added. The proof started from Anchen0823's Lean Verified proof. The coupling estimate is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
+    },
+    "direct-issue-69": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/issues/66",
+      "text": "Dmitri I. Arkhipov lowers the coefficient from 3.7614546 to 3.192 in their own Lean Verified proof by adding Lean proofs of the compensated coupling lemma and of a Wallis estimate, which prove the coefficient \\(8/\\sqrt{2\\pi}\\approx 3.19154\\). The proof started from Anchen0823's Lean Verified proof. The coupling lemma is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
+    },
+    "direct-issue-70": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/issues/69",
+      "text": "Dmitri I. Arkhipov lowers the coefficient from 3.192 to 3.191588785 in their own Lean Verified proof by certifying with a sharper lower bound for \\(\\pi\\) that \\(8/\\sqrt{2\\pi}\\) is below 683/214; the machinery is unchanged. The coupling lemma is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
     }
   },
   "withdrawn": {

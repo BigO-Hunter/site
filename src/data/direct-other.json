@@ -244,7 +244,7 @@
           "url": "https://github.com/bigospeedrun/verifier/issues/69",
           "lean": true,
           "evidence": "lean-verified",
-          "note": "",
+          "note": "Dmitri I. Arkhipov lowers the coefficient from 3.7614546 to 3.192 in their own Lean Verified proof by adding Lean proofs of the compensated coupling lemma and of a Wallis estimate, which prove the coefficient \\(8/\\sqrt{2\\pi}\\approx 3.19154\\). The proof started from Anchen0823's Lean Verified proof. The coupling lemma is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI.",
           "authors": [
             {
               "name": "darkhipo",
@@ -267,7 +267,7 @@
           "url": "https://github.com/bigospeedrun/verifier/issues/70",
           "lean": true,
           "evidence": "lean-verified",
-          "note": "",
+          "note": "Dmitri I. Arkhipov lowers the coefficient from 3.192 to 3.191588785 in their own Lean Verified proof by certifying with a sharper lower bound for \\(\\pi\\) that \\(8/\\sqrt{2\\pi}\\) is below 683/214; the machinery is unchanged. The coupling lemma is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI.",
           "authors": [
             {
               "name": "darkhipo",
@@ -290,7 +290,7 @@
           "url": "https://github.com/bigospeedrun/verifier/issues/93",
           "lean": true,
           "evidence": "lean-verified",
-          "note": "",
+          "note": "Dmitri I. Arkhipov lowers the coefficient from 3.191588785 to 3.191538244 in their own Lean Verified proof by using a 20-digit lower bound for \\(\\pi\\) in place of a 4-digit one; no new lemma is added. The proof started from Anchen0823's Lean Verified proof. The coupling estimate is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI.",
           "authors": [
             {
               "name": "darkhipo",

@@ -888,7 +888,9 @@
           "url": "https://github.com/zeph1912"
         }
       ],
-      "predecessors": [],
+      "predecessors": [
+        "https://github.com/bigospeedrun/verifier/pull/41"
+      ],
       "submission_url": "https://github.com/bigospeedrun/verifier/pull/90",
       "source_commit": "3ec9ac7ba29d72991eaa07b4c2b46b1a4adcaa2a",
       "artifact": {
@@ -929,7 +931,9 @@
           "url": "https://github.com/HalitZiyaKARTAL"
         }
       ],
-      "predecessors": [],
+      "predecessors": [
+        "https://github.com/bigospeedrun/verifier/pull/41"
+      ],
       "submission_url": "https://github.com/bigospeedrun/verifier/pull/91",
       "source_commit": "524a8af8a277ca50c1237068c2b45430a03f547e",
       "artifact": {
@@ -1394,7 +1398,8 @@
       "direct_submission": true,
       "route": "pull_request",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41247474839",
-      "verification": "passed"
+      "verification": "passed",
+      "credit_note": "Zhihao \"Zephyr\" Yao raises the proved saving to 0.0030201659 in Halit Ziya KARTAL's Lean Verified 0.0030103 proof, with a new rate certificate and a larger tensor power (11640 instead of 7760). The circuit is unchanged: 411 of the 462 source files are identical to that proof. The construction is Jacob Sussman's, and the constructions that the unit is built from are Cinna Davis's."
     },
     "direct-pr-91": {
       "checked_at": "2026-11-02",
@@ -1413,7 +1418,8 @@
       "direct_submission": true,
       "route": "pull_request",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308731612",
-      "verification": "passed"
+      "verification": "passed",
+      "credit_note": "Halit Ziya KARTAL raises the proved saving to 0.00312780997 in their own Lean Verified 0.0030103 proof by changing its supplier of helper slots to the P104 word that CubeJerry published in CrocSwap's integer-multiplication repository, built on work by DreamingOfClouds and Ali Romman. The controller unit and the engine come from that proof: the construction is Jacob Sussman's, and the unit's controller is Cinna Davis's."
     }
   },
   "updated_at": "2026-11-02T00:27:26Z"
