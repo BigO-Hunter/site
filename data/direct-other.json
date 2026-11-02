@@ -14,7 +14,7 @@
           "url": "https://github.com/bigospeedrun/verifier/issues/49",
           "lean": true,
           "evidence": "lean-verified",
-          "note": "",
+          "note": "Anchen0823 proves in Lean that the average sensitivity of a polynomial threshold function is at most \\(3.762\\,d\\sqrt{n}\\), by proving the refined coupling bound, adding exact binomial absolute moments and extracting a sharper coefficient. The refined coupling bound is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre (coefficient 3.83); the weighted Walsh grading, the matrix edge recovery and the coefficient-8 formalization are OpenAI's. The author states that OpenAI Codex assisted.",
           "authors": [
             {
               "name": "Anchen0823",
