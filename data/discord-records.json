@@ -6919,7 +6919,8 @@
     "[\"other-catalan\",\"direct-issue-103:1056463/2000\",\"1056463/2000\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6375\",\"3939/1250000\",\"attained\"]:record",
     "[\"subset-sum\",\"direct-issue-104\",\"1/2\",\"attained\"]:lean",
-    "[\"other-binary-polynomial-multiplication\",\"arpcs:1/1302\",\"1/1302\",\"attained\"]:record"
+    "[\"other-binary-polynomial-multiplication\",\"arpcs:1/1302\",\"1/1302\",\"attained\"]:record",
+    "[\"other-catalan\",\"slitsey:410\",\"410\",\"attained\"]:record"
   ],
   "deferred": [
     {
@@ -6927,13 +6928,6 @@
       "slug": "integer-multiplication",
       "authors": [
         "aigent-marius"
-      ]
-    },
-    {
-      "key": "[\"other-catalan\",\"slitsey:410\",\"410\",\"attained\"]:record",
-      "slug": "other-catalan",
-      "authors": [
-        "S. Litsey"
       ]
     }
   ]

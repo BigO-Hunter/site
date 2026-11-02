@@ -3597,7 +3597,7 @@
         ],
         "receipt_path": "sources/direct-issue-99-41393097953-1.json",
         "receipt_sha256": "cd7b9f1fc2c4981fe7046068161463ae362a1aa37bd915c67c81d9a52c790b0a",
-        "policy_hash": "416119c93ef2d7baf8bbe8d7dcf6d1063a9368dfea1a7a42726671982a48cf0c",
+        "policy_hash": "e5b4d877955d8eac4f9f3af3d29397a7a7b7d49ea61e28765ca27e22862b0f04",
         "result_artifact_id": 13134640016,
         "controller_fingerprint": "a05030a1e19e63fb20f927bbad26b4ab5902c49e7fe84d2470b23b1599f5300e",
         "pr_identity": null,
@@ -3686,6 +3686,49 @@
         "policy_hash": "416119c93ef2d7baf8bbe8d7dcf6d1063a9368dfea1a7a42726671982a48cf0c",
         "result_artifact_id": 13164686854,
         "controller_fingerprint": "4e87a5380cf9e7a235b278e7c536775567cf9e186df52a953d384fbbb70d3df5",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
+    },
+    "direct-issue-59:5100c0bc0bbe4d57740e8ef43fa5bf41d08e06bcc303e878cecc41c53dd63d79": {
+      "key": "direct-issue-59",
+      "submission": {
+        "schema_version": 1,
+        "problem": "average-sensitivity",
+        "repo_url": "https://github.com/darkhipo/average-sensitivity-lean",
+        "commit": "366d7a13dd661e97464a1abe81751f764e385de7",
+        "bound": "37615399/10000000",
+        "authors": []
+      },
+      "decision": "setup",
+      "evidence": {
+        "decision": "setup",
+        "reason": "The verifier setup failed before the proof check; this is not a verdict on the proof",
+        "id": "direct-59-5100c0bc0bbe4d57740e8ef43fa5bf41d08e06bcc303e878cecc41c53dd63d79",
+        "problem_id": "other/average-sensitivity",
+        "score": "37615399/10000000",
+        "score_relation": "attained",
+        "source_commit": "366d7a13dd661e97464a1abe81751f764e385de7",
+        "source_url": "https://github.com/darkhipo/average-sensitivity-lean",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/40119015119",
+        "checked_at": "2026-10-24T18:05:17.862925Z",
+        "issue_created_at": "2026-10-24T18:04:21Z",
+        "issue_updated_at_at_verification": "2026-10-24T18:04:31Z",
+        "issue_updated_at_at_import": "2026-10-24T18:10:42Z",
+        "derivation_hold": true,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-59-40119015119-1.json",
+        "receipt_sha256": "e5e7a02645240a9c243e1afc26079c9d0270688c2242cd0f3e2e165891b1d146",
+        "policy_hash": "e5b4d877955d8eac4f9f3af3d29397a7a7b7d49ea61e28765ca27e22862b0f04",
+        "result_artifact_id": 12570606849,
+        "controller_fingerprint": "162f4a6e128da7bfb31132fa02d91ff053d21d21ca020c9cf53baf2f6570b3a9",
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
@@ -3799,11 +3842,6 @@
     }
   },
   "not_verified_cache": {
-    "59": {
-      "version": "5100c0bc0bbe4d57740e8ef43fa5bf41d08e06bcc303e878cecc41c53dd63d79",
-      "updated_at": "2026-10-24T18:10:42Z",
-      "not_verified": false
-    },
     "61": {
       "version": "b49554ccdc4a0a7ef8d1bd81b8a98a22ccc2616d6b7d689f5ddfec03f71bdc65",
       "updated_at": "2026-10-25T01:56:56Z",
