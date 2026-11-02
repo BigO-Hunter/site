@@ -291,6 +291,29 @@ class DirectImportTests(unittest.TestCase):
         # Only the final issue route: maintainer and PR receipts keep the strict policy.
         with self.assertRaises(gate.Rejected):gate.validate_kernel_receipt(stopped()['receipt'],self.env['receipt']['theorem_names'])
 
+    def test_an_axiom_audit_that_ran_out_of_time_after_lean_passed_is_a_timeout(self):
+        # Lead, 2026-11-02: our time limit, not a verdict. The verifier records the audit's systemd result, no reason.
+        def stopped(audit,**change):
+            env=copy.deepcopy(self.env);receipt=env['receipt']
+            receipt['axiom_audit']=audit;receipt['kernels']['nanoda']={'status':'not_started'}
+            for t in receipt['theorems'].values():t.update(nanoda_kernel='not_started',reported_axioms=None)
+            receipt.update({'status':'not_verified',**change});env['status']='not_verified'
+            return env
+        killed={'status':'not_completed_or_rejected','systemd_result':'timeout','guard_stop':None,'reported_axioms':{}}
+        self.assertEqual(self.check(env=stopped(killed))['decision'],'timeout')
+        # The total deadline came before the audit started.
+        self.assertEqual(self.check(env=stopped({'status':'not_started'},status='timeout'))['decision'],'timeout')
+        names=self.env['receipt']['theorem_names']
+        for audit in [dict(killed,reported_axioms={names[0]:['sorryAx']}),  # it found a forbidden axiom before the limit
+                      dict(killed,systemd_result='oom-kill'),dict(killed,guard_stop='disk space below 1 GiB'),
+                      dict(killed,systemd_result='success'),dict(killed,status='invalid_output'),{'status':'not_started'}]:
+            env=stopped(audit)
+            with self.subTest(audit=audit):
+                self.assertFalse(gate.timed_out(env['receipt']))
+                with self.assertRaises(gate.Rejected):self.check(env=env)
+        # Only the final issue route.
+        with self.assertRaises(gate.Rejected):gate.validate_kernel_receipt(stopped(killed)['receipt'],names)
+
     def test_evidence_log_hashes(self):
         content = b'Synthetic test log, not proof evidence.'
         receipt = self.env['receipt']

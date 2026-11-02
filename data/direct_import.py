@@ -292,14 +292,23 @@ TIMEOUT_REASON = 'The proof check ran out of time; this is not a verdict on the 
 def timed_out(receipt):
     """The verifier stopped the check for time (Lead, 2026-11-02, verifier #99: the 3SUM proof ran 5 h 20 min): the receipt's
     status is 'timeout' (the total deadline, scripts/verifier.py), or the Lean kernel is incomplete with the reason
-    'timeout' (its systemd time limit). Never when a kernel rejected the proof."""
+    'timeout' (its systemd time limit). Also after Lean passed, when the permitted-axiom audit stopped for time (Lead,
+    2026-11-02): its systemd result is 'timeout' (the verifier records no reason for the audit), or the total deadline
+    came before it started. Never when a kernel rejected the proof or the audit reported a forbidden axiom."""
     kernels = receipt.get('kernels') if isinstance(receipt.get('kernels'), dict) else {}
     lean = kernels.get('lean') if isinstance(kernels.get('lean'), dict) else {}
+    audit = receipt.get('axiom_audit') if isinstance(receipt.get('axiom_audit'), dict) else {}
+    reported = audit.get('reported_axioms') if isinstance(audit.get('reported_axioms'), dict) else {}
     theorems = receipt.get('theorems') if isinstance(receipt.get('theorems'), dict) else {}
     rejected = (lean.get('status') == 'rejected' or (kernels.get('nanoda') or {}).get('status') == 'rejected'
                 or any(isinstance(t, dict) and 'rejected' in (t.get('lean_kernel'), t.get('nanoda_kernel')) for t in theorems.values()))
-    stopped = receipt.get('status') == 'timeout' or (lean.get('status') == 'incomplete' and lean.get('reason') == 'timeout')
-    return stopped and lean.get('status') != 'passed' and not rejected
+    forbidden = any(not isinstance(axioms, list) or any(not isinstance(a, str) or a not in AXIOMS for a in axioms) for axioms in reported.values())
+    if lean.get('status') == 'passed':
+        stopped = ((audit.get('status') == 'not_completed_or_rejected' and audit.get('systemd_result') == 'timeout' and not audit.get('guard_stop'))
+                   or (audit.get('status') == 'not_started' and receipt.get('status') == 'timeout'))
+    else:
+        stopped = receipt.get('status') == 'timeout' or (lean.get('status') == 'incomplete' and lean.get('reason') == 'timeout')
+    return stopped and not rejected and not forbidden
 
 def completion_time(receipt):
     finished = receipt.get('finished_unix')
