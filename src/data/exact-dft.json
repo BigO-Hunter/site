@@ -1089,7 +1089,8 @@
       "submission_rules": "No race admission rules found in the inspected README; zero PRs observed.",
       "notes_url": "https://github.com/jacobalansussman/wht-power-saving-lean/blob/f010392c923279e3dd59ef3aa5fedad23affc5fd/VERIFY.md",
       "license_status": "Apache-2.0; LICENSE and NOTICE retained",
-      "credits": "Jacob Sussman with disclosed Claude-agent assistance; OpenAI reduction and community circuit credits retained in README and NOTICE."
+      "credits": "Jacob Sussman with disclosed Claude-agent assistance; OpenAI reduction and community circuit credits retained in README and NOTICE.",
+      "credit_note": "Jacob Sussman proves OpenAI's all-length exact DFT statement in Lean with saving 0.0007474546, where OpenAI's has 0.0000000000001. A five-stage bridged layout of the community helper circuit of CrocSwap #193 (Avi Eisenberg) and a Lean proof of the frame lemma are new. The step to every length is OpenAI's reduction."
     },
     "shea256-exact-dft-round11-2026": {
       "checked_at": "2026-10-10",
@@ -1146,7 +1147,8 @@
       "reproduction_url": "https://github.com/shea256/fourier-transform-below-nlogn/blob/62554f945b58454fb8452f4daaca1222ce5ca58e/results/five-stage-pr233.md",
       "primary_submission_url": "https://github.com/jacobalansussman/wht-power-saving-lean/pull/2",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38050668997",
-      "verification_source_commit": "837dc3130adc79f7b7ab4ddd56c15576bbd766b0"
+      "verification_source_commit": "837dc3130adc79f7b7ab4ddd56c15576bbd766b0",
+      "credit_note": "chafreaky raises the proved saving to 0.000754736 with the reuse pairing of their CrocSwap #200, applied in #233, in place of #193's pairing, as a pull request to Jacob Sussman's repository. The helper circuit and Lean engine are Sussman's; the pairing needs 69,683 blocks per invocation against 70,169. The reduction is OpenAI's."
     },
     "jacob-sussman-exact-dft-e8-2026": {
       "checked_at": "2026-10-11",
@@ -1174,7 +1176,8 @@
       "license_status": "Apache-2.0; LICENSE and NOTICE retained",
       "credits": "Jacob Sussman directed Claude agents. README credits icekylinx, ikeboy, jamesyc, eumemic, Chafik Boukhalfa (chafreaky) and OpenAI for prior devices and reductions. Chafik is credited for the late pairing idea, not named as co-author of this new circuit; his program, pairs and certificate were not used.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38106559475",
-      "verification_source_commit": "9c94857bbaee886f8649edee0bc2d3c738f9555e"
+      "verification_source_commit": "9c94857bbaee886f8649edee0bc2d3c738f9555e",
+      "credit_note": "Jacob Sussman proves saving 0.0008762478 in Lean with a new, much smaller circuit unit found by computer search: 120 bank pairs with 9-bit labels, where the community circuit of Sussman's earlier result has 1,320 bank pairs with 22-bit labels. That earlier circuit is from the CrocSwap contributors. The reduction to every length is OpenAI's."
     },
     "shea256-exact-dft-complex588-2026": {
       "checked_at": "2026-10-12",
@@ -1202,7 +1205,8 @@
       "credits": "Jeremy Kothe: PR588 circuit. Ryan Shea: source-copy conversion, cyclic bank schedule and new all-length DFT instantiation. Jacob Sussman: Lean engine and checkers. Dugongue and Zhihao Chen (jacklightChen): #401/#377 geometry. Nil Mamano: published gauged Lean extension. OpenAI: exact model and all-length reduction. DominikScholz, jon314159, eumemic, Chafik Boukhalfa and earlier contributors retain the circuit-lineage credits in the source notice.",
       "reviewed_pr_binding": "direct-pr-7",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38318642758",
-      "verification_source_commit": "0a637219b43fb723f4ae7a180ec329549e7cc2aa"
+      "verification_source_commit": "0a637219b43fb723f4ae7a180ec329549e7cc2aa",
+      "credit_note": "jeremykothe2 and Ryan Shea prove saving 0.0012331685 in Lean by instantiating jeremykothe2's CrocSwap PR588 circuit with explicit source copies and a cyclic dedicated-bank schedule, which are new. It uses Jacob Sussman's Lean engine and Nil Mamano's gauged Lean extension, and is 20.65 percent above Nil Mamano's 0.0010221076. The reduction is OpenAI's."
     },
     "direct-issue-16": {
       "checked_at": "2026-11-02",
@@ -1221,7 +1225,8 @@
       "direct_submission": true,
       "route": "issue",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39061582815",
-      "verification": "passed"
+      "verification": "passed",
+      "credit_note": "canghaimeng proves saving 0.00126 in Lean with a new construction of 11,992 live roles and 4,824 helper banks per class. It extends the complex588 development of jeremykothe2 and Ryan Shea, on the community circuit packaged by Dmitri I. Arkhipov. canghaimeng adds the checked scalar adapter, bank schedule, numerical cost certificate and all-length bound. The reduction is OpenAI's."
     },
     "direct-issue-19": {
       "checked_at": "2026-11-02",
@@ -1280,7 +1285,8 @@
       "direct_submission": true,
       "route": "pull_request",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39557579559",
-      "verification": "passed"
+      "verification": "passed",
+      "credit_note": "Jacob Sussman proves saving 0.0017887045 in Lean with a new recursion that gives the arrays of a circuit jobs of two sizes in a fixed ratio, and a lever that removes 16,576 blocks of rank 48 per round entirely. The circuit is aigent-marius's CrocSwap #2979: its words, run order and dispatch are unchanged. The helper storage table is new, solved with the placement program of Erwan Secousses' #3815. The reduction is OpenAI's."
     },
     "direct-pr-3": {
       "checked_at": "2026-11-02",
@@ -1299,7 +1305,8 @@
       "direct_submission": true,
       "route": "pull_request",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38142057874",
-      "verification": "passed"
+      "verification": "passed",
+      "credit_note": "Nil Mamano's AI agents prove saving 0.0010221076 in Lean, above Jacob Sussman's 0.0008762478. It builds on Sussman's E8 unit, Lean engine and Fourier transfer, with devices from CrocSwap: DaysSky's bridged words, Zhihao Chen's nine-stage layout, David Ganz's entrance gauges, Rohan Arun's ordered promotions, eumemic's enlargements and George Lydakis's bank packing. The reduction is OpenAI's."
     },
     "direct-pr-37": {
       "checked_at": "2026-11-02",

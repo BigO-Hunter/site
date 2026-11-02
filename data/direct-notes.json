@@ -127,6 +127,15 @@
     },
     "direct-issue-4": {
       "text": "c0ldzy17 lowers the proved exponent from Anthropic's 1.9992 to 1.962 with a new construction: prime filtering, trimmed subset representations, finite local covers, shared partial zeta transforms, balanced output queries and a charged reporting hierarchy. It uses and adapts work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree."
+    },
+    "direct-pr-29": {
+      "text": "Jacob Sussman proves saving 0.0017887045 in Lean with a new recursion that gives the arrays of a circuit jobs of two sizes in a fixed ratio, and a lever that removes 16,576 blocks of rank 48 per round entirely. The circuit is aigent-marius's CrocSwap #2979: its words, run order and dispatch are unchanged. The helper storage table is new, solved with the placement program of Erwan Secousses' #3815. The reduction is OpenAI's."
+    },
+    "direct-issue-16": {
+      "text": "canghaimeng proves saving 0.00126 in Lean with a new construction of 11,992 live roles and 4,824 helper banks per class. It extends the complex588 development of jeremykothe2 and Ryan Shea, on the community circuit packaged by Dmitri I. Arkhipov. canghaimeng adds the checked scalar adapter, bank schedule, numerical cost certificate and all-length bound. The reduction is OpenAI's."
+    },
+    "direct-pr-3": {
+      "text": "Nil Mamano's AI agents prove saving 0.0010221076 in Lean, above Jacob Sussman's 0.0008762478. It builds on Sussman's E8 unit, Lean engine and Fourier transfer, with devices from CrocSwap: DaysSky's bridged words, Zhihao Chen's nine-stage layout, David Ganz's entrance gauges, Rohan Arun's ordered promotions, eumemic's enlargements and George Lydakis's bank packing. The reduction is OpenAI's."
     }
   },
   "withdrawn": {
