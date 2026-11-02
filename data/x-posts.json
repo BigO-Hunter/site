@@ -1025,5 +1025,10 @@
     "status": "posted",
     "at": "2026-11-02T15:35:48.853Z",
     "id": "2117279517287096387"
+  },
+  "[\"other-catalan\",\"direct-issue-103:1056463/2000\",\"1056463/2000\",\"attained\"]:lean": {
+    "status": "unknown",
+    "at": "2026-11-02T16:33:05.969Z",
+    "reason": "reserved before API send"
   }
 }
