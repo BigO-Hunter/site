@@ -123,7 +123,8 @@
       "upstream_tier": "claimed",
       "site_tier": "claimed",
       "comparison_key": "directed-sssp/comparison-addition-sparse/v1",
-      "publication_date_precision": "unknown"
+      "publication_date_precision": "unknown",
+      "credit_note": "Geby Jaff proves in Lean that exact directed single-source shortest paths with nonnegative real weights take O(n (log n)^(11/12)) time when m is at most n times floor(floor(log2 n)^(3/4)), in the comparison-addition model, with a verified Bellman-Ford fallback outside that density. The README says the reviews of the package are by the research agents, not outside peer review."
     }
   },
   "updated_at": "2026-10-08T21:41:48Z"
