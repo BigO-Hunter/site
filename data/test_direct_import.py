@@ -48,7 +48,7 @@ class DirectImportTests(unittest.TestCase):
             issue_url=self.issue['html_url'],issue_created_at=self.issue['created_at'],issue_updated_at=self.issue['updated_at'],
             run_id='123',run_attempt='2',run_url=self.run['html_url'],verifier_commit=self.revision,status='passed',receipt=receipt)
 
-    def check(self, *, env=None, run=None, issue=None, meta_change=None, extra_file=False, receipt_meta_change=None, raw_receipt_tamper=False, log_files=None, publisher=None):
+    def check(self, *, env=None, run=None, issue=None, meta_change=None, extra_file=False, receipt_meta_change=None, raw_receipt_tamper=False, log_files=None, publisher=None, jobs=None):
         env=copy.deepcopy(self.env if env is None else env)
         raw=json.dumps(env['receipt']).encode()
         receipt_stream=io.BytesIO()
@@ -73,7 +73,7 @@ class DirectImportTests(unittest.TestCase):
         if publisher:
             meta.update(name='pr-submission-123-2-publisher-456-2',workflow_run={'id':456,'head_sha':self.revision})
         if meta_change:meta.update(meta_change)
-        return gate.validate_result(archive, self.issue if issue is None else issue,self.run if run is None else run,meta,self.trust,receipt_archive=receipt_archive,receipt_artifact=receipt_meta,publisher=publisher)
+        return gate.validate_result(archive, self.issue if issue is None else issue,self.run if run is None else run,meta,self.trust,receipt_archive=receipt_archive,receipt_artifact=receipt_meta,publisher=publisher,jobs=jobs)
 
     def test_committed_form_and_challenge_fixture(self):
         body = (FIXTURES/'issue-form-body.txt').read_text()
@@ -211,6 +211,54 @@ class DirectImportTests(unittest.TestCase):
         with self.assertRaises(gate.Rejected):self.check(run=run,publisher=dict(publisher,head_sha='b'*40))
         receipt['kernels']['nanoda']['reason']='unknown'
         self.assertEqual(self.check(run=run,publisher=publisher)['decision'],'pending')
+
+    def jobs(self, own=('completed','success'), other=('in_progress',None), split=False):
+        """The jobs of run 123 attempt 2, as in run 41393097953 (#94 finished, #99 still running): issue 7 and issue 8."""
+        def job(number,name,status,conclusion):
+            entry=f'check ({number}, submitter, issue{", true" if split and number==7 else ""}) / {name}'
+            return dict(id=len(name)+number,name=entry,status=status,conclusion=conclusion,run_id=123,run_attempt=2,head_sha=self.revision)
+        jobs=[dict(id=1,name='select',status='completed',conclusion='success',run_id=123,run_attempt=2,head_sha=self.revision)]
+        for number,(status,conclusion) in [(7,own),(8,other)]:
+            jobs+=[job(number,'build','completed','success' if split and number==7 else 'skipped'),job(number,'pr_verify','completed','skipped'),
+                   job(number,'verify',status,conclusion)]
+            if status=='completed':jobs.append(job(number,'report','completed',conclusion))
+        return jobs
+
+    def test_a_final_result_is_admitted_when_its_own_jobs_finished(self):
+        # Lead, 2026-11-02: run 41393097953 checked #94 and #99; #94 was finished, #99 runs for up to 350 min.
+        running=dict(self.run,status='in_progress',conclusion=None)
+        # (a) Another issue's job still runs: admitted.
+        self.assertEqual(self.check(run=running,jobs=self.jobs())['decision'],'lean-verified')
+        self.assertEqual(self.check(run=running,jobs=self.jobs(split=True))['decision'],'lean-verified')
+        self.assertEqual(self.check(run=running,jobs=self.jobs(other=('completed','failure')))['decision'],'lean-verified')
+        # Without the jobs, an unfinished run stays unadmitted, as before.
+        with self.assertRaises(gate.Rejected):self.check(run=running)
+        # (b) Its own job still runs, or (c) failed or was cancelled: rejected (read again when the run completes).
+        for own in [('in_progress',None),('queued',None),('completed','failure'),('completed','cancelled'),('completed','skipped'),('completed','timed_out')]:
+            with self.subTest(own=own),self.assertRaises(gate.Rejected):
+                self.check(run=running,jobs=self.jobs(own=own))
+        for name in ['build','pr_verify']:
+            jobs=[dict(j,conclusion='failure') if j['name'].startswith('check (7') and j['name'].endswith('/ '+name) else j for j in self.jobs()]
+            with self.subTest(failed=name),self.assertRaises(gate.Rejected):self.check(run=running,jobs=jobs)
+        # No job of its own (the jobs of another run, attempt or revision), or a duplicate job: rejected.
+        for change in [{'run_id':124},{'run_attempt':1},{'head_sha':'b'*40}]:
+            jobs=[dict(j,**change) if j['name'].startswith('check (7') else j for j in self.jobs()]
+            with self.subTest(change=change),self.assertRaises(gate.Rejected):self.check(run=running,jobs=jobs)
+        for jobs in [[j for j in self.jobs() if not j['name'].startswith('check (7')],[],self.jobs()+[j for j in self.jobs() if j['name']=='check (7, submitter, issue) / report']]:
+            with self.subTest(jobs=len(jobs)),self.assertRaises(gate.Rejected):self.check(run=running,jobs=jobs)
+        # A pull request with the same number is not this issue.
+        jobs=[dict(j,name=j['name'].replace(', issue)',', pull_request)')) if j['name'].startswith('check (7') else j for j in self.jobs()]
+        with self.assertRaises(gate.Rejected):self.check(run=running,jobs=jobs)
+        # (d) Every run trust check still applies: an untrusted workflow, repository, revision, branch or event rejects.
+        for change in [{'path':'untrusted.yml'},{'workflow_id':43},{'head_repository':{'full_name':'attacker/verifier'}},
+                       {'head_branch':'other'},{'event':'pull_request_target'},{'referenced_workflows':[]},{'status':'queued'}]:
+            with self.subTest(change=change),self.assertRaises(gate.Rejected):
+                self.check(run={**running,**change},jobs=self.jobs())
+        jobs=[dict(j,head_sha='b'*40) for j in self.jobs()]
+        with self.assertRaises(gate.Rejected):self.check(run={**running,'head_sha':'b'*40},jobs=jobs)
+        # The receipt and issue bindings still apply.
+        with self.assertRaises(gate.Rejected):self.check(run=running,jobs=self.jobs(),raw_receipt_tamper=True)
+        with self.assertRaises(gate.Rejected):self.check(run=running,jobs=self.jobs(),issue=dict(self.issue,body=self.issue['body'].replace('47171','47172')))
 
     def test_evidence_log_hashes(self):
         content = b'Synthetic test log, not proof evidence.'

@@ -167,8 +167,33 @@ theorem Race.bound : ∃ order solve W, DFTProgram order solve W ∧
         target = f'theorem Race.bound : EndStatement.{problem}.SolvedInTime (({n} : Rat) / {d}) := by\n  sorry\n'
     return base + ('\n-- Big O Speedrun exact-bound target; generated from validated integers.\n' + target).encode()
 
-def validate_result(archive, issue, run, artifact, trusted_revisions, *, receipt_archive=None, receipt_artifact=None, publisher=None):
-    """Return a review candidate; even a pass does not establish credit or priority."""
+# A job of a submissions run: the reusable check workflow names it after its matrix entry (issue number, submitter
+# login, route, and true for a split build) and its own job.
+CHECK_JOB = re.compile(r'check \(([1-9][0-9]*), [A-Za-z0-9][A-Za-z0-9-]{0,38}, (issue|pull_request)(?:, true)?\) / (build|verify|report|pr_verify)')
+
+def own_jobs_finished(jobs, run, number):
+    """A final issue result while other jobs of its run still run (lead, 2026-11-02: run 41393097953 checked #94 and
+    #99 as a matrix; #94 was finished, the split build of #99 runs for up to 350 min). Every job of this issue in the run
+    attempt has completed with success or skipped, and its verify and report jobs succeeded. A running, failed or
+    cancelled job of this issue rejects; the result is then read again when the whole run has completed."""
+    require(isinstance(jobs, list) and jobs, 'Missing run jobs')
+    own = {}
+    for job in jobs:
+        require(isinstance(job, dict) and job.get('run_id') == run['id'] and job.get('run_attempt') == run['run_attempt']
+                and job.get('head_sha') == run['head_sha'], 'Job run mismatch')
+        match = CHECK_JOB.fullmatch(job.get('name') or '')
+        if match and int(match[1]) == number and match[2] == 'issue':
+            require(match[3] not in own, 'Duplicate job of the issue')
+            own[match[3]] = job
+    require({'verify', 'report'} <= own.keys(), 'Missing job of the issue')
+    for name, job in own.items():
+        require(job.get('status') == 'completed', 'A job of the issue has not finished')
+        require(job.get('conclusion') in (('success',) if name in ('verify', 'report') else ('success', 'skipped')), 'A job of the issue did not succeed')
+    return True
+
+def validate_result(archive, issue, run, artifact, trusted_revisions, *, receipt_archive=None, receipt_artifact=None, publisher=None, jobs=None):
+    """Return a review candidate; even a pass does not establish credit or priority. jobs: the jobs of the run
+    attempt, for a final result while the run is still in progress (own_jobs_finished)."""
     require(not is_test_submission(issue), 'Test-labeled submission stays off the board')
     require(len(archive) <= MAX_BYTES, 'Artifact exceeds size limit')
     require(artifact.get('digest') == 'sha256:' + sha(archive), 'Artifact digest mismatch')
@@ -179,7 +204,12 @@ def validate_result(archive, issue, run, artifact, trusted_revisions, *, receipt
     trust = trusted_revisions[revision]
     require(run.get('path') == WORKFLOW and run.get('workflow_id') == trust['workflow_id'], 'Workflow identity mismatch')
     early = publisher is not None
-    require(run.get('head_branch') == trust['branch'] and run.get('event') in ('issues', 'schedule', 'workflow_dispatch') and run.get('status') in (('in_progress', 'completed') if early else ('completed',)), 'Untrusted or unfinished run')
+    require(run.get('head_branch') == trust['branch'] and run.get('event') in ('issues', 'schedule', 'workflow_dispatch'), 'Untrusted or unfinished run')
+    if early or run.get('status') == 'completed':
+        require(run.get('status') in (('in_progress', 'completed') if early else ('completed',)), 'Untrusted or unfinished run')
+    else:
+        require(run.get('status') == 'in_progress' and jobs is not None, 'Untrusted or unfinished run')
+        own_jobs_finished(jobs, run, issue['number'])
     require(any(ref.get('path','').split('@')[0] == REPOSITORY+'/'+REUSABLE and ref.get('sha') == revision for ref in run.get('referenced_workflows', [])), 'Reusable workflow revision mismatch')
     run_id, attempt = str(run['id']), str(run['run_attempt'])
     run_url = f'https://github.com/{REPOSITORY}/actions/runs/{run_id}'

@@ -330,6 +330,33 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual([r.worse_than_classic(doc,b) for b in ['4/5','3/4','1/2','12/25']],[True,True,False,False])
         self.assertEqual([r.worse_than_classic(fixtures['exact-dft'],b) for b in ['0','1/1000']],[False,False])
 
+    def test_a_final_result_of_an_unfinished_run_is_checked_with_the_jobs_of_its_attempt(self):
+        # Lead, 2026-11-02 (run 41393097953): the refresh reads the jobs of the run attempt only for a final result of a
+        # run that is still in progress, once per attempt, and gives them to validate_result.
+        reads=[];seen=[]
+        result=dict(id=11,name='direct-submission-77-1-5',expired=False);proof=dict(id=12,name='verifier-receipt-and-logs-77-1-5',expired=False)
+        env=dict(schema_version=1,issue_number=5,run_id='77',receipt_artifact={'id':12})
+        class API(DiscoveryAPI):
+            def pages(self,path,params=None,key=None):
+                if path.endswith('/actions/artifacts'):return [result,proof]
+                if '/jobs' in path:reads.append((path,key));return [{'name':'select'}]
+                return super().pages(path,params,key)
+            def get(self,path,limit=None):return b'zip'
+        for status,jobs in [('in_progress',[{'name':'select'}]),('completed',None)]:
+            reads.clear();seen.clear()
+            importer=r.Importer(API([self.issue()]))
+            importer.runs[77]=dict(id=77,run_attempt=1,head_sha='a'*40,status=status)
+            claim=dict(route='issue',item=self.issue(),submission=d.parse_body(self.issue()['body']))
+            def validate(*args,**kwargs):seen.append(kwargs['jobs']);raise d.Rejected('stop')
+            with patch.object(r,'archive_members',return_value={'direct-submission.json':json.dumps(env).encode()}), \
+                 patch.object(importer,'trusted'),patch.object(r,'validate_result',side_effect=validate):
+                importer.verify({'direct-issue-5':claim},{})
+            with self.subTest(status=status):
+                self.assertEqual(seen,[jobs])
+                self.assertEqual(reads,[('repos/bigospeedrun/verifier/actions/runs/77/attempts/1/jobs','jobs')] if jobs else [])
+                if jobs:
+                    importer.jobs(importer.runs[77]);self.assertEqual(len(reads),1)  # once per attempt
+
     def test_a_draft_verifier_pr_created_from_5270_on_is_not_a_claim_until_ready(self):
         pr=dict(number=60,state='open',merged=False,draft=True,labels=[],head={'sha':'a'*40},user={'login':'alice'},created_at='2026-10-24T00:00:00Z',html_url='https://github.com/bigospeedrun/verifier/pull/60')
         sub=dict(d.parse_body(self.issue()['body']),source_subdir='submissions/dft/alice-proof')

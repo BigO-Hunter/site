@@ -48,7 +48,7 @@ def json_bytes(value):return (json.dumps(value,indent=2,ensure_ascii=False)+'\n'
 
 class Importer:
     def __init__(self, api, root=ROOT):
-        self.api=api;self.root=Path(root);self.trust={};self.runs={};self.files={};self.notes=[];self.final_states={}
+        self.api=api;self.root=Path(root);self.trust={};self.runs={};self.run_jobs={};self.files={};self.notes=[];self.final_states={}
         self.config=json.loads((self.root/'direct-trust.json').read_text())
         # claimed_only() verdicts by item: {number: {version, updated_at, claimed_only}}. A new comment, label
         # or edit changes updated_at and reads the comments again; an untouched closed item costs no read.
@@ -87,6 +87,13 @@ class Importer:
     def run(self,number):
         if number not in self.runs:self.runs[number]=self.api.json(PREFIX+f'actions/runs/{number}')
         return self.runs[number]
+
+    def jobs(self,run):
+        """The jobs of a run attempt (direct_import.own_jobs_finished)."""
+        key=(run['id'],run['run_attempt'])
+        if key not in self.run_jobs:
+            self.run_jobs[key]=self.api.pages(PREFIX+f'actions/runs/{run["id"]}/attempts/{run["run_attempt"]}/jobs',key='jobs')
+        return self.run_jobs[key]
 
     def artifact(self,metadata):
         return self.api.get(PREFIX+f'actions/artifacts/{metadata["id"]}/zip')
@@ -307,7 +314,9 @@ class Importer:
                         publisher=None
                         if name.endswith('-lean.json'):
                             publisher=self.run(int(env['publisher_run_id']));self.trusted(publisher['head_sha'])
-                        verdict=validate_result(raw,item,run,artifact,self.trust,receipt_archive=proof_raw,receipt_artifact=proof_meta,publisher=publisher)
+                        # A final result of a run whose other matrix jobs still run: read the jobs of its issue.
+                        jobs=self.jobs(run) if publisher is None and run.get('status')=='in_progress' else None
+                        verdict=validate_result(raw,item,run,artifact,self.trust,receipt_archive=proof_raw,receipt_artifact=proof_meta,publisher=publisher,jobs=jobs)
                         verdict=self.derivation(key,verdict)
                     else:
                         publisher=self.run(int(env['publisher_run_id']));self.trusted(publisher['head_sha'])
