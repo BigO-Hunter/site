@@ -317,7 +317,7 @@
           "url": "https://github.com/bigospeedrun/verifier/issues/87",
           "lean": true,
           "evidence": "lean-verified",
-          "note": "",
+          "note": "Cinna Davis lowers the bound on the irrationality exponent of Catalan's constant from S. Litsey's \\(532\\) to \\(\\mu(G)\\le 528.23288\\) with a different quadrature node construction, a degree-130 polynomial on a trimmed support, and exact rational certificates. The proof reuses S. Litsey's determinant construction, arithmetic estimates, nonvanishing theorem and energy witnesses. It also builds on OpenAI's irrationality proof and Marcos Costa Santos Carreira's parameterized construction.",
           "authors": [
             {
               "name": "1337isnot1337",
@@ -340,7 +340,7 @@
           "url": "https://github.com/bigospeedrun/verifier/issues/95",
           "lean": true,
           "evidence": "lean-verified",
-          "note": "",
+          "note": "Dmitri I. Arkhipov lowers Cinna Davis's Lean Verified bound \\(\\mu(G)\\le 528.23288\\) to \\(\\mu(G)\\le 528.2327\\) with a newly generated degree-130 quadrature polynomial, a two-band Zolotarev construction, and its circle certificate. The rest of the proof is Cinna Davis's, with S. Litsey's design and OpenAI's irrationality argument.",
           "authors": [
             {
               "name": "darkhipo",

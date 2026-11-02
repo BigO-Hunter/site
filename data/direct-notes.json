@@ -139,6 +139,13 @@
     },
     "direct-pr-6": {
       "text": "Li Xuanji proves APSP in time O(n^2.995561) on the word RAM of Anthropic's statement by extending Anthropic's Lean formalization of the Alman and Vassilevska Williams result with deterministic prime-by-prime filtering, two-digit residue lifting and batched tensor slots. The file header says it was prepared with Claude."
+    },
+    "direct-issue-87": {
+      "text": "Cinna Davis lowers the bound on the irrationality exponent of Catalan's constant from S. Litsey's \\(532\\) to \\(\\mu(G)\\le 528.23288\\) with a different quadrature node construction, a degree-130 polynomial on a trimmed support, and exact rational certificates. The proof reuses S. Litsey's determinant construction, arithmetic estimates, nonvanishing theorem and energy witnesses. It also builds on OpenAI's irrationality proof and Marcos Costa Santos Carreira's parameterized construction."
+    },
+    "direct-issue-95": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/issues/87",
+      "text": "Dmitri I. Arkhipov lowers Cinna Davis's Lean Verified bound \\(\\mu(G)\\le 528.23288\\) to \\(\\mu(G)\\le 528.2327\\) with a newly generated degree-130 quadrature polynomial, a two-band Zolotarev construction, and its circle certificate. The rest of the proof is Cinna Davis's, with S. Litsey's design and OpenAI's irrationality argument."
     }
   },
   "withdrawn": {

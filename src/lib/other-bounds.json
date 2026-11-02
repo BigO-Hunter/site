@@ -1208,7 +1208,7 @@
           "lean": true,
           "leanNote": "Yes; Challenge, Solution and comparator supplied.",
           "evidence": "claimed",
-          "note": "",
+          "note": "The README says S. Litsey proves in Lean that the irrationality exponent of Catalan's constant is at most \\(8720\\), or \\(24850\\) with Chebyshev bounds in place of the prime number theorem in the last step. It builds on OpenAI's irrationality proof and its Lean formalization. Rohit Kumar Jha claimed the weaker bound \\(10^8\\) earlier and independently.",
           "authors": [
             {
               "name": "S. Litsey",
@@ -1494,7 +1494,7 @@
           "lean": true,
           "leanNote": "Lean statements and proofs are supplied for both exponents; no site rerun.",
           "evidence": "claimed",
-          "note": "The prime-number-theorem argument gives the exponent \\(373706640/492599\\approx 758.64\\), so \\(\\mu(G)\\le 759\\). With Chebyshev bounds in the last step, the argument gives \\(\\mu(G)\\le 2276\\), but that version still uses the prime number theorem in two other steps. The README credits the new lemma to Claude (Anthropic) working with Sean Litsey.",
+          "note": "The prime-number-theorem argument gives the exponent \\(373706640/492599\\approx 758.64\\), so \\(\\mu(G)\\le 759\\). With Chebyshev bounds in the last step, the argument gives \\(\\mu(G)\\le 2276\\), but that version still uses the prime number theorem in two other steps. The README credits the new lemma to Claude (Anthropic) working with S. Litsey.",
           "authors": [
             {
               "name": "S. Litsey",
@@ -1516,7 +1516,7 @@
           "lean": true,
           "leanNote": "Lean statements and proofs are supplied for both exponents; no site rerun.",
           "evidence": "claimed",
-          "note": "The prime-number-theorem argument gives the exponent \\(373706640/505079\\approx 739.90\\), so \\(\\mu(G)\\le 740\\). With Chebyshev bounds in the last step, the argument gives \\(\\mu(G)\\le 2220\\), but that version still uses the prime number theorem in two other steps. The README credits the new lemma to Claude (Anthropic) working with Sean Litsey.",
+          "note": "The prime-number-theorem argument gives the exponent \\(373706640/505079\\approx 739.90\\), so \\(\\mu(G)\\le 740\\). With Chebyshev bounds in the last step, the argument gives \\(\\mu(G)\\le 2220\\), but that version still uses the prime number theorem in two other steps. The README credits the new lemma to Claude (Anthropic) working with S. Litsey.",
           "authors": [
             {
               "name": "S. Litsey",
