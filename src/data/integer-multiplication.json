@@ -39262,7 +39262,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/2",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-07T22:20:00Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Andrew Barnes aligns the global pair partner of each common point in the historical 2^-59 paired construction, which removes 14,944 additions at dimension 50 and supports a conditional kappa of 17 times 2^-63, 6.25 percent above the earlier paired witness 2^-59. The original circuit, certificate and proof packet are unchanged."
     },
     "crocswap-pr-3": {
       "checked_at": "2026-11-02",
@@ -39294,7 +39295,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/3",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T02:23:07Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "eumemic computes the side correction of the complex network with shared sums, using disjoint triples and prefix and suffix sums of the pair stars, in 108,195 reversible roles instead of 3,693,800 side wires per invocation. This raises the certified complex saving from 418e-12 to 14e-9 and the conditional kappa to 59e-11, 7.11 times the earlier 83e-12. The bit network, compact-control recurrence and assembly are unchanged."
     },
     "crocswap-pr-4": {
       "checked_at": "2026-11-02",
@@ -39486,7 +39488,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/9",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T08:07:17Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "rohanarun refines Zhihao Chen's ternary five-subset producer of PR 7 with a different greedy tie break, a choice among three candidate circuits and the deletion of unused ancestors, which saves 170,400 addition nodes in the four-point stars. The conditional kappa becomes 3.8e-9, about 1.88 percent above PR 7's 3.73e-9."
     },
     "crocswap-pr-10": {
       "checked_at": "2026-11-02",
@@ -39518,7 +39521,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/10",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T08:26:23Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin batches contiguous rational projector blocks with a simultaneous controlled basis, applies whole complex residuals as recursive calls and corrects the Gaussian input error enclosure, giving a conditional kappa of 6149999/50000000000000, about 1.23e-7. It includes the required dependencies from PRs 3 and 5 of eumemic and PR 7 of Zhihao Chen."
     },
     "crocswap-pr-12": {
       "checked_at": "2026-11-02",
@@ -39550,7 +39554,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/12",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T08:40:12Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "rohanarun uses the five-subset bit network at dimension 30, with the star rules of PR 9 and the bank-matching extension of PR 11, under IceKylin's controlled batching model of PR 10. The conditional kappa becomes 1.2649e-7, about 2.84 percent above PR 10's 1.2299998e-7. The dimension-28 complex network is unchanged."
     },
     "crocswap-pr-13": {
       "checked_at": "2026-11-02",
@@ -39742,7 +39747,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/18",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T10:01:42Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin replaces the source rank penalty with partial-swap frames, uses a binary retained-total triple producer of dimensions 25, 23 and 57, and batches the paired auxiliary boundary with a common rational basis. This raises the conditional kappa from PR 10's 1.2299998e-7 to 1.884586e-6. The PR extends PR 10 by one commit."
     },
     "crocswap-pr-19": {
       "checked_at": "2026-11-02",
@@ -39934,7 +39940,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/24",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T10:46:30Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin adds complementary source and sink gauges that remove the middle-stage auxiliary entrance and merge its rank with the exit, and a quadratic-phase normal form that runs every nondegenerate binary residual with one complex child. This raises the conditional kappa from PR 18's 1.884586e-6 to 5.98615e-6."
     },
     "crocswap-pr-25": {
       "checked_at": "2026-11-02",
@@ -40158,7 +40165,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/32",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T11:33:32Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin adds A1 and A5 block decompositions, a fixed rational middle-axis basis certified by bounded-minor CRT and mixed-center complex networks, raising the conditional kappa from PR 24's 5.98615e-6 to 1.2523415e-5. The assembly adopts PRs 21 and 23 of Zhihao Chen and the RaD project of Andrzej Marszałek."
     },
     "crocswap-pr-33": {
       "checked_at": "2026-11-02",
@@ -40286,7 +40294,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/36",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T12:27:27Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin copies the retained centers so that each scatter reads a transformed copy, which lowers the charged rank budget of the two-stage assembly. This raises the conditional kappa from PR 32's 1.2523415e-5 to 3.84569e-5. It adopts the two-stage and corner contributions of Aurel Prosz, Zhihao Chen (PR 29), rohanarun (PR 31) and Dominik Scholz (PR 33)."
     },
     "crocswap-pr-37": {
       "checked_at": "2026-11-02",
@@ -61633,7 +61642,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-26T02:33:34Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "zxv combines the three helper cleanups of aliromman's PR 5644 with zxv's own PR 5643, the A2 paid-rank exchange, in one emitted word, raising the conditional kappa to 0.00310644468 (+1.8133e-7 over PR 5644). Sixteen late scalar gates are replaced by an exact dyadic input preparation and cancellation, so three main fields skip unused stops. All independent inputs and owned operations are kept."
+      "credit_note": "zxv combines the three helper cleanups of Ali Romman's PR 5644 with zxv's own PR 5643, the A2 paid-rank exchange, in one emitted word, raising the conditional kappa to 0.00310644468 (+1.8133e-7 over PR 5644). Sixteen late scalar gates are replaced by an exact dyadic input preparation and cancellation, so three main fields skip unused stops. All independent inputs and owned operations are kept."
     },
     "crocswap-selected-d926d37e9738ce61": {
       "checked_at": "2026-10-28",
@@ -61721,7 +61730,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-28T14:54:32Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "DreamingOfClouds lets owned registers 770, 771 and 772 descend through the frames of helpers 705, 706 and 731, which no longer relay them, raising the conditional kappa from 0.003125804 to 0.003128386 and cutting the paid bill from 66,834 to 66,762 calls. It edits the merged word of PR 6030 and re-certifies it with aliromman's PR 5827 verifier. It continues DreamingOfClouds' PR 6143, which folds the first two relays."
+      "credit_note": "DreamingOfClouds lets owned registers 770, 771 and 772 descend through the frames of helpers 705, 706 and 731, which no longer relay them, raising the conditional kappa from 0.003125804 to 0.003128386 and cutting the paid bill from 66,834 to 66,762 calls. It edits the merged word of PR 6030 and re-certifies it with Ali Romman's PR 5827 verifier. It continues DreamingOfClouds' PR 6143, which folds the first two relays."
     },
     "crocswap-pr-6145": {
       "checked_at": "2026-11-02",
@@ -61750,7 +61759,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-28T15:06:53Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "CubeJerry removes the 772/731 relay and adds eight arbitrary-input compensations and an earlier cleanup, cutting complete paid calls from 66,798 to 66,780 and raising the conditional kappa to 0.003127804 (+6.67e-7 over PR 6143). It adds a distinct root to the word of DreamingOfClouds' PR 6143 and uses aliromman's PR 5827 checker. The PR credits DreamingOfClouds, aliromman, Matarener, Clear1nsight and Mister-Meeseeks."
+      "credit_note": "CubeJerry removes the 772/731 relay and adds eight arbitrary-input compensations and an earlier cleanup, cutting complete paid calls from 66,798 to 66,780 and raising the conditional kappa to 0.003127804 (+6.67e-7 over PR 6143). It adds a distinct root to the word of DreamingOfClouds' PR 6143 and uses Ali Romman's PR 5827 checker. The PR credits DreamingOfClouds, Ali Romman, Matarener, Chris R and Doug Colkitt."
     },
     "crocswap-pr-6167": {
       "checked_at": "2026-11-02",
@@ -61779,7 +61788,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-29T00:26:22Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "aliromman saves an operand in an unused lifetime of register 770, so reader 451 no longer needs helper 228 at frame 737 before it reads root 772 and the root skips that stop. This raises the conditional kappa from 0.003128386 to 0.003128645. The package edits the word of DreamingOfClouds' PR 6144 with five guarded replacements; the extra lifetime and operations are charged."
+      "credit_note": "Ali Romman saves an operand in an unused lifetime of register 770, so reader 451 no longer needs helper 228 at frame 737 before it reads root 772 and the root skips that stop. This raises the conditional kappa from 0.003128386 to 0.003128645. The package edits the word of DreamingOfClouds' PR 6144 with five guarded replacements; the extra lifetime and operations are charged."
     },
     "crocswap-pr-6235": {
       "checked_at": "2026-11-02",
@@ -61808,7 +61817,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-30T00:45:44Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "GamingPuzzled reports a conditional kappa of 0.003125811, 7e-9 above the 0.003125804 of DreamingOfClouds' PR 6030, as a corollary: every fixed kappa below 0.0031258115 holds under the same five framework assumptions. The physical word and the complete invoice are unchanged. The PR claims no new mechanism and no independent review."
+      "credit_note": "Joel Pulikkan reports a conditional kappa of 0.003125811, 7e-9 above the 0.003125804 of DreamingOfClouds' PR 6030, as a corollary: every fixed kappa below 0.0031258115 holds under the same five framework assumptions. The physical word and the complete invoice are unchanged. The PR claims no new mechanism and no independent review."
     },
     "crocswap-pr-6349": {
       "checked_at": "2026-11-02",
@@ -61837,7 +61846,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T01:28:05Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "aliromman starts four existing helper inputs at native subspaces of dimension 1, 1, 1 and 3, with explicit correlated input directions and output basis corrections that keep all 770 inputs independent. This raises the conditional kappa from PR 6167's 0.003128645 to 0.003129111. The direct source is DreamingOfClouds' PR 6314, which compresses PR 6167 without changing its recursive price."
+      "credit_note": "Ali Romman starts four existing helper inputs at native subspaces of dimension 1, 1, 1 and 3, with explicit correlated input directions and output basis corrections that keep all 770 inputs independent. This raises the conditional kappa from PR 6167's 0.003128645 to 0.003129111. The direct source is DreamingOfClouds' PR 6314, which compresses PR 6167 without changing its recursive price."
     },
     "crocswap-pr-6348": {
       "checked_at": "2026-11-02",
@@ -61866,7 +61875,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T01:24:11Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "aliromman replaces the paired path caller of PR 6167 with a binary tree of query suppliers and raises the conditional kappa from 0.003128645 to 0.00314933 (+0.661 percent). Each module combines two query suppliers, one paid thin query and two idle calls, with all helper inputs still independent. It uses the query-thinned path and thin-query interface of 1337isnot1337 (PR 4470), aliromman's all-forward native binding (PR 5544) and DreamingOfClouds' local-word changes (PR 6144)."
+      "credit_note": "Ali Romman replaces the paired path caller of PR 6167 with a binary tree of query suppliers and raises the conditional kappa from 0.003128645 to 0.00314933 (+0.661 percent). Each module combines two query suppliers, one paid thin query and two idle calls, with all helper inputs still independent. It uses the query-thinned path and thin-query interface of Cinna Davis (PR 4470), Ali Romman's all-forward native binding (PR 5544) and DreamingOfClouds' local-word changes (PR 6144)."
     },
     "crocswap-pr-6350": {
       "checked_at": "2026-11-02",
@@ -61895,7 +61904,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T02:48:50Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "aliromman composes PR 6349's four native input lifts with PR 6348's binary query tree, both aliromman's, and raises the conditional kappa from 0.00314933 to 0.00314980. The two constructions are unchanged; the new work binds their interfaces and checks the complete composition. The claim is the author's own check."
+      "credit_note": "Ali Romman composes PR 6349's four native input lifts with PR 6348's binary query tree, both Ali Romman's, and raises the conditional kappa from 0.00314933 to 0.00314980. The two constructions are unchanged; the new work binds their interfaces and checks the complete composition. The claim is the author's own check."
     },
     "crocswap-pr-6353": {
       "checked_at": "2026-11-02",
@@ -61924,7 +61933,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T03:50:55Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "aliromman raises the conditional kappa from 0.00314980 (PR 6350) to 0.00315057 by contracting nine native helper outputs of PR 6349's supplier with a joint input and departure basis, then restoring the endpoint with paid native transports and both inverse bases. PR 6348's tree is unchanged and all 19 copies of both changes are charged. The claim is the author's own check."
+      "credit_note": "Ali Romman raises the conditional kappa from 0.00314980 (PR 6350) to 0.00315057 by contracting nine native helper outputs of PR 6349's supplier with a joint input and departure basis, then restoring the endpoint with paid native transports and both inverse bases. PR 6348's tree is unchanged and all 19 copies of both changes are charged. The claim is the author's own check."
     }
   },
   "updated_at": "2026-11-02T07:17:26Z"

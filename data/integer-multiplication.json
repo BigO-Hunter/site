@@ -39262,7 +39262,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/2",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-07T22:20:00Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Andrew Barnes aligns the global pair partner of each common point in the historical 2^-59 paired construction, which removes 14,944 additions at dimension 50 and supports a conditional kappa of 17 times 2^-63, 6.25 percent above the earlier paired witness 2^-59. The original circuit, certificate and proof packet are unchanged."
     },
     "crocswap-pr-3": {
       "checked_at": "2026-11-02",
@@ -39294,7 +39295,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/3",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T02:23:07Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "eumemic computes the side correction of the complex network with shared sums, using disjoint triples and prefix and suffix sums of the pair stars, in 108,195 reversible roles instead of 3,693,800 side wires per invocation. This raises the certified complex saving from 418e-12 to 14e-9 and the conditional kappa to 59e-11, 7.11 times the earlier 83e-12. The bit network, compact-control recurrence and assembly are unchanged."
     },
     "crocswap-pr-4": {
       "checked_at": "2026-11-02",
@@ -39486,7 +39488,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/9",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T08:07:17Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "rohanarun refines Zhihao Chen's ternary five-subset producer of PR 7 with a different greedy tie break, a choice among three candidate circuits and the deletion of unused ancestors, which saves 170,400 addition nodes in the four-point stars. The conditional kappa becomes 3.8e-9, about 1.88 percent above PR 7's 3.73e-9."
     },
     "crocswap-pr-10": {
       "checked_at": "2026-11-02",
@@ -39518,7 +39521,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/10",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T08:26:23Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin batches contiguous rational projector blocks with a simultaneous controlled basis, applies whole complex residuals as recursive calls and corrects the Gaussian input error enclosure, giving a conditional kappa of 6149999/50000000000000, about 1.23e-7. It includes the required dependencies from PRs 3 and 5 of eumemic and PR 7 of Zhihao Chen."
     },
     "crocswap-pr-12": {
       "checked_at": "2026-11-02",
@@ -39550,7 +39554,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/12",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T08:40:12Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "rohanarun uses the five-subset bit network at dimension 30, with the star rules of PR 9 and the bank-matching extension of PR 11, under IceKylin's controlled batching model of PR 10. The conditional kappa becomes 1.2649e-7, about 2.84 percent above PR 10's 1.2299998e-7. The dimension-28 complex network is unchanged."
     },
     "crocswap-pr-13": {
       "checked_at": "2026-11-02",
@@ -39742,7 +39747,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/18",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T10:01:42Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin replaces the source rank penalty with partial-swap frames, uses a binary retained-total triple producer of dimensions 25, 23 and 57, and batches the paired auxiliary boundary with a common rational basis. This raises the conditional kappa from PR 10's 1.2299998e-7 to 1.884586e-6. The PR extends PR 10 by one commit."
     },
     "crocswap-pr-19": {
       "checked_at": "2026-11-02",
@@ -39934,7 +39940,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/24",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T10:46:30Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin adds complementary source and sink gauges that remove the middle-stage auxiliary entrance and merge its rank with the exit, and a quadratic-phase normal form that runs every nondegenerate binary residual with one complex child. This raises the conditional kappa from PR 18's 1.884586e-6 to 5.98615e-6."
     },
     "crocswap-pr-25": {
       "checked_at": "2026-11-02",
@@ -40158,7 +40165,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/32",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T11:33:32Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin adds A1 and A5 block decompositions, a fixed rational middle-axis basis certified by bounded-minor CRT and mixed-center complex networks, raising the conditional kappa from PR 24's 5.98615e-6 to 1.2523415e-5. The assembly adopts PRs 21 and 23 of Zhihao Chen and the RaD project of Andrzej Marszałek."
     },
     "crocswap-pr-33": {
       "checked_at": "2026-11-02",
@@ -40286,7 +40294,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/36",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T12:27:27Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin copies the retained centers so that each scatter reads a transformed copy, which lowers the charged rank budget of the two-stage assembly. This raises the conditional kappa from PR 32's 1.2523415e-5 to 3.84569e-5. It adopts the two-stage and corner contributions of Aurel Prosz, Zhihao Chen (PR 29), rohanarun (PR 31) and Dominik Scholz (PR 33)."
     },
     "crocswap-pr-37": {
       "checked_at": "2026-11-02",

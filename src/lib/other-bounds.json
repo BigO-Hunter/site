@@ -1963,7 +1963,7 @@
           "lean": true,
           "leanNote": "A Lean statement and proof are supplied; no site rerun.",
           "evidence": "claimed",
-          "note": "The one-sided coupling refinement is due to Lagdive, Aglave and Damre (the 3.83 result). This repository proves it in Lean and extracts the sharper coefficient \\(1881/500=3.762\\). The author states that OpenAI Codex assisted the proof development.",
+          "note": "The one-sided coupling refinement is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre (the \\(3.83\\) result). This repository proves it in Lean and extracts the sharper coefficient \\(1881/500=3.762\\). The author states that OpenAI Codex assisted the proof development.",
           "authors": [
             {
               "name": "Anchen0823",
@@ -1985,7 +1985,7 @@
           "lean": false,
           "leanNote": "No.",
           "evidence": "claimed",
-          "note": "The paper rebuilds the compensated coupling argument of Lagdive, Aglave and Damre on OpenAI’s weighted filtration. That argument gives the coefficient \\(8/\\sqrt{2\\pi}\\approx3.1915\\), and an exact rational certificate rounds it up to \\(399/125\\). The paper states it for all integers \\(n,d\\ge1\\) with \\(\\operatorname{sgn}(0)=1\\), and is dated October 17, 2026.",
+          "note": "The paper rebuilds the compensated coupling argument of Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre on OpenAI’s weighted filtration. That argument gives the coefficient \\(8/\\sqrt{2\\pi}\\approx3.1915\\), and an exact rational certificate rounds it up to \\(399/125\\). The paper states it for all integers \\(n,d\\ge1\\) with \\(\\operatorname{sgn}(0)=1\\), and is dated October 17, 2026.",
           "authors": [
             {
               "name": "Qiuyu Chen (Euler)",
