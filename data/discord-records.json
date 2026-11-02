@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6375",
+        "leader": "crocswap-pr-6417",
         "direction": "higher",
         "records": [
           {
@@ -4289,6 +4289,26 @@
               "DreamingOfClouds"
             ],
             "bound": "O(n log^(1 - 0.0031512) n)"
+          },
+          {
+            "id": "crocswap-pr-6399",
+            "score": "3151787/1000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "rohanarun"
+            ],
+            "bound": "O(n log^(1 - 0.003151787) n)"
+          },
+          {
+            "id": "crocswap-pr-6417",
+            "score": "3286849/1000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "rohanarun"
+            ],
+            "bound": "O(n log^(1 - 0.003286849) n)"
           }
         ],
         "table": "big-o"
@@ -4687,15 +4707,11 @@
             "id": "direct-issue-99",
             "score": "384055881637/200000000000",
             "relation": "attained",
-            "evidence": "Claimed",
+            "evidence": "Lean Verified",
             "authors": [
               "Wang-jiong-han"
             ],
-            "bound": "O(n^1.920279408185)",
-            "verification": {
-              "state": "held",
-              "since": "2026-11-02T04:10:54Z"
-            }
+            "bound": "O(n^1.920279408185)"
           },
           {
             "id": "direct-pr-52",
@@ -6920,7 +6936,9 @@
     "[\"integer-multiplication\",\"crocswap-pr-6375\",\"3939/1250000\",\"attained\"]:record",
     "[\"subset-sum\",\"direct-issue-104\",\"1/2\",\"attained\"]:lean",
     "[\"other-binary-polynomial-multiplication\",\"arpcs:1/1302\",\"1/1302\",\"attained\"]:record",
-    "[\"other-catalan\",\"slitsey:410\",\"410\",\"attained\"]:record"
+    "[\"other-catalan\",\"slitsey:410\",\"410\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-6417\",\"3286849/1000000000\",\"attained\"]:record",
+    "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:lean"
   ],
   "deferred": [
     {
