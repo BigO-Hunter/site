@@ -1047,8 +1047,8 @@
     "id": "2117323646779757037"
   },
   "[\"other-catalan\",\"slitsey:410\",\"410\",\"attained\"]:record": {
-    "status": "unknown",
-    "at": "2026-11-02T19:35:00.152Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-02T19:35:01.720Z",
+    "id": "2117339717599666357"
   }
 }
