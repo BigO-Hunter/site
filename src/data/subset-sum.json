@@ -231,12 +231,12 @@
       "source_commit": "bf1f50f066f2c71a53293791f693f505a67a1540"
     },
     {
-      "id": "direct-issue-101",
+      "id": "direct-issue-104",
       "kind": "improvement",
       "score": "1/2",
       "score_relation": "attained",
       "tier": "claimed",
-      "submitted_at": "2026-11-02T05:54:43Z",
+      "submitted_at": "2026-11-02T07:24:11Z",
       "spec_version": "1",
       "title": "darkhipo direct subset-sum submission",
       "authors": [
@@ -246,24 +246,65 @@
         }
       ],
       "predecessors": [],
-      "submission_url": "https://github.com/bigospeedrun/verifier/issues/101",
-      "source_commit": "12245027451c4eb83edb7b7df782b51e48507754",
+      "submission_url": "https://github.com/bigospeedrun/verifier/issues/104",
+      "source_commit": "fccd1159daf8e41f506844d4255bdebd0ccd94cc",
       "artifact": {
-        "path": "sources/direct-issue-101-submission.json",
-        "sha256": "d91ee21613a0e8fc3cb407b028808cffa6944bad889ac48b350973a25750f9e1"
+        "path": "sources/direct-issue-104-submission.json",
+        "sha256": "743bce15cd623fb624d3171c4de040f5435257fbd92590342fd79526c080dbad"
       },
       "evidence": {
-        "paper_url": "https://github.com/bigospeedrun/verifier/issues/101",
+        "paper_url": "https://github.com/bigospeedrun/verifier/issues/104",
         "theorem": "Race.bound",
         "certificate_path": null
       },
       "dependencies": [],
       "upstream_status": "open",
-      "upstream_status_at": "2026-11-02T05:54:43Z",
-      "site_observed_at": "2026-11-02T07:28:24Z",
+      "upstream_status_at": "2026-11-02T07:24:11Z",
+      "site_observed_at": "2026-11-02T09:27:32Z",
       "source": {
         "kind": "repo-artifact",
-        "url": "https://github.com/darkhipo/subset-sum-half/tree/12245027451c4eb83edb7b7df782b51e48507754"
+        "url": "https://github.com/darkhipo/subset-sum-mitm/tree/fccd1159daf8e41f506844d4255bdebd0ccd94cc"
+      }
+    },
+    {
+      "id": "direct-issue-94",
+      "kind": "improvement",
+      "score": "3/4",
+      "score_relation": "attained",
+      "tier": "verified",
+      "submitted_at": "2026-11-01T19:08:37Z",
+      "spec_version": "1",
+      "title": "darkhipo direct subset-sum submission",
+      "authors": [
+        {
+          "name": "darkhipo",
+          "url": "https://github.com/darkhipo"
+        }
+      ],
+      "predecessors": [],
+      "submission_url": "https://github.com/bigospeedrun/verifier/issues/94",
+      "source_commit": "8b105f01848fc0e370abfa3a23ed5c3de463f321",
+      "artifact": {
+        "path": "sources/direct-issue-94-submission.json",
+        "sha256": "bce09a4e2226082da642b276faf1e0ba7985fb9cb94dd1a6abb90563534c4702"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/bigospeedrun/verifier/issues/94",
+        "theorem": "Race.bound",
+        "certificate_path": null
+      },
+      "dependencies": [],
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-01T19:08:37Z",
+      "site_observed_at": "2026-11-02T09:27:32Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/darkhipo/subset-sum-mitm/blob/8b105f01848fc0e370abfa3a23ed5c3de463f321/Submission.lean"
+      },
+      "rerun_status": {
+        "state": "passed",
+        "checked_at": "2026-11-02T05:25:44.130535Z",
+        "receipt_path": "sources/direct-issue-94-41393097953-1.json"
       }
     }
   ],
@@ -367,24 +408,43 @@
       "credits": "Yanni Bills (GitHub yannouli). Refines the parameters of Joshua Wharton's conditional note, which refines Annanay Kapila's manuscript (a-kapila/maths-proofs), which builds on OpenAI result #138, Subset Sum in Time O(2^(0.49n)). AI assistance is acknowledged in the note.",
       "credit_note": "Yanni Bills refines Joshua Wharton's Subset Sum construction (itself a refinement of Annanay Kapila's Claimed 0.4877) and lowers the exponent from 0.487676 to 0.4876723. The algorithm is OpenAI's and Annanay Kapila's; Joshua Wharton supplied the earlier parameters and certificate transfer."
     },
-    "direct-issue-101": {
+    "direct-issue-104": {
       "checked_at": "2026-11-02",
-      "source_url": "https://github.com/darkhipo/subset-sum-half/tree/12245027451c4eb83edb7b7df782b51e48507754",
-      "repo": "darkhipo/subset-sum-half",
+      "source_url": "https://github.com/darkhipo/subset-sum-mitm/tree/fccd1159daf8e41f506844d4255bdebd0ccd94cc",
+      "repo": "darkhipo/subset-sum-mitm",
       "site_badge": false,
       "eligible_for_record": false,
       "proof_status": "Submitted bound; independent verification has not passed.",
       "upstream_tier": "claimed",
       "site_tier": "claimed",
       "comparison_key": "subset-sum/randomized-word-ram/v1",
-      "publication_date": "2026-11-02T05:54:43Z",
+      "publication_date": "2026-11-02T07:24:11Z",
       "publication_date_precision": "date-time",
       "publication_date_role": "Submission opened",
-      "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/101",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/104",
       "direct_submission": true,
       "route": "issue",
       "verification": "pending"
+    },
+    "direct-issue-94": {
+      "checked_at": "2026-11-02",
+      "source_url": "https://github.com/darkhipo/subset-sum-mitm/blob/8b105f01848fc0e370abfa3a23ed5c3de463f321/Submission.lean",
+      "repo": "darkhipo/subset-sum-mitm",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Lean and nanoda passed; permitted-axiom audit passed",
+      "upstream_tier": "verified",
+      "site_tier": "verified",
+      "comparison_key": "subset-sum/randomized-word-ram/v1",
+      "publication_date": "2026-11-01T19:08:37Z",
+      "publication_date_precision": "date-time",
+      "publication_date_role": "Submission opened",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/94",
+      "direct_submission": true,
+      "route": "issue",
+      "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41393097953",
+      "verification": "passed"
     }
   },
-  "updated_at": "2026-11-02T07:28:24Z"
+  "updated_at": "2026-11-02T09:27:32Z"
 }

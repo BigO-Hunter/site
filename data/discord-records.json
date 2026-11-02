@@ -4883,7 +4883,7 @@
             "bound": "O(2^(0.4876723n))"
           },
           {
-            "id": "direct-issue-101",
+            "id": "direct-issue-104",
             "score": "1/2",
             "relation": "attained",
             "evidence": "Claimed",
@@ -4893,8 +4893,18 @@
             "bound": "O(2^(0.5n))",
             "verification": {
               "state": "pending",
-              "since": "2026-11-02T05:54:43Z"
+              "since": "2026-11-02T07:24:11Z"
             }
+          },
+          {
+            "id": "direct-issue-94",
+            "score": "3/4",
+            "relation": "attained",
+            "evidence": "Lean Verified",
+            "authors": [
+              "Dmitri I. Arkhipov"
+            ],
+            "bound": "O(2^(0.75n))"
           }
         ],
         "table": "big-o"
@@ -6853,7 +6863,8 @@
     "[\"other-average-sensitivity\",\"direct-issue-93:90295/28292\",\"90295/28292\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6349\",\"3129111/1000000000\",\"attained\"]:record",
     "[\"other-catalan\",\"direct-issue-95:5282327/10000\",\"5282327/10000\",\"attained\"]:lean",
-    "[\"integer-multiplication\",\"crocswap-pr-6353\",\"315057/100000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6353\",\"315057/100000000\",\"attained\"]:record",
+    "[\"subset-sum\",\"direct-issue-94\",\"3/4\",\"attained\"]:lean"
   ],
   "deferred": [
     {
