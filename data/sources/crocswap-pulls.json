@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-02T09:27:15Z",
+    "updated_at": "2026-11-02T10:57:14Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -122729,7 +122729,7 @@
     "title": "C05: implement bounded GCC13 prefix visit ordering",
     "state": "open",
     "created_at": "2026-11-02T10:12:40Z",
-    "updated_at": "2026-11-02T10:12:40Z",
+    "updated_at": "2026-11-02T10:22:33Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122750,7 +122750,7 @@
     "title": "C05: bind compile source, output and context separately",
     "state": "open",
     "created_at": "2026-11-02T10:12:42Z",
-    "updated_at": "2026-11-02T10:12:42Z",
+    "updated_at": "2026-11-02T10:22:34Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122771,7 +122771,7 @@
     "title": "C05: authenticate same-build generated GCC data and record guarded directives",
     "state": "open",
     "created_at": "2026-11-02T10:12:45Z",
-    "updated_at": "2026-11-02T10:12:45Z",
+    "updated_at": "2026-11-02T10:22:35Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122780,6 +122780,27 @@
     },
     "head": {
       "sha": "97dd394ce1ddf00cc80dfdaad71767fdbc85af47"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6367,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6367",
+    "title": "C05: audit finite input coverage and copied-stage constraints",
+    "state": "open",
+    "created_at": "2026-11-02T10:49:50Z",
+    "updated_at": "2026-11-02T11:02:20Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "234a650277d286f2ebec104eb65ce9456f80667c"
     },
     "base": {
       "ref": "main"

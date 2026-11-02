@@ -23,17 +23,6 @@
         "authors": []
       }
     },
-    "direct-issue-99": {
-      "route": "issue",
-      "submission": {
-        "schema_version": 1,
-        "problem": "3sum",
-        "repo_url": "https://github.com/Wang-jiong-han/3sum-weighted-cache",
-        "commit": "e1ae71db2231f172c6541820e2ce0a54aa14fc64",
-        "bound": "384055881637/200000000000",
-        "authors": []
-      }
-    },
     "direct-issue-95": {
       "route": "issue",
       "submission": {
@@ -3620,8 +3609,8 @@
     },
     "99": {
       "version": "c48f467d6e1ae4038a430982ef66351fee060d3dd045f268e00e1b35bea0ecf8",
-      "updated_at": "2026-11-02T05:17:29Z",
-      "not_verified": false
+      "updated_at": "2026-11-02T10:52:17Z",
+      "not_verified": true
     },
     "100": {
       "version": "e27324fdad3cfab2f05c36333260553394cbef7a48b8e9b0abd821b1aff736bd",
@@ -3635,7 +3624,7 @@
     },
     "103": {
       "version": "24b038c3760bffc19411fd03a051fc76647621900a0a37b7271b86f8f8ab6c00",
-      "updated_at": "2026-11-02T07:20:48Z",
+      "updated_at": "2026-11-02T10:47:36Z",
       "not_verified": false
     },
     "104": {
