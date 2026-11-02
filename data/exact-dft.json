@@ -1034,7 +1034,8 @@
       "observed_pr_count": 0,
       "submission_rules": "No race submission rules found in the inspected README or note.",
       "notes_url": "https://github.com/eumemic/exact-dft-bounds/blob/6f87d1a0c9ae462cdcb2034a1361c87623221e66/notes/batched-dft-note.tex",
-      "pdf_url": "https://github.com/eumemic/exact-dft-bounds/blob/6f87d1a0c9ae462cdcb2034a1361c87623221e66/artifacts/batched-dft-note.pdf"
+      "pdf_url": "https://github.com/eumemic/exact-dft-bounds/blob/6f87d1a0c9ae462cdcb2034a1361c87623221e66/artifacts/batched-dft-note.pdf",
+      "credit_note": "eumemic proposes the saving 0.0004856 by running a frame transition of residual dimension r as one recursive call instead of r directional steps, and by using the complex network of the CrocSwap repository in place of OpenAI's fixed one. That network is community work: IceKylin's paired-cube identity, frame compiler and batched recursion, an664's PR 128, eumemic's PR 117, and work of Aurel Prosz, Zhihao Chen, Swapnil, David Leen and Doug Colkitt."
     },
     "shea256-exact-dft-2026": {
       "checked_at": "2026-10-09",
@@ -1061,7 +1062,8 @@
       "observed_pr_count": 0,
       "submission_rules": "No race submission rules found in the inspected README or note.",
       "notes_url": "https://github.com/shea256/fourier-transform-below-nlogn/blob/0b0170640e8659cc3343830d3207bbeaf26660c3/manuscript.md",
-      "pdf_url": "https://github.com/shea256/fourier-transform-below-nlogn/blob/0b0170640e8659cc3343830d3207bbeaf26660c3/manuscript.pdf"
+      "pdf_url": "https://github.com/shea256/fourier-transform-below-nlogn/blob/0b0170640e8659cc3343830d3207bbeaf26660c3/manuscript.pdf",
+      "credit_note": "Ryan Shea transfers Swapnil's round-six complex network from integer multiplication into OpenAI's exact DFT model and proposes the saving 0.000073, where OpenAI's has 0.0000000000001. The network uses IceKylin's whole-residual batching and copied retained centres, eumemic's further complex batching (PR 15) and Aurel Prosz's two-stage topology, within Doug Colkitt's CrocSwap framework. The finite network is Swapnil's; the model and the all-length argument are OpenAI's."
     },
     "jacob-sussman-exact-dft-2026": {
       "checked_at": "2026-10-09",
@@ -1118,7 +1120,8 @@
       "submission_rules": "No race submission rules found in the inspected README or note.",
       "notes_url": "https://github.com/shea256/fourier-transform-below-nlogn/blob/53f03853aea8caf46de7cc9d93efc9bb034bb4c7/paper/framework.md",
       "pdf_url": "https://github.com/shea256/fourier-transform-below-nlogn/blob/53f03853aea8caf46de7cc9d93efc9bb034bb4c7/manuscript.pdf",
-      "claim_date_commit": "a2840b10970b8066b9e86fdce97d9bf8a32fa4ea"
+      "claim_date_commit": "a2840b10970b8066b9e86fdce97d9bf8a32fa4ea",
+      "credit_note": "Ryan Shea proposes the saving 0.00067, 38 percent above eumemic's 0.0004856, by transferring Swapnil's round-eleven complex word into OpenAI's exact DFT model. The word retires copies with the subtraction of IceKylin's PR 184 and deletes terminal targets with James Chang's compiler, on modules of eumemic's PR 168. Swapnil supplies the integration and the matching. The frame, cover, paired-cube and sharing credit includes an664, DaysSky, Doug Colkitt and OpenAI."
     },
     "shea256-exact-dft-five-stage-2026": {
       "checked_at": "2026-10-10",
