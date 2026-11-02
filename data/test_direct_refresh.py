@@ -374,6 +374,21 @@ class RefreshTests(unittest.TestCase):
             self.assertEqual(kept['predecessors'],[note['predecessor']])
             self.assertEqual(board['record_metadata']['direct-issue-5']['credit_note'],note['text'])
 
+    def test_a_note_without_a_predecessor_gives_a_row_with_none(self):
+        # 2026-11-02: the 3SUM row direct-issue-4 builds on Anthropic's formalization, which is not a verifier issue or PR.
+        claim=dict(route='issue',item=self.issue(),submission=d.parse_body(self.issue()['body']))
+        row,meta,_=r.row_for('direct-issue-5',claim,'2026-10-11T00:00:00Z',None,dict(text='Built on a formalization outside the verifier.'))
+        self.assertEqual(row['predecessors'],[]);self.assertEqual(meta['credit_note'],'Built on a formalization outside the verifier.')
+
+    def test_a_note_predecessor_is_optional_but_a_repository_url_is_not_one(self):
+        from direct_note_rules import predecessor_ok
+        self.assertTrue(predecessor_ok(dict(text='x')))
+        self.assertTrue(predecessor_ok(dict(text='x',predecessor='https://github.com/bigospeedrun/verifier/issues/3')))
+        self.assertTrue(predecessor_ok(dict(text='x',predecessor='https://github.com/bigospeedrun/verifier/pull/41')))
+        self.assertFalse(predecessor_ok(dict(text='x',predecessor='https://github.com/anthropics/formal-math')))
+        self.assertFalse(predecessor_ok(dict(text='x',predecessor='')))
+        self.assertNotIn('predecessor',json.loads((ROOT/'direct-notes.json').read_text())['notes']['direct-issue-4'])
+
     def test_withdrawn_submission_has_no_row_on_any_rebuild_and_keeps_its_state(self):
         # 2026-10-23: the submitter of three merged DFT PRs withdrew them. The refresh reads each claim every hour, so a
         # row removed by hand would come back unless the reviewed list in data/direct-notes.json keeps it out.

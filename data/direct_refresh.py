@@ -362,7 +362,7 @@ def row_for(key,claim,now,old=None,note=None):
     path='sources/'+key+'-submission.json';raw=json_bytes(snapshot)
     row=dict(id=key,kind='improvement',score=sub['bound'],score_relation='attained',tier=tier,
         submitted_at=item['created_at'],spec_version='1',title=f'{login} direct {sub["problem"]} submission',
-        authors=[dict(name=login,url='https://github.com/'+login)],predecessors=[note['predecessor']] if note else [],submission_url=item['html_url'],
+        authors=[dict(name=login,url='https://github.com/'+login)],predecessors=[note['predecessor']] if note and note.get('predecessor') else [],submission_url=item['html_url'],
         source_commit=sub['commit'],artifact=dict(path=path,sha256=sha(raw)),
         evidence=dict(paper_url=item['html_url'],theorem='Race.bound',certificate_path=None),dependencies=[],
         upstream_status='merged' if route=='pull_request' and item.get('merged') else 'closed-unmerged' if route=='pull_request' and claim.get('closed') else 'open',

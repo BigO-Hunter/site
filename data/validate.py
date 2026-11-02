@@ -4,6 +4,8 @@ import hashlib,json,re,sys
 from pathlib import Path
 from fractions import Fraction
 from jsonschema import Draft202012Validator,FormatChecker
+sys.dont_write_bytecode=True  # a staged copy of the data folder must stay free of stray files
+from direct_note_rules import predecessor_ok
 ROOT=Path(__file__).resolve().parent
 TIERS=('verified','certified-conditional','claimed')
 def load(p):return json.loads((ROOT/p).read_text())
@@ -23,10 +25,10 @@ for listing in registry['repositories']:
   validate(json.loads(raw),load('schemas/manifest-v1.json'))
 for stem in ['submissions','chart-cross-check']:validate(load(stem+'.json'),load('schemas/'+stem+'-v1.json'))
 if (ROOT/'direct-notes.json').exists():
- # Reviewed credit notes for direct rows: plain text for a tooltip, one predecessor link each.
+ # Reviewed credit notes for direct rows: plain text for a tooltip, at most one predecessor link each.
  for key,n in load('direct-notes.json')['notes'].items():
   assert re.fullmatch(r'direct-(issue|pr)-\d+',key),key
-  assert re.fullmatch(r'https://github\.com/[\w.-]+/[\w.-]+/(issues|pull)/\d+',n['predecessor']),key
+  assert predecessor_ok(n),key
   # Plain text, except that a note on an Other bounds row may hold KaTeX between \( and \) (the page renders it with inlineMath).
   assert 0<len(n['text'])<=500 and not re.search(r'[<>&$]',n['text']) and not re.search(r'\\',re.sub(r'\\\(.*?\\\)','',n['text'],flags=re.S)),key
   # Board rows (dft, 3sum, apsp, subset-sum) show a note as plain tooltip text, so a note with TeX belongs to an Other bounds problem.

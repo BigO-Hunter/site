@@ -112,6 +112,21 @@
     "direct-issue-70": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/69",
       "text": "Dmitri I. Arkhipov lowers the coefficient from 3.192 to 3.191588785 in their own Lean Verified proof by certifying with a sharper lower bound for \\(\\pi\\) that \\(8/\\sqrt{2\\pi}\\) is below 683/214; the machinery is unchanged. The coupling lemma is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
+    },
+    "direct-issue-35": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/issues/31",
+      "text": "Hrishik Sai Bojnal lowers the proved exponent from 1.92027945701 to 1.9202794288 by rebalancing the parameters of their own Lean Verified 1.92027945701 proof. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates; Hrishik Sai Bojnal changed 32 of the 1201 Lean files of the proof."
+    },
+    "direct-issue-14": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/issues/4",
+      "text": "c0ldzy17 lowers the proved exponent from 1.962 to 1.921 in their own Lean Verified 1.962 proof, with a ternary construction whose implementation charges preprocessing, selected rows, weighted counting, collision cleanup and moment reporting. The construction builds on work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree."
+    },
+    "direct-issue-8": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/issues/4",
+      "text": "Anchen0823 lowers the proved exponent from 1.962 to 1.960614 in c0ldzy17's Lean Verified 1.962 proof, with an expansion of 232, a quartic certificate and parameters supplied by the author, exact integer schedules, and changed execution, cost and resource proofs. The construction is c0ldzy17's; the word-RAM model and compiler sources are Anthropic's."
+    },
+    "direct-issue-4": {
+      "text": "c0ldzy17 lowers the proved exponent from Anthropic's 1.9992 to 1.962 with a new construction: prime filtering, trimmed subset representations, finite local covers, shared partial zeta transforms, balanced output queries and a charged reporting hierarchy. It uses and adapts work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree."
     }
   },
   "withdrawn": {
