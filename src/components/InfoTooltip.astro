@@ -6,7 +6,7 @@ const content=await Astro.slots.render('default');
 // Stable across builds (the same page gives the same HTML), unique within the page.
 const id=tooltipId(Astro.request,label,content);
 ---
-<info-tooltip><button type="button" aria-label={label} aria-describedby={id} aria-expanded="false">i</button><div id={id} role="tooltip" hidden><Fragment set:html={content}/></div></info-tooltip>
+<info-tooltip><button type="button" aria-label={label} aria-describedby={id} aria-expanded="false">i</button><div id={id} role="tooltip" tabindex="0" hidden><Fragment set:html={content}/></div></info-tooltip>
 <script>
 class InfoTooltip extends HTMLElement {
  connectedCallback(){
@@ -30,6 +30,8 @@ if(!customElements.get('info-tooltip'))customElements.define('info-tooltip',Info
 <style>
 info-tooltip{display:inline-block;vertical-align:middle;font-size:1rem;line-height:1.5;white-space:normal}
 button{display:inline-flex;width:1.35rem;height:1.35rem;align-items:center;justify-content:center;padding:0;border:1px solid var(--line);border-radius:50%;font:italic 1rem Georgia,serif;color:var(--accent);background:transparent;cursor:pointer}
-[role=tooltip]{position:fixed;z-index:30;width:min(23rem,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;padding:.8rem;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:.4rem;box-shadow:0 4px 20px #0003;font-size:1rem;font-weight:400;text-align:left;white-space:normal}
+[role=tooltip]{position:fixed;z-index:30;width:min(30rem,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;padding:.8rem;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:.4rem;box-shadow:0 4px 20px #0003;font-size:1rem;font-weight:400;text-align:left;white-space:normal}
+@media(max-width:900px){[role=tooltip]{max-height:min(24rem,calc(100vh - 24px))}}
+[role=tooltip]:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 [hidden]{display:none}
 </style>
