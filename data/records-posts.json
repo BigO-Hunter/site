@@ -1756,5 +1756,23 @@
     "authors": [
       "DreamingOfClouds"
     ]
+  },
+  {
+    "key": "[\"subset-sum\",\"direct-issue-104\",\"1/2\",\"attained\"]:lean",
+    "text": "**Record verified** | **Subset Sum** | `O(2^(0.5n))` | by Dmitri I. Arkhipov | Lean Verified | [bigospeedrun.com/subset-sum](https://bigospeedrun.com/subset-sum)",
+    "x_text": "Record verified!\n\nProblem: Subset Sum\nValue: O(2^(0.5n))\nPlayer: Dmitri I. Arkhipov\nStatus: Lean Verified",
+    "posted_at": "2026-11-02T18:31:04.346Z",
+    "authors": [
+      "Dmitri I. Arkhipov"
+    ]
+  },
+  {
+    "key": "[\"other-binary-polynomial-multiplication\",\"arpcs:1/1302\",\"1/1302\",\"attained\"]:record",
+    "text": "**New claim** | **Polynomial multiplication over F2** | `O(n log^(1301/1302) n)` | by Árpád Csizmadia | Claimed | [bigospeedrun.com/other/binary-polynomial-multiplication](https://bigospeedrun.com/other/binary-polynomial-multiplication)",
+    "x_text": "New claim!\n\nProblem: Polynomial multiplication over F2\nNew value: O(n log^(1301/1302) n)\nPlayer: Árpád Csizmadia\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-02T18:31:04.665Z",
+    "authors": [
+      "Árpád Csizmadia"
+    ]
   }
 ]
