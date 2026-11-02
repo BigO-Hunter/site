@@ -117968,7 +117968,7 @@
       "title": "Repair PR6319 pinned-byte reads for multiline paths and Git context",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6357",
       "submitted_at": "2026-11-02T04:56:29Z",
-      "updated_at": "2026-11-02T04:56:29Z",
+      "updated_at": "2026-11-02T16:39:51Z",
       "source_commit": "170867c0a8f92375dfc489dd090bad5daee7b090",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-02T04:56:29Z",
@@ -118328,7 +118328,11 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "b91c5c74f252c1a98ab8344d012702170004ed13",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6374,
@@ -118344,7 +118348,45 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "b02bfe3338f7fe57818262b33f8e5c77ac0f1c93",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6375,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = 0.00315120 (+3.3e-7 over #6372): three shared-carrier input lifts",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6375",
+      "submitted_at": "2026-11-02T16:29:06Z",
+      "updated_at": "2026-11-02T16:29:06Z",
+      "source_commit": "247b5c319b9f58fe9ee61dbf80697f8a9a429831",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T16:29:06Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": "3939/1250000",
+      "record_ids": [
+        "crocswap-pr-6375"
+      ],
+      "note": null,
+      "claim_path": "research/p104-shared-carrier-lifts/RESULT.json",
+      "claim_head": "247b5c319b9f58fe9ee61dbf80697f8a9a429831",
+      "claim_text": "00e552f0d5757b35bfbf454cc63363aedddea76dd14fbdcbcac152f8deed8bc4",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-contact-block-contraction/RESULT.json"
+        ],
+        [
+          "added",
+          "research/p104-shared-carrier-lifts/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "247b5c319b9f58fe9ee61dbf80697f8a9a429831",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

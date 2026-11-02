@@ -122582,7 +122582,7 @@
     "title": "Repair PR6319 pinned-byte reads for multiline paths and Git context",
     "state": "open",
     "created_at": "2026-11-02T04:56:29Z",
-    "updated_at": "2026-11-02T04:56:29Z",
+    "updated_at": "2026-11-02T16:39:51Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122953,5 +122953,26 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6375,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6375",
+    "title": "Conditional κ = 0.00315120 (+3.3e-7 over #6372): three shared-carrier input lifts",
+    "state": "open",
+    "created_at": "2026-11-02T16:29:06Z",
+    "updated_at": "2026-11-02T16:29:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "247b5c319b9f58fe9ee61dbf80697f8a9a429831"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

@@ -32,7 +32,7 @@
         "source_commit": "47a36df5197a19e5f6378bd2043d41d0f516064d",
         "source_url": "https://github.com/darkhipo/catalan-constant-gen5",
         "authors": [],
-        "workflow_conclusion": null,
+        "workflow_conclusion": "success",
         "issue_submitter": "darkhipo",
         "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41431550617",
         "checked_at": "2026-11-02T15:33:42.247168Z",

@@ -39226,6 +39226,54 @@
         }
       ],
       "source_commit": "b556600ffe14be72406b03a47c661f3c7f1aff06"
+    },
+    {
+      "id": "crocswap-pr-6375",
+      "kind": "improvement",
+      "score": "3939/1250000",
+      "tier": "claimed",
+      "submitted_at": "2026-11-02T16:29:06Z",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T16:29:06Z",
+      "site_observed_at": "2026-11-02T17:11:38Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6375"
+      },
+      "spec_version": "1",
+      "title": "Conditional κ = 0.00315120 (+3.3e-7 over #6372): three shared-carrier input lifts",
+      "authors": [
+        {
+          "name": "DreamingOfClouds",
+          "url": "https://github.com/DreamingOfClouds"
+        }
+      ],
+      "predecessors": [
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6314",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6348",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6349",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6353",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6372"
+      ],
+      "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6375",
+      "artifact": {
+        "path": "sources/pr-6375.json",
+        "sha256": "b3a7f4044c900b5b7707c1021c0e8f6c400c60bc86a5c3fc223510cde6a4d98a"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6375",
+        "theorem": null,
+        "certificate_path": null
+      },
+      "dependencies": [
+        {
+          "id": "openai-109-transfer",
+          "statement": "The OpenAI #109 fixed-tape multiplication reduction and the specific all-size compiler, routing, precision, resampling and exact-recovery interfaces cited by this submission hold. The PR body retains its precise per-construction obligations.",
+          "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6375",
+          "status": "unverified"
+        }
+      ],
+      "source_commit": "247b5c319b9f58fe9ee61dbf80697f8a9a429831"
     }
   ],
   "record_metadata": {
@@ -42326,7 +42374,7 @@
       "source_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/build/sections/00-introduction.tex",
       "site_badge": false,
       "eligible_for_record": false,
-      "proof_status": "Source claim; not independently rerun by bigOspeedrun. Proved on prove2.me, which checks each proof with Lean on its server; we reviewed that its Lean statement is this row's statement (same value, same source). Separately, a Lean proof of a stronger saving, kappa = 4222422970/2^46 (about 6e-05), by Kenny Daniel (platypii) with jdb19937, exists on Mathlib's multi-stack machine model (platypii/integer-mult-bounds-lean @ a1a55de, theorem MathlibTM2.mulInTime; the author's axiom audit allows only the standard axioms, and the author's CI on that commit passed (checked 2026-11-01)); it is not our exact multitape statement and we have not rerun it.",
+      "proof_status": "Source claim; not independently rerun by bigOspeedrun. Proved on prove2.me, which checks each proof with Lean on its server; we reviewed that its Lean statement is this row's statement (same value, same source). Separately, a Lean proof of a stronger saving, kappa = 4222422970/2^46 (about 6e-05), by Kenny Daniel (platypii) with jdb19937, exists on Mathlib's multi-stack machine model (platypii/integer-mult-bounds-lean @ 82f1283, theorem MathlibTM2.mulInTime; the author's axiom audit allows only the standard axioms, and the author's CI on that commit passed (checked 2026-11-02)); it is not our exact multitape statement and we have not rerun it.",
       "comparison_key": "openai/original-109",
       "date_precision": "Manuscript dated September 23, 2026; submitted_at is observation time.",
       "upstream_tier": "claimed",
@@ -62031,7 +62079,35 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T15:03:55Z",
       "race_event_kind": "PR creation; latest observed score"
+    },
+    "crocswap-pr-6375": {
+      "checked_at": "2026-11-02",
+      "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6375",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Source claim; not independently rerun by bigOspeedrun",
+      "pr_number": 6375,
+      "repo": "CrocSwap/integer-mult-bounds",
+      "merged": false,
+      "merged_at": null,
+      "closed_at": null,
+      "updated_at": "2026-11-02T16:29:06Z",
+      "comparison_key": "crocswap/integer-multiplication-v1",
+      "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
+      "score_source": "stated kappa in research/p104-shared-carrier-lifts/RESULT.json at the PR head; source claim only",
+      "date_precision": "PR creation timestamp; score is latest observed claim, not necessarily original score.",
+      "upstream_selected": false,
+      "record_eligibility_note": "Eligible for the CrocSwap claimed-source race when merged or a published README checkpoint. Open and closed-unmerged PRs cannot hold the record.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "publication_date_precision": "date-time",
+      "race_repo": "CrocSwap/integer-mult-bounds",
+      "publication_date": "2026-11-02T16:29:06Z",
+      "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6375",
+      "race_series": "pr-submissions",
+      "race_event_at": "2026-11-02T16:29:06Z",
+      "race_event_kind": "PR creation; latest observed score"
     }
   },
-  "updated_at": "2026-11-02T16:17:24Z"
+  "updated_at": "2026-11-02T17:11:38Z"
 }
