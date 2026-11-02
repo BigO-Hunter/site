@@ -1050,5 +1050,15 @@
     "status": "posted",
     "at": "2026-11-02T19:35:01.720Z",
     "id": "2117339717599666357"
+  },
+  "[\"integer-multiplication\",\"crocswap-pr-6417\",\"3286849/1000000000\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-02T23:35:26.270Z",
+    "reason": "reserved before API send"
+  },
+  "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:lean": {
+    "status": "unknown",
+    "at": "2026-11-02T23:35:26.270Z",
+    "reason": "reserved before API send"
   }
 }
