@@ -1046,7 +1046,7 @@
             "pr": 102,
             "status": "open"
           },
-          "note": "The author says it tightens the reserve of the fourth-power seed and the selected-energy gap to 1e-20, tightens the return reserve and the top conductor step to 1e-22, and deepens one edge cover, which closes to within 9.7322e-22 of the limiting contact of this count scheme. The PR says 224 of its 236 Lean files are identical to the submission of PR #99. The tracker metadata also names Joseph Bebel as an author. It builds on Joseph Bebel's PR #93, PR #98 and PR #99, Arvi's PR #97, and on Jacob Sussman, Sil, Hailey Collet and OpenAI. It is 0.00000000000000007 below PR #101.",
+          "note": "The author says it tightens the reserve of the fourth-power seed and the selected-energy gap to 1e-20, tightens the return reserve and the top conductor step to 1e-22, and deepens one edge cover, which closes to within 9.7322e-22 of the limiting contact of this count scheme. The PR says 224 of its 236 Lean files are identical to the submission of PR #99. The tracker metadata also names Joseph Bebel as an author. It builds on Joseph Bebel's PR #93, PR #98 and PR #99, Arvi's PR #97, and on Jacob Sussman, Sil, Hailey Collet and OpenAI. It is 0.00000000000000000007 below PR #101.",
           "authors": [
             {
               "name": "Devin Watson",
