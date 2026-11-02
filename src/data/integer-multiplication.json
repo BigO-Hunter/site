@@ -61632,7 +61632,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/5650",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-26T02:33:34Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "zxv combines the three helper cleanups of aliromman's PR 5644 with zxv's own PR 5643, the A2 paid-rank exchange, in one emitted word, raising the conditional kappa to 0.00310644468 (+1.8133e-7 over PR 5644). Sixteen late scalar gates are replaced by an exact dyadic input preparation and cancellation, so three main fields skip unused stops. All independent inputs and owned operations are kept."
     },
     "crocswap-selected-d926d37e9738ce61": {
       "checked_at": "2026-10-28",
@@ -61690,7 +61691,8 @@
         555,
         589
       ],
-      "upstream_selected": true
+      "upstream_selected": true,
+      "credit_note": "The maintainers selected this reviewed conditional result, the helper-470 twin-rung removal of DreamingOfClouds' PR 6030, after full primary and independent audits. It removes the frame-593 rung of helper 470, the twin of the removal in PR 5907. The five framework assumptions remain, and no uniform word or rounded multiplier is materialized."
     },
     "crocswap-pr-6144": {
       "checked_at": "2026-11-02",
@@ -61718,7 +61720,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6144",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-28T14:54:32Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds lets owned registers 770, 771 and 772 descend through the frames of helpers 705, 706 and 731, which no longer relay them, raising the conditional kappa from 0.003125804 to 0.003128386 and cutting the paid bill from 66,834 to 66,762 calls. It edits the merged word of PR 6030 and re-certifies it with aliromman's PR 5827 verifier. It continues DreamingOfClouds' PR 6143, which folds the first two relays."
     },
     "crocswap-pr-6145": {
       "checked_at": "2026-11-02",
@@ -61746,7 +61749,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6145",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-28T15:06:53Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "CubeJerry removes the 772/731 relay and adds eight arbitrary-input compensations and an earlier cleanup, cutting complete paid calls from 66,798 to 66,780 and raising the conditional kappa to 0.003127804 (+6.67e-7 over PR 6143). It adds a distinct root to the word of DreamingOfClouds' PR 6143 and uses aliromman's PR 5827 checker. The PR credits DreamingOfClouds, aliromman, Matarener, Clear1nsight and Mister-Meeseeks."
     },
     "crocswap-pr-6167": {
       "checked_at": "2026-11-02",
@@ -61774,7 +61778,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6167",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-29T00:26:22Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "aliromman saves an operand in an unused lifetime of register 770, so reader 451 no longer needs helper 228 at frame 737 before it reads root 772 and the root skips that stop. This raises the conditional kappa from 0.003128386 to 0.003128645. The package edits the word of DreamingOfClouds' PR 6144 with five guarded replacements; the extra lifetime and operations are charged."
     },
     "crocswap-pr-6235": {
       "checked_at": "2026-11-02",
@@ -61802,7 +61807,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6235",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-30T00:45:44Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "GamingPuzzled reports a conditional kappa of 0.003125811, 7e-9 above the 0.003125804 of DreamingOfClouds' PR 6030, as a corollary: every fixed kappa below 0.0031258115 holds under the same five framework assumptions. The physical word and the complete invoice are unchanged. The PR claims no new mechanism and no independent review."
     },
     "crocswap-pr-6349": {
       "checked_at": "2026-11-02",
@@ -61830,7 +61836,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6349",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T01:28:05Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "aliromman starts four existing helper inputs at native subspaces of dimension 1, 1, 1 and 3, with explicit correlated input directions and output basis corrections that keep all 770 inputs independent. This raises the conditional kappa from PR 6167's 0.003128645 to 0.003129111. The direct source is DreamingOfClouds' PR 6314, which compresses PR 6167 without changing its recursive price."
     },
     "crocswap-pr-6348": {
       "checked_at": "2026-11-02",
@@ -61858,7 +61865,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6348",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T01:24:11Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "aliromman replaces the paired path caller of PR 6167 with a binary tree of query suppliers and raises the conditional kappa from 0.003128645 to 0.00314933 (+0.661 percent). Each module combines two query suppliers, one paid thin query and two idle calls, with all helper inputs still independent. It uses the query-thinned path and thin-query interface of 1337isnot1337 (PR 4470), aliromman's all-forward native binding (PR 5544) and DreamingOfClouds' local-word changes (PR 6144)."
     },
     "crocswap-pr-6350": {
       "checked_at": "2026-11-02",
@@ -61886,7 +61894,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6350",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T02:48:50Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "aliromman composes PR 6349's four native input lifts with PR 6348's binary query tree, both aliromman's, and raises the conditional kappa from 0.00314933 to 0.00314980. The two constructions are unchanged; the new work binds their interfaces and checks the complete composition. The claim is the author's own check."
     },
     "crocswap-pr-6353": {
       "checked_at": "2026-11-02",
@@ -61914,7 +61923,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6353",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T03:50:55Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "aliromman raises the conditional kappa from 0.00314980 (PR 6350) to 0.00315057 by contracting nine native helper outputs of PR 6349's supplier with a joint input and departure basis, then restoring the endpoint with paid native transports and both inverse bases. PR 6348's tree is unchanged and all 19 copies of both changes are charged. The claim is the author's own check."
     }
   },
   "updated_at": "2026-11-02T07:17:26Z"
