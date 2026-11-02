@@ -260,6 +260,37 @@ class DirectImportTests(unittest.TestCase):
         with self.assertRaises(gate.Rejected):self.check(run=running,jobs=self.jobs(),raw_receipt_tamper=True)
         with self.assertRaises(gate.Rejected):self.check(run=running,jobs=self.jobs(),issue=dict(self.issue,body=self.issue['body'].replace('47171','47172')))
 
+    def test_a_check_that_ran_out_of_time_is_a_timeout_not_a_rejection(self):
+        # Lead, 2026-11-02 (verifier #99, run 41393097953): the receipt has status 'timeout', the Lean kernel incomplete
+        # with reason 'timeout', the audit not started and nanoda stopped at the total deadline.
+        def stopped(**change):
+            env=copy.deepcopy(self.env);receipt=env['receipt']
+            receipt.update(status='timeout',kernels={'lean':{'status':'incomplete','reason':'timeout','systemd_result':'timeout'},
+                                                     'nanoda':{'status':'incomplete','reason':'total_deadline'}},axiom_audit={'status':'not_started'})
+            for t in receipt['theorems'].values():t.update(lean_kernel='incomplete',nanoda_kernel='incomplete',reported_axioms=None)
+            receipt.update(change);env['status']='not_verified'
+            return env
+        verdict=self.check(env=stopped())
+        self.assertEqual((verdict['decision'],verdict['reason']),('timeout',gate.TIMEOUT_REASON))
+        # Either signal alone: the total deadline, or the Lean kernel's own time limit.
+        self.assertEqual(self.check(env=stopped(status='not_verified'))['decision'],'timeout')
+        only_deadline=stopped();only_deadline['receipt']['kernels']['lean']={'status':'not_completed_or_rejected','reason':'lean_compile_error'}
+        self.assertTrue(gate.timed_out(only_deadline['receipt']))
+        # A real failure is no timeout: Lean rejected the proof, or it failed to compile, or nanoda rejected it.
+        for kernels in [{'lean':{'status':'rejected','reason':'lean_kernel_rejection'}},{'lean':{'status':'not_completed_or_rejected','reason':'lean_compile_error'}},
+                        {'lean':{'status':'incomplete','reason':'timeout'},'nanoda':{'status':'rejected'}}]:
+            env=stopped(status='not_verified',kernels=kernels)
+            with self.subTest(kernels=kernels):
+                self.assertFalse(gate.timed_out(env['receipt']))
+                with self.assertRaises(gate.Rejected):self.check(env=env)
+        # A timeout after Lean passed is decided by the usual rules, never as a timeout.
+        self.assertFalse(gate.timed_out(dict(self.env['receipt'],status='timeout')))
+        # Every binding still applies: the request, the exact statement, the completion time.
+        for change in [{'generated_challenge_sha256':'0'*64},{'checked_at':'2020-01-01T00:00:00Z'},{'theorem_names':['Other']}]:
+            with self.subTest(change=change),self.assertRaises(gate.Rejected):self.check(env=stopped(**change))
+        # Only the final issue route: maintainer and PR receipts keep the strict policy.
+        with self.assertRaises(gate.Rejected):gate.validate_kernel_receipt(stopped()['receipt'],self.env['receipt']['theorem_names'])
+
     def test_evidence_log_hashes(self):
         content = b'Synthetic test log, not proof evidence.'
         receipt = self.env['receipt']

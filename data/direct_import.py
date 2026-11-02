@@ -267,7 +267,7 @@ def validate_result(archive, issue, run, artifact, trusted_revisions, *, receipt
     require(env.get('model_revision') == profile['upstream_commit'] and env.get('model_sha256') == profile['challenge_sha256'], 'Envelope model pin mismatch')
     require(env.get('theorem_names') == profile['theorem_names'], 'Envelope targets mismatch')
     require(env.get('challenge') == dict(file=profile['challenge_file'], sha256=profile['challenge_sha256'], upstream_commit=profile['upstream_commit'], generated_sha256=sha(challenge_bytes(submission, base))), 'Envelope challenge mismatch')
-    decision, reason, checked_at = validate_proof(submission, receipt, trust, revision, run_url)
+    decision, reason, checked_at = validate_proof(submission, receipt, trust, revision, run_url, allow_timeout=not early)
     require(env.get('checked_at') == checked_at, 'Envelope completion timestamp mismatch')
     return dict(decision=decision, reason=reason, id=f'direct-{issue["number"]}-{env["submission_sha256"]}',
                 problem_id=PROBLEMS[submission['problem']][0], score=submission['bound'], score_relation='attained',
@@ -287,7 +287,33 @@ def derivation_hold(report):
     return bool(report and report.get('hold'))
 
 
-def validate_proof(submission, receipt, trust, revision, run_url):
+TIMEOUT_REASON = 'The proof check ran out of time; this is not a verdict on the proof'
+
+def timed_out(receipt):
+    """The verifier stopped the check for time (Lead, 2026-11-02, verifier #99: the 3SUM proof ran 5 h 20 min): the receipt's
+    status is 'timeout' (the total deadline, scripts/verifier.py), or the Lean kernel is incomplete with the reason
+    'timeout' (its systemd time limit). Never when a kernel rejected the proof."""
+    kernels = receipt.get('kernels') if isinstance(receipt.get('kernels'), dict) else {}
+    lean = kernels.get('lean') if isinstance(kernels.get('lean'), dict) else {}
+    theorems = receipt.get('theorems') if isinstance(receipt.get('theorems'), dict) else {}
+    rejected = (lean.get('status') == 'rejected' or (kernels.get('nanoda') or {}).get('status') == 'rejected'
+                or any(isinstance(t, dict) and 'rejected' in (t.get('lean_kernel'), t.get('nanoda_kernel')) for t in theorems.values()))
+    stopped = receipt.get('status') == 'timeout' or (lean.get('status') == 'incomplete' and lean.get('reason') == 'timeout')
+    return stopped and lean.get('status') != 'passed' and not rejected
+
+def completion_time(receipt):
+    finished = receipt.get('finished_unix')
+    require(type(finished) in (int, float), 'Missing completion timestamp')
+    try:
+        checked_at = datetime.fromtimestamp(finished, timezone.utc).isoformat().replace('+00:00', 'Z')
+    except (ValueError, OverflowError, OSError) as error:
+        raise Rejected('Invalid completion timestamp') from error
+    require(receipt.get('checked_at') == checked_at, 'Completion timestamp mismatch')
+    return checked_at
+
+def validate_proof(submission, receipt, trust, revision, run_url, allow_timeout=False):
+    """allow_timeout (the issue route only): a receipt whose check stopped for time (timed_out) gives the decision
+    'timeout' instead of a rejection. The request, provenance and statement bindings apply as always."""
     key = 'dft233' if submission.get('entrypoint') == 'dft233' else submission['problem']
     require(key in trust['profiles'], 'Unreviewed challenge profile')
     profile = trust['profiles'][key]
@@ -301,19 +327,16 @@ def validate_proof(submission, receipt, trust, revision, run_url):
     require(receipt.get('request') == expected, 'Receipt request mismatch')
     require(receipt.get('verifier_commit') == revision and receipt.get('run_url') == run_url, 'Receipt provenance mismatch')
     require(receipt.get('generated_challenge_sha256') == sha(challenge_bytes(submission, base)), 'Exact bound statement mismatch')
+    if allow_timeout and timed_out(receipt):
+        require(receipt.get('theorem_names') == names and set(receipt.get('theorems', {})) == set(names), 'Missing or unexpected theorem targets')
+        return 'timeout', TIMEOUT_REASON, completion_time(receipt)
     return validate_kernel_receipt(receipt, names)
 
 
 def validate_kernel_receipt(receipt, names):
     """Shared Lean, permitted-axiom and advisory-kernel evidence policy."""
     require(receipt.get('theorem_names') == names and set(receipt.get('theorems', {})) == set(names), 'Missing or unexpected theorem targets')
-    finished = receipt.get('finished_unix')
-    require(type(finished) in (int, float), 'Missing completion timestamp')
-    try:
-        checked_at = datetime.fromtimestamp(finished, timezone.utc).isoformat().replace('+00:00', 'Z')
-    except (ValueError, OverflowError, OSError) as error:
-        raise Rejected('Invalid completion timestamp') from error
-    require(receipt.get('checked_at') == checked_at, 'Completion timestamp mismatch')
+    checked_at = completion_time(receipt)
     audit = receipt.get('axiom_audit', {})
     reported = audit.get('reported_axioms', {})
     require(set(reported) == set(names), 'Incomplete axiom audit')

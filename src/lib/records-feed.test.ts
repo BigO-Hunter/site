@@ -473,6 +473,14 @@ test('a direct claim posts once when verification ends: pass is New record, fail
  assert.deepEqual(plan(failed.state,snapshot(board([row(),direct('Claimed','failed')],'direct-issue-35')),[],t0+30*hour).messages,[]);
  // Withdrawn: the row leaves the board; nothing posts.
  assert.deepEqual(plan(still.state,snapshot(),[],t0+2*hour).messages,[]);
+ // A check that ran out of time (Lead, 2026-11-02, verifier #99) is listed with the state failed: when a refresh dropped the
+ // row and it comes back, nothing posts, also after the hold limit.
+ const dropped=plan(still.state,snapshot(),[],t0+2*hour);
+ for(const at of [t0+3*hour,t0+HOLD_LIMIT+hour]){
+  const back=plan(dropped.state,snapshot(board([row(),direct('Claimed','failed')],'direct-issue-35')),[],at);
+  assert.deepEqual(back.messages,[]);
+  assert.deepEqual(plan(back.state,snapshot(board([row(),direct('Claimed','failed')],'direct-issue-35')),[],at+30*hour).messages,[]);
+ }
  // Still running after the hold limit: posts once as a claim.
  const late=plan(still.state,snapshot(board([row(),direct()],'direct-issue-35')),[],t0+HOLD_LIMIT);
  assert.equal(late.messages.length,1);

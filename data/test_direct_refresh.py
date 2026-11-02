@@ -357,6 +357,41 @@ class RefreshTests(unittest.TestCase):
                 if jobs:
                     importer.jobs(importer.runs[77]);self.assertEqual(len(reads),1)  # once per attempt
 
+    def test_a_check_that_ran_out_of_time_keeps_the_row_claimed_and_a_real_failure_drops_it(self):
+        # Lead, 2026-11-02 (verifier #99): a timeout is not a verdict. The verifier's 'Not verified' reply is the same for both.
+        sub=d.parse_body(self.issue()['body']);digest=d.sha(d.canonical(sub).encode())
+        report=[{'user':{'login':'github-actions[bot]','type':'Bot'},'body':f'<!-- bos-direct-v1 5 {digest} '+'a'*64+f' -->\nNot verified for source commit `{sub["commit"]}`.\nReason: the proof check ran out of time.'}]
+        class API(DiscoveryAPI):
+            def pages(self,path,params=None,key=None):
+                return report if path.endswith('/comments') else super().pages(path,params,key)
+        outcomes={}
+        for decision in ['timeout','pending']:
+            importer=r.Importer(API([self.issue()]))
+            claim=dict(route='issue',item=self.issue(),submission=sub)
+            importer.retain_outcome('direct-issue-5',claim,'final',dict(decision=decision),{'marker':decision})
+            kept=importer.verify({'direct-issue-5':claim},dict(final_states=copy.deepcopy(importer.final_states)))
+            outcomes[decision]=kept.get('direct-issue-5')
+            if decision=='timeout':final=copy.deepcopy(importer.final_states)
+        self.assertIsNone(outcomes['pending'])  # a real failure: not listed, as before
+        listed=outcomes['timeout']
+        self.assertEqual((listed.get('verification'),listed['review_note']),(None,r.TIMEOUT_NOTE))
+        row,meta,_=r.row_for('direct-issue-5',listed,'2026-11-02T11:00:00Z')
+        self.assertEqual((row['tier'],meta['site_tier'],meta['proof_status']),('claimed','claimed',r.TIMEOUT_NOTE))
+        self.assertNotIn('rerun_status',row)
+        # Feed state failed: the records feed never posts it (records-feed.ts), also when it comes back after a drop.
+        self.assertEqual(r.verification_state('direct-issue-5',listed,final),'failed')
+        fixtures=json.loads((ROOT/'direct-fixtures/board-snapshots.json').read_text())
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            for slug in r.SLUGS.values():(root/(slug+'.json')).write_bytes(r.json_bytes(fixtures[slug]))
+            (root/'registry.json').write_bytes(r.json_bytes({'checked_at':'2026-10-10','updated_at':'2026-10-10T00:00:00Z'}))
+            board=json.loads(r.prepare(root,{'direct-issue-5':listed},{},'2026-11-02T11:00:00Z',final)['exact-dft.json'])
+            self.assertEqual((board['record_metadata']['direct-issue-5']['verification'],board['record_metadata']['direct-issue-5']['proof_status']),('failed',r.TIMEOUT_NOTE))
+        # After a restart (no artifact read), the saved timeout outcome keeps the status.
+        again=r.Importer(API([self.issue()]))
+        claim=dict(route='issue',item=self.issue(),submission=sub)
+        self.assertEqual(again.verify({'direct-issue-5':claim},dict(final_states=final))['direct-issue-5']['review_note'],r.TIMEOUT_NOTE)
+
     def test_a_draft_verifier_pr_created_from_5270_on_is_not_a_claim_until_ready(self):
         pr=dict(number=60,state='open',merged=False,draft=True,labels=[],head={'sha':'a'*40},user={'login':'alice'},created_at='2026-10-24T00:00:00Z',html_url='https://github.com/bigospeedrun/verifier/pull/60')
         sub=dict(d.parse_body(self.issue()['body']),source_subdir='submissions/dft/alice-proof')
