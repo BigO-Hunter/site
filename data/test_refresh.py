@@ -597,6 +597,31 @@ class RefreshTests(unittest.TestCase):
                          updated=sorted(changed.values(),key=lambda p:p['updated_at'],reverse=True)+[base[0]])[0]
         self.assertEqual([refresh.pull_index(p)|{'body':p['body']} for p in full],[refresh.pull_index(p)|{'body':p['body']} for p in inc])
 
+    def test_a_new_row_does_not_inherit_the_notes_or_evidence_of_its_template_row(self):
+        # Lead, 2026-11-02: new CrocSwap PR rows copy crocswap-pr-61; a later note, credit, prove2.me upgrade or rerun
+        # on pr-61 must not reach them.
+        problem=json.loads((refresh.ROOT/'integer-multiplication.json').read_text())
+        record=next(r for r in problem['records'] if r['id']=='crocswap-pr-61');meta=problem['record_metadata']['crocswap-pr-61']
+        record=dict(record,tier='verified',rerun_status={'state':'passed'},provenance={'x':1})
+        meta=dict(meta,credit_note='A reviewed note on pr-61.',credits='c',notes_url='https://example.test',listing_status='research-draft',
+                  claim_date_commit='a'*40,upstream_readme={'x':1},prove2me=True,prove2me_upgrade=True,receipt_url='https://prove2.me/x',
+                  site_tier='verified',upstream_tier='verified')
+        before=(json.dumps(record,sort_keys=True),json.dumps(meta,sort_keys=True))
+        template,mt=refresh.row_template(record,meta)
+        for key in refresh.ROW_ONLY_RECORD:self.assertNotIn(key,template)
+        for key in refresh.ROW_ONLY_METADATA:self.assertNotIn(key,mt)
+        self.assertEqual((template['tier'],mt['site_tier'],mt['upstream_tier']),('claimed','claimed','claimed'))
+        # The shared fields stay, and pr-61 itself is unchanged.
+        self.assertEqual((mt['comparison_key'],mt['race_repo'],mt['proof_status']),(meta['comparison_key'],meta['race_repo'],meta['proof_status']))
+        self.assertEqual(before,(json.dumps(record,sort_keys=True),json.dumps(meta,sort_keys=True)))
+        # Every per-row metadata field that a row of the live board has is in the list, or shared by the PR rows.
+        shared={k for k in meta if k not in refresh.ROW_ONLY_METADATA}
+        pr_rows=[m for i,m in problem['record_metadata'].items() if i.startswith('crocswap-pr-')]
+        self.assertFalse({k for m in pr_rows for k in m}-shared-set(refresh.ROW_ONLY_METADATA))
+        # refresh() starts new rows from row_template.
+        import inspect
+        self.assertIn("row_template(records['crocswap-pr-61'], metadata['crocswap-pr-61'])",inspect.getsource(refresh.refresh))
+
     def test_score_limit_matches_schema(self):
         schema=json.loads((refresh.ROOT/'schemas/problem-v1.json').read_text())['properties']['records']['items']['properties']['score']
         self.assertEqual(schema['maxLength'],refresh.MAX_SCORE_CHARS)

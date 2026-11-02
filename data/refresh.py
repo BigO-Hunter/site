@@ -494,6 +494,23 @@ def list_pulls(stage, now, force_full=False):
     listing['pulls_watermark'] = max([p['updated_at'] for p in fresh] + ([watermark] if watermark else []), default=None)
     return sorted(merged.values(), key=lambda p: p['number']), listing
 
+# A new CrocSwap row starts from a copy of crocswap-pr-61. These fields belong to that one row (a reviewed note,
+# credits, a prove2.me upgrade or a rerun), so a copy drops them, and its tier starts at Claimed (lead, 2026-11-02).
+ROW_ONLY_RECORD = ('rerun_status', 'provenance')
+ROW_ONLY_METADATA = ('credit_note', 'credits', 'notes_url', 'listing_status', 'claim_date_commit', 'upstream_readme',
+                     'prove2me', 'prove2me_upgrade', 'receipt_url')
+
+def row_template(record, meta):
+    """Copies of one row's record and metadata to start a new row from, without the fields of that row only."""
+    record, meta = copy.deepcopy(record), copy.deepcopy(meta)
+    for key in ROW_ONLY_RECORD:
+        record.pop(key, None)
+    for key in ROW_ONLY_METADATA:
+        meta.pop(key, None)
+    record['tier'] = 'claimed'
+    meta.update(site_tier='claimed', upstream_tier='claimed')
+    return record, meta
+
 def refresh(stage, now):
     day = now[:10]
     claim_judge.calls_left = claim_judge.CALLS_PER_RUN
@@ -504,9 +521,8 @@ def refresh(stage, now):
     subs = load(stage, 'submissions.json')
     old = {s['pr_number']: s for s in subs['items']}
     records = {r['id']: r for r in problem['records']}
-    template = copy.deepcopy(records['crocswap-pr-61'])
     metadata = problem['record_metadata']
-    mt = copy.deepcopy(metadata['crocswap-pr-61'])
+    template, mt = row_template(records['crocswap-pr-61'], metadata['crocswap-pr-61'])
     pulls, pull_listing = list_pulls(stage, now)
     assert len({p['number'] for p in pulls}) == len(pulls)
     assert set(old) <= {p['number'] for p in pulls}, 'PR coverage regressed'
@@ -581,7 +597,6 @@ def refresh(stage, now):
                 d['source_url'] = p['html_url']
             m.update(checked_at=day, source_url=p['html_url'], pr_number=n, merged=bool(p['merged_at']), merged_at=p['merged_at'], closed_at=p['closed_at'], updated_at=p['updated_at'], eligible_for_record=bool(p['merged_at']), upstream_selected=False, publication_date=p['created_at'], publication_source_url=p['html_url'], race_event_at=p['created_at'])
             if new:
-                m.pop('upstream_readme', None)
                 m['score_source'] = f"{'kappa' if CLAIM_PATH.fullmatch(claim_path) else 'stated kappa'} in {claim_path} at the PR head; source claim only" if claim_head and claim_path else 'Lead review decision; source claim only'
             records[rid] = r; metadata[rid] = m
         for rid in prior['record_ids'] if prior else []:
