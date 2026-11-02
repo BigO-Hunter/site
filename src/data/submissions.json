@@ -118029,6 +118029,33 @@
       "claim_files_head": "b0aa576f696596bab37817334f75237410a6204f",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6360,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Independently check four frame1094 native matrices",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6360",
+      "submitted_at": "2026-11-02T06:23:06Z",
+      "updated_at": "2026-11-02T06:23:06Z",
+      "source_commit": "13b05840990819d8f473ac5d52723b417afe598b",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T06:23:06Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "13b05840990819d8f473ac5d52723b417afe598b",
+      "claim_text": "8b8a9107b04b0022a43a3544af0736bc15a517db7a30582f69f2c46856e4c4de",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-frame1094-native-columns/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "13b05840990819d8f473ac5d52723b417afe598b",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
