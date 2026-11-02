@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "entries": {
-    "direct-issue-100": {
+    "direct-issue-101": {
       "route": "issue",
       "submission": {
         "schema_version": 1,
         "problem": "subset-sum",
-        "repo_url": "https://github.com/darkhipo/subset-sum-mitm",
-        "commit": "fccd1159daf8e41f506844d4255bdebd0ccd94cc",
+        "repo_url": "https://github.com/darkhipo/subset-sum-half",
+        "commit": "12245027451c4eb83edb7b7df782b51e48507754",
         "bound": "1/2",
         "authors": []
       }
@@ -3504,6 +3504,11 @@
       "version": "c7ed0d8cfd49e44a51c76386cce4bf81307160fc33636fb4d39d15e10c3f1309",
       "updated_at": "2026-11-02T05:26:11Z",
       "claimed_only": false
+    },
+    "100": {
+      "version": "e27324fdad3cfab2f05c36333260553394cbef7a48b8e9b0abd821b1aff736bd",
+      "updated_at": "2026-11-02T06:38:17Z",
+      "claimed_only": false
     }
   },
   "not_verified_cache": {
@@ -3529,7 +3534,12 @@
     },
     "100": {
       "version": "e27324fdad3cfab2f05c36333260553394cbef7a48b8e9b0abd821b1aff736bd",
-      "updated_at": "2026-11-02T04:40:06Z",
+      "updated_at": "2026-11-02T06:38:17Z",
+      "not_verified": false
+    },
+    "101": {
+      "version": "6f6b4fc5c8c20fb806b01b94c4d408331a72ea82bb5aa37fd52db8f29134ec4c",
+      "updated_at": "2026-11-02T06:42:34Z",
       "not_verified": false
     }
   }

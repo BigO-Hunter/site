@@ -122659,5 +122659,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6361,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6361",
+    "title": "Independently verify the fixed balanced caller Laurent endpoint",
+    "state": "open",
+    "created_at": "2026-11-02T06:55:09Z",
+    "updated_at": "2026-11-02T06:55:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "d3f45af07fa75c260819ad630f4338e761d2b368"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

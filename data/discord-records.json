@@ -4883,7 +4883,7 @@
             "bound": "O(2^(0.4876723n))"
           },
           {
-            "id": "direct-issue-100",
+            "id": "direct-issue-101",
             "score": "1/2",
             "relation": "attained",
             "evidence": "Claimed",
@@ -4893,7 +4893,7 @@
             "bound": "O(2^(0.5n))",
             "verification": {
               "state": "pending",
-              "since": "2026-11-02T04:39:54Z"
+              "since": "2026-11-02T05:54:43Z"
             }
           }
         ],

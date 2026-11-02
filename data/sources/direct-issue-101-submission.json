@@ -1,0 +1,15 @@
+{
+  "route": "issue",
+  "number": 101,
+  "url": "https://github.com/bigospeedrun/verifier/issues/101",
+  "submitter": "darkhipo",
+  "created_at": "2026-11-02T05:54:43Z",
+  "submission": {
+    "schema_version": 1,
+    "problem": "subset-sum",
+    "repo_url": "https://github.com/darkhipo/subset-sum-half",
+    "commit": "12245027451c4eb83edb7b7df782b51e48507754",
+    "bound": "1/2",
+    "authors": []
+  }
+}

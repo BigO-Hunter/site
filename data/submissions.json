@@ -118056,6 +118056,33 @@
       "claim_files_head": "13b05840990819d8f473ac5d52723b417afe598b",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6361,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Independently verify the fixed balanced caller Laurent endpoint",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6361",
+      "submitted_at": "2026-11-02T06:55:09Z",
+      "updated_at": "2026-11-02T06:55:09Z",
+      "source_commit": "d3f45af07fa75c260819ad630f4338e761d2b368",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T06:55:09Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "d3f45af07fa75c260819ad630f4338e761d2b368",
+      "claim_text": "6af56d20983049faf29720ddb608b81061c9f8efa03d42b39b26592f30aa2686",
+      "claim_files": [
+        [
+          "added",
+          "research/balanced-caller-endpoint-audit/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "d3f45af07fa75c260819ad630f4338e761d2b368",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
