@@ -903,7 +903,8 @@
       "open_race": false,
       "credits": "Swapnil Jain; builds on Alman and Vassilevska Williams, ImprovedExponents, and the reductions credited in the source README.",
       "license_status": "Apache-2.0; LICENSE and NOTICE retained",
-      "notes_url": "https://github.com/Swapnil-jain/threesum-derand/blob/087ece61dd9ef6108441927785b16dfda0e95284/proofs/bands.md"
+      "notes_url": "https://github.com/Swapnil-jain/threesum-derand/blob/087ece61dd9ef6108441927785b16dfda0e95284/proofs/bands.md",
+      "credit_note": "Swapnil lowers the deterministic exponent from Alman and Vassilevska Williams' 1.9992 to 1.995782 by letting each element of a shared leaf move to any free level below it in its segment, with segments of lengths 8 and 9 in a fixed mix. The method and lemmas are Alman and Vassilevska Williams'; the small primes chosen one at a time follow Chan and Lewenstein. The exact leaf count and pruned encodings are qawbecrdtey's, from ImprovedExponents, which also named the lead that this follows."
     },
     "jihoon-hyun-3sum-2026": {
       "checked_at": "2026-10-10",
