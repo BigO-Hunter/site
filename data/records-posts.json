@@ -1711,5 +1711,14 @@
     "authors": [
       "Dmitri I. Arkhipov"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-6353\",\"315057/100000000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.00315) n)` | by Ali Romman | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.00315) n)\nPlayer: Ali Romman\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-02T06:35:14.649Z",
+    "authors": [
+      "Ali Romman"
+    ]
   }
 ]
