@@ -1017,8 +1017,8 @@
     "id": "2117143492304474581"
   },
   "[\"subset-sum\",\"direct-issue-94\",\"3/4\",\"attained\"]:lean": {
-    "status": "unknown",
-    "at": "2026-11-02T09:32:44.348Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-02T09:32:46.098Z",
+    "id": "2117188153769390579"
   }
 }
