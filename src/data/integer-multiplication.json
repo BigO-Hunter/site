@@ -41068,7 +41068,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/61",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T17:41:13Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Alejandro Zarzuelo Urdiales refines the strongest stacked witness of Avi Eisenberg's PR 62, interval strips with core-aware pair assembly, combined with eumemic's joint frame compiler of PR 57. The conditional kappa is 5.1016920170078e-5, which exceeds PR 62's 5.101691e-5 by 1.0170078e-11. Earlier PRs 58 and 60 retain credit for chafreaky and gupt1156."
     },
     "crocswap-pr-62": {
       "checked_at": "2026-11-02",
@@ -51964,7 +51965,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/531",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-12T01:24:54Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin keeps the 112-port data controller of their PR 523 and swaps in a new 504-helper complex supplier, using the same coordinate partition in both target tetrahedra and omitting 56 assembled packet sums. The conditional kappa is 1.517760977820331e-3, 4.10 percent above PR 523. The bit supplier is eumemic's PR 493, a cited dependency."
     },
     "crocswap-pr-532": {
       "checked_at": "2026-11-02",
@@ -52076,7 +52078,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/535",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-12T02:14:52Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin extends their PR 531 supplier with post-center compensation and rank-four response kernels, so the leftover values of 112 helpers are compensated at the start of delivery. The conditional kappa is 1.584931111785787e-3, 4.43 percent above PR 531. The bit side binds, through the bit supplier of DreamingOfClouds' PR 510, which is adopted and credited, not new work."
     },
     "crocswap-pr-536": {
       "checked_at": "2026-11-02",
@@ -60786,7 +60789,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/4359",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-21T14:30:08Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "zxv keeps the completed work that helpers already hold instead of undoing it, so one local unit gives jobs of several ranks, and a finite integer compiler turns this mixed rule back into an ordinary uniform supplier. It builds on Jacob Sussman's mixed-target recursion in PR 4268. The conditional kappa is 0.0023, 32.87 percent above rohanarun's PR 4181."
     },
     "crocswap-pr-4405": {
       "checked_at": "2026-11-02",
@@ -60842,7 +60846,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/4412",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-21T17:07:37Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Cinna Davis removes the helper-packing and paid-rank restrictions of zxv's PR 4359 with a native tensor composition and a separately certified tail bound. The conditional kappa rises from 0.0023 to 0.00247755. The package credits zxv's native construction and Jacob Sussman's mixed flow, and uses the rational family of Cinna Davis' PR 4405."
     },
     "crocswap-pr-4414": {
       "checked_at": "2026-11-02",
@@ -60870,7 +60875,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/4414",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-21T17:12:49Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Cinna Davis binds the stored p6 controller of zxv's PR 4359 to a complete native physical word, using the tensor construction of their own PR 4412. The conditional kappa is 0.00267987, up from 0.0023 in PR 4359 and 0.00247755 in PR 4412. The package also pins an export of Cinna Davis' PR 4405."
     },
     "crocswap-pr-4416": {
       "checked_at": "2026-11-02",
@@ -60956,7 +60962,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/4441",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-21T20:11:02Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Cinna Davis applies fresh-helper retiming to all 19 full native calls of the query-thinned controller of their PR 4440, which cuts paid calls from 72,902 to 69,273. The conditional kappa is 0.00300105, 1.39 percent above PR 4440. Credit also goes to zxv's controller and compiler work, Jacob Sussman's mixed flow and the paid-completion construction of PR 4416."
     },
     "crocswap-pr-4447": {
       "checked_at": "2026-11-02",
@@ -61068,7 +61075,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/4440",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-21T20:08:38Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Cinna Davis replaces full stage and idle transforms with copied rank-one query shears where those suffice, and charges the lost productive helpers. The conditional kappa is 0.00296, 10.18 percent above the 0.00268647 of PRs 4416 and 4433. Credit goes to zxv's controller and native work, Jacob Sussman's mixed flow and the paid-completion construction of PR 4416."
     },
     "crocswap-pr-4470": {
       "checked_at": "2026-11-02",
@@ -61631,7 +61639,8 @@
         555,
         589
       ],
-      "upstream_selected": false
+      "upstream_selected": false,
+      "credit_note": "The maintainers selected this reviewed conditional result: the independent helper splits of Ali Romman's PR 5599, on the commuting-contact cascade of Pierre-Loic Doulcet's PR 5565. Its 36 source PRs also include Ali Romman's PRs 5580, 5544 and 5545, Joel Pulikkan's PR 5569, DreamingOfClouds' PR 5561 and thu-nmrc's PR 5551. The selected conditional kappa is 0.00310045."
     },
     "crocswap-pr-5650": {
       "checked_at": "2026-11-02",
