@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-02T08:44:27Z",
+    "updated_at": "2026-11-02T09:27:15Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -122687,7 +122687,7 @@
     "title": "C05/V03: add input-edge constructors and genuine source-control drafts",
     "state": "open",
     "created_at": "2026-11-02T08:27:12Z",
-    "updated_at": "2026-11-02T08:48:51Z",
+    "updated_at": "2026-11-02T09:23:12Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122708,7 +122708,7 @@
     "title": "C05/V03: pin parent-domain incompatibilities and recover missing source",
     "state": "open",
     "created_at": "2026-11-02T09:11:45Z",
-    "updated_at": "2026-11-02T09:11:45Z",
+    "updated_at": "2026-11-02T09:33:55Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122717,6 +122717,69 @@
     },
     "head": {
       "sha": "a8cf650b7435ccea237084e491e339f725c0a35b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6364,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6364",
+    "title": "C05: implement bounded GCC13 prefix visit ordering",
+    "state": "open",
+    "created_at": "2026-11-02T10:12:40Z",
+    "updated_at": "2026-11-02T10:12:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "ea96ac0f9eaddd677226680963d3784922549af2"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6365,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6365",
+    "title": "C05: bind compile source, output and context separately",
+    "state": "open",
+    "created_at": "2026-11-02T10:12:42Z",
+    "updated_at": "2026-11-02T10:12:42Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "c069724bf69bd03a762e06b0b129d79348d454dc"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6366,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6366",
+    "title": "C05: authenticate same-build generated GCC data and record guarded directives",
+    "state": "open",
+    "created_at": "2026-11-02T10:12:45Z",
+    "updated_at": "2026-11-02T10:12:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "97dd394ce1ddf00cc80dfdaad71767fdbc85af47"
     },
     "base": {
       "ref": "main"
