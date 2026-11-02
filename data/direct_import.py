@@ -320,13 +320,25 @@ def completion_time(receipt):
     require(receipt.get('checked_at') == checked_at, 'Completion timestamp mismatch')
     return checked_at
 
+# The receipt's copy of the profile may differ from the reviewed one only in the execution key "runner" (Lead,
+# 2026-11-02): 3SUM issues run split since verifier issue #99, so newer 3SUM receipts carry "runner": "github-split" and
+# older ones carry none. The runner changes how the solution is built, not the statement, targets or toolchain:
+# Comparator checks the exported theorem against the trusted challenge in both modes. Every other key must match.
+RUNNERS = ('github', 'github-split')
+
+def same_profile(actual, reviewed):
+    if not isinstance(actual, dict) or actual.get('runner', 'github') not in RUNNERS:
+        return False
+    strip = lambda p: {k: v for k, v in p.items() if k != 'runner'}
+    return strip(actual) == strip(reviewed)
+
 def validate_proof(submission, receipt, trust, revision, run_url, allow_timeout=False):
     """allow_timeout (the issue route only): a receipt whose check stopped for time (timed_out) gives the decision
     'timeout' instead of a rejection. The request, provenance and statement bindings apply as always."""
     key = 'dft233' if submission.get('entrypoint') == 'dft233' else submission['problem']
     require(key in trust['profiles'], 'Unreviewed challenge profile')
     profile = trust['profiles'][key]
-    require(receipt.get('profile') == profile, 'Trusted profile mismatch')
+    require(same_profile(receipt.get('profile'), profile), 'Trusted profile mismatch')
     base = trust['statements'][profile['challenge_file']]
     require(sha(base) == profile['challenge_sha256'], 'Trusted statement bytes mismatch')
     names = profile['theorem_names']

@@ -412,6 +412,22 @@ class DirectImportTests(unittest.TestCase):
             if kind=='theorem':receipt['theorem_names']=['Other.bound']
             with self.subTest(kind=kind),self.assertRaises(gate.Rejected):self.check(env=env)
 
+    def test_the_profile_runner_is_an_execution_key(self):
+        # Lead, 2026-11-02 (verifier #99): 3SUM issues run split, so newer receipts carry "runner"; older ones have none.
+        # Only the runner may differ from the reviewed profile, and only as github or github-split.
+        for runner in ['github', 'github-split']:
+            env=copy.deepcopy(self.env);env['receipt']['profile']['runner']=runner
+            with self.subTest(runner=runner):self.assertEqual(self.check(env=env)['decision'],'lean-verified')
+        for runner in ['maintainer-desktop', 'github-Split', None, '']:
+            env=copy.deepcopy(self.env);env['receipt']['profile']['runner']=runner
+            with self.subTest(runner=runner),self.assertRaises(gate.Rejected):self.check(env=env)
+        env=copy.deepcopy(self.env);env['receipt']['profile']['runner']='github-split';env['receipt']['profile']['lean_toolchain']='leanprover/lean4:v4.0.0'
+        with self.assertRaises(gate.Rejected):self.check(env=env)
+        self.assertTrue(gate.same_profile({'a':1,'runner':'github-split'},{'a':1}))
+        self.assertTrue(gate.same_profile({'a':1},{'a':1,'runner':'github-split'}))
+        self.assertFalse(gate.same_profile({'a':2,'runner':'github'},{'a':1}))
+        self.assertFalse(gate.same_profile(None,{'a':1}))
+
     def test_input_parser_rejects_unbounded_and_ambiguous_data(self):
         with self.assertRaises(gate.Rejected):gate.read_json('{"bound":1,"bound":2}')
         for bound in ['1e-3','1/0','-1','0.'+'1'*100,'9'*41,'1/'+'9'*41,'1'+'0'*40+'/3']:
