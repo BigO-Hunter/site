@@ -1774,5 +1774,14 @@
     "authors": [
       "Árpád Csizmadia"
     ]
+  },
+  {
+    "key": "[\"other-catalan\",\"slitsey:410\",\"410\",\"attained\"]:record",
+    "text": "**New claim** | **Catalan’s constant** | `μ(G) ≤ 410` | by S. Litsey | Claimed | [bigospeedrun.com/other/catalan](https://bigospeedrun.com/other/catalan)",
+    "x_text": "New claim!\n\nProblem: Catalan’s constant\nNew value: μ(G) ≤ 410\nPlayer: S. Litsey\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-02T19:34:58.618Z",
+    "authors": [
+      "S. Litsey"
+    ]
   }
 ]
