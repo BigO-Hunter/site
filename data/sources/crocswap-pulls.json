@@ -123485,7 +123485,7 @@
     "title": "Prove the fixed five-call border needs two repair cuts (no κ)",
     "state": "open",
     "created_at": "2026-11-02T21:16:04Z",
-    "updated_at": "2026-11-02T21:16:04Z",
+    "updated_at": "2026-11-02T21:24:58Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -123494,6 +123494,384 @@
     },
     "head": {
       "sha": "121b10ff0ffba6832b805a405e9f3bdd08cdd582"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6401,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6401",
+    "title": "Compose clean native merge with mixed root at raw saving 0.0032868",
+    "state": "open",
+    "created_at": "2026-11-02T21:17:57Z",
+    "updated_at": "2026-11-02T21:24:56Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "0645ec2c14669558861e8e9a1281b59643dce4ed"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6402,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6402",
+    "title": "Prove exact square-zero tensor error and sharp precision (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:18:28Z",
+    "updated_at": "2026-11-02T21:28:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e605cd6ea888a9a4885473dea88ab8d131dfe489"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6403,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6403",
+    "title": "Prove the exact weighted tariff for two normal semilinear targets",
+    "state": "open",
+    "created_at": "2026-11-02T21:18:50Z",
+    "updated_at": "2026-11-02T21:28:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "fcf24f98c7b86fd522638700fbf619220bdd845d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6404,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6404",
+    "title": "Prove an exact Gaussian boundary determinant and rank obstruction (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:21:22Z",
+    "updated_at": "2026-11-02T21:31:38Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "9bb6afaa2b8f6c837bd6ff407e365fdae6382e7e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6405,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6405",
+    "title": "Prove the sharp t=1/2 boundary for Gaussian Schur fill (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:21:48Z",
+    "updated_at": "2026-11-02T21:33:18Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "a2944133c5f43179df4033acc0dfd1cdc88af956"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6406,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6406",
+    "title": "Prove exact regular J3 optimal second-callee counts (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:23:48Z",
+    "updated_at": "2026-11-02T21:33:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "1eeff4a67add50c16e39faea4b2e98dc582845a0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6407,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6407",
+    "title": "Prove exact four-stage pure-shear swap tariffs (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:24:11Z",
+    "updated_at": "2026-11-02T21:32:02Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "7442594d23a351624b20417684afdb31590a2ce9"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6408,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6408",
+    "title": "Prove vector-cocycle call floors beyond scalar characters (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:25:17Z",
+    "updated_at": "2026-11-02T21:33:33Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "f2ebfc32f2f3ad644a7e380827fcd90f798ae7b8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6409,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6409",
+    "title": "Prove exact three-swap corank-one pivot bound (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:25:48Z",
+    "updated_at": "2026-11-02T21:37:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "050281f3d15f16a1a4e14454d168ba4d9e274894"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6410,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6410",
+    "title": "Prove exact central UT4 tariffs for every dirty workspace (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:26:50Z",
+    "updated_at": "2026-11-02T21:37:47Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "2acaf42e1f8a17c13951c5f706decfa4e325bac3"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6411,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6411",
+    "title": "Prove exact source-injection tariffs for completed partial echoes",
+    "state": "open",
+    "created_at": "2026-11-02T21:28:40Z",
+    "updated_at": "2026-11-02T21:37:25Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "cab3df8a0e45d3ba72a898c062afe7bcc2a294cc"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6412,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6412",
+    "title": "Compute two adjacent remainders with two correction comparisons (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:29:02Z",
+    "updated_at": "2026-11-02T21:37:53Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "645c3492273627df4daaa926d9df9cc686dccc86"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6413,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6413",
+    "title": "Eliminate 11,470 Gaussian setup exponential calls (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:32:13Z",
+    "updated_at": "2026-11-02T21:43:19Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "3376b28a77491fd3d11b0e93724025211c3afd6b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6414,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6414",
+    "title": "Reduce complete member-bank census time by 9.78% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:32:22Z",
+    "updated_at": "2026-11-02T21:40:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "7bc62998ba3fc9f15f6f455d41d923d1ca3945be"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6415,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6415",
+    "title": "Reduce complete literal header-census time by 47.30% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T21:35:07Z",
+    "updated_at": "2026-11-02T21:45:29Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e808800e784756a0eabf438e269bbe5005a0c75b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6416,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6416",
+    "title": "Independently audit PR6375 scalar lift prefix and owned functionals",
+    "state": "open",
+    "created_at": "2026-11-02T21:38:42Z",
+    "updated_at": "2026-11-02T21:47:41Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "8595b84671f622e4e9b2a9fecb44904ff035a3ab"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6417,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6417",
+    "title": "Conditional κ = 0.003286849: clean native merge with mixed caller",
+    "state": "open",
+    "created_at": "2026-11-02T21:53:47Z",
+    "updated_at": "2026-11-02T21:53:47Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "rohanarun",
+      "html_url": "https://github.com/rohanarun"
+    },
+    "head": {
+      "sha": "df683ace130c83ca8caaa301b027a247a46e4ea8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6418,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6418",
+    "title": "Prove sharp adaptive bias from a reused rounding seed (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T22:15:01Z",
+    "updated_at": "2026-11-02T22:15:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "4808563c500ed0d22f939e8eb3ae44d71eba7fff"
     },
     "base": {
       "ref": "main"
