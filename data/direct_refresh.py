@@ -40,6 +40,11 @@ CLAIMED_ONLY_NOTE='Submitted bound; it did not beat the best Lean Verified resul
 # Lead, 2026-11-02 (verifier #99): a check that ran out of time is not a verdict. The row stays listed as Claimed with
 # this status; its feed state is 'failed', so it never posts (records-feed.ts), also when it comes back after a refresh.
 TIMEOUT_NOTE='Submitted bound; the verifier\'s proof check ran out of time, so the proof is neither verified nor rejected. The bound remains Claimed.'
+# Lead, 2026-11-02 (verifier #99 rerun 41494392206): a verifier setup that failed before any proof check is our failure,
+# not a verdict. As a timeout: listed as Claimed with this status, feed state 'failed', no post.
+SETUP_NOTE='Submitted bound; the verifier setup failed before the proof check, so the proof is neither verified nor rejected. The bound remains Claimed.'
+# The final outcomes that are not a verdict on the proof: the "Not verified" reply does not drop such a row.
+NO_VERDICT={'timeout':TIMEOUT_NOTE,'setup':SETUP_NOTE}
 HELD_NOTE='Proof checks passed; held for a lead review of credit (derivation report). The submitted bound remains Claimed.'
 
 def untrusted_path(path):
@@ -244,6 +249,9 @@ class Importer:
             # A late checkpoint cannot replace any final outcome for this source.
             if previous['decision']!='lean-verified':claim.pop('verification',None)
             return
+        if stage=='final' and verdict['decision']=='setup' and previous:
+            # A setup failure is no result: the earlier final outcome for this source stays (newest real result wins).
+            return
         if stage=='final':
             self.final_states[identity]=dict(key=key,submission=claim['submission'],decision=verdict['decision'],evidence=evidence)
         if verdict['decision']=='blocked':
@@ -253,9 +261,9 @@ class Importer:
             # Re-read at each refresh while the artifact lasts, so an approval lists it at the next run.
             claim.pop('verification',None);claim['review_note']=HELD_NOTE
             self.notes.append(key+': Lean checks passed; held for lead review (derivation report); decide in review-decisions.json derivations')
-        elif verdict['decision']=='timeout':
-            claim.pop('verification',None);claim['review_note']=TIMEOUT_NOTE
-            self.notes.append(key+': the proof check ran out of time; the row remains Claimed')
+        elif verdict['decision'] in NO_VERDICT:
+            claim.pop('verification',None);claim['review_note']=NO_VERDICT[verdict['decision']]
+            self.notes.append(key+(': the proof check ran out of time' if verdict['decision']=='timeout' else ': the verifier setup failed before the proof check')+'; the row remains Claimed')
         elif verdict['decision']=='lean-verified':
             claim['verification']=evidence;claim.pop('review_note',None)
         else:claim.pop('verification',None)
@@ -286,7 +294,7 @@ class Importer:
                     claim.pop('verification',None)
                     if state['decision']=='blocked':claim['review_note']='Final nanoda check rejected this proof; the submitted bound remains Claimed.'
                     if state['decision']=='held':claim['review_note']=HELD_NOTE
-                    if state['decision']=='timeout':claim['review_note']=TIMEOUT_NOTE
+                    if state['decision'] in NO_VERDICT:claim['review_note']=NO_VERDICT[state['decision']]
         artifacts=self.api.pages(PREFIX+'actions/artifacts',key='artifacts')
         by_id={a['id']:a for a in artifacts}
         # Newest result for a source wins; process oldest first.
@@ -337,7 +345,7 @@ class Importer:
         kept={}
         for key,claim in claims.items():
             if not claim.get('submission') or claim.get('exclude'):continue
-            if claim['route']=='issue' and not claim.get('verification') and not self.timed_out(key,claim) and self.not_verified(claim):
+            if claim['route']=='issue' and not claim.get('verification') and not self.no_verdict(key,claim) and self.not_verified(claim):
                 self.notes.append(key+': final result is Not verified; not listed (the author resubmits through a new issue)');continue
             if claim.get('closed') and not self.final_verified(key,claim):
                 if claim.get('claimed_only') or (claim['route']=='issue' and self.claimed_only(claim)):
@@ -346,10 +354,11 @@ class Importer:
             kept[key]=claim
         return kept
 
-    def timed_out(self,key,claim):
-        """The final outcome for these exact submission bytes is a check that ran out of time (not a verdict)."""
+    def no_verdict(self,key,claim):
+        """The final outcome for these exact submission bytes is not a verdict: a check that ran out of time, or a setup
+        that failed before the proof check."""
         state=self.final_states.get(self.outcome_id(key,claim['submission']))
-        return bool(state and state['decision']=='timeout')
+        return bool(state and state['decision'] in NO_VERDICT)
 
     def final_verified(self,key,claim):
         # The final outcome for these exact submission bytes (an edited body is a new source).

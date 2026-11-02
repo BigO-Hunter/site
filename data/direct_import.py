@@ -132,6 +132,11 @@ def checked_receipt(archive, metadata, env, run, revision):
             require('receipt.json' in names, 'Missing raw receipt')
             raw=zipped.read('receipt.json')
             receipt=read_json(raw)
+            if isinstance(receipt,dict) and receipt.get('status')=='setup_failed':
+                # Setup can fail before prepare stores the provenance; the verifier's report then adds the run's own
+                # (scripts/submissions.py report(): setdefault run_url and verifier_commit). Only these keys, only these values.
+                receipt=dict(receipt,run_url=receipt.get('run_url',f'https://github.com/{REPOSITORY}/actions/runs/{run["id"]}'),
+                             verifier_commit=receipt.get('verifier_commit',revision))
             require(env.get('receipt_sha256')==sha(raw) and env.get('receipt')==receipt, 'Raw receipt hash/content mismatch')
             hashes=receipt.get('artifact_sha256', {})
             require(isinstance(hashes,dict), 'Invalid evidence hashes')
@@ -266,7 +271,10 @@ def validate_result(archive, issue, run, artifact, trusted_revisions, *, receipt
     base = trust['statements'][profile['challenge_file']]
     require(env.get('model_revision') == profile['upstream_commit'] and env.get('model_sha256') == profile['challenge_sha256'], 'Envelope model pin mismatch')
     require(env.get('theorem_names') == profile['theorem_names'], 'Envelope targets mismatch')
-    require(env.get('challenge') == dict(file=profile['challenge_file'], sha256=profile['challenge_sha256'], upstream_commit=profile['upstream_commit'], generated_sha256=sha(challenge_bytes(submission, base))), 'Envelope challenge mismatch')
+    generated = sha(challenge_bytes(submission, base))
+    if not early and setup_failed(receipt) and 'generated_challenge_sha256' not in receipt:
+        generated = None  # prepare did not write the challenge; the request and issue bindings above still apply
+    require(env.get('challenge') == dict(file=profile['challenge_file'], sha256=profile['challenge_sha256'], upstream_commit=profile['upstream_commit'], generated_sha256=generated), 'Envelope challenge mismatch')
     decision, reason, checked_at = validate_proof(submission, receipt, trust, revision, run_url, allow_timeout=not early)
     require(env.get('checked_at') == checked_at, 'Envelope completion timestamp mismatch')
     return dict(decision=decision, reason=reason, id=f'direct-{issue["number"]}-{env["submission_sha256"]}',
@@ -310,6 +318,28 @@ def timed_out(receipt):
         stopped = receipt.get('status') == 'timeout' or (lean.get('status') == 'incomplete' and lean.get('reason') == 'timeout')
     return stopped and not rejected and not forbidden
 
+SETUP_REASON = 'The verifier setup failed before the proof check; this is not a verdict on the proof'
+# The setup errors that the verifier reports as the submission's own fault (scripts/verdicts.py SETUP_ERRORS at
+# 7dade77, Lead 2026-10-31 after issue #89): the result is final and the row drops. A new key there that is not
+# copied here keeps such a row Claimed, never the reverse.
+DETERMINISTIC_SETUP_ERRORS = frozenset({
+    'solution module is missing', 'unclosed block comment in source', 'cyclic submission imports',
+    'unsupported import header', 'submission imports a reserved verifier module', 'build order has an unmet local dependency',
+    'only regular Lean source files with ordinary module names are admitted', 'individual Lean source exceeds 20 MB',
+    'Lean source input exceeds 150 MB'})
+
+def setup_failed(receipt):
+    """The verifier failed before any proof check (Lead, 2026-11-02, verifier #99 rerun 41494392206: a verifier bug failed
+    its unit tests): our failure, not a verdict. The receipt's status is 'setup_failed' (scripts/verifier.py finalize), its
+    error is not one of the submission's own setup faults, and no Lean check and no axiom audit started."""
+    kernels = receipt.get('kernels') if isinstance(receipt.get('kernels'), dict) else {}
+    lean = kernels.get('lean') if isinstance(kernels.get('lean'), dict) else {}
+    nanoda = kernels.get('nanoda') if isinstance(kernels.get('nanoda'), dict) else {}
+    audit = receipt.get('axiom_audit') if isinstance(receipt.get('axiom_audit'), dict) else {}
+    return (receipt.get('status') == 'setup_failed' and receipt.get('error') not in DETERMINISTIC_SETUP_ERRORS
+            and lean.get('status', 'not_started') == 'not_started' and audit.get('status', 'not_started') == 'not_started'
+            and nanoda.get('status', 'not_started') in ('not_started', 'pending'))
+
 def completion_time(receipt):
     finished = receipt.get('finished_unix')
     require(type(finished) in (int, float), 'Missing completion timestamp')
@@ -332,26 +362,48 @@ def same_profile(actual, reviewed):
     strip = lambda p: {k: v for k, v in p.items() if k != 'runner'}
     return strip(actual) == strip(reviewed)
 
+def expected_request(submission, profile):
+    expected = dict(direct_submission=submission, repo_url=submission['repo_url'], commit=submission['commit'], challenge_file=profile['challenge_file'], theorem_names=','.join(profile['theorem_names']), lean_toolchain=profile['lean_toolchain'])
+    if 'source_subdir' in submission:
+        expected['source_subdir'] = submission['source_subdir']
+    return expected
+
 def validate_proof(submission, receipt, trust, revision, run_url, allow_timeout=False):
     """allow_timeout (the issue route only): a receipt whose check stopped for time (timed_out) gives the decision
-    'timeout' instead of a rejection. The request, provenance and statement bindings apply as always."""
+    'timeout' instead of a rejection, and one whose setup failed before any check (setup_failed) the decision 'setup'.
+    The request, provenance and statement bindings apply as always; before prepare, only the provenance exists."""
     key = 'dft233' if submission.get('entrypoint') == 'dft233' else submission['problem']
     require(key in trust['profiles'], 'Unreviewed challenge profile')
     profile = trust['profiles'][key]
-    require(same_profile(receipt.get('profile'), profile), 'Trusted profile mismatch')
     base = trust['statements'][profile['challenge_file']]
     require(sha(base) == profile['challenge_sha256'], 'Trusted statement bytes mismatch')
+    if allow_timeout and setup_failed(receipt):
+        return setup_outcome(submission, receipt, profile, base, revision, run_url)
+    require(same_profile(receipt.get('profile'), profile), 'Trusted profile mismatch')
     names = profile['theorem_names']
-    expected = dict(direct_submission=submission, repo_url=submission['repo_url'], commit=submission['commit'], challenge_file=profile['challenge_file'], theorem_names=','.join(names), lean_toolchain=profile['lean_toolchain'])
-    if 'source_subdir' in submission:
-        expected['source_subdir'] = submission['source_subdir']
-    require(receipt.get('request') == expected, 'Receipt request mismatch')
+    require(receipt.get('request') == expected_request(submission, profile), 'Receipt request mismatch')
     require(receipt.get('verifier_commit') == revision and receipt.get('run_url') == run_url, 'Receipt provenance mismatch')
     require(receipt.get('generated_challenge_sha256') == sha(challenge_bytes(submission, base)), 'Exact bound statement mismatch')
     if allow_timeout and timed_out(receipt):
         require(receipt.get('theorem_names') == names and set(receipt.get('theorems', {})) == set(names), 'Missing or unexpected theorem targets')
         return 'timeout', TIMEOUT_REASON, completion_time(receipt)
     return validate_kernel_receipt(receipt, names)
+
+
+def setup_outcome(submission, receipt, profile, base, revision, run_url):
+    """A setup failure (setup_failed) can stop prepare at any step. Each binding that prepare wrote must match, and the
+    provenance always; before prepare, the run's provenance is the only one (checked_receipt), and the envelope binds the input."""
+    names = profile['theorem_names']
+    if {'request', 'profile', 'theorem_names'} & receipt.keys():
+        require(same_profile(receipt.get('profile'), profile), 'Trusted profile mismatch')
+        require(receipt.get('request') == expected_request(submission, profile), 'Receipt request mismatch')
+        require(receipt.get('theorem_names') == names and set(receipt.get('theorems', {})) == set(names), 'Missing or unexpected theorem targets')
+    else:
+        require(receipt.get('theorems') == {}, 'Missing or unexpected theorem targets')
+    if 'generated_challenge_sha256' in receipt:
+        require(receipt['generated_challenge_sha256'] == sha(challenge_bytes(submission, base)), 'Exact bound statement mismatch')
+    require(receipt.get('verifier_commit') == revision and receipt.get('run_url') == run_url, 'Receipt provenance mismatch')
+    return 'setup', SETUP_REASON, completion_time(receipt)
 
 
 def validate_kernel_receipt(receipt, names):

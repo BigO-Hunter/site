@@ -358,39 +358,68 @@ class RefreshTests(unittest.TestCase):
                     importer.jobs(importer.runs[77]);self.assertEqual(len(reads),1)  # once per attempt
 
     def test_a_check_that_ran_out_of_time_keeps_the_row_claimed_and_a_real_failure_drops_it(self):
-        # Lead, 2026-11-02 (verifier #99): a timeout is not a verdict. The verifier's 'Not verified' reply is the same for both.
+        # Lead, 2026-11-02 (verifier #99): a timeout is not a verdict, and a setup that failed before the proof check
+        # (rerun 41494392206) is our failure. The verifier's 'Not verified' reply is the same for all of them.
         sub=d.parse_body(self.issue()['body']);digest=d.sha(d.canonical(sub).encode())
         report=[{'user':{'login':'github-actions[bot]','type':'Bot'},'body':f'<!-- bos-direct-v1 5 {digest} '+'a'*64+f' -->\nNot verified for source commit `{sub["commit"]}`.\nReason: the proof check ran out of time.'}]
         class API(DiscoveryAPI):
             def pages(self,path,params=None,key=None):
                 return report if path.endswith('/comments') else super().pages(path,params,key)
-        outcomes={}
-        for decision in ['timeout','pending']:
+        outcomes={};finals={}
+        for decision in ['timeout','setup','pending']:
             importer=r.Importer(API([self.issue()]))
             claim=dict(route='issue',item=self.issue(),submission=sub)
             importer.retain_outcome('direct-issue-5',claim,'final',dict(decision=decision),{'marker':decision})
             kept=importer.verify({'direct-issue-5':claim},dict(final_states=copy.deepcopy(importer.final_states)))
-            outcomes[decision]=kept.get('direct-issue-5')
-            if decision=='timeout':final=copy.deepcopy(importer.final_states)
+            outcomes[decision]=kept.get('direct-issue-5');finals[decision]=copy.deepcopy(importer.final_states)
         self.assertIsNone(outcomes['pending'])  # a real failure: not listed, as before
-        listed=outcomes['timeout']
-        self.assertEqual((listed.get('verification'),listed['review_note']),(None,r.TIMEOUT_NOTE))
-        row,meta,_=r.row_for('direct-issue-5',listed,'2026-11-02T11:00:00Z')
-        self.assertEqual((row['tier'],meta['site_tier'],meta['proof_status']),('claimed','claimed',r.TIMEOUT_NOTE))
-        self.assertNotIn('rerun_status',row)
-        # Feed state failed: the records feed never posts it (records-feed.ts), also when it comes back after a drop.
-        self.assertEqual(r.verification_state('direct-issue-5',listed,final),'failed')
         fixtures=json.loads((ROOT/'direct-fixtures/board-snapshots.json').read_text())
-        with tempfile.TemporaryDirectory() as temp:
-            root=Path(temp)
-            for slug in r.SLUGS.values():(root/(slug+'.json')).write_bytes(r.json_bytes(fixtures[slug]))
-            (root/'registry.json').write_bytes(r.json_bytes({'checked_at':'2026-10-10','updated_at':'2026-10-10T00:00:00Z'}))
-            board=json.loads(r.prepare(root,{'direct-issue-5':listed},{},'2026-11-02T11:00:00Z',final)['exact-dft.json'])
-            self.assertEqual((board['record_metadata']['direct-issue-5']['verification'],board['record_metadata']['direct-issue-5']['proof_status']),('failed',r.TIMEOUT_NOTE))
-        # After a restart (no artifact read), the saved timeout outcome keeps the status.
-        again=r.Importer(API([self.issue()]))
-        claim=dict(route='issue',item=self.issue(),submission=sub)
-        self.assertEqual(again.verify({'direct-issue-5':claim},dict(final_states=final))['direct-issue-5']['review_note'],r.TIMEOUT_NOTE)
+        for decision,note in [('timeout',r.TIMEOUT_NOTE),('setup',r.SETUP_NOTE)]:
+            with self.subTest(decision=decision):
+                listed,final=outcomes[decision],finals[decision]
+                self.assertEqual((listed.get('verification'),listed['review_note']),(None,note))
+                row,meta,_=r.row_for('direct-issue-5',listed,'2026-11-02T11:00:00Z')
+                self.assertEqual((row['tier'],meta['site_tier'],meta['proof_status']),('claimed','claimed',note))
+                self.assertNotIn('rerun_status',row)
+                # Feed state failed: the records feed never posts it (records-feed.ts), also when it comes back after a drop.
+                self.assertEqual(r.verification_state('direct-issue-5',listed,final),'failed')
+                with tempfile.TemporaryDirectory() as temp:
+                    root=Path(temp)
+                    for slug in r.SLUGS.values():(root/(slug+'.json')).write_bytes(r.json_bytes(fixtures[slug]))
+                    (root/'registry.json').write_bytes(r.json_bytes({'checked_at':'2026-10-10','updated_at':'2026-10-10T00:00:00Z'}))
+                    board=json.loads(r.prepare(root,{'direct-issue-5':listed},{},'2026-11-02T11:00:00Z',final)['exact-dft.json'])
+                    self.assertEqual((board['record_metadata']['direct-issue-5']['verification'],board['record_metadata']['direct-issue-5']['proof_status']),('failed',note))
+                # After a restart (no artifact read), the saved outcome keeps the status.
+                again=r.Importer(API([self.issue()]))
+                claim=dict(route='issue',item=self.issue(),submission=sub)
+                self.assertEqual(again.verify({'direct-issue-5':claim},dict(final_states=final))['direct-issue-5']['review_note'],note)
+
+    def test_a_setup_failure_never_replaces_a_result_and_the_next_real_result_wins(self):
+        # Lead, 2026-11-02: a setup failure is no result. Results apply oldest first (verify()), so the newest real one wins.
+        sub=d.parse_body(self.issue()['body']);digest=d.sha(d.canonical(sub).encode())
+        report=[{'user':{'login':'github-actions[bot]','type':'Bot'},'body':f'<!-- bos-direct-v1 5 {digest} '+'a'*64+f' -->\nNot verified for source commit `{sub["commit"]}`.\nReason: the verifier setup failed before the proof check.'}]
+        class API(DiscoveryAPI):
+            def pages(self,path,params=None,key=None):
+                return report if path.endswith('/comments') else super().pages(path,params,key)
+        def listed(*decisions):
+            importer=r.Importer(API([self.issue()]))
+            claim=dict(route='issue',item=self.issue(),submission=sub)
+            for decision in decisions:
+                importer.retain_outcome('direct-issue-5',claim,'final',dict(decision=decision),{'marker':decision})
+            kept=importer.verify({'direct-issue-5':claim},dict(final_states=copy.deepcopy(importer.final_states)))
+            return kept.get('direct-issue-5'),importer.final_states
+        # After a real failure, a setup failure of a rerun keeps the failure: not listed.
+        self.assertIsNone(listed('pending','setup')[0])
+        # After a timeout, the timeout stays.
+        row,final=listed('timeout','setup')
+        self.assertEqual((row['review_note'],[s['decision'] for s in final.values()]),(r.TIMEOUT_NOTE,['timeout']))
+        # A Lean Verified result stays.
+        row,final=listed('lean-verified','setup')
+        self.assertEqual((row['verification'],[s['decision'] for s in final.values()]),({'marker':'lean-verified'},['lean-verified']))
+        # A real result after a setup failure replaces it.
+        self.assertIsNone(listed('setup','pending')[0])
+        self.assertEqual(listed('setup','lean-verified')[0]['verification'],{'marker':'lean-verified'})
+        self.assertEqual(listed('setup','timeout')[0]['review_note'],r.TIMEOUT_NOTE)
 
     def test_a_draft_verifier_pr_created_from_5270_on_is_not_a_claim_until_ready(self):
         pr=dict(number=60,state='open',merged=False,draft=True,labels=[],head={'sha':'a'*40},user={'login':'alice'},created_at='2026-10-24T00:00:00Z',html_url='https://github.com/bigospeedrun/verifier/pull/60')

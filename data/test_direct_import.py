@@ -48,9 +48,9 @@ class DirectImportTests(unittest.TestCase):
             issue_url=self.issue['html_url'],issue_created_at=self.issue['created_at'],issue_updated_at=self.issue['updated_at'],
             run_id='123',run_attempt='2',run_url=self.run['html_url'],verifier_commit=self.revision,status='passed',receipt=receipt)
 
-    def check(self, *, env=None, run=None, issue=None, meta_change=None, extra_file=False, receipt_meta_change=None, raw_receipt_tamper=False, log_files=None, publisher=None, jobs=None):
+    def check(self, *, env=None, run=None, issue=None, meta_change=None, extra_file=False, receipt_meta_change=None, raw_receipt_tamper=False, log_files=None, publisher=None, jobs=None, raw_receipt=None):
         env=copy.deepcopy(self.env if env is None else env)
-        raw=json.dumps(env['receipt']).encode()
+        raw=json.dumps(env['receipt'] if raw_receipt is None else raw_receipt).encode()
         receipt_stream=io.BytesIO()
         with zipfile.ZipFile(receipt_stream,'w',zipfile.ZIP_DEFLATED) as zipped:
             zipped.writestr('receipt.json',raw if not raw_receipt_tamper else b'{}')
@@ -313,6 +313,50 @@ class DirectImportTests(unittest.TestCase):
                 with self.assertRaises(gate.Rejected):self.check(env=env)
         # Only the final issue route.
         with self.assertRaises(gate.Rejected):gate.validate_kernel_receipt(stopped(killed)['receipt'],names)
+
+    def test_a_setup_that_failed_before_any_check_is_not_a_rejection(self):
+        # Lead, 2026-11-02 (verifier #99 rerun 41494392206): the unit tests failed before prepare. The raw receipt has no
+        # provenance; the report adds the run's own (setdefault), and the envelope has no generated challenge hash.
+        names=self.env['receipt']['theorem_names']
+        def failed(raw,**challenge):
+            env=copy.deepcopy(self.env);env.update(status='not_verified',checked_at=raw['checked_at'])
+            env['receipt']=dict(raw,run_url=self.run['html_url'],verifier_commit=self.revision)
+            env['challenge']=dict(env['challenge'],**{'generated_sha256':raw.get('generated_challenge_sha256'),**challenge})
+            return env
+        bare={'schema_version':1,'status':'setup_failed','steps':[],'kernels':{'nanoda':{'status':'pending','reason':'advisory_queued'}},'theorems':{},
+              'artifact_sha256':{},'finished_unix':1791638746,'checked_at':self.env['receipt']['checked_at'],'total_wall_seconds':0.0,'verification_stage':'final'}
+        verdict=self.check(env=failed(bare),raw_receipt=bare)
+        self.assertEqual((verdict['decision'],verdict['reason']),('setup',gate.SETUP_REASON))
+        # prepare started (its provenance) and stopped at any step: each binding it wrote must match.
+        started=dict(bare,run_url=self.run['html_url'],verifier_commit=self.revision,error='clone failed',
+                     kernels={'lean':{'status':'not_started'},'nanoda':{'status':'pending'}},axiom_audit={'status':'not_started'})
+        source=self.env['receipt']
+        cloned=dict(started,request=source['request'],profile=source['profile'],theorem_names=names,theorems={n:{} for n in names})
+        staged=dict(cloned,generated_challenge_sha256=source['generated_challenge_sha256'])
+        for raw in [started,cloned,staged]:
+            with self.subTest(raw=sorted(raw)):self.assertEqual(self.check(env=failed(raw),raw_receipt=raw)['decision'],'setup')
+        # Not our failure: a setup error that is the submission's own fault (#89), or a check that started.
+        for raw in [dict(bare,error='solution module is missing'),dict(staged,kernels={'lean':{'status':'rejected'}}),
+                    dict(staged,kernels={'lean':{'status':'not_completed_or_rejected','reason':'lean_compile_error'}}),
+                    dict(staged,axiom_audit={'status':'not_completed_or_rejected','systemd_result':'timeout'}),
+                    dict(staged,kernels={'lean':{'status':'not_started'},'nanoda':{'status':'rejected'}})]:
+            with self.subTest(raw=raw.get('error') or raw.get('kernels') or raw.get('axiom_audit')):
+                self.assertFalse(gate.setup_failed(raw))
+                with self.assertRaises(gate.Rejected):self.check(env=failed(raw),raw_receipt=raw)
+        # Every binding: the run's own provenance only, no other added key, the request, the statement, the targets.
+        other_run=failed(bare);other_run['receipt']['run_url']='https://github.com/bigospeedrun/verifier/actions/runs/1'
+        added=failed(bare);added['receipt']['profile']=source['profile']
+        wrong_request=dict(cloned,request=dict(source['request'],commit='0'*40))
+        wrong_statement=dict(staged,generated_challenge_sha256='0'*64)
+        for env,raw in [(other_run,bare),(added,bare),(failed(bare,generated_sha256='0'*64),bare),(failed(staged,generated_sha256=None),staged),
+                        (failed(wrong_request),wrong_request),(failed(wrong_statement,generated_sha256=source['generated_challenge_sha256']),wrong_statement),
+                        (failed(dict(cloned,theorems={})),dict(cloned,theorems={})),(failed(dict(bare,theorems={'x':{}})),dict(bare,theorems={'x':{}}))]:
+            with self.subTest(env=env['receipt']),self.assertRaises(gate.Rejected):self.check(env=env,raw_receipt=raw)
+        # Only a setup failure gets the run's provenance: a passed receipt without it is rejected.
+        passed=copy.deepcopy(source);del passed['run_url'];del passed['verifier_commit']
+        with self.assertRaises(gate.Rejected):self.check(raw_receipt=passed)
+        # Only the final issue route: maintainer and PR receipts keep the strict policy.
+        with self.assertRaises(gate.Rejected):gate.validate_kernel_receipt(failed(bare)['receipt'],names)
 
     def test_evidence_log_hashes(self):
         content = b'Synthetic test log, not proof evidence.'
