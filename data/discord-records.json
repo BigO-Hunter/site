@@ -4693,7 +4693,7 @@
             ],
             "bound": "O(n^1.920279408185)",
             "verification": {
-              "state": "failed",
+              "state": "held",
               "since": "2026-11-02T04:10:54Z"
             }
           },
@@ -4906,15 +4906,11 @@
             "id": "direct-issue-104",
             "score": "1/2",
             "relation": "attained",
-            "evidence": "Claimed",
+            "evidence": "Lean Verified",
             "authors": [
               "Dmitri I. Arkhipov"
             ],
-            "bound": "O(2^(0.5n))",
-            "verification": {
-              "state": "pending",
-              "since": "2026-11-02T07:24:11Z"
-            }
+            "bound": "O(2^(0.5n))"
           },
           {
             "id": "direct-issue-94",
@@ -6534,7 +6530,7 @@
         "slug": "other-binary-polynomial-multiplication",
         "name": "Polynomial multiplication over F2",
         "url": "https://bigospeedrun.com/other/binary-polynomial-multiplication",
-        "leader": "arpcs:1/274877906944",
+        "leader": "arpcs:1/1302",
         "table": "other-bounds",
         "direction": "higher",
         "records": [
@@ -6546,8 +6542,19 @@
             "authors": [
               "Árpád Csizmadia"
             ],
-            "bound": "O(nlog^1-2^(-38)n)",
+            "bound": "O(n log^(1-2^(-38))n)",
             "display": "O(n\\log^{1-2^{-38}}n)"
+          },
+          {
+            "id": "arpcs:1/1302",
+            "score": "1/1302",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Árpád Csizmadia"
+            ],
+            "bound": "O(n log^(1301/1302) n)",
+            "display": "O(n \\log^{1301/1302} n)"
           }
         ]
       },
@@ -6910,7 +6917,9 @@
     "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6372\",\"315087/100000000\",\"attained\"]:record",
     "[\"other-catalan\",\"direct-issue-103:1056463/2000\",\"1056463/2000\",\"attained\"]:lean",
-    "[\"integer-multiplication\",\"crocswap-pr-6375\",\"3939/1250000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6375\",\"3939/1250000\",\"attained\"]:record",
+    "[\"subset-sum\",\"direct-issue-104\",\"1/2\",\"attained\"]:lean",
+    "[\"other-binary-polynomial-multiplication\",\"arpcs:1/1302\",\"1/1302\",\"attained\"]:record"
   ],
   "deferred": [
     {
