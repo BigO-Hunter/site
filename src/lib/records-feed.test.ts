@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {tableBound} from './ranking.ts';
+import {tableBound,boundPrecision,scientificSaving} from './ranking.ts';
 import {baseline,plan,plainBound,message,deliver,feedBoard,appendRecordPost,xMessage,xPostLength,otherFeedBoard,plainTex,HOLD_LIMIT,postBound,directedDecimal} from './records-feed.ts';
 import type {OtherClaim,OtherRow} from './records-feed.ts';
 import type {FeedSnapshot,FeedBoard,FeedRecord} from './records-feed.ts';
@@ -533,6 +533,31 @@ test('a post shows the digits that separate it from the row it beats, rounded ne
  const s=plan(baseline(snapshot(b1)),snapshot(b2)).messages;
  assert.match(s[0].content,/`O\(n\^1\.9203\)`/);
  assert.equal(directedDecimal('1920279/1000000',true,{places:3}),'1.921');assert.equal(directedDecimal('1920279/1000000',false,{places:3}),'1.92');
+});
+// Lead, 2026-11-02 (Ops audit): DFT posts said 0.00302 and 0.00312 while the site table shows 3.0201659e-3 and 3.1278099e-3.
+// A saving now shows the site's digits (boundPrecision of the board, rounded down like the site), unless the board is pinned at the cap.
+test('a DFT post shows the digits of the site table, rounded down; a board pinned at the cap keeps the separating digits',()=>{
+ const d=(id:string,score:string):FeedRecord=>({id,score,relation:'attained',evidence:'Lean Verified',authors:['A'],bound:''});
+ const dft=(records:FeedRecord[]):FeedBoard=>({slug:'exact-dft',name:'Fourier Transform',url:'https://bigospeedrun.com/exact-dft',leader:records.at(-1)!.id,direction:'higher',records});
+ const rows=[d('p41','30103/10000000'),d('p90','30201659/10000000000'),d('p91','312780997/100000000000')];
+ // A fourth row agrees with p90 to 7 digits (3.020165e-3), which is what makes the site table need 8 digits.
+ const board=dft([...rows.slice(0,2),d('p90b','302016581/100000000000'),rows[2]]);
+ const site=boundPrecision(board.records.map(r=>r.score),true);
+ assert.equal(site,8);
+ for(const [i,shown] of [['0.0030103'],['0.0030201659'],['0.0031278099']].entries()){
+  const post=postBound(board,rows[i]);
+  assert.equal(post,`O(n log^(1 - ${shown[0]}) n)`);
+  // The same digits as the site table (scientific form 3.1278099e-3), rounded down: 312780997/1e11 is 0.00312780997.
+  assert.equal(plainBound('exact-dft',rows[i].score,'attained',site),post);
+ }
+ assert.equal(scientificSaving(rows[2].score,site),'3.1278099\\cdot 10^{-3}');  // what the site table shows
+ // Two records 1e-5 apart never post the same text.
+ assert.notEqual(postBound(board,rows[1]),postBound(board,rows[2]));
+ // Pinned at the cap (old rows that agree for 20+ digits, #5270): the post keeps the digits that separate it from the row it beats.
+ const near='3027288230000000000000000000000000001/1000000000000000000000000000000000000000';
+ const pinned=dft([d('a','302728823/100000000000'),d('b',near),d('c','951999/280000000')]);
+ assert.equal(boundPrecision(pinned.records.map(r=>r.score),true),20);
+ assert.match(postBound(pinned,pinned.records[2]),/^O\(n log\^\(1 - 0\.00339\) n\)$/);
 });
 // 3-SAT alpha is higher-is-better (Lead, 2026-10-30): a shown alpha rounds down, so it never claims more than the score.
 test('3-SAT alpha rounds down in the table and in posts',()=>{

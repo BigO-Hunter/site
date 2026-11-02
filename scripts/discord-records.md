@@ -8,7 +8,10 @@ A new board leader emits one message. A record that gains Lean Verified emits on
 message, including when it is not the leader. A simultaneous new leader and Lean
 upgrade emits one message. Human Verified upgrades alone do not emit a message.
 Messages use the same decimal precision as the site tables, with scientific savings
-expanded to plain decimal text. Event keys retain exact fractions. Strict endpoints and matrix exponents
+expanded to plain decimal text. On a savings board (Fourier Transform, Integer Multiplication) the post shows the site
+table's digits (`boundPrecision`: the fewest that keep every score of the board apart), rounded down like the site, so
+a DFT record posts 0.0031278099 for the site's 3.1278099e-3, not 0.00312 (2026-11-02). When rows agree for 20 or more
+digits the board is pinned at the cap and the post keeps the digits that separate it from the row it beats. Event keys retain exact fractions. Strict endpoints and matrix exponents
 include “for every fixed epsilon > 0”. Each message links to its board.
 
 The initial committed baseline suppresses a launch flood. Event keys include the

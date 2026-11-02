@@ -90,6 +90,11 @@ export function postBound(board:FeedBoard,record:FeedRecord,minDigits=3):string 
  const beaten=others.reduce<FeedRecord|undefined>((best,r)=>!best||better(r.score,best.score)?r:best,undefined);
  const shown=(score:string,digits:number)=>directedDecimal(score,up,kappa?{sig:digits}:{places:digits});
  let digits=Math.min(minDigits,displayDigits.table);
+ // A saving shows the digits of the site's table (Lead, 2026-11-02, after DFT posts of 0.00302 and 0.00312 for the
+ // site's 3.0201659e-3 and 3.1278099e-3): boundPrecision, the fewest digits that keep every score of the board apart.
+ // The site rounds a saving down too. When the board is pinned at the cap (old rows that agree for 20+ digits, #5270)
+ // the post keeps the rule below, so it does not show 20 digits.
+ if(kappa){const site=boundPrecision(board.records.map(r=>r.score),true);if(site<displayDigits.table)digits=Math.max(digits,site);}
  while(beaten&&digits<displayDigits.table&&shown(record.score,digits)===shown(beaten.score,digits))digits++;
  return plainBound(board.slug,record.score,record.relation,digits,shown(record.score,digits));
 }
