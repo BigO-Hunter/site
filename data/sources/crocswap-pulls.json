@@ -123058,5 +123058,362 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6380,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6380",
+    "title": "Prove the exact nineteen-leaf query-tree topology optimum (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:31:22Z",
+    "updated_at": "2026-11-02T19:41:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "f1b5c2847793e99c19a934ff7a625ce7c4e72c18"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6381,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6381",
+    "title": "Prove a fixed-schedule obstruction for PR6345 helper respanning",
+    "state": "open",
+    "created_at": "2026-11-02T19:34:03Z",
+    "updated_at": "2026-11-02T19:40:52Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "1a2ef236d5aeb255af441804a9e37c4aeb350204"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6382,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6382",
+    "title": "Construct transported-query substitution for noncommuting coded jobs (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:34:16Z",
+    "updated_at": "2026-11-02T19:44:54Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "013d3edb041a9bc6f7f42c6d93b4d74511adbb8e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6383,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6383",
+    "title": "Prove exact four-call alternating lattice descent (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:34:51Z",
+    "updated_at": "2026-11-02T19:44:56Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "f1c69a4e22b670dcc018707fb6a4198e5ecf8b2a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6384,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6384",
+    "title": "Prove a strictly weaker mirror-capacity criterion (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:35:25Z",
+    "updated_at": "2026-11-02T19:45:08Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "9a8eac9de8bf60cd573edbb6ea835e0febd49e89"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6385,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6385",
+    "title": "Construct one stock for changing-width physical-H rounds (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:36:27Z",
+    "updated_at": "2026-11-02T19:45:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "809e6a47b4b7ab34cfaa36a93b118e5e1a06bc66"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6386,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6386",
+    "title": "Prove a paid-rank floor of 22 for three-carrier rank-two tails",
+    "state": "open",
+    "created_at": "2026-11-02T19:36:44Z",
+    "updated_at": "2026-11-02T19:45:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "1cdfc71b94a2a5efbffac6479f1e712651ad9297"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6387,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6387",
+    "title": "Prove sharp ternary denominator cutoffs for short decompositions (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:37:41Z",
+    "updated_at": "2026-11-02T19:45:33Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e3f1c9a60c08806672aab5408e5e0b58bd542a5b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6388,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6388",
+    "title": "Prove exact tariffs for carriers visiting distinct entrance lines (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:37:44Z",
+    "updated_at": "2026-11-02T19:48:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "a083e6e421bffdf2e8ebeddacc32b8ea0c3694df"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6389,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6389",
+    "title": "Prove one later G20 triple capture loses more than 13/2 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:39:09Z",
+    "updated_at": "2026-11-02T19:48:13Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "74b3ae08041f2942e071985b6f05ffeb54c2f3da"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6390,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6390",
+    "title": "Prove the sharp direct higher-moment integer split charge (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:39:28Z",
+    "updated_at": "2026-11-02T19:48:27Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "f9e68f40b0da7236a7fad415f7172218c0666d27"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6391,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6391",
+    "title": "Prove exact signed idle completion for overlapping stage outputs (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:40:05Z",
+    "updated_at": "2026-11-02T19:48:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e384ae7181f085f92d21e3578976e3231c76e26d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6392,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6392",
+    "title": "Reduce the concrete nonunit handoff allowance to 232 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:42:23Z",
+    "updated_at": "2026-11-02T19:51:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "9336635519f0358eb38c06a877a030268a275b14"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6393,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6393",
+    "title": "Prove the exact weighted tariff for multilinear dirty-input queries (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:43:06Z",
+    "updated_at": "2026-11-02T19:53:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "0c9fbfe4ff3a7691be28755bf51c813a84232465"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6394,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6394",
+    "title": "Prove fixed-prefix P104 tails are optimal for every concave tariff",
+    "state": "open",
+    "created_at": "2026-11-02T19:44:45Z",
+    "updated_at": "2026-11-02T19:55:11Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "53288ac7526dd67423cf226a70532fddef24d140"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6395,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6395",
+    "title": "Reduce complete query-controller replay time by 37.88% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T19:54:44Z",
+    "updated_at": "2026-11-02T20:05:46Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "541729c38176ed96359d88ac99fb1587a7db795a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6396,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6396",
+    "title": "Certify G20 occupied-bank excess and complete frozen rank census",
+    "state": "open",
+    "created_at": "2026-11-02T19:56:43Z",
+    "updated_at": "2026-11-02T20:06:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "2a5bc94df6d741b49afbadd36d96eb2aea0f6f1f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
