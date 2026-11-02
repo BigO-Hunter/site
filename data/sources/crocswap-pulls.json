@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-02T13:49:05Z",
+    "updated_at": "2026-11-02T15:05:36Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -122864,6 +122864,90 @@
     },
     "head": {
       "sha": "e144f3b0a440fd33efdcfa4e0bd1af059dfd4fb3"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6371,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6371",
+    "title": "V03: add a bounded authenticated prefix entry",
+    "state": "open",
+    "created_at": "2026-11-02T14:23:53Z",
+    "updated_at": "2026-11-02T15:08:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "8e772eadcbdee11289eb2eac887ffc15b864587c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6372,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6372",
+    "title": "Conditional κ = 0.00315087 (+3.0e-7 over #6353)",
+    "state": "open",
+    "created_at": "2026-11-02T15:03:55Z",
+    "updated_at": "2026-11-02T15:16:21Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "b556600ffe14be72406b03a47c661f3c7f1aff06"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6373,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6373",
+    "title": "V03: add the bounded prefix caller and refusal controls\\n",
+    "state": "open",
+    "created_at": "2026-11-02T15:08:43Z",
+    "updated_at": "2026-11-02T15:08:43Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "b91c5c74f252c1a98ab8344d012702170004ed13"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6374,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6374",
+    "title": "V03: add owned-directory prefix stage preparation\\n",
+    "state": "open",
+    "created_at": "2026-11-02T15:10:40Z",
+    "updated_at": "2026-11-02T15:10:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "b02bfe3338f7fe57818262b33f8e5c77ac0f1c93"
     },
     "base": {
       "ref": "main"

@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache source components and hand off N22, P07 and P02",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-02T13:49:05Z",
+      "updated_at": "2026-11-02T15:05:36Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -118098,7 +118098,11 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "120072d58ddb46f0e02886756243174d41fce42e",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6363,
@@ -118114,7 +118118,11 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "a8cf650b7435ccea237084e491e339f725c0a35b",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6364,
@@ -118130,7 +118138,11 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "ea96ac0f9eaddd677226680963d3784922549af2",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6365,
@@ -118146,7 +118158,11 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "c069724bf69bd03a762e06b0b129d79348d454dc",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6366,
@@ -118162,7 +118178,11 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "97dd394ce1ddf00cc80dfdaad71767fdbc85af47",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6367,
@@ -118178,7 +118198,11 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "234a650277d286f2ebec104eb65ce9456f80667c",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6368,
@@ -118194,7 +118218,11 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "3a2d75adec6133a5bc3e6c4a082369101e6c1158",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6369,
@@ -118210,7 +118238,11 @@
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "190e63e0ca5b16e45d8202bec7dc7426dc76c5dd",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6370,
@@ -118223,6 +118255,92 @@
       "source_commit": "e144f3b0a440fd33efdcfa4e0bd1af059dfd4fb3",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-02T13:37:52Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "e144f3b0a440fd33efdcfa4e0bd1af059dfd4fb3",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6371,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "V03: add a bounded authenticated prefix entry",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6371",
+      "submitted_at": "2026-11-02T14:23:53Z",
+      "updated_at": "2026-11-02T15:08:03Z",
+      "source_commit": "8e772eadcbdee11289eb2eac887ffc15b864587c",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T14:23:53Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "8e772eadcbdee11289eb2eac887ffc15b864587c",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6372,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Conditional κ = 0.00315087 (+3.0e-7 over #6353)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6372",
+      "submitted_at": "2026-11-02T15:03:55Z",
+      "updated_at": "2026-11-02T15:16:21Z",
+      "source_commit": "b556600ffe14be72406b03a47c661f3c7f1aff06",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T15:03:55Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": "315087/100000000",
+      "record_ids": [
+        "crocswap-pr-6372"
+      ],
+      "note": null,
+      "claim_path": "research/p104-contact-block-contraction/RESULT.json",
+      "claim_head": "b556600ffe14be72406b03a47c661f3c7f1aff06",
+      "claim_text": "ab043b14f374c894f374530370e25310f0bd02043215194e9938ef4e8d7d3764",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-contact-block-contraction/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "b556600ffe14be72406b03a47c661f3c7f1aff06",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6373,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "V03: add the bounded prefix caller and refusal controls\\n",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6373",
+      "submitted_at": "2026-11-02T15:08:43Z",
+      "updated_at": "2026-11-02T15:08:43Z",
+      "source_commit": "b91c5c74f252c1a98ab8344d012702170004ed13",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T15:08:43Z",
+      "checked_at": "2026-11-02",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
+    },
+    {
+      "pr_number": 6374,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "V03: add owned-directory prefix stage preparation\\n",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6374",
+      "submitted_at": "2026-11-02T15:10:40Z",
+      "updated_at": "2026-11-02T15:10:40Z",
+      "source_commit": "b02bfe3338f7fe57818262b33f8e5c77ac0f1c93",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T15:10:40Z",
       "checked_at": "2026-11-02",
       "claimed_score": null,
       "record_ids": [],

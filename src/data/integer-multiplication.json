@@ -39184,6 +39184,48 @@
         }
       ],
       "source_commit": "db2a20bc50bc7a8a4db931af85ce7f012ae7c3c3"
+    },
+    {
+      "id": "crocswap-pr-6372",
+      "kind": "improvement",
+      "score": "315087/100000000",
+      "tier": "claimed",
+      "submitted_at": "2026-11-02T15:03:55Z",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-02T15:03:55Z",
+      "site_observed_at": "2026-11-02T15:17:31Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6372"
+      },
+      "spec_version": "1",
+      "title": "Conditional κ = 0.00315087 (+3.0e-7 over #6353)",
+      "authors": [
+        {
+          "name": "aliromman",
+          "url": "https://github.com/aliromman"
+        }
+      ],
+      "predecessors": [],
+      "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6372",
+      "artifact": {
+        "path": "sources/pr-6372.json",
+        "sha256": "fa8f0bd3edc14ece356237b9335cf2b8cbda4e0e9e93aa49e2b4a00d0d595acf"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6372",
+        "theorem": null,
+        "certificate_path": null
+      },
+      "dependencies": [
+        {
+          "id": "openai-109-transfer",
+          "statement": "The OpenAI #109 fixed-tape multiplication reduction and the specific all-size compiler, routing, precision, resampling and exact-recovery interfaces cited by this submission hold. The PR body retains its precise per-construction obligations.",
+          "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6372",
+          "status": "unverified"
+        }
+      ],
+      "source_commit": "b556600ffe14be72406b03a47c661f3c7f1aff06"
     }
   ],
   "record_metadata": {
@@ -61961,7 +62003,35 @@
       "race_event_at": "2026-11-02T03:50:55Z",
       "race_event_kind": "PR creation; latest observed score",
       "credit_note": "Ali Romman raises the conditional kappa from 0.00314980 (PR 6350) to 0.00315057 by contracting nine native helper outputs of PR 6349's supplier with a joint input and departure basis, then restoring the endpoint with paid native transports and both inverse bases. PR 6348's tree is unchanged and all 19 copies of both changes are charged. The claim is the author's own check."
+    },
+    "crocswap-pr-6372": {
+      "checked_at": "2026-11-02",
+      "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6372",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Source claim; not independently rerun by bigOspeedrun",
+      "pr_number": 6372,
+      "repo": "CrocSwap/integer-mult-bounds",
+      "merged": false,
+      "merged_at": null,
+      "closed_at": null,
+      "updated_at": "2026-11-02T15:16:21Z",
+      "comparison_key": "crocswap/integer-multiplication-v1",
+      "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
+      "score_source": "stated kappa in research/p104-contact-block-contraction/RESULT.json at the PR head; source claim only",
+      "date_precision": "PR creation timestamp; score is latest observed claim, not necessarily original score.",
+      "upstream_selected": false,
+      "record_eligibility_note": "Eligible for the CrocSwap claimed-source race when merged or a published README checkpoint. Open and closed-unmerged PRs cannot hold the record.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "publication_date_precision": "date-time",
+      "race_repo": "CrocSwap/integer-mult-bounds",
+      "publication_date": "2026-11-02T15:03:55Z",
+      "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6372",
+      "race_series": "pr-submissions",
+      "race_event_at": "2026-11-02T15:03:55Z",
+      "race_event_kind": "PR creation; latest observed score"
     }
   },
-  "updated_at": "2026-11-02T14:17:25Z"
+  "updated_at": "2026-11-02T15:17:31Z"
 }
