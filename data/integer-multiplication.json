@@ -40519,7 +40519,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/43",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T13:55:52Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "chafreaky composes the alternating changed graphs of Andrzej Marszałek's PR 41 with the fixed middle bases of PRs 32 and 35, the copied centers of PR 36 and the reversed corners and balanced assembly of PRs 34 and 37, recomputing the whole fixed profile for each changed graph. The conditional kappa is 4.09953e-5, 6.6 percent above PR 36 and 1.6 percent above PR 41, and 0.00087 percent above the similar composition of rohanarun's PR 42."
     },
     "crocswap-pr-44": {
       "checked_at": "2026-11-02",
@@ -40743,7 +40744,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/51",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T16:18:29Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Andrzej Marszałek builds the bit network from changed scalar computation graphs with alternative source partitions and paid whole-chain clone operations, using the actual enlarged signed positive frames in a common rational basis and charging every transition by its exact local profile. The conditional kappa is 4.171211781e-5, about 1.15 percent above the 4.123863984e-5 of rohanarun's PR 49."
     },
     "crocswap-pr-52": {
       "checked_at": "2026-11-02",
@@ -40807,7 +40809,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/53",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T16:31:14Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Avi Eisenberg changes the leave-one-out strip sums of the scalar producer to a skip-prefix layout, so that nested consumers of each prefix can share a carrier role. The conditional kappa is 4.498144e-5, 9.2 percent above chafreaky's PR 48, on which it builds. Everything except the scalar producer is PR 48's pipeline with recomputed constants."
     },
     "crocswap-pr-54": {
       "checked_at": "2026-11-02",
@@ -40935,7 +40938,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/57",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T17:07:21Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "eumemic compiles each equal-frame region of PR 53's skip-prefix graph as one invertible binary map and reclaims retired signal components with paid XOR gates, which cuts the auxiliary roles at dimension 23 from 32,946 to 31,416. The conditional kappa is 4.669442391e-5, 3.8 percent above PR 53."
     },
     "crocswap-pr-58": {
       "checked_at": "2026-11-02",
@@ -40967,7 +40971,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/58",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T17:24:40Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "chafreaky composes the dual-suffix scalar graphs of gupt1156's PR 55 with eumemic's joint frame compiler of PR 57, which lowers the auxiliary roles at dimension 23 from 31,416 to 30,790. The conditional kappa is 4.75073569e-5, 1.74 percent above PR 57."
     },
     "crocswap-pr-59": {
       "checked_at": "2026-11-02",
@@ -42677,7 +42682,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/104",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-08T23:12:03Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin extends PR 36 with a stopped product-ring interchange: a common generic rational basis and opposite bank orders reduce each projector residual to one contiguous reversed child, and the address arithmetic is paid as an atom loop. The complex network uses aligned pair-star orders. The conditional kappa is 7.79476e-5. The lineage of PRs 10, 18, 24, 32 and 36 is retained."
     },
     "crocswap-pr-106": {
       "checked_at": "2026-11-02",
@@ -42957,7 +42963,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/115",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-09T00:26:56Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin applies the stopped whole-projector compiler of PR 104 to the actual deferred word of Zhihao Chen's PR 97, which is based on Swapnil's pinned witness, and adds a complex producer that combines the cyclic intervals of Avi Eisenberg's PR 62 with pair-first cube assembly (146,284 additions, 34,307 auxiliary roles). The conditional kappa is 9.26336e-5."
     },
     "crocswap-pr-116": {
       "checked_at": "2026-11-02",
@@ -43265,7 +43272,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/130",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-09T02:29:02Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin builds the global architecture from three invocation banks on a regular Cayley cover, with three signed shears completing the interchange so that no positive-width data connectors are needed, and adopts eumemic's PR 117 positive graph for the complex supplier. The conditional kappa is 3.146011e-4, more than three times PR 115's 9.26336e-5."
     },
     "crocswap-pr-131": {
       "checked_at": "2026-11-02",
@@ -43657,7 +43665,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/144",
       "race_series": "pr-submissions",
       "race_event_at": "2026-10-09T04:19:35Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "IceKylin adds a complex local motif of twelve coordinate pairs and 1,760 ports grouped into eight-port cubes, whose involution comes from two 4-by-4 Hadamard blocks per cube, run at a common frame and undone before cleanup, so no extra auxiliary bank is needed. The conditional kappa is 4.609169e-4, 46.5 percent above PR 130's 3.146011e-4. The global architecture adopts an664's PR 128 completed-core sharing principle."
     },
     "crocswap-pr-145": {
       "checked_at": "2026-11-02",
