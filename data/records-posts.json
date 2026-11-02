@@ -1783,5 +1783,23 @@
     "authors": [
       "S. Litsey"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-6417\",\"3286849/1000000000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.00328) n)` | by rohanarun | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.00328) n)\nPlayer: rohanarun\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-02T23:35:24.569Z",
+    "authors": [
+      "rohanarun"
+    ]
+  },
+  {
+    "key": "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:lean",
+    "text": "**Record verified** | **3SUM** | `O(n^1.92027941)` | by Wang-jiong-han | Lean Verified | [bigospeedrun.com/3sum](https://bigospeedrun.com/3sum)",
+    "x_text": "Record verified!\n\nProblem: 3SUM\nValue: O(n^1.92027941)\nPlayer: Wang-jiong-han\nStatus: Lean Verified",
+    "posted_at": "2026-11-02T23:35:24.842Z",
+    "authors": [
+      "Wang-jiong-han"
+    ]
   }
 ]
