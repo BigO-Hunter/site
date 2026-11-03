@@ -85,12 +85,28 @@ for entry in registry['problems']:
   # An open endpoint (every saving below, or every exponent above, the score) is legal in
   # both directions; only a baseline must be attained.
   if r.get('score_relation')=='strict-upper-bound':assert r['kind']!='baseline',r['id']
-  q=Fraction(r['score']);assert str(q)==r['score'];assert Fraction(p['score']['minimum'])<=q<=Fraction(p['score']['maximum'])
-  # A row worse than the classical baseline needs Lean Verified evidence (Nil ruling 2026-11-02: a stepping stone;
-  # the lead, 2026-11-02: Lean Verified rows only). A tie is not worse.
-  classic=Fraction(next(x for x in records if x['id']=='classical-baseline')['score'])
-  if q<classic if p['score']['direction']=='higher-is-better' else q>classic:
-   assert p['record_metadata'][r['id']].get('site_tier')=='verified' and r.get('rerun_status',{}).get('state')=='passed','A row worse than the classical baseline without Lean Verified evidence: '+r['id']
+  if p['score']['encoding']=='density-time':
+   # directed-sssp (data/sssp.py): a point row "D ; T" in the verifier's normal form, or a function row (the
+   # classic, papers) in function_text normal form. Only a point row can be Lean Verified. A point row whose T is
+   # worse than the classic time at its D needs Lean Verified evidence, as on the other boards (Nil ruling 2026-11-02).
+   import sssp
+   if ' ; ' in r['score']:
+    t=sssp.parse(r['score'])
+    if t[2:]>sssp.time_at(sssp.parse_function(records[0]['score']),t[:2]):
+     assert p['record_metadata'][r['id']].get('site_tier')=='verified' and r.get('rerun_status',{}).get('state')=='passed','A row worse than the classical baseline without Lean Verified evidence: '+r['id']
+   else:
+    sssp.parse_function(r['score'])
+    assert r['tier']=='claimed' and p['record_metadata'][r['id']].get('site_tier')=='claimed','A function row cannot be Lean Verified: '+r['id']
+   chart=p['chart'];[sssp.density(x) for x in chart['ticks']];sssp.parse_function(chart['lower_bound'])
+   for line in chart['lines']:sssp.parse_function(line['function']);sssp.density(line['up_to']);assert line['row'] in ids,line['id']
+  else:
+   assert 'chart' not in p
+   q=Fraction(r['score']);assert str(q)==r['score'];assert Fraction(p['score']['minimum'])<=q<=Fraction(p['score']['maximum'])
+   # A row worse than the classical baseline needs Lean Verified evidence (Nil ruling 2026-11-02: a stepping stone;
+   # the lead, 2026-11-02: Lean Verified rows only). A tie is not worse.
+   classic=Fraction(next(x for x in records if x['id']=='classical-baseline')['score'])
+   if q<classic if p['score']['direction']=='higher-is-better' else q>classic:
+    assert p['record_metadata'][r['id']].get('site_tier')=='verified' and r.get('rerun_status',{}).get('state')=='passed','A row worse than the classical baseline without Lean Verified evidence: '+r['id']
   if 'source_commit' in r:assert r['source_commit']!='0'*40
   a=r['artifact'];assert a['sha256']!='0'*64;assert hashlib.sha256(safe_path(a['path']).read_bytes()).hexdigest()==a['sha256'],r['id']
   m=p['record_metadata'][r['id']]
@@ -116,6 +132,8 @@ for entry in registry['problems']:
  choose=min if p['score']['direction']=='lower-is-better' else max
  vals=[]
  for tier in TIERS:
+  if p['score']['encoding']=='density-time':
+   vals.append(str(sum(r['tier']==tier for r in records))+' rows');continue
   pool=[Fraction(r['score']) for r in records if r['tier']==tier];vals.append(str(choose(pool)) if pool else '—')
  print(entry['slug'],'|',' | '.join(vals),'|',len(records))
 sub=load('submissions.json')['items'];assert len(sub)==len({s['pr_number'] for s in sub});assert {s['pr_number'] for s in sub}=={p['number'] for p in load('sources/crocswap-pulls.json')}

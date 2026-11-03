@@ -1,5 +1,6 @@
 {
-  "url": "https://github.com/spicylemonade/c-hd-proof/blob/98c53accb47a505482a1781597ae14bf67e81cec/README.md",
-  "checked_at": "2026-10-08",
-  "description": "C-HD uniform deterministic sparse-density SSSP"
+  "url": "https://github.com/bigospeedrun/sssp-lean-scratch/blob/98919233966fa6196cf67639c1eee2b2496d26b6/Submission.lean",
+  "checked_at": "2026-11-03",
+  "description": "Lean check of the Vals AI C-HD proof (chd_exact_within at fork 98c53acc) with the Big O Speedrun statement adapter",
+  "upstream": "https://github.com/spicylemonade/c-hd-proof/tree/98c53accb47a505482a1781597ae14bf67e81cec"
 }

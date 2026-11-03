@@ -6,6 +6,7 @@ import {crocswapVerification,noCertifications,type CrocswapCertifications} from 
 import type {Problem,RecordEntry,Repo} from './types';
 import {methodNoteFor,type MethodNotes} from './method-notes';
 import {decimal,logExponent,boundPrecision,tableBound,displayDigits,factoringBound} from './ranking';
+import {rowLatex} from './sssp.ts';
 // This is the boundary adapter for the reviewed, data-only snapshot. No repo code runs.
 const files=import.meta.glob('../data/*.json',{eager:true,import:'default'});
 const read=(file:string):any=>files['../data/'+file];
@@ -23,6 +24,8 @@ const titles:Record<string,string>={'matrix-multiplication':'Matrix Multiplicati
 export const factoringClassic='O(N^{1/5}\\log^{16/5}N/(\\log\\log N)^{3/5})';
 const repoName=(url:string):string=>url?.match(/^https:\/\/github.com\/([^/]+\/[^/]+)/)?.[1]??'';
 const bound=(slug:string,score:string,relation?:string)=>{
+ // Density-time scores ("D ; T" or a function row) are not rationals (src/lib/sssp.ts).
+ if(slug==='directed-sssp')return rowLatex(score);
  const value=decimal(score);const [n,d]=score.split('/');const exact=d?`\\frac{${n}}{${d}}`:n;
  const open=relation==='strict-upper-bound';
  if(slug==='integer-multiplication'||slug==='exact-dft'){
@@ -32,7 +35,6 @@ const bound=(slug:string,score:string,relation?:string)=>{
  if(slug==='matrix-multiplication')return `O(n^{${value}+\\varepsilon})`;
  // An open endpoint: every exponent above the score is proved, not the score itself.
  if(slug==='subset-sum')return `O(2^{${open?`(${value}+\\varepsilon)`:value}n})`;
- if(slug==='directed-sssp')return `O(n \\log^{${exact}} n)`;
  if(slug==='3sat')return `O^*(2^{n/(\\log n)^{${value}-o(1)}})`;
  if(slug==='integer-factoring')return factoringBound(score);
  return `O(n^{${value}${open?'+\\varepsilon':''}})`;
@@ -61,9 +63,10 @@ export const problems:Problem[]=registry.problems.map((p:any)=>{
   ...(meta.direct_submission===true&&['pending','failed','held'].includes(meta.verification)&&typeof meta.publication_date==='string'?{verification:{state:meta.verification,since:meta.publication_date}}:{})};
  });
  const kappa=data.score.symbol==='kappa';
- const digits=boundPrecision(records.filter(r=>isBoardEntry(p.slug,r)).map(r=>r.score),kappa);
+ const densityTime=data.score.encoding==='density-time';
+ const digits=densityTime?0:boundPrecision(records.filter(r=>isBoardEntry(p.slug,r)).map(r=>r.score),kappa);
  // Desktop tables, charts and posts use the table cap; the landing page and phone tables use the landing cap.
- for(const record of records)if(record.id!=='classical-baseline'){
+ for(const record of records)if(record.id!=='classical-baseline'&&!densityTime){
   record.shortBound=tableBound(record,kappa,digits,displayDigits.landing);
   record.bound=tableBound(record,kappa,digits);
  }

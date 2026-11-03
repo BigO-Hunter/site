@@ -86,16 +86,19 @@
           ]
         },
         "encoding": {
-          "const": "rational-string"
+          "enum": [
+            "rational-string",
+            "density-time"
+          ]
         },
         "minimum": {
           "type": "string",
-          "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$",
+          "pattern": "^(-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?|[a-z0-9^/ ;+-]{1,512})$",
           "maxLength": 256
         },
         "maximum": {
           "type": "string",
-          "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$",
+          "pattern": "^(-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?|[a-z0-9^/ ;+-]{1,512})$",
           "maxLength": 256
         }
       }
@@ -171,7 +174,7 @@
           },
           "score": {
             "type": "string",
-            "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$",
+            "pattern": "^(-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?|[a-z0-9^/ ;+-]{1,512})$",
             "maxLength": 4096
           },
           "tier": {
@@ -648,6 +651,74 @@
       "type": "string",
       "format": "date-time",
       "pattern": "Z$"
+    },
+    "chart": {
+      "type": "object",
+      "description": "density-time boards only (data/sssp.py): chart ticks and lines that are not board rows",
+      "additionalProperties": false,
+      "required": [
+        "ticks",
+        "lower_bound",
+        "lines"
+      ],
+      "properties": {
+        "ticks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9^/ ;+-]{1,512}$"
+          },
+          "minItems": 2
+        },
+        "below_n_ticks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "lower_bound": {
+          "type": "string",
+          "pattern": "^[a-z0-9^/ ;+-]{1,512}$"
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "label",
+              "function",
+              "up_to",
+              "row",
+              "note"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "function": {
+                "type": "string",
+                "pattern": "^[a-z0-9^/ ;+-]{1,512}$"
+              },
+              "up_to": {
+                "type": "string",
+                "pattern": "^[a-z0-9^/ ;+-]{1,512}$"
+              },
+              "row": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema"

@@ -72,6 +72,31 @@ export function timeAt(terms: Term[], d: Q[]): Q[] {
  }
  return best!;
 }
+/** The score text of a function row (data/sssp.py function_text). */
+export function functionText(terms: Term[]): string {
+ return terms.map(t => KEYS.map(k => { const e = parseQ(t[k] ?? '0'); return qCmp(e, ZERO) === 0 ? '' : qCmp(e, ONE) === 0 ? k : `${k}^${qText(e)}`; }).filter(Boolean).join(' ') || '1').join(' + ');
+}
+export function parseFunction(value: string): Term[] {
+ const terms = value.split(' + ').map(part => { const t: Term = {}; for (const token of part.split(' ')) {
+  const m = /^(m|n|loglog|logratio|log)(?:\^(-?(?:0|[1-9][0-9]{0,39})(?:\/[1-9][0-9]{0,39})?))?$/.exec(token);
+  if (!m || m[1] in t) throw new Error(`bad function row term: ${part}`); t[m[1] as keyof Term] = m[2] ?? '1'; } return t; });
+ if (functionText(terms) !== value) throw new Error(`a function row score must be in normal form: ${value}`);
+ return terms;
+}
+/** KaTeX for a function row, e.g. O(m + n \log n). */
+export function functionLatex(terms: Term[]): string {
+ const f: Record<string, (e: string) => string> = { m: e => e === '1' ? 'm' : `m^{${e}}`, n: e => e === '1' ? 'n' : `n^{${e}}`, log: e => e === '1' ? '\\log n' : e === '1/2' ? '\\sqrt{\\log n}' : `\\log^{${e}} n`, loglog: e => e === '1' ? '\\log\\log n' : e === '1/2' ? '\\sqrt{\\log\\log n}' : `(\\log\\log n)^{${e}}`, logratio: e => e === '1' ? '\\log(2+m/n)' : `\\log^{${e}}(2+m/n)` };
+ const bare: Record<string, string> = { m: 'm', n: 'n', log: '\\log n', loglog: '\\log\\log n', logratio: '\\log(2+m/n)' };
+ return terms.map(t => { const keys = KEYS.filter(k => t[k] && qCmp(parseQ(t[k]!), ZERO) !== 0); const es = keys.map(k => qText(parseQ(t[k]!)));
+  // A term whose factors all have exponent 1/2 reads as one square root, e.g. \sqrt{m n \log n \log\log n}.
+  if (keys.length > 1 && es.every(e => e === '1/2')) return `\\sqrt{${keys.map(k => bare[k]).join(' ')}}`;
+  return keys.map((k, i) => f[k](es[i])).join(' ') || '1'; }).join(' + ');
+}
+/** KaTeX for a row: a point row "m \le D: O(T)", a function row "O(f)". */
+export function rowLatex(score: string): string {
+ if (score.includes(' ; ')) { const t = parse(score); return `m \\le ${latex(t.slice(0, 2), D_NAMES)}:\\ O(${latex(t.slice(2))})`; }
+ return `O(${functionLatex(parseFunction(score))})`;
+}
 export const CLASSIC: Term[] = [{ m: '1' }, { n: '1', log: '1' }];
 export const RANGE_END = [q(3n), ZERO, ZERO];
 
@@ -85,9 +110,15 @@ export function qualifies(candidate: Q[], points: Q[][]): boolean {
  const current = best(candidate.slice(0, 2), points);
  return current ? lexCmp(candidate.slice(2), current) < 0 : lexCmp(candidate.slice(2), RANGE_END) <= 0;
 }
+/** Plain text for a time or density tuple, for aria labels, e.g. n log^(3/4) n. */
+export function plain(exps: Q[], names: readonly string[] = T_NAMES): string {
+ const pow = (base: string, e: Q, tail = '') => qCmp(e, ONE) === 0 ? `${base}${tail}` : `${base}^${e.d === 1n ? qText(e) : `(${qText(e)})`}${tail}`;
+ const parts = names.map((name, i) => qCmp(exps[i], ZERO) === 0 ? '' : name === 'n' ? pow('n', exps[i]) : name === 'log' ? pow('log', exps[i], ' n') : qCmp(exps[i], ONE) === 0 ? 'log log n' : `(log log n)^${exps[i].d === 1n ? qText(exps[i]) : `(${qText(exps[i])})`}`);
+ return parts.filter(Boolean).join(' ') || '1';
+}
 /** KaTeX for a time or density tuple, e.g. n \log^{3/4} n. */
 export function latex(exps: Q[], names: readonly string[] = T_NAMES): string {
  const pow = (base: string, e: Q, tail = '') => qCmp(e, ONE) === 0 ? `${base}${tail}` : `${base}^{${qText(e)}}${tail}`;
- const parts = names.map((name, i) => qCmp(exps[i], ZERO) === 0 ? '' : name === 'n' ? pow('n', exps[i]) : name === 'log' ? pow('\\log', exps[i], ' n') : pow('\\log\\log', exps[i], ' n'));
+ const parts = names.map((name, i) => qCmp(exps[i], ZERO) === 0 ? '' : name === 'n' ? pow('n', exps[i]) : name === 'log' ? pow('\\log', exps[i], ' n') : qCmp(exps[i], ONE) === 0 ? '\\log\\log n' : `(\\log\\log n)^{${qText(exps[i])}}`);
  return parts.filter(Boolean).join(' ') || '1';
 }

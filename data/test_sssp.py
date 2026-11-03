@@ -25,9 +25,14 @@ class SharedCaseTests(unittest.TestCase):
 
     def test_function_rows(self):
         for row in CASES['functions']:
+            self.assertEqual(sssp.function_text(row['terms']), row['text'])
+            self.assertEqual(sssp.parse_function(row['text']), row['terms'])
             for d, t in row['at'].items():
                 with self.subTest(row=row['name'], d=d):
                     self.assertEqual(sssp.text(sssp.time_at(row['terms'], sssp.density(d))), t)
+            if 'up_to' in row:
+                for d in row['at']:
+                    self.assertLessEqual(sssp.cmp(sssp.density(d), sssp.density(row['up_to'])), 0, (row['name'], d))
 
     def test_gate(self):
         for case in CASES['gate']:
@@ -56,6 +61,9 @@ class RuleTests(unittest.TestCase):
                 sssp.time_at([t], (Fraction(1), Fraction(0)))
         with self.assertRaises(ValueError):
             sssp.time_at([], (Fraction(1), Fraction(0)))
+        for text in ['m^1 + n', 'm  + n', 'm log log', 'm^2/4', '']:
+            with self.subTest(text=text), self.assertRaises(ValueError):
+                sssp.parse_function(text)
 
 
 if __name__ == '__main__':

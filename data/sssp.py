@@ -95,6 +95,37 @@ def time_at(terms, d):
                for p, q, r, s, k in map(term, terms))
 
 
+FN_NAMES = {'m': 'm', 'n': 'n', 'log': 'log', 'loglog': 'loglog', 'logratio': 'logratio'}
+
+
+def function_text(terms):
+    """The score text of a function row: its terms joined by ' + ', each term its factors in the order
+    m n log loglog logratio, with the verifier's exponent style (logratio is log(2 + m/n))."""
+    parts = []
+    for t in map(term, terms):
+        part = ' '.join(k if e == 1 else f'{k}^{e}' for k, e in zip(KEYS, t) if e != 0)
+        parts.append(part or '1')
+    return ' + '.join(parts)
+
+
+def parse_function(value):
+    """The terms of a function-row score text; it must be in the normal form of function_text."""
+    if not isinstance(value, str) or not value:
+        raise ValueError('a function row score is terms joined by " + "')
+    terms = []
+    for part in value.split(' + '):
+        t = {}
+        for token in part.split(' '):
+            m = re.fullmatch(r'(m|n|loglog|logratio|log)(?:\^(-?(?:0|[1-9][0-9]{0,39})(?:/[1-9][0-9]{0,39})?))?', token)
+            if not m or m.group(1) in t:
+                raise ValueError('bad function row term: ' + part)
+            t[m.group(1)] = m.group(2) or '1'
+        terms.append(t)
+    if function_text(terms) != value:
+        raise ValueError('a function row score must be in normal form: ' + value)
+    return terms
+
+
 CLASSIC = [{'m': '1'}, {'n': '1', 'log': '1'}]
 RANGE_END = (Fraction(3), Fraction(0), Fraction(0))
 
