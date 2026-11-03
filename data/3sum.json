@@ -772,7 +772,9 @@
           "url": "https://github.com/Wang-jiong-han"
         }
       ],
-      "predecessors": [],
+      "predecessors": [
+        "https://github.com/bigospeedrun/verifier/issues/92"
+      ],
       "submission_url": "https://github.com/bigospeedrun/verifier/issues/99",
       "source_commit": "e1ae71db2231f172c6541820e2ce0a54aa14fc64",
       "artifact": {
@@ -1173,6 +1175,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/99",
       "direct_submission": true,
       "route": "issue",
+      "credit_note": "Wang-jiong-han lowers the proved exponent from 1.92027942 to 1.920279408185 with new digit costs (0, 1369, 2740) for the weighted cache of their own Lean Verified 1.92027942 proof, a new ternary profile and new evaluation points, all exact rationals. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates and Hrishik Sai Bojnal's parameter refinements; the word-RAM specification and compiler come from Anthropic's formalization.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41500988477",
       "verification": "passed"
     },
@@ -1195,5 +1198,5 @@
       "verification": "pending"
     }
   },
-  "updated_at": "2026-11-03T00:02:30Z"
+  "updated_at": "2026-11-03T06:26:29Z"
 }

@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache source components and hand off N22, P07 and P02",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-03T00:36:56Z",
+      "updated_at": "2026-11-03T05:40:02Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -122443,12 +122443,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-03T04:33:39Z",
       "checked_at": "2026-11-03",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "164697/50000000",
+      "record_ids": [
+        "crocswap-pr-6545"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "775722aa94a5e85b05d1d704d7dca10cbf016f0c",
       "claim_text": "2b931d5d218344a7dd46646c683b947bd39a56f4b8a124915d20ee479a04532e",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "775722aa94a5e85b05d1d704d7dca10cbf016f0c",
+      "claim_decided": true,
       "claim_files": [
         [
           "added",
@@ -122510,6 +122513,108 @@
         ]
       ],
       "claim_files_head": "317e4a099488794c372f8a4ad1e70deef3626bbf",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6548,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Remove redundant marked Counter return moves and writes",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6548",
+      "submitted_at": "2026-11-03T05:22:47Z",
+      "updated_at": "2026-11-03T05:29:38Z",
+      "source_commit": "e5505f745925f5d62340380c7b9b96dc12dd10a2",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T05:22:47Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "e5505f745925f5d62340380c7b9b96dc12dd10a2",
+      "claim_text": "0853feb9a1bfb7a89cb9098d2da81647392510d08733d670d7b977f555485ba1",
+      "claim_files": [
+        [
+          "added",
+          "research/marked-countdown-direct-return/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "e5505f745925f5d62340380c7b9b96dc12dd10a2",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6549,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Archive conditional passive guard source and fake controls",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6549",
+      "submitted_at": "2026-11-03T05:33:25Z",
+      "updated_at": "2026-11-03T05:41:45Z",
+      "source_commit": "928f2a997b9e8a060569f36a70b89fc7658befee",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T05:33:25Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "928f2a997b9e8a060569f36a70b89fc7658befee",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6550,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Classify all shortest words for the rank-two st endpoint",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6550",
+      "submitted_at": "2026-11-03T05:48:17Z",
+      "updated_at": "2026-11-03T05:56:50Z",
+      "source_commit": "c65ba225a768141c5a0c6bba163d2f2e85915f31",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T05:48:17Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "c65ba225a768141c5a0c6bba163d2f2e85915f31",
+      "claim_text": "7d365b30060d26c4fcae310cf86d95a075b2984c45180303f7800110813ce1fa",
+      "claim_files": [
+        [
+          "added",
+          "research/rank-two-st-shortest-words/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "c65ba225a768141c5a0c6bba163d2f2e85915f31",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6551,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Improve conditional kappa to 0.00329492 with a rebalanced retirement tree",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6551",
+      "submitted_at": "2026-11-03T05:57:05Z",
+      "updated_at": "2026-11-03T06:09:23Z",
+      "source_commit": "11ca568cd1a16776ade02b4df09ea04a784cc674",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T05:57:05Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "11ca568cd1a16776ade02b4df09ea04a784cc674",
+      "claim_text": "7adde3a3db9e444aa13f2a433d09bf3a50e164e0ea26668c9f08549dc9ca0961",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [
+        [
+          "added",
+          "research/retirement-rebalanced-query-tree/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "11ca568cd1a16776ade02b4df09ea04a784cc674",
       "claim_files_base": "main",
       "claim_files_result": true
     }
