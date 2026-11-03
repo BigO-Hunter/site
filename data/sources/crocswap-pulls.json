@@ -123440,10 +123440,10 @@
   {
     "number": 6398,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6398",
-    "title": "Raise conditional κ by 4.28455% with a six-field mixed-query root",
+    "title": "Mixed-query root: conditional κ = 0.00328621476572836015146308 (+4.28455% over #6375)",
     "state": "open",
     "created_at": "2026-11-02T20:45:04Z",
-    "updated_at": "2026-11-02T21:01:19Z",
+    "updated_at": "2026-11-03T05:01:25Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126422,10 +126422,10 @@
   {
     "number": 6541,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6541",
-    "title": "Prove a 0.003293 ceiling for all monotone frame refits of two P104 words",
+    "title": "Prove P104 frame ceilings and finite child bounds for fresh-stage callers",
     "state": "open",
     "created_at": "2026-11-03T04:14:53Z",
-    "updated_at": "2026-11-03T04:14:53Z",
+    "updated_at": "2026-11-03T04:47:14Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126433,7 +126433,7 @@
       "html_url": "https://github.com/aliromman"
     },
     "head": {
-      "sha": "6a3e041f250fd777f9b27c208853fb911e7a8d11"
+      "sha": "9de3f9183a242715b664ae8747a8540bf6cc38e5"
     },
     "base": {
       "ref": "main"
@@ -126455,6 +126455,111 @@
     },
     "head": {
       "sha": "a54131b655b6b6d4963686728af3fbbcbbe2af7d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6543,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6543",
+    "title": "Construct the first successful finite extension slice from raw pencils",
+    "state": "open",
+    "created_at": "2026-11-03T04:22:06Z",
+    "updated_at": "2026-11-03T04:29:51Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "0a389a6cf4a267faa8d253e9ee610be454f78491"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6544,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6544",
+    "title": "Certify all 61 mixed-caller guard allocations and exact tariff regimes",
+    "state": "open",
+    "created_at": "2026-11-03T04:22:20Z",
+    "updated_at": "2026-11-03T04:31:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "8ae433ea3484c24c2547e26d1cc5f764c7c31fd9"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6545,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6545",
+    "title": "Improve conditional κ to 0.00329394 by retiring an independent Gaussian",
+    "state": "open",
+    "created_at": "2026-11-03T04:33:39Z",
+    "updated_at": "2026-11-03T04:50:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "775722aa94a5e85b05d1d704d7dca10cbf016f0c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6546,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6546",
+    "title": "Construct the complete stochastic caller with absolute error bounds",
+    "state": "open",
+    "created_at": "2026-11-03T04:47:28Z",
+    "updated_at": "2026-11-03T04:47:28Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "ff038070b8d122a43993f2b2524154323cc6b4d7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6547,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6547",
+    "title": "Prove a complete caller zero fiber requiring 86N retained bits",
+    "state": "open",
+    "created_at": "2026-11-03T05:15:14Z",
+    "updated_at": "2026-11-03T05:15:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "317e4a099488794c372f8a4ad1e70deef3626bbf"
     },
     "base": {
       "ref": "main"

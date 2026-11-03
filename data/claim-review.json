@@ -1,3 +1,11 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pr": 6545,
+      "head": "775722aa94a5e85b05d1d704d7dca10cbf016f0c",
+      "title": "Improve conditional κ to 0.00329394 by retiring an independent Gaussian",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6545",
+      "reason": "The PR adds no single own research package CLAIM.json."
+    }
+  ]
 }

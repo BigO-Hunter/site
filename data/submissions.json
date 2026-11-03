@@ -118890,10 +118890,10 @@
       "pr_number": 6398,
       "author": "aliromman",
       "author_url": "https://github.com/aliromman",
-      "title": "Raise conditional κ by 4.28455% with a six-field mixed-query root",
+      "title": "Mixed-query root: conditional κ = 0.00328621476572836015146308 (+4.28455% over #6375)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6398",
       "submitted_at": "2026-11-02T20:45:04Z",
-      "updated_at": "2026-11-02T21:01:19Z",
+      "updated_at": "2026-11-03T05:01:25Z",
       "source_commit": "dee2663ba0918be86993fd9d63c8d64b020f4c83",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-02T20:45:04Z",
@@ -118902,9 +118902,9 @@
       "record_ids": [
         "crocswap-pr-6398"
       ],
-      "note": "No research package kappa claim.",
+      "note": null,
       "claim_head": "dee2663ba0918be86993fd9d63c8d64b020f4c83",
-      "claim_text": "89ba68666c97975aa8a05585cba1f0df7feca5f9fddf4ea6ac67a0eb00d76177",
+      "claim_text": "7e1d5fcd8f8b606fb2e98d528ba3f268437a037af66599d477992466e50c5f43",
       "claim_path_head": "dee2663ba0918be86993fd9d63c8d64b020f4c83",
       "claim_decided": true,
       "claim_files": [
@@ -122327,26 +122327,26 @@
       "pr_number": 6541,
       "author": "aliromman",
       "author_url": "https://github.com/aliromman",
-      "title": "Prove a 0.003293 ceiling for all monotone frame refits of two P104 words",
+      "title": "Prove P104 frame ceilings and finite child bounds for fresh-stage callers",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6541",
       "submitted_at": "2026-11-03T04:14:53Z",
-      "updated_at": "2026-11-03T04:14:53Z",
-      "source_commit": "6a3e041f250fd777f9b27c208853fb911e7a8d11",
+      "updated_at": "2026-11-03T04:47:14Z",
+      "source_commit": "9de3f9183a242715b664ae8747a8540bf6cc38e5",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-03T04:14:53Z",
       "checked_at": "2026-11-03",
       "claimed_score": null,
       "record_ids": [],
       "note": "No research package kappa claim.",
-      "claim_head": "6a3e041f250fd777f9b27c208853fb911e7a8d11",
-      "claim_text": "044218355490525a04118a22d288eb1f7ecfbec3f45326cc411f76b68f333f95",
+      "claim_head": "9de3f9183a242715b664ae8747a8540bf6cc38e5",
+      "claim_text": "1e73eaaabfdb11b7f4042964e0358482eb0b4514a4a2b87736524d3117b0ccee",
       "claim_files": [
         [
           "added",
           "research/p104-monotone-frame-ceiling/RESULT.json"
         ]
       ],
-      "claim_files_head": "6a3e041f250fd777f9b27c208853fb911e7a8d11",
+      "claim_files_head": "9de3f9183a242715b664ae8747a8540bf6cc38e5",
       "claim_files_base": "main",
       "claim_files_result": true
     },
@@ -122374,6 +122374,142 @@
         ]
       ],
       "claim_files_head": "a54131b655b6b6d4963686728af3fbbcbbe2af7d",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6543,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Construct the first successful finite extension slice from raw pencils",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6543",
+      "submitted_at": "2026-11-03T04:22:06Z",
+      "updated_at": "2026-11-03T04:29:51Z",
+      "source_commit": "0a389a6cf4a267faa8d253e9ee610be454f78491",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T04:22:06Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "0a389a6cf4a267faa8d253e9ee610be454f78491",
+      "claim_text": "32e1f30f2948fe0ef2640496b031960705386d72f270ebe901a907d3e51f5a03",
+      "claim_files": [
+        [
+          "added",
+          "research/pencil-first-slice-constructor/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "0a389a6cf4a267faa8d253e9ee610be454f78491",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6544,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Certify all 61 mixed-caller guard allocations and exact tariff regimes",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6544",
+      "submitted_at": "2026-11-03T04:22:20Z",
+      "updated_at": "2026-11-03T04:31:15Z",
+      "source_commit": "8ae433ea3484c24c2547e26d1cc5f764c7c31fd9",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T04:22:20Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "8ae433ea3484c24c2547e26d1cc5f764c7c31fd9",
+      "claim_text": "2d3a1fb7d5e2bcf9db5880b1d5bda1165419301cf825e04855b9cf479d0d4418",
+      "claim_files": [
+        [
+          "added",
+          "research/mixed-caller-guard-frontier/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "8ae433ea3484c24c2547e26d1cc5f764c7c31fd9",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6545,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Improve conditional κ to 0.00329394 by retiring an independent Gaussian",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6545",
+      "submitted_at": "2026-11-03T04:33:39Z",
+      "updated_at": "2026-11-03T04:50:22Z",
+      "source_commit": "775722aa94a5e85b05d1d704d7dca10cbf016f0c",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T04:33:39Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "775722aa94a5e85b05d1d704d7dca10cbf016f0c",
+      "claim_text": "2b931d5d218344a7dd46646c683b947bd39a56f4b8a124915d20ee479a04532e",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [
+        [
+          "added",
+          "research/gaussian-root-retirement/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "775722aa94a5e85b05d1d704d7dca10cbf016f0c",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6546,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Construct the complete stochastic caller with absolute error bounds",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6546",
+      "submitted_at": "2026-11-03T04:47:28Z",
+      "updated_at": "2026-11-03T04:47:28Z",
+      "source_commit": "ff038070b8d122a43993f2b2524154323cc6b4d7",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T04:47:28Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "ff038070b8d122a43993f2b2524154323cc6b4d7",
+      "claim_text": "728907b1eca480bfb2cded6023444c4a377fa16a11f8658cb8424a193af18f8e",
+      "claim_files": [
+        [
+          "added",
+          "research/selected-absolute-stochastic-caller/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "ff038070b8d122a43993f2b2524154323cc6b4d7",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6547,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Prove a complete caller zero fiber requiring 86N retained bits",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6547",
+      "submitted_at": "2026-11-03T05:15:14Z",
+      "updated_at": "2026-11-03T05:15:14Z",
+      "source_commit": "317e4a099488794c372f8a4ad1e70deef3626bbf",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T05:15:14Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "317e4a099488794c372f8a4ad1e70deef3626bbf",
+      "claim_text": "563c182460bc58c9ce0e157b247c2c8d1f537eccf9bdef53a657c8f09eb2fdce",
+      "claim_files": [
+        [
+          "added",
+          "research/selected-caller-zero-fiber/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "317e4a099488794c372f8a4ad1e70deef3626bbf",
       "claim_files_base": "main",
       "claim_files_result": true
     }

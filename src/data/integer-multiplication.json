@@ -39415,7 +39415,7 @@
         "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6398"
       },
       "spec_version": "1",
-      "title": "Raise conditional κ by 4.28455% with a six-field mixed-query root",
+      "title": "Mixed-query root: conditional κ = 0.00328621476572836015146308 (+4.28455% over #6375)",
       "authors": [
         {
           "name": "aliromman",
@@ -39426,7 +39426,7 @@
       "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6398",
       "artifact": {
         "path": "sources/pr-6398.json",
-        "sha256": "6c1cfbeef7d42800dc12c03687fff02262f590c044c9dc9db4be6a12abb8f2c8"
+        "sha256": "a0d8bf19b91a578788ac521e9f895ac0434ca13619d0e7f9f2df4ecdac9cda6f"
       },
       "evidence": {
         "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6398",
@@ -62459,7 +62459,7 @@
       "merged": false,
       "merged_at": null,
       "closed_at": null,
-      "updated_at": "2026-11-02T21:01:19Z",
+      "updated_at": "2026-11-03T05:01:25Z",
       "comparison_key": "crocswap/integer-multiplication-v1",
       "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
       "score_source": "Lead review decision; source claim only",
@@ -62535,5 +62535,5 @@
       "race_event_kind": "PR creation; latest observed score"
     }
   },
-  "updated_at": "2026-11-03T04:17:26Z"
+  "updated_at": "2026-11-03T05:17:25Z"
 }
