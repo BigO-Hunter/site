@@ -1828,5 +1828,14 @@
     "authors": [
       "Ali Romman"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-6545\",\"164697/50000000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.00329) n)` | by Ali Romman | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.00329) n)\nPlayer: Ali Romman\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-03T07:17:18.225Z",
+    "authors": [
+      "Ali Romman"
+    ]
   }
 ]
