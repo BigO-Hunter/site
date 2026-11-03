@@ -563,6 +563,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-02T23:45:00Z",
       "note": "ChaloupeMusic's own package research/p104-third-anchor-clean-mixed-root/ (RESULT.json, no CLAIM.json) states conditional_kappa 0.003287014 and complete_cost.kappa 1643507/500000000, the title's value (+1.65e-7 over #6417's 0.003286849), on a branch that is a direct child of #6417's head df683ace. Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-02T23:34:54Z. Against main the PR also shows #6417's package p104-clean-mixed-root, which #6417 holds, so the third-anchor package is the only own one. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6545,
+      "head": "775722aa94a5e85b05d1d704d7dca10cbf016f0c",
+      "score": "164697/50000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-03T05:38:00Z",
+      "note": "aliromman's own package research/gaussian-root-retirement/ (23 files, RESULT.json, no CLAIM.json) states candidate.complete_cost.kappa 164697/50000000 = 0.00329394, the title's value (+0.000005641 over #6529's 0.003288299). Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-03T04:33:39Z. It is queued because the value sits under a candidate key of RESULT.json, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
