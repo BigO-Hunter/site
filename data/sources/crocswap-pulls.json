@@ -127769,7 +127769,7 @@
     "title": "Prove sharp quarter-dimension repair for two Gaussian banks (no κ)",
     "state": "open",
     "created_at": "2026-11-03T12:10:12Z",
-    "updated_at": "2026-11-03T12:10:12Z",
+    "updated_at": "2026-11-03T12:24:57Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127790,7 +127790,7 @@
     "title": "Eliminate 15,400 zero products from the complete q-Toeplitz replay (no κ)",
     "state": "open",
     "created_at": "2026-11-03T12:12:36Z",
-    "updated_at": "2026-11-03T12:12:36Z",
+    "updated_at": "2026-11-03T12:20:31Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127811,7 +127811,7 @@
     "title": "Construct exact uniform two-capacity completions (no κ)",
     "state": "open",
     "created_at": "2026-11-03T12:13:36Z",
-    "updated_at": "2026-11-03T12:13:36Z",
+    "updated_at": "2026-11-03T13:03:19Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127819,7 +127819,7 @@
       "html_url": "https://github.com/petalas"
     },
     "head": {
-      "sha": "c92a21f9e0f1a41550ad113bd3654c92560525c8"
+      "sha": "0abcc978aa8ec083c0017ee50d7788e85f1cba1a"
     },
     "base": {
       "ref": "main"
@@ -127832,7 +127832,7 @@
     "title": "Execute resident SCALE 2 on one ribbon with 14,212 fewer operations",
     "state": "open",
     "created_at": "2026-11-03T12:14:26Z",
-    "updated_at": "2026-11-03T12:14:26Z",
+    "updated_at": "2026-11-03T12:27:05Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127853,7 +127853,7 @@
     "title": "Count exact symmetry quotients for width-two projector words (no κ)",
     "state": "open",
     "created_at": "2026-11-03T12:14:26Z",
-    "updated_at": "2026-11-03T12:14:26Z",
+    "updated_at": "2026-11-03T12:53:59Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127874,7 +127874,7 @@
     "title": "Run complete two-qubit Clifford replay without NumPy (no κ)",
     "state": "open",
     "created_at": "2026-11-03T12:15:17Z",
-    "updated_at": "2026-11-03T12:15:17Z",
+    "updated_at": "2026-11-03T12:53:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127895,7 +127895,7 @@
     "title": "Reduce complete-fiber tail staging to one buffer (no κ)",
     "state": "open",
     "created_at": "2026-11-03T12:16:20Z",
-    "updated_at": "2026-11-03T12:16:20Z",
+    "updated_at": "2026-11-03T12:54:01Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127904,6 +127904,216 @@
     },
     "head": {
       "sha": "5b02379b9f60e7d3ff652a07ebec42fb0ec5648a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6612,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6612",
+    "title": "Prove exact polynomial widths from chronological gcd cancellation (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:18:02Z",
+    "updated_at": "2026-11-03T12:54:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "9df11284bcc652a272014f8d19ee7e0bc642ed6d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6613,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6613",
+    "title": "Prove exact monomial-reflection tariffs with dirty workspace (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:18:03Z",
+    "updated_at": "2026-11-03T12:54:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "d2704e235f3b9e8ac01cd794d96db0ece1be4672"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6614,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6614",
+    "title": "Prove sharp dyadic two-wire approximation floors (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:18:13Z",
+    "updated_at": "2026-11-03T12:54:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "6341bc34e9ca9b24e962ac12064fe56979984dd6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6615,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6615",
+    "title": "Prove optimal classical all-odd selector memory (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:18:57Z",
+    "updated_at": "2026-11-03T12:54:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "55e382d5a633e8f2798baeb9cda589b6146e74d6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6616,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6616",
+    "title": "Reduce complete selected-baseline time by 33.67% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:19:35Z",
+    "updated_at": "2026-11-03T12:54:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "8e56b45f42b2ed54b8ca600ac8d5f5cc5f6b4e6c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6617,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6617",
+    "title": "Raise the affine seven-cube peak-30 cost floor from 140 to 200 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:20:07Z",
+    "updated_at": "2026-11-03T12:54:16Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "8eb92d3901231e7a172bbf99b780ec71bd4f3c6c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6618,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6618",
+    "title": "Count regular rank-one projector triple classes (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:21:00Z",
+    "updated_at": "2026-11-03T12:55:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "2c69372760776c6f522ba31fef3357e2aa9d309d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6619,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6619",
+    "title": "Classify reversible inward rounding of rational orthogonal maps (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:21:40Z",
+    "updated_at": "2026-11-03T12:54:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "eaa967e7e8aa12cc53ec246a5fc00c5f8873a50b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6620,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6620",
+    "title": "Certify 62 canonical single-warp entrance outcomes (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:26:20Z",
+    "updated_at": "2026-11-03T12:53:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "99b6564e1f4d1cf83bd42dc2ffafb1a4465231cc"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6621,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6621",
+    "title": "Merge paid jobs in the native word under the rebalanced retirement tree (κ 0.00329700)",
+    "state": "open",
+    "created_at": "2026-11-03T12:52:44Z",
+    "updated_at": "2026-11-03T12:52:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "e772ff8f300f4687bd8fa059f9e8f98719de121c"
     },
     "base": {
       "ref": "main"
