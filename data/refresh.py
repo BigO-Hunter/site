@@ -145,11 +145,13 @@ def package_field(path):
 
 # Other RESULT.json fields that state the package value (#4405 endpoint_refill.kappa, #4412-#4416
 # endpoint.kappa, #4440/#4441 a top-level kappa; 2026-10-21; #5377/#5383/#5387 arithmetic.kappa,
-# 2026-10-23; #6144/#6145/#6167 complete_cost.kappa, 2026-10-31, found when the lead decided them by hand).
-# They count only when they equal a kappa the PR title states exactly (Lead: list that shape without a
-# manual decision).
+# 2026-10-23; #6144/#6145/#6167 complete_cost.kappa, 2026-10-31, found when the lead decided them by hand;
+# #6545/#6551 candidate.complete_cost.kappa, 2026-11-03, the same). They count only when they equal a kappa
+# the PR title states exactly (Lead: list that shape without a manual decision).
 RESULT_VALUE_FIELDS = (('kappa',), ('endpoint', 'kappa'), ('endpoint_refill', 'kappa'), ('arithmetic', 'kappa'),
-                       ('complete_cost', 'kappa'))
+                       ('complete_cost', 'kappa'), ('candidate', 'complete_cost', 'kappa'))
+# Lead, 2026-11-03: the candidate.* shape is read only when its RESULT.json is the PR's single own package.
+SINGLE_PACKAGE_FIELDS = {'candidate.complete_cost.kappa'}
 MAX_OWN_RESULTS = 5
 # A nonzero denominator: Fraction('1/0') raises, and a contributor's file must never fail the refresh
 # (Reviewer, 2026-10-21).
@@ -264,7 +266,7 @@ def package_claim(stage, p, main_sha, owners, files_of, lower_prs, leader=None, 
         # 'Conditional κ .003128386' (#6144) was silent. The value must equal a RESULT.json field exactly.
         titled = set(title_kappas(p['title'])) if len(result_own) <= MAX_OWN_RESULTS else set()
         matches = [(path, field, value) for path in raws for field, value in result_values(parsed(path))
-                   if Fraction(value) in titled]
+                   if Fraction(value) in titled and (field not in SINGLE_PACKAGE_FIELDS or len(result_own) == 1)]
         if titled and len({(path, Fraction(value)) for path, _, value in matches}) == 1:
             path, field, value = matches[0]
             return package_value(stage, p, path, raws[path], names, field, value)

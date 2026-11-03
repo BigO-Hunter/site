@@ -243,6 +243,28 @@ class RefreshTests(unittest.TestCase):
         cost='research/p104-other/RESULT.json'
         score,path,reason=self.claim({cost:'added'},{'complete_cost':{'kappa':'1564193/500000000'}},title='Conditional κ = 0.0031 via something')
         self.assertEqual((score,path),(None,None));self.assertIsNotNone(reason)
+        # #6545, #6551 (2026-11-03): RESULT.json with no CLAIM.json, the value nested as candidate.complete_cost.kappa
+        # (fixtures of the live shapes; the title states the decimal).
+        for number,exact,decimal,title in [(6545,'164697/50000000','0.00329394','Improve conditional κ to 0.00329394 by retiring an independent Gaussian'),
+                                           (6551,'82373/25000000','0.00329492','Improve conditional kappa to 0.00329492 with a rebalanced retirement tree')]:
+            package=f'research/package-{number}/RESULT.json'
+            shape={'status':'candidate','candidate':{'complete_cost':{'kappa':exact,'kappa_decimal':decimal,'outer':{'parameters':{'kappa':exact},
+                   'strict_checks':{'group_scans_above_kappa':'697694241/700000000'}}}},'selected_frontier_changed':False}
+            self.assertEqual(self.claim({package:'added'},shape,title=title)[:2],(exact,package),number)
+            # The value must equal the title kappa: a different title leaves it with the lead.
+            score,path,reason=self.claim({package:'added'},shape,title='Improve conditional κ to 0.0033 by something else')
+            self.assertEqual((score,path),(None,None));self.assertIsNotNone(reason)
+            # Not a rational: no listing.
+            bad={'candidate':{'complete_cost':{'kappa':'0.00329394 or so'}}}
+            self.assertIsNone(self.claim({package:'added'},bad,title=title)[0])
+        # Two own packages: the candidate shape needs the single own package, so it stays with the lead even when it matches.
+        first,second='research/package-a/RESULT.json','research/package-b/RESULT.json'
+        pair={first:{'candidate':{'complete_cost':{'kappa':'164697/50000000'}}},second:{'status':'note'}}
+        score,path,reason=self.claim({first:'added',second:'added'},claims=pair,title='Improve conditional κ to 0.00329394 by retiring an independent Gaussian')
+        self.assertEqual((score,path),(None,None));self.assertIsNotNone(reason)
+        # A package that is not the PR's own (a stacked parent adds it) is not read for its candidate value.
+        score,path,reason=self.claim({first:'added'},pair[first],title='Improve conditional κ to 0.00329394 by retiring an independent Gaussian',owners={first:3199})
+        self.assertIsNone(score)
         # #4441: two own packages, one matches the title; the other states only kappa_decimal.
         thinned,boundary='research/fresh-helper-thinned/RESULT.json','research/fresh-helper-boundary/RESULT.json'
         claims={thinned:{'kappa':'60021/20000000','kappa_decimal':'0.00300105'},boundary:{'kappa_decimal':'0.00272124'}}
