@@ -571,6 +571,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-03T05:38:00Z",
       "note": "aliromman's own package research/gaussian-root-retirement/ (23 files, RESULT.json, no CLAIM.json) states candidate.complete_cost.kappa 164697/50000000 = 0.00329394, the title's value (+0.000005641 over #6529's 0.003288299). Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-03T04:33:39Z. It is queued because the value sits under a candidate key of RESULT.json, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6551,
+      "head": "11ca568cd1a16776ade02b4df09ea04a784cc674",
+      "score": "82373/25000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-03T06:38:00Z",
+      "note": "aliromman's own package research/retirement-rebalanced-query-tree/ (17 files, RESULT.json, no CLAIM.json) states candidate.complete_cost.kappa 82373/25000000 = 0.00329492, the title's value (+0.00000098 over #6545's 0.00329394). It keeps #6545's retirement and #6529's native word and rebalances the four binary children from (7,2,2,7) to (7,2,5,4). Conditional, same sense as all CrocSwap IM rows. Open, not draft, created 2026-11-03T05:57:05Z. It is queued because the value sits under a candidate key of RESULT.json, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
