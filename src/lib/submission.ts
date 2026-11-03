@@ -16,6 +16,7 @@ export const verifierIssueUrl = verifierUrl + '/issues/new?template=lean-submiss
 export const verifierOtherRows: Readonly<Record<string, {guide?: string}>> = {
   'average-sensitivity': {},
   catalan: {guide: verifierUrl + '/blob/main/docs/convert-layout.md'},
+  snaky: {},
 };
 
 export function submissionRoute(problem: Pick<Problem, 'slug' | 'repos'>) {

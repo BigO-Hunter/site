@@ -178,6 +178,31 @@ class DirectImportTests(unittest.TestCase):
         for bound in ['1','3/4','51/100','1/2','49/100','0']:
             with self.subTest(bound=bound):self.assertEqual(gate.normalize(dict(sub,bound=bound))['bound'],bound)
 
+    def test_snaky_target_and_reviewed_statement(self):
+        # Opened after verifier #106's runs (2026-11-02). The control and mutation receipts give the generated challenge
+        # for bound 20 (sha256 c31e994e..., runs 41543423936 and 41544953483) and for bound 19 (7b167320..., run
+        # 41544268863): reviewed test vectors only (those runs are test_only). Bounds are whole Maker moves, 0 to 100.
+        trust=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
+        profile=trust['profiles']['snaky']
+        raw=(FIXTURES/gate.statement_fixture(trust,profile['challenge_file'])).read_bytes()
+        self.assertEqual(gate.sha(raw),profile['challenge_sha256'])
+        self.assertEqual((profile['challenge_file'],profile['maximum'],profile['lean_toolchain'],profile['bound_kind']),
+                         ('challenges/other-snaky/VerifierStatement.lean','100','leanprover/lean4:v4.34.1','moves'))
+        self.assertNotIn('runner',profile)
+        self.assertEqual(gate.PROBLEMS['snaky'],('other/snaky',100))
+        sub=dict(schema_version=1,problem='snaky',bound='20',repo_url='https://github.com/u/p',commit='a'*40,authors=[])
+        generated=gate.challenge_bytes(gate.normalize(sub),raw)
+        self.assertTrue(generated.endswith(b'theorem Race.bound : BigOSpeedrun.Snaky.Bound 20 := by\n  sorry\n'))
+        self.assertEqual(gate.sha(generated),'c31e994e3757aa2e46eba45a945c54de234c55f4e175eecb3f9249317fa063ad')
+        self.assertEqual(gate.sha(gate.challenge_bytes(gate.normalize(dict(sub,bound='19')),raw)),
+                         '7b1673206843ef06f0f9ee90e9348b2cc9d90ca01ed935af11f967671123af78')
+        for bound in ['0','19','21','100']:
+            with self.subTest(bound=bound):self.assertEqual(gate.normalize(dict(sub,bound=bound))['bound'],bound)
+        # A fraction is refused, and so is a bound above the range. (An unreduced 40/2 is refused by parse_body.)
+        for bound in ['19/2','101']:
+            with self.subTest(bound=bound),self.assertRaises(gate.Rejected):gate.normalize(dict(sub,bound=bound))
+        with self.assertRaises(gate.Rejected):gate.challenge_bytes(dict(problem='snaky',bound='39/2'),raw)
+
     def test_each_board_range_is_its_profile_range(self):
         # The site lists every bound the verifier can run (Nil ruling 2026-11-02): the import range and the board's
         # score range end at the profile maximum.
@@ -193,7 +218,7 @@ class DirectImportTests(unittest.TestCase):
         # Catalan and Subset Sum both name their statement Statement.lean: statement_fixtures keeps the copies apart.
         trust=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
         names={key:gate.statement_fixture(trust,p['challenge_file']) for key,p in trust['profiles'].items()}
-        self.assertEqual((names['catalan'],names['subset-sum']),('Statement.lean','SubsetSumStatement.lean'))
+        self.assertEqual((names['catalan'],names['subset-sum'],names['snaky']),('Statement.lean','SubsetSumStatement.lean','SnakyVerifierStatement.lean'))
         for key,profile in trust['profiles'].items():
             with self.subTest(profile=key):
                 self.assertEqual(gate.sha((FIXTURES/names[key]).read_bytes()),profile['challenge_sha256'])

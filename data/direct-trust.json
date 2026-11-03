@@ -130,10 +130,28 @@
       "bound_kind": "exponent",
       "maximum": "1",
       "upstream_commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+    },
+    "snaky": {
+      "challenge_file": "challenges/other-snaky/VerifierStatement.lean",
+      "challenge_sha256": "49e630b3bab9a3d1006b373edd85cf196eba0f45bdb878e0126db16776ed780b",
+      "lean_toolchain": "leanprover/lean4:v4.34.1",
+      "manifest_file": "profiles/lake-manifest.json",
+      "tools_file": "profiles/tools.json",
+      "solution_module": "Submission",
+      "source_roots": [
+        "Submission"
+      ],
+      "theorem_names": [
+        "Race.bound"
+      ],
+      "bound_kind": "moves",
+      "maximum": "100",
+      "upstream_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a"
     }
   },
   "statement_fixtures": {
-    "challenges/subset-sum/Statement.lean": "SubsetSumStatement.lean"
+    "challenges/subset-sum/Statement.lean": "SubsetSumStatement.lean",
+    "challenges/other-snaky/VerifierStatement.lean": "SnakyVerifierStatement.lean"
   },
   "controller_blobs": {
     ".github/ISSUE_TEMPLATE/lean-submission.yml": {

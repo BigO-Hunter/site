@@ -30,7 +30,8 @@ ROOT=Path(__file__).resolve().parent
 # listed there, so nothing posts before the proof check passes (Nil, 2026-10-23). bound: the row's form.
 OTHER={'average-sensitivity':dict(bound='\\mathrm{{AS}}(f)\\le {value}d\\sqrt n',
     statement='BigOSpeedrun.AverageSensitivity.Bound'),
-    'catalan':dict(bound='\\mu(G)\\le {value}',statement='BigOSpeedrun.Catalan.Bound')}
+    'catalan':dict(bound='\\mu(G)\\le {value}',statement='BigOSpeedrun.Catalan.Bound'),
+    'snaky':dict(bound='\\text{{Maker moves}}\\le {value}',statement='BigOSpeedrun.Snaky.Bound')}
 # These hosted smoke identities are permanently excluded, even after label edits.
 SMOKE_NUMBERS={1,2}
 # A 'Not verified' report with one of these texts is not the final result of this version: it belongs to an

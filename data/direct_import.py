@@ -26,7 +26,10 @@ PROBLEMS = {'dft': ('exact-dft/uniform-exact-arithmetic', 1),
             # A board (verifier profile subset-sum, opened 2026-11-01): the exponent alpha of O(2^(alpha n)), 0 to 1
             # as in the profile. A Lean Verified bound above the classical 1/2 is listed too (Nil ruling 2026-11-02,
             # verifier #94: a stepping stone).
-            'subset-sum': ('subset-sum/randomized-word-ram', 1)}
+            'subset-sum': ('subset-sum/randomized-word-ram', 1),
+            # An Other bounds row (verifier profile snaky, opened 2026-11-03 after verifier #106's runs): Maker moves,
+            # a whole number from 0 to 100 as in the profile.
+            'snaky': ('other/snaky', 100)}
 MAX_BYTES = 2_000_000
 
 class Rejected(ValueError):
@@ -89,6 +92,8 @@ def normalize(value):
     require(isinstance(value['bound'], str) and re.fullmatch(r'(?:0|[1-9][0-9]{0,39})(?:/[1-9][0-9]{0,39})?', value['bound']), 'Invalid rational bound')
     bound = Fraction(value['bound'])
     require(0 <= bound <= PROBLEMS[value['problem']][1], 'Bound outside model range')
+    # A Snaky bound counts Maker moves (verifier submissions.validate_submission): a whole number, no fraction.
+    require(value['problem'] != 'snaky' or bound.denominator == 1, 'Snaky bound must be a whole number of Maker moves')
     require(isinstance(value['repo_url'], str) and re.fullmatch(r'https://github\.com/[A-Za-z0-9][A-Za-z0-9_.-]{0,99}/[A-Za-z0-9][A-Za-z0-9_.-]{0,99}', value['repo_url']), 'Invalid source repository')
     require(isinstance(value['commit'], str) and re.fullmatch(r'[0-9a-f]{40}', value['commit']), 'Invalid source commit')
     authors = value['authors']
@@ -167,6 +172,9 @@ theorem Race.bound : ∃ order solve W, DFTProgram order solve W ∧
         target = f'theorem Race.bound : BigOSpeedrun.Catalan.Bound (({n} : ℚ) / {d}) := by\n  sorry\n'
     elif submission['problem'] == 'subset-sum':
         target = f'theorem Race.bound : BigOSpeedrun.SubsetSum.SolvedInTime (({n} : Rat) / {d}) := by\n  sorry\n'
+    elif submission['problem'] == 'snaky':
+        require(d == 1, 'Snaky bound must be a whole number of Maker moves')
+        target = f'theorem Race.bound : BigOSpeedrun.Snaky.Bound {n} := by\n  sorry\n'
     else:
         problem = 'ThreeSum' if submission['problem'] == '3sum' else 'APSP'
         target = f'theorem Race.bound : EndStatement.{problem}.SolvedInTime (({n} : Rat) / {d}) := by\n  sorry\n'

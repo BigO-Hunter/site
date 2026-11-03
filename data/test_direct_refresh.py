@@ -661,6 +661,12 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual((listed[0]['handle'],listed[0]['value'],listed[0]['bound']),('direct-issue-70','1091','\\mu(G)\\le 1091'))
         self.assertEqual(listed[0]['display'],'1091')
         self.assertIn('BigOSpeedrun.Catalan.Bound (1091)',listed[0]['proofScope'])
+        # Snaky (opened after verifier #106's runs) is an Other bounds row: Maker moves.
+        snaky=dict(sub,problem='snaky',bound='20')
+        listed=r.other_claims({'direct-issue-80':dict(route='issue',item=self.issue(80),submission=snaky,verification=proof)},{},{})['other-snaky']['claims']
+        self.assertEqual((listed[0]['handle'],listed[0]['value'],listed[0]['display'],listed[0]['bound']),
+                         ('direct-issue-80','20','20','\\text{Maker moves}\\le 20'))
+        self.assertIn('BigOSpeedrun.Snaky.Bound',listed[0]['proofScope'])
         # No board row for it, and prepare writes the file.
         temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup);root=Path(temp.name)
         # Committed board snapshots, not the live boards, which the hourly refresh changes.
