@@ -2944,6 +2944,131 @@
       ],
       "repos": [],
       "bestHandle": "mishra-santhanam"
+    },
+    {
+      "slug": "prime-gaps",
+      "name": "Bounded prime gaps",
+      "quantity": "B\\text{ in }H_1\\le B",
+      "direction": "lower",
+      "statement": "Let \\(p_n\\) be the \\(n\\)-th prime. The quantity \\(H_1=\\liminf_{n\\to\\infty}(p_{n+1}-p_n)\\) is the smallest gap between consecutive primes that occurs infinitely often. A result is a proof that \\(H_1\\le B\\) for an integer \\(B\\), and it must not assume an unproved hypothesis. A lower \\(B\\) is better, and \\(B=2\\) is the twin prime conjecture. Polymath8b also proved \\(H_1\\le 12\\) if the unproved Elliott–Halberstam conjecture holds. Such conditional bounds do not count here.",
+      "baseline": {
+        "label": "Classic baseline",
+        "by": "D. H. J. Polymath",
+        "value": "246",
+        "bound": "H_1\\le 246",
+        "url": "https://arxiv.org/abs/1407.4897",
+        "date": "2014",
+        "exactValue": "246"
+      },
+      "claims": [
+        {
+          "author": "Julia Stadlmann",
+          "handle": "stadlmann",
+          "value": "240",
+          "display": "240",
+          "date": "2026-08-31T17:39:00Z",
+          "dateSource": "https://arxiv.org/abs/2608.31126v1",
+          "dateKind": "first-stated",
+          "url": "https://arxiv.org/abs/2608.31126",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "Preprint arXiv:2608.31126. It combines the Bombieri–Vinogradov theorem with newer equidistribution estimates for moduli that have only small prime factors. It uses a set of 49 integers whose largest and smallest elements differ by 240.",
+          "authors": [
+            {
+              "name": "Julia Stadlmann",
+              "url": "https://arxiv.org/abs/2608.31126"
+            }
+          ],
+          "proofScope": "A written proof in a preprint. No Lean proof is supplied.",
+          "bound": "H_1\\le 240"
+        },
+        {
+          "author": "Axiom Math: François Charton, Letong Hong, Kenny Lau, Ken Ono, Guillaume Remy, Ho Chung Siu, Ashvin A. Swaminathan, Jesse Thorner and Yunzhou Xie",
+          "handle": "axiom-math",
+          "value": "212",
+          "display": "212",
+          "date": "2026-09-03T14:56:00Z",
+          "dateSource": "https://x.com/axiommathai/status/2095526333799633063",
+          "dateKind": "first-stated",
+          "url": "https://primegaps.axiommath.ai/bgp212.pdf",
+          "lean": false,
+          "leanNote": "Conditional. AxiomProver generated a Lean certificate of the deduction; the analytic estimates and the numerical certificate are hypotheses.",
+          "evidence": "claimed",
+          "note": "A preliminary draft (3 September 2026) by nine authors, published by Axiom Math. It optimizes Julia Stadlmann's method with numerical experiments on a computing cluster.",
+          "authors": [
+            {
+              "name": "François Charton",
+              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+            },
+            {
+              "name": "Letong Hong",
+              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+            },
+            {
+              "name": "Kenny Lau",
+              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+            },
+            {
+              "name": "Ken Ono",
+              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+            },
+            {
+              "name": "Guillaume Remy",
+              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+            },
+            {
+              "name": "Ho Chung Siu",
+              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+            },
+            {
+              "name": "Ashvin A. Swaminathan",
+              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+            },
+            {
+              "name": "Jesse Thorner",
+              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+            },
+            {
+              "name": "Yunzhou Xie",
+              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+            }
+          ],
+          "proofScope": "A written proof in a draft paper. AxiomProver, an AI system of Axiom Math, generated a Lean certificate of the deduction. That certificate takes the five equidistribution estimates of the paper, the Bombieri–Vinogradov theorem, Harman's decomposition and the numerical certificate as hypotheses, so it is not a Lean proof of our statement.",
+          "bound": "H_1\\le 212"
+        },
+        {
+          "author": "OpenAI (GPT 6 Astra)",
+          "handle": "openai",
+          "agent": true,
+          "value": "186",
+          "display": "186",
+          "date": "2026-09-03T18:57:00Z",
+          "dateSource": "https://github.com/openai/PrimeGaps186",
+          "dateKind": "first-stated",
+          "url": "https://cdn.openai.com/pdf/51126fac-1b68-4128-9666-c908bcc16033/short_gaps.pdf",
+          "lean": false,
+          "leanNote": "Conditional. The Lean proof of \\(H_1\\le 186\\) assumes three axioms: two exponential-sum bounds of Deligne type and a set of numerical integral bounds.",
+          "evidence": "claimed",
+          "note": "The paper credits the proof to GPT 6 Astra. It proves this: take a set of 40 integers that, for each prime \\(p\\), misses at least one remainder modulo \\(p\\). Then infinitely many shifts of the set (the same number added to each element) contain at least two primes. It uses such a set whose largest and smallest elements differ by 186. The paper is dated 30 August 2026 and became public on 3 September 2026. The time shown is the first fork of its repository, the earliest public trace that we found.",
+          "authors": [
+            {
+              "name": "OpenAI",
+              "url": "https://github.com/openai/PrimeGaps186"
+            }
+          ],
+          "proofScope": "A written proof in a company paper. The Lean proof of \\(H_1\\le 186\\) in openai/PrimeGaps186 assumes three axioms that are not proved in Lean: two exponential-sum bounds of Deligne type, which are published theorems, and 152 numerical bounds on integrals and constants, which only a Python program checks. So it is not a Lean proof of our statement. The authors say that no person has reviewed the Lean development independently.",
+          "bound": "H_1\\le 186"
+        }
+      ],
+      "repos": [
+        {
+          "name": "openai/PrimeGaps186",
+          "url": "https://github.com/openai/PrimeGaps186",
+          "note": "OpenAI's Lean development and numerical certificate. The README lists the three axioms."
+        }
+      ],
+      "bestHandle": "openai"
     }
   ],
   "followups": [
