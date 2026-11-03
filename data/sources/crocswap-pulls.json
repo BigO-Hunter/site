@@ -127412,7 +127412,7 @@
     "title": "Complete source-bound full-stage preparation with separate mode plans",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-03T21:14:45Z",
+    "updated_at": "2026-11-03T21:19:03Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129554,7 +129554,7 @@
     "title": "Probe full-history blob-filter source hydration (prototype only)",
     "state": "open",
     "created_at": "2026-11-03T21:12:51Z",
-    "updated_at": "2026-11-03T21:12:51Z",
+    "updated_at": "2026-11-03T21:25:44Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129575,7 +129575,7 @@
     "title": "Prove the realizable two-plane signatures of 4x4 bases are exactly 439 (no κ)",
     "state": "open",
     "created_at": "2026-11-03T21:13:19Z",
-    "updated_at": "2026-11-03T21:13:19Z",
+    "updated_at": "2026-11-03T21:25:24Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129596,7 +129596,7 @@
     "title": "Link ten stored open questions to the merged packages that answer them (no κ)",
     "state": "open",
     "created_at": "2026-11-03T21:13:34Z",
-    "updated_at": "2026-11-03T21:13:34Z",
+    "updated_at": "2026-11-03T21:26:07Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129617,7 +129617,7 @@
     "title": "Complete the R16 radical-triple Pareto frontier: 13 count vectors, three unexposed (no κ)",
     "state": "open",
     "created_at": "2026-11-03T21:13:53Z",
-    "updated_at": "2026-11-03T21:13:53Z",
+    "updated_at": "2026-11-03T21:39:35Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129638,7 +129638,7 @@
     "title": "Prove seven orthogonal binary full-guard events lie below the product of their marginals (no κ)",
     "state": "open",
     "created_at": "2026-11-03T21:16:39Z",
-    "updated_at": "2026-11-03T21:16:39Z",
+    "updated_at": "2026-11-03T21:37:16Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129647,6 +129647,69 @@
     },
     "head": {
       "sha": "66d43a6c84bd13a93a9c2050de8b90eb75aa98ea"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6695,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6695",
+    "title": "Prove no toggle alphabet beats the five-source connector DUO point (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T21:19:26Z",
+    "updated_at": "2026-11-03T21:36:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "7ef416e83b8220d0a2f91cb34ea0c3bb9d892154"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6696,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6696",
+    "title": "Prove the eight-query mutable-source tariff is exactly 460 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T21:21:50Z",
+    "updated_at": "2026-11-03T21:45:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "2f4add4b548b7eb0ae38abb61fa5dc15d5a2a857"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6697,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6697",
+    "title": "Classify every quadratic-cubic algebra automorphism and determinant (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T21:43:04Z",
+    "updated_at": "2026-11-03T21:43:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "64e08a1b1a73f80c814f2a6954c693c26bebf358"
     },
     "base": {
       "ref": "main"
