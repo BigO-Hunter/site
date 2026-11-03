@@ -1,0 +1,11 @@
+{
+  "number": 6554,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6554",
+  "title": "Independently audit #6551’s retirement cut and Gaussian invoice delta",
+  "body": "Independently checks Ali Romman’s #6551 retirement boundary and complete Gaussian invoice change against #6545. The construction and gain remain predecessor contributions.\n\nBoth 35-field callers pass all 1,225 endpoint coefficients. A separate exact four-fiber checker confirms retirement-cut isolation. Literal tree/event accounting reproduces Δ(T−P)=208(H41−H40−H57+H56), positive for H_r=r^t, 0<t<1. Two additional ordinary translations are counted.\n\n[Package, proofs, logs and review](https://github.com/DLamdata/integer-mult-bounds/tree/13e880a734cc03f2a52c82a412a9a0e6ac2b1f0c/research/pr6551-retirement-audit) · [Canonical Discussion](https://github.com/CrocSwap/integer-mult-bounds/discussions/5645#discussioncomment-19369687)\n\nExact pins:\n- Base/latest checked upstream: 7c49fe32c55de02c2c873655c804b16e4c3fef0a; priority revision 8.\n- Contribution: 13e880a734cc03f2a52c82a412a9a0e6ac2b1f0c; four commits ahead of that base.\n- #6551: 11ca568cd1a16776ade02b4df09ea04a784cc674.\n- #6545: 775722aa94a5e85b05d1d704d7dca10cbf016f0c.\n\nReproduce with `python3 -B scripts/research_package.py --package research/pr6551-retirement-audit`.\n\nNormal/optimized verification, 22 semantic rejection controls, three external corruption controls, committed-byte/history checks and both read-only Git-free exports pass. Separate AI accounting and skeptical review found no unresolved blocker; a source-navigation error was corrected.\n\nNo new κ, supplier admission or frontier change is claimed. Native/all-width realization, physical ordinary rates, numerical crossing, completion tails, compiler and outer predicates remain unaudited here. All five framework assumptions remain.\n\nNext: independently audit the changed completion-tail parameters. Substantial OpenAI Codex assistance is disclosed; this is not human or formal-kernel verification. Predecessor credit, notices and Apache-2.0 licensing are preserved.",
+  "created_at": "2026-11-03T08:56:06Z",
+  "updated_at": "2026-11-03T08:56:06Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}
