@@ -127409,10 +127409,10 @@
   {
     "number": 6588,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6588",
-    "title": "Add non-admitting fresh-Sc constructor with owned-fixture controls",
+    "title": "Complete source-bound full-stage preparation with separate mode plans",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-03T15:16:29Z",
+    "updated_at": "2026-11-03T15:20:41Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128672,7 +128672,7 @@
     "title": "Prove exact vector-label Heisenberg central tariffs (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:06:19Z",
-    "updated_at": "2026-11-03T15:06:19Z",
+    "updated_at": "2026-11-03T15:19:38Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128714,7 +128714,7 @@
     "title": "Reduce tensor-root decoder COPY mass from 256 to 31 (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:08:17Z",
-    "updated_at": "2026-11-03T15:08:17Z",
+    "updated_at": "2026-11-03T15:22:15Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128735,7 +128735,7 @@
     "title": "Prove the exact uniform-fee target refinement optimum and halving test (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:09:20Z",
-    "updated_at": "2026-11-03T15:11:14Z",
+    "updated_at": "2026-11-03T15:21:12Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128756,7 +128756,7 @@
     "title": "Prove the depth-four chain repetition law: unit targets never repeat (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:11:04Z",
-    "updated_at": "2026-11-03T15:11:04Z",
+    "updated_at": "2026-11-03T15:21:24Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128777,7 +128777,7 @@
     "title": "Attain three dyadic cubic-repair queries at 17 new arities (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:11:08Z",
-    "updated_at": "2026-11-03T15:11:16Z",
+    "updated_at": "2026-11-03T15:22:07Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128819,7 +128819,7 @@
     "title": "Classify shortest words for the braid endpoint 3214 (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:11:53Z",
-    "updated_at": "2026-11-03T15:11:53Z",
+    "updated_at": "2026-11-03T15:22:37Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128912,6 +128912,69 @@
     },
     "head": {
       "sha": "0a4abbd39541f2b59688970ef1be1309af764442"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6660,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6660",
+    "title": "Prove optimal refined recovery for longer mode-preserving chains (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:17:48Z",
+    "updated_at": "2026-11-03T15:17:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "b6de532eff668a7daf8f2f98668f97af5af41338"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6661,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6661",
+    "title": "Prove exact conjugation tariffs for separate complex frames (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:18:48Z",
+    "updated_at": "2026-11-03T15:18:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "6b4e4c89df212fe90dacaad66fad1e36060e04fa"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6662,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6662",
+    "title": "Settle eight three-coset Hermitian bootstrap families at 784 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:21:04Z",
+    "updated_at": "2026-11-03T15:21:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "f6546561266d594981fe032740c7d414f37be145"
     },
     "base": {
       "ref": "main"
