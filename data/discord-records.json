@@ -4319,6 +4319,26 @@
               "ChaloupeMusic"
             ],
             "bound": "O(n log^(1 - 0.003287014) n)"
+          },
+          {
+            "id": "crocswap-pr-6398",
+            "score": "82155369143209003786577/25000000000000000000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Ali Romman"
+            ],
+            "bound": "O(n log^(1 - 0.0032862147657283601514) n)"
+          },
+          {
+            "id": "crocswap-pr-6436",
+            "score": "164318869572062111374401/50000000000000000000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "ChaloupeMusic"
+            ],
+            "bound": "O(n log^(1 - 0.0032863773914412422274) n)"
           }
         ],
         "table": "big-o"

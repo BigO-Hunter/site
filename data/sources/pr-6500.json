@@ -1,0 +1,11 @@
+{
+  "number": 6500,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6500",
+  "title": "Independently verify all nineteen P104 LOCAL contact stages",
+  "body": "The released stage-one check left stages 2–19 of the frozen P104 balanced-query caller without that independent contact check. This adds a source-bound certificate for all **7,904 LOCAL contacts** on its 104 retained ports.\n\nThe new engine reduces each stage to seventeen active axes by cancelling unchanged spectators. It checks phase values at zero, singleton and pair inputs; the written quadratic-parity argument explains why these determine the complete phase identity. It imports none of the predecessor phase-evaluation code. Its full translation ledger agrees with a fresh run of the unchanged physical consumer and its source receipt.\n\nVerification: native Python 3.12.15 normal and optimized registered checks, malformed-basis/stage/source/translation controls, actual-consumer order control, committed-byte/source-history checks, and official export integrity/input coverage. Fresh read-only Git-free export checks passed in both modes with all 15 files unchanged. Hosted CI is pending.\n\nScope is LOCAL-contact phases for the pinned caller and ports. Supplier scalar endpoints, owned lifetimes, all-column/native realization, funding and outer admission remain separate; no new bound is claimed.\n\nCredit Ali Romman and the retained PR6348/PR5544/PR4359 native-phase lineage; unpaidmoon for the stage-one check and remaining-stage handoff. [Claim and overlap](https://github.com/CrocSwap/integer-mult-bounds/discussions/1166#discussioncomment-19363507). Prepared with substantial OpenAI Codex assistance.\r\n",
+  "created_at": "2026-11-03T01:00:24Z",
+  "updated_at": "2026-11-03T01:01:22Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}
