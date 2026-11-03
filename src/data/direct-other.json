@@ -74,6 +74,33 @@
         }
       ]
     },
+    "other-snaky": {
+      "claims": [
+        {
+          "author": "darkhipo",
+          "handle": "direct-issue-114",
+          "value": "20",
+          "display": "20",
+          "date": "2026-11-03T01:43:27Z",
+          "dateSource": "https://github.com/bigospeedrun/verifier/issues/114",
+          "dateKind": "first-stated",
+          "url": "https://github.com/bigospeedrun/verifier/issues/114",
+          "lean": true,
+          "evidence": "lean-verified",
+          "note": "",
+          "authors": [
+            {
+              "name": "darkhipo",
+              "url": "https://github.com/darkhipo"
+            }
+          ],
+          "leanNote": "Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).",
+          "proofScope": "The verifier checked Race.bound : BigOSpeedrun.Snaky.Bound (20) at commit f6248dc39a05a6c5665240d860d2dbb95db707d9 of https://github.com/darkhipo/snaky-twenty.",
+          "bound": "\\text{Maker moves}\\le 20",
+          "receiptPath": "sources/direct-issue-114-41561952131-1-lean.json"
+        }
+      ]
+    },
     "other-average-sensitivity": {
       "claims": [
         {

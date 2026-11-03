@@ -106811,7 +106811,7 @@
     "title": "Verify the L300/L301 fixed-cut shared-handoff obstruction (no new κ)",
     "state": "closed",
     "created_at": "2026-10-25T09:39:53Z",
-    "updated_at": "2026-11-02T13:45:05Z",
+    "updated_at": "2026-11-03T02:00:05Z",
     "closed_at": "2026-10-25T14:19:11Z",
     "merged_at": "2026-10-25T14:19:11Z",
     "user": {
@@ -125585,7 +125585,7 @@
     "title": "Accelerate the complete current P104 forward scalar replay by 3.87x",
     "state": "open",
     "created_at": "2026-11-03T01:02:02Z",
-    "updated_at": "2026-11-03T01:02:02Z",
+    "updated_at": "2026-11-03T01:19:47Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -125648,7 +125648,7 @@
     "title": "Certify the residual two-cycle incidence class with full formal controls",
     "state": "open",
     "created_at": "2026-11-03T01:11:03Z",
-    "updated_at": "2026-11-03T01:11:03Z",
+    "updated_at": "2026-11-03T01:32:50Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -125656,7 +125656,7 @@
       "html_url": "https://github.com/aliromman"
     },
     "head": {
-      "sha": "57b4c06ddd657c85823c8a11857cd5b54bb1837e"
+      "sha": "c98e5b03a7d9001a155ba10bc9faad0ceb7cad68"
     },
     "base": {
       "ref": "main"
@@ -125678,6 +125678,363 @@
     },
     "head": {
       "sha": "40414ae7fb6b87f69acc349e63f2a83f1946f757"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6506,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6506",
+    "title": "Construct the complete selected P104 Boolean scalar layer",
+    "state": "open",
+    "created_at": "2026-11-03T01:22:41Z",
+    "updated_at": "2026-11-03T01:22:41Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "1298247d11b979f1006fcb03d5ee2b3b468b26d0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6507,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6507",
+    "title": "Bound P104 moment arithmetic and reduce complete pricing replay by 16x",
+    "state": "open",
+    "created_at": "2026-11-03T01:33:07Z",
+    "updated_at": "2026-11-03T01:33:07Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "3870e39846cc73a8fe2de7f4219590b72032e815"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6508,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6508",
+    "title": "Join an emitted native warp, child and scalar ADD with exact phase",
+    "state": "open",
+    "created_at": "2026-11-03T01:35:48Z",
+    "updated_at": "2026-11-03T01:35:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "320c3bb73c5bdf231b6504dbe0cfe19410a78b8b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6509,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6509",
+    "title": "Preserve exact Gaussian sums with reversible rounding and complete ports",
+    "state": "open",
+    "created_at": "2026-11-03T01:36:30Z",
+    "updated_at": "2026-11-03T01:48:56Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "a4173e810c4d34a1d13b9745af123ad0ec6cfed5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6510,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6510",
+    "title": "Independently audit all mixed-caller error budgets (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T01:38:27Z",
+    "updated_at": "2026-11-03T01:56:02Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "62bbf6da28ee686698d979ad9f0945f707726c9a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6511,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6511",
+    "title": "Use one clean carry for the complete selected P104 scalar layer",
+    "state": "open",
+    "created_at": "2026-11-03T01:40:25Z",
+    "updated_at": "2026-11-03T01:40:25Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "39b87aa272de863f454df3e7c8d7bbec4fa4efa3"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6512,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6512",
+    "title": "Prove the fixed-coordinate F4 all-p caller cost bound (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-03T01:50:04Z",
+    "updated_at": "2026-11-03T01:50:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "37c3eb9ec87cc735a413a8fc20bf3cae2cc31e95"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6513,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6513",
+    "title": "Certify cheaper physical control routes for all selected P104 scalars",
+    "state": "open",
+    "created_at": "2026-11-03T01:53:42Z",
+    "updated_at": "2026-11-03T01:53:42Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "8bbb2643b9438a6050404fb2faf39b7390bce321"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6514,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6514",
+    "title": "Prove the sharp paid-moment floor for independent four-cycles.",
+    "state": "open",
+    "created_at": "2026-11-03T01:56:18Z",
+    "updated_at": "2026-11-03T01:59:20Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "9661521ca13be66a0788b4df93c3f83029ef3009"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6515,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6515",
+    "title": "Cursor/six event guard correlation 891a",
+    "state": "open",
+    "created_at": "2026-11-03T01:56:20Z",
+    "updated_at": "2026-11-03T01:59:29Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "f6cf478e2550e747074a746a4038a74b321ceb6f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6516,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6516",
+    "title": "Record that a G20 frame round trip does not emit",
+    "state": "open",
+    "created_at": "2026-11-03T01:56:22Z",
+    "updated_at": "2026-11-03T01:59:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "cb0973978c785f41f5a11fd2548ac08ba6e68dd6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6517,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6517",
+    "title": "Record one ordinary-work bound for the PR6353 supplier.",
+    "state": "open",
+    "created_at": "2026-11-03T01:56:24Z",
+    "updated_at": "2026-11-03T01:59:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "f3f05858c233496b8f298e5fa455b613175e0079"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6518,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6518",
+    "title": "Audit cut-9047 witness admissibility on the #5402 entrance.",
+    "state": "open",
+    "created_at": "2026-11-03T01:56:26Z",
+    "updated_at": "2026-11-03T01:59:21Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "8d2f261e7496f673de2121e4988238961902a39e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6519,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6519",
+    "title": "Record the R437 parent blank-return cursor meter.",
+    "state": "open",
+    "created_at": "2026-11-03T01:56:28Z",
+    "updated_at": "2026-11-03T01:58:59Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "0ee1e12a602859676b9c9f8143d43027d3f2bf25"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6520,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6520",
+    "title": "Record the stage-1 LOCAL contact on the PR6353 ports.",
+    "state": "open",
+    "created_at": "2026-11-03T01:56:30Z",
+    "updated_at": "2026-11-03T01:58:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "6205312028bd6d58cd297eb2f7c98f5ebfa5ce35"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6521,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6521",
+    "title": "Record an independent scalar audit of the four PR6349 input lifts.",
+    "state": "open",
+    "created_at": "2026-11-03T01:56:31Z",
+    "updated_at": "2026-11-03T01:57:41Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "06df9a03e55ab5aabe338b28a268a13131ce6dc7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6522,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6522",
+    "title": "Cursor/pr6030 precision envelope mass 7270",
+    "state": "open",
+    "created_at": "2026-11-03T01:56:34Z",
+    "updated_at": "2026-11-03T01:57:17Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "19b516037b14f5838af4c32a07eb64871712eb35"
     },
     "base": {
       "ref": "main"

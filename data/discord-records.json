@@ -6385,6 +6385,17 @@
             ],
             "bound": "Maker moves ≤ 19",
             "display": "19"
+          },
+          {
+            "id": "direct-issue-114:20",
+            "score": "20",
+            "relation": "attained",
+            "evidence": "Lean Verified",
+            "authors": [
+              "Dmitri I. Arkhipov"
+            ],
+            "bound": "Maker moves ≤ 20",
+            "display": "20"
           }
         ]
       },
@@ -6969,7 +6980,8 @@
     "[\"other-catalan\",\"slitsey:410\",\"410\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6417\",\"3286849/1000000000\",\"attained\"]:record",
     "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:lean",
-    "[\"integer-multiplication\",\"crocswap-pr-6453\",\"1643507/500000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6453\",\"1643507/500000000\",\"attained\"]:record",
+    "[\"other-snaky\",\"direct-issue-114:20\",\"20\",\"attained\"]:lean"
   ],
   "deferred": [
     {
