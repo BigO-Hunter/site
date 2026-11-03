@@ -1,0 +1,20 @@
+import { test } from 'node:test'; import assert from 'node:assert/strict'; import { readFileSync } from 'node:fs';
+import { parse, text, density, timeAt, best, qualifies, qText, latex, D_NAMES, CLASSIC } from './sssp.ts';
+// The cases that data/sssp.py, this module and the verifier's parse_sssp agree on.
+const CASES = JSON.parse(readFileSync(new URL('../../data/direct-fixtures/sssp-cases.json', import.meta.url), 'utf8'));
+test('normal forms parse to the shared exponent tuples', () => {
+ for (const c of CASES.parse) { const t = parse(c.text); assert.deepEqual(t.map(qText), c.exponents, c.text); assert.equal(text(t.slice(0, 2), D_NAMES) + ' ; ' + text(t.slice(2)), c.text); }
+});
+test('every shared refusal is refused', () => { for (const t of CASES.refuse) assert.throws(() => parse(t), undefined, JSON.stringify(t)); });
+test('function rows give the shared time at each density', () => {
+ for (const row of CASES.functions) for (const [d, t] of Object.entries(row.at)) assert.equal(text(timeAt(row.terms, density(d))), t, `${row.name} at ${d}`);
+});
+test('the gate agrees with the shared cases, and the classic never gates', () => {
+ for (const c of CASES.gate) {
+  const points = c.lean_verified.map(parse), cand = parse(c.candidate), b = best(cand.slice(0, 2), points);
+  assert.equal(b ? text(b) : null, c.best, c.candidate); assert.equal(qualifies(cand, points), c.runs, c.candidate);
+ }
+ assert.equal(qualifies(parse('n log^1/2 ; n log^2'), []), true);
+ assert.equal(text(timeAt(CLASSIC, density('n log^1/2'))), 'n log');
+});
+test('latex', () => { assert.equal(latex(parse(CASES.parse[0].text).slice(2)), 'n \\log^{11/12} n'); assert.equal(latex(density('n log^3/4'), D_NAMES), 'n \\log^{3/4} n'); });
