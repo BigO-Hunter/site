@@ -126698,7 +126698,7 @@
     "title": "Independently audit #6551’s retirement cut and Gaussian invoice delta",
     "state": "open",
     "created_at": "2026-11-03T08:56:06Z",
-    "updated_at": "2026-11-03T08:56:06Z",
+    "updated_at": "2026-11-03T09:45:26Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126706,12 +126706,12 @@
       "html_url": "https://github.com/DLamdata"
     },
     "head": {
-      "sha": "13e880a734cc03f2a52c82a412a9a0e6ac2b1f0c"
+      "sha": "7abed1d3cba732b9af0bd9bc0eedcf0b8c65f064"
     },
     "base": {
       "ref": "main"
     },
-    "draft": true
+    "draft": false
   },
   {
     "number": 6555,
@@ -126740,7 +126740,7 @@
     "title": "Save six primitives in one signed JP8 continuation (no κ)",
     "state": "open",
     "created_at": "2026-11-03T09:11:26Z",
-    "updated_at": "2026-11-03T09:11:26Z",
+    "updated_at": "2026-11-03T09:22:49Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126761,7 +126761,7 @@
     "title": "Give a closed Lucas formula for quinary repair ranks (no κ)",
     "state": "open",
     "created_at": "2026-11-03T09:12:04Z",
-    "updated_at": "2026-11-03T09:12:04Z",
+    "updated_at": "2026-11-03T09:20:31Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126782,7 +126782,7 @@
     "title": "Retain the G20 carry producer in 24 bits (no κ)",
     "state": "open",
     "created_at": "2026-11-03T09:12:25Z",
-    "updated_at": "2026-11-03T09:12:25Z",
+    "updated_at": "2026-11-03T09:22:23Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126803,7 +126803,7 @@
     "title": "Raise the fixed R439 scatter lower bound from 44 to 45 (no kappa)",
     "state": "open",
     "created_at": "2026-11-03T09:13:06Z",
-    "updated_at": "2026-11-03T09:13:06Z",
+    "updated_at": "2026-11-03T09:30:40Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126824,7 +126824,7 @@
     "title": "Compile a nilpotent chain with optimal reflection calls (no κ)",
     "state": "open",
     "created_at": "2026-11-03T09:14:47Z",
-    "updated_at": "2026-11-03T09:14:47Z",
+    "updated_at": "2026-11-03T09:25:16Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126845,7 +126845,7 @@
     "title": "Prove exact rounding radii for signed-permutation frame groups (no κ)",
     "state": "open",
     "created_at": "2026-11-03T09:15:18Z",
-    "updated_at": "2026-11-03T09:15:18Z",
+    "updated_at": "2026-11-03T09:27:51Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126866,7 +126866,7 @@
     "title": "Save one main-state bit in an initialized G20 carry (no κ)",
     "state": "open",
     "created_at": "2026-11-03T09:16:35Z",
-    "updated_at": "2026-11-03T09:16:36Z",
+    "updated_at": "2026-11-03T09:26:01Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126875,6 +126875,363 @@
     },
     "head": {
       "sha": "c927c08dea4de4c83c30b6ad111e91e965120a0f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6563,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6563",
+    "title": "Prove the exact bounded-degree polynomial cost law and moments (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T09:17:52Z",
+    "updated_at": "2026-11-03T09:27:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "6a5e7c58921a2efdeeb5ccdfcd1f1b0c528d1658"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6564,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6564",
+    "title": "Prove the sharp rounded dyadic connector carry (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T09:17:53Z",
+    "updated_at": "2026-11-03T09:30:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "983c2cebd7946c26a1251c07ea7dabff601d5243"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6565,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6565",
+    "title": "Prove sharp 1/140 binary rank-two header probability (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T09:17:55Z",
+    "updated_at": "2026-11-03T09:28:28Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "4d72cf3d54c1f4c547e52d7c5cf1c1d5009b1043"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6566,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6566",
+    "title": "Prune 374 states from exact joint connector synthesis (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T09:18:13Z",
+    "updated_at": "2026-11-03T09:28:58Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "efd1f40a5ff783373f3104a1200f3c0f0a9e6ccc"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6567,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6567",
+    "title": "Lower norm-six target denominator from 256 to 64 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T09:19:07Z",
+    "updated_at": "2026-11-03T09:28:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "3626b3318b801752d1cbf90ca625cf2fa88f3072"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6568,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6568",
+    "title": "Improve unsigned connector capacity with balanced closed walks (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T09:22:26Z",
+    "updated_at": "2026-11-03T09:32:05Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "0c3ff8236c103c5960ef15c45b26432ad1603f8d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6569,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6569",
+    "title": "Reduce complete E8 root-swap replay time by 13.95% (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-03T09:22:54Z",
+    "updated_at": "2026-11-03T09:33:42Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "de49f92361c0b392cf30a9a79b7fa8b83cc90ca9"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6570,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6570",
+    "title": "Remove 15,732,800 zero products from complete incidence replay",
+    "state": "open",
+    "created_at": "2026-11-03T09:22:58Z",
+    "updated_at": "2026-11-03T09:32:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "a5f300a6358543eaa4bb6fe75b8054398cac273b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6571,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6571",
+    "title": "Raise the sparse P104 correction floor from 28 to 38 ADDs (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:03:48Z",
+    "updated_at": "2026-11-03T10:12:42Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "3dbddeac131dde06cdffaf438fc68d06115b44b2"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6572,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6572",
+    "title": "Derive 2,240 idle phase tags and remove 50,337 metadata bytes (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:07:12Z",
+    "updated_at": "2026-11-03T10:15:11Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "505229492d35931837d81d9a90e099398b81a2f1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6573,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6573",
+    "title": "Give native output prefixes optimal unbiased variance (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:08:20Z",
+    "updated_at": "2026-11-03T10:15:35Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "64f90d7a7ca010c8c3bf77ca9b3663ee5e957055"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6574,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6574",
+    "title": "Attain sharp four-axis Gaussian grid error with an exact inverse",
+    "state": "open",
+    "created_at": "2026-11-03T10:09:28Z",
+    "updated_at": "2026-11-03T10:09:28Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "48e312ff18d5b66b0969148f615fdf5ce0f92edd"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6575,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6575",
+    "title": "Prove the exact shared atom-power crossover with 24 carry states",
+    "state": "open",
+    "created_at": "2026-11-03T10:12:16Z",
+    "updated_at": "2026-11-03T10:12:16Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "d0d8ae85a23b338f437ab0402126c7e5e1fc7ff7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6576,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6576",
+    "title": "Prove sharp ADDRESS tariff margins for every odd kernel (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:12:17Z",
+    "updated_at": "2026-11-03T10:12:17Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "7ae7ba0a361fa68b007218d70a5d1d0680fe8101"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6577,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6577",
+    "title": "Prove the global thirteen-ADD dirty parity-fanout minimum (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:14:29Z",
+    "updated_at": "2026-11-03T10:14:29Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "d54576b126e39033e97d4ae34fd51ef9ff524281"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6578,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6578",
+    "title": "Count all automorphisms of nonsplit Frobenius products (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:15:55Z",
+    "updated_at": "2026-11-03T10:15:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "a148f241a46db2779889751b8eb455af724d853b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6579,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6579",
+    "title": "Prove exact E8 root-low basis tariff 78 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:16:18Z",
+    "updated_at": "2026-11-03T10:16:18Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "277ff2c230937460aae5d2b19d83be37d0d60a5b"
     },
     "base": {
       "ref": "main"
