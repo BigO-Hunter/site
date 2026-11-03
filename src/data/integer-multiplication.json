@@ -62586,7 +62586,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6529",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-03T03:12:57Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Ali Romman replaces two public transport intervals, each a rank-four and a rank-one move, by one direct rank-five move, with an exact output correction that restores every arbitrary input, at all 18 native calls of ChaloupeMusic's PR 6453 stack. The conditional kappa is 0.003288299, 0.039 percent above PR 6453's 0.003287014. It extends rohanarun's donor merge in PR 6399 to scaled intervals."
     },
     "crocswap-pr-6545": {
       "checked_at": "2026-11-03",
@@ -62614,7 +62615,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6545",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-03T04:33:39Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Ali Romman makes the caller return one completed Gaussian at an intermediate cut and gives the rest a fresh independent input, so that on each of 104 ports one rank-17 target becomes independent rank-1 and rank-16 targets; all 67,096 paid Gaussian jobs remain. The conditional kappa is 0.00329394, 0.17 percent above PR 6529's 0.003288299. It uses the independent-handoff method of PR 5599, the PR 6398 root and the PR 6529 native source, with PR 6399, PR 6417 and ChaloupeMusic's PR 6453."
     }
   },
   "updated_at": "2026-11-03T06:17:24Z"
