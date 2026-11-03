@@ -89,6 +89,8 @@ test('a Heilbronn direct claim (a saving near 1e-8, higher is better) leads the 
   assert.equal(lead('2/100866719', '\\approx1.98281\\cdot10^{-8}'), 'canghaimeng', 'a tie keeps the leader');
   assert.equal(lead('1/50893237', '\\approx1.96489\\cdot10^{-8}'), 'canghaimeng');
   assert.equal(lead('1/50000000', '2\\cdot10^{-8}'), 'direct-issue-999');
+  // A Lean Verified stepping stone far below the Claimed rows (1/(100000 K), a 237-digit denominator) is listed but does not lead.
+  assert.equal(lead('1/138611120630192845449848501984762489503949180120972521287304259199089718296986575839672803644586516021090063092820239685405507227054093124597541492458051962596474875313132928055153805949190893429472432269634916029759500562026384000100000', '\\approx7.21442\\cdot10^{-237}'), 'canghaimeng');
   // A leader without an exact value: the claim must beat its display by one unit of the last shown digit.
   const latex = {families: [{slug: 'heilbronn-triangle', direction: 'higher', bestHandle: 'littleBro', claims: [
     {handle: 'littleBro', value: '1/(498\\cdot379^{17}+7)', display: '\\approx2.92\\cdot10^{-47}', date: '2026-10-08T20:04:00Z', evidence: 'claimed', url: 'https://example.org/l'}]}]};

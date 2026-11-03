@@ -35,6 +35,10 @@ PROBLEMS = {'dft': ('exact-dft/uniform-exact-arithmetic', 1),
             'heilbronn-triangle': ('other/heilbronn-triangle', Fraction(5, 6))}
 # Problems where a larger bound is better (a saving), as the verifier's HIGHER: the weakest bound of the range is 0.
 HIGHER = {'dft', 'heilbronn-triangle'}
+# At most 40 digits per integer of a bound (Lead decision, 2026-10-21, issue #35: a reduced 3SUM bound needed 19).
+# A Heilbronn saving with a full proof can be very small (1/(100000 K) has a 237-digit denominator): 300 (Lead,
+# 2026-11-03, verifier #105), as the verifier's BOUND_DIGITS.
+BOUND_DIGITS = {'heilbronn-triangle': 300}
 MAX_BYTES = 2_000_000
 
 class Rejected(ValueError):
@@ -93,8 +97,9 @@ def normalize(value):
     require(isinstance(value, dict) and fields <= value.keys() and not value.keys()-fields-{'entrypoint'}, 'Invalid submission fields')
     require(type(value['schema_version']) is int and value['schema_version'] == 1, 'Unsupported submission schema')
     require(isinstance(value['problem'], str) and value['problem'] in PROBLEMS, 'Unsupported problem')
-    # At most 40 digits per integer (Nil, 2026-10-21: a reduced 3SUM bound needed 19, issue #35).
-    require(isinstance(value['bound'], str) and re.fullmatch(r'(?:0|[1-9][0-9]{0,39})(?:/[1-9][0-9]{0,39})?', value['bound']), 'Invalid rational bound')
+    # A digit limit per integer of the bound, as the verifier's bound_digits.
+    digits = BOUND_DIGITS.get(value['problem'], 40)
+    require(isinstance(value['bound'], str) and re.fullmatch(rf'(?:0|[1-9][0-9]{{0,{digits - 1}}})(?:/[1-9][0-9]{{0,{digits - 1}}})?', value['bound']), 'Invalid rational bound')
     bound = Fraction(value['bound'])
     require(0 <= bound <= PROBLEMS[value['problem']][1], 'Bound outside model range')
     # A Snaky bound counts Maker moves (verifier submissions.validate_submission): a whole number, no fraction.

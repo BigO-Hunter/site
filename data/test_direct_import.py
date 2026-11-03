@@ -227,6 +227,16 @@ class DirectImportTests(unittest.TestCase):
                          'e6ed8e63ebdb6b6605140015220786df2ff428a049b9d61a335248356f0520ee')
         for bound in ['1/50893237','2/100866719','1/2','5/6']:
             with self.subTest(bound=bound):self.assertEqual(gate.normalize(dict(sub,bound=bound))['bound'],bound)
+        # Up to 300 digits per integer on Heilbronn (the comparator exponent 1/(100000 K) has 237), 40 elsewhere.
+        from math import comb
+        q=100000*(comb(comb(163,41),3)**2+1);self.assertEqual(len(str(q)),237)
+        self.assertEqual(gate.normalize(dict(sub,bound=f'1/{q}'))['bound'],f'1/{q}')
+        self.assertTrue(gate.challenge_bytes(gate.normalize(dict(sub,bound=f'1/{q}')),raw).endswith(f'Bound ((1 : ℚ) / {q}) := by\n  sorry\n'.encode()))
+        self.assertEqual(gate.normalize(dict(sub,bound='1/'+'9'*300))['bound'],'1/'+'9'*300)
+        with self.assertRaises(gate.Rejected):gate.normalize(dict(sub,bound='1/1'+'0'*300))
+        other=dict(sub,problem='catalan')
+        self.assertEqual(gate.normalize(dict(other,bound='1/'+'9'*40))['bound'],'1/'+'9'*40)
+        with self.assertRaises(gate.Rejected):gate.normalize(dict(other,bound='1/1'+'0'*40))
         # 0 is the classical bound (a form error; only the maintainer smoke runs it), and 1 is above the range.
         for bound in ['0','1','6/7']:
             with self.subTest(bound=bound),self.assertRaises(gate.Rejected):gate.normalize(dict(sub,bound=bound))

@@ -677,6 +677,14 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual(r.display_down('1/2'),('5\\cdot10^{-1}','5\\cdot10^{-1}'))
         self.assertEqual(r.display_down('1/9999999999999999999999999999999999999999')[0],'1\\cdot10^{-40}')
         self.assertEqual(r.display_down('1/100000000'),('1\\cdot10^{-8}','1\\cdot10^{-8}'))
+        # darkhipo's comparator exponent 1/(100000 K), a 237-digit denominator (verifier #105): the row form.
+        from math import comb
+        q=100000*(comb(comb(163,41),3)**2+1)
+        tiny=dict(sub,problem='heilbronn-triangle',bound=f'1/{q}')
+        listed=r.other_claims({'direct-issue-82':dict(route='issue',item=self.issue(82),submission=tiny,verification=proof)},{},{})['other-heilbronn-triangle']['claims']
+        shown=r.display_down(f'1/{q}')[0]
+        self.assertTrue(shown.endswith('\\cdot10^{-237}') and shown.startswith('7.'),shown)
+        self.assertEqual((listed[0]['value'],listed[0]['display'],listed[0]['bound']),(f'1/{q}','\\approx'+shown,'\\eta\\ge '+shown))
         # No board row for it, and prepare writes the file.
         temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup);root=Path(temp.name)
         # Committed board snapshots, not the live boards, which the hourly refresh changes.
