@@ -203,6 +203,41 @@ class DirectImportTests(unittest.TestCase):
             with self.subTest(bound=bound),self.assertRaises(gate.Rejected):gate.normalize(dict(sub,bound=bound))
         with self.assertRaises(gate.Rejected):gate.challenge_bytes(dict(problem='snaky',bound='39/2'),raw)
 
+    def test_heilbronn_target_and_reviewed_statement(self):
+        # Verifier #105: the saving eta, 0 < eta <= 5/6, and a higher saving is better (HIGHER, as in the verifier).
+        # The receipts of the test runs on verifier e5890d5 give the generated challenges: 1/50893237 cc485a03
+        # (control, run 41567042077), 1/50893238 c93fc030 (M1, run 41567693486) and 0 e6ed8e63 (the maintainer smoke,
+        # run 41571110767; the form refuses 0). Reviewed test vectors only: those runs are test_only.
+        trust=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
+        profile=trust['profiles']['heilbronn-triangle']
+        raw=(FIXTURES/gate.statement_fixture(trust,profile['challenge_file'])).read_bytes()
+        self.assertEqual(gate.sha(raw),profile['challenge_sha256'])
+        self.assertEqual((profile['challenge_file'],profile['maximum'],profile['lean_toolchain'],profile['bound_kind']),
+                         ('challenges/heilbronn-triangle/VerifierStatement.lean','5/6','leanprover/lean4:v4.34.1','saving'))
+        self.assertNotIn('runner',profile)
+        self.assertEqual(gate.PROBLEMS['heilbronn-triangle'],('other/heilbronn-triangle',Fraction(5,6)))
+        self.assertEqual(Fraction(gate.PROBLEMS['heilbronn-triangle'][1]),Fraction(profile['maximum']))
+        sub=dict(schema_version=1,problem='heilbronn-triangle',bound='1/50893237',repo_url='https://github.com/u/p',commit='a'*40,authors=[])
+        generated=gate.challenge_bytes(gate.normalize(sub),raw)
+        self.assertTrue(generated.endswith(b'theorem Race.bound : BigOSpeedrun.HeilbronnTriangle.Bound ((1 : \xe2\x84\x9a) / 50893237) := by\n  sorry\n'))
+        self.assertEqual(gate.sha(generated),'cc485a03f569e325754c5137d4aa96b6ec0e19d78e453c1d5ac56318a74ddf8a')
+        self.assertEqual(gate.sha(gate.challenge_bytes(gate.normalize(dict(sub,bound='1/50893238')),raw)),
+                         'c93fc030847a89b14476ad86c865d89d8365ce2d9a0b46be72ec0deeac6e1cbc')
+        self.assertEqual(gate.sha(gate.challenge_bytes(dict(problem='heilbronn-triangle',bound='0'),raw)),
+                         'e6ed8e63ebdb6b6605140015220786df2ff428a049b9d61a335248356f0520ee')
+        for bound in ['1/50893237','2/100866719','1/2','5/6']:
+            with self.subTest(bound=bound):self.assertEqual(gate.normalize(dict(sub,bound=bound))['bound'],bound)
+        # 0 is the classical bound (a form error; only the maintainer smoke runs it), and 1 is above the range.
+        for bound in ['0','1','6/7']:
+            with self.subTest(bound=bound),self.assertRaises(gate.Rejected):gate.normalize(dict(sub,bound=bound))
+        # A higher saving is better: the weakest bound of the range is 0, an open endpoint sorts below, max wins.
+        self.assertEqual((gate.range_end('heilbronn-triangle'),gate.open_rank('heilbronn-triangle')),(0,-1))
+        self.assertEqual((gate.range_end('snaky'),gate.open_rank('snaky')),(100,1))
+        gate_row=dict(schema_version=1,problem_id='other/heilbronn-triangle',score='1/50893237',score_relation='attained',any_lean_verified_at_bound=True)
+        self.assertTrue(gate.qualifies_for_run(dict(sub,bound='1/50893236'),gate_row))
+        self.assertFalse(gate.qualifies_for_run(dict(sub,bound='1/50893237'),gate_row))
+        self.assertFalse(gate.qualifies_for_run(dict(sub,bound='1/50893238'),gate_row))
+
     def test_each_board_range_is_its_profile_range(self):
         # The site lists every bound the verifier can run (Nil ruling 2026-11-02): the import range and the board's
         # score range end at the profile maximum.
@@ -218,7 +253,8 @@ class DirectImportTests(unittest.TestCase):
         # Catalan and Subset Sum both name their statement Statement.lean: statement_fixtures keeps the copies apart.
         trust=json.loads((FIXTURES.parent/'direct-trust.json').read_text())
         names={key:gate.statement_fixture(trust,p['challenge_file']) for key,p in trust['profiles'].items()}
-        self.assertEqual((names['catalan'],names['subset-sum'],names['snaky']),('Statement.lean','SubsetSumStatement.lean','SnakyVerifierStatement.lean'))
+        self.assertEqual((names['catalan'],names['subset-sum'],names['snaky'],names['heilbronn-triangle']),
+                         ('Statement.lean','SubsetSumStatement.lean','SnakyVerifierStatement.lean','HeilbronnVerifierStatement.lean'))
         for key,profile in trust['profiles'].items():
             with self.subTest(profile=key):
                 self.assertEqual(gate.sha((FIXTURES/names[key]).read_bytes()),profile['challenge_sha256'])

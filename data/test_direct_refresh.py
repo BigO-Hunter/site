@@ -667,6 +667,16 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual((listed[0]['handle'],listed[0]['value'],listed[0]['display'],listed[0]['bound']),
                          ('direct-issue-80','20','20','\\text{Maker moves}\\le 20'))
         self.assertIn('BigOSpeedrun.Snaky.Bound',listed[0]['proofScope'])
+        # Heilbronn (verifier #105): a saving, higher is better. The shown value is rounded down, never up.
+        heilbronn=dict(sub,problem='heilbronn-triangle',bound='2/100866719')
+        listed=r.other_claims({'direct-issue-81':dict(route='issue',item=self.issue(81),submission=heilbronn,verification=proof)},{},{})['other-heilbronn-triangle']['claims']
+        self.assertEqual((listed[0]['value'],listed[0]['display'],listed[0]['bound']),
+                         ('2/100866719','\\approx1.98281\\cdot10^{-8}','\\eta\\ge 1.98281\\cdot10^{-8}'))
+        self.assertIn('BigOSpeedrun.HeilbronnTriangle.Bound (2/100866719)',listed[0]['proofScope'])
+        self.assertEqual(r.display_down('1/50893237'),('1.96489\\cdot10^{-8}','\\approx1.96489\\cdot10^{-8}'))
+        self.assertEqual(r.display_down('1/2'),('5\\cdot10^{-1}','5\\cdot10^{-1}'))
+        self.assertEqual(r.display_down('1/9999999999999999999999999999999999999999')[0],'1\\cdot10^{-40}')
+        self.assertEqual(r.display_down('1/100000000'),('1\\cdot10^{-8}','1\\cdot10^{-8}'))
         # No board row for it, and prepare writes the file.
         temp=tempfile.TemporaryDirectory();self.addCleanup(temp.cleanup);root=Path(temp.name)
         # Committed board snapshots, not the live boards, which the hourly refresh changes.

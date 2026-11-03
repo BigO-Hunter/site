@@ -31,7 +31,9 @@ ROOT=Path(__file__).resolve().parent
 OTHER={'average-sensitivity':dict(bound='\\mathrm{{AS}}(f)\\le {value}d\\sqrt n',
     statement='BigOSpeedrun.AverageSensitivity.Bound'),
     'catalan':dict(bound='\\mu(G)\\le {value}',statement='BigOSpeedrun.Catalan.Bound'),
-    'snaky':dict(bound='\\text{{Maker moves}}\\le {value}',statement='BigOSpeedrun.Snaky.Bound')}
+    'snaky':dict(bound='\\text{{Maker moves}}\\le {value}',statement='BigOSpeedrun.Snaky.Bound'),
+    # A higher saving is better: the shown value is rounded down (display_down), and the row form is a lower bound.
+    'heilbronn-triangle':dict(bound='\\eta\\ge {value}',statement='BigOSpeedrun.HeilbronnTriangle.Bound',higher=True)}
 # These hosted smoke identities are permanently excluded, even after label edits.
 SMOKE_NUMBERS={1,2}
 # A 'Not verified' report with one of these texts is not the final result of this version: it belongs to an
@@ -433,6 +435,20 @@ def display_up(bound,places=6):
     text=f'{scaled//10**places}.{scaled%10**places:0{places}d}'.rstrip('0')
     return text+'0' if text.endswith('.') else text
 
+def display_down(bound,digits=6):
+    """(shown, display) of a higher-is-better bound, in the row's form d.ddddd\\cdot10^{e}: the shown value is
+    rounded down to `digits` significant digits, so it never claims more than the proof; the display adds
+    \\approx when the rounding lost a digit. A Heilbronn saving is a small fraction (2/100866719 is
+    1.98281\\cdot10^{-8}), so a fixed number of decimal places would show 0."""
+    value=Fraction(bound);require(value>0,'Invalid saving')
+    exponent=len(str(value.numerator//value.denominator))-1 if value>=1 else -len(str(value.denominator//value.numerator))
+    if Fraction(10)**exponent>value:exponent-=1
+    if Fraction(10)**(exponent+1)<=value:exponent+=1
+    scaled=value*Fraction(10)**(digits-1-exponent);mantissa=scaled.numerator//scaled.denominator
+    text=str(mantissa);text=(text[0]+'.'+text[1:]).rstrip('0').rstrip('.')
+    shown=text+'\\cdot10^{'+str(exponent)+'}'
+    return shown,('' if scaled.denominator==1 else '\\approx')+shown
+
 def worse_than_classic(doc,bound):
     """Is the bound worse than the board's classical baseline? Nil ruling 2026-11-02 (verifier #94): the best Lean
     Verified bound is listed even when it is worse (a stepping stone). The lead, 2026-11-02: that is for Lean
@@ -451,11 +467,12 @@ def other_claims(claims,withdrawn,notes):
         if sub['problem'] not in OTHER or key in withdrawn or not proof or not re.fullmatch(r'direct-issue-[1-9][0-9]*',key):continue
         item=claim['item'];login=item['user']['login']
         require(re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{0,38}',login),'Invalid submitter login')
-        row=OTHER[sub['problem']];shown=display_up(sub['bound'])
+        row=OTHER[sub['problem']]
+        shown,display=display_down(sub['bound']) if row.get('higher') else (display_up(sub['bound']),)*2
         note=notes.get(key,{}).get('text','')
         require(not re.search(r'[<>&]',note),'A credit note has a character (< > &) that the page cannot show as text')
         boards.setdefault('other-'+sub['problem'],{'claims':[]})['claims'].append(dict(
-            author=login,handle=key,value=sub['bound'],display=shown,date=item['created_at'],dateSource=item['html_url'],dateKind='first-stated',
+            author=login,handle=key,value=sub['bound'],display=display,date=item['created_at'],dateSource=item['html_url'],dateKind='first-stated',
             url=item['html_url'],lean=True,evidence='lean-verified',note=note,authors=[dict(name=login,url='https://github.com/'+login)],
             leanNote='Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).',
             proofScope='The verifier checked Race.bound : '+row['statement']+' ('+sub['bound']+') at commit '+sub['commit']+' of '+sub['repo_url']+'.',

@@ -29,7 +29,12 @@ PROBLEMS = {'dft': ('exact-dft/uniform-exact-arithmetic', 1),
             'subset-sum': ('subset-sum/randomized-word-ram', 1),
             # An Other bounds row (verifier profile snaky, opened 2026-11-03 after verifier #106's runs): Maker moves,
             # a whole number from 0 to 100 as in the profile.
-            'snaky': ('other/snaky', 100)}
+            'snaky': ('other/snaky', 100),
+            # An Other bounds row (verifier profile heilbronn-triangle, verifier #105): the saving eta, 0 < eta <= 5/6
+            # as in the profile. The first Other row where a higher bound is better (HIGHER).
+            'heilbronn-triangle': ('other/heilbronn-triangle', Fraction(5, 6))}
+# Problems where a larger bound is better (a saving), as the verifier's HIGHER: the weakest bound of the range is 0.
+HIGHER = {'dft', 'heilbronn-triangle'}
 MAX_BYTES = 2_000_000
 
 class Rejected(ValueError):
@@ -94,6 +99,8 @@ def normalize(value):
     require(0 <= bound <= PROBLEMS[value['problem']][1], 'Bound outside model range')
     # A Snaky bound counts Maker moves (verifier submissions.validate_submission): a whole number, no fraction.
     require(value['problem'] != 'snaky' or bound.denominator == 1, 'Snaky bound must be a whole number of Maker moves')
+    # A Heilbronn saving must be positive (verifier submissions.validate_submission): 0 is the classical bound.
+    require(value['problem'] != 'heilbronn-triangle' or bound > 0, 'Heilbronn bound must be positive')
     require(isinstance(value['repo_url'], str) and re.fullmatch(r'https://github\.com/[A-Za-z0-9][A-Za-z0-9_.-]{0,99}/[A-Za-z0-9][A-Za-z0-9_.-]{0,99}', value['repo_url']), 'Invalid source repository')
     require(isinstance(value['commit'], str) and re.fullmatch(r'[0-9a-f]{40}', value['commit']), 'Invalid source commit')
     authors = value['authors']
@@ -175,6 +182,8 @@ theorem Race.bound : ∃ order solve W, DFTProgram order solve W ∧
     elif submission['problem'] == 'snaky':
         require(d == 1, 'Snaky bound must be a whole number of Maker moves')
         target = f'theorem Race.bound : BigOSpeedrun.Snaky.Bound {n} := by\n  sorry\n'
+    elif submission['problem'] == 'heilbronn-triangle':
+        target = f'theorem Race.bound : BigOSpeedrun.HeilbronnTriangle.Bound (({n} : ℚ) / {d}) := by\n  sorry\n'
     else:
         problem = 'ThreeSum' if submission['problem'] == '3sum' else 'APSP'
         target = f'theorem Race.bound : EndStatement.{problem}.SolvedInTime (({n} : Rat) / {d}) := by\n  sorry\n'
@@ -444,12 +453,12 @@ def validate_kernel_receipt(receipt, names):
 
 def range_end(problem):
     """The weakest bound of a problem's range, as the verifier's range_end: the gate while its board has no
-    Lean Verified row. The range maximum, or 0 on dft, where a higher saving is better."""
-    return Fraction(0) if problem == 'dft' else Fraction(PROBLEMS[problem][1])
+    Lean Verified row. The range maximum, or 0 where a higher saving is better (HIGHER)."""
+    return Fraction(0) if problem in HIGHER else Fraction(PROBLEMS[problem][1])
 
 def open_rank(problem):
-    """Second key of an open endpoint: below an attained score on dft, above it elsewhere."""
-    return -1 if problem == 'dft' else 1
+    """Second key of an open endpoint: below an attained score where a higher bound is better, above it elsewhere."""
+    return -1 if problem in HIGHER else 1
 
 
 def current_record_gate(problem, data_bytes, site_commit, checked_at, exclude_issue_url=None):
@@ -457,7 +466,7 @@ def current_record_gate(problem, data_bytes, site_commit, checked_at, exclude_is
     require(problem in PROBLEMS and re.fullmatch(r'[0-9a-f]{40}', site_commit), 'Invalid board identity')
     data = read_json(data_bytes)
     require(data.get('problem_id') == PROBLEMS[problem][0], 'Board model mismatch')
-    direction = 'higher-is-better' if problem == 'dft' else 'lower-is-better'
+    direction = 'higher-is-better' if problem in HIGHER else 'lower-is-better'
     require(data.get('score', {}).get('direction') == direction, 'Board score direction mismatch')
     # Nil ruling 2026-10-20 (verifier 7f4f6bd): the gate is the best Lean Verified row; a Claimed
     # or Human Verified row never blocks a proof run. With no Lean Verified row, every bound in the
@@ -474,7 +483,7 @@ def current_record_gate(problem, data_bytes, site_commit, checked_at, exclude_is
         relation = record.get('score_relation', 'attained')
         require(relation in ('attained', 'strict-upper-bound'), 'Invalid board relation')
         # An open endpoint is weaker than an attained value at the same score: it sorts below on
-        # dft (max wins) and above on the exponent boards (min wins).
+        # the HIGHER problems (max wins) and above on the exponent boards (min wins).
         key = (Fraction(record['score']), open_rank(problem) if relation == 'strict-upper-bound' else 0)
         verified = (meta.get('site_tier') == 'verified' and record.get('rerun_status', {}).get('state') == 'passed'
                     and bool(record['rerun_status'].get('receipt_path')))
@@ -482,7 +491,7 @@ def current_record_gate(problem, data_bytes, site_commit, checked_at, exclude_is
             candidates.append((key, record['id'], verified))
     if not candidates:
         candidates = [((range_end(problem), 0), 'profile-range', False)]
-    leader_key = (max if problem == 'dft' else min)(row[0] for row in candidates)
+    leader_key = (max if problem in HIGHER else min)(row[0] for row in candidates)
     leaders = [row for row in candidates if row[0] == leader_key]
     return dict(schema_version=1, problem_id=data['problem_id'], site_commit=site_commit,
                 data_sha256=sha(data_bytes), checked_at=checked_at, direction=direction,
@@ -498,4 +507,4 @@ def qualifies_for_run(submission, record_gate):
     current = (Fraction(record_gate['score']), open_rank(submission['problem']) if record_gate['score_relation'] == 'strict-upper-bound' else 0)
     if candidate == current:
         return not record_gate['any_lean_verified_at_bound']
-    return candidate > current if submission['problem'] == 'dft' else candidate < current
+    return candidate > current if submission['problem'] in HIGHER else candidate < current

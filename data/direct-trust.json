@@ -147,11 +147,29 @@
       "bound_kind": "moves",
       "maximum": "100",
       "upstream_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a"
+    },
+    "heilbronn-triangle": {
+      "challenge_file": "challenges/heilbronn-triangle/VerifierStatement.lean",
+      "challenge_sha256": "efc9772011b2104ba2cb51bd672e1bb974ab1a29f2384922e1c62f54307e32cb",
+      "lean_toolchain": "leanprover/lean4:v4.34.1",
+      "manifest_file": "profiles/lake-manifest.json",
+      "tools_file": "profiles/tools.json",
+      "solution_module": "Submission",
+      "source_roots": [
+        "Submission"
+      ],
+      "theorem_names": [
+        "Race.bound"
+      ],
+      "bound_kind": "saving",
+      "maximum": "5/6",
+      "upstream_commit": "1581d4cbdd69a0faf34b2089614fe2a814316a6a"
     }
   },
   "statement_fixtures": {
     "challenges/subset-sum/Statement.lean": "SubsetSumStatement.lean",
-    "challenges/other-snaky/VerifierStatement.lean": "SnakyVerifierStatement.lean"
+    "challenges/other-snaky/VerifierStatement.lean": "SnakyVerifierStatement.lean",
+    "challenges/heilbronn-triangle/VerifierStatement.lean": "HeilbronnVerifierStatement.lean"
   },
   "controller_blobs": {
     ".github/ISSUE_TEMPLATE/lean-submission.yml": {

@@ -31,7 +31,7 @@ function exactFraction({claim, number}: {claim: Claim; number: number | null}): 
   const fraction = Number(m[1]) / Number(m[2]);
   return Math.abs(fraction - number) <= 1e-6 * Math.max(Math.abs(fraction), Math.abs(number)) ? [BigInt(m[1]), BigInt(m[2])] : null;
 }
-const compareExact = (a: [bigint, bigint], b: [bigint, bigint]) => { const d = a[0] * b[1] - b[0] * a[1]; return d < 0n ? -1 : d > 0n ? 1 : 0; };
+export const compareExact = (a: [bigint, bigint], b: [bigint, bigint]) => { const d = a[0] * b[1] - b[0] * a[1]; return d < 0n ? -1 : d > 0n ? 1 : 0; };
 
 export function rankOtherClaims<C extends Claim>(claims: C[], direction: string): {claim: C; rank: number; tie: boolean}[] {
   const entries = claims.map((claim, index) => {

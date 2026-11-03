@@ -17,6 +17,7 @@ export const verifierOtherRows: Readonly<Record<string, {guide?: string}>> = {
   'average-sensitivity': {},
   catalan: {guide: verifierUrl + '/blob/main/docs/convert-layout.md'},
   snaky: {},
+  'heilbronn-triangle': {},
 };
 
 export function submissionRoute(problem: Pick<Problem, 'slug' | 'repos'>) {

@@ -5,20 +5,33 @@
 // of a row is the newest claim of its best handle, so a prove2.me claim that beats the
 // current leader by more than the display precision becomes the best handle.
 import {classifyOtherEvidence, type OtherClaimReview, type OtherReviewRepository} from './evidence.ts';
+import {compareExact, otherClaimNumber} from './other-rank.ts';
 export const OTHER_EPSILON = 0.00001;
 
 type Claim = {handle: string; display: string; value: string; date: string; evidence: string; url: string};
 type Family = {slug: string; direction: string; bestHandle: string; claims: Claim[]};
 
-// The first decimal of the display ("\ge 2.032083"), else an exact fraction value ("380/187").
-export function claimNumber(claim: Pick<Claim, 'display' | 'value'>): number | null {
-  const decimal = /\d+\.\d+/.exec(claim.display);
-  if (decimal) return Number(decimal[0]);
-  const fraction = /^\s*(\d+)\/(\d+)\s*$/.exec(claim.value);
-  if (fraction) return Number(fraction[1]) / Number(fraction[2]);
-  // A whole number (the Catalan rows: "590"; a direct integer bound: "1091"), as other-rank.ts reads it.
-  const whole = /^\s*(\d+)\s*$/.exec(claim.display) ?? /^\s*(\d+)\s*$/.exec(claim.value);
-  return whole ? Number(whole[1]) : null;
+// The number of a claim as the row order reads it (other-rank.ts): a power of ten ("\approx1.98\cdot10^{-8}",
+// the Heilbronn rows), the first decimal of the display ("\ge 2.032083"), an exact fraction value ("380/187")
+// or a whole number ("590"). The first decimal alone read 1.98 for 1.98e-8.
+export const claimNumber = otherClaimNumber;
+
+// The exact value of a claim when it is a plain fraction or whole number ("2/100866719", every direct claim) that
+// agrees with the number of its display to the display's precision (3 significant digits on the Heilbronn rows);
+// else null (a LaTeX value such as "1/(498\cdot379^{17}+7)").
+function exactValue(claim: Pick<Claim, 'display' | 'value'>): [bigint, bigint] | null {
+  const m = /^\s*(\d+)\s*(?:\/\s*(\d+))?\s*$/.exec(claim.value);
+  const number = claimNumber(claim);
+  if (!m || number === null || BigInt(m[2] ?? '1') === 0n) return null;
+  const fraction = Number(m[1]) / Number(m[2] ?? '1');
+  return Math.abs(fraction - number) <= 1e-2 * Math.max(Math.abs(fraction), Math.abs(number)) ? [BigInt(m[1]), BigInt(m[2] ?? '1')] : null;
+}
+
+// How much a claim must beat a leader without an exact value: one unit of the last digit its display shows when
+// the display is a power of ten ("\approx2.92\cdot10^{-47}": 1e-49), else OTHER_EPSILON.
+function margin(display: string): number {
+  const power10 = /\d+(?:\.(\d+))?\s*\\cdot\s*10\^\{?\s*(-?\d+)\s*\}?/.exec(display);
+  return power10 ? 10 ** (Number(power10[2]) - (power10[1]?.length ?? 0)) : OTHER_EPSILON;
 }
 
 // The row page writes note and proofScope as HTML after its math step, which escapes only math:
@@ -58,13 +71,17 @@ function mergeImported<D extends {families: Family[]}>(data: D, state: {boards?:
       .sort((a, b) => Date.parse(a.claim.date) - Date.parse(b.claim.date) || a.index - b.index)
       .map(({claim}) => claim);
     const sign = family.direction === 'higher' ? 1 : -1;
-    const leader = claims.findLast(c => c.handle === family.bestHandle);
-    const leaderNumber = leader ? claimNumber(leader) : null;
+    let leader: Claim | undefined = claims.findLast(c => c.handle === family.bestHandle);
     let best = family.bestHandle;
-    let bestNumber = leaderNumber;
     for (const claim of imported) {
       const number = claimNumber(claim)!;
-      if (bestNumber === null || sign * (number - bestNumber) > OTHER_EPSILON) { best = claim.handle; bestNumber = number; }
+      const leaderNumber = leader ? claimNumber(leader) : null;
+      const exact = exactValue(claim), leaderExact = leader ? exactValue(leader) : null;
+      // Two exact values compare exactly: a strict improvement leads, a tie keeps the leader. Otherwise the number
+      // must beat the leader's display by more than its precision.
+      const better = leaderNumber === null ? true : exact && leaderExact ? sign * compareExact(exact, leaderExact) > 0
+        : sign * (number - leaderNumber) > margin(leader!.display);
+      if (better) { best = claim.handle; leader = claim; }
     }
     return {...family, claims, bestHandle: best};
   });

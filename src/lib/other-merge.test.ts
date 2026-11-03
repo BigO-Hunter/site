@@ -78,6 +78,33 @@ test('an integer direct claim on the Catalan row is listed and leads only when i
   assert.equal(claimNumber({value: '590', display: '590'}), 590);
 });
 
+test('a Heilbronn direct claim (a saving near 1e-8, higher is better) leads the real row only when it is exactly better', () => {
+  // The leader canghaimeng is 2/100866719 = 1.98281e-8, shown with 3 digits as \\approx1.98\\cdot10^{-8}.
+  const row = {families: data.families.filter(f => f.slug === 'heilbronn-triangle')};
+  const lead = (value: string, display: string) => (mergeDirect(row as any,
+    {boards: {'other-heilbronn-triangle': direct(999, value, display).boards['other-average-sensitivity']}} as any).families[0] as any).bestHandle;
+  assert.equal(row.families[0].bestHandle, 'canghaimeng');
+  assert.equal(claimNumber({value: '1/50893237', display: '\\approx1.96489\\cdot10^{-8}'}), 1.96489e-8);
+  assert.equal(lead('991/50000000000', '1.982\\cdot10^{-8}'), 'canghaimeng', 'worse, though above the rounded display');
+  assert.equal(lead('2/100866719', '\\approx1.98281\\cdot10^{-8}'), 'canghaimeng', 'a tie keeps the leader');
+  assert.equal(lead('1/50893237', '\\approx1.96489\\cdot10^{-8}'), 'canghaimeng');
+  assert.equal(lead('1/50000000', '2\\cdot10^{-8}'), 'direct-issue-999');
+  // A leader without an exact value: the claim must beat its display by one unit of the last shown digit.
+  const latex = {families: [{slug: 'heilbronn-triangle', direction: 'higher', bestHandle: 'littleBro', claims: [
+    {handle: 'littleBro', value: '1/(498\\cdot379^{17}+7)', display: '\\approx2.92\\cdot10^{-47}', date: '2026-10-08T20:04:00Z', evidence: 'claimed', url: 'https://example.org/l'}]}]};
+  const over = (display: string) => (mergeDirect(latex as any,
+    {boards: {'other-heilbronn-triangle': direct(998, '1/10', display).boards['other-average-sensitivity']}} as any).families[0] as any).bestHandle;
+  assert.equal(over('\\approx2.925\\cdot10^{-47}'), 'littleBro');
+  assert.equal(over('\\approx2.94\\cdot10^{-47}'), 'direct-issue-998');
+});
+
+test('a lower-is-better row is unchanged: exact values compare exactly, a tie keeps the leader', () => {
+  const on = (value: string, display: string) => (mergeDirect(lower as any, direct(60, value, display) as any).families[0] as any).bestHandle;
+  assert.equal(on('399/125', '3.192'), 'c');
+  assert.equal(on('3191/1000', '3.191'), 'direct-issue-60');
+  assert.equal(on('3193/1000', '3.193'), 'c');
+});
+
 test('a direct claim must link its own verifier issue and be Lean Verified', () => {
   for (const bad of [direct(60, '3', '3.0', {url: 'https://github.com/bigospeedrun/verifier/issues/61'}), direct(60, '3', '3.0', {evidence: 'claimed'}),
     direct(60, '3', '3.0', {handle: 'prove2me-3'}), direct(60, '3', '3.0', {note: 'a <b> note'})]) {
