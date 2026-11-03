@@ -10,6 +10,37 @@
         "commit": "236a3233d0acc99a903cf3d5dc9f67da4b6bf29a",
         "bound": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
         "authors": []
+      },
+      "verification": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-126-b04b40317529bddf571cd1638d85e8dfea734d5c04fe7045e5e6c7154944079e",
+        "problem_id": "other/heilbronn-triangle",
+        "score": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "score_relation": "attained",
+        "source_commit": "236a3233d0acc99a903cf3d5dc9f67da4b6bf29a",
+        "source_url": "https://github.com/darkhipo/heilbronn-triangle-ten237",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41623930086",
+        "checked_at": "2026-11-03T11:48:23.218516Z",
+        "issue_created_at": "2026-11-03T09:11:44Z",
+        "issue_updated_at_at_verification": "2026-11-03T11:00:36Z",
+        "issue_updated_at_at_import": "2026-11-03T11:48:49Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-126-41623930086-1.json",
+        "receipt_sha256": "2eab4fd6230e97a94f4bc4fa0e80e8d2c22676c71bb41efcce7a7525126fa69c",
+        "policy_hash": "072b3b427a043f165913a3e2c193f6a0d38cc5c774c7858ed979c12c751a01d3",
+        "result_artifact_id": 13227737443,
+        "controller_fingerprint": "acae8d7e475d299192033c7fc7d8b095c3897d9adea730ff764f26e49c493c14",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
       }
     },
     "direct-issue-114": {
@@ -3859,6 +3890,49 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-issue-126:b04b40317529bddf571cd1638d85e8dfea734d5c04fe7045e5e6c7154944079e": {
+      "key": "direct-issue-126",
+      "submission": {
+        "schema_version": 1,
+        "problem": "heilbronn-triangle",
+        "repo_url": "https://github.com/darkhipo/heilbronn-triangle-ten237",
+        "commit": "236a3233d0acc99a903cf3d5dc9f67da4b6bf29a",
+        "bound": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "authors": []
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-126-b04b40317529bddf571cd1638d85e8dfea734d5c04fe7045e5e6c7154944079e",
+        "problem_id": "other/heilbronn-triangle",
+        "score": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "score_relation": "attained",
+        "source_commit": "236a3233d0acc99a903cf3d5dc9f67da4b6bf29a",
+        "source_url": "https://github.com/darkhipo/heilbronn-triangle-ten237",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41623930086",
+        "checked_at": "2026-11-03T11:48:23.218516Z",
+        "issue_created_at": "2026-11-03T09:11:44Z",
+        "issue_updated_at_at_verification": "2026-11-03T11:00:36Z",
+        "issue_updated_at_at_import": "2026-11-03T11:48:49Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-126-41623930086-1.json",
+        "receipt_sha256": "2eab4fd6230e97a94f4bc4fa0e80e8d2c22676c71bb41efcce7a7525126fa69c",
+        "policy_hash": "072b3b427a043f165913a3e2c193f6a0d38cc5c774c7858ed979c12c751a01d3",
+        "result_artifact_id": 13227737443,
+        "controller_fingerprint": "acae8d7e475d299192033c7fc7d8b095c3897d9adea730ff764f26e49c493c14",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -3987,11 +4061,6 @@
     "101": {
       "version": "6f6b4fc5c8c20fb806b01b94c4d408331a72ea82bb5aa37fd52db8f29134ec4c",
       "updated_at": "2026-11-02T07:24:42Z",
-      "not_verified": false
-    },
-    "126": {
-      "version": "b04b40317529bddf571cd1638d85e8dfea734d5c04fe7045e5e6c7154944079e",
-      "updated_at": "2026-11-03T11:00:56Z",
       "not_verified": false
     }
   }

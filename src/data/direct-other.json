@@ -101,6 +101,33 @@
         }
       ]
     },
+    "other-heilbronn-triangle": {
+      "claims": [
+        {
+          "author": "darkhipo",
+          "handle": "direct-issue-126",
+          "value": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "display": "1\\cdot10^{-237}",
+          "date": "2026-11-03T09:11:44Z",
+          "dateSource": "https://github.com/bigospeedrun/verifier/issues/126",
+          "dateKind": "first-stated",
+          "url": "https://github.com/bigospeedrun/verifier/issues/126",
+          "lean": true,
+          "evidence": "lean-verified",
+          "note": "",
+          "authors": [
+            {
+              "name": "darkhipo",
+              "url": "https://github.com/darkhipo"
+            }
+          ],
+          "leanNote": "Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).",
+          "proofScope": "The verifier checked Race.bound : BigOSpeedrun.HeilbronnTriangle.Bound (1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) at commit 236a3233d0acc99a903cf3d5dc9f67da4b6bf29a of https://github.com/darkhipo/heilbronn-triangle-ten237.",
+          "bound": "\\eta\\ge 1\\cdot10^{-237}",
+          "receiptPath": "sources/direct-issue-126-41623930086-1.json"
+        }
+      ]
+    },
     "other-average-sensitivity": {
       "claims": [
         {

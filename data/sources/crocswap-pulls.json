@@ -127475,7 +127475,7 @@
     "title": "Lower the D16 spinor upper bound from 317 to 316 (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:08:39Z",
-    "updated_at": "2026-11-03T11:08:39Z",
+    "updated_at": "2026-11-03T11:19:54Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127496,7 +127496,7 @@
     "title": "Reduce valid matched-packet parking by V+r steps (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:08:48Z",
-    "updated_at": "2026-11-03T11:08:48Z",
+    "updated_at": "2026-11-03T11:18:01Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127517,7 +127517,7 @@
     "title": "Classify full anchor boxes for positive unit metric triples (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:09:42Z",
-    "updated_at": "2026-11-03T11:09:42Z",
+    "updated_at": "2026-11-03T11:19:27Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127538,7 +127538,7 @@
     "title": "Prove a 120N-bit complete-caller retention floor (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:11:31Z",
-    "updated_at": "2026-11-03T11:11:31Z",
+    "updated_at": "2026-11-03T11:20:20Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127559,7 +127559,7 @@
     "title": "Prove prime supply for subexponentially many axes (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:12:13Z",
-    "updated_at": "2026-11-03T11:12:13Z",
+    "updated_at": "2026-11-03T11:24:13Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127580,7 +127580,7 @@
     "title": "Remove the ownership cap for linear BIT support obstructions (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:14:12Z",
-    "updated_at": "2026-11-03T11:14:12Z",
+    "updated_at": "2026-11-03T11:22:01Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127601,7 +127601,7 @@
     "title": "Extend the one-relation paid-rank floor to nonfield rings (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:15:36Z",
-    "updated_at": "2026-11-03T11:15:36Z",
+    "updated_at": "2026-11-03T11:25:28Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127622,7 +127622,7 @@
     "title": "Reduce complete rank-eight replay time by 32.78% (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:16:27Z",
-    "updated_at": "2026-11-03T11:16:27Z",
+    "updated_at": "2026-11-03T11:28:34Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127643,7 +127643,7 @@
     "title": "Reduce complete chirp-residue replay time by 19.30% (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:17:06Z",
-    "updated_at": "2026-11-03T11:17:06Z",
+    "updated_at": "2026-11-03T11:24:49Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127652,6 +127652,258 @@
     },
     "head": {
       "sha": "f11d40da4723e01cc3689dd698497972202aafc7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6600,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6600",
+    "title": "Remove odd divisions from a five-product Toom-3 boundary (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:18:21Z",
+    "updated_at": "2026-11-03T11:27:58Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "c069c79e81dd97296e2cae07c7d627c26ab19947"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6601,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6601",
+    "title": "Extend the one-query carrier obstruction to every width below 2M",
+    "state": "open",
+    "created_at": "2026-11-03T11:18:41Z",
+    "updated_at": "2026-11-03T11:28:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "063d1bdb9b1010a1cabf43a21d2f1860a0152ad9"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6602,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6602",
+    "title": "Prove linear-order optimality for rounded inverse oracles (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:21:26Z",
+    "updated_at": "2026-11-03T11:29:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "19947aa37abbc9cfd1fe3f2b2b9c5449f19a1652"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6603,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6603",
+    "title": "Require repeated axes in seven-source four-root connectors (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:32:59Z",
+    "updated_at": "2026-11-03T11:42:49Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "92f106ba0afb732a4a16d760b0bba4827f18bc7f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6604,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6604",
+    "title": "Prove sharp global precision for a nested border (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:33:18Z",
+    "updated_at": "2026-11-03T11:42:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "635b2f582549bd511cd8bb9f55e07f6987145643"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6605,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6605",
+    "title": "Prove sharp quarter-dimension repair for two Gaussian banks (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:10:12Z",
+    "updated_at": "2026-11-03T12:10:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "d5c789b7927781143152d11381fef3c21e68a7a5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6606,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6606",
+    "title": "Eliminate 15,400 zero products from the complete q-Toeplitz replay (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:12:36Z",
+    "updated_at": "2026-11-03T12:12:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "dbdf3f7db12de975e76aa4677aa5053ae9153ab4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6607,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6607",
+    "title": "Construct exact uniform two-capacity completions (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:13:36Z",
+    "updated_at": "2026-11-03T12:13:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "c92a21f9e0f1a41550ad113bd3654c92560525c8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6608,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6608",
+    "title": "Execute resident SCALE 2 on one ribbon with 14,212 fewer operations",
+    "state": "open",
+    "created_at": "2026-11-03T12:14:26Z",
+    "updated_at": "2026-11-03T12:14:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "2ca05908bf16e353b3fd14e4db7407aa47f661e8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6609,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6609",
+    "title": "Count exact symmetry quotients for width-two projector words (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:14:26Z",
+    "updated_at": "2026-11-03T12:14:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "cba0d9a40f4815716594d235590b469cfeaa7da0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6610,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6610",
+    "title": "Run complete two-qubit Clifford replay without NumPy (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:15:17Z",
+    "updated_at": "2026-11-03T12:15:17Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "725e49ab5105d6add1f0dd254b6b94863940d977"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6611,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6611",
+    "title": "Reduce complete-fiber tail staging to one buffer (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T12:16:20Z",
+    "updated_at": "2026-11-03T12:16:20Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "5b02379b9f60e7d3ff652a07ebec42fb0ec5648a"
     },
     "base": {
       "ref": "main"
