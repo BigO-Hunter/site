@@ -34,14 +34,22 @@ class SharedCaseTests(unittest.TestCase):
                 for d in row['at']:
                     self.assertLessEqual(sssp.cmp(sssp.density(d), sssp.density(row['up_to'])), 0, (row['name'], d))
 
+    def test_the_statement_bound_is_refused(self):
+        # Lead, 2026-11-03 (verifier #134): T >= n·D adds nothing to the second clause of Bound.
+        for t in ['n^2 ; n^3', 'n ; n^2', 'n log^3/4 ; n^2 log^3/4']:
+            with self.subTest(t=t), self.assertRaisesRegex(ValueError, 'below n·D'):
+                sssp.parse(t)
+        self.assertEqual(sssp.parse('n ; n^2 loglog^-1')[2:], (2, 0, -1))
+
     def test_gate(self):
         for case in CASES['gate']:
-            with self.subTest(candidate=case['candidate'], verified=case['lean_verified']):
+            with self.subTest(candidate=case['candidate'], verified=case['lean_verified'], lines=len(case['lean_lines'])):
                 points = [sssp.parse(p) for p in case['lean_verified']]
+                lines = [(sssp.parse_function(l['function']), sssp.density(l['up_to'])) for l in case['lean_lines']]
                 c = sssp.parse(case['candidate'])
-                b = sssp.best(c[:2], points)
+                b = sssp.best(c[:2], points, lines)
                 self.assertEqual(None if b is None else sssp.text(b), case['best'])
-                self.assertEqual(sssp.qualifies(c, points), case['runs'])
+                self.assertEqual(sssp.qualifies(c, points, lines), case['runs'])
 
 
 class RuleTests(unittest.TestCase):

@@ -6,6 +6,10 @@ test('normal forms parse to the shared exponent tuples', () => {
  for (const c of CASES.parse) { const t = parse(c.text); assert.deepEqual(t.map(qText), c.exponents, c.text); assert.equal(text(t.slice(0, 2), D_NAMES) + ' ; ' + text(t.slice(2)), c.text); }
 });
 test('every shared refusal is refused', () => { for (const t of CASES.refuse) assert.throws(() => parse(t), Error, JSON.stringify(t)); });
+test('T >= n·D is refused as the statement\'s own bound (Lead, 2026-11-03)', () => {
+ for (const t of ['n^2 ; n^3', 'n ; n^2', 'n log^3/4 ; n^2 log^3/4']) assert.throws(() => parse(t), /below n·D/, t);
+ assert.equal(text(parse('n ; n^2 loglog^-1').slice(2)), 'n^2 loglog^-1');
+});
 test('function rows give the shared time at each density', () => {
  for (const row of CASES.functions) { assert.equal(functionText(row.terms), row.text); assert.deepEqual(parseFunction(row.text), row.terms); }
  for (const bad of ['m^1 + n', 'm  + n', 'm log log', 'm^2/4', '']) assert.throws(() => parseFunction(bad), Error, bad);
@@ -16,8 +20,10 @@ test('function rows give the shared time at each density', () => {
 });
 test('the gate agrees with the shared cases, and the classic never gates', () => {
  for (const c of CASES.gate) {
-  const points = c.lean_verified.map(parse), cand = parse(c.candidate), b = best(cand.slice(0, 2), points);
-  assert.equal(b ? text(b) : null, c.best, c.candidate); assert.equal(qualifies(cand, points), c.runs, c.candidate);
+  const points = c.lean_verified.map(parse), cand = parse(c.candidate);
+  const lines = c.lean_lines.map((l: { function: string; up_to: string }) => ({ terms: parseFunction(l.function), cap: density(l.up_to) }));
+  const b = best(cand.slice(0, 2), points, lines), label = `${c.candidate} with ${lines.length} line(s)`;
+  assert.equal(b ? text(b) : null, c.best, label); assert.equal(qualifies(cand, points, lines), c.runs, label);
  }
  assert.equal(qualifies(parse('n log^1/2 ; n log^2'), []), true);
  assert.equal(text(timeAt(CLASSIC, density('n log^1/2'))), 'n log');

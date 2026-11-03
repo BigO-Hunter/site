@@ -43,6 +43,11 @@ def text(exponents, names=T_NAMES):
     return ' '.join(name if e == 1 else f'{name}^{e}' for name, e in zip(names, exponents) if e != 0)
 
 
+# Lead, 2026-11-03 (verifier #134): the second clause of Bound gives every program C(n+1)(m+1), so a row with
+# T >= n·D says nothing new. The form refuses it; this is the statement's own bound, not the classic.
+G1_HELP = 'the time T of directed-sssp must be below n·D: the statement already gives every program C(n+1)(m+1)'
+
+
 def parse(value):
     """(a, b, a', b', c') of a normal-form point row, or ValueError (the verifier's ranges)."""
     if not isinstance(value, str) or value.count(' ; ') != 1:
@@ -58,6 +63,8 @@ def parse(value):
         raise ValueError('the edge bound D of directed-sssp must be between n and n^2: n^a log^b with 1 <= a <= 2 and b >= 0')
     if t < (a, b, Fraction(0)) or t > (Fraction(3), Fraction(0), Fraction(0)):
         raise ValueError('the time T of directed-sssp must be at least the edge bound D and at most n^3')
+    if t >= (a + 1, b, Fraction(0)):
+        raise ValueError(G1_HELP)
     return d + t
 
 
@@ -130,17 +137,19 @@ CLASSIC = [{'m': '1'}, {'n': '1', 'log': '1'}]
 RANGE_END = (Fraction(3), Fraction(0), Fraction(0))
 
 
-def best(d, points):
-    """best(D) for the gate: the lex smallest time of a Lean Verified point row (a, b, a', b', c')
-    whose density covers D, or None. Claimed rows and function rows never gate (Nil, 2026-10-20),
-    and the classic never gates either (Nil, 2026-11-02: a Lean proof worse than the classic bound
-    runs when it is the best Lean Verified bound)."""
-    times = [p[2:] for p in points if p[:2] >= d]
+def best(d, points, lines=()):
+    """best(D) for the gate: the lex smallest time of a Lean Verified point row (a, b, a', b', c') whose
+    density covers D, and of a Lean Verified function line (terms, cap) at D when D <= cap; or None.
+    The only such line is Vals AI's proven Tchd up to its cap (Lead, 2026-11-03, verifier #134: below the
+    cap a new row must beat it). Claimed rows and the paper function rows never gate (Nil, 2026-10-20), and
+    the classic never gates either (Nil, 2026-11-02: a Lean proof worse than the classic bound runs when it
+    is the best Lean Verified bound)."""
+    times = [p[2:] for p in points if p[:2] >= d] + [time_at(terms, d) for terms, cap in lines if d <= cap]
     return min(times) if times else None
 
 
-def qualifies(candidate, points):
+def qualifies(candidate, points, lines=()):
     """A submission (a, b, a', b', c') runs when its T is strictly below best(D); with no Lean
-    Verified row at D or denser, every T of the range runs (the range ends at n^3)."""
-    current = best(candidate[:2], points)
+    Verified bound at D, every T of the range runs (the range ends at n^3)."""
+    current = best(candidate[:2], points, lines)
     return candidate[2:] <= RANGE_END if current is None else candidate[2:] < current

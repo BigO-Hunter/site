@@ -42,6 +42,9 @@ export function text(exps: Q[], names: readonly string[] = T_NAMES): string {
  return names.map((name, i) => qCmp(exps[i], ZERO) === 0 ? '' : qCmp(exps[i], ONE) === 0 ? name : `${name}^${qText(exps[i])}`).filter(Boolean).join(' ');
 }
 
+// Lead, 2026-11-03 (verifier #134): the second clause of Bound gives every program C(n+1)(m+1), so a row with
+// T >= n·D says nothing new. The form refuses it; this is the statement's own bound, not the classic.
+export const G1_HELP = 'the time T of directed-sssp must be below n·D: the statement already gives every program C(n+1)(m+1)';
 /** [a, b, a', b', c'] of a normal-form point row; throws otherwise (the verifier's ranges). */
 export function parse(value: string): Q[] {
  if (typeof value !== 'string' || value.split(' ; ').length !== 2) throw new Error(HELP);
@@ -53,6 +56,7 @@ export function parse(value: string): Q[] {
   throw new Error('the edge bound D of directed-sssp must be between n and n^2');
  if (lexCmp(t, [a, b, ZERO]) < 0 || lexCmp(t, [q(3n), ZERO, ZERO]) > 0)
   throw new Error('the time T of directed-sssp must be at least the edge bound D and at most n^3');
+ if (lexCmp(t, [add(a, ONE), b, ZERO]) >= 0) throw new Error(G1_HELP);
  return [...d, ...t];
 }
 export function density(value: string): Q[] { const d = side(value, D_NAMES); if (text(d, D_NAMES) !== value) throw new Error(HELP); return d; }
@@ -100,14 +104,19 @@ export function rowLatex(score: string): string {
 export const CLASSIC: Term[] = [{ m: '1' }, { n: '1', log: '1' }];
 export const RANGE_END = [q(3n), ZERO, ZERO];
 
-/** The gate's best(D): the smallest T among Lean Verified point rows whose D covers D; undefined if none.
- * Claimed rows, function rows and the classic never gate (Nil, 2026-10-20 and 2026-11-02). */
-export function best(d: Q[], points: Q[][]): Q[] | undefined {
- const times = points.filter(p => lexCmp(p.slice(0, 2), d) >= 0).map(p => p.slice(2));
+/** A Lean Verified function line: its terms up to its cap density (Vals AI's proven Tchd). */
+export type Line = { terms: Term[]; cap: Q[] };
+/** The gate's best(D): the smallest T among Lean Verified point rows whose D covers D, and Lean Verified
+ * lines at D when D <= cap; undefined if none. The only such line is Vals AI's proven Tchd (Lead, 2026-11-03,
+ * verifier #134: below the cap a new row must beat it). Claimed rows, the paper function rows and the
+ * classic never gate (Nil, 2026-10-20 and 2026-11-02). */
+export function best(d: Q[], points: Q[][], lines: Line[] = []): Q[] | undefined {
+ const times = [...points.filter(p => lexCmp(p.slice(0, 2), d) >= 0).map(p => p.slice(2)),
+  ...lines.filter(l => lexCmp(d, l.cap) <= 0).map(l => timeAt(l.terms, d))];
  return times.reduce<Q[] | undefined>((m, t) => !m || lexCmp(t, m) < 0 ? t : m, undefined);
 }
-export function qualifies(candidate: Q[], points: Q[][]): boolean {
- const current = best(candidate.slice(0, 2), points);
+export function qualifies(candidate: Q[], points: Q[][], lines: Line[] = []): boolean {
+ const current = best(candidate.slice(0, 2), points, lines);
  return current ? lexCmp(candidate.slice(2), current) < 0 : lexCmp(candidate.slice(2), RANGE_END) <= 0;
 }
 /** Plain text for a time or density tuple, for aria labels, e.g. n log^(3/4) n. */
