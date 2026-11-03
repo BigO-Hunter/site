@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import data from './other-bounds.json' with {type: 'json'};
-import {otherClaimNumber, rankOtherClaims} from './other-rank.ts';
+import {otherClaimNumber, parseDegreeClaim, rankOtherClaims} from './other-rank.ts';
 import {otherBoundLeader} from './other-leader.ts';
 
 const claim = (display: string, value = display, date = '2026-10-10T00:00:00Z') => ({display, value, date});
@@ -25,8 +25,46 @@ test('best first by direction, ties share a rank, earliest first', () => {
 });
 
 test('a claim whose number cannot be read puts the row newest first', () => {
-  const rows = [claim('80{,}000d^{17}', '80{,}000d^{17}', '2026-10-01'), claim('70{,}000d^{17}', '70{,}000d^{17}', '2026-10-05')];
-  assert.deepEqual(rankOtherClaims(rows, 'lower').map(r => [r.claim.display, r.rank, r.tie]), [['70{,}000d^{17}', 1, false], ['80{,}000d^{17}', 2, false]]);
+  const rows = [claim('see the note', 'see the note', '2026-10-01'), claim('also unread', 'also unread', '2026-10-05')];
+  assert.deepEqual(rankOtherClaims(rows, 'lower').map(r => [r.claim.display, r.rank, r.tie]), [['also unread', 1, false], ['see the note', 2, false]]);
+});
+
+// site#9 (darkhipo; PR #12 was not read, this is our own code): d^p dominates A, so the order is by p, then by A.
+test('an A d^p claim is read only from the whole display, A exact', () => {
+  assert.deepEqual(parseDegreeClaim('80{,}000d^{17}'), {a: [80000n, 1n], p: 17n});
+  assert.deepEqual(parseDegreeClaim('2.5d^{-3}'), {a: [25n, 10n], p: -3n});
+  for (const text of [' 80{,}000d^{17}', '80{,}000d^{17} ', '8{,}00d^{17}', 'c80{,}000d^{17}', '80{,}000d^{17}+1', '80,000d^{17}', 'd^{17}', '80{,}000d^17']) assert.equal(parseDegreeClaim(text), null, text);
+  assert.equal(otherClaimNumber(claim('80{,}000.5d^{17}')), null);
+});
+
+test('A d^p claims are ordered by p, then by A, in the row direction, whatever their dates', () => {
+  const a70 = (date: string) => claim('70{,}000d^{17}', '70{,}000d^{17}', date), a80 = (date: string) => claim('80{,}000d^{17}', '80{,}000d^{17}', date);
+  for (const [first, second] of [['2026-10-01', '2026-10-05'], ['2026-10-05', '2026-10-01']]) {
+    const rows = [a80(first), a70(second)];
+    assert.deepEqual(rankOtherClaims(rows, 'lower').map(r => [r.claim.display, r.rank, r.tie]), [['70{,}000d^{17}', 1, false], ['80{,}000d^{17}', 2, false]], first);
+    assert.deepEqual(rankOtherClaims(rows, 'higher').map(r => [r.claim.display, r.rank]), [['80{,}000d^{17}', 1], ['70{,}000d^{17}', 2]], first);
+  }
+  // A smaller exponent beats any constant: 80{,}000d^{17} is above 2d^{18}.
+  const rows = [claim('2d^{18}', '2d^{18}', '2026-10-09'), claim('80{,}000d^{17}', '80{,}000d^{17}', '2026-10-08'), claim('98{,}560d^{126}', '98{,}560d^{126}', '2026-10-07')];
+  assert.deepEqual(rankOtherClaims(rows, 'lower').map(r => [r.claim.display, r.rank]), [['80{,}000d^{17}', 1], ['2d^{18}', 2], ['98{,}560d^{126}', 3]]);
+  // A decimal constant is exact: 2.5d^{3} is above 2.50001d^{3} and ties with 2.50d^{3}.
+  const exact = rankOtherClaims([claim('2.50001d^{3}', '', '2026-10-01'), claim('2.5d^{3}', '', '2026-10-02'), claim('2.50d^{3}', '', '2026-10-03')], 'lower');
+  assert.deepEqual(exact.map(r => [r.claim.display, r.rank, r.tie]), [['2.5d^{3}', 1, false], ['2.50d^{3}', 1, true], ['2.50001d^{3}', 3, false]]);
+});
+
+test('equal A d^p claims tie and share a rank, earliest first', () => {
+  const rows = [claim('80{,}000d^{17}', '80{,}000d^{17}', '2026-10-08'), claim('80000d^{17}', '80000d^{17}', '2026-10-12')];
+  assert.deepEqual(rankOtherClaims(rows, 'lower').map(r => [r.claim.date, r.rank, r.tie]), [['2026-10-08', 1, false], ['2026-10-12', 1, true]]);
+});
+
+test('an A d^p claim mixed with a plain number puts the row newest first', () => {
+  const rows = [claim('80{,}000d^{17}', '80{,}000d^{17}', '2026-10-01'), claim('3.762', '1881/500', '2026-10-05'), claim('70{,}000d^{17}', '70{,}000d^{17}', '2026-10-09')];
+  assert.deepEqual(rankOtherClaims(rows, 'lower').map(r => [r.claim.display, r.rank, r.tie]), [['70{,}000d^{17}', 1, false], ['3.762', 2, false], ['80{,}000d^{17}', 3, false]]);
+});
+
+test('the live contingency tables row keeps its order', () => {
+  const family = data.families.find(f => f.slug === 'contingency-tables')!;
+  assert.deepEqual(rankOtherClaims(family.claims, family.direction).map(r => [r.claim.display, r.rank, r.tie]), [['80{,}000d^{17}', 1, false]]);
 });
 
 // The rule of the rows is that a listed claim was the best when it appeared, and the leader is a row's newest
