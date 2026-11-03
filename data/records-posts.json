@@ -1855,5 +1855,14 @@
     "authors": [
       "Dmitri I. Arkhipov"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-6621\",\"3297/1000000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.003297) n)` | by DreamingOfClouds | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.003297) n)\nPlayer: DreamingOfClouds\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-03T13:37:36.667Z",
+    "authors": [
+      "DreamingOfClouds"
+    ]
   }
 ]
