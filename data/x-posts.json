@@ -1065,5 +1065,10 @@
     "status": "posted",
     "at": "2026-11-03T00:08:29.601Z",
     "id": "2117408537206780262"
+  },
+  "[\"other-snaky\",\"direct-issue-114:20\",\"20\",\"attained\"]:lean": {
+    "status": "unknown",
+    "at": "2026-11-03T02:30:46.078Z",
+    "reason": "reserved before API send"
   }
 }
