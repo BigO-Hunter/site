@@ -39582,6 +39582,50 @@
         }
       ],
       "source_commit": "775722aa94a5e85b05d1d704d7dca10cbf016f0c"
+    },
+    {
+      "id": "crocswap-pr-6551",
+      "kind": "improvement",
+      "score": "82373/25000000",
+      "tier": "claimed",
+      "submitted_at": "2026-11-03T05:57:05Z",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T05:57:05Z",
+      "site_observed_at": "2026-11-03T07:17:52Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6551"
+      },
+      "spec_version": "1",
+      "title": "Improve conditional kappa to 0.00329492 with a rebalanced retirement tree",
+      "authors": [
+        {
+          "name": "aliromman",
+          "url": "https://github.com/aliromman"
+        }
+      ],
+      "predecessors": [
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6550"
+      ],
+      "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6551",
+      "artifact": {
+        "path": "sources/pr-6551.json",
+        "sha256": "6896b6f25b3f0b1b802f08d9a839f6c6584c1e597887694e9eb757b5bd9475fc"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6551",
+        "theorem": null,
+        "certificate_path": null
+      },
+      "dependencies": [
+        {
+          "id": "openai-109-transfer",
+          "statement": "The OpenAI #109 fixed-tape multiplication reduction and the specific all-size compiler, routing, precision, resampling and exact-recovery interfaces cited by this submission hold. The PR body retains its precise per-construction obligations.",
+          "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6551",
+          "status": "unverified"
+        }
+      ],
+      "source_commit": "11ca568cd1a16776ade02b4df09ea04a784cc674"
     }
   ],
   "record_metadata": {
@@ -62617,7 +62661,35 @@
       "race_event_at": "2026-11-03T04:33:39Z",
       "race_event_kind": "PR creation; latest observed score",
       "credit_note": "Ali Romman makes the caller return one completed Gaussian at an intermediate cut and gives the rest a fresh independent input, so that on each of 104 ports one rank-17 target becomes independent rank-1 and rank-16 targets; all 67,096 paid Gaussian jobs remain. The conditional kappa is 0.00329394, 0.17 percent above PR 6529's 0.003288299. It uses the independent-handoff method of PR 5599, the PR 6398 root and the PR 6529 native source, with PR 6399, PR 6417 and ChaloupeMusic's PR 6453."
+    },
+    "crocswap-pr-6551": {
+      "checked_at": "2026-11-03",
+      "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6551",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Source claim; not independently rerun by bigOspeedrun",
+      "pr_number": 6551,
+      "repo": "CrocSwap/integer-mult-bounds",
+      "merged": false,
+      "merged_at": null,
+      "closed_at": null,
+      "updated_at": "2026-11-03T06:09:23Z",
+      "comparison_key": "crocswap/integer-multiplication-v1",
+      "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
+      "score_source": "Lead review decision; source claim only",
+      "date_precision": "PR creation timestamp; score is latest observed claim, not necessarily original score.",
+      "upstream_selected": false,
+      "record_eligibility_note": "Eligible for the CrocSwap claimed-source race when merged or a published README checkpoint. Open and closed-unmerged PRs cannot hold the record.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "publication_date_precision": "date-time",
+      "race_repo": "CrocSwap/integer-mult-bounds",
+      "publication_date": "2026-11-03T05:57:05Z",
+      "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6551",
+      "race_series": "pr-submissions",
+      "race_event_at": "2026-11-03T05:57:05Z",
+      "race_event_kind": "PR creation; latest observed score"
     }
   },
-  "updated_at": "2026-11-03T06:57:45Z"
+  "updated_at": "2026-11-03T07:17:52Z"
 }

@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6545",
+        "leader": "crocswap-pr-6551",
         "direction": "higher",
         "records": [
           {
@@ -4359,6 +4359,16 @@
               "Ali Romman"
             ],
             "bound": "O(n log^(1 - 0.00329394) n)"
+          },
+          {
+            "id": "crocswap-pr-6551",
+            "score": "82373/25000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Ali Romman"
+            ],
+            "bound": "O(n log^(1 - 0.00329492) n)"
           }
         ],
         "table": "big-o"
@@ -7011,6 +7021,13 @@
       "slug": "integer-multiplication",
       "authors": [
         "aigent-marius"
+      ]
+    },
+    {
+      "key": "[\"integer-multiplication\",\"crocswap-pr-6551\",\"82373/25000000\",\"attained\"]:record",
+      "slug": "integer-multiplication",
+      "authors": [
+        "Ali Romman"
       ]
     }
   ]

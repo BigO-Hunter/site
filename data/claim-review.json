@@ -1,11 +1,3 @@
 {
-  "queue": [
-    {
-      "pr": 6551,
-      "head": "11ca568cd1a16776ade02b4df09ea04a784cc674",
-      "title": "Improve conditional kappa to 0.00329492 with a rebalanced retirement tree",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6551",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    }
-  ]
+  "queue": []
 }
