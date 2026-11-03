@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-03T21:16:01Z",
+    "updated_at": "2026-11-03T22:29:37Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -127412,7 +127412,7 @@
     "title": "Complete source-bound full-stage preparation with separate mode plans",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-03T21:19:03Z",
+    "updated_at": "2026-11-03T22:30:14Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129743,7 +129743,7 @@
     "title": "ci: fetch only exact review-base history for automated planning",
     "state": "open",
     "created_at": "2026-11-03T22:04:16Z",
-    "updated_at": "2026-11-03T22:04:16Z",
+    "updated_at": "2026-11-03T22:29:59Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129751,11 +129751,32 @@
       "html_url": "https://github.com/Clear1nsight"
     },
     "head": {
-      "sha": "9283c240a3e9b085bc89e0e5b8f407dae4e24463"
+      "sha": "42edc5dbcd1f7f8afa21ac76e7ee7faa1497ccb5"
     },
     "base": {
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6700,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6700",
+    "title": "Emit the exact conservative Gaussian pair as a clean bit circuit (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T22:35:12Z",
+    "updated_at": "2026-11-03T23:03:56Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "bcc263f3d9843ac82cc191e7e60da6380254405a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

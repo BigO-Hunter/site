@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-137": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "snaky",
+        "repo_url": "https://github.com/darkhipo/snaky-nineteen",
+        "commit": "880106a09c1554ab6e5b551b9a9403e7c4acf639",
+        "bound": "19",
+        "authors": []
+      }
+    },
     "direct-issue-126": {
       "route": "issue",
       "submission": {
@@ -4061,6 +4072,11 @@
     "101": {
       "version": "6f6b4fc5c8c20fb806b01b94c4d408331a72ea82bb5aa37fd52db8f29134ec4c",
       "updated_at": "2026-11-02T07:24:42Z",
+      "not_verified": false
+    },
+    "137": {
+      "version": "9c5152c7acb61037db3a64094e5faa9dd73db42b0e24052a1be3460308b92818",
+      "updated_at": "2026-11-03T23:04:02Z",
       "not_verified": false
     }
   }
