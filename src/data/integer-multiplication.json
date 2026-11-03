@@ -62374,7 +62374,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6417",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T21:53:47Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "rohanarun combines the clean native merge of their own PR 6399 with the six-field mixed caller of Ali Romman's PR 6398, replacing a rank-4 and a rank-1 step by one rank-5 step at each of 18 native calls. The conditional kappa is 0.003286849, 0.019 percent above PR 6398's 0.003286215. Neither mechanism is new here. The input lifts are DreamingOfClouds' PR 6375."
     },
     "crocswap-pr-6453": {
       "checked_at": "2026-11-03",
@@ -62402,7 +62403,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6453",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T23:34:54Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "ChaloupeMusic adds the same third helper anchor (helper 234, at frame 246, in group 1091) to the stack of rohanarun's PR 6417, which joins the merge of PR 6399 to Ali Romman's PR 6398 root. The conditional kappa is 0.003287014, 1.65e-7 above PR 6417's 0.003286849. The anchor extends the two anchors of Ali Romman's PR 6372. On the PR 6398 root alone, the same anchor is ChaloupeMusic's PR 6436."
     },
     "crocswap-pr-6398": {
       "checked_at": "2026-11-03",
@@ -62430,7 +62432,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6398",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T20:45:04Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Ali Romman adds a new root for the recursion, with six independent outputs from four binary children of sizes 7, 2, 2 and 7, and a normalization that makes the central query an involution, applied at all 18 native calls of the word from DreamingOfClouds' PR 6375. The conditional kappa is 0.003286215, 4.28 percent above PR 6375's 0.00315120. It uses PR 6348's binary module, Cinna Davis's query interfaces, Jacob Sussman's recursion and the compiler lineage of zxv and Cao Yifan."
     },
     "crocswap-pr-6436": {
       "checked_at": "2026-11-03",
@@ -62458,7 +62461,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6436",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-02T23:11:51Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "ChaloupeMusic adds one more helper anchor (helper 234, at frame 246, in group 1091) to the native word inside Ali Romman's PR 6398 composition, and keeps the caller, compiler and outer ledger of PR 6398. The conditional kappa is 0.003286377, 1.626e-7 above PR 6398's 0.003286215. The anchor extends the two anchors of Ali Romman's PR 6372, on the input lifts of DreamingOfClouds' PR 6375."
     }
   },
   "updated_at": "2026-11-03T01:17:26Z"
