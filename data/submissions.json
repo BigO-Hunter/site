@@ -121976,7 +121976,7 @@
       "title": "Prove sharp flag-defect budgets for unequal decoder payloads",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6528",
       "submitted_at": "2026-11-03T03:08:48Z",
-      "updated_at": "2026-11-03T03:08:48Z",
+      "updated_at": "2026-11-03T03:20:04Z",
       "source_commit": "4d80ba76770faa76317c7c397cfe992fbb4c551a",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-03T03:08:48Z",
@@ -121985,7 +121985,7 @@
       "record_ids": [],
       "note": "No research package kappa claim.",
       "claim_head": "4d80ba76770faa76317c7c397cfe992fbb4c551a",
-      "claim_text": "182934631ceeb12706a29144273d528714773ea9532ec4e532daf99cfe78a37a",
+      "claim_text": "a523f922127bb8ee7bcc4a75e110cb8265ff60aad05cfc961ddd8e54e873f3df",
       "claim_files": [
         [
           "added",
@@ -122077,6 +122077,303 @@
         ]
       ],
       "claim_files_head": "e10a2373a63aa212aea3ae24760f722bd5a43ef0",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6532,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Bind optimal unbiased reversible rounding to the selected first native MOVE",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6532",
+      "submitted_at": "2026-11-03T03:24:27Z",
+      "updated_at": "2026-11-03T03:58:44Z",
+      "source_commit": "9327b8f6b7f94728f188f8a27595bd8b14775446",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:24:27Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "9327b8f6b7f94728f188f8a27595bd8b14775446",
+      "claim_text": "946ae28e048bd8cb5e349eae8dd1f5f6656bf332f93f529a020b96c397a1fcce",
+      "claim_files": [
+        [
+          "added",
+          "research/selected-native-unbiased-rounding/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "9327b8f6b7f94728f188f8a27595bd8b14775446",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6533,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Count all joint capacity ranks with fixed-image quotient compression",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6533",
+      "submitted_at": "2026-11-03T03:33:28Z",
+      "updated_at": "2026-11-03T03:40:55Z",
+      "source_commit": "efa89adc2c71f1ef57228111639e1c8fc48393e3",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:33:28Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "efa89adc2c71f1ef57228111639e1c8fc48393e3",
+      "claim_text": "dadbbafd81f8742f53e5447ecfbb2d600113697148dadb8a6a7f4fd44303fdaa",
+      "claim_files": [
+        [
+          "added",
+          "research/nonnested-capacity-rank-count/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "efa89adc2c71f1ef57228111639e1c8fc48393e3",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6534,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Halve sharp two-axis Gaussian rounding error and data additions",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6534",
+      "submitted_at": "2026-11-03T03:33:31Z",
+      "updated_at": "2026-11-03T03:33:31Z",
+      "source_commit": "78a41d06645b2e53ec3708d5580920e7dd002776",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:33:31Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "78a41d06645b2e53ec3708d5580920e7dd002776",
+      "claim_text": "77b88a8c5143bb088076f24f6b9d89910540adc3cdf6462e253ebb4e37eaab99",
+      "claim_files": [
+        [
+          "added",
+          "research/fused-gaussian-rounding/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "78a41d06645b2e53ec3708d5580920e7dd002776",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6535,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "A closed all-field completion criterion for two nonnested capacities",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6535",
+      "submitted_at": "2026-11-03T03:45:15Z",
+      "updated_at": "2026-11-03T03:52:52Z",
+      "source_commit": "3b3275bce5f051464392d15fdd4d61dbf76eda58",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:45:15Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "3b3275bce5f051464392d15fdd4d61dbf76eda58",
+      "claim_text": "25f80ff2d943d597d52cc1b11664add825c3d97bd93c967be47c0bda92df77e9",
+      "claim_files": [
+        [
+          "added",
+          "research/two-capacity-prescribed-completion/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "3b3275bce5f051464392d15fdd4d61dbf76eda58",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6536,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Attain the sharp three-axis Gaussian grid error with an exact inverse",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6536",
+      "submitted_at": "2026-11-03T03:47:37Z",
+      "updated_at": "2026-11-03T03:47:37Z",
+      "source_commit": "83fee59d692b0764d716e8356a7d991e4d503868",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:47:37Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "83fee59d692b0764d716e8356a7d991e4d503868",
+      "claim_text": "d99579b017c4dcf17968f8c0c104f374b54d1a5fd8eb32a0539934f698b6923f",
+      "claim_files": [
+        [
+          "added",
+          "research/three-axis-coset-rounding/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "83fee59d692b0764d716e8356a7d991e4d503868",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6537,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Reduce the scaled P104 output correction from 569 gates to 74",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6537",
+      "submitted_at": "2026-11-03T03:52:25Z",
+      "updated_at": "2026-11-03T04:04:29Z",
+      "source_commit": "8bc9f991afe9fde83700ff86e520230eaa4595e7",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:52:25Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "8bc9f991afe9fde83700ff86e520230eaa4595e7",
+      "claim_text": "da06ef56aceefef6e3fd21222fcf4600013d9b41ca80fb861a74a23acdef3e29",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-sparse-output-correction/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "8bc9f991afe9fde83700ff86e520230eaa4595e7",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6538,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Audit every column and inverse of the new scaled-fusion native maps",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6538",
+      "submitted_at": "2026-11-03T03:58:38Z",
+      "updated_at": "2026-11-03T03:58:38Z",
+      "source_commit": "487ef8d7cbf11c969971b8c5243e29b90a6ae8e2",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:58:38Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "487ef8d7cbf11c969971b8c5243e29b90a6ae8e2",
+      "claim_text": "8246f62bd2c3145c05e69704c703458b054d2e7940fc92840b8a4d0131cd0117",
+      "claim_files": [
+        [
+          "added",
+          "research/scaled-fusion-native-columns/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "487ef8d7cbf11c969971b8c5243e29b90a6ae8e2",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6539,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Count all prescribed two-capacity finite-field completions",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6539",
+      "submitted_at": "2026-11-03T04:05:50Z",
+      "updated_at": "2026-11-03T04:15:03Z",
+      "source_commit": "96c63f994af628f574c71dca0d7ed219cbfc70c2",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T04:05:50Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "96c63f994af628f574c71dca0d7ed219cbfc70c2",
+      "claim_text": "51015a84b24fd461e12a1f6a2a15e822421547ba964e509163e64d5c1bbe39f3",
+      "claim_files": [
+        [
+          "added",
+          "research/two-capacity-completion-count/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "96c63f994af628f574c71dca0d7ed219cbfc70c2",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6540,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Exact unbiased native coarsening with a sharp residue codec",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6540",
+      "submitted_at": "2026-11-03T04:11:22Z",
+      "updated_at": "2026-11-03T04:11:22Z",
+      "source_commit": "5f7c893b6af9a75cb19ad22c6db06ed22eea6f54",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T04:11:22Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "5f7c893b6af9a75cb19ad22c6db06ed22eea6f54",
+      "claim_text": "73811f86d390cc00d91b3ebe45a29771cac6b90291deca66db68551f2941e33e",
+      "claim_files": [
+        [
+          "added",
+          "research/native-coarse-grid-residue-codec/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "5f7c893b6af9a75cb19ad22c6db06ed22eea6f54",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6541,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Prove a 0.003293 ceiling for all monotone frame refits of two P104 words",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6541",
+      "submitted_at": "2026-11-03T04:14:53Z",
+      "updated_at": "2026-11-03T04:14:53Z",
+      "source_commit": "6a3e041f250fd777f9b27c208853fb911e7a8d11",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T04:14:53Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "6a3e041f250fd777f9b27c208853fb911e7a8d11",
+      "claim_text": "044218355490525a04118a22d288eb1f7ecfbec3f45326cc411f76b68f333f95",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-monotone-frame-ceiling/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "6a3e041f250fd777f9b27c208853fb911e7a8d11",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6542,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Realize the sparse correction as a reversible nearest-grid map",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6542",
+      "submitted_at": "2026-11-03T04:15:28Z",
+      "updated_at": "2026-11-03T04:15:28Z",
+      "source_commit": "a54131b655b6b6d4963686728af3fbbcbbe2af7d",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T04:15:28Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "a54131b655b6b6d4963686728af3fbbcbbe2af7d",
+      "claim_text": "09448cc324f485f279fe32934758bfde406f9a4177a94579cc32c80eddd16673",
+      "claim_files": [
+        [
+          "added",
+          "research/rounded-sparse-correction/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "a54131b655b6b6d4963686728af3fbbcbbe2af7d",
       "claim_files_base": "main",
       "claim_files_result": true
     }
