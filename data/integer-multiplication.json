@@ -62660,7 +62660,7 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-03T04:33:39Z",
       "race_event_kind": "PR creation; latest observed score",
-      "credit_note": "Ali Romman makes the caller return one completed Gaussian at an intermediate cut and gives the rest a fresh independent input, so that on each of 104 ports one rank-17 target becomes independent rank-1 and rank-16 targets; all 67,096 paid Gaussian jobs remain. The conditional kappa is 0.00329394, 0.17 percent above PR 6529's 0.003288299. It uses the independent-handoff method of PR 5599, the PR 6398 root and the PR 6529 native source, with PR 6399, PR 6417 and ChaloupeMusic's PR 6453."
+      "credit_note": "Ali Romman makes the caller return one completed Gaussian at an intermediate cut and gives the rest a fresh independent input, so on each of 104 ports one rank-17 target becomes independent rank-1 and rank-16 targets; all 67,096 paid Gaussian jobs remain. The conditional kappa is 0.00329394, 0.17 percent above PR 6529's 0.003288299. It uses the independent-handoff method of PR 5599, the PR 6398 root and the PR 6529 native source, with rohanarun's PR 6399 and PR 6417 and ChaloupeMusic's PR 6453."
     },
     "crocswap-pr-6551": {
       "checked_at": "2026-11-03",
@@ -62688,7 +62688,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6551",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-03T05:57:05Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Ali Romman keeps the independent Gaussian retirement of their PR 6545 and the native word of PR 6529, and rebalances the four binary children of the caller from sizes 7, 2, 2, 7 to 7, 2, 5, 4. The conditional kappa is 0.00329492, 0.030 percent above PR 6545's 0.00329394. The binary suppliers and the mixed root come from PR 6348 and PR 6398, and the handoff method from PRs 5599, 5602, 5611 and 5615."
     }
   },
   "updated_at": "2026-11-03T07:17:52Z"
