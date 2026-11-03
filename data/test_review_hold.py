@@ -152,6 +152,20 @@ class ReviewHoldTests(unittest.TestCase):
         (self.root / review_hold.CLAIM_QUEUE).write_text('{not json')
         self.assertNotEqual(check()[0], 0)
 
+    def test_a_density_time_board_is_skipped(self):
+        # Site 6317c216 (directed-sssp "D ; T" rows): Fraction('m log^2/3 + n') stopped the hourly refresh.
+        registry = review_hold.load(self.root, 'registry.json')
+        registry['problems'].append({'slug': 'directed-sssp', 'data_file': 'sssp.json'})
+        review_hold.dump(self.root, 'registry.json', registry)
+        sssp = board('lower-is-better', [record('classical-baseline', 'm + n log'), record('stoc', 'm log^2/3 + n'),
+                                          record('vals', 'n log^3/4 ; n log^11/12')])
+        sssp['score']['encoding'] = 'density-time'
+        self.heads['sssp.json'] = copy.deepcopy(sssp)
+        sssp['records'].append(record('new', 'n ; n log^1/2')); sssp['record_metadata']['new'] = {'note': 'new'}
+        review_hold.dump(self.root, 'sssp.json', sssp)
+        self.assertEqual(self.run_review(), [])
+        self.assertEqual(self.ids('sssp.json'), ['classical-baseline', 'stoc', 'vals', 'new'])
+
     def test_live_bundle_has_no_pending_holds_file_errors(self):
         holds = review_hold.load(review_hold.ROOT, review_hold.HOLDS)
         decisions = review_hold.load(review_hold.ROOT, review_hold.DECISIONS)

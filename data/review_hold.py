@@ -84,6 +84,10 @@ def review(root, now, published_board=published):
     for entry in registry['problems']:
         slug, path = entry['slug'], entry['data_file']
         board = load(root, path)
+        # A density-time board (directed-sssp, rows "D ; T" and functions of m and n) has no rational score, so the
+        # Fraction rule below does not fit it. Its new rows come only from the verifier and the maintainer binding.
+        if board['score'].get('encoding') == 'density-time':
+            continue
         before = published_board(root, path)
         if before is None:
             continue
