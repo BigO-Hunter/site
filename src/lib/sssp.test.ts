@@ -5,7 +5,7 @@ const CASES = JSON.parse(readFileSync(new URL('../../data/direct-fixtures/sssp-c
 test('normal forms parse to the shared exponent tuples', () => {
  for (const c of CASES.parse) { const t = parse(c.text); assert.deepEqual(t.map(qText), c.exponents, c.text); assert.equal(text(t.slice(0, 2), D_NAMES) + ' ; ' + text(t.slice(2)), c.text); }
 });
-test('every shared refusal is refused', () => { for (const t of CASES.refuse) assert.throws(() => parse(t), undefined, JSON.stringify(t)); });
+test('every shared refusal is refused', () => { for (const t of CASES.refuse) assert.throws(() => parse(t), Error, JSON.stringify(t)); });
 test('function rows give the shared time at each density', () => {
  for (const row of CASES.functions) for (const [d, t] of Object.entries(row.at)) assert.equal(text(timeAt(row.terms, density(d))), t, `${row.name} at ${d}`);
 });
