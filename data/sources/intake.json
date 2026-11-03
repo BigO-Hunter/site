@@ -1,10 +1,10 @@
 {
   "checked_at": "2026-11-03",
-  "assembled_at": "2026-11-03T20:17:38Z",
+  "assembled_at": "2026-11-03T21:17:52Z",
   "pulls_source": "https://api.github.com/repos/CrocSwap/integer-mult-bounds/pulls",
-  "count": 6169,
-  "fingerprint": "5dbbca93f85a038519a58d24ba080eeb75964b5a850f4ffca558de572e7869c0",
-  "pulls_watermark": "2026-11-03T20:16:13Z",
+  "count": 6174,
+  "fingerprint": "df6cfea2787cb216869678350624b05609fb773c09ce0cede51c398a922eef0a",
+  "pulls_watermark": "2026-11-03T21:16:39Z",
   "pulls_full_at": "2026-11-03T00:17:31Z",
   "pulls_incomplete": null,
   "pulls_deleted": [

@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-03T15:24:31Z",
+    "updated_at": "2026-11-03T21:16:01Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -127412,7 +127412,7 @@
     "title": "Complete source-bound full-stage preparation with separate mode plans",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-03T15:34:37Z",
+    "updated_at": "2026-11-03T21:14:45Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127420,7 +127420,7 @@
       "html_url": "https://github.com/Clear1nsight"
     },
     "head": {
-      "sha": "67f57119a75bf1f0637aebc6c080c121132912f4"
+      "sha": "ff7df8391c3bb3f5518ce43682ba4c1e41380e3e"
     },
     "base": {
       "ref": "main"
@@ -129323,7 +129323,7 @@
     "title": "Prove the all-size unit-price one-clean checkpoint optimum (no κ)",
     "state": "open",
     "created_at": "2026-11-03T18:21:25Z",
-    "updated_at": "2026-11-03T18:21:25Z",
+    "updated_at": "2026-11-03T21:01:20Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129512,7 +129512,7 @@
     "title": "Audit rounded cleanup and public errors of P104 shared preparation (no κ)",
     "state": "open",
     "created_at": "2026-11-03T20:03:49Z",
-    "updated_at": "2026-11-03T20:03:49Z",
+    "updated_at": "2026-11-03T20:42:41Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129533,7 +129533,7 @@
     "title": "Price compatible width menus and resolve the rank-12 dispatch frontier",
     "state": "open",
     "created_at": "2026-11-03T20:16:13Z",
-    "updated_at": "2026-11-03T20:16:13Z",
+    "updated_at": "2026-11-03T20:49:36Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129541,7 +129541,112 @@
       "html_url": "https://github.com/SHIN09-git"
     },
     "head": {
-      "sha": "938f5800d8d5130cdc388b47a63560f4d830547e"
+      "sha": "e90d4e3cb77ed31c259b902e7aad9598c89327b5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6690,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6690",
+    "title": "Probe full-history blob-filter source hydration (prototype only)",
+    "state": "open",
+    "created_at": "2026-11-03T21:12:51Z",
+    "updated_at": "2026-11-03T21:12:51Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "aba156a1131a99ef054fd2f4407ac5718a4959c0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6691,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6691",
+    "title": "Prove the realizable two-plane signatures of 4x4 bases are exactly 439 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T21:13:19Z",
+    "updated_at": "2026-11-03T21:13:19Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e68cb25dcc859efb03d616305f543fda2d90ece1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6692,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6692",
+    "title": "Link ten stored open questions to the merged packages that answer them (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T21:13:34Z",
+    "updated_at": "2026-11-03T21:13:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "08464ad568edcc5eb53a8e556bf3f6fa714157b7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6693,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6693",
+    "title": "Complete the R16 radical-triple Pareto frontier: 13 count vectors, three unexposed (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T21:13:53Z",
+    "updated_at": "2026-11-03T21:13:53Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "824117ea0f9efe4dd43bae6aae60cd1ac4d5e2f4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6694,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6694",
+    "title": "Prove seven orthogonal binary full-guard events lie below the product of their marginals (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T21:16:39Z",
+    "updated_at": "2026-11-03T21:16:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "66d43a6c84bd13a93a9c2050de8b90eb75aa98ea"
     },
     "base": {
       "ref": "main"
