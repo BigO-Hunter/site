@@ -394,8 +394,8 @@ test('contribution routes send new results to Discord and Lean proofs to the ver
   const problem = (slug: string) => ({slug, title: slug, scope: '', symbol: 'omega', direction: 'lower-is-better', lastDataCheck: '', records: [], repos: []}) as unknown as Problem;
   const {contribute} = createKnowledge(['3sum', 'subset-sum', 'directed-sssp'].map(problem), '2026-10-10');
   assert.match(contribute.newResult, /#submit-a-result on our Discord \(https:\/\/discord\.gg\/\w+\)/);
-  // Subset Sum takes verifier proofs since 2026-11-01; directed SSSP has no verifier statement.
-  assert.deepEqual(contribute.leanProof.problems, ['/3sum', '/subset-sum']);
+  // Subset Sum takes verifier proofs since 2026-11-01, directed SSSP since 2026-11-03.
+  assert.deepEqual(contribute.leanProof.problems, ['/3sum', '/subset-sum', '/directed-sssp']);
   assert.equal(contribute.leanProof.repository, 'https://github.com/bigospeedrun/verifier');
   assert.deepEqual(contribute.prove2me.problems, ['/3sum']);
   assert.deepEqual(contribute.prove2me.campaigns, [{problem: '/3sum', url: 'https://prove2.me/campaigns/3sum-exponent'}]);

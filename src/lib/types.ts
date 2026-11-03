@@ -16,4 +16,7 @@ export interface Repo { name: string; owner: string; url: string; ownerUrl: stri
 export interface Problem {
  slug: string; title: string; model: string; modelId: string; scope: string; direction: 'higher-is-better' | 'lower-is-better'; symbol: string;
  repos: Repo[]; records: RecordEntry[]; lastDataCheck: string; lastProofCheck: string | null; pending: string; sourceFetch: string; notes: string[];
+ // The chart lines of a density-time board (directed-sssp chart.lines): a function of one row, up to its cap density.
+ chartLines?: ChartLine[];
 }
+export interface ChartLine { function: string; up_to: string; row: string }

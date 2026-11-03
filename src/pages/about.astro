@@ -1,6 +1,6 @@
 ---
 import {problems, boardRecords} from '../lib/data';
-import {ranked} from '../lib/ranking';
+import {boardLeaders} from '../lib/sssp-board';
 import {problemLinks} from '../lib/navigation';
 import {submissionRoute, verifierUrl, verifierProblems, discordUrl, submitChannel, prove2meCampaign} from '../lib/submission';
 import otherBounds from '../lib/other-bounds.json';
@@ -30,8 +30,8 @@ const unreviewed = entries.filter(({problem}) => submissionRoute(problem) === 's
 const withCampaign = entries.filter(({problem}) => prove2meCampaign(problem));
 const missingStatements = entries.filter(({problem}) => !verifierProblems.has(problem.slug));
 const missingProofs = entries.filter(({problem}) => {
-  const leader = ranked(boardRecords(problem), problem.direction)[0]?.record;
-  return verifierProblems.has(problem.slug) && leader && leader.evidenceLevel !== 'lean-verified';
+  const leaders = boardLeaders(problem, boardRecords(problem));
+  return verifierProblems.has(problem.slug) && leaders.length > 0 && leaders.every(leader => leader.evidenceLevel !== 'lean-verified');
 });
 const reviewedOther = otherBounds.families.filter(f => 'reviewRepository' in f) as (typeof otherBounds.families[number] & {reviewRepository: {name: string; url: string}})[];
 const separator = (index: number, length: number) => index === 0 ? '' : index === length - 1 ? ' and ' : ', ';

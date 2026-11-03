@@ -1,7 +1,9 @@
 import {ranked,boundPrecision,boundExponent,scientificSaving,displayDigits,factoringPlainBound} from './ranking.ts';
 import {evidenceName,evidenceLevels} from './evidence.ts';
 import {otherBoundLeader} from './other-leader.ts';
-import type {Problem,RecordEntry} from './types';
+import type {ChartLine,Problem,RecordEntry} from './types';
+import {parse,plain,D_NAMES} from './sssp.ts';
+import {ssspFrontier} from './sssp-board.ts';
 
 // verification: a Claimed direct submission (bigospeedrun/verifier issue or PR) whose Lean check has not
 // passed: 'pending' while it runs (since: the submission time), 'failed' after a final failed outcome,
@@ -13,7 +15,9 @@ export interface FeedRecord {id:string; score:string; relation:string; evidence:
 export type FeedTable='big-o'|'other-bounds';
 // direction: which score is better on the board. Absent in older snapshots: then no row of the board is superseded (see plan).
 export type FeedDirection='lower'|'higher';
-export interface FeedBoard {slug:string; name:string; url:string; leader:string|null; records:FeedRecord[]; table?:FeedTable; direction?:FeedDirection}
+// frontier: on the directed-sssp board (density-time scores) the ids of the frontier rows, which take the place of the
+// one leader (Lead, 2026-11-03, design note sections 7 and 8); leader is then null.
+export interface FeedBoard {slug:string; name:string; url:string; leader:string|null; records:FeedRecord[]; table?:FeedTable; direction?:FeedDirection; frontier?:string[]}
 export interface FeedSnapshot {schema_version:1; boards:FeedBoard[]}
 export interface FeedState {schema_version:1; snapshot:FeedSnapshot; reserved:string[]; deferred?:{key:string;slug:string;authors:string[];hold?:true}[]}
 export interface FeedMessage {key:string; content:string; x_text?:string; authors?:string[]; table?:FeedTable}
@@ -51,11 +55,22 @@ export function plainBound(slug:string,score:string,relation='attained',digits?:
  if(slug==='subset-sum')return epsilon?`O(2^((${value} + epsilon)n))${epsilon}`:`O(2^(${value}n))`;
  return epsilon?`O(n^(${value} + epsilon))${epsilon}`:`O(n^${value})`;
 }
-export function feedBoard(problem:Pick<Problem,'slug'|'direction'>,records:(Pick<RecordEntry,'id'|'score'|'scoreRelation'|'date'|'repoId'|'evidenceLevel'|'authors'>&Partial<Pick<RecordEntry,'verification'>>)[],name:string):FeedBoard {
+export function feedBoard(problem:Pick<Problem,'slug'|'direction'>&Partial<Pick<Problem,'chartLines'>>,records:(Pick<RecordEntry,'id'|'score'|'scoreRelation'|'date'|'repoId'|'evidenceLevel'|'authors'>&Partial<Pick<RecordEntry,'verification'>>)[],name:string):FeedBoard {
+ if(problem.slug==='directed-sssp')return ssspFeedBoard(problem,records,name,problem.chartLines??[]);
  const digits=boundPrecision(records.map(r=>r.score),problem.slug==='integer-multiplication'||problem.slug==='exact-dft');
  return {slug:problem.slug,name,url:`https://bigospeedrun.com/${problem.slug}`,leader:ranked(records,problem.direction)[0]?.record.id??null,direction:problem.direction==='higher-is-better'?'higher':'lower',
  records:records.map(r=>({id:r.id,score:r.score,relation:r.scoreRelation??'attained',evidence:evidenceName(r.evidenceLevel),authors:r.authors.map(a=>a.name),bound:plainBound(problem.slug,r.score,r.scoreRelation,digits),
   ...(r.verification&&evidenceName(r.evidenceLevel)==='Claimed'?{verification:r.verification}:{})}))};
+}
+// Directed SSSP (Lead, 2026-11-03): only point rows "D ; T" post; the function rows (classic, papers) never do. A frontier
+// row is a point row that no other listed point row dominates and that no Lean Verified line dominates (the line of a
+// Lean Verified row, at a density up to its cap: G2). The line does not dominate its own row.
+function ssspFeedBoard(problem:Pick<Problem,'slug'|'direction'>,records:Parameters<typeof feedBoard>[1],name:string,lines:ChartLine[]):FeedBoard {
+ const points=records.filter(r=>r.score.includes(' ; '));
+ return {slug:problem.slug,name,url:`https://bigospeedrun.com/${problem.slug}`,leader:null,direction:'lower',
+  frontier:ssspFrontier(points,lines).map(r=>r.id),
+  records:points.map(r=>{const t=parse(r.score);return {id:r.id,score:r.score,relation:'attained',evidence:evidenceName(r.evidenceLevel),authors:r.authors.map(a=>a.name),
+   bound:`O(${plain(t.slice(2))}) for m <= ${plain(t.slice(0,2),D_NAMES)}`,...(r.verification&&evidenceName(r.evidenceLevel)==='Claimed'?{verification:r.verification}:{})};})};
 }
 // A post's value never claims more than the proof (Lead, 2026-10-24): rounded down on a higher-is-better
 // kappa board, up on a lower-is-better exponent board. sig: significant digits; places: decimal places.
@@ -81,6 +96,7 @@ export function directedDecimal(score:string,up:boolean,{sig,places}:{sig?:numbe
 // row), at least 3, and more while the two would look equal, up to the site's table cap (displayDigits.table),
 // so rows that agree beyond the cap still show the same value. The site tables keep their board precision.
 export function postBound(board:FeedBoard,record:FeedRecord,minDigits=3):string {
+ if(board.frontier)return record.bound;
  const kappa=board.slug==='integer-multiplication'||board.slug==='exact-dft';
  // Toward the weaker bound: down on a higher-is-better board (kappa, 3-SAT alpha), up otherwise.
  const higher=kappa||board.direction==='higher';
@@ -181,9 +197,11 @@ export function xMessage(board:FeedBoard,record:FeedRecord,newRecord=true):strin
  const status=record.evidence==='Claimed'?'Claimed (not verified)':record.evidence;
  return `${headline(record,newRecord)}!\n\nProblem: ${board.name}\n${newRecord?'New value':'Value'}: ${record.bound}\n${names.length>1?'Players':'Player'}: ${names.join(', ')||'Unknown author'}\nStatus: ${status}`;
 }
+// The row leads its board: the leader, or on the directed-sssp board a frontier row.
+const leads=(board:FeedBoard,id:string)=>board.frontier?board.frontier.includes(id):id===board.leader;
 export function baseline(snapshot:FeedSnapshot):FeedState {
  const reserved:string[]=[];
- for(const board of snapshot.boards)for(const r of board.records)if(r.id===board.leader||r.evidence==='Lean Verified')reserved.push(eventKey(board,r));
+ for(const board of snapshot.boards)for(const r of board.records)if(leads(board,r.id)||r.evidence==='Lean Verified')reserved.push(eventKey(board,r));
  return {schema_version:1,snapshot,reserved};
 }
 // Accepted posts retain the original event key; omit only the submission ID for deduplication.
@@ -280,24 +298,27 @@ export function plan(previous:FeedState,snapshot:FeedSnapshot,posts:(Pick<Record
   const old=previous.snapshot.boards.find(b=>b.slug===board.slug);
   // An Other bounds board seen for the first time is seeded, as the baseline does: its
   // current leader and Lean records are reserved and nothing posts. Only later leaders post.
-  if(!old&&isOther(board.slug)){
-   for(const r of board.records)if(r.id===board.leader||r.evidence==='Lean Verified')reserved.add(eventKey(board,r));
+  // The directed-sssp board too: its race-start rows post nothing (the announcement covers them).
+  if(!old&&(isOther(board.slug)||board.frontier)){
+   for(const r of board.records)if(leads(board,r.id)||r.evidence==='Lean Verified')reserved.add(eventKey(board,r));
    continue;
   }
   const lesser=superseded(board,old,reserved,announced);
   for(const record of board.records){
    const prior=old?.records.find(r=>identity(old,r)===identity(board,record));
    const oldLeader=old?.records.find(r=>r.id===old.leader);
-   const newLeader=record.id===board.leader&&(!oldLeader||identity(old!,oldLeader)!==identity(board,record));
-   const gainedLean=record.evidence==='Lean Verified'&&prior?.evidence!=='Lean Verified';
+   // On the directed-sssp board: a row that becomes a frontier row; a row that gains Lean Verified posts only while it is one.
+   const newLeader=board.frontier?leads(board,record.id)&&!(old?.records.some(r=>leads(old,r.id)&&identity(old,r)===identity(board,record))):
+    record.id===board.leader&&(!oldLeader||identity(old!,oldLeader)!==identity(board,record));
+   const gainedLean=record.evidence==='Lean Verified'&&prior?.evidence!=='Lean Verified'&&(!board.frontier||leads(board,record.id));
    const key=eventKey(board,record);
    if(lesser.has(key)){reserved.add(key);deferred.delete(key);continue;}
-   const waiting=record.id===board.leader&&deferred.has(key);
+   const waiting=leads(board,record.id)&&deferred.has(key);
    // A held direct claim (below) that now leads with Lean Verified posts once, as a new record.
-   const held=record.id===board.leader&&key!==identity(board,record)+':record'&&deferred.get(identity(board,record)+':record')?.hold===true;
+   const held=leads(board,record.id)&&key!==identity(board,record)+':record'&&deferred.get(identity(board,record)+':record')?.hold===true;
    // Rows imported from prove2.me (data/prove2me_import.py) are old results. When its
    // LEAN_VERIFIED switch flips, a row that does not lead its board posts nothing.
-   if(gainedLean&&!newLeader&&!waiting&&record.id.startsWith('prove2me-')&&record.id!==board.leader){reserved.add(key);continue;}
+   if(gainedLean&&!newLeader&&!waiting&&record.id.startsWith('prove2me-')&&!leads(board,record.id)){reserved.add(key);continue;}
    if((newLeader||gainedLean||waiting||held)&&!reserved.has(key)){
     const boundKey=postedBoundKey(key);
     if(announced.has(boundKey)){reserved.add(key);deferred.delete(key);continue;}

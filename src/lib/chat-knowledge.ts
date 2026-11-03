@@ -1,5 +1,6 @@
 import type {Problem, RecordEntry} from './types.ts';
-import {ranked, boundPrecision, tableBound} from './ranking.ts';
+import {boundPrecision, tableBound} from './ranking.ts';
+import {boardLeaders} from './sssp-board.ts';
 import {evidenceLevels, evidenceName, isBoardEntry, breakthroughLabel, breakthroughDefinition, otherReviewPrUrl, type EvidenceLevel, type OtherClaimReview, type OtherReviewRepository} from './evidence.ts';
 import {verifierUrl, verifierProblems, discordUrl, submitChannel, prove2meCampaigns, prove2meCampaignForOther} from './submission.ts';
 import {otherBoundLeader} from './other-leader.ts';
@@ -106,7 +107,7 @@ export function createKnowledge(problems: Problem[], updatedAt: string,
   // In the site's order (the Problems menu); a problem not in that menu goes last. The race
   // board (bigospeedrun/board scripts/sync-boards.ts) lists its boards in this order.
   const rank = (p: Problem) => { const i = problemLinks.findIndex(([slug]) => slug === p.slug); return i < 0 ? problemLinks.length : i; };
-  const boards = problems.filter(p => p.slug !== 'directed-sssp').sort((a, b) => rank(a) - rank(b));
+  const boards = [...problems].sort((a, b) => rank(a) - rank(b));
   return {
     updatedAt, pages: {}, evidence: evidenceLevels,
     otherBounds: {
@@ -117,10 +118,11 @@ export function createKnowledge(problems: Problem[], updatedAt: string,
     breakthrough: {name:breakthroughLabel, definition:breakthroughDefinition},
     problems: boards.map(p => {
       const records = boardRecords(p);
-      const digits = boundPrecision(records.map(r => r.score), p.symbol === 'kappa');
-      const leaders = (entries: RecordEntry[]) => ranked(entries, p.direction)
-        .filter(r => r.rank === 1).map(({record: r}) => ({
-          id: r.id, bound: tableBound(r, p.symbol === 'kappa', digits), exactScore: r.score, scoreRelation: r.scoreRelation,
+      // Directed SSSP has no rational score: its frontier rows lead, with the board's own bound text (sssp-board.ts).
+      const sssp = p.slug === 'directed-sssp';
+      const digits = sssp ? 0 : boundPrecision(records.map(r => r.score), p.symbol === 'kappa');
+      const leaders = (entries: RecordEntry[]) => boardLeaders(p, entries).map(r => ({
+          id: r.id, bound: sssp ? r.bound : tableBound(r, p.symbol === 'kappa', digits), exactScore: r.score, scoreRelation: r.scoreRelation,
           evidence: evidenceName(r.evidenceLevel), authors: r.authors, date: r.date,
           dateMeaning: r.dateLabel, assumptions: r.dependencies, comparisonNote: r.comparisonNote,
           ...(r.methodNote ? {method: r.methodNote} : {}),

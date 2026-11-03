@@ -24,7 +24,7 @@ export function pageSeo(pathname:string) {
  const canonicalPath = path==='/'?'/':path;
  return {
   canonical: siteOrigin+canonicalPath,
-  noindex: canonicalPath==='/directed-sssp'||canonicalPath==='/404'||canonicalPath.startsWith('/receipts/'),
+  noindex: canonicalPath==='/404'||canonicalPath.startsWith('/receipts/'),
   description: pageDescriptions[canonicalPath]??pageDescriptions['/'],
  };
 }

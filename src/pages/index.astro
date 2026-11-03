@@ -19,12 +19,13 @@ const rows = [
   {slug:'subset-sum', classic:'O^*(2^{n/2})', breakthroughId:'subset-sum-2026', source:'https://github.com/openai/math/tree/main/preprints/Subset-Sum-in-Time-2-power-0-49n-October-4-2026'},
   {slug:'3sat', classic:'O^*(1.307031578^n)', breakthroughId:'openai-eth-2026', source:'https://github.com/openai/math/tree/7ef5c0cc5ca4b0e072b7a050fca09ab24bc6fa3a/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026'},
   {slug:'integer-factoring', classic:factoringClassic, breakthroughId:'rudich-rousseau-2026', source:'https://github.com/IsaacRudich/SubexponentialDeterministicFactoring/tree/c91cc3f4947caca8977e81a5d14244f73b5ae2b1'},
+  {slug:'directed-sssp', classic:'O(m + n \\log n)', breakthroughId:'directed-sssp-2026', source:'https://www.vals.ai/blogs/faster-shortest-path-algorithm'},
 ].map(row=>{
   const problem=problems.find(p=>p.slug===row.slug)!;
   const records=boardRecords(problem);
   const breakthroughRecord=problem.records.find(record=>record.id===row.breakthroughId)!;
   const breakthrough=breakthroughRecord.shortBound??breakthroughRecord.bound;
-  const latest=landingRecords(records,problem.direction).map(record=>({bound:record.shortBound??record.bound,url:record.evidence[0]?.url??'/'+row.slug,evidenceLevel:record.evidenceLevel,date:record.date,endpoint:record.scoreRelation==='strict-upper-bound',evidenceUrl:record.evidenceLevel==='claimed'?undefined:record.evidenceUrl}));
+  const latest=landingRecords(records,problem.direction,problem.chartLines).map(record=>({bound:record.shortBound??record.bound,url:record.evidence[0]?.url??'/'+row.slug,evidenceLevel:record.evidenceLevel,date:record.date,endpoint:record.scoreRelation==='strict-upper-bound',evidenceUrl:record.evidenceLevel==='claimed'?undefined:record.evidenceUrl}));
   return {...row,href:'/'+row.slug,name:problemDisplayName(row.slug),breakthrough,latest,endpoint:latest.some(record=>record.endpoint)};
 });
 

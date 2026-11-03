@@ -1,0 +1,21 @@
+// The directed-sssp board has no single leader: its frontier rows take that place (Lead, 2026-11-03; design note
+// sections 7 and 8). Every generic place that asks for "the leader" of a board asks boardLeaders. No data import here:
+// the site server image has src/lib/*.ts only (image-imports.test.ts), so the chart lines come with the Problem.
+import {ranked} from './ranking.ts';
+import {parse, parseFunction, density, frontier} from './sssp.ts';
+import type {ChartLine, Problem, RecordEntry} from './types';
+
+/** The frontier rows among records (point rows only), in input order. A line counts when its row is Lean Verified.
+ * Of exactly equal rows, the earliest (date, then input order) is the frontier row. */
+export function ssspFrontier<T extends Pick<RecordEntry, 'id' | 'score' | 'evidenceLevel' | 'date'>>(records: T[], lines: ChartLine[] = []): T[] {
+ const points = records.filter(r => r.score.includes(' ; ')).map((r, i) => ({r, i})).sort((x, y) => x.r.date.localeCompare(y.r.date) || x.i - y.i).map(x => x.r);
+ const verified = new Set(points.filter(r => r.evidenceLevel === 'lean-verified').map(r => r.id));
+ const proven = lines.filter(l => verified.has(l.row)).map(l => ({row: l.row, terms: parseFunction(l.function), cap: density(l.up_to)}));
+ const ids = new Set(frontier(points.map(r => ({id: r.id, t: parse(r.score)})), proven));
+ return records.filter(r => ids.has(r.id));
+}
+/** The rows that lead a board: its rank-1 rows, or on directed-sssp its frontier rows. */
+export function boardLeaders(problem: Pick<Problem, 'slug' | 'direction' | 'chartLines'>, records: RecordEntry[]): RecordEntry[] {
+ return problem.slug === 'directed-sssp' ? ssspFrontier(records, problem.chartLines)
+  : ranked(records, problem.direction).filter(r => r.rank === 1).map(r => r.record);
+}

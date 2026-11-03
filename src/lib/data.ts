@@ -70,7 +70,7 @@ export const problems:Problem[]=registry.problems.map((p:any)=>{
   record.shortBound=tableBound(record,kappa,digits,displayDigits.landing);
   record.bound=tableBound(record,kappa,digits);
  }
- return {slug:p.slug,title:titles[p.slug],model:data.model.id.replaceAll('-',' '),modelId:data.model.id,scope:data.model.description,direction:data.score.direction,symbol:data.score.symbol==='kappa'?'kappa':'exponent',repos,records,lastDataCheck:data.updated_at,lastProofCheck:records.filter(r=>r.rerunStatus?.checked_at&&['passed','failed'].includes(r.rerunStatus.state)).map(r=>r.rerunStatus!.checked_at!).filter(Boolean).sort().at(-1)??null,sourceFetch:data.checked_at,pending:'Independent checks have not run. No site proof badges.',notes:[],};
+ return {slug:p.slug,title:titles[p.slug],model:data.model.id.replaceAll('-',' '),modelId:data.model.id,scope:data.model.description,direction:data.score.direction,symbol:data.score.symbol==='kappa'?'kappa':'exponent',repos,records,lastDataCheck:data.updated_at,lastProofCheck:records.filter(r=>r.rerunStatus?.checked_at&&['passed','failed'].includes(r.rerunStatus.state)).map(r=>r.rerunStatus!.checked_at!).filter(Boolean).sort().at(-1)??null,sourceFetch:data.checked_at,pending:'Independent checks have not run. No site proof badges.',notes:[],...(densityTime?{chartLines:data.chart.lines.map((l:any)=>({function:l.function,up_to:l.up_to,row:l.row}))}:{})};
 });
 
 // All views admit open review submissions as Claimed through the shared admission rule.

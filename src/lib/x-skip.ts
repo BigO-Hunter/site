@@ -17,7 +17,11 @@ export function breakthroughBar(snapshot:FeedSnapshot|undefined,slug:string):{sc
 // The reason to skip the post, or undefined when it may go out. A score that is not a rational logs a warning and
 // never stops the plan: that post goes out as before.
 export function worseThanBreakthrough(post:XEntry,snapshot:FeedSnapshot|undefined):string|undefined {
- if(!post.key.endsWith(':lean')&&!/^Status: Lean Verified$/m.test(post.x_text??''))return undefined;
+ const lean=post.key.endsWith(':lean')||/^Status: Lean Verified$/m.test(post.x_text??'');
+ // Directed SSSP (Lead, 2026-11-03): X only for a Lean Verified frontier row. The feed posts only frontier rows, so a
+ // row that the Vals AI point or its Lean Verified line dominates never gets here.
+ if(!lean&&post.key.startsWith('["directed-sssp",'))return 'Directed shortest paths posts on X only for a Lean Verified frontier row (Lead, 2026-11-03): no X post';
+ if(!lean)return undefined;
  let slug:unknown,score:unknown;
  try{[slug,,score]=JSON.parse(post.key.slice(0,post.key.lastIndexOf(':')));}catch{return undefined;}
  if(typeof slug!=='string'||typeof score!=='string')return undefined;

@@ -15,10 +15,10 @@ test('canonical URLs use the production origin and model aliases share the probl
 });
 
 
-test('hidden SSSP pages stay out of search and the sitemap',()=>{
- assert.equal(pageSeo('/directed-sssp').noindex,true);
- assert.equal(pageSeo('/directed-sssp/comparison-addition-sparse/').noindex,true);
- assert.ok(!sitemapPaths.some(path=>path.includes('directed-sssp')));
+test('the directed SSSP page is in search and the sitemap since its race opened (2026-11-03)',()=>{
+ assert.equal(pageSeo('/directed-sssp').noindex,false);
+ assert.equal(pageSeo('/directed-sssp/comparison-addition-sparse/').canonical,siteOrigin+'/directed-sssp');
+ assert.ok(sitemapPaths.includes('/directed-sssp'));
  assert.deepEqual([...sitemapPaths].sort(),Object.keys(pageDescriptions).filter(path=>!pageSeo(path).noindex).sort());
  assert.ok(sitemapPaths.every(path=>!pageSeo(path).noindex));
 });
