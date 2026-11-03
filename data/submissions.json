@@ -122617,6 +122617,33 @@
       "claim_files_head": "11ca568cd1a16776ade02b4df09ea04a784cc674",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6552,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Supply F4 first-success slices with independent literal witnesses",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6552",
+      "submitted_at": "2026-11-03T06:23:54Z",
+      "updated_at": "2026-11-03T06:33:44Z",
+      "source_commit": "d26d02598a7a1e259a2e2c1dfbdbf7860e572199",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T06:23:54Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "d26d02598a7a1e259a2e2c1dfbdbf7860e572199",
+      "claim_text": "2243af5af0f9d1885c6c4f7774430fa1b85e501e8ee0ff18eb31f72b2322bad5",
+      "claim_files": [
+        [
+          "added",
+          "research/f4-first-slice-constructor/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "d26d02598a7a1e259a2e2c1dfbdbf7860e572199",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

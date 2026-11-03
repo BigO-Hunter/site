@@ -7002,7 +7002,8 @@
     "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6453\",\"1643507/500000000\",\"attained\"]:record",
     "[\"other-snaky\",\"direct-issue-114:20\",\"20\",\"attained\"]:lean",
-    "[\"integer-multiplication\",\"crocswap-pr-6529\",\"3288299/1000000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6529\",\"3288299/1000000000\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-6545\",\"164697/50000000\",\"attained\"]:record"
   ],
   "deferred": [
     {
@@ -7010,13 +7011,6 @@
       "slug": "integer-multiplication",
       "authors": [
         "aigent-marius"
-      ]
-    },
-    {
-      "key": "[\"integer-multiplication\",\"crocswap-pr-6545\",\"164697/50000000\",\"attained\"]:record",
-      "slug": "integer-multiplication",
-      "authors": [
-        "Ali Romman"
       ]
     }
   ]

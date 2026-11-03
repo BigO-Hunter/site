@@ -126649,5 +126649,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6552,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6552",
+    "title": "Supply F4 first-success slices with independent literal witnesses",
+    "state": "open",
+    "created_at": "2026-11-03T06:23:54Z",
+    "updated_at": "2026-11-03T06:33:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "d26d02598a7a1e259a2e2c1dfbdbf7860e572199"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
