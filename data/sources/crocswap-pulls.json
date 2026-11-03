@@ -129260,7 +129260,7 @@
     "title": "Raise the fixed F4 coordinate query-rank floor to 24 (no κ)",
     "state": "open",
     "created_at": "2026-11-03T18:17:30Z",
-    "updated_at": "2026-11-03T18:17:30Z",
+    "updated_at": "2026-11-03T18:30:03Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129269,6 +129269,174 @@
     },
     "head": {
       "sha": "3bf7fb018cc6b4751f75309d7775eeb0d32d3b48"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6677,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6677",
+    "title": "Save 32 coefficient ADDs with a translated Gaussian reader basis (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T18:20:00Z",
+    "updated_at": "2026-11-03T18:20:00Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "88897d07beace45d87fa742178cdfd8ec2ad6959"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6678,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6678",
+    "title": "Save six ADDs in the actual P104 opening preparation (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T18:20:36Z",
+    "updated_at": "2026-11-03T18:20:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "1025aa5f742a760da526df56e354f618b95f2bf5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6679,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6679",
+    "title": "Prove the all-size unit-price one-clean checkpoint optimum (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T18:21:25Z",
+    "updated_at": "2026-11-03T18:21:25Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "ed0043fa12735b80ff56c53b07d37353bfe4ad55"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6680,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6680",
+    "title": "Reduce complete Dic3 replay time by 39.62% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T18:25:03Z",
+    "updated_at": "2026-11-03T18:25:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "5c014d52e16bf71ca1cb0394c23e25a3a4dae66e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6681,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6681",
+    "title": "Pack Newton membership into nine guarded subtractions (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T18:25:53Z",
+    "updated_at": "2026-11-03T18:25:53Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "4195c5cb137ecdd655ca564d404b6d62a5d5245f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6682,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6682",
+    "title": "Prove exact non-Frobenius rectangular tensor characters (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T18:28:03Z",
+    "updated_at": "2026-11-03T18:28:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "143491876f44d2bbf83bf52ae6c9fe5e9496a03c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6683,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6683",
+    "title": "Construct exact mirror windows with one rank-pair classification",
+    "state": "open",
+    "created_at": "2026-11-03T18:34:22Z",
+    "updated_at": "2026-11-03T18:34:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "de326ae26a965ca1d83e038c7f84459dbc50e245"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6684,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6684",
+    "title": "Prove a unitary centre0 chart and sharp fixed-output conditioning (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T18:45:43Z",
+    "updated_at": "2026-11-03T18:57:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "4efad08de13caf6ddbf45720721509278d304190"
     },
     "base": {
       "ref": "main"
