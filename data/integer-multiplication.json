@@ -39659,7 +39659,7 @@
       "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6621",
       "artifact": {
         "path": "sources/pr-6621.json",
-        "sha256": "1c15820f9426fca48ddf91cf23ab5be669ca9d51cca702221b9fcd49a44d9f7a"
+        "sha256": "d471ef6cc13c7fd472678420bcf46e6f662a0a0a2fd3720ee41389250877a853"
       },
       "evidence": {
         "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6621",
@@ -39674,7 +39674,7 @@
           "status": "unverified"
         }
       ],
-      "source_commit": "e772ff8f300f4687bd8fa059f9e8f98719de121c"
+      "source_commit": "c51a142bb94c6d46ebee9a48c3f71cde8022da91"
     }
   ],
   "record_metadata": {
@@ -62751,7 +62751,7 @@
       "merged": false,
       "merged_at": null,
       "closed_at": null,
-      "updated_at": "2026-11-03T12:52:44Z",
+      "updated_at": "2026-11-03T13:48:19Z",
       "comparison_key": "crocswap/integer-multiplication-v1",
       "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
       "score_source": "stated kappa in research/p104-paid-job-merges-on-retirement-tree/RESULT.json at the PR head; source claim only",
@@ -62769,5 +62769,5 @@
       "race_event_kind": "PR creation; latest observed score"
     }
   },
-  "updated_at": "2026-11-03T13:17:29Z"
+  "updated_at": "2026-11-03T14:17:27Z"
 }

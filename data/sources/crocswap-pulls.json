@@ -125564,7 +125564,7 @@
     "title": "Independently verify all nineteen P104 LOCAL contact stages",
     "state": "open",
     "created_at": "2026-11-03T01:00:24Z",
-    "updated_at": "2026-11-03T01:01:22Z",
+    "updated_at": "2026-11-03T13:57:54Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128105,7 +128105,7 @@
     "title": "Merge paid jobs in the native word under the rebalanced retirement tree (κ 0.00329700)",
     "state": "open",
     "created_at": "2026-11-03T12:52:44Z",
-    "updated_at": "2026-11-03T12:52:44Z",
+    "updated_at": "2026-11-03T13:48:19Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128113,7 +128113,511 @@
       "html_url": "https://github.com/DreamingOfClouds"
     },
     "head": {
-      "sha": "e772ff8f300f4687bd8fa059f9e8f98719de121c"
+      "sha": "c51a142bb94c6d46ebee9a48c3f71cde8022da91"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6622,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6622",
+    "title": "Prove sharp uniform error from transient transfer leakage (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:01:45Z",
+    "updated_at": "2026-11-03T14:01:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "9128443f5ea637ebc9a07932baff413a6c39df8c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6623,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6623",
+    "title": "Prove exact consecutive mixed-precision batch lengths (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:03:10Z",
+    "updated_at": "2026-11-03T14:03:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "77ef564e3ab8408a6419d10b18647b785ab133a7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6624,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6624",
+    "title": "Prove the sharp two-axis coframe cut threshold (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:03:12Z",
+    "updated_at": "2026-11-03T14:03:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "355c22bd493f9f90a2b9654119a682b7e7dee0e1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6625,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6625",
+    "title": "Prove exact weighted pending-capacity fanout tariffs (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:04:09Z",
+    "updated_at": "2026-11-03T14:04:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "def9fb39d46fbaa3f7357400c0ee941a86a8ad41"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6626,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6626",
+    "title": "Prove optimal sparse-union headers: 44 to 19 bits (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:04:46Z",
+    "updated_at": "2026-11-03T14:04:46Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "198ffb11a8bb82c71d7dafb6a5cb137728b01362"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6627,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6627",
+    "title": "Settle actual width-one GL2 target minima with a third dirty role (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:05:06Z",
+    "updated_at": "2026-11-03T14:05:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "05badc507099ead41facabc3fe0bc0653cde80e2"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6628,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6628",
+    "title": "Prove exact radical reachability through a common flag (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:06:10Z",
+    "updated_at": "2026-11-03T14:06:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "d1041a1273f46a473ba3168b64a108f18822ba75"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6629,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6629",
+    "title": "Compile compact routing ROMs with direct dense-row queries (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:07:49Z",
+    "updated_at": "2026-11-03T14:07:49Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "9bc9bbe97f50886abd0d9a2328f6412439be64ab"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6630,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6630",
+    "title": "Reduce complete partial-Pauli replay time by 5.20% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:08:36Z",
+    "updated_at": "2026-11-03T14:08:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "9bca9b6896b5779392dced03674cc37e8b7e2a38"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6631,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6631",
+    "title": "Bound every BW16 nonorthogonality clique by 126 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:09:46Z",
+    "updated_at": "2026-11-03T14:09:46Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "4ef5803c07dc1637adbc1b6f616be6f10ecbaff8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6632,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6632",
+    "title": "Record that the E7 weight-12 words equal the two receipt orbits.",
+    "state": "open",
+    "created_at": "2026-11-03T14:10:46Z",
+    "updated_at": "2026-11-03T14:11:56Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "b5a6a9b69303dc5d735a7f0e750334aaa9649996"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6633,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6633",
+    "title": "Record that length-4 G20 conjugations do not emit after one moved cor…",
+    "state": "open",
+    "created_at": "2026-11-03T14:10:50Z",
+    "updated_at": "2026-11-03T14:12:05Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "2ca0030166f85a833da2a3eb66a0bf82ac3dfe1c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6634,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6634",
+    "title": "Prove exact composite-axis projection densities (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:10:51Z",
+    "updated_at": "2026-11-03T14:10:51Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e1af31cf200339333d2bf21c2134ebeddfcf81b3"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6635,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6635",
+    "title": "Prove the selected PR6030 scalar instructions lift at every column mu…",
+    "state": "open",
+    "created_at": "2026-11-03T14:10:52Z",
+    "updated_at": "2026-11-03T14:12:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "c279bbc47120502163897715a29b046f43c2cc31"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6636,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6636",
+    "title": "Record that the emitted PR5713 word matches its credited scalar edit.",
+    "state": "open",
+    "created_at": "2026-11-03T14:10:55Z",
+    "updated_at": "2026-11-03T14:12:25Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "caaa44ca2297d1aeb3db13e44f627fa5947f17a7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6637,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6637",
+    "title": "Record the PR6372 forward-CLEAR forms outside the rank margin.",
+    "state": "open",
+    "created_at": "2026-11-03T14:10:57Z",
+    "updated_at": "2026-11-03T14:12:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "80334be561332a5619a66bdf6e6701addd7e41a1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6638,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6638",
+    "title": "Cursor/pr6621 paid merge gate e215",
+    "state": "open",
+    "created_at": "2026-11-03T14:11:00Z",
+    "updated_at": "2026-11-03T14:12:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "49a4f69263ae1d69d4abffcd949a4f3f38a9e9ad"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6639,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6639",
+    "title": "Record that post-call B/C helper feedback stays inside the capacity bill",
+    "state": "open",
+    "created_at": "2026-11-03T14:11:03Z",
+    "updated_at": "2026-11-03T14:12:54Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "f43393dd2b00c9fa9bbabd4cdf536f43f19dd827"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6640,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6640",
+    "title": "Cursor/p111 line7 query price 0141",
+    "state": "open",
+    "created_at": "2026-11-03T14:11:05Z",
+    "updated_at": "2026-11-03T14:13:05Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "916e18c55f0e4e1fc3a235440ea0bdbfb3d565e7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6641,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6641",
+    "title": "Prove legal GL2 bases do not lower the G20 boundary below 38 ADDs.",
+    "state": "open",
+    "created_at": "2026-11-03T14:11:09Z",
+    "updated_at": "2026-11-03T14:13:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "5af623f5912f997163639e061feca4ebcf7e189e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6642,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6642",
+    "title": "Record tight mixed peels for the braid endpoint 3214",
+    "state": "open",
+    "created_at": "2026-11-03T14:11:12Z",
+    "updated_at": "2026-11-03T14:13:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "878ca41524c8a29423a443167f53e519fea61eaf"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6643,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6643",
+    "title": "Prove exact dense B3/C3 term costs three or five (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:11:40Z",
+    "updated_at": "2026-11-03T14:11:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "c9935144bcc40cbe7b613cd603ed91de779697ad"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6644,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6644",
+    "title": "Prove sharp boundary-rank endpoint horizon (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:11:46Z",
+    "updated_at": "2026-11-03T14:11:46Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "00798d2af754c4123a80666e513b8f7585d5b617"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6645,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6645",
+    "title": "Certify sharp nonlinear five-cycle recovery probabilities (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:13:04Z",
+    "updated_at": "2026-11-03T14:13:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "06754cb96e8f852eeddc49f099d4a50fa80528d1"
     },
     "base": {
       "ref": "main"
