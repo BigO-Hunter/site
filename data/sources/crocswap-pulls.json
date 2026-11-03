@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-03T05:40:02Z",
+    "updated_at": "2026-11-03T07:38:17Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -126670,5 +126670,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6553,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6553",
+    "title": "Correct full owner/bootstrap source selection and expose missing edges",
+    "state": "open",
+    "created_at": "2026-11-03T07:32:56Z",
+    "updated_at": "2026-11-03T07:41:30Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "2906d561f6fc5f68ba8f3863edfb91e2f63c8a43"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]
