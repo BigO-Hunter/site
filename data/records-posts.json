@@ -1810,5 +1810,14 @@
     "authors": [
       "ChaloupeMusic"
     ]
+  },
+  {
+    "key": "[\"other-snaky\",\"direct-issue-114:20\",\"20\",\"attained\"]:lean",
+    "text": "**Record verified** | **Snaky** | `Maker moves ≤ 20` | by Dmitri I. Arkhipov | Lean Verified | [bigospeedrun.com/other/snaky](https://bigospeedrun.com/other/snaky)",
+    "x_text": "Record verified!\n\nProblem: Snaky\nValue: Maker moves ≤ 20\nPlayer: Dmitri I. Arkhipov\nStatus: Lean Verified",
+    "posted_at": "2026-11-03T02:30:44.659Z",
+    "authors": [
+      "Dmitri I. Arkhipov"
+    ]
   }
 ]
