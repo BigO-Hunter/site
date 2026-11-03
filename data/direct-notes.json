@@ -153,6 +153,10 @@
     "direct-issue-103": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/95",
       "text": "Dmitri I. Arkhipov lowers their own Lean Verified bound \\(\\mu(G)\\le 528.2327\\) to \\(\\mu(G)\\le 528.2315\\). The degree-130 two-band polynomial and its roots stay the same; the gain comes from normalizing its leading coefficient exactly. The rest of the proof is Cinna Davis's, with S. Litsey's design and OpenAI's irrationality argument."
+    },
+    "direct-issue-99": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/issues/92",
+      "text": "Wang-jiong-han lowers the proved exponent from 1.92027942 to 1.920279408185 with new digit costs (0, 1369, 2740) for the weighted cache of their own Lean Verified 1.92027942 proof, a new ternary profile and new evaluation points, all exact rationals. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates and Hrishik Sai Bojnal's parameter refinements; the word-RAM specification and compiler come from Anthropic's formalization."
     }
   },
   "withdrawn": {

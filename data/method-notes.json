@@ -10,7 +10,8 @@
     },
     "3sum": {
       "direct-issue-35": "The algorithm and its running-time accounting come from earlier entries by c0ldzy17 and Joshua Wharton. This version tunes the algorithm's parameters more finely so that its two largest cost terms nearly match, computes the logarithm bounds to more digits and tightens the safety margins. Lean checks that the resulting exponent holds.",
-      "direct-issue-92": "The new part is a weighted downset cache, with costs 0, 512 and 1025. Lean checks the whole solver: its correctness, its resources and its running time, with exact logarithm certificates for the exponent."
+      "direct-issue-92": "The new part is a weighted downset cache, with costs 0, 512 and 1025. Lean checks the whole solver: its correctness, its resources and its running time, with exact logarithm certificates for the exponent.",
+      "direct-issue-99": "The new part is the weighted cache: digit costs 0, 1369 and 2740, a new ternary profile and two new evaluation points. Lean checks the whole solver, its correctness and its running time. The submission also states, and proves in Lean outside our problem statement, that in its own cache model no choice of profile, costs, threshold and multipliers goes below 1.92027940818, so tuning it can lower the exponent by at most 0.000000000005 more. Our verifier checked only the running-time bound."
     },
     "apsp": {
       "joshuaqfex-apsp-2026": "The author found better tuning values for the all-pairs shortest paths construction. A Lean file checks 47 inequalities on those values and the exact identities between the stages of the construction."
