@@ -1,0 +1,11 @@
+{
+  "number": 6474,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6474",
+  "title": "Construct one-pass carry packets for all released G20 routes",
+  "body": "The released fused G20 routes needed a source-bound producer for the five-bit carry packet. This adds one for every column of both PR5820 bases: 444 routes, 3,552 columns and 729 distinct columns. It reads interleaved low-digit/radix bits once and needs at most 78 bits of between-row state, with no runtime division or modular inverse at the radix.\n\nThe written invariant proves the all-width identity. Verification covers 53,280 source cases, 49,449 exhaustive active-coordinate cases, 4,097-bit inputs, ten rejection controls and 38 executions of the unchanged physical packet consumer. Complete payloads, original owners, scratch, descriptors, spectators and heads are checked in both orientations. PR6241 already implements one supplied-cache/port9 physical leaf; this is the complementary all-column interleaved arithmetic contract.\n\nValidation: CPython 3.12.14 warning-strict normal and optimized registered replay; committed byte/mode checks; official export; read-only Git-free and empty-PATH normal/optimized replay. Exact head: `63c65d845d84ae47fa8264c48c289e55c44cdc76`. The checkout is shallow, so the optional full-history preflight was not run; all live inputs come from the immediate main parent and are included in the cold export. Hosted CI is pending.\n\nReproduce: `python3.12 -B scripts/research_package.py --package research/g20-interleaved-carry-producer`.\n\nNo new kappa or selected-frontier change. Physical interleaving, head returns, packet erasure, full route and caller costs remain open; no timing or optimality claim. The README records the expansion gate and exact next physical binding.\n\nCoordination: [claim in Discussion4945](https://github.com/CrocSwap/integer-mult-bounds/discussions/4945#discussioncomment-19362973). Main and live claims were refreshed before submission. Credit the released G20, q-adic, packet, PR5332/6241, native/ROW and tape predecessors. Prepared for Ali Romman with substantial OpenAI Codex assistance; no subagents. Apache-2.0.\n",
+  "created_at": "2026-11-03T00:17:08Z",
+  "updated_at": "2026-11-03T00:17:08Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}
