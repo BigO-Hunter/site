@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6453",
+        "leader": "crocswap-pr-6529",
         "direction": "higher",
         "records": [
           {
@@ -4339,6 +4339,16 @@
               "ChaloupeMusic"
             ],
             "bound": "O(n log^(1 - 0.0032863773914412422274) n)"
+          },
+          {
+            "id": "crocswap-pr-6529",
+            "score": "3288299/1000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Ali Romman"
+            ],
+            "bound": "O(n log^(1 - 0.003288299) n)"
           }
         ],
         "table": "big-o"
@@ -6981,7 +6991,8 @@
     "[\"integer-multiplication\",\"crocswap-pr-6417\",\"3286849/1000000000\",\"attained\"]:record",
     "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6453\",\"1643507/500000000\",\"attained\"]:record",
-    "[\"other-snaky\",\"direct-issue-114:20\",\"20\",\"attained\"]:lean"
+    "[\"other-snaky\",\"direct-issue-114:20\",\"20\",\"attained\"]:lean",
+    "[\"integer-multiplication\",\"crocswap-pr-6529\",\"3288299/1000000000\",\"attained\"]:record"
   ],
   "deferred": [
     {

@@ -121833,6 +121833,252 @@
       "claim_files_head": "19b516037b14f5838af4c32a07eb64871712eb35",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6523,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Bind a rounded width-one child to selected MOVE9896 (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6523",
+      "submitted_at": "2026-11-03T02:45:09Z",
+      "updated_at": "2026-11-03T02:53:02Z",
+      "source_commit": "2f02d6b9b460227d72df1ed1914bbc1091be01d7",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T02:45:09Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "2f02d6b9b460227d72df1ed1914bbc1091be01d7",
+      "claim_text": "7f0273f846028de631a45718f4d604cd5cb7f88a1c941aa3505f157c396b1b79",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-event9896-rounded-child/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "2f02d6b9b460227d72df1ed1914bbc1091be01d7",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6524,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Replay the complete P104 proposal 4.75x faster with explicit engines",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6524",
+      "submitted_at": "2026-11-03T02:47:11Z",
+      "updated_at": "2026-11-03T02:47:11Z",
+      "source_commit": "dd1a979bfff090fa6559cc3b7d4e7f5ab24b4f80",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T02:47:11Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "dd1a979bfff090fa6559cc3b7d4e7f5ab24b4f80",
+      "claim_text": "afc0acef722704c132e61199caa94f4611f69bc412427cf5f1d588cb6973f414",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-complete-fast-replay/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "dd1a979bfff090fa6559cc3b7d4e7f5ab24b4f80",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6525,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Construct sharp rank-two residual completions and a one-turn bound",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6525",
+      "submitted_at": "2026-11-03T02:52:21Z",
+      "updated_at": "2026-11-03T03:04:57Z",
+      "source_commit": "9797b952ee174f845f682b1a121600416f5c7bd1",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T02:52:21Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "9797b952ee174f845f682b1a121600416f5c7bd1",
+      "claim_text": "9dbef0c9dccbd10be8c24f67abbc0add6ab155b22cca2eff7235c144c2931f6e",
+      "claim_files": [
+        [
+          "added",
+          "research/rank-two-residual-completion/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "9797b952ee174f845f682b1a121600416f5c7bd1",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6526,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Certify whole-selected-word stochastic precision and prefix tails",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6526",
+      "submitted_at": "2026-11-03T02:55:23Z",
+      "updated_at": "2026-11-03T02:55:23Z",
+      "source_commit": "f2431f81bfc1a7b418ce3a1b02b958d5f259f50b",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T02:55:23Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "f2431f81bfc1a7b418ce3a1b02b958d5f259f50b",
+      "claim_text": "b2ecf2074c477bba7fbacfb87a2aaf56f8237dc293847e9a31946b3f0f85bc28",
+      "claim_files": [
+        [
+          "added",
+          "research/selected-whole-word-stochastic/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "f2431f81bfc1a7b418ce3a1b02b958d5f259f50b",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6527,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Construct linear-work owner staging for all selected P104 scalars",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6527",
+      "submitted_at": "2026-11-03T02:57:21Z",
+      "updated_at": "2026-11-03T02:57:21Z",
+      "source_commit": "c32444cf6534e16dbde00f5ae0fd6009be989b44",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T02:57:21Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "c32444cf6534e16dbde00f5ae0fd6009be989b44",
+      "claim_text": "4924ce33413cf2e14b76804c760c9be5b30d6eadd849e64b42b9284c50d5ad77",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-owner-scalar-staging/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "c32444cf6534e16dbde00f5ae0fd6009be989b44",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6528,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Prove sharp flag-defect budgets for unequal decoder payloads",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6528",
+      "submitted_at": "2026-11-03T03:08:48Z",
+      "updated_at": "2026-11-03T03:08:48Z",
+      "source_commit": "4d80ba76770faa76317c7c397cfe992fbb4c551a",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:08:48Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "4d80ba76770faa76317c7c397cfe992fbb4c551a",
+      "claim_text": "182934631ceeb12706a29144273d528714773ea9532ec4e532daf99cfe78a37a",
+      "claim_files": [
+        [
+          "added",
+          "research/flag-defect-decoder-budget/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "4d80ba76770faa76317c7c397cfe992fbb4c551a",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6529,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Conditional κ = 0.003288299 (+1.285e-6 over #6453): scaled transport fusion",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6529",
+      "submitted_at": "2026-11-03T03:12:57Z",
+      "updated_at": "2026-11-03T03:12:57Z",
+      "source_commit": "44b0d0e8961201ac1656490b4384a7752e1cd9c5",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:12:57Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": "3288299/1000000000",
+      "record_ids": [
+        "crocswap-pr-6529"
+      ],
+      "note": null,
+      "claim_path": "research/p104-scaled-transport-fusion/RESULT.json",
+      "claim_head": "44b0d0e8961201ac1656490b4384a7752e1cd9c5",
+      "claim_text": "fb067cb5837f266f96103623ea514887c209cd49a693063e2213d43d1e8fbb7d",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-scaled-transport-fusion/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "44b0d0e8961201ac1656490b4384a7752e1cd9c5",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6530,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Reduce the selected ADD/SCALE/COPY tape bill with a two-field cache",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6530",
+      "submitted_at": "2026-11-03T03:15:03Z",
+      "updated_at": "2026-11-03T03:15:03Z",
+      "source_commit": "fadaba3bb16a6965fa5e9c2c7af3a9df6ddf01bf",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:15:03Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "fadaba3bb16a6965fa5e9c2c7af3a9df6ddf01bf",
+      "claim_text": "8cd094fd5a1ff2f7a287b1b19759caf27bc4eb810111d25c90de3b243a0326d9",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-exclusive-field-cache/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "fadaba3bb16a6965fa5e9c2c7af3a9df6ddf01bf",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6531,
+      "author": "aliromman",
+      "author_url": "https://github.com/aliromman",
+      "title": "Restore all G20 carry machines with 12 history bits per row",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6531",
+      "submitted_at": "2026-11-03T03:15:51Z",
+      "updated_at": "2026-11-03T03:15:51Z",
+      "source_commit": "e10a2373a63aa212aea3ae24760f722bd5a43ef0",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T03:15:51Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "e10a2373a63aa212aea3ae24760f722bd5a43ef0",
+      "claim_text": "bc5924b360ab46e995c330bb257b2c9f50a29b5aa14276faa9c2f11089e0364c",
+      "claim_files": [
+        [
+          "added",
+          "research/g20-reversible-carry/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "e10a2373a63aa212aea3ae24760f722bd5a43ef0",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

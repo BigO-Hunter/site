@@ -126040,5 +126040,194 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6523,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6523",
+    "title": "Bind a rounded width-one child to selected MOVE9896 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T02:45:09Z",
+    "updated_at": "2026-11-03T02:53:02Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "2f02d6b9b460227d72df1ed1914bbc1091be01d7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6524,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6524",
+    "title": "Replay the complete P104 proposal 4.75x faster with explicit engines",
+    "state": "open",
+    "created_at": "2026-11-03T02:47:11Z",
+    "updated_at": "2026-11-03T02:47:11Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "dd1a979bfff090fa6559cc3b7d4e7f5ab24b4f80"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6525,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6525",
+    "title": "Construct sharp rank-two residual completions and a one-turn bound",
+    "state": "open",
+    "created_at": "2026-11-03T02:52:21Z",
+    "updated_at": "2026-11-03T03:04:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "9797b952ee174f845f682b1a121600416f5c7bd1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6526,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6526",
+    "title": "Certify whole-selected-word stochastic precision and prefix tails",
+    "state": "open",
+    "created_at": "2026-11-03T02:55:23Z",
+    "updated_at": "2026-11-03T02:55:23Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "f2431f81bfc1a7b418ce3a1b02b958d5f259f50b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6527,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6527",
+    "title": "Construct linear-work owner staging for all selected P104 scalars",
+    "state": "open",
+    "created_at": "2026-11-03T02:57:21Z",
+    "updated_at": "2026-11-03T02:57:21Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "c32444cf6534e16dbde00f5ae0fd6009be989b44"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6528,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6528",
+    "title": "Prove sharp flag-defect budgets for unequal decoder payloads",
+    "state": "open",
+    "created_at": "2026-11-03T03:08:48Z",
+    "updated_at": "2026-11-03T03:08:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "4d80ba76770faa76317c7c397cfe992fbb4c551a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6529,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6529",
+    "title": "Conditional κ = 0.003288299 (+1.285e-6 over #6453): scaled transport fusion",
+    "state": "open",
+    "created_at": "2026-11-03T03:12:57Z",
+    "updated_at": "2026-11-03T03:12:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "44b0d0e8961201ac1656490b4384a7752e1cd9c5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6530,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6530",
+    "title": "Reduce the selected ADD/SCALE/COPY tape bill with a two-field cache",
+    "state": "open",
+    "created_at": "2026-11-03T03:15:03Z",
+    "updated_at": "2026-11-03T03:15:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "fadaba3bb16a6965fa5e9c2c7af3a9df6ddf01bf"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6531,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6531",
+    "title": "Restore all G20 carry machines with 12 history bits per row",
+    "state": "open",
+    "created_at": "2026-11-03T03:15:51Z",
+    "updated_at": "2026-11-03T03:15:51Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "aliromman",
+      "html_url": "https://github.com/aliromman"
+    },
+    "head": {
+      "sha": "e10a2373a63aa212aea3ae24760f722bd5a43ef0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

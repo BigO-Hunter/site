@@ -13,7 +13,7 @@
       },
       "verification": {
         "decision": "lean-verified",
-        "reason": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
         "id": "direct-114-238067b9578f6fbe9d0971b7228ac3bbc168f8fb042ebdc6bd3d299f76a3bc53",
         "problem_id": "other/snaky",
         "score": "20",
@@ -21,23 +21,23 @@
         "source_commit": "f6248dc39a05a6c5665240d860d2dbb95db707d9",
         "source_url": "https://github.com/darkhipo/snaky-twenty",
         "authors": [],
-        "workflow_conclusion": null,
+        "workflow_conclusion": "success",
         "issue_submitter": "darkhipo",
         "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41561952131",
-        "checked_at": "2026-11-03T02:17:05.615306Z",
+        "checked_at": "2026-11-03T02:33:11.983316Z",
         "issue_created_at": "2026-11-03T01:43:27Z",
         "issue_updated_at_at_verification": "2026-11-03T01:47:01Z",
-        "issue_updated_at_at_import": "2026-11-03T02:17:20Z",
+        "issue_updated_at_at_import": "2026-11-03T02:33:37Z",
         "derivation_hold": false,
         "review_required": [
           "authorship",
           "first publication date",
           "historical record eligibility"
         ],
-        "receipt_path": "sources/direct-issue-114-41561952131-1-lean.json",
-        "receipt_sha256": "15f41331e824c03ac873febc8a9eea3fcb741f470939929ec8512efc86af6249",
+        "receipt_path": "sources/direct-issue-114-41561952131-1.json",
+        "receipt_sha256": "739523e1999a2eb307867793943ffc37947f9f21c2c196703ca2ad7a22d7529b",
         "policy_hash": "79f93f3c9e399b8f7c1f08dd6db592902c779edb37e7cd830bb995a76fad1ca9",
-        "result_artifact_id": 13199025279,
+        "result_artifact_id": 13199392528,
         "controller_fingerprint": "36bb98dab4bd676fd28e10a5848c3d5ab79d4e9a8b7ab64d8cb565458b0cda13",
         "pr_identity": null,
         "source_file": "Submission.lean"
@@ -3805,6 +3805,49 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-issue-114:238067b9578f6fbe9d0971b7228ac3bbc168f8fb042ebdc6bd3d299f76a3bc53": {
+      "key": "direct-issue-114",
+      "submission": {
+        "schema_version": 1,
+        "problem": "snaky",
+        "repo_url": "https://github.com/darkhipo/snaky-twenty",
+        "commit": "f6248dc39a05a6c5665240d860d2dbb95db707d9",
+        "bound": "20",
+        "authors": []
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-114-238067b9578f6fbe9d0971b7228ac3bbc168f8fb042ebdc6bd3d299f76a3bc53",
+        "problem_id": "other/snaky",
+        "score": "20",
+        "score_relation": "attained",
+        "source_commit": "f6248dc39a05a6c5665240d860d2dbb95db707d9",
+        "source_url": "https://github.com/darkhipo/snaky-twenty",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41561952131",
+        "checked_at": "2026-11-03T02:33:11.983316Z",
+        "issue_created_at": "2026-11-03T01:43:27Z",
+        "issue_updated_at_at_verification": "2026-11-03T01:47:01Z",
+        "issue_updated_at_at_import": "2026-11-03T02:33:37Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-114-41561952131-1.json",
+        "receipt_sha256": "739523e1999a2eb307867793943ffc37947f9f21c2c196703ca2ad7a22d7529b",
+        "policy_hash": "79f93f3c9e399b8f7c1f08dd6db592902c779edb37e7cd830bb995a76fad1ca9",
+        "result_artifact_id": 13199392528,
+        "controller_fingerprint": "36bb98dab4bd676fd28e10a5848c3d5ab79d4e9a8b7ab64d8cb565458b0cda13",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -3911,6 +3954,11 @@
     "101": {
       "version": "6f6b4fc5c8c20fb806b01b94c4d408331a72ea82bb5aa37fd52db8f29134ec4c",
       "updated_at": "2026-11-02T07:24:42Z",
+      "claimed_only": false
+    },
+    "120": {
+      "version": "112cf5bb75bb23ceefb5f3dec84bb5546ef83c17",
+      "updated_at": "2026-11-03T03:03:13Z",
       "claimed_only": false
     }
   },
