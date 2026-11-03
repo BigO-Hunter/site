@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-03T11:06:12Z",
+    "updated_at": "2026-11-03T15:24:31Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -127412,7 +127412,7 @@
     "title": "Complete source-bound full-stage preparation with separate mode plans",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-03T15:20:41Z",
+    "updated_at": "2026-11-03T15:34:37Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128798,7 +128798,7 @@
     "title": "Solve exact partial-query acquisition at small codimension (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:11:44Z",
-    "updated_at": "2026-11-03T15:11:44Z",
+    "updated_at": "2026-11-03T15:24:16Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128840,7 +128840,7 @@
     "title": "Prove extra wires do not lower the G20 boundary below 38 ADDs (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:12:05Z",
-    "updated_at": "2026-11-03T15:12:05Z",
+    "updated_at": "2026-11-03T15:25:21Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128861,7 +128861,7 @@
     "title": "Remove per-entry denominators from sliding inverse caches (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:12:14Z",
-    "updated_at": "2026-11-03T15:12:14Z",
+    "updated_at": "2026-11-03T15:24:41Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128882,7 +128882,7 @@
     "title": "Prove exact least replication for compatible width menus (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:13:34Z",
-    "updated_at": "2026-11-03T15:13:34Z",
+    "updated_at": "2026-11-03T15:26:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128903,7 +128903,7 @@
     "title": "Prove the first tensor-phase threshold for widths 2 through k (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:15:02Z",
-    "updated_at": "2026-11-03T15:15:02Z",
+    "updated_at": "2026-11-03T15:24:17Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128924,7 +128924,7 @@
     "title": "Prove optimal refined recovery for longer mode-preserving chains (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:17:48Z",
-    "updated_at": "2026-11-03T15:17:48Z",
+    "updated_at": "2026-11-03T15:29:35Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128945,7 +128945,7 @@
     "title": "Prove exact conjugation tariffs for separate complex frames (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:18:48Z",
-    "updated_at": "2026-11-03T15:18:48Z",
+    "updated_at": "2026-11-03T15:28:49Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128966,7 +128966,7 @@
     "title": "Settle eight three-coset Hermitian bootstrap families at 784 (no κ)",
     "state": "open",
     "created_at": "2026-11-03T15:21:04Z",
-    "updated_at": "2026-11-03T15:21:04Z",
+    "updated_at": "2026-11-03T15:32:24Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128975,6 +128975,279 @@
     },
     "head": {
       "sha": "f6546561266d594981fe032740c7d414f37be145"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6663,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6663",
+    "title": "Prove exact Boolean directed-cycle tariff 108 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:59:04Z",
+    "updated_at": "2026-11-03T16:14:54Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "ae5a8ec596517458b1ef3dc38fe8cb2aea6965a3"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6664,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6664",
+    "title": "Prove two moved corrections do not emit in short G20 conjugations (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:04:32Z",
+    "updated_at": "2026-11-03T16:16:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "216df71f0cd7a8d5ba34aa832f298b063c85242c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6665,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6665",
+    "title": "Prove the sharp 177-term floor for query-using P111 scatters (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:04:35Z",
+    "updated_at": "2026-11-03T16:17:07Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "3aff4f130c8d25a7b35d47f1de2a30ca33a34ba8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6666,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6666",
+    "title": "Prove approximate dyadic capacity equals rational rank (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:04:48Z",
+    "updated_at": "2026-11-03T16:17:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "042b4ee85f64f4b3279426e2ed10191296448e6c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6667,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6667",
+    "title": "Construct a common complex product chart for the actual centre0 pair",
+    "state": "open",
+    "created_at": "2026-11-03T16:05:06Z",
+    "updated_at": "2026-11-03T16:22:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "528e9129f181b79ec044fa23fddb378a646305c8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6668,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6668",
+    "title": "Prove all-depth attainment of 4g-3 destination channels (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:05:14Z",
+    "updated_at": "2026-11-03T16:18:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "fe9695186ab5bc60cfee1ca156c09f0fede40493"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6669,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6669",
+    "title": "Exclude the third positive-frame profile for every power-of-two m (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:05:34Z",
+    "updated_at": "2026-11-03T16:14:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "7b6bf6ff83e905f27c063edb07300daaa4ccc899"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6670,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6670",
+    "title": "Prove price-null fibres need irreducible cycle exchanges (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:05:38Z",
+    "updated_at": "2026-11-03T16:32:27Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "7369dbc043dfdf680b01946064fce0bd966b46f7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6671,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6671",
+    "title": "Prove sharp Euclidean conditioning for square-zero error words (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:07:36Z",
+    "updated_at": "2026-11-03T16:27:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "99783830399fb818901c7c1e6000309627706a9d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6672,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6672",
+    "title": "Certify a unique positive query-tree crossing by tail sums (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:08:10Z",
+    "updated_at": "2026-11-03T16:20:25Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "001cf13d783978714563971bc2657f5abf4a574c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6673,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6673",
+    "title": "Prove forward B/C central input-gauge budgets (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:08:32Z",
+    "updated_at": "2026-11-03T16:31:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e0b9e4f560de89c1de425a65f84ba7f1e677fede"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6674,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6674",
+    "title": "Prove seven P104 hop bypasses lose main signal (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:11:05Z",
+    "updated_at": "2026-11-03T16:25:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "fdf61fb88720278557ed474d9ab931d928751f80"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6675,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6675",
+    "title": "Locate the recursive interchange crossover length at a stated constant ratio (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T16:13:36Z",
+    "updated_at": "2026-11-03T16:30:30Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "ec5f3b0119aaae28e494f987dafcdf07a23b873d"
     },
     "base": {
       "ref": "main"
