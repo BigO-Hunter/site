@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-03T07:38:17Z",
+    "updated_at": "2026-11-03T11:06:12Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -127118,7 +127118,7 @@
     "title": "Attain sharp four-axis Gaussian grid error with an exact inverse",
     "state": "open",
     "created_at": "2026-11-03T10:09:28Z",
-    "updated_at": "2026-11-03T10:09:28Z",
+    "updated_at": "2026-11-03T10:20:15Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127139,7 +127139,7 @@
     "title": "Prove the exact shared atom-power crossover with 24 carry states",
     "state": "open",
     "created_at": "2026-11-03T10:12:16Z",
-    "updated_at": "2026-11-03T10:12:16Z",
+    "updated_at": "2026-11-03T10:19:05Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127160,7 +127160,7 @@
     "title": "Prove sharp ADDRESS tariff margins for every odd kernel (no κ)",
     "state": "open",
     "created_at": "2026-11-03T10:12:17Z",
-    "updated_at": "2026-11-03T10:12:17Z",
+    "updated_at": "2026-11-03T10:21:33Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127181,7 +127181,7 @@
     "title": "Prove the global thirteen-ADD dirty parity-fanout minimum (no κ)",
     "state": "open",
     "created_at": "2026-11-03T10:14:29Z",
-    "updated_at": "2026-11-03T10:14:29Z",
+    "updated_at": "2026-11-03T10:23:16Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127202,7 +127202,7 @@
     "title": "Count all automorphisms of nonsplit Frobenius products (no κ)",
     "state": "open",
     "created_at": "2026-11-03T10:15:55Z",
-    "updated_at": "2026-11-03T10:15:55Z",
+    "updated_at": "2026-11-03T10:26:37Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127223,7 +127223,7 @@
     "title": "Prove exact E8 root-low basis tariff 78 (no κ)",
     "state": "open",
     "created_at": "2026-11-03T10:16:18Z",
-    "updated_at": "2026-11-03T10:16:18Z",
+    "updated_at": "2026-11-03T10:26:32Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127232,6 +127232,426 @@
     },
     "head": {
       "sha": "277ff2c230937460aae5d2b19d83be37d0d60a5b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6580,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6580",
+    "title": "Reduce complete paired26 certificate replay time by 33.77% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:17:23Z",
+    "updated_at": "2026-11-03T10:25:56Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "8488bdcb4c905229e5a530b41240b2ea7ca3d54c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6581,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6581",
+    "title": "Prove even local factor degrees for ternary kernels (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:17:27Z",
+    "updated_at": "2026-11-03T10:25:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "db97db5e3f1e39700e13dab52ca082773e938ae7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6582,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6582",
+    "title": "Prove exactly three shared A2 rank-six equality fibers (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:17:45Z",
+    "updated_at": "2026-11-03T10:28:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "9380f458ee4409acfcf580eaf8b06ff5815ba4e0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6583,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6583",
+    "title": "Reduce complete core-section replay time by 79.02% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:18:16Z",
+    "updated_at": "2026-11-03T10:28:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "272d21ebfa8bd77597a6ac3b6388c20c4dc02279"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6584,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6584",
+    "title": "Reduce complete A2+E6 primary replay time by 27.86% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:21:00Z",
+    "updated_at": "2026-11-03T10:30:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "4817ce236389d707ab23f9f9f733c8535fb4d8b7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6585,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6585",
+    "title": "Prove exact isolation capacity for shared phase charts (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:22:06Z",
+    "updated_at": "2026-11-03T10:32:08Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "2907ad441b110029355a9c3c83cefc9ecc114eb6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6586,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6586",
+    "title": "Prove a cost-39 floor for sparse rational E6 corrections (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T10:26:42Z",
+    "updated_at": "2026-11-03T10:36:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "3305d7f3bd27ddf83487166321767559421ecd0b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6587,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6587",
+    "title": "Recover full caller sources and classify source-loading edges",
+    "state": "open",
+    "created_at": "2026-11-03T10:54:26Z",
+    "updated_at": "2026-11-03T11:16:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "341824ce9d7cb46d1abb3f8624313f328a167e50"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6588,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6588",
+    "title": "Add non-admitting fresh-Sc constructor with owned-fixture controls",
+    "state": "open",
+    "created_at": "2026-11-03T10:55:50Z",
+    "updated_at": "2026-11-03T11:16:20Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "6460b7e9022c503b6c2d7c732cc362160646b208"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6589,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6589",
+    "title": "Reduce complete alternating-plane replay time by 25.24% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:06:29Z",
+    "updated_at": "2026-11-03T11:15:37Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "c24e3a753c727da6d65ebe643b2531967435f87c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6590,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6590",
+    "title": "Raise matched P112 phase-event floors to 140 and 556 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:07:27Z",
+    "updated_at": "2026-11-03T11:16:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "18785ebf02a5976a8c16a747d0095ca4766ca0ae"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6591,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6591",
+    "title": "Lower the D16 spinor upper bound from 317 to 316 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:08:39Z",
+    "updated_at": "2026-11-03T11:08:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "612b6e7cf4106af561fc3cbe49f29df35eb403f3"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6592,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6592",
+    "title": "Reduce valid matched-packet parking by V+r steps (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:08:48Z",
+    "updated_at": "2026-11-03T11:08:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "99430b03b9792f43c99d099f5569855d3bf71455"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6593,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6593",
+    "title": "Classify full anchor boxes for positive unit metric triples (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:09:42Z",
+    "updated_at": "2026-11-03T11:09:42Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "46977753900758487d30e37d2de9fa2d81ffb05f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6594,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6594",
+    "title": "Prove a 120N-bit complete-caller retention floor (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:11:31Z",
+    "updated_at": "2026-11-03T11:11:31Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "2502a6defbe0e78d7f9285c5eb1ff88146a968ab"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6595,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6595",
+    "title": "Prove prime supply for subexponentially many axes (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:12:13Z",
+    "updated_at": "2026-11-03T11:12:13Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "df48273302be23c8912b42a132dccc87a94858ab"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6596,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6596",
+    "title": "Remove the ownership cap for linear BIT support obstructions (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:14:12Z",
+    "updated_at": "2026-11-03T11:14:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "416978925318bf73554ff5ec1014df8b71b3d504"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6597,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6597",
+    "title": "Extend the one-relation paid-rank floor to nonfield rings (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:15:36Z",
+    "updated_at": "2026-11-03T11:15:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "75ef2f7cc2b035748cf4c7b9d01b34946f5c08f9"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6598,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6598",
+    "title": "Reduce complete rank-eight replay time by 32.78% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:16:27Z",
+    "updated_at": "2026-11-03T11:16:27Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "d562956726caa39ff588c6595ba16cae7391c07a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6599,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6599",
+    "title": "Reduce complete chirp-residue replay time by 19.30% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T11:17:06Z",
+    "updated_at": "2026-11-03T11:17:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "f11d40da4723e01cc3689dd698497972202aafc7"
     },
     "base": {
       "ref": "main"

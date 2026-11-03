@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-126": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "heilbronn-triangle",
+        "repo_url": "https://github.com/darkhipo/heilbronn-triangle-ten237",
+        "commit": "236a3233d0acc99a903cf3d5dc9f67da4b6bf29a",
+        "bound": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "authors": []
+      }
+    },
     "direct-issue-114": {
       "route": "issue",
       "submission": {
@@ -162,7 +173,7 @@
         ],
         "receipt_path": "sources/direct-issue-99-41500988477-1.json",
         "receipt_sha256": "35c8c4fff1b39d9d2f2eae0f579a15a2ace71d1751cc19453bd1c44aacfa774d",
-        "policy_hash": "0752778d152272deb1420a25106bd13bda6751378a068e347562230c971e7a0a",
+        "policy_hash": "072b3b427a043f165913a3e2c193f6a0d38cc5c774c7858ed979c12c751a01d3",
         "result_artifact_id": 13187050786,
         "controller_fingerprint": "b15d8552e503d033e07cc644f06ae945728d386d8f949fcd1bac788971849768",
         "pr_identity": null,
@@ -3670,7 +3681,7 @@
         ],
         "receipt_path": "sources/direct-issue-99-41500988477-1.json",
         "receipt_sha256": "35c8c4fff1b39d9d2f2eae0f579a15a2ace71d1751cc19453bd1c44aacfa774d",
-        "policy_hash": "0752778d152272deb1420a25106bd13bda6751378a068e347562230c971e7a0a",
+        "policy_hash": "072b3b427a043f165913a3e2c193f6a0d38cc5c774c7858ed979c12c751a01d3",
         "result_artifact_id": 13187050786,
         "controller_fingerprint": "b15d8552e503d033e07cc644f06ae945728d386d8f949fcd1bac788971849768",
         "pr_identity": null,
@@ -3976,6 +3987,11 @@
     "101": {
       "version": "6f6b4fc5c8c20fb806b01b94c4d408331a72ea82bb5aa37fd52db8f29134ec4c",
       "updated_at": "2026-11-02T07:24:42Z",
+      "not_verified": false
+    },
+    "126": {
+      "version": "b04b40317529bddf571cd1638d85e8dfea734d5c04fe7045e5e6c7154944079e",
+      "updated_at": "2026-11-03T11:00:56Z",
       "not_verified": false
     }
   }
