@@ -11,6 +11,7 @@ import re
 import zipfile
 from datetime import datetime, timezone
 from fractions import Fraction
+import sssp
 
 REPOSITORY = 'bigospeedrun/verifier'
 WORKFLOW = '.github/workflows/submissions.yml'
@@ -32,7 +33,10 @@ PROBLEMS = {'dft': ('exact-dft/uniform-exact-arithmetic', 1),
             'snaky': ('other/snaky', 100),
             # An Other bounds row (verifier profile heilbronn-triangle, verifier #105): the saving eta, 0 < eta <= 5/6
             # as in the profile. The first Other row where a higher bound is better (HIGHER).
-            'heilbronn-triangle': ('other/heilbronn-triangle', Fraction(5, 6))}
+            'heilbronn-triangle': ('other/heilbronn-triangle', Fraction(5, 6)),
+            # A board (verifier profile directed-sssp, opened 2026-11-03): a bound "D ; T" (data/sssp.py), not one
+            # rational, so it has no range maximum; sssp.parse holds the verifier's ranges.
+            'directed-sssp': ('directed-sssp/comparison-addition-sparse', None)}
 # Problems where a larger bound is better (a saving), as the verifier's HIGHER: the weakest bound of the range is 0.
 HIGHER = {'dft', 'heilbronn-triangle'}
 # At most 40 digits per integer of a bound (Lead decision, 2026-10-21, issue #35: a reduced 3SUM bound needed 19).
@@ -97,6 +101,8 @@ def normalize(value):
     require(isinstance(value, dict) and fields <= value.keys() and not value.keys()-fields-{'entrypoint'}, 'Invalid submission fields')
     require(type(value['schema_version']) is int and value['schema_version'] == 1, 'Unsupported submission schema')
     require(isinstance(value['problem'], str) and value['problem'] in PROBLEMS, 'Unsupported problem')
+    if value['problem'] == 'directed-sssp':
+        return normalize_sssp(value)
     # A digit limit per integer of the bound, as the verifier's bound_digits.
     digits = BOUND_DIGITS.get(value['problem'], 40)
     require(isinstance(value['bound'], str) and re.fullmatch(rf'(?:0|[1-9][0-9]{{0,{digits - 1}}})(?:/[1-9][0-9]{{0,{digits - 1}}})?', value['bound']), 'Invalid rational bound')
@@ -166,9 +172,28 @@ def checked_receipt(archive, metadata, env, run, revision):
     except (zipfile.BadZipFile, RuntimeError) as error:
         raise Rejected('Invalid receipt archive') from error
 
+def normalize_sssp(value):
+    """A directed-sssp submission: the bound is the normal form "D ; T" that the verifier's parse_sssp accepts
+    (the shared cases in direct-fixtures/sssp-cases.json), so it stays text."""
+    try:
+        sssp.parse(value['bound'])
+    except ValueError as error:
+        raise Rejected('Invalid directed-sssp bound') from error
+    require(isinstance(value['repo_url'], str) and re.fullmatch(r'https://github\.com/[A-Za-z0-9][A-Za-z0-9_.-]{0,99}/[A-Za-z0-9][A-Za-z0-9_.-]{0,99}', value['repo_url']), 'Invalid source repository')
+    require(isinstance(value['commit'], str) and re.fullmatch(r'[0-9a-f]{40}', value['commit']), 'Invalid source commit')
+    authors = value['authors']
+    require(isinstance(authors, list) and 0 <= len(authors) <= 30 and all(isinstance(a, str) and a.strip() and len(a) <= 120 and all(ord(c) >= 32 for c in a) for a in authors), 'Invalid authors')
+    require(value.get('entrypoint', 'Race.bound') == 'Race.bound', 'Unsupported entrypoint')
+    return {k: v for k, v in value.items() if k != 'entrypoint'}
+
 def challenge_bytes(submission, base):
     if submission.get('entrypoint') == 'dft233':
         return base
+    if submission['problem'] == 'directed-sssp':
+        # As the verifier's challenge_source: the five exponents a, b, a', b', c' as reduced rationals.
+        args = ' '.join(f'(({e.numerator} : ℚ) / {e.denominator})' for e in sssp.parse(submission['bound']))
+        target = f'theorem Race.bound : BigOSpeedrun.DirectedSSSP.Bound {args} := by\n  sorry\n'
+        return base + ('\n-- Big O Speedrun exact-bound target; generated from validated integers.\n' + target).encode()
     n, d = Fraction(submission['bound']).as_integer_ratio()
     if submission['problem'] == 'dft':
         target = f'''open OAI.PowerSaving Filter Asymptotics
@@ -473,6 +498,8 @@ def current_record_gate(problem, data_bytes, site_commit, checked_at, exclude_is
     require(data.get('problem_id') == PROBLEMS[problem][0], 'Board model mismatch')
     direction = 'higher-is-better' if problem in HIGHER else 'lower-is-better'
     require(data.get('score', {}).get('direction') == direction, 'Board score direction mismatch')
+    if problem == 'directed-sssp':
+        return sssp_record_gate(data, data_bytes, site_commit, checked_at, exclude_issue_url)
     # Nil ruling 2026-10-20 (verifier 7f4f6bd): the gate is the best Lean Verified row; a Claimed
     # or Human Verified row never blocks a proof run. With no Lean Verified row, every bound in the
     # profile range runs (Nil ruling 2026-11-02, verifier 1b1af26): the gate is the end of the range.
@@ -504,9 +531,29 @@ def current_record_gate(problem, data_bytes, site_commit, checked_at, exclude_is
                 leader_ids=sorted(row[1] for row in leaders), any_lean_verified_at_bound=any(row[2] for row in leaders))
 
 
+def sssp_record_gate(data, data_bytes, site_commit, checked_at, exclude_issue_url):
+    """As the verifier's sssp_record: the Lean Verified point rows "D ; T" and the chart lines of those rows (only
+    Vals AI's Tchd, G2). Claimed rows, the function rows and the classic never gate."""
+    def verified(record):
+        meta = data['record_metadata'][record['id']]
+        return (meta.get('site_tier') == 'verified' and (record.get('rerun_status') or {}).get('state') == 'passed'
+                and bool(record['rerun_status'].get('receipt_path')))
+    rows = [r for r in data['records'] if r['id'] != 'classical-baseline' and not data['record_metadata'][r['id']].get('reproduction_of')
+            and not (exclude_issue_url and r.get('submission_url') == exclude_issue_url) and verified(r)]
+    points = sorted((r['id'], r['score']) for r in rows if ' ; ' in r['score'])
+    ids = {r['id'] for r in rows}
+    lines = sorted((l['id'], l['row'], l['function'], l['up_to']) for l in data.get('chart', {}).get('lines', []) if l['row'] in ids)
+    return dict(schema_version=1, problem_id=data['problem_id'], lean_verified=[dict(id=i, score=s) for i, s in points],
+                lean_lines=[dict(id=i, row=row, function=f, up_to=u) for i, row, f, u in lines],
+                site_commit=site_commit, data_sha256=sha(data_bytes), checked_at=checked_at)
+
+
 def qualifies_for_run(submission, record_gate):
     """A tied bound qualifies until a matching leader is already Lean Verified."""
     require(record_gate.get('schema_version') == 1 and record_gate.get('problem_id') == PROBLEMS[submission['problem']][0], 'Record gate model mismatch')
+    if submission['problem'] == 'directed-sssp':
+        lines = [(sssp.parse_function(l['function']), sssp.density(l['up_to'])) for l in record_gate['lean_lines']]
+        return sssp.qualifies(sssp.parse(submission['bound']), [sssp.parse(p['score']) for p in record_gate['lean_verified']], lines)
     require(type(record_gate.get('any_lean_verified_at_bound')) is bool, 'Missing leader evidence')
     candidate = (Fraction(submission['bound']), 0)
     current = (Fraction(record_gate['score']), open_rank(submission['problem']) if record_gate['score_relation'] == 'strict-upper-bound' else 0)

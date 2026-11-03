@@ -8,6 +8,7 @@ import json
 import os
 from pathlib import Path
 import re
+import sssp
 import shutil
 import subprocess
 import sys
@@ -456,6 +457,9 @@ def worse_than_classic(doc,bound):
     worse is not listed. A tie is not worse. Only Subset Sum has a range beyond its baseline today."""
     base=[r for r in doc['records'] if r['id']=='classical-baseline']
     if not base:return False
+    if doc['score'].get('encoding')=='density-time':
+        # directed-sssp: the classic is a function row (m + n log n); compare T with it at the row's own D.
+        t=sssp.parse(bound);return t[2:]>sssp.time_at(sssp.parse_function(base[0]['score']),t[:2])
     classic,value=Fraction(base[0]['score']),Fraction(bound)
     return value<classic if doc['score']['direction']=='higher-is-better' else value>classic
 

@@ -281,6 +281,56 @@ class RefreshTests(unittest.TestCase):
             meta=json.loads(files['exact-dft.json'])['record_metadata']['direct-issue-5']
             self.assertEqual(meta['verification'],'failed')
 
+    def sssp_claim(self,bound,number=140,proof=True):
+        body=self.issue()['body'].replace('### Problem\n\ndft','### Problem\n\ndirected-sssp').replace('1/1000',bound)
+        sub=d.parse_body(body)
+        verification=dict(checked_at='2026-11-04T00:00:00Z',receipt_path=f'sources/direct-issue-{number}-receipt.json',
+            receipt_url='https://github.com/bigospeedrun/verifier/actions/runs/1',reason='Lean and nanoda passed; permitted-axiom audit passed') if proof else None
+        return dict(route='issue',item=dict(self.issue(number),body=body),submission=sub,**({'verification':verification} if proof else {}))
+
+    def sssp_board(self,claims):
+        fixtures=json.loads((ROOT/'direct-fixtures/board-snapshots.json').read_text())
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            for slug in r.SLUGS.values():(root/(slug+'.json')).write_bytes(r.json_bytes(fixtures[slug]))
+            (root/'registry.json').write_bytes(r.json_bytes({'checked_at':'2026-10-10','updated_at':'2026-10-10T00:00:00Z'}))
+            files=r.prepare(root,claims,{},'2026-11-04T00:00:00Z')
+            return json.loads(files['directed-sssp.json']) if 'directed-sssp.json' in files else None
+
+    def test_a_directed_sssp_result_is_a_row_of_its_board(self):
+        # Opened 2026-11-03: the bound "D ; T" stays text (data/sssp.py), as the verifier's parse_sssp.
+        claim=self.sssp_claim('n ; n log^1/2')
+        self.assertEqual(claim['submission']['bound'],'n ; n log^1/2')
+        row,meta,_=r.row_for('direct-issue-140',claim,'2026-11-04T00:00:00Z')
+        self.assertEqual((row['score'],row['tier'],meta['comparison_key']),('n ; n log^1/2','verified','directed-sssp/comparison-addition-sparse/v1'))
+        board=self.sssp_board({'direct-issue-140':claim})
+        self.assertEqual([x['id'] for x in board['records']][-1],'direct-issue-140')
+        self.assertEqual(board['record_metadata']['direct-issue-140']['verification'],'passed')
+
+    def test_a_directed_sssp_claim_worse_than_the_classic_at_its_density_is_not_listed(self):
+        # The classic O(m + n log n) is n^2 at D = n^2 and n log n at D = n (Lead, 2026-11-02: only a Lean Verified
+        # row may be worse than the classic bound).
+        doc=json.loads((ROOT/'directed-sssp.json').read_text())
+        self.assertEqual([r.worse_than_classic(doc,b) for b in ['n ; n log','n ; n log loglog','n^2 ; n^2','n^2 ; n^2 log']],[False,True,False,True])
+        self.assertIsNone(self.sssp_board({'direct-issue-141':self.sssp_claim('n^2 ; n^2 log',141,proof=False)}))
+        board=self.sssp_board({'direct-issue-141':self.sssp_claim('n^2 ; n^2 log',141)})
+        self.assertIn('direct-issue-141',[x['id'] for x in board['records']])
+
+    def test_a_directed_sssp_form_bound_is_refused_outside_the_normal_form(self):
+        for bound in ['n^2 ; n^3','n ; n^3','1/2','n log^0.75 ; n']:
+            with self.subTest(bound=bound),self.assertRaises(ValueError):
+                d.normalize(dict(self.sssp_claim('n ; n log')['submission'],bound=bound))
+
+    def test_the_directed_sssp_target_is_the_verifiers(self):
+        # The C-HD row's generated challenge (verifier challenges/directed-sssp/CHDRow.lean, sha256 b9569dae) is the
+        # statement plus the target that the verifier writes from the five exponents.
+        base=(ROOT/'direct-fixtures/SsspVerifierStatement.lean').read_bytes()
+        sub=self.sssp_claim('n log^3/4 ; n log^11/12')['submission']
+        self.assertEqual(d.sha(base),'cf5752049bcffcdbd9f2368cac10a57fc392881d2754a5fa60e7741519d2a6ca')
+        self.assertEqual(d.sha(d.challenge_bytes(sub,base)),'b9569daeed41b0394a8a0ec10bd40fa15d005fef8afb1abfa2f77a52f7d27ab0')
+        self.assertTrue(d.challenge_bytes(dict(sub,bound='n log ; n log^2 loglog^-7'),base).endswith(
+            'Bound ((1 : ℚ) / 1) ((1 : ℚ) / 1) ((1 : ℚ) / 1) ((2 : ℚ) / 1) ((-7 : ℚ) / 1) := by\n  sorry\n'.encode()))
+
     def test_a_subset_sum_result_is_a_row_of_the_subset_sum_board(self):
         # Opened 2026-11-01 (verifier #94): a direct Subset Sum result is a board row, as on 3SUM, not an Other bounds claim.
         body=self.issue()['body'].replace('### Problem\n\ndft','### Problem\n\nsubset-sum').replace('1/1000','12/25')
