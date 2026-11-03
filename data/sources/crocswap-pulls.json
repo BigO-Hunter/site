@@ -129281,7 +129281,7 @@
     "title": "Save 32 coefficient ADDs with a translated Gaussian reader basis (no κ)",
     "state": "open",
     "created_at": "2026-11-03T18:20:00Z",
-    "updated_at": "2026-11-03T18:20:00Z",
+    "updated_at": "2026-11-03T19:59:55Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129302,7 +129302,7 @@
     "title": "Save six ADDs in the actual P104 opening preparation (no κ)",
     "state": "open",
     "created_at": "2026-11-03T18:20:36Z",
-    "updated_at": "2026-11-03T18:20:36Z",
+    "updated_at": "2026-11-03T20:00:44Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129344,7 +129344,7 @@
     "title": "Reduce complete Dic3 replay time by 39.62% (no κ)",
     "state": "open",
     "created_at": "2026-11-03T18:25:03Z",
-    "updated_at": "2026-11-03T18:25:03Z",
+    "updated_at": "2026-11-03T19:59:47Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129365,7 +129365,7 @@
     "title": "Pack Newton membership into nine guarded subtractions (no κ)",
     "state": "open",
     "created_at": "2026-11-03T18:25:53Z",
-    "updated_at": "2026-11-03T18:25:53Z",
+    "updated_at": "2026-11-03T20:00:23Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129386,7 +129386,7 @@
     "title": "Prove exact non-Frobenius rectangular tensor characters (no κ)",
     "state": "open",
     "created_at": "2026-11-03T18:28:03Z",
-    "updated_at": "2026-11-03T18:28:03Z",
+    "updated_at": "2026-11-03T20:00:47Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129407,7 +129407,7 @@
     "title": "Construct exact mirror windows with one rank-pair classification",
     "state": "open",
     "created_at": "2026-11-03T18:34:22Z",
-    "updated_at": "2026-11-03T18:34:22Z",
+    "updated_at": "2026-11-03T20:01:32Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129437,6 +129437,111 @@
     },
     "head": {
       "sha": "4efad08de13caf6ddbf45720721509278d304190"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6685,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6685",
+    "title": "Prove exact coarse-output error for a refined dirty helper (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T19:23:51Z",
+    "updated_at": "2026-11-03T19:35:37Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "9e6c76ebf56fcd968c1383f00688152114f9dc79"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6686,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6686",
+    "title": "Classify balanced chain repetitions at every depth",
+    "state": "open",
+    "created_at": "2026-11-03T19:26:47Z",
+    "updated_at": "2026-11-03T19:54:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "SHIN09-git",
+      "html_url": "https://github.com/SHIN09-git"
+    },
+    "head": {
+      "sha": "f1a14864f86d15f44671c98735cfd8328f3a1f7b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6687,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6687",
+    "title": "Reject NUL-bearing filenames in research exports",
+    "state": "open",
+    "created_at": "2026-11-03T19:53:10Z",
+    "updated_at": "2026-11-03T19:53:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "josecarlosgonzalezroque-design",
+      "html_url": "https://github.com/josecarlosgonzalezroque-design"
+    },
+    "head": {
+      "sha": "33575b21b2ce27662aa1888124b65aabf97f647b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6688,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6688",
+    "title": "Audit rounded cleanup and public errors of P104 shared preparation (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T20:03:49Z",
+    "updated_at": "2026-11-03T20:03:49Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "c7ffff48fa2d32b7f39c7e5ad5c439fce7558f4c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6689,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6689",
+    "title": "Price compatible width menus and resolve the rank-12 dispatch frontier",
+    "state": "open",
+    "created_at": "2026-11-03T20:16:13Z",
+    "updated_at": "2026-11-03T20:16:13Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "SHIN09-git",
+      "html_url": "https://github.com/SHIN09-git"
+    },
+    "head": {
+      "sha": "938f5800d8d5130cdc388b47a63560f4d830547e"
     },
     "base": {
       "ref": "main"
