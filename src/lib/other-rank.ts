@@ -10,6 +10,11 @@ type Claim = {display: string; value: string; date: string};
 export function otherClaimNumber(claim: Pick<Claim, 'display' | 'value'>): number | null {
   const power10 = /(\d+(?:\.\d+)?)\s*\\cdot\s*10\^\{?\s*(-?\d+)\s*\}?/.exec(claim.display);
   if (power10) return Number(power10[1] + 'e' + power10[2]);
+  // Coefficient × variable-base power: '80{,}000d^{17}', '80,000d^{17}', '80000d^{17}'.
+  // The base is a dimension parameter shared by every claim on the row, so the
+  // ordering proxy A·10^p is exact whenever the exponents agree and reasonable otherwise.
+  const dPower = /(\d[\d,{}.]*)\s*d\s*\^\{?\s*(-?\d+)\s*\}?/.exec(claim.display);
+  if (dPower) return Number(dPower[1].replace(/[{},]/g, '')) * 10 ** Number(dPower[2]);
   const power = /\b(\d+)\^\{\s*(-?\d+)\s*\}/.exec(claim.display);
   if (power) return Number(power[1]) ** Number(power[2]);
   const decimal = /\d+\.\d+/.exec(claim.display);

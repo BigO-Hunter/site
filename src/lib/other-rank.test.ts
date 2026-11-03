@@ -12,7 +12,11 @@ test('the number of a claim is read from its display, then from its exact value'
   assert.equal(otherClaimNumber(claim('\\le0.87488664704', '11/12-\\ell/4')), 0.87488664704);
   assert.equal(otherClaimNumber(claim('10499/12000', '10499/12000')), 10499 / 12000);
   assert.equal(otherClaimNumber(claim('3.762', '1881/500')), 3.762);
-  assert.equal(otherClaimNumber(claim('80{,}000d^{17}', '80{,}000d^{17}')), null);
+  assert.equal(otherClaimNumber(claim('80{,}000d^{17}', '80{,}000d^{17}')), 80000 * 10 ** 17);
+  assert.equal(otherClaimNumber(claim('80,000d^{17}', '80,000d^{17}')), 80000 * 10 ** 17);
+  assert.equal(otherClaimNumber(claim('80000d^{17}', '80000d^{17}')), 80000 * 10 ** 17);
+  assert.equal(otherClaimNumber(claim('70{,}000d^{18}', '70{,}000d^{18}')), 70000 * 10 ** 18);
+  assert.equal(otherClaimNumber(claim('1.5d^{-3}', '1.5d^{-3}')), 1.5 * 10 ** -3);
 });
 
 test('best first by direction, ties share a rank, earliest first', () => {
@@ -24,9 +28,18 @@ test('best first by direction, ties share a rank, earliest first', () => {
   assert.deepEqual(matroid.map(r => [r.claim.display, r.rank]), [['\\approx5.107\\cdot10^{-10}', 1], ['\\approx5.10\\cdot10^{-10}', 2]]);
 });
 
-test('a claim whose number cannot be read puts the row newest first', () => {
+test('coefficient × variable-base power claims are ranked by value, not date', () => {
+  // Older-but-better (lower) beats newer-but-worse: 70{,}000d^{17} < 80{,}000d^{17}.
   const rows = [claim('80{,}000d^{17}', '80{,}000d^{17}', '2026-10-01'), claim('70{,}000d^{17}', '70{,}000d^{17}', '2026-10-05')];
   assert.deepEqual(rankOtherClaims(rows, 'lower').map(r => [r.claim.display, r.rank, r.tie]), [['70{,}000d^{17}', 1, false], ['80{,}000d^{17}', 2, false]]);
+  // Reversed dates: the older claim with the better value still ranks first.
+  const reversed = [claim('70{,}000d^{17}', '70{,}000d^{17}', '2026-10-05'), claim('80{,}000d^{17}', '80{,}000d^{17}', '2026-10-01')];
+  assert.deepEqual(rankOtherClaims(reversed, 'lower').map(r => [r.claim.display, r.rank, r.tie]), [['70{,}000d^{17}', 1, false], ['80{,}000d^{17}', 2, false]]);
+});
+
+test('a claim whose number cannot be read puts the row newest first', () => {
+  const rows = [claim('something-unparseable', 'x', '2026-10-01'), claim('another-unparseable', 'y', '2026-10-05')];
+  assert.deepEqual(rankOtherClaims(rows, 'lower').map(r => [r.claim.display, r.rank, r.tie]), [['another-unparseable', 1, false], ['something-unparseable', 2, false]]);
 });
 
 // The rule of the rows is that a listed claim was the best when it appeared, and the leader is a row's newest
