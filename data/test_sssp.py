@@ -1,3 +1,4 @@
+import hashlib
 import json
 from fractions import Fraction
 from pathlib import Path
@@ -5,7 +6,8 @@ import unittest
 
 import sssp
 
-CASES = json.loads((Path(__file__).parent / 'direct-fixtures/sssp-cases.json').read_text())
+CASES_FILE = Path(__file__).parent / 'direct-fixtures/sssp-cases.json'
+CASES = json.loads(CASES_FILE.read_text())
 
 
 class SharedCaseTests(unittest.TestCase):
@@ -33,6 +35,17 @@ class SharedCaseTests(unittest.TestCase):
             if 'up_to' in row:
                 for d in row['at']:
                     self.assertLessEqual(sssp.cmp(sssp.density(d), sssp.density(row['up_to'])), 0, (row['name'], d))
+
+    def test_the_verifier_trusts_the_same_cases(self):
+        # The newest trusted verifier controller with tests/fixtures/sssp-cases.json has this file's git blob, so a
+        # change to the cases on one side only fails here. previous_controller_blobs is appended in push order and
+        # controller_blobs is read last: if controller_blobs gets the case file, it must be the newest entry.
+        trust = json.loads((Path(__file__).parent / 'direct-trust.json').read_text())
+        entries = [*trust['previous_controller_blobs'].values(), trust['controller_blobs']]
+        blobs = [e['tests/fixtures/sssp-cases.json']['sha'] for e in entries if 'tests/fixtures/sssp-cases.json' in e]
+        data = CASES_FILE.read_bytes()
+        self.assertTrue(blobs, 'no trusted verifier has the case file')
+        self.assertEqual(blobs[-1], hashlib.sha1(b'blob %d\0' % len(data) + data).hexdigest())
 
     def test_the_statement_bound_is_refused(self):
         # Lead, 2026-11-03 (verifier #134): T >= n·D adds nothing to the second clause of Bound.
