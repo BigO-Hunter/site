@@ -175,7 +175,7 @@
       "id": "directed-sssp-2026",
       "kind": "improvement",
       "score": "n log^3/4 ; n log^11/12",
-      "tier": "claimed",
+      "tier": "verified",
       "submitted_at": "2026-10-08T21:34:39.207006Z",
       "upstream_status": "not-applicable",
       "upstream_status_at": "2026-11-03T16:00:00Z",
@@ -206,7 +206,12 @@
         "certificate_path": null
       },
       "dependencies": [],
-      "source_commit": "98919233966fa6196cf67639c1eee2b2496d26b6"
+      "source_commit": "98919233966fa6196cf67639c1eee2b2496d26b6",
+      "rerun_status": {
+        "state": "passed",
+        "checked_at": "2026-11-03T16:36:32.468681Z",
+        "receipt_path": "sources/maintainer-directed-sssp-chd-41661841785.json"
+      }
     }
   ],
   "record_metadata": {
@@ -228,12 +233,14 @@
       "source_url": "https://github.com/bigospeedrun/sssp-lean-scratch/blob/98919233966fa6196cf67639c1eee2b2496d26b6/Submission.lean",
       "site_badge": false,
       "eligible_for_record": true,
-      "proof_status": "Lean check pending (maintainer run)",
+      "proof_status": "Lean and nanoda passed; permitted-axiom audit passed",
       "upstream_tier": "claimed",
-      "site_tier": "claimed",
+      "site_tier": "verified",
       "comparison_key": "directed-sssp/comparison-addition-sparse/v1",
       "publication_date_precision": "unknown",
-      "credit_note": "Vals AI with Claude Opus 5.5. Lean check: Vals AI's proof (their repository at 98c53acc) with the Big O Speedrun statement adapter."
+      "credit_note": "Vals AI with Claude Opus 5.5. Lean check: Vals AI's proof (their repository at 98c53acc) with the Big O Speedrun statement adapter.",
+      "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41661841785",
+      "verification_source_commit": "98919233966fa6196cf67639c1eee2b2496d26b6"
     },
     "duan-et-al-stoc-2025": {
       "checked_at": "2026-11-03",
@@ -262,7 +269,7 @@
       "credit_note": "An outside implementer reports a flaw in Lemma 3.7; not checked by Big O Speedrun."
     }
   },
-  "updated_at": "2026-11-03T16:00:00Z",
+  "updated_at": "2026-11-03T18:29:37Z",
   "chart": {
     "ticks": [
       "n log^1/4",

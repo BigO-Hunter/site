@@ -125391,6 +125391,28 @@
       "claim_files_head": "ec5f3b0119aaae28e494f987dafcdf07a23b873d",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6676,
+      "author": "petalas",
+      "author_url": "https://github.com/petalas",
+      "title": "Raise the fixed F4 coordinate query-rank floor to 24 (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6676",
+      "submitted_at": "2026-11-03T18:17:30Z",
+      "updated_at": "2026-11-03T18:17:30Z",
+      "source_commit": "3bf7fb018cc6b4751f75309d7775eeb0d32d3b48",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T18:17:30Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "3bf7fb018cc6b4751f75309d7775eeb0d32d3b48",
+      "claim_text": "348d32f11ca001f6cc3fe8ca4c3c085be7aeb9b130ace8202970943ef6c976f1",
+      "claim_files": [],
+      "claim_files_head": "3bf7fb018cc6b4751f75309d7775eeb0d32d3b48",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
