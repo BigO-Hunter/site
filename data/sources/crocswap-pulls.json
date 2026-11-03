@@ -127412,7 +127412,7 @@
     "title": "Add non-admitting fresh-Sc constructor with owned-fixture controls",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-03T11:16:20Z",
+    "updated_at": "2026-11-03T15:16:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127420,7 +127420,7 @@
       "html_url": "https://github.com/Clear1nsight"
     },
     "head": {
-      "sha": "6460b7e9022c503b6c2d7c732cc362160646b208"
+      "sha": "67f57119a75bf1f0637aebc6c080c121132912f4"
     },
     "base": {
       "ref": "main"
@@ -128126,7 +128126,7 @@
     "title": "Prove sharp uniform error from transient transfer leakage (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:01:45Z",
-    "updated_at": "2026-11-03T14:01:45Z",
+    "updated_at": "2026-11-03T14:27:36Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128147,7 +128147,7 @@
     "title": "Prove exact consecutive mixed-precision batch lengths (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:03:10Z",
-    "updated_at": "2026-11-03T14:03:10Z",
+    "updated_at": "2026-11-03T14:35:05Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128168,7 +128168,7 @@
     "title": "Prove the sharp two-axis coframe cut threshold (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:03:12Z",
-    "updated_at": "2026-11-03T14:03:12Z",
+    "updated_at": "2026-11-03T14:35:16Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128189,7 +128189,7 @@
     "title": "Prove exact weighted pending-capacity fanout tariffs (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:04:09Z",
-    "updated_at": "2026-11-03T14:04:09Z",
+    "updated_at": "2026-11-03T14:35:27Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128210,7 +128210,7 @@
     "title": "Prove optimal sparse-union headers: 44 to 19 bits (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:04:46Z",
-    "updated_at": "2026-11-03T14:04:46Z",
+    "updated_at": "2026-11-03T14:35:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128231,7 +128231,7 @@
     "title": "Settle actual width-one GL2 target minima with a third dirty role (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:05:06Z",
-    "updated_at": "2026-11-03T14:05:06Z",
+    "updated_at": "2026-11-03T14:34:59Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128252,7 +128252,7 @@
     "title": "Prove exact radical reachability through a common flag (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:06:10Z",
-    "updated_at": "2026-11-03T14:06:10Z",
+    "updated_at": "2026-11-03T14:35:12Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128273,7 +128273,7 @@
     "title": "Compile compact routing ROMs with direct dense-row queries (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:07:49Z",
-    "updated_at": "2026-11-03T14:07:49Z",
+    "updated_at": "2026-11-03T14:35:16Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128294,7 +128294,7 @@
     "title": "Reduce complete partial-Pauli replay time by 5.20% (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:08:36Z",
-    "updated_at": "2026-11-03T14:08:36Z",
+    "updated_at": "2026-11-03T14:35:11Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128315,7 +128315,7 @@
     "title": "Bound every BW16 nonorthogonality clique by 126 (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:09:46Z",
-    "updated_at": "2026-11-03T14:09:46Z",
+    "updated_at": "2026-11-03T14:35:18Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128378,7 +128378,7 @@
     "title": "Prove exact composite-axis projection densities (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:10:51Z",
-    "updated_at": "2026-11-03T14:10:51Z",
+    "updated_at": "2026-11-03T14:35:58Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128567,7 +128567,7 @@
     "title": "Prove exact dense B3/C3 term costs three or five (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:11:40Z",
-    "updated_at": "2026-11-03T14:11:40Z",
+    "updated_at": "2026-11-03T14:35:18Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128588,7 +128588,7 @@
     "title": "Prove sharp boundary-rank endpoint horizon (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:11:46Z",
-    "updated_at": "2026-11-03T14:11:46Z",
+    "updated_at": "2026-11-03T14:35:17Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128609,7 +128609,7 @@
     "title": "Certify sharp nonlinear five-cycle recovery probabilities (no κ)",
     "state": "open",
     "created_at": "2026-11-03T14:13:04Z",
-    "updated_at": "2026-11-03T14:13:04Z",
+    "updated_at": "2026-11-03T14:35:20Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -128618,6 +128618,300 @@
     },
     "head": {
       "sha": "06754cb96e8f852eeddc49f099d4a50fa80528d1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6646,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6646",
+    "title": "Find recent source reuse by author and creation date (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:17:50Z",
+    "updated_at": "2026-11-03T14:50:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "b994ea2487733dace57c67bed957bb95bf3fc745"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6647,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6647",
+    "title": "Elide one owned P104 carrier and save eight scalar units (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T14:18:40Z",
+    "updated_at": "2026-11-03T14:34:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "b131b9f4e58c2cce59a41aa24f5311c37b053469"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6648,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6648",
+    "title": "Prove exact vector-label Heisenberg central tariffs (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:06:19Z",
+    "updated_at": "2026-11-03T15:06:19Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "db7e05ade23b7ff2a5176ca0dd4bb6556446d038"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6649,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6649",
+    "title": "Prove exact heterogeneous tensor-cut multiplicities (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:07:02Z",
+    "updated_at": "2026-11-03T15:15:37Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "09d4b6bb8a30d6c616fa2263d6ec99ee8c47a483"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6650,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6650",
+    "title": "Reduce tensor-root decoder COPY mass from 256 to 31 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:08:17Z",
+    "updated_at": "2026-11-03T15:08:17Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "bbea977ff919f857fc66efac55b9bf205fab35cd"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6651,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6651",
+    "title": "Prove the exact uniform-fee target refinement optimum and halving test (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:09:20Z",
+    "updated_at": "2026-11-03T15:11:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "7f73f71ad336ab6b16c1f1d2e71ded7ce19444c5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6652,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6652",
+    "title": "Prove the depth-four chain repetition law: unit targets never repeat (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:11:04Z",
+    "updated_at": "2026-11-03T15:11:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e364eeb19e5268967189ed12aa4813ee73edf3dc"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6653,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6653",
+    "title": "Attain three dyadic cubic-repair queries at 17 new arities (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:11:08Z",
+    "updated_at": "2026-11-03T15:11:16Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "3ea9965e13457fdafc70b784305d026ebfa8faa2"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6654,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6654",
+    "title": "Solve exact partial-query acquisition at small codimension (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:11:44Z",
+    "updated_at": "2026-11-03T15:11:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "cd08b0157410c9c023bf9c5d87a1a6ad3963506a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6655,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6655",
+    "title": "Classify shortest words for the braid endpoint 3214 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:11:53Z",
+    "updated_at": "2026-11-03T15:11:53Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "c3398c5e2157ca3efeebc4eb88e9588745244b1b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6656,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6656",
+    "title": "Prove extra wires do not lower the G20 boundary below 38 ADDs (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:12:05Z",
+    "updated_at": "2026-11-03T15:12:05Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "24736a722239c697d0289107c7012bbb8fb218cd"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6657,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6657",
+    "title": "Remove per-entry denominators from sliding inverse caches (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:12:14Z",
+    "updated_at": "2026-11-03T15:12:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "2a0cd8ccfb32ac834bfc4bcedd364a5a8c36ac8a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6658,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6658",
+    "title": "Prove exact least replication for compatible width menus (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:13:34Z",
+    "updated_at": "2026-11-03T15:13:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "bd728a5c8d09599072a98503ca7741d934ecfa74"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6659,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6659",
+    "title": "Prove the first tensor-phase threshold for widths 2 through k (no κ)",
+    "state": "open",
+    "created_at": "2026-11-03T15:15:02Z",
+    "updated_at": "2026-11-03T15:15:02Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "0a4abbd39541f2b59688970ef1be1309af764442"
     },
     "base": {
       "ref": "main"
