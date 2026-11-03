@@ -17,7 +17,7 @@
     "minimum": "0",
     "maximum": "1"
   },
-  "checked_at": "2026-11-02",
+  "checked_at": "2026-11-03",
   "sources": [
     {
       "url": "https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/docs/130.md",
@@ -1206,13 +1206,13 @@
       "notes_url": "https://github.com/shea256/fourier-transform-below-nlogn/blob/9749945f0f3f7fa0edb22065c786f7106953f1db/lean/complex588/NOTICE.complex588",
       "license_status": "Apache-2.0; source LICENSE and complex588 notice retained",
       "credits": "Jeremy Kothe: PR588 circuit. Ryan Shea: source-copy conversion, cyclic bank schedule and new all-length DFT instantiation. Jacob Sussman: Lean engine and checkers. Dugongue and Zhihao Chen (jacklightChen): #401/#377 geometry. Nil Mamano: published gauged Lean extension. OpenAI: exact model and all-length reduction. DominikScholz, jon314159, eumemic, Chafik Boukhalfa and earlier contributors retain the circuit-lineage credits in the source notice.",
+      "credit_note": "jeremykothe2 and Ryan Shea prove saving 0.0012331685 in Lean by instantiating jeremykothe2's CrocSwap PR588 circuit with explicit source copies and a cyclic dedicated-bank schedule, which are new. It uses Jacob Sussman's Lean engine and Nil Mamano's gauged Lean extension, and is 20.65 percent above Nil Mamano's 0.0010221076. The reduction is OpenAI's.",
       "reviewed_pr_binding": "direct-pr-7",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38318642758",
-      "verification_source_commit": "0a637219b43fb723f4ae7a180ec329549e7cc2aa",
-      "credit_note": "jeremykothe2 and Ryan Shea prove saving 0.0012331685 in Lean by instantiating jeremykothe2's CrocSwap PR588 circuit with explicit source copies and a cyclic dedicated-bank schedule, which are new. It uses Jacob Sussman's Lean engine and Nil Mamano's gauged Lean extension, and is 20.65 percent above Nil Mamano's 0.0010221076. The reduction is OpenAI's."
+      "verification_source_commit": "0a637219b43fb723f4ae7a180ec329549e7cc2aa"
     },
     "direct-issue-16": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/canghaimeng/exact-dft-lean/blob/5fea541a2a3134b656c7bbdb6bf0b759cf78cb5c/Submission.lean",
       "repo": "canghaimeng/exact-dft-lean",
       "site_badge": false,
@@ -1227,12 +1227,12 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/16",
       "direct_submission": true,
       "route": "issue",
+      "credit_note": "canghaimeng proves saving 0.00126 in Lean with a new construction of 11,992 live roles and 4,824 helper banks per class. It extends the complex588 development of jeremykothe2 and Ryan Shea, on the community circuit packaged by Dmitri I. Arkhipov. canghaimeng adds the checked scalar adapter, bank schedule, numerical cost certificate and all-length bound. The reduction is OpenAI's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39061582815",
-      "verification": "passed",
-      "credit_note": "canghaimeng proves saving 0.00126 in Lean with a new construction of 11,992 live roles and 4,824 helper banks per class. It extends the complex588 development of jeremykothe2 and Ryan Shea, on the community circuit packaged by Dmitri I. Arkhipov. canghaimeng adds the checked scalar adapter, bank schedule, numerical cost certificate and all-length bound. The reduction is OpenAI's."
+      "verification": "passed"
     },
     "direct-issue-19": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/fringewidth/exact-dft-lean/blob/4263d8faad69c5bd9a17b8d0d3f85fdf68e30165/Submission.lean",
       "repo": "fringewidth/exact-dft-lean",
       "site_badge": false,
@@ -1252,7 +1252,7 @@
       "verification": "passed"
     },
     "direct-issue-30": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/ptweezy/exact-dft-lean/blob/f9357424312209f85e0c7e28dce0e6bb01986608/Submission.lean",
       "repo": "ptweezy/exact-dft-lean",
       "site_badge": false,
@@ -1272,7 +1272,7 @@
       "verification": "passed"
     },
     "direct-pr-29": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/bigospeedrun/verifier/blob/607121a796548005a238a6e63589de866c9ab6f6/submissions/dft/jacobalansussman-lever-2979-full-cut/Submission.lean",
       "repo": "bigospeedrun/verifier",
       "site_badge": false,
@@ -1287,12 +1287,12 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/29",
       "direct_submission": true,
       "route": "pull_request",
+      "credit_note": "Jacob Sussman proves saving 0.0017887045 in Lean with a new recursion that gives the arrays of a circuit jobs of two sizes in a fixed ratio, and a lever that removes 16,576 blocks of rank 48 per round entirely. The circuit is aigent-marius's CrocSwap #2979: its words, run order and dispatch are unchanged. The helper storage table is new, solved with the placement program of Erwan Secousses' #3815. The reduction is OpenAI's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39557579559",
-      "verification": "passed",
-      "credit_note": "Jacob Sussman proves saving 0.0017887045 in Lean with a new recursion that gives the arrays of a circuit jobs of two sizes in a fixed ratio, and a lever that removes 16,576 blocks of rank 48 per round entirely. The circuit is aigent-marius's CrocSwap #2979: its words, run order and dispatch are unchanged. The helper storage table is new, solved with the placement program of Erwan Secousses' #3815. The reduction is OpenAI's."
+      "verification": "passed"
     },
     "direct-pr-3": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/bigospeedrun/verifier/blob/f9ffbc1f9dfbfaf84d819b087c999361d0fa3372/submissions/dft/nmamano-dft-record/Submission.lean",
       "repo": "bigospeedrun/verifier",
       "site_badge": false,
@@ -1307,12 +1307,12 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/3",
       "direct_submission": true,
       "route": "pull_request",
+      "credit_note": "Nil Mamano's AI agents prove saving 0.0010221076 in Lean, above Jacob Sussman's 0.0008762478. It builds on Sussman's E8 unit, Lean engine and Fourier transfer, with devices from CrocSwap: DaysSky's bridged words, Zhihao Chen's nine-stage layout, David Ganz's entrance gauges, Rohan Arun's ordered promotions, eumemic's enlargements and George Lydakis's bank packing. The reduction is OpenAI's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38142057874",
-      "verification": "passed",
-      "credit_note": "Nil Mamano's AI agents prove saving 0.0010221076 in Lean, above Jacob Sussman's 0.0008762478. It builds on Sussman's E8 unit, Lean engine and Fourier transfer, with devices from CrocSwap: DaysSky's bridged words, Zhihao Chen's nine-stage layout, David Ganz's entrance gauges, Rohan Arun's ordered promotions, eumemic's enlargements and George Lydakis's bank packing. The reduction is OpenAI's."
+      "verification": "passed"
     },
     "direct-pr-37": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/bigospeedrun/verifier/blob/6e0b482509e8143b74d983d5212af37c4d759f47/submissions/dft/ptweezy-lever-nb1/Submission.lean",
       "repo": "bigospeedrun/verifier",
       "site_badge": false,
@@ -1332,7 +1332,7 @@
       "verification": "passed"
     },
     "direct-pr-38": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/bigospeedrun/verifier/blob/1ebc6da5c05cf2bfea58eab0a993a90397269e91/submissions/dft/halitziyakartal-halitziyav2-headcut/Submission.lean",
       "repo": "bigospeedrun/verifier",
       "site_badge": false,
@@ -1352,7 +1352,7 @@
       "verification": "passed"
     },
     "direct-pr-40": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/bigospeedrun/verifier/blob/cf335b916babec40d3424b0b4199b98f0741a939/submissions/dft/halitziyakartal-halitziyav3-tensor/Submission.lean",
       "repo": "bigospeedrun/verifier",
       "site_badge": false,
@@ -1372,7 +1372,7 @@
       "verification": "passed"
     },
     "direct-pr-41": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/bigospeedrun/verifier/blob/0c574321e757332ca225f7696c31d7617dfdfdf6/submissions/dft/halitziyakartal-halitziyav4-logception/Submission.lean",
       "repo": "bigospeedrun/verifier",
       "site_badge": false,
@@ -1392,7 +1392,7 @@
       "verification": "passed"
     },
     "direct-pr-90": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/bigospeedrun/verifier/blob/3ec9ac7ba29d72991eaa07b4c2b46b1a4adcaa2a/submissions/dft/zeph1912-rank-moment-refinement/Submission.lean",
       "repo": "bigospeedrun/verifier",
       "site_badge": false,
@@ -1407,12 +1407,12 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/90",
       "direct_submission": true,
       "route": "pull_request",
+      "credit_note": "Zhihao \"Zephyr\" Yao raises the proved saving to 0.0030201659 in Halit Ziya KARTAL's Lean Verified 0.0030103 proof, with a new rate certificate and a larger tensor power (11640 instead of 7760). The circuit is unchanged: 411 of the 462 source files are identical to that proof. The construction is Jacob Sussman's, and the constructions that the unit is built from are Cinna Davis's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41247474839",
-      "verification": "passed",
-      "credit_note": "Zhihao \"Zephyr\" Yao raises the proved saving to 0.0030201659 in Halit Ziya KARTAL's Lean Verified 0.0030103 proof, with a new rate certificate and a larger tensor power (11640 instead of 7760). The circuit is unchanged: 411 of the 462 source files are identical to that proof. The construction is Jacob Sussman's, and the constructions that the unit is built from are Cinna Davis's."
+      "verification": "passed"
     },
     "direct-pr-91": {
-      "checked_at": "2026-11-02",
+      "checked_at": "2026-11-03",
       "source_url": "https://github.com/bigospeedrun/verifier/blob/524a8af8a277ca50c1237068c2b45430a03f547e/submissions/dft/halitziyakartal-halitziyav5-pre-pi/Submission.lean",
       "repo": "bigospeedrun/verifier",
       "site_badge": false,
@@ -1427,10 +1427,10 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/91",
       "direct_submission": true,
       "route": "pull_request",
+      "credit_note": "Halit Ziya KARTAL raises the proved saving to 0.00312780997 in their own Lean Verified 0.0030103 proof by changing its supplier of helper slots to the P104 word that CubeJerry published in CrocSwap's integer-multiplication repository, built on work by DreamingOfClouds and Ali Romman. The controller unit and the engine come from that proof: the construction is Jacob Sussman's, and the unit's controller is Cinna Davis's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41308731612",
-      "verification": "passed",
-      "credit_note": "Halit Ziya KARTAL raises the proved saving to 0.00312780997 in their own Lean Verified 0.0030103 proof by changing its supplier of helper slots to the P104 word that CubeJerry published in CrocSwap's integer-multiplication repository, built on work by DreamingOfClouds and Ali Romman. The controller unit and the engine come from that proof: the construction is Jacob Sussman's, and the unit's controller is Cinna Davis's."
+      "verification": "passed"
     }
   },
-  "updated_at": "2026-11-02T00:27:26Z"
+  "updated_at": "2026-11-03T00:02:30Z"
 }

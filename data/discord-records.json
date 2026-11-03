@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6417",
+        "leader": "crocswap-pr-6453",
         "direction": "higher",
         "records": [
           {
@@ -4309,6 +4309,16 @@
               "rohanarun"
             ],
             "bound": "O(n log^(1 - 0.003286849) n)"
+          },
+          {
+            "id": "crocswap-pr-6453",
+            "score": "1643507/500000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "ChaloupeMusic"
+            ],
+            "bound": "O(n log^(1 - 0.003287014) n)"
           }
         ],
         "table": "big-o"
@@ -6938,7 +6948,8 @@
     "[\"other-binary-polynomial-multiplication\",\"arpcs:1/1302\",\"1/1302\",\"attained\"]:record",
     "[\"other-catalan\",\"slitsey:410\",\"410\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6417\",\"3286849/1000000000\",\"attained\"]:record",
-    "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:lean"
+    "[\"3sum\",\"direct-issue-99\",\"384055881637/200000000000\",\"attained\"]:lean",
+    "[\"integer-multiplication\",\"crocswap-pr-6453\",\"1643507/500000000\",\"attained\"]:record"
   ],
   "deferred": [
     {

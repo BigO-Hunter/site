@@ -124241,7 +124241,7 @@
     "title": "Conditional κ = 0.00328637739144124222748802 (+1.626e-7 over #6398): a third group-1091 anchor",
     "state": "open",
     "created_at": "2026-11-02T23:11:51Z",
-    "updated_at": "2026-11-02T23:12:13Z",
+    "updated_at": "2026-11-02T23:35:09Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124262,7 +124262,7 @@
     "title": "Realize carry two on fourteen fixed tapes (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:11:57Z",
-    "updated_at": "2026-11-02T23:11:57Z",
+    "updated_at": "2026-11-02T23:21:38Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124283,7 +124283,7 @@
     "title": "Construct optimal unbiased reversible phase rounding (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:13:25Z",
-    "updated_at": "2026-11-02T23:13:25Z",
+    "updated_at": "2026-11-02T23:23:00Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124304,7 +124304,7 @@
     "title": "Prove exact positive Turyn redundancy cost 27R (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:14:02Z",
-    "updated_at": "2026-11-02T23:14:02Z",
+    "updated_at": "2026-11-02T23:23:18Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124325,7 +124325,7 @@
     "title": "Classify all extremizers of the third binary character mode (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:14:07Z",
-    "updated_at": "2026-11-02T23:14:07Z",
+    "updated_at": "2026-11-02T23:21:33Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124346,7 +124346,7 @@
     "title": "Prove sharp q-ary point-column faithfulness widths (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:15:18Z",
-    "updated_at": "2026-11-02T23:15:18Z",
+    "updated_at": "2026-11-02T23:30:34Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124367,7 +124367,7 @@
     "title": "Prove the exact rank-one repair tariff for weighted wrappers (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:15:22Z",
-    "updated_at": "2026-11-02T23:15:22Z",
+    "updated_at": "2026-11-02T23:24:40Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124388,7 +124388,7 @@
     "title": "Prove exact unitary Clifford correction rank (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:16:30Z",
-    "updated_at": "2026-11-02T23:16:30Z",
+    "updated_at": "2026-11-02T23:24:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124409,7 +124409,7 @@
     "title": "Reduce the many-axis prime producer setup bound (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:16:46Z",
-    "updated_at": "2026-11-02T23:16:46Z",
+    "updated_at": "2026-11-02T23:24:33Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124430,7 +124430,7 @@
     "title": "Certify a maximal two-digit compact guard with 64 fewer repairs (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:16:54Z",
-    "updated_at": "2026-11-02T23:16:54Z",
+    "updated_at": "2026-11-02T23:24:35Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124451,7 +124451,7 @@
     "title": "Prove exact lattice closure for rational rounded shears (no κ)",
     "state": "open",
     "created_at": "2026-11-02T23:17:27Z",
-    "updated_at": "2026-11-02T23:17:27Z",
+    "updated_at": "2026-11-02T23:26:57Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124465,5 +124465,173 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6447,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6447",
+    "title": "Prove the exact binary parameter law for Desargues certificates (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T23:18:21Z",
+    "updated_at": "2026-11-02T23:26:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "29cf4fcef263b56b850e95b56628cc2912541629"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6448,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6448",
+    "title": "Reduce complete weighted-path replay time by 8.94% (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T23:19:21Z",
+    "updated_at": "2026-11-02T23:26:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "1b246be65d26be545406136c5c4ca26fd1883f85"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6449,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6449",
+    "title": "Prove all-field rigidity of shortest permutation circuits (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T23:20:08Z",
+    "updated_at": "2026-11-02T23:30:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "ca68394b2a731cf2bbadc5f31aa56c727ef6f655"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6450,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6450",
+    "title": "Prove exact distinguished-factor tariffs for dirty echo trees (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T23:22:37Z",
+    "updated_at": "2026-11-02T23:32:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "13b11e41db371ccdb6f4ee5583775b51172aad0a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6451,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6451",
+    "title": "Prove the sharp first-extension degree for regular pencils (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T23:22:43Z",
+    "updated_at": "2026-11-02T23:32:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e9548573ead05bbecaaa6e194f9f8298d9a6923a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6452,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6452",
+    "title": "Preserve per-path policy in a unique-blob digest prefilter (no κ)",
+    "state": "open",
+    "created_at": "2026-11-02T23:27:29Z",
+    "updated_at": "2026-11-02T23:36:32Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "e16fa4bf5ea361b0abe9cdf499491f55a18a5c7a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6453,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6453",
+    "title": "Conditional κ = 0.003287014 (+1.65e-7 over #6417): a third group-1091 anchor on the clean mixed root",
+    "state": "open",
+    "created_at": "2026-11-02T23:34:54Z",
+    "updated_at": "2026-11-02T23:34:54Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ChaloupeMusic",
+      "html_url": "https://github.com/ChaloupeMusic"
+    },
+    "head": {
+      "sha": "b1a3e525793eca35c56324aa7ffd0b714cf606d4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6454,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6454",
+    "title": "research: archive conditional GCC libexec generator and phase source frame",
+    "state": "open",
+    "created_at": "2026-11-02T23:46:04Z",
+    "updated_at": "2026-11-02T23:46:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "e83090c937b920affc87593f02b535e6c9773615"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]

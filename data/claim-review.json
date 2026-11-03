@@ -1,11 +1,3 @@
 {
-  "queue": [
-    {
-      "pr": 6436,
-      "head": "526737c2efd72e9b2ecc967cd213895e26457f0a",
-      "title": "Conditional κ = 0.00328637739144124222748802 (+1.626e-7 over #6398): a third group-1091 anchor",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6436",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    }
-  ]
+  "queue": []
 }
