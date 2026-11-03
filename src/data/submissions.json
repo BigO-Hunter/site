@@ -125891,7 +125891,7 @@
       "title": "Classify every quadratic-cubic algebra automorphism and determinant (no κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6697",
       "submitted_at": "2026-11-03T21:43:04Z",
-      "updated_at": "2026-11-03T21:43:04Z",
+      "updated_at": "2026-11-03T22:08:37Z",
       "source_commit": "64e08a1b1a73f80c814f2a6954c693c26bebf358",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-03T21:43:04Z",
@@ -125900,7 +125900,7 @@
       "record_ids": [],
       "note": "No research package kappa claim.",
       "claim_head": "64e08a1b1a73f80c814f2a6954c693c26bebf358",
-      "claim_text": "01132534b7fe29937973c3e26457cf97975c3c30334a4659a904f120d8332a6f",
+      "claim_text": "7fcc4868bdfa2e07a8ef207724f57297d67503b76e8998ff3727270bed438680",
       "claim_files": [
         [
           "added",
@@ -125910,6 +125910,44 @@
       "claim_files_head": "64e08a1b1a73f80c814f2a6954c693c26bebf358",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6698,
+      "author": "petalas",
+      "author_url": "https://github.com/petalas",
+      "title": "Bound clean helpers under common target flags (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6698",
+      "submitted_at": "2026-11-03T21:57:44Z",
+      "updated_at": "2026-11-03T22:09:25Z",
+      "source_commit": "e7b08ac9ef4ea5b5517d9d325ae6aeae445d3f91",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T21:57:44Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "e7b08ac9ef4ea5b5517d9d325ae6aeae445d3f91",
+      "claim_text": "544f0a1cc0c30c142604a0150fbd6d6bf2f5bd9f82b97661e0e1c28019b56063",
+      "claim_files": [],
+      "claim_files_head": "e7b08ac9ef4ea5b5517d9d325ae6aeae445d3f91",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6699,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "ci: fetch only exact review-base history for automated planning",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6699",
+      "submitted_at": "2026-11-03T22:04:16Z",
+      "updated_at": "2026-11-03T22:04:16Z",
+      "source_commit": "9283c240a3e9b085bc89e0e5b8f407dae4e24463",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T22:04:16Z",
+      "checked_at": "2026-11-03",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }
