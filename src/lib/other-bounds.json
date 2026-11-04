@@ -1871,6 +1871,52 @@
           ],
           "proofScope": "No Lean proof is supplied for this result. The proof is the PDF paper in the repository; no independent check.",
           "bound": "\\mathbb{E}[R]\\ge 5.107\\cdot10^{-10}\\mathbb{E}[\\mathrm{OPT}]"
+        },
+        {
+          "author": "Dmitri I. Arkhipov",
+          "handle": "darkhipo",
+          "agent": true,
+          "value": "\\ge5.110608508730856554\\cdot10^{-10}",
+          "display": "\\approx5.111\\cdot10^{-10}",
+          "date": "2026-11-02T06:52:31Z",
+          "dateSource": "https://github.com/darkhipo/matroid-prophet-exact-B/commit/dca1eb6d09a6a84d75d6d988e8dcd0a403d03d35",
+          "dateKind": "first-stated",
+          "url": "https://github.com/darkhipo/matroid-prophet-exact-B/blob/dca1eb6d09a6a84d75d6d988e8dcd0a403d03d35/README.md",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "It evaluates the constant \\(C(B)\\) of the paper by Qiuyu Chen (Euler) at the exact \\(B=(261/256)^{256}\\approx141.43\\), where that paper uses \\(B>141\\). The exact value is a fraction with more than 1,250 digits in each part (exact_fraction.txt). A later README note corrects a displayed value of \\(B\\) (142.9 to 141.43); the exact claim does not change. The author says that an AI agent wrote the work.",
+          "authors": [
+            {
+              "name": "Dmitri I. Arkhipov",
+              "url": "https://github.com/darkhipo"
+            }
+          ],
+          "proofScope": "A short argument in the README with an exact-rational checker. No Lean proof is supplied, and nobody else has run the checker.",
+          "bound": "\\mathbb{E}[R]\\ge 5.110\\cdot10^{-10}\\mathbb{E}[\\mathrm{OPT}]"
+        },
+        {
+          "author": "Dmitri I. Arkhipov",
+          "handle": "darkhipo",
+          "agent": true,
+          "value": "\\ge5.114935688794994675\\cdot10^{-10}",
+          "display": "\\approx5.115\\cdot10^{-10}",
+          "date": "2026-11-02T17:02:03Z",
+          "dateSource": "https://github.com/darkhipo/matroid-prophet-tight-corner/commit/352d725190832358c125dca80350d7baa899317d",
+          "dateKind": "first-stated",
+          "url": "https://github.com/darkhipo/matroid-prophet-tight-corner/blob/352d725190832358c125dca80350d7baa899317d/README.md",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "It keeps the construction and the theorem of the paper by Qiuyu Chen (Euler), evaluates its constant at the exact \\(B\\) as the row before, and searches three analysis constants again. The exact value is a fraction with 1,265 and 1,274 digits (exact_fraction.txt). The author says that an AI agent wrote the work.",
+          "authors": [
+            {
+              "name": "Dmitri I. Arkhipov",
+              "url": "https://github.com/darkhipo"
+            }
+          ],
+          "proofScope": "A written proof (PROOF.md) with an exact-rational checker of 28 conditions. No Lean proof is supplied, and nobody else has run the checker.",
+          "bound": "\\mathbb{E}[R]\\ge 5.114\\cdot10^{-10}\\mathbb{E}[\\mathrm{OPT}]"
         }
       ],
       "repos": [
@@ -1879,7 +1925,7 @@
           "url": "https://github.com/shea256/matroid-prophet-inequality"
         }
       ],
-      "bestHandle": "canghaimeng"
+      "bestHandle": "darkhipo"
     },
     {
       "family": "115",
@@ -2755,6 +2801,29 @@
           ],
           "proofScope": "No Lean proof is supplied.",
           "bound": "\\gamma_L>0.1515"
+        },
+        {
+          "author": "Dmitri I. Arkhipov",
+          "handle": "darkhipo",
+          "agent": true,
+          "value": "771/5000",
+          "display": "0.1542",
+          "date": "2026-11-03T06:16:21Z",
+          "dateSource": "https://github.com/darkhipo/haldane-gap-beta13/commit/e920e67bd4ae11156dd95d0cae4d94afe5d80e95",
+          "dateKind": "first-stated",
+          "url": "https://github.com/darkhipo/haldane-gap-beta13/blob/e920e67bd4ae11156dd95d0cae4d94afe5d80e95/README.md",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "It keeps amachino's certificate method and changes the inverse temperature to 13, with new exact thermal tables and a new certificate of 395 exact-rational checks. It covers every integer \\(L\\ge68\\) at \\(J=1\\) and uses the same OpenAI premises as the statement. The README says that the bound 0.1543 fails the check. The author says that an AI agent wrote the work.",
+          "authors": [
+            {
+              "name": "Dmitri I. Arkhipov",
+              "url": "https://github.com/darkhipo"
+            }
+          ],
+          "proofScope": "A certificate (two Python checkers and their data files) with a README. The written method is amachino's proof; this repository has no paper of its own. No Lean proof is supplied, and nobody else has run the checkers.",
+          "bound": "\\gamma_L>0.1542"
         }
       ],
       "repos": [
@@ -2764,7 +2833,7 @@
           "note": "The extension includes every integer length at least 24."
         }
       ],
-      "bestHandle": "amachino"
+      "bestHandle": "darkhipo"
     },
     {
       "slug": "binary-polynomial-multiplication",
