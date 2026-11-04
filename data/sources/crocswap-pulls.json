@@ -130093,5 +130093,26 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6716,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
+    "title": "[codex] Conditional κ = 0.00330420 (+6.60e-6 over #6702)",
+    "state": "open",
+    "created_at": "2026-11-04T17:41:35Z",
+    "updated_at": "2026-11-04T17:57:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "thu-nmrc",
+      "html_url": "https://github.com/thu-nmrc"
+    },
+    "head": {
+      "sha": "a467457692bc9e11113d9b2e2e34ea8ffb553b58"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6702",
+        "leader": "crocswap-pr-6716",
         "direction": "higher",
         "records": [
           {
@@ -4389,6 +4389,16 @@
               "DreamingOfClouds"
             ],
             "bound": "O(n log^(1 - 0.0032976) n)"
+          },
+          {
+            "id": "crocswap-pr-6716",
+            "score": "16521/5000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "THU New Media Research Center· Prof. Shen Yang"
+            ],
+            "bound": "O(n log^(1 - 0.0033042) n)"
           }
         ],
         "table": "big-o"
@@ -7242,7 +7252,8 @@
     "[\"other-prime-gaps\",\"openai:186\",\"186\",\"attained\"]:record",
     "[\"other-matroid-prophet\",\"darkhipo:\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"attained\"]:record",
     "[\"other-haldane-gap\",\"darkhipo:771/5000\",\"771/5000\",\"attained\"]:record",
-    "[\"other-critical-line-zeros\",\"bhattacharjee-bhattacharya:\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"attained\"]:record"
+    "[\"other-critical-line-zeros\",\"bhattacharjee-bhattacharya:\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-6716\",\"16521/5000000\",\"attained\"]:record"
   ],
   "deferred": [
     {

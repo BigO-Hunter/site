@@ -39725,6 +39725,55 @@
         }
       ],
       "source_commit": "edd6a37a9ff87b254fb7466184348d1432d0c8c0"
+    },
+    {
+      "id": "crocswap-pr-6716",
+      "kind": "improvement",
+      "score": "16521/5000000",
+      "tier": "claimed",
+      "submitted_at": "2026-11-04T17:41:35Z",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-04T17:41:35Z",
+      "site_observed_at": "2026-11-04T18:17:31Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716"
+      },
+      "spec_version": "1",
+      "title": "[codex] Conditional κ = 0.00330420 (+6.60e-6 over #6702)",
+      "authors": [
+        {
+          "name": "thu-nmrc",
+          "url": "https://github.com/thu-nmrc"
+        }
+      ],
+      "predecessors": [
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/5599",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6348",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6398",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6545",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6551",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6702"
+      ],
+      "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
+      "artifact": {
+        "path": "sources/pr-6716.json",
+        "sha256": "994654635395f694c362413d3c807f72af5c5c7d3cf0d83bf20513d03a5d24b2"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
+        "theorem": null,
+        "certificate_path": null
+      },
+      "dependencies": [
+        {
+          "id": "openai-109-transfer",
+          "statement": "The OpenAI #109 fixed-tape multiplication reduction and the specific all-size compiler, routing, precision, resampling and exact-recovery interfaces cited by this submission hold. The PR body retains its precise per-construction obligations.",
+          "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
+          "status": "unverified"
+        }
+      ],
+      "source_commit": "a467457692bc9e11113d9b2e2e34ea8ffb553b58"
     }
   ],
   "record_metadata": {
@@ -62845,7 +62894,35 @@
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-03T23:24:07Z",
       "race_event_kind": "PR creation; latest observed score"
+    },
+    "crocswap-pr-6716": {
+      "checked_at": "2026-11-04",
+      "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Source claim; not independently rerun by bigOspeedrun",
+      "pr_number": 6716,
+      "repo": "CrocSwap/integer-mult-bounds",
+      "merged": false,
+      "merged_at": null,
+      "closed_at": null,
+      "updated_at": "2026-11-04T17:57:12Z",
+      "comparison_key": "crocswap/integer-multiplication-v1",
+      "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
+      "score_source": "stated kappa in research/p104-common-idle-double-retirement/RESULT.json at the PR head; source claim only",
+      "date_precision": "PR creation timestamp; score is latest observed claim, not necessarily original score.",
+      "upstream_selected": false,
+      "record_eligibility_note": "Eligible for the CrocSwap claimed-source race when merged or a published README checkpoint. Open and closed-unmerged PRs cannot hold the record.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "publication_date_precision": "date-time",
+      "race_repo": "CrocSwap/integer-mult-bounds",
+      "publication_date": "2026-11-04T17:41:35Z",
+      "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
+      "race_series": "pr-submissions",
+      "race_event_at": "2026-11-04T17:41:35Z",
+      "race_event_kind": "PR creation; latest observed score"
     }
   },
-  "updated_at": "2026-11-04T14:17:25Z"
+  "updated_at": "2026-11-04T18:17:31Z"
 }
