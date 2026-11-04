@@ -1882,5 +1882,23 @@
     "authors": [
       "Dmitri I. Arkhipov"
     ]
+  },
+  {
+    "key": "[\"other-matroid-prophet\",\"darkhipo:\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"attained\"]:record",
+    "text": "**New claim** | **One-sample matroid prophet inequality** | `E[R] ≥ 5.114·10^(-10) E[OPT]` | by Dmitri I. Arkhipov | Claimed | [bigospeedrun.com/other/matroid-prophet](https://bigospeedrun.com/other/matroid-prophet)",
+    "x_text": "New claim!\n\nProblem: One-sample matroid prophet inequality\nNew value: E[R] ≥ 5.114·10^(-10) E[OPT]\nPlayer: Dmitri I. Arkhipov\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-04T02:36:41.204Z",
+    "authors": [
+      "Dmitri I. Arkhipov"
+    ]
+  },
+  {
+    "key": "[\"other-haldane-gap\",\"darkhipo:771/5000\",\"771/5000\",\"attained\"]:record",
+    "text": "**New claim** | **Spin-one Haldane gap** | `γ_L > 0.1542` | by Dmitri I. Arkhipov | Claimed | [bigospeedrun.com/other/haldane-gap](https://bigospeedrun.com/other/haldane-gap)",
+    "x_text": "New claim!\n\nProblem: Spin-one Haldane gap\nNew value: γ_L > 0.1542\nPlayer: Dmitri I. Arkhipov\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-04T02:36:42.042Z",
+    "authors": [
+      "Dmitri I. Arkhipov"
+    ]
   }
 ]
