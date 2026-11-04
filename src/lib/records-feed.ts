@@ -2,7 +2,7 @@ import {ranked,boundPrecision,boundExponent,scientificSaving,displayDigits,facto
 import {evidenceName,evidenceLevels} from './evidence.ts';
 import {otherBoundLeader} from './other-leader.ts';
 import type {ChartLine,Problem,RecordEntry} from './types';
-import {parse,plain,D_NAMES} from './sssp.ts';
+import {parse,plain,D_NAMES,lexCmp} from './sssp.ts';
 import {ssspFrontier} from './sssp-board.ts';
 
 // verification: a Claimed direct submission (bigospeedrun/verifier issue or PR) whose Lean check has not
@@ -162,7 +162,7 @@ export function plainTex(tex:string):string {
 }
 // An Other bounds row (src/lib/other-bounds.json) as a feed board. Its slug is 'other-<slug>',
 // so it never meets a Big O slug. A claim's id is its author handle and exact value: a later
-// date edit keeps the id. The leader is the row's newest claim by its best author.
+// date edit keeps the id. The leader is the row's newest claim by its best author, or an equal claim with a higher evidence level (other-leader.ts).
 export interface OtherClaim {handle:string; value:string; display:string; bound:string; evidence:string; date:string; authors:{name:string}[]}
 export interface OtherRow {slug:string; name:string; bestHandle:string; claims:OtherClaim[]; direction?:string}
 export function otherFeedBoard(row:OtherRow):FeedBoard {
@@ -220,6 +220,14 @@ function ratio(score:string):[bigint,bigint]|null {
  if(fraction&&BigInt(fraction[2])>0n)return [BigInt(fraction[1]),BigInt(fraction[2])];
  if(decimal)return [BigInt(decimal[1]+(decimal[2]??'')),10n**BigInt((decimal[2]??'').length)];
  return null;
+}
+// Two rows of one board have the same bound: an equal score (exact value, or the same "D ; T" point on the directed-sssp
+// board) and the same relation. A score that is not a number compares as text.
+function sameBound(board:FeedBoard,a:FeedRecord,b:FeedRecord):boolean {
+ if(a.relation!==b.relation)return false;
+ if(board.frontier){const x=parse(a.score),y=parse(b.score);return x.length===y.length&&lexCmp(x,y)===0;}
+ const x=ratio(a.score),y=ratio(b.score);
+ return x&&y?x[0]*y[1]===y[0]*x[1]:a.score===b.score;
 }
 // Burst of sharpenings (darkhipo's average-sensitivity rounds #60-#63, 2026-10-24, Lead): rows of one board with the
 // exact same author list that gain Lean Verified post only the best by the board's direction. Returns the event keys
@@ -308,8 +316,12 @@ export function plan(previous:FeedState,snapshot:FeedSnapshot,posts:(Pick<Record
    const prior=old?.records.find(r=>identity(old,r)===identity(board,record));
    const oldLeader=old?.records.find(r=>r.id===old.leader);
    // On the directed-sssp board: a row that becomes a frontier row; a row that gains Lean Verified posts only while it is one.
-   const newLeader=board.frontier?leads(board,record.id)&&!(old?.records.some(r=>leads(old,r.id)&&identity(old,r)===identity(board,record))):
-    record.id===board.leader&&(!oldLeader||identity(old!,oldLeader)!==identity(board,record));
+   // Of equal bounds the higher evidence level leads (Nil, 2026-11-04): a row that takes the lead with the bound of the old
+   // leader (or of an old frontier row) that is still on the board is no new record. A Lean Verified one posts once as
+   // "Record verified" (gainedLean). A row that replaces a removed leader with its bound stays a new leader, as before.
+   const tie=(r:FeedRecord)=>identity(old!,r)===identity(board,record)||sameBound(board,r,record)&&board.records.some(x=>identity(board,x)===identity(old!,r));
+   const newLeader=board.frontier?leads(board,record.id)&&!(old?.records.some(r=>leads(old,r.id)&&tie(r))):
+    record.id===board.leader&&(!oldLeader||!tie(oldLeader));
    const gainedLean=record.evidence==='Lean Verified'&&prior?.evidence!=='Lean Verified'&&(!board.frontier||leads(board,record.id));
    const key=eventKey(board,record);
    if(lesser.has(key)){reserved.add(key);deferred.delete(key);continue;}

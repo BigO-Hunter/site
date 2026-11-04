@@ -25,7 +25,7 @@ export function chartRecords(entries: ChartEntry[], levels: Set<string>, higher:
  for (let i=0;i<ordered.length;i++) {
   seen.push(ordered[i]);
   if(ordered[i+1]?.time===ordered[i].time)continue;
-  const best=ranked(seen,higher?'higher-is-better':'lower-is-better')[0].record;
+  const best=ranked(seen,higher?'higher-is-better':'lower-is-better',e=>e.level)[0].record;
   if(best.id!==result.at(-1)?.id)result.push(best);
  }
  return result;

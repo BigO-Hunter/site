@@ -120,14 +120,16 @@ export function qualifies(candidate: Q[], points: Q[][], lines: Line[] = []): bo
  return current ? lexCmp(candidate.slice(2), current) < 0 : lexCmp(candidate.slice(2), RANGE_END) <= 0;
 }
 /** The frontier rows of the directed-sssp board (Lead, 2026-11-03): the point rows [a, b, a', b', c'] that no other point
- * row dominates (a D at least as dense and a T at most as large, strict in one; an exactly equal row dominates the rows
- * after it, so the earliest of equal rows leads, as ranked() does on the other boards) and that no Lean Verified line of
- * another row dominates (D <= cap and T >= T(D) of the line: such a row only ties the gate, G2). rows: earliest first;
- * the ids in that order. */
-export function frontier(rows: { id: string; t: Q[] }[], lines: (Line & { row: string })[] = []): string[] {
+ * row dominates (a D at least as dense and a T at most as large, strict in one; an exactly equal row dominates a row with a
+ * lower evidence level, and the rows after it at the same level, so of equal rows the highest level leads, then the earliest,
+ * as ranked() does on the other boards; Nil, 2026-11-04) and that no Lean Verified line of
+ * another row dominates (D <= cap and T >= T(D) of the line: such a row only ties the gate, G2). rows: earliest first, with
+ * level = evidenceOrder of the row (0 when absent); the ids in that order. */
+export function frontier(rows: { id: string; t: Q[]; level?: number }[], lines: (Line & { row: string })[] = []): string[] {
  const dominates = (x: Q[], y: Q[]) => { const d = lexCmp(x.slice(0, 2), y.slice(0, 2)), t = lexCmp(x.slice(2), y.slice(2)); return d >= 0 && t <= 0 && (d > 0 || t < 0); };
  const equal = (x: Q[], y: Q[]) => lexCmp(x, y) === 0;
- return rows.filter((r, i) => !rows.some((o, j) => o !== r && (dominates(o.t, r.t) || (j < i && equal(o.t, r.t))))
+ const first = (o: { level?: number }, j: number, r: { level?: number }, i: number) => (o.level ?? 0) > (r.level ?? 0) || ((o.level ?? 0) === (r.level ?? 0) && j < i);
+ return rows.filter((r, i) => !rows.some((o, j) => o !== r && (dominates(o.t, r.t) || (equal(o.t, r.t) && first(o, j, r, i))))
   && !lines.some(l => l.row !== r.id && lexCmp(r.t.slice(0, 2), l.cap) <= 0 && lexCmp(r.t.slice(2), timeAt(l.terms, r.t.slice(0, 2))) >= 0)).map(r => r.id);
 }
 /** Plain text for a time or density tuple, for aria labels, e.g. n log^(3/4) n. */

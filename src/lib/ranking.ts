@@ -1,3 +1,4 @@
+import {evidenceOrder} from './evidence.ts';
 // Scores remain exact until display or chart coordinate calculation.
 export function compare(a: string, b: string): number {
  const [an,ad='1']=a.split('/').map(String),[bn,bd='1']=b.split('/').map(String);
@@ -23,8 +24,9 @@ function better(a:{score:string;scoreRelation?:string},b:{score:string;scoreRela
  const open=(r:{scoreRelation?:string})=>r.scoreRelation==='strict-upper-bound'?1:0;
  return (direction==='higher-is-better'?1:-1)*compare(a.score,b.score)||open(b)-open(a);
 }
-export function ranked<T extends {score:string;scoreRelation?:string;date:string;repoId:number;id:string}>(records:T[], direction:string) {
- const sorted=[...records].sort((a,b)=>better(b,a,direction)||a.date.localeCompare(b.date)||a.repoId-b.repoId||a.id.localeCompare(b.id));
+// Best first. Of equal bounds, the higher evidence level first (evidenceOrder), then the earlier row. Equal bounds share a rank.
+export function ranked<T extends {score:string;scoreRelation?:string;date:string;repoId:number;id:string;evidenceLevel?:string}>(records:T[], direction:string, level:(record:T)=>string|undefined=record=>record.evidenceLevel) {
+ const sorted=[...records].sort((a,b)=>better(b,a,direction)||evidenceOrder(level(b))-evidenceOrder(level(a))||a.date.localeCompare(b.date)||a.repoId-b.repoId||a.id.localeCompare(b.id));
  let rank=1;return sorted.map((record,i)=>{if(i&&better(record,sorted[i-1],direction)!==0)rank=i+1;return {record,rank,tie:i>0&&better(record,sorted[i-1],direction)===0}});
 }
 export function progression<T extends {score:string;scoreRelation?:string;date:string;repoId:number;id:string}>(records:T[], direction:string):T[]{

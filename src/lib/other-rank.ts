@@ -1,7 +1,7 @@
 // The order of the claims of an Other bounds row, best first, by the row's direction. A claim has no
 // single exact format ('\approx6.14\cdot10^{-11}', '2^{-38}', '10499/12000', '\le0.87488664704'), so its
-// number is read from its display, then from its exact value. Claims that tie share a rank, the earliest
-// first, as on the Big O pages. When a number cannot be read for some claim, the row keeps the newest
+// number is read from its display, then from its exact value. Claims that tie share a rank, the higher
+// evidence level first, then the earliest, as on the Big O pages. When a number cannot be read for some claim, the row keeps the newest
 // first. That is only a fallback: a claim listed by hand was the best when it appeared, but a prove2.me
 // claim needs only to beat the best Lean Verified claim at its time (data/prove2me_import.py), so the
 // newest claim is not always the best.
@@ -9,7 +9,11 @@
 // A claim of the form A d^p ('80{,}000d^{17}', the contingency tables row) has no single number: d^p dominates
 // A for large d, so its order is lexicographic, by the exponent p first, then by the constant A (site#9, darkhipo).
 // It is read only from the whole display, and the row uses that order only when every one of its claims is such a claim.
-type Claim = {display: string; value: string; date: string};
+//
+// Of claims that tie, the one with the higher evidence level ranks first (Nil, 2026-11-04; evidenceOrder), then the earlier one.
+type Claim = {display: string; value: string; date: string; evidence?: string};
+
+import {evidenceOrder} from './evidence.ts';
 
 const DEGREE_CLAIM = /^(\d+(?:\{,\}\d{3})*(?:\.\d+)?)d\^\{(-?\d+)\}$/;
 
@@ -57,7 +61,7 @@ export function rankOtherClaims<C extends Claim>(claims: C[], direction: string)
   if (claims.length > 0 && degrees.every(d => d !== null)) {
     const sign = direction === 'higher' ? -1 : 1;
     const items = claims.map((claim, index) => ({claim, index, degree: degrees[index]!}));
-    const sorted = [...items].sort((a, b) => sign * compareDegree(a.degree, b.degree) || a.index - b.index);
+    const sorted = [...items].sort((a, b) => sign * compareDegree(a.degree, b.degree) || evidenceOrder(b.claim.evidence) - evidenceOrder(a.claim.evidence) || a.index - b.index);
     let rank = 0;
     return sorted.map((item, i) => {
       const tie = i > 0 && compareDegree(item.degree, sorted[i - 1].degree) === 0;
@@ -75,7 +79,7 @@ export function rankOtherClaims<C extends Claim>(claims: C[], direction: string)
     if (!same(a.number!, b.number!)) return sign * (a.number! - b.number!);
     return a.exact && b.exact ? sign * compareExact(a.exact, b.exact) : 0;
   };
-  const sorted = [...entries].sort((a, b) => known ? order(a, b) || a.index - b.index : b.index - a.index);
+  const sorted = [...entries].sort((a, b) => known ? order(a, b) || evidenceOrder(b.claim.evidence) - evidenceOrder(a.claim.evidence) || a.index - b.index : b.index - a.index);
   let rank = 0;
   return sorted.map((entry, i) => {
     const prev = sorted[i - 1];

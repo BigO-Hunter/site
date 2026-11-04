@@ -6,6 +6,9 @@ export const evidenceLevels = [
  {id:'lean-verified', name:'Lean Verified', definition:'We rebuild its Lean proof from source and check, with the Lean kernel, that it proves our exact problem statement. A result also counts when prove2.me, which checks each proof with Lean on its server, proved it and we reviewed that its Lean statement is our problem statement.'},
 ] as const;
 export type EvidenceLevel = typeof evidenceLevels[number]['id'];
+// Nil, 2026-11-04: of two rows with an equal bound, the row with the higher evidence level ranks first (Lean Verified,
+// then Human Verified, then Claimed); inside one level the earlier row ranks first. Larger is higher; an unknown level is Claimed.
+export const evidenceOrder = (level?:string):number => level==='lean-verified'?2:level==='human-verified'?1:0;
 export const evidenceName = (level:EvidenceLevel):string => evidenceLevels.find(item=>item.id===level)!.name;
 // A CrocSwap pull request row is Human Verified by CrocSwap's own record, not by a merge alone (certified: see crocswapVerification
 // in src/lib/crocswap-cert.ts; Lead ruling b3, 2026-10-30). The selected main-branch result stays Human Verified.
