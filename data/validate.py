@@ -29,6 +29,12 @@ if (ROOT/'direct-notes.json').exists():
  for key,n in load('direct-notes.json')['notes'].items():
   assert re.fullmatch(r'direct-(issue|pr)-\d+',key),key
   assert predecessor_ok(n),key
+  # Credited authors (optional; Other bounds rows only, see below): 1-5 distinct GitHub logins, in credit order.
+  assert set(n)<={'text','predecessor','authors'},key
+  if 'authors' in n:
+   a=n['authors'];assert isinstance(a,list) and 0<len(a)<=5 and len(set(a))==len(a) and all(isinstance(x,str) and re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{0,38}',x) for x in a),key
+   known=load('direct-submissions.json')['entries'].get(key)
+   assert not known or known['submission']['problem'] not in ('dft','3sum','apsp','subset-sum','directed-sssp'),'Credited authors on a board row: '+key
   # Plain text, except that a note on an Other bounds row may hold KaTeX between \( and \) (the page renders it with inlineMath).
   assert 0<len(n['text'])<=500 and not re.search(r'[<>&$]',n['text']) and not re.search(r'\\',re.sub(r'\\\(.*?\\\)','',n['text'],flags=re.S)),key
   # Board rows (dft, 3sum, apsp, subset-sum) show a note as plain tooltip text, so a note with TeX belongs to an Other bounds problem.

@@ -29,3 +29,20 @@ test('every direct result that names a commit gets both links (the refresh keeps
     assert.doesNotMatch(html, /of https:\/\//, proofScope);
   }
 });
+
+test('a commit named as owner/repo@hash in a credit note links to that commit', () => {
+  const note = "The 19-move construction and its card certificate are shjvandekamp's (shjvandekamp/math@64e7eb1, 2026-10-15); Dmitri I. Arkhipov's package checks it in Lean.";
+  assert.equal(sourceLinks(note), "The 19-move construction and its card certificate are shjvandekamp's ("
+    + '<a href="https://github.com/shjvandekamp/math/commit/64e7eb1" target="_blank" rel="noopener"><code>shjvandekamp/math@64e7eb1</code></a>'
+    + ", 2026-10-15); Dmitri I. Arkhipov's package checks it in Lean.");
+  // Not a commit: too short a hash, an e-mail address, a path inside a URL.
+  for (const text of ['o/r@abc12', 'mail me at a@b.org', 'see https://x.org/o/r@1234567abc'])
+    assert.equal(sourceLinks(text), text);
+  // Both forms in one text, and the full-hash proof scope keeps its own links.
+  assert.match(sourceLinks(`o/r@${SHA} and at commit ${SHA} of https://github.com/o/r.`), /^<a href="https:\/\/github\.com\/o\/r\/commit\/[0-9a-f]{40}"[^>]*><code>o\/r@[0-9a-f]{40}<\/code><\/a> and at commit <a /);
+});
+
+test('every credit note of an Other row renders its commit references as links', () => {
+  for (const claim of Object.values(direct.boards as Record<string, {claims: {note: string}[]}>).flatMap(b => b.claims))
+    assert.doesNotMatch(sourceLinks(claim.note).replace(/<a [^>]*>[\s\S]*?<\/a>/g, ''), /[A-Za-z0-9-]+\/[A-Za-z0-9._-]+@[0-9a-f]{7,40}/, claim.note);
+});

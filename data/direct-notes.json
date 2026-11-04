@@ -157,6 +157,13 @@
     "direct-issue-99": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/92",
       "text": "Wang-jiong-han lowers the proved exponent from 1.92027942 to 1.920279408185 with new digit costs (0, 1369, 2740) for the weighted cache of their own Lean Verified 1.92027942 proof, a new ternary profile and new evaluation points, all exact rationals. The construction is c0ldzy17's, with Joshua Wharton's numerical certificates and Hrishik Sai Bojnal's parameter refinements; the word-RAM specification and compiler come from Anthropic's formalization."
+    },
+    "direct-issue-137": {
+      "authors": [
+        "shjvandekamp",
+        "darkhipo"
+      ],
+      "text": "The 19-move construction and its card certificate are shjvandekamp's (shjvandekamp/math@64e7eb1, 2026-10-15); Dmitri I. Arkhipov's package checks it in Lean."
     }
   },
   "withdrawn": {

@@ -717,6 +717,20 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual((listed[0]['handle'],listed[0]['value'],listed[0]['display'],listed[0]['bound']),
                          ('direct-issue-80','20','20','\\text{Maker moves}\\le 20'))
         self.assertIn('BigOSpeedrun.Snaky.Bound',listed[0]['proofScope'])
+        # A reviewed credit (lead decision, verifier#142): direct-notes.json authors replace the submitter alone, in
+        # that order; the date, value and receipt stay. The submitter must be among them, and the logins must be valid.
+        credit=dict(authors=['shjvandekamp','alice'],text="The construction is shjvandekamp's (shjvandekamp/math@64e7eb1).")
+        credit_claims={'direct-issue-80':dict(route='issue',item=self.issue(80),submission=snaky,verification=proof)}
+        plain=r.other_claims(credit_claims,{},{})['other-snaky']['claims'][0]
+        credited=r.other_claims(credit_claims,{},{'direct-issue-80':credit})['other-snaky']['claims'][0]
+        self.assertEqual(credited['authors'],[dict(name='shjvandekamp',url='https://github.com/shjvandekamp'),dict(name='alice',url='https://github.com/alice')])
+        self.assertEqual((credited['author'],credited['note']),('shjvandekamp and alice',credit['text']))
+        self.assertEqual({k:v for k,v in credited.items() if k not in ('author','authors','note')},{k:v for k,v in plain.items() if k not in ('author','authors','note')})
+        for bad in (['shjvandekamp'],['alice','bad/login']):
+            with self.assertRaises(r.Rejected):r.other_claims(credit_claims,{},{'direct-issue-80':dict(credit,authors=bad)})
+        # Big O board rows key their record posts by authors, so a credit there is refused.
+        with self.assertRaises(r.Rejected):
+            r.row_for('direct-issue-5',dict(route='issue',item=self.issue(),submission=d.parse_body(self.issue()['body'])),'2026-10-11T00:00:00Z',None,credit)
         # Heilbronn (verifier #105): a saving, higher is better. The shown value is rounded down, never up.
         heilbronn=dict(sub,problem='heilbronn-triangle',bound='2/100866719')
         listed=r.other_claims({'direct-issue-81':dict(route='issue',item=self.issue(81),submission=heilbronn,verification=proof)},{},{})['other-heilbronn-triangle']['claims']

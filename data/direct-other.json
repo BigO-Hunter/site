@@ -100,7 +100,7 @@
           "receiptPath": "sources/direct-issue-114-41561952131-1.json"
         },
         {
-          "author": "darkhipo",
+          "author": "shjvandekamp and darkhipo",
           "handle": "direct-issue-137",
           "value": "19",
           "display": "19",
@@ -110,8 +110,12 @@
           "url": "https://github.com/bigospeedrun/verifier/issues/137",
           "lean": true,
           "evidence": "lean-verified",
-          "note": "",
+          "note": "The 19-move construction and its card certificate are shjvandekamp's (shjvandekamp/math@64e7eb1, 2026-10-15); Dmitri I. Arkhipov's package checks it in Lean.",
           "authors": [
+            {
+              "name": "shjvandekamp",
+              "url": "https://github.com/shjvandekamp"
+            },
             {
               "name": "darkhipo",
               "url": "https://github.com/darkhipo"

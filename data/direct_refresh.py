@@ -409,6 +409,8 @@ def row_for(key,claim,now,old=None,note=None):
         publication_source_url=item['html_url'],direct_submission=True,route=route)
     # A reviewed credit note (data/direct-notes.json) survives the hourly rebuild of direct rows.
     if note:meta['credit_note']=note['text']
+    # Credited authors are for Other bounds rows only (other_claims): a Big O row's authors key its record posts.
+    require(not (note and note.get('authors')),'Credited authors on a Big O board row: '+key)
     if proof:
         row['rerun_status']=dict(state='passed',checked_at=proof['checked_at'],receipt_path=proof['receipt_path'])
         meta['receipt_url']=proof['receipt_url']
@@ -475,9 +477,13 @@ def other_claims(claims,withdrawn,notes):
         shown,display=display_down(sub['bound']) if row.get('higher') else (display_up(sub['bound']),)*2
         note=notes.get(key,{}).get('text','')
         require(not re.search(r'[<>&]',note),'A credit note has a character (< > &) that the page cannot show as text')
+        # A reviewed credit (data/direct-notes.json authors, a lead decision): the GitHub logins credited for the
+        # result, in order, the submitter among them. It replaces the submitter alone; the date, value and receipt stay.
+        logins=notes.get(key,{}).get('authors') or [login]
+        require(login in logins and all(re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{0,38}',x) for x in logins),'Invalid credited logins')
         boards.setdefault('other-'+sub['problem'],{'claims':[]})['claims'].append(dict(
-            author=login,handle=key,value=sub['bound'],display=display,date=item['created_at'],dateSource=item['html_url'],dateKind='first-stated',
-            url=item['html_url'],lean=True,evidence='lean-verified',note=note,authors=[dict(name=login,url='https://github.com/'+login)],
+            author=' and '.join(logins),handle=key,value=sub['bound'],display=display,date=item['created_at'],dateSource=item['html_url'],dateKind='first-stated',
+            url=item['html_url'],lean=True,evidence='lean-verified',note=note,authors=[dict(name=x,url='https://github.com/'+x) for x in logins],
             leanNote='Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).',
             # The Other page links 'at commit <sha> of <repo URL>' (src/lib/source-links.ts): keep this form.
             proofScope='The verifier checked Race.bound : '+row['statement']+' ('+sub['bound']+') at commit '+sub['commit']+' of '+sub['repo_url']+'.',

@@ -4,7 +4,12 @@
 // the repository. Text without that form does not change.
 const SOURCE = /at commit ([0-9a-f]{40}) of https:\/\/github\.com\/([A-Za-z0-9][A-Za-z0-9-]{0,38})\/([A-Za-z0-9._-]+?)(?=\.?(?:\s|$))/g;
 
+// A credit note names a commit as "<owner>/<repo>@<hash>" (7 to 40 hex digits; Lead, verifier#142): it links to that
+// commit as written. GitHub opens a commit page by a short hash too.
+const COMMIT_REF = /(?<![\w./@-])([A-Za-z0-9][A-Za-z0-9-]{0,38})\/([A-Za-z0-9._-]+?)@([0-9a-f]{7,40})(?![\w-])/g;
+
 export const sourceLinks = (text: string) => text.replace(SOURCE, (_, sha: string, owner: string, repo: string) => {
   const url = `https://github.com/${owner}/${repo}`;
   return `at commit <a href="${url}/commit/${sha}" target="_blank" rel="noopener"><code>${sha.slice(0, 8)}</code></a> of <a href="${url}" target="_blank" rel="noopener">${owner}/${repo}</a>`;
-});
+}).replace(COMMIT_REF, (ref: string, owner: string, repo: string, sha: string) =>
+  `<a href="https://github.com/${owner}/${repo}/commit/${sha}" target="_blank" rel="noopener"><code>${ref}</code></a>`);
