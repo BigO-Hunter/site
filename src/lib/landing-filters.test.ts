@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {parseEvidenceLevels} from './evidence-filters.ts';
-import {landingRecords,firstSelected} from './landing-records.ts';
+import {landingRecords,firstSelected,shortAuthors} from './landing-records.ts';
 import type {RecordEntry} from './types.ts';
 
 const record=(id:string,score:string,level:RecordEntry['evidenceLevel'],date='2026-10-10T10:00:00Z',extra:Partial<RecordEntry>={}):RecordEntry=>({id,score,evidenceLevel:level,date,repoId:0,dateLabel:'Published',...extra} as RecordEntry);
@@ -36,4 +36,17 @@ test('landing keeps publication rules and lower-is-better endpoint ranking',()=>
  ],'lower-is-better');
  // An endpoint n^(1/2+o(1)) is weaker than an attained O(n^(1/2)) at the same exponent.
  assert.deepEqual(choices.map(record=>record.id),['closed','open','lean']);
+});
+
+// Nil, 2026-11-04: "record holder names in the main table?". Short: one or two names, else the first and "and N more".
+test('a landing holder shows one or two names, else the first name and the count of the others', () => {
+  assert.deepEqual(shortAuthors([]), {shown: [], more: 0});
+  assert.deepEqual(shortAuthors(['A']), {shown: ['A'], more: 0});
+  assert.deepEqual(shortAuthors(['A', 'B']), {shown: ['A', 'B'], more: 0});
+  assert.deepEqual(shortAuthors(['A', 'B', 'C', 'D']), {shown: ['A'], more: 3});
+});
+
+// Lead, 2026-11-04: a grouped credit is not split, so the Agent breakthrough cell of 3SUM names the agent.
+test('a grouped credit is one credit, so two credits show in full', () => {
+  assert.deepEqual(shortAuthors([{name: 'Josh Alman and Virginia Vassilevska Williams'}, {name: 'Anthropic'}]).more, 0);
 });

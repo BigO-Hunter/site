@@ -120,7 +120,10 @@ tr:last-child td { border-bottom: 0; }
 .mobile-bound-label, .landing .mobile-bound-info { display: none; }
 .landing th:first-child { width: 20%; }
 .landing td:first-child { font-weight: 600; }
+/* The latest column holds the bound, its level, its date and its holder: it gets the most room. */
+@media (min-width: 601px) { .landing .with-classic th:first-child { width: 16%; } .landing .with-classic th:nth-child(2) { width: 24%; } .landing .with-classic th:nth-child(3) { width: 27%; } }
 .landing .latest-date { display: block; margin-top: 5px; color: var(--muted); font-size: var(--font-min); }
+.landing .breakthrough-result { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
 .katex { font-size: 1.08em; }
 .katex-display { overflow-x: auto; overflow-y: hidden; padding: .3em 0; }
 @media (max-width: 600px) {
@@ -144,6 +147,10 @@ tr:last-child td { border-bottom: 0; }
   .landing .latest-cell .mobile-bound-label { align-self: start; }
   .landing .latest-metadata { display: flex; flex-wrap: wrap; gap: 0 8px; margin-top: 2px; }
   .landing .latest-level, .landing .latest-date { margin: 0; font-size: var(--font-min); }
+  /* The level, the date and the holder wrap as separate items. */
+  .landing .latest-date { display: contents; }
+  .landing .holder-sep { display: none; }
+  .landing .breakthrough-result { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 8px; min-width: 0; }
   .landing .mobile-bound-info { display: inline-block; margin-left: 0; }
   th, td { padding: 13px 14px; }
   .panel, .race-card { padding: 16px; }

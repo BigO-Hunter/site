@@ -15,3 +15,8 @@ export function landingRecords(records:RecordEntry[],direction:string,lines:Char
 export function firstSelected<T extends {evidenceLevel:string}>(records:readonly T[],levels:readonly string[]):T|undefined{
  return records.find(record=>levels.includes(record.evidenceLevel));
 }
+// The holder of a landing bound, short (Nil, 2026-11-04): one or two names as the board table shows them, else the
+// first name and "and N more". A grouped credit ("A and B") is one credit, as on the board table.
+export function shortAuthors<T>(authors:readonly T[]):{shown:T[];more:number}{
+ return authors.length>2?{shown:[authors[0]],more:authors.length-1}:{shown:[...authors],more:0};
+}

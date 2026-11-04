@@ -1,0 +1,20 @@
+---
+// Who holds a bound in a landing table (Nil, 2026-11-04): the names and avatars of the board table, short. The full
+// list is in the title; the names are not links, so the row stays compact (the board table links each author).
+import type {Author} from '../lib/types';
+import PlayerAvatar from './PlayerAvatar.astro';
+import {shortAuthors} from '../lib/landing-records';
+// separator: a " · " before the first name, in its nowrap span, so it never ends a line alone.
+interface Props {authors:Author[];separator?:boolean}
+const {authors,separator=false}=Astro.props;
+const {shown,more}=shortAuthors(authors);
+// Between credits: " and ", or ", " when a credit has its own "and" (as the board table: "A and B, Anthropic").
+const join=shown.some(a=>/\s(?:and|&)\s|,\s/.test(a.name))?', ':' and ';
+// The avatar stays on the line of the first word of its name.
+---
+{authors.length>0&&<span class="landing-holder" title={authors.map(a=>a.name).join(', ')}>{shown.map((author,index)=><>{index>0&&join}<span class="holder-name">{index===0&&separator&&<span class="holder-sep" aria-hidden="true">· </span>}<PlayerAvatar author={author}/>{author.name.split(' ')[0]}</span>{author.name.includes(' ')&&' '+author.name.slice(author.name.indexOf(' ')+1)}</>)}{more>0&&<> and {more} more</>}</span>}
+<style>
+.landing-holder{display:inline-block;max-width:100%;white-space:normal;color:var(--muted);font-size:var(--font-min);line-height:1.4;overflow-wrap:anywhere}
+.holder-name{white-space:nowrap}
+.landing-holder :global(.player-avatar){width:18px;height:18px;font-size:8px;margin-right:.3rem;vertical-align:-4px}
+</style>
