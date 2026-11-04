@@ -54,7 +54,10 @@ if (ROOT/'direct-notes.json').exists():
 # is not on its board is only a warning: rows leave a board by themselves (a withdrawn submission, a closed issue, a hold),
 # and the hourly refresh runs this check, so a missing row must not stop it.
 method_notes={}
-note_text=lambda text:isinstance(text,str) and text==text.strip() and 0<len(text)<=500 and not re.search(r'[<>&\\$\n]',text)
+# Math is inline TeX in \( \) pairs, as in the Other bounds notes (Lead, 2026-11-04; KaTeX for all math). Outside the
+# pairs a note has no backslash; no $ anywhere.
+NOTE_MATH=re.compile(r'\\\((?:(?!\\[()]).)+?\\\)')
+note_text=lambda text:isinstance(text,str) and text==text.strip() and 0<len(text)<=500 and not re.search(r'[<>&$\n]',text) and '\\' not in NOTE_MATH.sub('',text)
 if (ROOT/'method-notes.json').exists():
  method_notes=load('method-notes.json')
  assert method_notes['schema_version']==1 and set(method_notes)<={'schema_version','boards','board_notes'}

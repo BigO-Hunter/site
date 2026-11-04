@@ -2,7 +2,8 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {buildSystemPrompt, createKnowledge} from './chat-knowledge.ts';
-import {methodNoteFor} from './method-notes.ts';
+import {methodNoteFor, validNoteText} from './method-notes.ts';
+import {inlineMath} from './math.ts';
 import type {Problem, RecordEntry} from './types.ts';
 
 // A note on how a record is proved (data/method-notes.json) reaches the chat facts as `method` on a current
@@ -56,26 +57,35 @@ test('a row takes its own note, else the board note of its repository, else none
   assert.equal(methodNoteFor(undefined, 'apsp', 'x', 'a/b'), undefined);
 });
 
-test('the reviewed notes file: plain text up to 500 characters on known boards; a row that left its board is not an error', t => {
+test('the reviewed notes file: plain text with \\( \\) math, up to 500 characters on known boards; a row that left its board is not an error', t => {
   const root = new URL('../../', import.meta.url);
   const notes = JSON.parse(readFileSync(new URL('data/method-notes.json', root), 'utf8')) as {schema_version: number; boards: Record<string, Record<string, string>>; board_notes?: Record<string, {repo: string; text: string}[]>};
   const registry = JSON.parse(readFileSync(new URL('data/registry.json', root), 'utf8')) as {problems: {slug: string; data_file: string}[]};
-  const plain = (text: string) => text.length > 0 && text.length <= 500 && text === text.trim() && !/[<>&\\$\n]/.test(text);
   assert.equal(notes.schema_version, 1);
   for (const [slug, rows] of Object.entries(notes.boards)) {
     const entry = registry.problems.find(p => p.slug === slug);
     assert.ok(entry, 'unknown board ' + slug);
     const ids = new Set((JSON.parse(readFileSync(new URL('data/' + entry.data_file, root), 'utf8')) as {records: {id: string}[]}).records.map(r => r.id));
     for (const [id, text] of Object.entries(rows)) {
-      assert.ok(plain(text), `${slug}/${id} note is not plain text`);
+      assert.ok(validNoteText(text), `${slug}/${id} note is not plain text with \\( \\) math`);
+      // Every note renders: KaTeX throws on bad TeX, and no delimiter is left as text.
+      assert.doesNotMatch(inlineMath(text), /\\[()]/, `${slug}/${id} note math`);
       // Rows leave a board by themselves (a withdrawn submission, a closed issue, a hold): report it, never fail.
       if (!ids.has(id)) t.diagnostic(`${slug}/${id} is not on the board`);
     }
   }
   for (const [slug, shared] of Object.entries(notes.board_notes ?? {})) {
     assert.ok(registry.problems.some(p => p.slug === slug), 'unknown board ' + slug);
-    for (const note of shared) assert.ok(/^[\w.-]+\/[\w.-]+$/.test(note.repo) && plain(note.text), `${slug}/${note.repo} board note`);
+    for (const note of shared) assert.ok(/^[\w.-]+\/[\w.-]+$/.test(note.repo) && validNoteText(note.text), `${slug}/${note.repo} board note`);
   }
   // The committed site copy matches the reviewed file.
   assert.equal(readFileSync(new URL('src/data/method-notes.json', root), 'utf8'), readFileSync(new URL('data/method-notes.json', root), 'utf8'));
+});
+
+test('a note holds math only as balanced \\( \\) pairs; no $ and no backslash outside them', () => {
+  for (const text of ['At \\(m=n\\log^{3/4}n\\) the cost is \\(n\\log n\\).', 'No math at all.', 'A rate \\(727/232431\\).'])
+    assert.ok(validNoteText(text), text);
+  for (const text of ['\\(n', 'n\\)', 'a \\log n', '\\(a \\(b\\) c\\)', 'a $n$', '\\(\\)', 'a \\(b\\) \\log', '\\[n\\]', 'a < b', 'x'.repeat(501)])
+    assert.equal(validNoteText(text), false, text);
+  assert.match(inlineMath('At \\(n\\log n\\).'), /class="katex"/);
 });

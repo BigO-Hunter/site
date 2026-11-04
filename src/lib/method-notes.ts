@@ -12,3 +12,9 @@ export function methodNoteFor(notes: MethodNotes | undefined, slug: string, id: 
   const shared = notes?.board_notes?.[slug]?.find(note => note.repo === repo);
   return plain(shared?.text);
 }
+
+// A note is plain text with inline TeX in \( \) pairs (KaTeX for all math, Lead 2026-11-04), as the Other bounds notes:
+// at most 500 characters, no < > & $ or line break, and no backslash outside the pairs. data/validate.py has the same rule.
+export const noteMath = /\\\((?:(?!\\[()]).)+?\\\)/g;
+export const validNoteText = (text: string): boolean =>
+  text.length > 0 && text.length <= 500 && text === text.trim() && !/[<>&$\n]/.test(text) && !text.replace(noteMath, '').includes('\\');
