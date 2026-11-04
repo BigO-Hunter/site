@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache source components and hand off N22, P07 and P02",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-04T05:55:24Z",
+      "updated_at": "2026-11-04T14:11:40Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -126328,6 +126328,22 @@
       "claim_files_head": "f7f32a18dde54e67624a9ed9cc7e1b266d9585c0",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6715,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Archive completed H25 S03.08 source adoption and frozen selection",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6715",
+      "submitted_at": "2026-11-04T14:07:42Z",
+      "updated_at": "2026-11-04T14:14:47Z",
+      "source_commit": "dc34598c22e2ef43ae7e11fc1d8c14de3915cf89",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-04T14:07:42Z",
+      "checked_at": "2026-11-04",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }
