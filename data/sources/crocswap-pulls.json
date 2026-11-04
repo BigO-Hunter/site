@@ -130118,10 +130118,10 @@
   {
     "number": 6717,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6717",
-    "title": "[codex] Sharp 7q stage-rank budget at arbitrary coupled width",
+    "title": "[codex] Sharp 7q stage-rank budget for all even dimensions and coupled widths",
     "state": "open",
     "created_at": "2026-11-04T18:34:03Z",
-    "updated_at": "2026-11-04T18:34:22Z",
+    "updated_at": "2026-11-04T19:08:35Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130129,7 +130129,7 @@
       "html_url": "https://github.com/thu-nmrc"
     },
     "head": {
-      "sha": "3ffc505a1a65772119f131e914ada3aba4cbd401"
+      "sha": "3c9072b8738323dda9f9c7dfb421d578ed3fc17a"
     },
     "base": {
       "ref": "main"
