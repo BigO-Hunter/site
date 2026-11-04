@@ -98,6 +98,29 @@
           "proofScope": "The verifier checked Race.bound : BigOSpeedrun.Snaky.Bound (20) at commit f6248dc39a05a6c5665240d860d2dbb95db707d9 of https://github.com/darkhipo/snaky-twenty.",
           "bound": "\\text{Maker moves}\\le 20",
           "receiptPath": "sources/direct-issue-114-41561952131-1.json"
+        },
+        {
+          "author": "darkhipo",
+          "handle": "direct-issue-137",
+          "value": "19",
+          "display": "19",
+          "date": "2026-11-03T23:02:29Z",
+          "dateSource": "https://github.com/bigospeedrun/verifier/issues/137",
+          "dateKind": "first-stated",
+          "url": "https://github.com/bigospeedrun/verifier/issues/137",
+          "lean": true,
+          "evidence": "lean-verified",
+          "note": "",
+          "authors": [
+            {
+              "name": "darkhipo",
+              "url": "https://github.com/darkhipo"
+            }
+          ],
+          "leanNote": "Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).",
+          "proofScope": "The verifier checked Race.bound : BigOSpeedrun.Snaky.Bound (19) at commit 880106a09c1554ab6e5b551b9a9403e7c4acf639 of https://github.com/darkhipo/snaky-nineteen.",
+          "bound": "\\text{Maker moves}\\le 19",
+          "receiptPath": "sources/direct-issue-137-41736051923-1.json"
         }
       ]
     },

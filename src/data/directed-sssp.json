@@ -17,7 +17,7 @@
     "minimum": "n ; n",
     "maximum": "n^2 ; n^3"
   },
-  "checked_at": "2026-11-03",
+  "checked_at": "2026-11-04",
   "sources": [
     {
       "url": "https://doi.org/10.1145/28869.28874",
@@ -212,6 +212,42 @@
         "checked_at": "2026-11-03T16:36:32.468681Z",
         "receipt_path": "sources/maintainer-directed-sssp-chd-41661841785.json"
       }
+    },
+    {
+      "id": "direct-issue-139",
+      "kind": "improvement",
+      "score": "n ; n log^2/3",
+      "score_relation": "attained",
+      "tier": "claimed",
+      "submitted_at": "2026-11-03T23:57:56Z",
+      "spec_version": "1",
+      "title": "darkhipo direct directed-sssp submission",
+      "authors": [
+        {
+          "name": "darkhipo",
+          "url": "https://github.com/darkhipo"
+        }
+      ],
+      "predecessors": [],
+      "submission_url": "https://github.com/bigospeedrun/verifier/issues/139",
+      "source_commit": "ffbc94459a4148a3a60ec5aa27920c19af82df28",
+      "artifact": {
+        "path": "sources/direct-issue-139-submission.json",
+        "sha256": "b23f6b76d1c73aba1e712700bad57b185e067d088a369d70569e4dd770f2ebaa"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/bigospeedrun/verifier/issues/139",
+        "theorem": "Race.bound",
+        "certificate_path": null
+      },
+      "dependencies": [],
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-03T23:57:56Z",
+      "site_observed_at": "2026-11-04T00:30:14Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/darkhipo/sssp-chd-row/tree/ffbc94459a4148a3a60ec5aa27920c19af82df28"
+      }
     }
   ],
   "record_metadata": {
@@ -267,9 +303,27 @@
       "publication_date_role": "arXiv first version",
       "publication_source_url": "https://arxiv.org/abs/2602.07868",
       "credit_note": "An outside implementer reports a flaw in Lemma 3.7; not checked by Big O Speedrun."
+    },
+    "direct-issue-139": {
+      "checked_at": "2026-11-04",
+      "source_url": "https://github.com/darkhipo/sssp-chd-row/tree/ffbc94459a4148a3a60ec5aa27920c19af82df28",
+      "repo": "darkhipo/sssp-chd-row",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Submitted bound; it did not beat the best Lean Verified result, so no proof run started.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "comparison_key": "directed-sssp/comparison-addition-sparse/v1",
+      "publication_date": "2026-11-03T23:57:56Z",
+      "publication_date_precision": "date-time",
+      "publication_date_role": "Submission opened",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/139",
+      "direct_submission": true,
+      "route": "issue",
+      "verification": "pending"
     }
   },
-  "updated_at": "2026-11-03T18:29:37Z",
+  "updated_at": "2026-11-04T00:30:14Z",
   "chart": {
     "ticks": [
       "n log^1/4",

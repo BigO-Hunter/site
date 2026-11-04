@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6621",
+        "leader": "crocswap-pr-6702",
         "direction": "higher",
         "records": [
           {
@@ -4379,6 +4379,16 @@
               "DreamingOfClouds"
             ],
             "bound": "O(n log^(1 - 0.003297) n)"
+          },
+          {
+            "id": "crocswap-pr-6702",
+            "score": "2061/625000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.0032976) n)"
           }
         ],
         "table": "big-o"
@@ -5091,6 +5101,20 @@
               "Vals AI"
             ],
             "bound": "O(n log^(11/12) n) for m <= n log^(3/4) n"
+          },
+          {
+            "id": "direct-issue-139",
+            "score": "n ; n log^2/3",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Dmitri I. Arkhipov"
+            ],
+            "bound": "O(n log^(2/3) n) for m <= n",
+            "verification": {
+              "state": "pending",
+              "since": "2026-11-03T23:57:56Z"
+            }
           }
         ],
         "table": "big-o"
@@ -6459,6 +6483,17 @@
             ],
             "bound": "Maker moves ≤ 20",
             "display": "20"
+          },
+          {
+            "id": "direct-issue-137:19",
+            "score": "19",
+            "relation": "attained",
+            "evidence": "Lean Verified",
+            "authors": [
+              "Dmitri I. Arkhipov"
+            ],
+            "bound": "Maker moves ≤ 19",
+            "display": "19"
           }
         ]
       },
@@ -7061,7 +7096,9 @@
     "[\"integer-multiplication\",\"crocswap-pr-6551\",\"82373/25000000\",\"attained\"]:record",
     "[\"other-heilbronn-triangle\",\"direct-issue-126:1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6621\",\"3297/1000000\",\"attained\"]:record",
-    "[\"directed-sssp\",\"directed-sssp-2026\",\"n log^3/4 ; n log^11/12\",\"attained\"]:lean"
+    "[\"directed-sssp\",\"directed-sssp-2026\",\"n log^3/4 ; n log^11/12\",\"attained\"]:lean",
+    "[\"integer-multiplication\",\"crocswap-pr-6702\",\"2061/625000\",\"attained\"]:record",
+    "[\"other-snaky\",\"direct-issue-137:19\",\"19\",\"attained\"]:lean"
   ],
   "deferred": [
     {

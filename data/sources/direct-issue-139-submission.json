@@ -1,0 +1,15 @@
+{
+  "route": "issue",
+  "number": 139,
+  "url": "https://github.com/bigospeedrun/verifier/issues/139",
+  "submitter": "darkhipo",
+  "created_at": "2026-11-03T23:57:56Z",
+  "submission": {
+    "schema_version": 1,
+    "problem": "directed-sssp",
+    "repo_url": "https://github.com/darkhipo/sssp-chd-row",
+    "commit": "ffbc94459a4148a3a60ec5aa27920c19af82df28",
+    "bound": "n ; n log^2/3",
+    "authors": []
+  }
+}

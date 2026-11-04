@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-139": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "directed-sssp",
+        "repo_url": "https://github.com/darkhipo/sssp-chd-row",
+        "commit": "ffbc94459a4148a3a60ec5aa27920c19af82df28",
+        "bound": "n ; n log^2/3",
+        "authors": []
+      }
+    },
     "direct-issue-137": {
       "route": "issue",
       "submission": {
@@ -10,6 +21,37 @@
         "commit": "880106a09c1554ab6e5b551b9a9403e7c4acf639",
         "bound": "19",
         "authors": []
+      },
+      "verification": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-137-9c5152c7acb61037db3a64094e5faa9dd73db42b0e24052a1be3460308b92818",
+        "problem_id": "other/snaky",
+        "score": "19",
+        "score_relation": "attained",
+        "source_commit": "880106a09c1554ab6e5b551b9a9403e7c4acf639",
+        "source_url": "https://github.com/darkhipo/snaky-nineteen",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41736051923",
+        "checked_at": "2026-11-04T00:16:05.508095Z",
+        "issue_created_at": "2026-11-03T23:02:29Z",
+        "issue_updated_at_at_verification": "2026-11-03T23:03:46Z",
+        "issue_updated_at_at_import": "2026-11-04T00:16:26Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-137-41736051923-1.json",
+        "receipt_sha256": "3aa5bf65db7373262b27f2952ceb2df6aff6aeb818ffdfdea8f5ec9dbf007cc3",
+        "policy_hash": "71e9cbd4b438dac8af82b8d05f3bdaa860adf2cc0cc20521579c8266db791d58",
+        "result_artifact_id": 13283102130,
+        "controller_fingerprint": "d55b42d89b5eedcb711e9f22b683fb5054d3f5557057af1bed56757f7ec7b765",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
       }
     },
     "direct-issue-126": {
@@ -3944,6 +3986,49 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-issue-137:9c5152c7acb61037db3a64094e5faa9dd73db42b0e24052a1be3460308b92818": {
+      "key": "direct-issue-137",
+      "submission": {
+        "schema_version": 1,
+        "problem": "snaky",
+        "repo_url": "https://github.com/darkhipo/snaky-nineteen",
+        "commit": "880106a09c1554ab6e5b551b9a9403e7c4acf639",
+        "bound": "19",
+        "authors": []
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-137-9c5152c7acb61037db3a64094e5faa9dd73db42b0e24052a1be3460308b92818",
+        "problem_id": "other/snaky",
+        "score": "19",
+        "score_relation": "attained",
+        "source_commit": "880106a09c1554ab6e5b551b9a9403e7c4acf639",
+        "source_url": "https://github.com/darkhipo/snaky-nineteen",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41736051923",
+        "checked_at": "2026-11-04T00:16:05.508095Z",
+        "issue_created_at": "2026-11-03T23:02:29Z",
+        "issue_updated_at_at_verification": "2026-11-03T23:03:46Z",
+        "issue_updated_at_at_import": "2026-11-04T00:16:26Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-137-41736051923-1.json",
+        "receipt_sha256": "3aa5bf65db7373262b27f2952ceb2df6aff6aeb818ffdfdea8f5ec9dbf007cc3",
+        "policy_hash": "71e9cbd4b438dac8af82b8d05f3bdaa860adf2cc0cc20521579c8266db791d58",
+        "result_artifact_id": 13283102130,
+        "controller_fingerprint": "d55b42d89b5eedcb711e9f22b683fb5054d3f5557057af1bed56757f7ec7b765",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -4056,6 +4141,11 @@
       "version": "112cf5bb75bb23ceefb5f3dec84bb5546ef83c17",
       "updated_at": "2026-11-03T03:03:13Z",
       "claimed_only": false
+    },
+    "139": {
+      "version": "4f1a12fb78d501c8c5f72daafcd904e67d6d80b3f979aba6fe4c2774a7418da6",
+      "updated_at": "2026-11-04T00:17:32Z",
+      "claimed_only": true
     }
   },
   "not_verified_cache": {
@@ -4074,9 +4164,9 @@
       "updated_at": "2026-11-02T07:24:42Z",
       "not_verified": false
     },
-    "137": {
-      "version": "9c5152c7acb61037db3a64094e5faa9dd73db42b0e24052a1be3460308b92818",
-      "updated_at": "2026-11-03T23:04:02Z",
+    "139": {
+      "version": "4f1a12fb78d501c8c5f72daafcd904e67d6d80b3f979aba6fe4c2774a7418da6",
+      "updated_at": "2026-11-04T00:17:32Z",
       "not_verified": false
     }
   }
