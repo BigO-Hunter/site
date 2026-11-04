@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache source components and hand off N22, P07 and P02",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-04T02:20:02Z",
+      "updated_at": "2026-11-04T04:38:50Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -126171,25 +126171,41 @@
       "title": "Classify two-block decoder signatures and count all six-port patterns",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6708",
       "submitted_at": "2026-11-04T04:08:55Z",
-      "updated_at": "2026-11-04T04:08:55Z",
-      "source_commit": "9417d35f070e2a64b6b174d549013cdcc5233794",
+      "updated_at": "2026-11-04T04:33:11Z",
+      "source_commit": "d004a15d088cbc2ad9fd45f2bd6955240b5cee16",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-04T04:08:55Z",
       "checked_at": "2026-11-04",
       "claimed_score": null,
       "record_ids": [],
       "note": "No research package kappa claim.",
-      "claim_head": "9417d35f070e2a64b6b174d549013cdcc5233794",
-      "claim_text": "bdbeebc520dd0a287d70776710f9c594445822ec1423c0bc3b15ec9e05b27626",
+      "claim_head": "d004a15d088cbc2ad9fd45f2bd6955240b5cee16",
+      "claim_text": "393ee8662066e114d0e8b281f4b5e42246f08fd0e0476c0f766cabed782bb4cd",
       "claim_files": [
         [
           "added",
           "research/two-block-signatures/RESULT.json"
         ]
       ],
-      "claim_files_head": "9417d35f070e2a64b6b174d549013cdcc5233794",
+      "claim_files_head": "d004a15d088cbc2ad9fd45f2bd6955240b5cee16",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6709,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Implement fixed manual financial meter and once-only own settlement source",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6709",
+      "submitted_at": "2026-11-04T04:32:48Z",
+      "updated_at": "2026-11-04T04:39:17Z",
+      "source_commit": "24417a34746985dd110d70a42b2b863b96963c12",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-04T04:32:48Z",
+      "checked_at": "2026-11-04",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }

@@ -5077,7 +5077,7 @@
             "authors": [
               "Cinna Davis"
             ],
-            "bound": "2^(b/(log b)^(0.5 - o(1)))"
+            "bound": "N^(1/(log log N)^(1/2 - o(1)))"
           }
         ],
         "table": "big-o"
