@@ -1151,7 +1151,7 @@
       "primary_submission_url": "https://github.com/jacobalansussman/wht-power-saving-lean/pull/2",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38050668997",
       "verification_source_commit": "837dc3130adc79f7b7ab4ddd56c15576bbd766b0",
-      "credit_note": "chafreaky raises the proved saving to 0.000754736 with the reuse pairing of their CrocSwap #200, applied in #233, in place of #193's pairing, as a pull request to Jacob Sussman's repository. The helper circuit and Lean engine are Sussman's; the pairing needs 69,683 blocks per invocation against 70,169. The reduction is OpenAI's."
+      "credit_note": "chafreaky raises the proved saving to 0.000754736 with the reuse pairing of their CrocSwap #200, applied in #233, in place of #193's pairing, as a pull request to Jacob Sussman's repository. The helper circuit and Lean engine are Jacob Sussman's; the pairing needs 69,683 blocks per invocation against 70,169. The reduction is OpenAI's."
     },
     "jacob-sussman-exact-dft-e8-2026": {
       "checked_at": "2026-10-11",
@@ -1180,7 +1180,7 @@
       "credits": "Jacob Sussman directed Claude agents. README credits icekylinx, ikeboy, jamesyc, eumemic, Chafik Boukhalfa (chafreaky) and OpenAI for prior devices and reductions. Chafik is credited for the late pairing idea, not named as co-author of this new circuit; his program, pairs and certificate were not used.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38106559475",
       "verification_source_commit": "9c94857bbaee886f8649edee0bc2d3c738f9555e",
-      "credit_note": "Jacob Sussman proves saving 0.0008762478 in Lean with a new, much smaller circuit unit found by computer search: 120 bank pairs with 9-bit labels, where the community circuit of Sussman's earlier result has 1,320 bank pairs with 22-bit labels. That earlier circuit is from the CrocSwap contributors. The reduction to every length is OpenAI's."
+      "credit_note": "Jacob Sussman proves saving 0.0008762478 in Lean with a new, much smaller circuit unit found by computer search: 120 bank pairs with 9-bit labels, where the community circuit of Jacob Sussman's earlier result has 1,320 bank pairs with 22-bit labels. That earlier circuit is from the CrocSwap contributors. The reduction to every length is OpenAI's."
     },
     "shea256-exact-dft-complex588-2026": {
       "checked_at": "2026-10-12",
@@ -1307,7 +1307,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/3",
       "direct_submission": true,
       "route": "pull_request",
-      "credit_note": "Nil Mamano's AI agents prove saving 0.0010221076 in Lean, above Jacob Sussman's 0.0008762478. It builds on Sussman's E8 unit, Lean engine and Fourier transfer, with devices from CrocSwap: DaysSky's bridged words, Zhihao Chen's nine-stage layout, David Ganz's entrance gauges, Rohan Arun's ordered promotions, eumemic's enlargements and George Lydakis's bank packing. The reduction is OpenAI's.",
+      "credit_note": "Nil Mamano's AI agents prove saving 0.0010221076 in Lean, above Jacob Sussman's 0.0008762478. It builds on Jacob Sussman's E8 unit, Lean engine and Fourier transfer, with devices from CrocSwap: DaysSky's bridged words, Zhihao Chen's nine-stage layout, David Ganz's entrance gauges, Rohan Arun's ordered promotions, eumemic's enlargements and George Lydakis's bank packing. The reduction is OpenAI's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38142057874",
       "verification": "passed"
     },

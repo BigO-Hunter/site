@@ -911,7 +911,7 @@
       "credits": "Swapnil Jain; builds on Alman and Vassilevska Williams, ImprovedExponents, and the reductions credited in the source README.",
       "license_status": "Apache-2.0; LICENSE and NOTICE retained",
       "notes_url": "https://github.com/Swapnil-jain/threesum-derand/blob/087ece61dd9ef6108441927785b16dfda0e95284/proofs/bands.md",
-      "credit_note": "Swapnil lowers the deterministic exponent from Alman and Vassilevska Williams' 1.9992 to 1.995782 by letting each element of a shared leaf move to any free level below it in its segment, with segments of lengths 8 and 9 in a fixed mix. The method and lemmas are Alman and Vassilevska Williams'; the small primes chosen one at a time follow Chan and Lewenstein. The exact leaf count and pruned encodings are qawbecrdtey's, from ImprovedExponents, which also named the lead that this follows."
+      "credit_note": "Swapnil lowers the deterministic exponent from Josh Alman and Virginia Vassilevska Williams' 1.9992 to 1.995782 by letting each element of a shared leaf move to any free level below it in its segment, with segments of lengths 8 and 9 in a fixed mix. The method and lemmas are theirs; the small primes chosen one at a time follow Chan and Lewenstein. The exact leaf count and pruned encodings are qawbecrdtey's, from ImprovedExponents, which also named the lead that this follows."
     },
     "jihoon-hyun-3sum-2026": {
       "checked_at": "2026-10-10",
@@ -935,7 +935,7 @@
       "credits": "Jihoon Hyun (qawbecrdtey); source credits Claude Fable 5.1 and Claude Opus 5.5 for implementation under his direction, and Alman and Vassilevska Williams for the underlying algorithms and framework.",
       "license_status": "Apache-2.0; LICENSE and NOTICE retained",
       "notes_url": "https://github.com/qawbecrdtey/ImprovedExponents/blob/0725f2477587d67212936777b8a264c9793ac7bb/README.md",
-      "credit_note": "qawbecrdtey lowers the exponent from 1.9992 to 1.99896 in Anthropic's formalization of the Alman and Vassilevska Williams 3SUM result, with better parameters, an exact count of the leaves, the reduction charged at the true middle size and pruned encodings. The README says the Lean was written by Claude Fable 5.1 under the direction of the author."
+      "credit_note": "qawbecrdtey lowers the exponent from 1.9992 to 1.99896 in Anthropic's formalization of the Josh Alman and Virginia Vassilevska Williams 3SUM result, with better parameters, an exact count of the leaves, the reduction charged at the true middle size and pruned encodings. The README says the Lean was written by Claude Fable 5.1 under the direction of the author."
     },
     "prove2me-3sum-1-99913": {
       "checked_at": "2026-10-17",
@@ -995,7 +995,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/14",
       "direct_submission": true,
       "route": "issue",
-      "credit_note": "c0ldzy17 lowers the proved exponent from 1.962 to 1.921 in their own Lean Verified 1.962 proof, with a ternary construction whose implementation charges preprocessing, selected rows, weighted counting, collision cleanup and moment reporting. The construction builds on work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree.",
+      "credit_note": "c0ldzy17 lowers the proved exponent from 1.962 to 1.921 in their own Lean Verified 1.962 proof, with a ternary construction whose implementation charges preprocessing, selected rows, weighted counting, collision cleanup and moment reporting. The construction builds on work of Josh Alman and Virginia Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38739681220",
       "verification": "passed"
     },
@@ -1115,7 +1115,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/4",
       "direct_submission": true,
       "route": "issue",
-      "credit_note": "c0ldzy17 lowers the proved exponent from Anthropic's 1.9992 to 1.962 with a new construction: prime filtering, trimmed subset representations, finite local covers, shared partial zeta transforms, balanced output queries and a charged reporting hierarchy. It uses and adapts work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree.",
+      "credit_note": "c0ldzy17 lowers the proved exponent from Anthropic's 1.9992 to 1.962 with a new construction: prime filtering, trimmed subset representations, finite local covers, shared partial zeta transforms, balanced output queries and a charged reporting hierarchy. It uses and adapts work of Josh Alman and Virginia Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, through qawbecrdtey's ImprovedExponents tree.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/38175066816",
       "verification": "passed"
     },

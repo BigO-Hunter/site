@@ -119,14 +119,14 @@
     },
     "direct-issue-14": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/4",
-      "text": "c0ldzy17 lowers the proved exponent from 1.962 to 1.921 in their own Lean Verified 1.962 proof, with a ternary construction whose implementation charges preprocessing, selected rows, weighted counting, collision cleanup and moment reporting. The construction builds on work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree."
+      "text": "c0ldzy17 lowers the proved exponent from 1.962 to 1.921 in their own Lean Verified 1.962 proof, with a ternary construction whose implementation charges preprocessing, selected rows, weighted counting, collision cleanup and moment reporting. The construction builds on work of Josh Alman and Virginia Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree."
     },
     "direct-issue-8": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/4",
       "text": "Anchen0823 lowers the proved exponent from 1.962 to 1.960614 in c0ldzy17's Lean Verified 1.962 proof, with an expansion of 232, a quartic certificate and parameters supplied by the author, exact integer schedules, and changed execution, cost and resource proofs. The construction is c0ldzy17's; the word-RAM model and compiler sources are Anthropic's."
     },
     "direct-issue-4": {
-      "text": "c0ldzy17 lowers the proved exponent from Anthropic's 1.9992 to 1.962 with a new construction: prime filtering, trimmed subset representations, finite local covers, shared partial zeta transforms, balanced output queries and a charged reporting hierarchy. It uses and adapts work of Alman and Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, obtained through qawbecrdtey's ImprovedExponents tree."
+      "text": "c0ldzy17 lowers the proved exponent from Anthropic's 1.9992 to 1.962 with a new construction: prime filtering, trimmed subset representations, finite local covers, shared partial zeta transforms, balanced output queries and a charged reporting hierarchy. It uses and adapts work of Josh Alman and Virginia Vassilevska Williams; Björklund, Husfeldt, Kaski and Koivisto; and Swapnil. The word-RAM model and compiler come from Anthropic's formalization, through qawbecrdtey's ImprovedExponents tree."
     },
     "direct-pr-29": {
       "text": "Jacob Sussman proves saving 0.0017887045 in Lean with a new recursion that gives the arrays of a circuit jobs of two sizes in a fixed ratio, and a lever that removes 16,576 blocks of rank 48 per round entirely. The circuit is aigent-marius's CrocSwap #2979: its words, run order and dispatch are unchanged. The helper storage table is new, solved with the placement program of Erwan Secousses' #3815. The reduction is OpenAI's."
@@ -135,10 +135,10 @@
       "text": "canghaimeng proves saving 0.00126 in Lean with a new construction of 11,992 live roles and 4,824 helper banks per class. It extends the complex588 development of jeremykothe2 and Ryan Shea, on the community circuit packaged by Dmitri I. Arkhipov. canghaimeng adds the checked scalar adapter, bank schedule, numerical cost certificate and all-length bound. The reduction is OpenAI's."
     },
     "direct-pr-3": {
-      "text": "Nil Mamano's AI agents prove saving 0.0010221076 in Lean, above Jacob Sussman's 0.0008762478. It builds on Sussman's E8 unit, Lean engine and Fourier transfer, with devices from CrocSwap: DaysSky's bridged words, Zhihao Chen's nine-stage layout, David Ganz's entrance gauges, Rohan Arun's ordered promotions, eumemic's enlargements and George Lydakis's bank packing. The reduction is OpenAI's."
+      "text": "Nil Mamano's AI agents prove saving 0.0010221076 in Lean, above Jacob Sussman's 0.0008762478. It builds on Jacob Sussman's E8 unit, Lean engine and Fourier transfer, with devices from CrocSwap: DaysSky's bridged words, Zhihao Chen's nine-stage layout, David Ganz's entrance gauges, Rohan Arun's ordered promotions, eumemic's enlargements and George Lydakis's bank packing. The reduction is OpenAI's."
     },
     "direct-pr-6": {
-      "text": "Li Xuanji proves APSP in time O(n^2.995561) on the word RAM of Anthropic's statement by extending Anthropic's Lean formalization of the Alman and Vassilevska Williams result with deterministic prime-by-prime filtering, two-digit residue lifting and batched tensor slots. The file header says it was prepared with Claude."
+      "text": "Li Xuanji proves APSP in time O(n^2.995561) on the word RAM of Anthropic's statement by extending Anthropic's Lean formalization of the Josh Alman and Virginia Vassilevska Williams result with deterministic prime-by-prime filtering, two-digit residue lifting and batched tensor slots. The file header says it was prepared with Claude."
     },
     "direct-issue-87": {
       "text": "Cinna Davis lowers the bound on the irrationality exponent of Catalan's constant from S. Litsey's \\(532\\) to \\(\\mu(G)\\le 528.23288\\) with a different quadrature node construction, a degree-130 polynomial on a trimmed support, and exact rational certificates. The proof reuses S. Litsey's determinant construction, arithmetic estimates, nonvanishing theorem and energy witnesses. It also builds on OpenAI's irrationality proof and Marcos Costa Santos Carreira's parameterized construction."
