@@ -1900,5 +1900,14 @@
     "authors": [
       "Dmitri I. Arkhipov"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-6716\",\"16521/5000000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.0033) n)` | by THU New Media Research Center· Prof. Shen Yang | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.0033) n)\nPlayer: THU New Media Research Center· Prof. Shen Yang\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-04T18:36:22.223Z",
+    "authors": [
+      "THU New Media Research Center· Prof. Shen Yang"
+    ]
   }
 ]
