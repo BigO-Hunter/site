@@ -126144,7 +126144,7 @@
       "title": "Close the fixed nine-query tariff at 486 using prior geometry (no κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6707",
       "submitted_at": "2026-11-04T01:14:24Z",
-      "updated_at": "2026-11-04T01:14:24Z",
+      "updated_at": "2026-11-04T01:22:03Z",
       "source_commit": "3c2ac6d5e0c12bb308bc29ffcfb5558d0a526213",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-04T01:14:24Z",
@@ -126153,7 +126153,7 @@
       "record_ids": [],
       "note": "No research package kappa claim.",
       "claim_head": "3c2ac6d5e0c12bb308bc29ffcfb5558d0a526213",
-      "claim_text": "ac742e29a11f11af2d986cf200a23b2d29f087374370f1904bbcf2da93496157",
+      "claim_text": "55532b583fa3334cb6c3d962360309cb46a7074e688ac78794faf853657cef5f",
       "claim_files": [
         [
           "added",

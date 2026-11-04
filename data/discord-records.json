@@ -5868,7 +5868,7 @@
         "slug": "other-matroid-prophet",
         "name": "One-sample matroid prophet inequality",
         "url": "https://bigospeedrun.com/other/matroid-prophet",
-        "leader": "canghaimeng:165971304277649481670619/324956758716416046811841770291200",
+        "leader": "darkhipo:\\ge5.114935688794994675\\cdot10^{-10}",
         "table": "other-bounds",
         "direction": "higher",
         "records": [
@@ -5959,6 +5959,28 @@
             ],
             "bound": "E[R] ≥ 5.107·10^(-10) E[OPT]",
             "display": "\\approx5.107\\cdot10^{-10}"
+          },
+          {
+            "id": "darkhipo:\\ge5.110608508730856554\\cdot10^{-10}",
+            "score": "\\ge5.110608508730856554\\cdot10^{-10}",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Dmitri I. Arkhipov"
+            ],
+            "bound": "E[R] ≥ 5.110·10^(-10) E[OPT]",
+            "display": "\\approx5.111\\cdot10^{-10}"
+          },
+          {
+            "id": "darkhipo:\\ge5.114935688794994675\\cdot10^{-10}",
+            "score": "\\ge5.114935688794994675\\cdot10^{-10}",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Dmitri I. Arkhipov"
+            ],
+            "bound": "E[R] ≥ 5.114·10^(-10) E[OPT]",
+            "display": "\\approx5.115\\cdot10^{-10}"
           }
         ]
       },
@@ -6446,7 +6468,7 @@
         "slug": "other-snaky",
         "name": "Snaky",
         "url": "https://bigospeedrun.com/other/snaky",
-        "leader": "shjvandekamp:19",
+        "leader": "direct-issue-137:19",
         "table": "other-bounds",
         "direction": "lower",
         "records": [
@@ -6675,7 +6697,7 @@
         "slug": "other-haldane-gap",
         "name": "Spin-one Haldane gap",
         "url": "https://bigospeedrun.com/other/haldane-gap",
-        "leader": "amachino:0.1515",
+        "leader": "darkhipo:771/5000",
         "table": "other-bounds",
         "direction": "higher",
         "records": [
@@ -6689,6 +6711,17 @@
             ],
             "bound": "γ_L > 0.1515",
             "display": "0.1515"
+          },
+          {
+            "id": "darkhipo:771/5000",
+            "score": "771/5000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Dmitri I. Arkhipov"
+            ],
+            "bound": "γ_L > 0.1542",
+            "display": "0.1542"
           }
         ]
       },
@@ -6820,6 +6853,61 @@
             ],
             "bound": "H_1 ≤ 186",
             "display": "186"
+          }
+        ]
+      },
+      {
+        "slug": "other-critical-line-zeros",
+        "name": "Zeta zeros on the critical line",
+        "url": "https://bigospeedrun.com/other/critical-line-zeros",
+        "leader": "bhattacharjee-bhattacharya:\\tfrac{3125}{3112}\\bigl(H-\\tfrac{7}{3200}\\bigr)",
+        "table": "other-bounds",
+        "direction": "higher",
+        "records": [
+          {
+            "id": "anthropic:\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}",
+            "score": "\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Anthropic"
+            ],
+            "bound": "kappa^(*) ≥ 0.6725",
+            "display": "\\approx0.6725007"
+          },
+          {
+            "id": "ainta:(1{,}345{,}000H-2{,}680)/1{,}340{,}003",
+            "score": "(1{,}345{,}000H-2{,}680)/1{,}340{,}003",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Sunghyeon Jo"
+            ],
+            "bound": "kappa^(*) ≥ 0.673008",
+            "display": "\\approx0.6730085"
+          },
+          {
+            "id": "lamzouri:\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}",
+            "score": "\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Youness Lamzouri"
+            ],
+            "bound": "kappa^(*) ≥ 0.6725",
+            "display": "\\approx0.6725007"
+          },
+          {
+            "id": "bhattacharjee-bhattacharya:\\tfrac{3125}{3112}\\bigl(H-\\tfrac{7}{3200}\\bigr)",
+            "score": "\\tfrac{3125}{3112}\\bigl(H-\\tfrac{7}{3200}\\bigr)",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Deep Bhattacharjee",
+              "Ushashi Bhattacharya"
+            ],
+            "bound": "kappa^(*) ≥ 0.673113",
+            "display": "\\approx0.6731134"
           }
         ]
       }
@@ -7150,7 +7238,10 @@
     "[\"directed-sssp\",\"directed-sssp-2026\",\"n log^3/4 ; n log^11/12\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6702\",\"2061/625000\",\"attained\"]:record",
     "[\"other-snaky\",\"direct-issue-137:19\",\"19\",\"attained\"]:lean",
-    "[\"other-prime-gaps\",\"openai:186\",\"186\",\"attained\"]:record"
+    "[\"other-prime-gaps\",\"openai:186\",\"186\",\"attained\"]:record",
+    "[\"other-matroid-prophet\",\"darkhipo:\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"attained\"]:record",
+    "[\"other-haldane-gap\",\"darkhipo:771/5000\",\"771/5000\",\"attained\"]:record",
+    "[\"other-critical-line-zeros\",\"bhattacharjee-bhattacharya:\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"attained\"]:record"
   ],
   "deferred": [
     {
