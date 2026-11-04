@@ -115,19 +115,27 @@ function exactExponentDown(score:string,cap:number):string {
 }
 // Integer factoring (Lead, 2026-10-30) uses one scale for how subexponential a bound is:
 // score -c is time N^{c+o(1)}, score 0 is N^{o(1)} = 2^{o(b)}, score alpha > 0 is 2^{b/(log b)^{alpha-o(1)}}.
+// Every shown bound is in N (Nil, 2026-11-04): b = log2 N + O(1), so log b = log log N + O(1), and the o(1) in the
+// exponent takes up the constant factors: 2^{b/(log b)^{alpha-o(1)}} = N^{1/(log log N)^{alpha-o(1)}}.
+// A positive score shows as a short fraction (1/2), else as a decimal rounded down.
+function factoringAlpha(score:string,cap:number):string {
+ const [n,d]=score.split('/');
+ if(d!==undefined&&n.length+d.length<=cap)return `${n}/${d}`;
+ return exactExponentDown(score,cap).replace(/^\\frac\{(\d+)\}\{(\d+)\}$/,'$1/$2');
+}
 export function factoringBound(score:string,cap:number=displayDigits.table):string {
  const sign=compare(score,'0');
  if(sign===0)return 'N^{o(1)}';
  if(sign<0)return `N^{${exactExponent(score.slice(1),cap)}+o(1)}`;
- return `2^{b/(\\log b)^{${exactExponentDown(score,cap)}-o(1)}}`;
+ return `N^{1/(\\log\\log N)^{${factoringAlpha(score,cap)}-o(1)}}`;
 }
 // The same bound as plain text, for record posts.
 export function factoringPlainBound(score:string,cap:number=displayDigits.table):string {
- const value=(s:string,down=false)=>(down?exactExponentDown:exactExponent)(s,cap).replace(/^\\frac\{(\d+)\}\{(\d+)\}$/,'$1/$2');
+ const value=(s:string)=>exactExponent(s,cap).replace(/^\\frac\{(\d+)\}\{(\d+)\}$/,'$1/$2');
  const sign=compare(score,'0');
  if(sign===0)return 'N^o(1)';
  if(sign<0)return `N^(${value(score.slice(1))} + o(1))`;
- return `2^(b/(log b)^(${value(score,true)} - o(1)))`;
+ return `N^(1/(log log N)^(${factoringAlpha(score,cap)} - o(1)))`;
 }
 const factoringForm=/N\^|\\log b/;
 export function tableBound(record:{score:string;scoreRelation?:string;bound:string},kappa:boolean,digits:number,cap:number=displayDigits.table):string {

@@ -9,19 +9,21 @@ import type {RecordEntry} from './types.ts';
 
 // Integer factoring scores one scale (Lead, 2026-10-30): N^{c+o(1)} scores -c, N^{o(1)} = 2^{o(b)} scores 0,
 // 2^{b/(log b)^{alpha-o(1)}} scores alpha; higher is better. The classic bound scores -1/5.
+// Every shown bound is in N (Nil, 2026-11-04): a positive alpha shows as N^{1/(log log N)^{alpha-o(1)}}.
 test('factoring bounds show each part of the scale and never claim more than the score',()=>{
  assert.equal(factoringBound('-1/5'),'N^{0.2+o(1)}');
  assert.equal(factoringBound('-1/2'),'N^{0.5+o(1)}');
  assert.equal(factoringBound('-1/3'),'N^{\\frac{1}{3}+o(1)}');
  assert.equal(factoringBound('0'),'N^{o(1)}');
- assert.equal(factoringBound('1/2'),'2^{b/(\\log b)^{0.5-o(1)}}');
+ assert.equal(factoringBound('1/2'),'N^{1/(\\log\\log N)^{1/2-o(1)}}');
+ assert.equal(factoringBound('1/3'),'N^{1/(\\log\\log N)^{1/3-o(1)}}');
  // Rounding goes toward the weaker bound: c up, alpha down.
  assert.equal(factoringBound('-123456789/1000000000',6),'N^{0.12346+o(1)}');
- assert.equal(factoringBound('123456789/1000000000',6),'2^{b/(\\log b)^{0.12345-o(1)}}');
+ assert.equal(factoringBound('123456789/1000000000',6),'N^{1/(\\log\\log N)^{0.12345-o(1)}}');
  assert.equal(factoringPlainBound('-1/5'),'N^(0.2 + o(1))');
  assert.equal(factoringPlainBound('-1/3'),'N^(1/3 + o(1))');
  assert.equal(factoringPlainBound('0'),'N^o(1)');
- assert.equal(factoringPlainBound('1/2'),'2^(b/(log b)^(0.5 - o(1)))');
+ assert.equal(factoringPlainBound('1/2'),'N^(1/(log log N)^(1/2 - o(1)))');
  for(const score of ['-1/5','0','1/2'])assert.equal(tableBound({score,bound:factoringBound(score)},false,0),factoringBound(score));
 });
 
@@ -64,7 +66,7 @@ test('record posts and the landing table handle -1/5',()=>{
  const next={...feedBoard({slug:'integer-factoring',direction:'higher-is-better'},[...records,rate],'Integer Factoring'),table:'big-o' as const};
  const posted=plan(seeded,{schema_version:1,boards:[next]} as any).messages;
  assert.equal(posted.length,1);
- assert.match(posted[0].content,/2\^\(b\/\(log b\)\^\(0\.5 - o\(1\)\)\)/);
+ assert.match(posted[0].content,/`N\^\(1\/\(log log N\)\^\(1\/2 - o\(1\)\)\)`/);
  const landing=(id:string,score:string,extra:Partial<RecordEntry>={})=>({id,score,evidenceLevel:'claimed',date:'2026-10-28T02:58:40Z',repoId:0,dateLabel:'Commit date',...extra} as RecordEntry);
  assert.deepEqual(landingRecords([landing('classic','-1/5',{date:'2026-10-20T00:00:00Z'}),landing('claim','0',{isBreakthrough:true})],'higher-is-better').map(r=>r.id),['classic']);
  assert.deepEqual(landingRecords([landing('classic','-1/5',{date:'2026-10-20T00:00:00Z'}),landing('claim','0')],'higher-is-better').map(r=>r.id),['claim']);
