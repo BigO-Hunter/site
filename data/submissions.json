@@ -126378,6 +126378,33 @@
       "claim_files_head": "a467457692bc9e11113d9b2e2e34ea8ffb553b58",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6717,
+      "author": "thu-nmrc",
+      "author_url": "https://github.com/thu-nmrc",
+      "title": "[codex] Sharp 7q stage-rank budget at arbitrary coupled width",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6717",
+      "submitted_at": "2026-11-04T18:34:03Z",
+      "updated_at": "2026-11-04T18:34:22Z",
+      "source_commit": "3ffc505a1a65772119f131e914ada3aba4cbd401",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-04T18:34:03Z",
+      "checked_at": "2026-11-04",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "3ffc505a1a65772119f131e914ada3aba4cbd401",
+      "claim_text": "37dae538240a25a76380de66f7df3f5b150364595afe2a7b3829aaa742d79403",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-coupled-three-stage-rank-budget/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "3ffc505a1a65772119f131e914ada3aba4cbd401",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
