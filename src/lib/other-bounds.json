@@ -3069,6 +3069,127 @@
         }
       ],
       "bestHandle": "openai"
+    },
+    {
+      "slug": "critical-line-zeros",
+      "name": "Zeta zeros on the critical line",
+      "quantity": "c\\text{ in }\\kappa^{*}\\ge c",
+      "direction": "higher",
+      "statement": "The nontrivial zeros of the Riemann zeta function \\(\\zeta(s)\\) are its zeros \\(\\rho\\) with \\(0<\\operatorname{Re}\\rho<1\\). The critical line is \\(\\operatorname{Re}s=\\tfrac12\\); the Riemann hypothesis says that every nontrivial zero lies on it. A zero of multiplicity \\(m\\) counts \\(m\\) times, and a simple zero is a zero of multiplicity \\(1\\). Let \\(N(T)\\) be the number of nontrivial zeros with \\(0<\\operatorname{Im}\\rho\\le T\\), and let \\(N_0^{s}(T)\\) be the number of those that are simple and lie on the critical line. The quantity is \\(\\kappa^{*}=\\liminf_{T\\to\\infty}N_0^{s}(T)/N(T)\\), the share of the zeros that are simple and on the critical line, in the worst case as \\(T\\) grows. A result is a proof that \\(\\kappa^{*}\\ge c\\), and it must not assume an unproved hypothesis. A higher \\(c\\) is better. Several results below use the Montgomery–Taylor constant \\(H=\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}\\approx0.6725007\\). Under the Riemann hypothesis, larger values are known (for example \\(0.6792\\) by Chirre, Gonçalves and de Laat). Such conditional bounds do not count here. For zeros on the critical line with no condition on multiplicity, the human record before 2026 was \\(0.417293\\) (more than five-twelfths), by the same four authors as the baseline. Anthropic's post gives that record as 41.6%.",
+      "baseline": {
+        "label": "Classic baseline",
+        "by": "Kyle Pratt, Nicolas Robles, Alexandru Zaharescu and Dirk Zeindler",
+        "value": "0.407511",
+        "bound": "\\kappa^{*}\\ge 0.407511",
+        "url": "https://arxiv.org/abs/1802.10521",
+        "date": "2020",
+        "exactValue": "0.407511457"
+      },
+      "claims": [
+        {
+          "author": "Anthropic (Claude)",
+          "handle": "anthropic",
+          "agent": true,
+          "value": "\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}",
+          "display": "\\approx0.6725007",
+          "date": "2026-08-10T17:41:00Z",
+          "dateSource": "https://news.ycombinator.com/item?id=49247070",
+          "dateKind": "first-stated",
+          "url": "https://arxiv.org/abs/2608.13637",
+          "lean": true,
+          "leanNote": "Yes. A Lean 4 proof with no sorry is supplied (Lean v4.33.0-rc2). The authors report only the standard axioms. We have not run it.",
+          "evidence": "claimed",
+          "note": "Anthropic's post of 10 August 2026 says that a research version of Claude found the proof. The paper by Levent Alpöge and Ralph Furman (arXiv:2608.13637) says that Claude discovered and wrote the argument and that the two authors verified it. It proves \\(\\kappa^{*}\\ge2/3\\), and \\(\\kappa^{*}\\ge H\\) with a better choice of test function. The post shows the day only, so the date is the first Hacker News link to the post.",
+          "authors": [
+            {
+              "name": "Anthropic",
+              "url": "https://www.anthropic.com/research/riemann-zeta"
+            }
+          ],
+          "proofScope": "A written proof in a preprint. A Lean 4 proof of the theorem, with no sorry, is in anthropics/formal-math (folder zeta23, Lean v4.33.0-rc2, Mathlib v4.33.0-rc2). Its audit file reports only the axioms propext, Classical.choice and Quot.sound. Our verifier has not run this proof, so the result stays Claimed.",
+          "bound": "\\kappa^{*}\\ge 0.6725"
+        },
+        {
+          "author": "Sunghyeon Jo",
+          "handle": "ainta",
+          "agent": true,
+          "value": "(1{,}345{,}000H-2{,}680)/1{,}340{,}003",
+          "display": "\\approx0.6730085",
+          "date": "2026-08-11T04:31:00Z",
+          "dateSource": "https://github.com/ainta/zeta-simple-zeros/commit/040c5e899e658aed7b56a2a87f501798fe10761d",
+          "dateKind": "first-stated",
+          "url": "https://github.com/ainta/zeta-simple-zeros",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "It keeps the argument of the Claude paper and adds one more term to its main inequality. A computer check in interval arithmetic (arithmetic with guaranteed error bounds) gives a lower bound for seven consecutive zeros. The README says that GPT-5.6 Sol generated the research draft. Here \\(H\\) is the Montgomery–Taylor constant of the statement.",
+          "authors": [
+            {
+              "name": "Sunghyeon Jo",
+              "url": "https://github.com/ainta"
+            }
+          ],
+          "proofScope": "A written proof (a PDF in the repository) with a computer check of one inequality. It is not on arXiv and has no peer review. No Lean proof is supplied, and nobody else has run the check. It builds on the Claude paper, which also has no peer review.",
+          "bound": "\\kappa^{*}\\ge 0.673008"
+        },
+        {
+          "author": "Youness Lamzouri",
+          "handle": "lamzouri",
+          "value": "\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}",
+          "display": "\\approx0.6725007",
+          "date": "2026-09-02T17:56:00Z",
+          "dateSource": "https://arxiv.org/abs/2609.02882v1",
+          "dateKind": "first-stated",
+          "url": "https://arxiv.org/abs/2609.02882",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "A second proof of the same constant \\(H\\) as the Claude paper, with a shorter argument: one inequality replaces the matrix argument of that paper. It also proves that at least \\(0.88762\\) of the zeros are simple or on the critical line.",
+          "authors": [
+            {
+              "name": "Youness Lamzouri",
+              "url": "https://arxiv.org/abs/2609.02882"
+            }
+          ],
+          "proofScope": "A written proof in a preprint. No Lean proof is supplied.",
+          "bound": "\\kappa^{*}\\ge 0.6725"
+        },
+        {
+          "author": "Deep Bhattacharjee and Ushashi Bhattacharya",
+          "handle": "bhattacharjee-bhattacharya",
+          "agent": true,
+          "value": "\\tfrac{3125}{3112}\\bigl(H-\\tfrac{7}{3200}\\bigr)",
+          "display": "\\approx0.6731134",
+          "date": "2026-10-19T17:39:00Z",
+          "dateSource": "https://zenodo.org/records/23480715",
+          "dateKind": "first-stated",
+          "url": "https://zenodo.org/records/23480715",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "A paper and its check programs, published together as one Zenodo record. It builds on Sunghyeon Jo's \\(0.6730085\\) and adds a bound for zeros that are at least \\(11/20\\) of the mean spacing apart. A computer search in interval arithmetic (arithmetic with guaranteed error bounds), with 10,039,560,518 steps, checks one inequality for eight consecutive zeros. The authors say that their AI system Anaxia found the method, and that the method cannot pass \\(0.67357\\). Here \\(H\\) is the Montgomery–Taylor constant of the statement.",
+          "authors": [
+            {
+              "name": "Deep Bhattacharjee",
+              "url": "https://zenodo.org/records/23480715"
+            },
+            {
+              "name": "Ushashi Bhattacharya",
+              "url": "https://zenodo.org/records/23480715"
+            }
+          ],
+          "proofScope": "A written proof with a computer check of one inequality. It is not on arXiv and has no peer review. No Lean proof is supplied, and nobody else has run the check. It builds on Sunghyeon Jo's proof and on the Claude paper, which also have no peer review.",
+          "bound": "\\kappa^{*}\\ge 0.673113"
+        }
+      ],
+      "repos": [
+        {
+          "name": "anthropics/formal-math",
+          "url": "https://github.com/anthropics/formal-math/tree/main/zeta23",
+          "note": "Anthropic's Lean 4 proof (folder zeta23). The README and AUDIT.md give the statements and the axiom check."
+        }
+      ],
+      "bestHandle": "bhattacharjee-bhattacharya"
     }
   ],
   "followups": [
