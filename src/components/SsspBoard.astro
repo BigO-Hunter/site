@@ -30,9 +30,10 @@ const labels:Record<string,string>={'classical-baseline':'Dijkstra + Fibonacci h
 const names:Record<string,string>={...labels,'directed-sssp-2026':'C-HD'};
 const dates:Record<string,string>={};for(const r of records)dates[r.id]=r.date??'9999';
 const model=chartModel(board,labels,dates);
-const W=1000,H=560,L=150,R=30,T=20,B=70;
-const px=(x:number)=>L+(W-L-R)*x/(model.xs.length-1);
-const py=(y:number)=>H-B-(H-T-B)*y/(model.ys.length-1);
+// Positions in percent of the plot area. The labels, points and rings are HTML on top of the plot, so they keep their
+// size and shape when the plot scales to its column (Nil, 2026-11-04: no sideways scrollbar at any width).
+const px=(x:number)=>100*x/(model.xs.length-1);
+const py=(y:number)=>100-100*y/(model.ys.length-1);
 const colors:Record<string,string>={classic:'#2f6fdb',paper:'#e4683a',lean:'#e8a000',lower:'#707070'};
 const paperColor:Record<string,string>={'duan-et-al-stoc-2025':'#e4683a','duan-et-al-icalp-2026':'#1fa67a'};
 const color=(s:{id:string;kind:string})=>paperColor[s.id]??colors[s.kind];
@@ -42,17 +43,17 @@ const receipt=byId.get(cap.row)?.evidenceLevel==='lean-verified'?byId.get(cap.ro
 <section class="sssp-board" aria-label="Results by edge density">
 <h2>Best results by edge density</h2>
 <p>A result with an edge bound <span set:html={math('D(n)')}/> also holds for every sparser graph, so it is listed under its own density and under each sparser one. The first result in each section is the best known at that density.</p>
-<div class="sssp-chart-scroll"><div class="sssp-chart" role="img" aria-label="Best running time by edge density, ordinal axes">
- <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" aria-hidden="true">
-  {model.ys.map((_,y)=><line class="grid" x1={L} x2={W-R} y1={py(y)} y2={py(y)}/>)}
-  {model.xs.map((_,x)=><line class="grid" y1={T} y2={H-B} x1={px(x)} x2={px(x)}/>)}
-  {model.series.map(s=><polyline fill="none" stroke={color(s)} stroke-width="3" stroke-dasharray={s.dashed?'8 6':undefined} points={s.points.map(p=>`${px(p.x)},${py(p.y)}`).join(' ')}/>)}
-  {model.series.map(s=>s.points.map(p=><circle cx={px(p.x)} cy={py(p.y)} r="5" fill={color(s)} stroke="var(--bg)" stroke-width="1.5"/>))}
-  {model.markers.map(m=><circle cx={px(m.x)} cy={py(m.y)} r="10" fill="none" stroke="var(--lean-verified)" stroke-width="3"/>)}
+<div class="sssp-chart-box"><div class="sssp-chart" role="img" aria-label="Best running time by edge density, ordinal axes"><div class="plot">
+ <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+  {model.ys.map((_,y)=><line class="grid" x1="0" x2="100" y1={py(y)} y2={py(y)} vector-effect="non-scaling-stroke"/>)}
+  {model.xs.map((_,x)=><line class="grid" y1="0" y2="100" x1={px(x)} x2={px(x)} vector-effect="non-scaling-stroke"/>)}
+  {model.series.map(s=><polyline fill="none" stroke={color(s)} stroke-width="3" stroke-dasharray={s.dashed?'8 6':undefined} vector-effect="non-scaling-stroke" points={s.points.map(p=>`${px(p.x)},${py(p.y)}`).join(' ')}/>)}
  </svg>
- {model.ys.map((y,i)=><div class="ylab" style={`top:${100*py(i)/H}%`} set:html={math(y)}/>)}
- {model.xs.map((x,i)=><div class="xlab" style={`left:${100*px(i)/W}%`} set:html={math(x)}/>)}
-</div></div>
+ {model.series.map(s=>s.points.map(p=><span class="dot" style={`left:${px(p.x)}%;top:${py(p.y)}%;background:${color(s)}`}/>))}
+ {model.markers.map(m=><span class="ring" style={`left:${px(m.x)}%;top:${py(m.y)}%`}/>)}
+ {model.ys.map((y,i)=><div class="ylab" style={`top:${py(i)}%`} set:html={math(y)}/>)}
+ {model.xs.map((x,i)=><div class="xlab" style={`left:${px(i)}%`} set:html={math(x)}/>)}
+</div></div></div>
 <ul class="sssp-legend">
  {model.series.map(s=><li><span class="swatch" style={`background:${color(s)}`}/>{s.kind==='lower'?<span set:html={math(s.label)}/>:s.label}</li>)}
 </ul>
@@ -70,10 +71,29 @@ const receipt=byId.get(cap.row)?.evidenceLevel==='lean-verified'?byId.get(cap.ro
 </section>)}
 </section>
 <style>
-.sssp-board{margin:1.5rem 0}.sssp-chart-scroll{overflow-x:auto;max-width:64rem}.sssp-chart{position:relative;width:100%;min-width:46rem;aspect-ratio:1000/560;margin:1rem 0 0}
-.sssp-chart svg{position:absolute;inset:0;width:100%;height:100%}.sssp-chart .grid{stroke:var(--border,#ddd);stroke-width:1}
-.ylab{position:absolute;left:0;width:14.5%;transform:translateY(-50%);text-align:right;font-size:.8rem;white-space:nowrap}
-.xlab{position:absolute;bottom:0;transform:translateX(-50%);font-size:.75rem;white-space:nowrap}
+.sssp-board{margin:1.5rem 0}
+/* The chart fits its column at every width. Wide: the axis labels are level. Narrow (the chart under 62rem): smaller
+   labels, and the density labels turn 60 degrees so that each one shows complete. */
+.sssp-chart-box{container-type:inline-size;max-width:64rem;margin:1rem 0 0}
+.sssp-chart{padding:.8rem 2.8rem 2.4rem 7.6rem}
+.plot{position:relative;height:max(17rem,40cqi)}
+.plot svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.plot .grid{stroke:var(--border,#ddd);stroke-width:1}
+.dot,.ring{position:absolute;border-radius:50%;transform:translate(-50%,-50%)}
+.dot{width:10px;height:10px;box-shadow:0 0 0 1.5px var(--bg)}.ring{width:17px;height:17px;border:3px solid var(--lean-verified)}
+.ylab{position:absolute;right:100%;margin-right:.5rem;transform:translateY(-50%);font-size:.8rem;white-space:nowrap}
+.xlab{position:absolute;top:100%;margin-top:.8rem;transform:translateX(-50%);font-size:.75rem;white-space:nowrap}
+@container (max-width:62rem){
+ .sssp-chart{padding:.8rem 1.4rem 7.3rem 5.6rem}
+ .ylab{font-size:.7rem;margin-right:.35rem}
+ .xlab{margin-top:.3rem;transform:translateX(-100%) rotate(-60deg);transform-origin:100% 0}
+}
 .sssp-legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;list-style:none;padding:0;margin:.6rem 0}.swatch{display:inline-block;width:1.4rem;height:.3rem;margin-right:.4rem;vertical-align:middle}
 .sssp-note{font-size:.9rem;max-width:64rem}.density h3{font-size:1.05rem;margin:1.2rem 0 .4rem}.density tr.best td{font-weight:600}.from,.credit{font-weight:400;font-size:.85rem}.credit{margin:.2rem 0 0}
+/* Phones: one card per result, so the tables fit the screen too. */
+@media(max-width:720px){
+ .density table,.density tbody{display:block}.density thead{display:none}
+ .density tr{display:grid;grid-template-columns:minmax(0,1fr);border-bottom:1px solid var(--line);padding:.4rem 0}.density tr:last-child{border-bottom:0}
+ .density td{border:0;padding:.3rem .8rem;min-width:0;overflow-wrap:anywhere}.density td.bound{white-space:normal}
+ .density td:nth-child(4)::before{content:'Date: ';font-weight:600}
+}
 </style>
