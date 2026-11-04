@@ -126163,6 +126163,33 @@
       "claim_files_head": "3c2ac6d5e0c12bb308bc29ffcfb5558d0a526213",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6708,
+      "author": "SHIN09-git",
+      "author_url": "https://github.com/SHIN09-git",
+      "title": "Classify two-block decoder signatures and count all six-port patterns",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6708",
+      "submitted_at": "2026-11-04T04:08:55Z",
+      "updated_at": "2026-11-04T04:08:55Z",
+      "source_commit": "9417d35f070e2a64b6b174d549013cdcc5233794",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-04T04:08:55Z",
+      "checked_at": "2026-11-04",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "9417d35f070e2a64b6b174d549013cdcc5233794",
+      "claim_text": "bdbeebc520dd0a287d70776710f9c594445822ec1423c0bc3b15ec9e05b27626",
+      "claim_files": [
+        [
+          "added",
+          "research/two-block-signatures/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "9417d35f070e2a64b6b174d549013cdcc5233794",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
