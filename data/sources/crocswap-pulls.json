@@ -130051,5 +130051,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6714,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6714",
+    "title": "Prove the sharp three-qubit Clifford tensor threshold T(3)=10",
+    "state": "open",
+    "created_at": "2026-11-04T09:15:12Z",
+    "updated_at": "2026-11-04T09:15:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "alephnan",
+      "html_url": "https://github.com/alephnan"
+    },
+    "head": {
+      "sha": "f7f32a18dde54e67624a9ed9cc7e1b266d9585c0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

@@ -5036,7 +5036,7 @@
             "authors": [
               "OpenAI"
             ],
-            "bound": "O*(2^(n/(log n)^(0.5 - o(1))))"
+            "bound": "O*(2^(n/(log n)^(1/2 - o(1))))"
           },
           {
             "id": "anthropic-eth-2026",
@@ -5046,7 +5046,7 @@
             "authors": [
               "Anthropic"
             ],
-            "bound": "O*(2^(n/(log n)^(0.5 - o(1))))"
+            "bound": "O*(2^(n/(log n)^(1/2 - o(1))))"
           }
         ],
         "table": "big-o"

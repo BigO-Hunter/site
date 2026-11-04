@@ -126252,7 +126252,11 @@
       "checked_at": "2026-11-04",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "b505c6cf6121d1fc12cfa4baf3093305dae0ba07",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6712,
@@ -126295,6 +126299,33 @@
       "claim_text": "ad7f05609a0fbd94de6f2cee9df395601634328bd25215aedfc263582e4b8716",
       "claim_files": [],
       "claim_files_head": "cd666f05c4e9006025b634687cc493911c8371c8",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6714,
+      "author": "alephnan",
+      "author_url": "https://github.com/alephnan",
+      "title": "Prove the sharp three-qubit Clifford tensor threshold T(3)=10",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6714",
+      "submitted_at": "2026-11-04T09:15:12Z",
+      "updated_at": "2026-11-04T09:15:12Z",
+      "source_commit": "f7f32a18dde54e67624a9ed9cc7e1b266d9585c0",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-04T09:15:12Z",
+      "checked_at": "2026-11-04",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "f7f32a18dde54e67624a9ed9cc7e1b266d9585c0",
+      "claim_text": "1995b2a0b606962eb9a7d7d6ad62e0a9ac201074ad17084cf86f90ffab071b53",
+      "claim_files": [
+        [
+          "added",
+          "research/clifford-three-qubit-threshold/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "f7f32a18dde54e67624a9ed9cc7e1b266d9585c0",
       "claim_files_base": "main",
       "claim_files_result": true
     }
