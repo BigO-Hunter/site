@@ -130009,5 +130009,47 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6712,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6712",
+    "title": "Price monomial guard headers with sharp ternary row-addition budgets (no κ)",
+    "state": "open",
+    "created_at": "2026-11-04T06:49:34Z",
+    "updated_at": "2026-11-04T07:09:20Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "SHIN09-git",
+      "html_url": "https://github.com/SHIN09-git"
+    },
+    "head": {
+      "sha": "03caa7f6cb5bd21c834024e9d81f6b43eb325b91"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6713,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6713",
+    "title": "Make the fixed-height direct-flow recurrence bound fully effective",
+    "state": "open",
+    "created_at": "2026-11-04T07:13:18Z",
+    "updated_at": "2026-11-04T07:13:18Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "alephnan",
+      "html_url": "https://github.com/alephnan"
+    },
+    "head": {
+      "sha": "cd666f05c4e9006025b634687cc493911c8371c8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
