@@ -1095,5 +1095,15 @@
     "status": "posted",
     "at": "2026-11-03T13:37:40.489Z",
     "id": "2117612174424293408"
+  },
+  "[\"integer-multiplication\",\"crocswap-pr-6702\",\"2061/625000\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-04T00:37:45.676Z",
+    "reason": "reserved before API send"
+  },
+  "[\"other-snaky\",\"direct-issue-137:19\",\"19\",\"attained\"]:lean": {
+    "status": "unknown",
+    "at": "2026-11-04T00:37:45.676Z",
+    "reason": "reserved before API send"
   }
 }
