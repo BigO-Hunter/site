@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-04T04:38:50Z",
+    "updated_at": "2026-11-04T05:55:24Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -129962,6 +129962,48 @@
     },
     "head": {
       "sha": "24417a34746985dd110d70a42b2b863b96963c12"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6710,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6710",
+    "title": "Classify when common-image full guards can fall below independence (no κ)",
+    "state": "open",
+    "created_at": "2026-11-04T05:33:24Z",
+    "updated_at": "2026-11-04T05:48:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "SHIN09-git",
+      "html_url": "https://github.com/SHIN09-git"
+    },
+    "head": {
+      "sha": "465a0060fbd236a5e202619de4a45a694d44970a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6711,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6711",
+    "title": "research: bootstrap acquisition driver and accepted HEAD-absent diagnostic",
+    "state": "open",
+    "created_at": "2026-11-04T05:49:39Z",
+    "updated_at": "2026-11-04T05:55:25Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "b505c6cf6121d1fc12cfa4baf3093305dae0ba07"
     },
     "base": {
       "ref": "main"
