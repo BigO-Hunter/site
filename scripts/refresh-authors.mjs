@@ -57,6 +57,18 @@ for (const problem of registry.problems) {
     if (login) logins.add(login.toLowerCase());
   }
 }
+// Other bounds claims (Nil, 2026-11-04): an author with a GitHub profile url (no deeper path) gets that profile's
+// avatar, so the logins of hand-added, prove2.me and direct claims are checked too.
+const profileLogin = url => typeof url === 'string' ? url.match(/^https:\/\/github\.com\/([A-Za-z0-9-]+)\/?$/)?.[1] : undefined;
+const addProfileLogins = value => {
+  if (Array.isArray(value)) value.forEach(addProfileLogins);
+  else if (value && typeof value === 'object') {
+    if (Array.isArray(value.authors)) for (const author of value.authors) { const login = profileLogin(author?.url); if (login) logins.add(login.toLowerCase()); }
+    Object.values(value).forEach(addProfileLogins);
+  }
+};
+for (const file of ['src/lib/other-bounds.json', 'src/data/prove2me.json', 'src/data/direct-other.json'])
+  if (existsSync(file)) addProfileLogins(JSON.parse(readFileSync(file, 'utf8')));
 let failures = 0;
 for (const login of [...logins].sort()) {
   try {

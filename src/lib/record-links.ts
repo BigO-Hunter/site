@@ -4,11 +4,22 @@ import {receiptPageUrl} from './receipt.ts';
 import {profileName} from './profile-name.ts';
 
 type Profile = {login: string; name: string; twitter_username: string | null};
+// The login of a GitHub profile url (https://github.com/<login>, no deeper path); undefined for any other url.
+// Avatars match only this way, never by name (Nil, 2026-11-04: the same person always looks the same).
+export function githubProfileLogin(url?: string): string | undefined {
+ return url?.match(/^https:\/\/github\.com\/([A-Za-z0-9-]+)\/?$/)?.[1];
+}
+// The author with the stored avatar of its GitHub profile url, when there is one. The name stays as written.
+export function withGithubAvatar<T extends Link & {avatar?: string}>(author: T, avatars: Record<string, string>): T & {avatar?: string} {
+ const login = githubProfileLogin(author.url);
+ const avatar = login ? avatars[login.toLowerCase()] : undefined;
+ return avatar ? {...author, avatar} : author;
+}
 export function authorFromProfile(author: Link, profiles: Record<string, Profile>, avatars: Record<string, string> = {}): Author {
  const login = author.url?.match(/^https:\/\/github\.com\/([^/?#]+)/)?.[1];
  if (!login) return author;
  const profile = profiles[login.toLowerCase()];
- const avatar = avatars[login.toLowerCase()];
+ const avatar = githubProfileLogin(author.url) ? avatars[login.toLowerCase()] : undefined;
  return {name: profileName(profile?.name, login), login: profile?.login || login,
   url: `https://github.com/${profile?.login || login}`,
   twitterUsername: profile?.twitter_username || undefined, ...(avatar ? {avatar} : {})};

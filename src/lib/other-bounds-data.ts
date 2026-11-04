@@ -6,12 +6,16 @@
 import data from './other-bounds.json';
 import profiles from './author-profiles.json';
 import avatars from './author-avatars.json';
-import {authorFromProfile} from './record-links';
+import {authorFromProfile, withGithubAvatar} from './record-links';
 import {mergeProve2me, mergeDirect, applyReviews, type ReviewState} from './other-merge';
 const files = import.meta.glob('../data/prove2me.json', {eager: true, import: 'default'});
 // Lean Verified direct submissions to the verifier for Other bounds rows (data/direct_refresh.py).
 const direct = import.meta.glob('../data/direct-other.json', {eager: true, import: 'default'});
 const reviews = import.meta.glob('../data/other-reviews.json', {eager: true, import: 'default'});
-export default applyReviews(mergeDirect(mergeProve2me(data, files['../data/prove2me.json'] as Parameters<typeof mergeProve2me>[1]),
+const merged = applyReviews(mergeDirect(mergeProve2me(data, files['../data/prove2me.json'] as Parameters<typeof mergeProve2me>[1]),
   direct['../data/direct-other.json'] as Parameters<typeof mergeDirect>[1], author => authorFromProfile(author, profiles, avatars)),
   reviews['../data/other-reviews.json'] as ReviewState | undefined);
+// Every claim author with a GitHub profile url gets that profile's avatar, also a hand-added claim (Nil, 2026-11-04:
+// darkhipo had his avatar on Snaky, a direct row, and initials on Haldane, a claim in other-bounds.json).
+export default {...merged, families: merged.families.map(family => ({...family,
+  claims: family.claims.map(claim => ({...claim, authors: claim.authors.map(author => withGithubAvatar(author, avatars))}))}))};
