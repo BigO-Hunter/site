@@ -1097,13 +1097,13 @@
     "id": "2117612174424293408"
   },
   "[\"integer-multiplication\",\"crocswap-pr-6702\",\"2061/625000\",\"attained\"]:record": {
-    "status": "unknown",
-    "at": "2026-11-04T00:37:45.676Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-04T00:37:47.290Z",
+    "id": "2117778297325273262"
   },
   "[\"other-snaky\",\"direct-issue-137:19\",\"19\",\"attained\"]:lean": {
-    "status": "unknown",
-    "at": "2026-11-04T00:37:45.676Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-04T00:37:49.461Z",
+    "id": "2117778306510848152"
   }
 }
