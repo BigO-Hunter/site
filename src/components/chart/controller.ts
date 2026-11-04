@@ -2,7 +2,7 @@ import {getEvidenceLevels} from '../../lib/evidence-filters';
 import { breakthroughLabel } from '../../lib/evidence';
 import { chartWindow, chartWindowScale, chartTimeTicks, chartMaxDays, scoreValue, type ChartEntry } from '../../lib/chart';
 interface Payload {
- entries: ChartEntry[]; higher: boolean; limit: number; classic?: number;
+ entries: ChartEntry[]; higher: boolean; limit?: number; classic?: number; integer?: boolean;
  // KaTeX renders at build time; the browser looks up each tick label by its TeX.
  tickHtml: Record<string,string>;
  levels: Record<string,string>;
@@ -124,11 +124,11 @@ class ProgressChart extends HTMLElement {
   this.showEntry(mark.entry,mark.x,mark.y,this.clientWidth,plot.getBoundingClientRect().height);
  }
  private draw(){
-  const {entries,higher,limit,classic}=this.data;
+  const {entries,higher,limit,classic,integer}=this.data;
   const levels=new Set(this.levels);
   const view=chartWindow(entries,levels,higher,this.days*24);
   const {start,end,carry,records}=view;
-  const scale=chartWindowScale(view,limit,this.days>0,classic);
+  const scale=chartWindowScale(view,limit,this.days>0,classic,integer);
   this.querySelectorAll('[data-scale-name]').forEach(label=>label.textContent=scale.log?'log':'linear');
   const plot=this.querySelector<SVGSVGElement>('svg.progress-svg')!;
   const labels=this.querySelector<HTMLElement>('.plot-labels')!;
@@ -171,9 +171,10 @@ class ProgressChart extends HTMLElement {
    plot.append(svg('line',{x1:left,x2:right,y1:py,y2:py,class:'plot-grid'}));
    label.style.left=`${left}px`;label.style.top=`${py}px`;
   }
-  reference.hidden=classic!==undefined||this.days>0;
-  if(classic!==undefined||this.days===0){
-   const limitY=y(classic??limit);
+  // An Other bounds page without a classic bound has no limit and no dashed line.
+  reference.hidden=classic!==undefined||this.days>0||limit===undefined;
+  if(classic!==undefined||(this.days===0&&limit!==undefined)){
+   const limitY=y((classic??limit)!);
    plot.append(svg('line',{x1:left,x2:right,y1:limitY,y2:limitY,class:'plot-limit'}));
    reference.style.left=`${left}px`;
    reference.style.top=`${Math.max(0,limitY-28)}px`;

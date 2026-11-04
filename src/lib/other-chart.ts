@@ -1,0 +1,82 @@
+// The record chart of an Other bounds page (Nil, 2026-11-04: "Snaky should have a plot like big O bounds"): the chart
+// of the Big O boards (chart.ts), drawn from the rows of the table. A page gets one only when every row of its table has
+// a number that the ranking reads (other-rank.ts otherClaimNumber), and a Classic baseline has one too: a value such
+// as +\infty, \log(20)/784 or A d^p has no point on an axis. Each point carries an exact score, so the chart ranks
+// by the rules of the Big O boards (ranking.ts), which give the order of the table for the same numbers.
+import {initials} from './avatars.ts';
+import {otherClaimNumber} from './other-rank.ts';
+import {otherTableRows, isTableBreakthrough, isClassicBaseline, shownLevel} from './other-table.ts';
+import type {ChartEntry} from './chart.ts';
+
+type Author = {name: string; avatar?: string};
+type Claim = {handle: string; display: string; value: string; bound: string; date: string; dateKind?: string; url: string;
+  evidence?: string; agent?: boolean; authors: Author[]};
+type Family = {direction: string; claims: Claim[];
+  baseline: {label?: string; value: string; display?: string; exactValue: string; bound: string; url: string; date: string}};
+
+const fraction = (text: string) => /^\s*(\d+)\s*\/\s*(\d+)\s*$/.exec(text);
+const whole = (text: string) => /^\s*(\d+)\s*$/.exec(text);
+
+// The number as an exact score "n" or "n/d": the shortest decimal that gives the same float.
+export function exactScore(value: number): string {
+  const [mantissa, exponent] = value.toExponential().split('e');
+  const sign = mantissa.startsWith('-') ? '-' : '';
+  const [int, frac = ''] = mantissa.replace('-', '').split('.');
+  const shift = Number(exponent) - frac.length;
+  const digits = BigInt(int + frac);
+  return shift >= 0 ? sign + (digits * 10n ** BigInt(shift)) : sign + digits + '/' + 10n ** BigInt(-shift);
+}
+
+// The score of a row: its exact fraction or integer when that agrees with the number the ranking reads, else that
+// number. Null when the ranking reads no number.
+export function claimScore(claim: Pick<Claim, 'display' | 'value'>): string | null {
+  const number = otherClaimNumber(claim);
+  if (number === null || !Number.isFinite(number)) return null;
+  const exact = fraction(claim.value);
+  if (exact && BigInt(exact[2]) !== 0n && Math.abs(Number(exact[1]) / Number(exact[2]) - number) <= 1e-6 * Math.abs(number)) return exact[1] + '/' + exact[2];
+  const integer = whole(claim.value);
+  if (integer && Number(integer[1]) === number) return integer[1];
+  return exactScore(number);
+}
+
+// The classic bound for the dashed line, or undefined for a row whose baseline is OpenAI's release (it is a row).
+const classicNumber = (family: Family) => otherClaimNumber({display: family.baseline.display ?? family.baseline.value, value: family.baseline.exactValue});
+
+// `integer`: every point and the classic bound are whole numbers, so the axis shows whole-number ticks only.
+// A unique id per table row. One author has several rows (one handle), and chartRecords starts a new step only when
+// the id changes, so the handle alone would drop a step where an author beats their own row. The id is the handle and
+// the exact value, as in records-feed.ts; a second row with both the same also gets its place in the table.
+export function otherChartIds(rows: Pick<Claim, 'handle' | 'value'>[]): string[] {
+  const seen = new Set<string>();
+  return rows.map((claim, i) => {
+    const id = claim.handle + ':' + claim.value;
+    const unique = seen.has(id) ? id + '#' + i : id;
+    seen.add(unique);
+    return unique;
+  });
+}
+
+export type OtherChart = {entries: ChartEntry[]; higher: boolean; classic?: number; classicBound?: string; omitted: number; integer: boolean};
+
+// The chart of a page, or undefined when a row has no number. `reviewed` says whether a claim's review pull request
+// is known (the page's Human Verified link), as for the level the table shows; `render` makes the HTML of a bound.
+// A row dated by a snapshot (the day we read it) stays in the table only, as an Observed date on the Big O boards.
+export function otherChart(family: Family, reviewed: (claim: object) => boolean, render: (tex: string) => string = tex => tex): OtherChart | undefined {
+  const rows = otherTableRows(family).map(r => r.claim);
+  const scores = rows.map(claimScore);
+  const ids = otherChartIds(rows);
+  if (!rows.length || scores.some(s => s === null)) return undefined;
+  const classic = isClassicBaseline(family.baseline) ? classicNumber(family) : undefined;
+  if (isClassicBaseline(family.baseline) && (classic === null || classic === undefined)) return undefined;
+  const entries = rows.flatMap((claim, i): ChartEntry[] => {
+    if (claim.dateKind === 'snapshot') return [];
+    const author = claim.authors[0] as Author | undefined;
+    const date = new Date(claim.date).toISOString();
+    return [{id: ids[i], repoId: i, score: scores[i]!, level: shownLevel(claim, reviewed(claim)), time: Date.parse(date), date,
+      author: claim.authors.map(a => a.name).join(', '), boundHtml: render(claim.bound), url: claim.url,
+      isBreakthrough: isTableBreakthrough(family as never, claim), avatar: author?.avatar, initials: initials(author?.name ?? '')}];
+  });
+  return {entries, higher: family.direction === 'higher', classic: classic ?? undefined,
+    classicBound: classic === undefined ? undefined : family.baseline.bound, omitted: rows.length - entries.length,
+    integer: entries.every(e => /^\d+$/.test(e.score)) && (classic === undefined || classic === null || Number.isInteger(classic))};
+}

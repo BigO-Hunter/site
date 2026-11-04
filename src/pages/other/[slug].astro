@@ -1,10 +1,12 @@
 ---
 import AuthorList from '../../components/AuthorList.astro';
 import EvidenceBoard from '../../components/EvidenceBoard.astro';
+import ProgressChart from '../../components/ProgressChart.astro';
 import Layout from '../../layouts/Layout.astro';
 import data from '../../lib/other-bounds-data';
 import {math, inlineMath} from '../../lib/math';
 import {sourceLinks} from '../../lib/source-links';
+import {otherChart} from '../../lib/other-chart';
 import {localTimeFallback} from '../../lib/freshness';
 import {boardUrl} from '../../lib/board';
 import {otherTableRows, isTableBreakthrough, shownLevel} from '../../lib/other-table';
@@ -21,6 +23,8 @@ const ranked=otherTableRows(f);
 const repo=(f as {reviewRepository?:OtherReviewRepository}).reviewRepository;
 // The merged pull request a Human Verified claim links to.
 const reviewUrl=(c:object)=>{const review=(c as {review?:OtherClaimReview}).review;return repo&&review?otherReviewPrUrl(repo,review):undefined;};
+// The record chart of the Big O boards, when every row has a number (other-chart.ts; Nil, 2026-11-04).
+const chart=otherChart(f,c=>Boolean(reviewUrl(c)),tex=>math(tex));
 ---
 <Layout title={f.name}>
   {'nameMath' in f&&f.nameMath?<h1 set:html={inlineMath(f.nameMath)}/>:<h1>{f.name}</h1>}
@@ -48,6 +52,7 @@ const reviewUrl=(c:object)=>{const review=(c as {review?:OtherClaimReview}).revi
     </tr>)}</tbody>
   </table></div>
   </EvidenceBoard>
+  {chart&&<ProgressChart label={f.name} other={{...chart,quantity:f.quantity}}/>}
   {f.repos.length>0&&<section class="repos"><h2>Relevant repos</h2><ul>{f.repos.map(r=><li><a href={r.url} target="_blank" rel="noopener">{r.name}</a>{'note' in r&&r.note&&<>: <span set:html={inlineMath(r.note)}/></>}</li>)}</ul></section>}
 </Layout>
 <style>

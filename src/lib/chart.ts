@@ -69,19 +69,20 @@ export function chartTimeTicks(start:number,end:number,maxTicks:number) {
  return {showTimes:true,times};
 }
 
-export function chartWindowScale(view: ReturnType<typeof chartWindow>, limit: number, zoomed: boolean, classic?: number) {
+// `integer`: every value is a whole number (a count, such as Snaky's moves), so the linear ticks are whole numbers too.
+export function chartWindowScale(view: ReturnType<typeof chartWindow>, limit: number | undefined, zoomed: boolean, classic?: number, integer = false) {
  // Polynomial races have tiny improvements near the classic exponent. Keep
  // their distant trivial limit outside the axis, and retain the entering record
  // so zoom never clips the horizontal line or hides its next improvement.
  if(classic!==undefined){
   const records=[...(view.carry?[view.carry]:[]),...view.records];
-  return chartScale(records.map(r=>scoreValue(r.score)),classic);
+  return chartScale(records.map(r=>scoreValue(r.score)),classic,integer);
  }
  const records=view.records.length?view.records:view.carry?[view.carry]:[];
- return chartScale(records.map(r=>scoreValue(r.score)),zoomed?undefined:limit);
+ return chartScale(records.map(r=>scoreValue(r.score)),zoomed?undefined:limit,integer);
 }
 
-export function chartScale(values: number[], limit?: number) {
+export function chartScale(values: number[], limit?: number, integer = false) {
  const all = limit===undefined?[...values]:[...values,limit];
  if(!all.length)all.push(0);
  const min = Math.min(...all), max = Math.max(...all);
@@ -95,7 +96,7 @@ export function chartScale(values: number[], limit?: number) {
   return { log, lo: lo-.2, hi: hi+.35, ticks: ticks.map(e=>({value:10**e,tex:e===0?'1':`10^{${e}}`})) };
  }
  const span = max-min || Math.abs(max)*.1 || 1;
- const step = 10**Math.floor(Math.log10(span/4));
+ const step = Math.max(integer?1:0, 10**Math.floor(Math.log10(span/4)));
  const nice = [1,2,5,10].map(n=>n*step).find(n=>span/n<=5)!;
  const lo = Math.floor(min/nice)*nice, hi = Math.ceil(max/nice)*nice;
  const ticks = [];
