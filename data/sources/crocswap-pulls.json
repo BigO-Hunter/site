@@ -130135,5 +130135,68 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6718,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6718",
+    "title": "Independent written audit of the Clifford even-sector proof (conditional; no κ)",
+    "state": "open",
+    "created_at": "2026-11-04T19:45:44Z",
+    "updated_at": "2026-11-04T19:45:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "5bb0907fc5d07be1ff1adcadd10e5e7ccb03bb83"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6719,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6719",
+    "title": "[codex] Physically lower delayed-cover batch split and return",
+    "state": "open",
+    "created_at": "2026-11-04T19:59:01Z",
+    "updated_at": "2026-11-04T20:16:16Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "thu-nmrc",
+      "html_url": "https://github.com/thu-nmrc"
+    },
+    "head": {
+      "sha": "a7a22201327689fc81496cf031d68e53283fef49"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6720,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6720",
+    "title": "Independently audit cut 353 and all 35 retired P104 inputs (no κ)",
+    "state": "open",
+    "created_at": "2026-11-04T20:10:38Z",
+    "updated_at": "2026-11-04T20:10:38Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "2c25dcd8b7a6f382d11245f8907b391803388565"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
