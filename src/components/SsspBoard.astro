@@ -6,6 +6,7 @@ import {math} from '../lib/math';
 import {evidenceName,breakthroughLabel} from '../lib/evidence';
 import RecordDate from './RecordDate.astro';
 import AuthorList from './AuthorList.astro';
+import InfoTooltip from './InfoTooltip.astro';
 import {density,parse,parseFunction,timeAt,lexCmp,latex,plain,D_NAMES,type Q} from '../lib/sssp';
 import {chartModel} from '../lib/sssp-chart';
 interface Props {records:RecordEntry[];classic?:RecordEntry;}
@@ -62,7 +63,7 @@ const receipt=byId.get(cap.row)?.evidenceLevel==='lean-verified'?byId.get(cap.ro
  <h3>Graphs with <span set:html={math(`m\\le ${latex(s.d,D_NAMES)}`)}/></h3>
  <div class="results-scroll"><table><thead><tr><th scope="col">Time</th><th scope="col">Evidence level</th><th scope="col">Result</th><th scope="col">Date</th></tr></thead><tbody>
  {s.rows.map(r=><tr data-level={r.record.evidenceLevel} class:list={{best:r.best}}>
-  <td class="bound"><span set:html={math(`O(${latex(r.t)})`)}/>{r.from&&<span class="from"> (from <span set:html={math(`m\\le ${latex(r.from,D_NAMES)}`)}/>)</span>}</td>
+  <td class="bound"><span set:html={math(`O(${latex(r.t)})`)}/>{r.from&&<span class="from"> (from <span set:html={math(`m\\le ${latex(r.from,D_NAMES)}`)}/>)</span>}{r.best&&r.record.methodNote&&<span class="assumptions"><InfoTooltip label="About this bound"><div class="tip-part"><strong class="tip-head">How it is proved</strong>{' '}{r.record.methodNote}</div></InfoTooltip></span>}</td>
   <td><a href={r.record.evidenceUrl}>{evidenceName(r.record.evidenceLevel)}</a>{r.record.isBreakthrough&&<span class="breakthrough"> · {breakthroughLabel}</span>}</td>
   <td><strong class="name">{names[r.id]??r.record.title}</strong> <AuthorList authors={r.record.authors}/>{r.record.creditNote&&<p class="credit">{r.record.creditNote}</p>}{r.record.predecessors?.map((u:string)=><p class="credit"><a href={u}>Proof source</a></p>)}</td>
   <td>{r.record.id==='classical-baseline'?'1987':<RecordDate record={r.record}/>}</td>
@@ -72,6 +73,8 @@ const receipt=byId.get(cap.row)?.evidenceLevel==='lean-verified'?byId.get(cap.ro
 </section>
 <style>
 .sssp-board{margin:1.5rem 0}
+/* The "How it is proved" tooltip of a section's best row, as RecordTable shows it at rank 1. */
+.assumptions{display:inline-block;margin-left:.4rem}.tip-head{display:block;font-weight:600}
 /* The chart fits its column at every width. Wide: the axis labels are level. Narrow (the chart under 62rem): smaller
    labels, and the density labels turn 60 degrees so that each one shows complete. */
 .sssp-chart-box{container-type:inline-size;max-width:64rem;margin:1rem 0 0}
