@@ -1105,5 +1105,15 @@
     "status": "posted",
     "at": "2026-11-04T00:37:49.461Z",
     "id": "2117778306510848152"
+  },
+  "[\"other-matroid-prophet\",\"darkhipo:\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-04T02:36:43.513Z",
+    "reason": "reserved before API send"
+  },
+  "[\"other-haldane-gap\",\"darkhipo:771/5000\",\"771/5000\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-04T02:36:43.513Z",
+    "reason": "reserved before API send"
   }
 }
