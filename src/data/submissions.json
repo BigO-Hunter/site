@@ -126356,8 +126356,8 @@
       "title": "[codex] Conditional κ = 0.00330420 (+6.60e-6 over #6702)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
       "submitted_at": "2026-11-04T17:41:35Z",
-      "updated_at": "2026-11-04T21:02:29Z",
-      "source_commit": "17c08db090004c1fb54220a6d8463a5095789fa9",
+      "updated_at": "2026-11-04T21:48:05Z",
+      "source_commit": "4a40713f10d47da5894d7673eb6d0ab2ebdf0687",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-04T17:41:35Z",
       "checked_at": "2026-11-04",
@@ -126367,15 +126367,15 @@
       ],
       "note": null,
       "claim_path": "research/p104-common-idle-double-retirement/RESULT.json",
-      "claim_head": "17c08db090004c1fb54220a6d8463a5095789fa9",
-      "claim_text": "4972a2890871889c72bed0ce909f2e72e777a7c8bf96204f9e39954fdb80a3b0",
+      "claim_head": "4a40713f10d47da5894d7673eb6d0ab2ebdf0687",
+      "claim_text": "a6a6669ba24039d9c957973e1b7b7411ed542405aa9a181165bfb847ad485e2a",
       "claim_files": [
         [
           "added",
           "research/p104-common-idle-double-retirement/RESULT.json"
         ]
       ],
-      "claim_files_head": "17c08db090004c1fb54220a6d8463a5095789fa9",
+      "claim_files_head": "4a40713f10d47da5894d7673eb6d0ab2ebdf0687",
       "claim_files_base": "main",
       "claim_files_result": true
     },
@@ -126518,6 +126518,28 @@
       "claim_text": "1a69d308072863bd41548cbd7e5ba795397c85b1bbe77bbd5e53415658fd57a1",
       "claim_files": [],
       "claim_files_head": "37c6ca0e216e19bb4a0b9f084b13923f67c3db9d",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6723,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "research: independently audit effective local-limit bounds and finite hypotheses",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6723",
+      "submitted_at": "2026-11-04T21:51:00Z",
+      "updated_at": "2026-11-04T21:57:37Z",
+      "source_commit": "5c81593f0903adc6f7cf4583f002d54fd831f2b5",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-04T21:51:00Z",
+      "checked_at": "2026-11-04",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "5c81593f0903adc6f7cf4583f002d54fd831f2b5",
+      "claim_text": "ce3807fe71c2f32ece12d0a4febea4ea09b8bc5bc1be4bd6898444a4fb589f41",
+      "claim_files": [],
+      "claim_files_head": "5c81593f0903adc6f7cf4583f002d54fd831f2b5",
       "claim_files_base": "main",
       "claim_files_result": true
     }

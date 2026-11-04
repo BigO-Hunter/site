@@ -130100,7 +130100,7 @@
     "title": "[codex] Conditional κ = 0.00330420 (+6.60e-6 over #6702)",
     "state": "open",
     "created_at": "2026-11-04T17:41:35Z",
-    "updated_at": "2026-11-04T21:02:29Z",
+    "updated_at": "2026-11-04T21:48:05Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130108,7 +130108,7 @@
       "html_url": "https://github.com/thu-nmrc"
     },
     "head": {
-      "sha": "17c08db090004c1fb54220a6d8463a5095789fa9"
+      "sha": "4a40713f10d47da5894d7673eb6d0ab2ebdf0687"
     },
     "base": {
       "ref": "main"
@@ -130235,6 +130235,27 @@
     },
     "head": {
       "sha": "37c6ca0e216e19bb4a0b9f084b13923f67c3db9d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6723,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6723",
+    "title": "research: independently audit effective local-limit bounds and finite hypotheses",
+    "state": "open",
+    "created_at": "2026-11-04T21:51:00Z",
+    "updated_at": "2026-11-04T21:57:37Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "5c81593f0903adc6f7cf4583f002d54fd831f2b5"
     },
     "base": {
       "ref": "main"
