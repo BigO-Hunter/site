@@ -6512,6 +6512,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
+              "shjvandekamp",
               "Dmitri I. Arkhipov"
             ],
             "bound": "Maker moves ≤ 19",
