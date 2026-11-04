@@ -479,6 +479,7 @@ def other_claims(claims,withdrawn,notes):
             author=login,handle=key,value=sub['bound'],display=display,date=item['created_at'],dateSource=item['html_url'],dateKind='first-stated',
             url=item['html_url'],lean=True,evidence='lean-verified',note=note,authors=[dict(name=login,url='https://github.com/'+login)],
             leanNote='Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).',
+            # The Other page links 'at commit <sha> of <repo URL>' (src/lib/source-links.ts): keep this form.
             proofScope='The verifier checked Race.bound : '+row['statement']+' ('+sub['bound']+') at commit '+sub['commit']+' of '+sub['repo_url']+'.',
             bound=row['bound'].format(value=shown),receiptPath=proof['receipt_path']))
     return boards

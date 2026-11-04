@@ -4,6 +4,7 @@ import EvidenceBoard from '../../components/EvidenceBoard.astro';
 import Layout from '../../layouts/Layout.astro';
 import data from '../../lib/other-bounds-data';
 import {math, inlineMath} from '../../lib/math';
+import {sourceLinks} from '../../lib/source-links';
 import {localTimeFallback} from '../../lib/freshness';
 import {boardUrl} from '../../lib/board';
 import {otherTableRows, isTableBreakthrough, shownLevel} from '../../lib/other-table';
@@ -39,11 +40,11 @@ const reviewUrl=(c:object)=>{const review=(c as {review?:OtherClaimReview}).revi
   <div class="results-scroll" role="region" aria-label={'Claims for '+f.name} tabindex="0"><table>
     <thead><tr><th scope="col">Rank</th><th scope="col">Bound</th><th scope="col">Evidence level</th><th scope="col">Author</th><th scope="col">Date</th><th scope="col">Proof scope</th></tr></thead>
     <tbody>{ranked.map(({claim:c,rank,tie},i)=><tr data-level={shownLevel(c,Boolean(reviewUrl(c)))} data-breakthrough={isTableBreakthrough(f,c)?'true':undefined} hidden={i>=10}>
-      <td class="rank">{tie?'=':''}{rank}</td><td class="bound"><a href={c.url} target="_blank" rel="noopener" set:html={math(c.display)}/>{(c.value!==c.display||c.note)&&<details><summary>Exact value and conditions</summary><div class="exact" set:html={math(c.value)}/>{c.note&&<p set:html={inlineMath(c.note)}/>}</details>}</td>
+      <td class="rank">{tie?'=':''}{rank}</td><td class="bound"><a href={c.url} target="_blank" rel="noopener" set:html={math(c.display)}/>{(c.value!==c.display||c.note)&&<details><summary>Exact value and conditions</summary><div class="exact" set:html={math(c.value)}/>{c.note&&<p set:html={inlineMath(sourceLinks(c.note))}/>}</details>}</td>
       <td>{isTableBreakthrough(f,c)?<a class="breakthrough" href={c.url} target="_blank" rel="noopener" title={breakthroughDefinition+(c.evidence==='lean-verified'?' We rebuilt its Lean proof and checked with the Lean kernel that it proves our exact problem statement.':' We have not checked a full Lean proof of this bound.')}>{breakthroughLabel}{c.evidence==='lean-verified'&&<span class="lean-verified"> · Lean Verified</span>}</a>:c.evidence==='lean-verified'?<a class="lean-verified" href={c.url} target="_blank" rel="noopener">Lean Verified</a>:c.evidence==='human-verified'&&reviewUrl(c)?<a class="human-verified" href={reviewUrl(c)} target="_blank" rel="noopener">Human Verified</a>:<a class="claimed" href="/about#evidence-levels">Claimed</a>}</td>
       <td><AuthorList authors={c.authors}/></td>
       <td><a href={c.dateSource} target="_blank" rel="noopener"><time datetime={c.date} data-local-datetime>{localTimeFallback(c.date)}</time></a>{c.dateKind==='snapshot'&&<span> (Snapshot)</span>}</td>
-      <td><details><summary>Proof scope</summary><p set:html={inlineMath(c.proofScope)}/></details></td>
+      <td><details><summary>Proof scope</summary><p set:html={inlineMath(sourceLinks(c.proofScope))}/></details></td>
     </tr>)}</tbody>
   </table></div>
   </EvidenceBoard>
