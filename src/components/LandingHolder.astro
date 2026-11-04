@@ -1,6 +1,7 @@
 ---
-// Who holds a bound in a landing table (Nil, 2026-11-04): the names and avatars of the board table, short. The full
-// list is in the title; the names are not links, so the row stays compact (the board table links each author).
+// Who holds a bound in a landing table (Nil, 2026-11-04): the names and avatars of the board table, short. Each avatar
+// and name is one link to the author's url, as on the board table; an author without a url is plain text. A title lists
+// only the names that "and N more" hides (no title that repeats the visible text).
 import type {Author} from '../lib/types';
 import PlayerAvatar from './PlayerAvatar.astro';
 import {shortAuthors} from '../lib/landing-records';
@@ -12,9 +13,14 @@ const {shown,more}=shortAuthors(authors);
 const join=shown.some(a=>/\s(?:and|&)\s|,\s/.test(a.name))?', ':' and ';
 // The avatar stays on the line of the first word of its name.
 ---
-{authors.length>0&&<span class="landing-holder" title={authors.map(a=>a.name).join(', ')}>{shown.map((author,index)=><>{index>0&&join}<span class="holder-name">{index===0&&separator&&<span class="holder-sep" aria-hidden="true">· </span>}<PlayerAvatar author={author}/>{author.name.split(' ')[0]}</span>{author.name.includes(' ')&&' '+author.name.slice(author.name.indexOf(' ')+1)}</>)}{more>0&&<> and {more} more</>}</span>}
+{authors.length>0&&<span class="landing-holder" title={more>0?authors.slice(shown.length).map(a=>a.name).join(', '):undefined}>{shown.map((author,index)=>{
+ const first=author.name.split(' ')[0],rest=author.name.includes(' ')?' '+author.name.slice(author.name.indexOf(' ')+1):'';
+ const sep=index===0&&separator&&<span class="holder-sep" aria-hidden="true">· </span>;
+ return <>{index>0&&join}<span class="holder-name">{sep}{author.url?<a class="holder-link" href={author.url} target="_blank" rel="noopener"><PlayerAvatar author={author}/>{first}<span class="holder-rest">{rest}</span></a>:<><PlayerAvatar author={author}/>{first}<span class="holder-rest">{rest}</span></>}</span></>;
+})}{more>0&&<> and {more} more</>}</span>}
 <style>
 .landing-holder{display:inline-block;max-width:100%;white-space:normal;color:var(--muted);font-size:var(--font-min);line-height:1.4;overflow-wrap:anywhere}
-.holder-name{white-space:nowrap}
+.holder-name{white-space:nowrap}.holder-rest{white-space:normal}
+.holder-link{color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 45%,transparent);text-underline-offset:.18em}.holder-link:hover{color:var(--link,var(--accent))}.holder-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .landing-holder :global(.player-avatar){width:18px;height:18px;font-size:8px;margin-right:.3rem;vertical-align:-4px}
 </style>
