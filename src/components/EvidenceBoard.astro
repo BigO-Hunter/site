@@ -1,0 +1,47 @@
+---
+// The evidence filters, the rows that show at the selected levels, and pages of 10 rows (Big O boards and, Nil 2026-11-04,
+// the Other bounds pages). The slot holds the results table: each body row carries data-level and, for the Agent
+// breakthrough row, data-breakthrough="true" (isVisibleAtEvidence). Rank numbers stay those of all rows.
+import EvidenceFilters from './EvidenceFilters.astro';
+---
+<evidence-board>
+<EvidenceFilters />
+<slot />
+<p class="no-results" hidden>No results match the selected evidence levels.</p>
+<nav class="pagination" aria-label="Results pages"><button type="button" data-previous>Previous</button><span aria-live="polite" data-page></span><button type="button" data-next>Next</button></nav>
+</evidence-board>
+<script>
+import {isVisibleAtEvidence} from '../lib/evidence';
+import {getEvidenceLevels,subscribeEvidenceLevels} from '../lib/evidence-filters';
+class EvidenceBoard extends HTMLElement {
+ private unsubscribe?:()=>void;
+ connectedCallback(){
+ let page=0;
+ const rows=Array.from(this.querySelectorAll<HTMLTableRowElement>('tbody tr'));
+ const previous=this.querySelector<HTMLButtonElement>('[data-previous]')!;
+ const next=this.querySelector<HTMLButtonElement>('[data-next]')!;
+ const render=()=>{
+  const levels=getEvidenceLevels();
+  this.dataset.selectedLevels=JSON.stringify(levels);
+  const shown=rows.filter(row=>isVisibleAtEvidence({isBreakthrough:row.dataset.breakthrough==='true',evidenceLevel:row.dataset.level!},levels));
+  const pages=Math.max(1,Math.ceil(shown.length/10));page=Math.min(page,pages-1);
+  rows.forEach(row=>row.hidden=true);shown.slice(page*10,page*10+10).forEach(row=>row.hidden=false);
+  this.querySelector('[data-page]')!.textContent=`Page ${page+1} of ${pages} · ${shown.length} ${shown.length===1?'result':'results'}`;
+  previous.disabled=page===0;next.disabled=page===pages-1;
+  this.querySelector<HTMLElement>('.no-results')!.hidden=shown.length>0;
+ };
+ this.unsubscribe=subscribeEvidenceLevels(()=>{page=0;render()});
+ previous.addEventListener('click',()=>{page--;render()});next.addEventListener('click',()=>{page++;render()});render();
+ }
+ disconnectedCallback(){this.unsubscribe?.()}
+}
+customElements.define('evidence-board',EvidenceBoard);
+</script>
+<style>
+evidence-board{display:block;margin:1.5rem 0}.pagination{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1rem;flex-wrap:wrap}button{font:inherit;padding:.45rem .8rem;border:1px solid var(--line);border-radius:.35rem;background:var(--surface);color:var(--fg);cursor:pointer}button:disabled{opacity:.45;cursor:default}
+@media(max-width:600px){
+ .pagination{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:.4rem;margin-top:.65rem}
+ .pagination span{font-size:.9375rem;text-align:center;line-height:1.35}
+ .pagination button{font-size:.9375rem;min-height:44px;padding:.4rem .55rem}
+}
+</style>

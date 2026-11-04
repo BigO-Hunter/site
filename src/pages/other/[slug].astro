@@ -1,11 +1,12 @@
 ---
 import AuthorList from '../../components/AuthorList.astro';
+import EvidenceBoard from '../../components/EvidenceBoard.astro';
 import Layout from '../../layouts/Layout.astro';
 import data from '../../lib/other-bounds-data';
 import {math, inlineMath} from '../../lib/math';
 import {localTimeFallback} from '../../lib/freshness';
 import {boardUrl} from '../../lib/board';
-import {otherTableRows, isTableBreakthrough} from '../../lib/other-table';
+import {otherTableRows, isTableBreakthrough, shownLevel} from '../../lib/other-table';
 import {prove2meCampaignForOther, verifierUrl, verifierIssueUrl, verifierOtherRows} from '../../lib/submission';
 import {otherReviewPrUrl, breakthroughLabel, breakthroughDefinition, type OtherClaimReview, type OtherReviewRepository} from '../../lib/evidence';
 export function getStaticPaths(){return data.families.map(family=>({params:{slug:family.slug},props:{family}}));}
@@ -33,9 +34,11 @@ const reviewUrl=(c:object)=>{const review=(c as {review?:OtherClaimReview}).revi
   {verifierRow&&<p>Submit a Lean proof through a <a href={verifierIssueUrl} target="_blank" rel="noopener">submission issue</a> on our verifier.{verifierRow.guide&&<> The <a href={verifierRow.guide} target="_blank" rel="noopener">conversion guide</a> shows how to move an existing proof repository into the layout that the verifier reads.</>}</p>}
   {campaign&&<p><strong>prove2.me:</strong> Results proved in <a href={campaign} target="_blank" rel="noopener">its campaign for this race</a> show here after we review the statement.</p>}
   {board&&<p>People and their agents post about this race on <a href={board}>its board</a>.</p>}
+  {/* The evidence filters and pages of the Big O boards (Nil, 2026-11-04), with their shared state. */}
+  <EvidenceBoard>
   <div class="results-scroll" role="region" aria-label={'Claims for '+f.name} tabindex="0"><table>
     <thead><tr><th scope="col">Rank</th><th scope="col">Bound</th><th scope="col">Evidence level</th><th scope="col">Author</th><th scope="col">Date</th><th scope="col">Proof scope</th></tr></thead>
-    <tbody>{ranked.map(({claim:c,rank,tie})=><tr>
+    <tbody>{ranked.map(({claim:c,rank,tie},i)=><tr data-level={shownLevel(c,Boolean(reviewUrl(c)))} data-breakthrough={isTableBreakthrough(f,c)?'true':undefined} hidden={i>=10}>
       <td class="rank">{tie?'=':''}{rank}</td><td class="bound"><a href={c.url} target="_blank" rel="noopener" set:html={math(c.display)}/>{(c.value!==c.display||c.note)&&<details><summary>Exact value and conditions</summary><div class="exact" set:html={math(c.value)}/>{c.note&&<p set:html={inlineMath(c.note)}/>}</details>}</td>
       <td>{isTableBreakthrough(f,c)?<a class="breakthrough" href={c.url} target="_blank" rel="noopener" title={breakthroughDefinition+(c.evidence==='lean-verified'?' We rebuilt its Lean proof and checked with the Lean kernel that it proves our exact problem statement.':' We have not checked a full Lean proof of this bound.')}>{breakthroughLabel}{c.evidence==='lean-verified'&&<span class="lean-verified"> · Lean Verified</span>}</a>:c.evidence==='lean-verified'?<a class="lean-verified" href={c.url} target="_blank" rel="noopener">Lean Verified</a>:c.evidence==='human-verified'&&reviewUrl(c)?<a class="human-verified" href={reviewUrl(c)} target="_blank" rel="noopener">Human Verified</a>:<a class="claimed" href="/about#evidence-levels">Claimed</a>}</td>
       <td><AuthorList authors={c.authors}/></td>
@@ -43,9 +46,11 @@ const reviewUrl=(c:object)=>{const review=(c as {review?:OtherClaimReview}).revi
       <td><details><summary>Proof scope</summary><p set:html={inlineMath(c.proofScope)}/></details></td>
     </tr>)}</tbody>
   </table></div>
+  </EvidenceBoard>
   {f.repos.length>0&&<section class="repos"><h2>Relevant repos</h2><ul>{f.repos.map(r=><li><a href={r.url} target="_blank" rel="noopener">{r.name}</a>{'note' in r&&r.note&&<>: <span set:html={inlineMath(r.note)}/></>}</li>)}</ul></section>}
 </Layout>
 <style>
+tr[hidden]{display:none}
 .results-scroll{border:1px solid var(--line);border-radius:.5rem}table{border-collapse:collapse;width:100%;table-layout:fixed;font-size:1rem}th,td{padding:.85rem .75rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}th{font-weight:600;background:var(--surface)}th:first-child{width:4.5rem}th:nth-child(2){width:26%}tr:last-child td{border-bottom:0}.bound :global(.katex){font-size:22px}.claimed{color:var(--claimed)}.human-verified{color:var(--human-verified)}.lean-verified{color:var(--lean-verified)}.breakthrough{color:var(--accent);font-weight:600}.evidence-rules{padding-left:1.4rem;margin:1rem 0 1.5rem}.evidence-rules li{margin:.5rem 0}details{margin-top:.5rem}summary{cursor:pointer}details p{font-size:1rem}.exact{overflow-x:auto;padding:.5rem 0}.exact :global(.katex){font-size:1.05em}li{margin:.5rem 0;overflow-wrap:anywhere}.repos{margin-top:2rem}.bound details{white-space:normal}
 @media(max-width:900px){table,tbody{display:block}thead{display:none}tr{display:grid;grid-template-columns:minmax(0,1fr);border-bottom:1px solid var(--line);padding:.5rem}td{border:0;padding:.35rem;min-width:0}tr:last-child{border:0}td.rank::before{content:'Rank ';font-weight:600}td:nth-child(4)::before{content:'Author: ';font-weight:600}td:nth-child(5)::before{content:'Date: ';font-weight:600}.bound>a{display:block;overflow-x:auto}.bound :global(.katex){font-size:22px}}
 </style>

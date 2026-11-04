@@ -38,9 +38,16 @@ export function otherTableRows<C extends Claim>(family: {baseline: Baseline; cla
 
 // The claim that the table labels Agent breakthrough: the OpenAI baseline row, or on a row with a Classic baseline its
 // first claim marked agent.
-export function isTableBreakthrough(family: {baseline: {label?: string}; claims: Claim[]}, claim: object): boolean {
+export function isTableBreakthrough(family: {baseline: {label?: string; value: string}; claims: Claim[]}, claim: object): boolean {
   if ('breakthrough' in claim && claim.breakthrough === true) return true;
   if (!isClassicBaseline(family.baseline)) return false;
   const first = family.claims.filter(c => c.agent).sort((a, b) => Date.parse(a.date) - Date.parse(b.date))[0];
   return first !== undefined && first === claim;
+}
+
+// The evidence level that the table shows for a claim, which the evidence filters read: a Human Verified claim without a
+// merged review pull request to link shows as Claimed.
+export function shownLevel(claim: {evidence?: string}, reviewed: boolean): 'lean-verified' | 'human-verified' | 'claimed' {
+  if (claim.evidence === 'lean-verified') return 'lean-verified';
+  return claim.evidence === 'human-verified' && reviewed ? 'human-verified' : 'claimed';
 }
