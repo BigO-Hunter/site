@@ -1864,5 +1864,23 @@
     "authors": [
       "DreamingOfClouds"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-6702\",\"2061/625000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.0032976) n)` | by DreamingOfClouds | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.0032976) n)\nPlayer: DreamingOfClouds\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-04T00:37:43.989Z",
+    "authors": [
+      "DreamingOfClouds"
+    ]
+  },
+  {
+    "key": "[\"other-snaky\",\"direct-issue-137:19\",\"19\",\"attained\"]:lean",
+    "text": "**Record verified** | **Snaky** | `Maker moves ≤ 19` | by Dmitri I. Arkhipov | Lean Verified | [bigospeedrun.com/other/snaky](https://bigospeedrun.com/other/snaky)",
+    "x_text": "Record verified!\n\nProblem: Snaky\nValue: Maker moves ≤ 19\nPlayer: Dmitri I. Arkhipov\nStatus: Lean Verified",
+    "posted_at": "2026-11-04T00:37:44.266Z",
+    "authors": [
+      "Dmitri I. Arkhipov"
+    ]
   }
 ]
