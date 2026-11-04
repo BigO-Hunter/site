@@ -117,11 +117,14 @@ function exactExponentDown(score:string,cap:number):string {
 // score -c is time N^{c+o(1)}, score 0 is N^{o(1)} = 2^{o(b)}, score alpha > 0 is 2^{b/(log b)^{alpha-o(1)}}.
 // Every shown bound is in N (Nil, 2026-11-04): b = log2 N + O(1), so log b = log log N + O(1), and the o(1) in the
 // exponent takes up the constant factors: 2^{b/(log b)^{alpha-o(1)}} = N^{1/(log log N)^{alpha-o(1)}}.
-// A positive score shows as a short fraction (1/2), else as a decimal rounded down.
-function factoringAlpha(score:string,cap:number):string {
+// A short fraction whose denominator is not a power of 10 shows as that fraction (1/2, not 0.5: Lead, 2026-11-04);
+// any other score as a decimal rounded down. Used for the -o(1) exponents of integer factoring and 3-SAT.
+export function shortFraction(score:string,cap:number=displayDigits.table):string|undefined {
  const [n,d]=score.split('/');
- if(d!==undefined&&n.length+d.length<=cap)return `${n}/${d}`;
- return exactExponentDown(score,cap).replace(/^\\frac\{(\d+)\}\{(\d+)\}$/,'$1/$2');
+ return d!==undefined&&!/^10*$/.test(d)&&n.length+d.length<=cap?`${n}/${d}`:undefined;
+}
+function factoringAlpha(score:string,cap:number):string {
+ return shortFraction(score,cap)??exactExponentDown(score,cap).replace(/^\\frac\{(\d+)\}\{(\d+)\}$/,'$1/$2');
 }
 export function factoringBound(score:string,cap:number=displayDigits.table):string {
  const sign=compare(score,'0');
@@ -143,7 +146,7 @@ export function tableBound(record:{score:string;scoreRelation?:string;bound:stri
  const exponent=kappa?'1-'+scientificSaving(record.score,Math.min(digits,cap)).replace(/10\^\{/g,'10^{\\scriptstyle '):exactExponent(record.score,cap);
  const power=exponent+(record.scoreRelation==='strict-upper-bound'||record.bound.includes('\\varepsilon')?'+\\varepsilon':'');
  // 3-SAT alpha is higher-is-better: round it down.
- if(record.bound.includes('-o(1)'))return `O^*(2^{n/(\\log n)^{${exactExponentDown(record.score,cap)}-o(1)}})`;
+ if(record.bound.includes('-o(1)'))return `O^*(2^{n/(\\log n)^{${shortFraction(record.score,cap)??exactExponentDown(record.score,cap)}-o(1)}})`;
  if(kappa||record.bound.includes('\\log'))return `O(n \\log^{${power}} n)`;
  if(record.bound.includes('2^{'))return `O${record.bound.startsWith('O^*')?'^*':''}(2^{${power.includes('+')?`(${power})`:power}n})`;
  return `O(n^{${power}})`;

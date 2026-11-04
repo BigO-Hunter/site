@@ -1,4 +1,4 @@
-import {ranked,boundPrecision,boundExponent,scientificSaving,displayDigits,factoringPlainBound} from './ranking.ts';
+import {ranked,boundPrecision,boundExponent,scientificSaving,displayDigits,factoringPlainBound,shortFraction} from './ranking.ts';
 import {evidenceName,evidenceLevels} from './evidence.ts';
 import {otherBoundLeader} from './other-leader.ts';
 import type {ChartLine,Problem,RecordEntry} from './types';
@@ -51,7 +51,7 @@ export function plainBound(slug:string,score:string,relation='attained',digits?:
  if(kappa)return `O(n log^(1 - ${value}${epsilon? ' + epsilon':''}) n)${epsilon}`;
  if(slug==='matrix-multiplication')return `O(n^(${value} + epsilon)), for every fixed epsilon > 0`;
  // An open endpoint never posts as attained: n^(a+o(1)) is O(n^(a + epsilon)), not O(n^a).
- if(slug==='3sat')return `O*(2^(n/(log n)^(${value} - o(1))))`;
+ if(slug==='3sat')return `O*(2^(n/(log n)^(${shortFraction(score)??value} - o(1))))`;
  if(slug==='subset-sum')return epsilon?`O(2^((${value} + epsilon)n))${epsilon}`:`O(2^(${value}n))`;
  return epsilon?`O(n^(${value} + epsilon))${epsilon}`:`O(n^${value})`;
 }

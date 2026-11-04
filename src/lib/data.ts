@@ -5,7 +5,7 @@ import {classifyEvidence,isBoardEntry,isBreakthroughRecord} from './evidence';
 import {crocswapVerification,noCertifications,type CrocswapCertifications} from './crocswap-cert';
 import type {Problem,RecordEntry,Repo} from './types';
 import {methodNoteFor,type MethodNotes} from './method-notes';
-import {decimal,logExponent,boundPrecision,tableBound,displayDigits,factoringBound} from './ranking';
+import {decimal,logExponent,boundPrecision,tableBound,displayDigits,factoringBound,shortFraction} from './ranking';
 import {rowLatex} from './sssp.ts';
 // This is the boundary adapter for the reviewed, data-only snapshot. No repo code runs.
 const files=import.meta.glob('../data/*.json',{eager:true,import:'default'});
@@ -35,7 +35,7 @@ const bound=(slug:string,score:string,relation?:string)=>{
  if(slug==='matrix-multiplication')return `O(n^{${value}+\\varepsilon})`;
  // An open endpoint: every exponent above the score is proved, not the score itself.
  if(slug==='subset-sum')return `O(2^{${open?`(${value}+\\varepsilon)`:value}n})`;
- if(slug==='3sat')return `O^*(2^{n/(\\log n)^{${value}-o(1)}})`;
+ if(slug==='3sat')return `O^*(2^{n/(\\log n)^{${shortFraction(score)??value}-o(1)}})`;
  if(slug==='integer-factoring')return factoringBound(score);
  return `O(n^{${value}${open?'+\\varepsilon':''}})`;
 };
