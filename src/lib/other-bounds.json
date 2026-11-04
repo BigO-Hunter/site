@@ -3075,7 +3075,7 @@
       "name": "Zeta zeros on the critical line",
       "quantity": "c\\text{ in }\\kappa^{*}\\ge c",
       "direction": "higher",
-      "statement": "The nontrivial zeros of the Riemann zeta function \\(\\zeta(s)\\) are its zeros \\(\\rho\\) with \\(0<\\operatorname{Re}\\rho<1\\). The critical line is \\(\\operatorname{Re}s=\\tfrac12\\); the Riemann hypothesis says that every nontrivial zero lies on it. A zero of multiplicity \\(m\\) counts \\(m\\) times, and a simple zero is a zero of multiplicity \\(1\\). Let \\(N(T)\\) be the number of nontrivial zeros with \\(0<\\operatorname{Im}\\rho\\le T\\), and let \\(N_0^{s}(T)\\) be the number of those that are simple and lie on the critical line. The quantity is \\(\\kappa^{*}=\\liminf_{T\\to\\infty}N_0^{s}(T)/N(T)\\), the share of the zeros that are simple and on the critical line, in the worst case as \\(T\\) grows. A result is a proof that \\(\\kappa^{*}\\ge c\\), and it must not assume an unproved hypothesis. A higher \\(c\\) is better. Several results below use the Montgomery–Taylor constant \\(H=\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}\\approx0.6725007\\). Under the Riemann hypothesis, larger values are known (for example \\(0.6792\\) by Chirre, Gonçalves and de Laat). Such conditional bounds do not count here. For zeros on the critical line with no condition on multiplicity, the human record before 2026 was \\(0.417293\\) (more than five-twelfths), by the same four authors as the baseline. Anthropic's post gives that record as 41.6%.",
+      "statement": "The nontrivial zeros of the Riemann zeta function \\(\\zeta(s)\\) are its zeros \\(\\rho\\) with \\(0<\\operatorname{Re}\\rho<1\\). The critical line is \\(\\operatorname{Re}s=\\tfrac12\\); the Riemann hypothesis says that every nontrivial zero lies on it. A zero of multiplicity \\(m\\) counts \\(m\\) times, and a simple zero is a zero of multiplicity \\(1\\). Let \\(N(T)\\) be the number of nontrivial zeros with \\(0<\\operatorname{Im}\\rho\\le T\\), and let \\(N_0^{s}(T)\\) be the number of those that are simple and lie on the critical line. The quantity is \\(\\kappa^{*}=\\liminf_{T\\to\\infty}N_0^{s}(T)/N(T)\\), the share of the zeros that are simple and on the critical line, in the worst case as \\(T\\) grows. A result is a proof that \\(\\kappa^{*}\\ge c\\), and it must not assume an unproved hypothesis. A higher \\(c\\) is better. Several results below use the Montgomery–Taylor constant \\(H=\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}\\approx0.6725007\\). Under the Riemann hypothesis, larger values are known (for example \\(19/27\\approx0.7037\\) by Bui and Heath-Brown). Such conditional bounds do not count here. For zeros on the critical line with no condition on multiplicity, the human record before 2026 was \\(0.417293\\) (more than five-twelfths), by the same four authors as the baseline. Anthropic's post gives that record as 41.6%.",
       "baseline": {
         "label": "Classic baseline",
         "by": "Kyle Pratt, Nicolas Robles, Alexandru Zaharescu and Dirk Zeindler",
@@ -3122,7 +3122,7 @@
           "lean": false,
           "leanNote": "No.",
           "evidence": "claimed",
-          "note": "It keeps the argument of the Claude paper and adds one more term to its main inequality. A computer check in interval arithmetic (arithmetic with guaranteed error bounds) gives a lower bound for seven consecutive zeros. The README says that GPT-5.6 Sol generated the research draft. Here \\(H\\) is the Montgomery–Taylor constant of the statement.",
+          "note": "It keeps the argument of the Claude paper and adds one more term to its main inequality. A computer check in interval arithmetic (arithmetic with guaranteed error bounds) checks one inequality for seven consecutive zeros. The README says that GPT-5.6 Sol generated the research draft. Here \\(H\\) is the Montgomery–Taylor constant of the statement.",
           "authors": [
             {
               "name": "Sunghyeon Jo",
@@ -3144,7 +3144,7 @@
           "lean": false,
           "leanNote": "No.",
           "evidence": "claimed",
-          "note": "A second proof of the same constant \\(H\\) as the Claude paper, with a shorter argument: one inequality replaces the matrix argument of that paper. It also proves that at least \\(0.88762\\) of the zeros are simple or on the critical line.",
+          "note": "A second proof of the same constant \\(H\\) as the Claude paper, with a shorter argument: one inequality replaces the matrix argument of that paper. Version 2 of the paper (8 September 2026) also proves that at least \\(0.88762\\) of the zeros are simple or on the critical line.",
           "authors": [
             {
               "name": "Youness Lamzouri",
