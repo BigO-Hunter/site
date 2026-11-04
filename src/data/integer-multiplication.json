@@ -39758,7 +39758,7 @@
       "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
       "artifact": {
         "path": "sources/pr-6716.json",
-        "sha256": "994654635395f694c362413d3c807f72af5c5c7d3cf0d83bf20513d03a5d24b2"
+        "sha256": "3651202567f1ced433ad90cc46260ede28d215d0966c58bc9bde1054569fc2db"
       },
       "evidence": {
         "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
@@ -39773,7 +39773,7 @@
           "status": "unverified"
         }
       ],
-      "source_commit": "a467457692bc9e11113d9b2e2e34ea8ffb553b58"
+      "source_commit": "17c08db090004c1fb54220a6d8463a5095789fa9"
     }
   ],
   "record_metadata": {
@@ -62906,7 +62906,7 @@
       "merged": false,
       "merged_at": null,
       "closed_at": null,
-      "updated_at": "2026-11-04T17:57:12Z",
+      "updated_at": "2026-11-04T21:02:29Z",
       "comparison_key": "crocswap/integer-multiplication-v1",
       "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
       "score_source": "stated kappa in research/p104-common-idle-double-retirement/RESULT.json at the PR head; source claim only",
@@ -62924,5 +62924,5 @@
       "race_event_kind": "PR creation; latest observed score"
     }
   },
-  "updated_at": "2026-11-04T20:17:29Z"
+  "updated_at": "2026-11-04T21:17:30Z"
 }

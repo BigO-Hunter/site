@@ -130100,7 +130100,7 @@
     "title": "[codex] Conditional κ = 0.00330420 (+6.60e-6 over #6702)",
     "state": "open",
     "created_at": "2026-11-04T17:41:35Z",
-    "updated_at": "2026-11-04T17:57:12Z",
+    "updated_at": "2026-11-04T21:02:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130108,7 +130108,7 @@
       "html_url": "https://github.com/thu-nmrc"
     },
     "head": {
-      "sha": "a467457692bc9e11113d9b2e2e34ea8ffb553b58"
+      "sha": "17c08db090004c1fb54220a6d8463a5095789fa9"
     },
     "base": {
       "ref": "main"
@@ -130160,10 +130160,10 @@
   {
     "number": 6719,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6719",
-    "title": "[codex] Physically lower delayed-cover batch split and return",
+    "title": "[codex] Physically lower delayed-cover split, child shapes and return",
     "state": "open",
     "created_at": "2026-11-04T19:59:01Z",
-    "updated_at": "2026-11-04T20:16:16Z",
+    "updated_at": "2026-11-04T20:51:46Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130171,12 +130171,12 @@
       "html_url": "https://github.com/thu-nmrc"
     },
     "head": {
-      "sha": "a7a22201327689fc81496cf031d68e53283fef49"
+      "sha": "3bad39ffd4faf7e8cb1bc5b47769cbb28511f797"
     },
     "base": {
       "ref": "main"
     },
-    "draft": true
+    "draft": false
   },
   {
     "number": 6720,
@@ -130184,7 +130184,7 @@
     "title": "Independently audit cut 353 and all 35 retired P104 inputs (no κ)",
     "state": "open",
     "created_at": "2026-11-04T20:10:38Z",
-    "updated_at": "2026-11-04T20:10:38Z",
+    "updated_at": "2026-11-04T20:20:34Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130193,6 +130193,48 @@
     },
     "head": {
       "sha": "2c25dcd8b7a6f382d11245f8907b391803388565"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6721,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6721",
+    "title": "Independent written audit of coupled far-endpoint rank leakage (no κ)",
+    "state": "open",
+    "created_at": "2026-11-04T20:32:24Z",
+    "updated_at": "2026-11-04T20:38:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "c68b405f5151940da51b3e762e8c309aefc34839"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6722,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6722",
+    "title": "Review generated-child-grant router jump under isolated contracts (no kappa)",
+    "state": "open",
+    "created_at": "2026-11-04T21:02:48Z",
+    "updated_at": "2026-11-04T21:09:28Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "37c6ca0e216e19bb4a0b9f084b13923f67c3db9d"
     },
     "base": {
       "ref": "main"

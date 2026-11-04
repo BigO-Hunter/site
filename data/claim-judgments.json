@@ -309,6 +309,11 @@
     "confidence": "high",
     "value": "0.00329760"
   },
+  "v2:6716:17c08db090004c1fb54220a6d8463a5095789fa9:4972a2890871889c72bed0ce909f2e72e777a7c8bf96204f9e39954fdb80a3b0": {
+    "claims_new_kappa": true,
+    "confidence": "high",
+    "value": "0.00330420"
+  },
   "v2:6716:a467457692bc9e11113d9b2e2e34ea8ffb553b58:090e790d6c4556c8a053b61e133190ef00eff32a1244eeb9908b7bc4e22ffc8d": {
     "claims_new_kappa": true,
     "confidence": "high",
