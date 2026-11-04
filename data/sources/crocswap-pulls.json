@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-03T22:29:37Z",
+    "updated_at": "2026-11-04T00:51:17Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -127412,7 +127412,7 @@
     "title": "Complete source-bound full-stage preparation with separate mode plans",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-03T22:30:14Z",
+    "updated_at": "2026-11-04T00:53:58Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129743,7 +129743,7 @@
     "title": "ci: fetch only exact review-base history for automated planning",
     "state": "open",
     "created_at": "2026-11-03T22:04:16Z",
-    "updated_at": "2026-11-03T22:29:59Z",
+    "updated_at": "2026-11-04T00:47:25Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129756,7 +129756,7 @@
     "base": {
       "ref": "main"
     },
-    "draft": true
+    "draft": false
   },
   {
     "number": 6700,
@@ -129836,6 +129836,90 @@
     },
     "head": {
       "sha": "a7b976320f4a854b21777162d1ec897211b9a5be"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6704,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6704",
+    "title": "Integrate resident SCALE2 into the complete scalar policy (no κ)",
+    "state": "open",
+    "created_at": "2026-11-04T00:31:32Z",
+    "updated_at": "2026-11-04T00:45:08Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "8e48e649bef0300d007703ed74d327a82349f6d1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6705,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6705",
+    "title": "Speed rational-rank certificate generation with primitive integer pivots",
+    "state": "open",
+    "created_at": "2026-11-04T00:57:49Z",
+    "updated_at": "2026-11-04T00:57:49Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "josecarlosgonzalezroque-design",
+      "html_url": "https://github.com/josecarlosgonzalezroque-design"
+    },
+    "head": {
+      "sha": "e56d08c60910a4a635b708f26acbcc3326639dd5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6706,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6706",
+    "title": "Research: cuts through time at block 4, no 3 in 10 and no 2 in 7 without address maps (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-04T01:10:15Z",
+    "updated_at": "2026-11-04T01:10:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "jacobalansussman",
+      "html_url": "https://github.com/jacobalansussman"
+    },
+    "head": {
+      "sha": "71ba6fe3b88a6b54f7aa1e40a179cdb389e1113f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6707,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6707",
+    "title": "Close the fixed nine-query tariff at 486 using prior geometry (no κ)",
+    "state": "open",
+    "created_at": "2026-11-04T01:14:24Z",
+    "updated_at": "2026-11-04T01:14:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "3c2ac6d5e0c12bb308bc29ffcfb5558d0a526213"
     },
     "base": {
       "ref": "main"

@@ -6771,6 +6771,57 @@
             "display": "3.5n-o(n)"
           }
         ]
+      },
+      {
+        "slug": "other-prime-gaps",
+        "name": "Bounded prime gaps",
+        "url": "https://bigospeedrun.com/other/prime-gaps",
+        "leader": "openai:186",
+        "table": "other-bounds",
+        "direction": "lower",
+        "records": [
+          {
+            "id": "stadlmann:240",
+            "score": "240",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Julia Stadlmann"
+            ],
+            "bound": "H_1 ≤ 240",
+            "display": "240"
+          },
+          {
+            "id": "axiom-math:212",
+            "score": "212",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "François Charton",
+              "Letong Hong",
+              "Kenny Lau",
+              "Ken Ono",
+              "Guillaume Remy",
+              "Ho Chung Siu",
+              "Ashvin A. Swaminathan",
+              "Jesse Thorner",
+              "Yunzhou Xie"
+            ],
+            "bound": "H_1 ≤ 212",
+            "display": "212"
+          },
+          {
+            "id": "openai:186",
+            "score": "186",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "OpenAI"
+            ],
+            "bound": "H_1 ≤ 186",
+            "display": "186"
+          }
+        ]
       }
     ]
   },
@@ -7098,7 +7149,8 @@
     "[\"integer-multiplication\",\"crocswap-pr-6621\",\"3297/1000000\",\"attained\"]:record",
     "[\"directed-sssp\",\"directed-sssp-2026\",\"n log^3/4 ; n log^11/12\",\"attained\"]:lean",
     "[\"integer-multiplication\",\"crocswap-pr-6702\",\"2061/625000\",\"attained\"]:record",
-    "[\"other-snaky\",\"direct-issue-137:19\",\"19\",\"attained\"]:lean"
+    "[\"other-snaky\",\"direct-issue-137:19\",\"19\",\"attained\"]:lean",
+    "[\"other-prime-gaps\",\"openai:186\",\"186\",\"attained\"]:record"
   ],
   "deferred": [
     {
