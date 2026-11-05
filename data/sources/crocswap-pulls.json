@@ -130618,5 +130618,47 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6742,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6742",
+    "title": "research: independently audit complete capped-flow histograms",
+    "state": "open",
+    "created_at": "2026-11-05T19:21:10Z",
+    "updated_at": "2026-11-05T19:29:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "eeab0fc5573b93e304f6e1b7935bfdb231042941"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6743,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6743",
+    "title": "research: prove uniform growth of the pinned nested width policy",
+    "state": "open",
+    "created_at": "2026-11-05T19:56:21Z",
+    "updated_at": "2026-11-05T20:04:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "db5bafd24198c86aeef75c5581e00a0673a5cd60"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
