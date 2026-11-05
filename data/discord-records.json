@@ -4437,7 +4437,7 @@
         "slug": "exact-dft",
         "name": "Fourier Transform",
         "url": "https://bigospeedrun.com/exact-dft",
-        "leader": "direct-pr-91",
+        "leader": "direct-pr-156",
         "direction": "higher",
         "records": [
           {
@@ -4561,6 +4561,20 @@
               "Parker Loflin"
             ],
             "bound": "O(n log^(1 - 0.0012661185) n)"
+          },
+          {
+            "id": "direct-pr-156",
+            "score": "31415926535897932384626433/10000000000000000000000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Halit Ziya KARTAL"
+            ],
+            "bound": "O(n log^(1 - 0.0031415926) n)",
+            "verification": {
+              "state": "pending",
+              "since": "2026-11-05T06:54:20Z"
+            }
           },
           {
             "id": "direct-pr-29",
@@ -7274,6 +7288,14 @@
       "authors": [
         "aigent-marius"
       ]
+    },
+    {
+      "key": "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:record",
+      "slug": "exact-dft",
+      "authors": [
+        "Halit Ziya KARTAL"
+      ],
+      "hold": true
     }
   ]
 }

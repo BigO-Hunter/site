@@ -620,6 +620,42 @@
       }
     },
     {
+      "id": "direct-pr-156",
+      "kind": "improvement",
+      "score": "31415926535897932384626433/10000000000000000000000000000",
+      "score_relation": "attained",
+      "tier": "claimed",
+      "submitted_at": "2026-11-05T06:54:20Z",
+      "spec_version": "1",
+      "title": "HalitZiyaKARTAL direct dft submission",
+      "authors": [
+        {
+          "name": "HalitZiyaKARTAL",
+          "url": "https://github.com/HalitZiyaKARTAL"
+        }
+      ],
+      "predecessors": [],
+      "submission_url": "https://github.com/bigospeedrun/verifier/pull/156",
+      "source_commit": "da94a2a6f593caa1f534f1ab1c84b88ff5d74906",
+      "artifact": {
+        "path": "sources/direct-pr-156-submission.json",
+        "sha256": "f234edd7fb36e3e06da1d972d37f64ad75d6d107c3520e2c7eecc7ea0f0c41ec"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/bigospeedrun/verifier/pull/156",
+        "theorem": "Race.bound",
+        "certificate_path": null
+      },
+      "dependencies": [],
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-05T06:54:20Z",
+      "site_observed_at": "2026-11-05T07:25:31Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/bigospeedrun/verifier/tree/da94a2a6f593caa1f534f1ab1c84b88ff5d74906/submissions/dft/halitziyakartal-halitziyav6-pi"
+      }
+    },
+    {
       "id": "direct-pr-29",
       "kind": "improvement",
       "score": "3577409/2000000000",
@@ -1271,6 +1307,24 @@
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39515983587",
       "verification": "passed"
     },
+    "direct-pr-156": {
+      "checked_at": "2026-11-05",
+      "source_url": "https://github.com/bigospeedrun/verifier/tree/da94a2a6f593caa1f534f1ab1c84b88ff5d74906/submissions/dft/halitziyakartal-halitziyav6-pi",
+      "repo": "bigospeedrun/verifier",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Submitted bound; independent verification has not passed.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "comparison_key": "exact-dft/uniform-exact-arithmetic/v1",
+      "publication_date": "2026-11-05T06:54:20Z",
+      "publication_date_precision": "date-time",
+      "publication_date_role": "Submission opened",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/156",
+      "direct_submission": true,
+      "route": "pull_request",
+      "verification": "pending"
+    },
     "direct-pr-29": {
       "checked_at": "2026-11-05",
       "source_url": "https://github.com/bigospeedrun/verifier/blob/607121a796548005a238a6e63589de866c9ab6f6/submissions/dft/jacobalansussman-lever-2979-full-cut/Submission.lean",
@@ -1432,5 +1486,5 @@
       "verification": "passed"
     }
   },
-  "updated_at": "2026-11-05T00:28:58Z"
+  "updated_at": "2026-11-05T07:25:31Z"
 }

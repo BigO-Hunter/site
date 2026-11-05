@@ -130163,7 +130163,7 @@
     "title": "[codex] Lower delayed-cover root and recursive shape production to fixed tapes",
     "state": "open",
     "created_at": "2026-11-04T19:59:01Z",
-    "updated_at": "2026-11-05T06:09:24Z",
+    "updated_at": "2026-11-05T06:28:27Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130382,6 +130382,27 @@
     },
     "head": {
       "sha": "8261826cf3405543803050309004f5b17b8090b0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6731,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6731",
+    "title": "Independently audit the all-even attaining word and compatibility gate",
+    "state": "open",
+    "created_at": "2026-11-05T06:52:48Z",
+    "updated_at": "2026-11-05T06:54:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ferdy252",
+      "html_url": "https://github.com/ferdy252"
+    },
+    "head": {
+      "sha": "05da0fe4e09a51e4fa32c2550a205af796e8fc8e"
     },
     "base": {
       "ref": "main"
