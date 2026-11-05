@@ -1481,6 +1481,33 @@
      "note": "Tensor-rank bound over every field (matMulExp K < value). Weaker than our classical baseline 2.371177 or equal to it, so it was not the best result on our board when it was proved. Not a Lean Verified row of ours."
     }
    ]
+  },
+  "other-quasi-riemann": {
+   "kind": "other",
+   "family": "quasi-riemann",
+   "existing_claims_file": "../src/lib/other-bounds.json",
+   "bound_template": "\\theta\\le {value}",
+   "quantity_word": "threshold",
+   "statement_pattern": "\\(hs : \\({value} : ℝ\\) < s\\.re\\)",
+   "campaign": {
+    "id": "f16891be-d1d7-4714-a81d-c15735bfda85",
+    "slug": "towards-grh",
+    "status": "active",
+    "value_type": "real",
+    "bound_type": "upper",
+    "value_direction": "lower"
+   },
+   "statement_form": "DirichletCharacter.LFunction χ s ≠ 0 for every modulus q > 0, every complex Dirichlet character χ mod q and every complex s with θ < Re(s), except s = 1 for the principal character (Mathlib definitions only; the goals import only Mathlib, reviewed 2026-11-05). That is our statement: the Dirichlet L-functions, zeta among them (modulus 1), have no zeros with real part above θ. It is the all-Dirichlet theorem of the row, not the Hecke part of the OpenAI paper.",
+   "definitions": {},
+   "entries": [
+    {
+     "mission_id": "ab3233ce-88ac-48c4-a577-bca323dbbf97",
+     "value": "0.875",
+     "solved_at": "2026-10-15T18:00:22.537199+00:00",
+     "action": "skip",
+     "note": "OpenAI baseline 7/8, already the baseline of this row: a port of OpenAI's Lean proof (goal OAI.DirichletCharacter.LFunction_ne_zero_of_seven_eighths_lt_re by @wurtle)."
+    }
+   ]
   }
  }
 }

@@ -24,6 +24,10 @@ row's source, or the proof content matches). An entry with action "row" adds a
 row when the result was the best on the board at its solved time, or when it beats the baseline and every
 Lean Verified row of the board at its solved time (a better Claimed or Human Verified row does not block it). A board row
 with the same value but another proof must be listed in "same_value_rows".
+An Other bounds row takes its direction (higher or lower is better) from its family. A new claim with the
+same bound as a claim already on the row (as the page ranks them) holds the board, unless the
+reviewer lists that claim in "same_value_claims": a port of a Human Verified result would else outrank
+the original, because the Lean Verified row ranks first on an equal bound.
 A proved entry that the trust file does not list holds the board, unless it was proved after
 the newest export snapshot (MANIFEST.json generated_at): its goal cannot be in the export yet, so
 it waits for the next export and the board still imports. If the export has no goal for it
@@ -336,6 +340,8 @@ def check_board(slug, board, doc, files, get, today='9999-12-31'):
 
 
 OTHER_EPSILON = Fraction(1, 100000)
+# Two numbers that the Other bounds page ranks as one bound (same() in src/lib/other-rank.ts).
+SAME_BOUND = Fraction(1, 10 ** 9)
 
 
 def claim_number(claim):
@@ -347,11 +353,18 @@ def claim_number(claim):
     return Fraction(int(match[1]), int(match[2])) if match else None
 
 
+def decimals(text):
+    """The decimal places of the first decimal in a text, or None when it has none."""
+    match = re.search(r'\d+\.(\d+)', text)
+    return len(match[1]) if match else None
+
+
 def other_known(root, board):
-    """(time, number) of the baseline and the claims already on the Other bounds row."""
+    """(time, number) of the baseline and the claims already on the Other bounds row, and (handle, number) of each claim."""
     data = json.loads((root / board['existing_claims_file']).read_text())
     family = next(f for f in data['families'] if f['slug'] == board['family'])
     known, known_lv = [], []
+    claims = [(c['handle'], claim_number(c)) for c in family['claims'] if claim_number(c) is not None]
     baseline = dict(family['baseline'], display=family['baseline'].get('display', family['baseline']['value']))
     for claim in [baseline, *family['claims']]:
         number = claim_number(claim)
@@ -361,14 +374,38 @@ def other_known(root, board):
             known.append((at, number))
             if claim is baseline or claim.get('evidence') == 'lean-verified':
                 known_lv.append((at, number))
-    return family, known, known_lv
+    return family, known, known_lv, claims
+
+
+def shown_number(entry, higher):
+    """The number the page shows for an entry. The page shows a bound, so a long value may be shown rounded
+    toward the weaker bound (cut off when higher is better, rounded up when lower is better), never the other way."""
+    shown = entry.get('display_value', entry['value'])
+    ok = re.fullmatch(r'\d+\.\d+', shown)
+    if ok and higher:
+        ok = entry['value'].startswith(shown)
+    elif ok:
+        value, number = Fraction(entry['value']), Fraction(shown)
+        ok = value <= number < value + Fraction(1, 10 ** decimals(shown))
+    require(ok, f'entry {entry["value"]}: display_value {shown!r} is not the value ' + ('cut off' if higher else 'rounded up'))
+    return shown
+
+
+def other_higher(board, family):
+    """True when higher is better on the row. The campaign must agree with the row."""
+    direction = family.get('direction')
+    require(direction in ('higher', 'lower'), f'row {board["family"]} has no direction')
+    require(board['campaign']['value_direction'] == direction, f'campaign direction {board["campaign"]["value_direction"]!r} is not the row direction {direction!r}')
+    return direction == 'higher'
 
 
 def check_other(slug, board, root, files, get, today):
-    """Return the import plan for an Other bounds row, or raise Hold. Higher is better."""
+    """Return the import plan for an Other bounds row, or raise Hold."""
     verify_campaign(board, files, get, today)
-    family, known, known_lv = other_known(root, board)
-    plan = dict(links={}, rows=[], claims=[])
+    family, known, known_lv, claims = other_known(root, board)
+    higher = other_higher(board, family)
+    beats = (lambda a, b: a > b + OTHER_EPSILON) if higher else (lambda a, b: a < b - OTHER_EPSILON)
+    plan = dict(links={}, rows=[], claims=[], higher=higher)
     for entry in sorted(board['entries'], key=lambda e: utc(e['solved_at'])):
         value = Fraction(entry['value'])
         if entry['action'] == 'wait':
@@ -378,14 +415,19 @@ def check_other(slug, board, root, files, get, today):
                 known.append((utc(entry['solved_at']), value))
             continue
         require(entry['action'] == 'row', f'unknown action {entry["action"]!r}')
-        verify_entry(entry, board, files, True)
+        verify_entry(entry, board, files, higher)
         solved = utc(entry['solved_at'])
         earlier = [number for at, number in known if at <= solved]
         earlier_lv = [number for at, number in known_lv if at <= solved]
-        # The page ranks by the number it shows, so the shown (cut off) number must win the same way as the value.
-        shown = Fraction(entry.get('display_value', entry['value']))
+        # The page ranks by the number it shows, so the shown (rounded) number must win the same way as the value.
+        shown = Fraction(shown_number(entry, higher))
+        # A claim that the page ranks as the same bound (other-rank.ts: the numbers agree to 1e-9 of their size) holds the
+        # board: the reviewer lists it in same_value_claims when the new row credits its authors first.
+        same = sorted(handle for handle, number in claims if abs(shown - number) <= SAME_BOUND * max(abs(shown), abs(number))
+                      and handle not in entry.get('same_value_claims', []))
+        require(not same, f'entry {entry["value"]} has the same value as claim {", ".join(same)}; review it and list it in same_value_claims')
         for label, number in (('value', value), ('shown number', shown)):
-            require(all(number > other + OTHER_EPSILON for other in earlier) or all(number > other + OTHER_EPSILON for other in earlier_lv),
+            require(all(beats(number, other) for other in earlier) or all(beats(number, other) for other in earlier_lv),
                     f'entry {entry["value"]} was not the best result at its solved time, and not the best Lean Verified result either'
                     + ('' if label == 'value' else ' (as shown on the page)'))
         plan['claims'].append(entry)
@@ -394,7 +436,7 @@ def check_other(slug, board, root, files, get, today):
     return plan
 
 
-def claim_for(slug, board, entry, trust):
+def claim_for(slug, board, entry, trust, higher=True):
     """An Other bounds claim (the shape of src/lib/other-bounds.json) for one reviewed entry, and its receipt."""
     theorem, solution = entry['theorem'], entry['solution']
     # The site writes these texts as HTML after its math step (set:html with inlineMath), which
@@ -403,9 +445,7 @@ def claim_for(slug, board, entry, trust):
         require(not re.search(r'[<>&]', text), f'entry {entry["value"]}: the {label} has a character (< > &) that the page cannot show as text')
     mission_url = 'https://prove2.me/missions/' + entry['mission_id']
     key = 'prove2me-' + board['family'] + '-' + entry['value'].replace('.', '-')
-    # The page shows a lower bound, so a long value may be shown cut off (rounded down), never up.
-    shown = entry.get('display_value', entry['value'])
-    require(re.fullmatch(r'\d+\.\d+', shown) and entry['value'].startswith(shown), f'entry {entry["value"]}: display_value {shown!r} is not the value cut off')
+    shown = shown_number(entry, higher)
     receipt = dict(schema_version=1, source='prove2.me', reviewed_at=trust['reviewed_at'], reviewed_by=trust['reviewed_by'],
                    campaign=board['campaign'], mission_id=entry['mission_id'], mission_url=mission_url,
                    attested_value=entry['value'], solved_at=entry['solved_at'], statement_form=board['statement_form'],
@@ -415,11 +455,11 @@ def claim_for(slug, board, entry, trust):
     path = 'sources/' + key + '.json'
     names = entry['authors']
     claim = dict(author=names[0]['name'], handle='prove2me-' + entry['value'].replace('.', '-'), value=entry['value'],
-                 display='\\ge ' + shown, date=zulu(entry['solved_at']), dateSource=theorem['url'], dateKind='first-stated',
+                 display=('\\ge ' if higher else '\\le ') + shown, date=zulu(entry['solved_at']), dateSource=theorem['url'], dateKind='first-stated',
                  url=theorem['url'], lean=True,
                  leanNote='Yes: proved on prove2.me, which checks each Lean proof on its server. We reviewed that its Lean statement is this statement.',
                  evidence='lean-verified' if LEAN_VERIFIED else 'claimed', note=entry['note'], authors=names,
-                 proofScope='The Lean theorem ' + theorem['name'] + ' on prove2.me states this exponent. Its accepted proof is by ' + ', '.join(n['name'] for n in names) + '.',
+                 proofScope='The Lean theorem ' + theorem['name'] + ' on prove2.me states this ' + board.get('quantity_word', 'exponent') + '. Its accepted proof is by ' + ', '.join(n['name'] for n in names) + '.',
                  bound=board['bound_template'].replace('{value}', shown), prove2me=True, receiptSha256=sha(raw))
     return claim, {path: raw}
 
@@ -547,7 +587,7 @@ def run(root, get=fetch, now=None):
                 plan = check_other(slug, board, root, files, get, now[:10])
                 claims, sources = [], {}
                 for entry in plan['claims']:
-                    claim, receipt = claim_for(slug, board, entry, trust)
+                    claim, receipt = claim_for(slug, board, entry, trust, plan['higher'])
                     claims.append(claim)
                     sources.update(receipt)
                 state['boards'][slug] = dict(status='ok', kind='other', family=board['family'], links={}, rows=[], claims=claims)

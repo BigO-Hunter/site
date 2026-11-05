@@ -534,8 +534,11 @@ class Prove2meImportTest(unittest.TestCase):
             p2m.campaign_data(html)
 
 
-class OtherBoundsImportTest(unittest.TestCase):
-    """An Other bounds row (higher is better): claims for the site, best at their solved time."""
+class OtherFixture:
+    """An Other bounds row with one claim and four campaign entries: skip, row, row, wait."""
+    DIRECTION = 'higher'
+    BASELINE, CLAIM = '\\approx2.000', '\\approx2.00647'
+    VALUES = ('2.001', '2.007', '2.02', '2.05')
 
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -544,14 +547,15 @@ class OtherBoundsImportTest(unittest.TestCase):
         self.root = base / 'data'
         (self.root).mkdir()
         (base / 'src' / 'lib').mkdir(parents=True)
-        (base / 'src' / 'lib' / 'other-bounds.json').write_text(json.dumps(dict(families=[dict(slug='row', baseline=dict(value='\\approx2.000', date='2026-10-06T00:00:00Z'),
-            claims=[dict(display='\\approx2.00647', value='x', date='2026-10-15T07:52:00Z')])])))
-        self.rules = dict(id='c9', slug='camp', name='N', status='active', value_type='real', bound_type='lower', value_direction='higher')
+        (base / 'src' / 'lib' / 'other-bounds.json').write_text(json.dumps(dict(families=[dict(slug='row', direction=self.DIRECTION, baseline=dict(value=self.BASELINE, date='2026-10-06T00:00:00Z'),
+            claims=[dict(handle='c1', display=self.CLAIM, value='x', date='2026-10-15T07:52:00Z')])])))
+        self.rules = dict(id='c9', slug='camp', name='N', status='active', value_type='real', bound_type='lower' if self.DIRECTION == 'higher' else 'upper',
+                          value_direction=self.DIRECTION)
         self.files = {DEF: formalpedia(['Prove2me | d', 'status  : Definition'], DEF_BODY)}
         self.export_at = '2026-10-19T12:00:00+00:00'
         self.live, entries = [], []
-        for mission, value, solved, action in [('o1', '2.001', '2026-10-15T10:00:00+00:00', 'skip'), ('o2', '2.007', '2026-10-15T21:00:00+00:00', 'row'),
-                                                ('o3', '2.02', '2026-10-16T01:00:00+00:00', 'row'), ('o4', '2.05', '2026-10-18T01:00:00+00:00', 'wait')]:
+        for mission, value, solved, action in zip(('o1', 'o2', 'o3', 'o4'), self.VALUES, ('2026-10-15T10:00:00+00:00', '2026-10-15T21:00:00+00:00', '2026-10-16T01:00:00+00:00',
+                                                                                 '2026-10-18T01:00:00+00:00'), ('skip', 'row', 'row', 'wait')):
             self.live.append(dict(mission_id=mission, attested_value=value, proved=True, solved_at=solved))
             entry = dict(mission_id=mission, value=value, solved_at=solved, action=action)
             if action == 'row':
@@ -585,6 +589,19 @@ class OtherBoundsImportTest(unittest.TestCase):
 
     def go(self, now='2026-10-19T12:00:00Z'):
         return p2m.run(self.root, self.get, now=now)
+
+    def save(self):
+        (self.root / 'prove2me-trust.json').write_text(json.dumps(self.trust))
+
+    def edit_family(self, change):
+        path = self.root.parent / 'src' / 'lib' / 'other-bounds.json'
+        data = json.loads(path.read_text())
+        change(data['families'][0])
+        path.write_text(json.dumps(data))
+
+
+class OtherBoundsImportTest(OtherFixture, unittest.TestCase):
+    """An Other bounds row (higher is better): claims for the site, best at their solved time."""
 
     @mock.patch.object(p2m, 'LEAN_VERIFIED', True)
     def test_best_at_its_time_entries_become_lean_verified_claims_with_receipts(self):
@@ -703,6 +720,55 @@ class OtherBoundsImportTest(unittest.TestCase):
         _, held_state, held = self.go()
         self.assertIn('other-row', held)
         self.assertEqual(len(held_state['boards']['other-row']['claims']), 2)
+
+
+class LowerOtherBoundsImportTest(OtherFixture, unittest.TestCase):
+    """An Other bounds row where lower is better (the quasi-Riemann threshold)."""
+    DIRECTION = 'lower'
+    BASELINE, CLAIM = '\\approx0.875', '\\approx0.8749'
+    VALUES = ('0.87495', '0.87481', '0.8745', '0.87')
+
+    def test_lower_results_become_claims_that_show_an_upper_bound(self):
+        changed, state, held = self.go()
+        self.assertEqual(held, {})
+        claims = state['boards']['other-row']['claims']
+        self.assertEqual([(c['value'], c['display'], c['bound']) for c in claims], [('0.87481', '\\le 0.87481', 'b^{0.87481}'), ('0.8745', '\\le 0.8745', 'b^{0.8745}')])
+
+    def test_a_result_above_the_best_lean_verified_claim_holds_the_board(self):
+        def change(family):
+            family['claims'][0].update(display='\\approx0.8740', evidence='lean-verified')
+        self.edit_family(change)
+        self.assertIn('not the best Lean Verified result either', self.go()[2]['other-row'])
+
+    def test_a_long_value_may_be_shown_rounded_up_but_not_cut_off(self):
+        entry = self.trust['boards']['other-row']['entries'][2]
+        for shown, reason in (('0.874', 'is not the value rounded up'), ('0.876', 'is not the value rounded up'), ('0.875', '(as shown on the page)')):
+            entry['display_value'] = shown
+            self.save()
+            self.assertIn(reason, self.go()[2]['other-row'], shown)
+
+    def test_a_claim_with_the_same_value_holds_the_board_until_the_reviewer_lists_it(self):
+        # A Lean Verified port of a Human Verified result would rank above the original on the same bound.
+        for display, value in (('\\approx0.87481', 'x'), ('87481/100000', '87481/100000'), ('\\approx0.874810000001', 'x')):
+            with self.subTest(display=display):
+                self.edit_family(lambda family: family['claims'][0].update(display=display, value=value, evidence='human-verified'))
+                self.trust['boards']['other-row']['entries'][1].pop('same_value_claims', None)
+                self.save()
+                self.assertIn('has the same value as claim c1', self.go()[2]['other-row'])
+                self.trust['boards']['other-row']['entries'][1]['same_value_claims'] = ['c1']
+                self.save()
+                self.assertEqual(self.go()[2], {})
+        # A claim that the page ranks apart is another result.
+        self.edit_family(lambda family: family['claims'][0].update(display='\\approx0.874811'))
+        self.trust['boards']['other-row']['entries'][1].pop('same_value_claims')
+        self.save()
+        self.assertEqual(self.go()[2], {})
+
+    def test_the_campaign_must_have_the_direction_of_the_row(self):
+        self.rules['value_direction'] = 'higher'
+        self.trust['boards']['other-row']['campaign']['value_direction'] = 'higher'
+        self.save()
+        self.assertIn('is not the row direction', self.go()[2]['other-row'])
 
 
 class TrustFileTest(unittest.TestCase):
