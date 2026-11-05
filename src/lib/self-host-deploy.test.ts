@@ -86,6 +86,19 @@ function tick(): Promise<{status: Record<string, unknown>; output: string}> {
   child.on('close', () => done({status: JSON.parse(readFileSync(join(root, 'auto-deploy/status.json'), 'utf8')), output}));
  });
 }
+// Hold a deploy lock until release() is called. The holder prints "held" only after flock has the lock, and it keeps
+// the lock until its stdin closes. A fixed `flock ... sleep 1` and a 300 ms wait raced under parallel test load: the
+// tick could take the lock before the holder had it, or after it was free again (failed_target, not locked).
+async function holdLock(path: string): Promise<() => Promise<void>> {
+ const holder = spawn('flock', [path, 'sh', '-c', 'echo held; cat >/dev/null']);
+ const closed = new Promise(done => holder.on('close', done));
+ await new Promise<void>((done, fail) => {
+  holder.stdout.once('data', () => done());
+  holder.once('error', fail);
+  holder.once('close', code => fail(new Error('the lock holder ended before it had the lock: ' + code)));
+ });
+ return async () => { holder.stdin.end(); await closed; };
+}
 const failed = () => existsSync(join(root, 'auto-deploy/failed')) ? readFileSync(join(root, 'auto-deploy/failed'), 'utf8').trim().split('\n') : [];
 
 test('status.json has exactly the Hosted Isomux fields, in order; an unchanged tag is up to date', async () => {
@@ -147,12 +160,11 @@ test('API errors, hold, lock and bad config deploy nothing', async () => {
  ({status} = await tick());
  assert.equal(status.result, 'held'); assert.equal(status.held, true);
  rmSync(join(envDir, 'auto-deploy.hold'));
- const holder = spawn('flock', [join(root, 'deploy.lock'), 'sleep', '1']);
- const released = new Promise(done => holder.on('close', done));
- await new Promise(done => setTimeout(done, 300));
- ({status} = await tick());
- assert.equal(status.result, 'locked');
- await released;
+ const release = await holdLock(join(root, 'deploy.lock'));
+ try {
+  ({status} = await tick());
+  assert.equal(status.result, 'locked');
+ } finally { await release(); }
  chmodSync(join(envDir, 'auto-deploy.env'), 0o644);
  ({status} = await tick());
  assert.equal(status.phase, 'config');
@@ -256,14 +268,13 @@ test('an image that cannot be removed is logged and does not stop the rest', () 
 
 test('--prune-images waits for nothing: a tick that holds the deploy lock stops it', async () => {
  const box = sandbox(3, 2, catalog);
- const holder = spawn('flock', [join(box.r, 'deploy.lock'), 'sleep', '1']);
- const released = new Promise(done => holder.on('close', done));
- await new Promise(done => setTimeout(done, 300));
- const out = prune(box, '--apply');
- assert.equal(out.status, 1);
- assert.match(out.stdout, /holds the lock/);
- assert.deepEqual(box.removed(), []);
- await released;
+ const release = await holdLock(join(box.r, 'deploy.lock'));
+ try {
+  const out = prune(box, '--apply');
+  assert.equal(out.status, 1);
+  assert.match(out.stdout, /holds the lock/);
+  assert.deepEqual(box.removed(), []);
+ } finally { await release(); }
 });
 
 function deployTick(box: ReturnType<typeof sandbox>): Promise<{status: Record<string, unknown>; output: string}> {
