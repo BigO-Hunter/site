@@ -8,7 +8,7 @@ import unittest
 import zipfile
 from types import SimpleNamespace
 from maintainer_import import (validate_maintainer, apply_record, choose_receipt, collect_maintainer,
-                               encode, statement_path, STATE)
+                               encode, statement_path, STATE, OTHER)
 from direct_import import Rejected, sha
 from direct_refresh import Importer, transaction
 
@@ -297,10 +297,19 @@ class MaintainerTests(unittest.TestCase):
 
     def test_every_pinned_binding_has_its_statement_and_names_its_board_row(self):
         # Reviewed site configuration: the vendored statement hashes to the profile, and the row exists on its board
-        # with the same source commit, score and relation (apply_record refuses anything else).
+        # with the same source commit, score and relation (apply_record refuses anything else). An Other bounds
+        # binding names a claim with a Lean proof of src/lib/other-bounds.json, with the same source repository.
+        others=json.loads((ROOT.parent/'src/lib/other-bounds.json').read_text())['families']
         for key,binding in CONFIG['maintainer_bindings'].items():
             statement=statement_path(ROOT,binding).read_bytes()
             self.assertEqual(sha(statement),binding['profile']['challenge_sha256'],key)
+            if 'other' in binding:
+                self.assertFalse({'board','problem_id','record_id'}&set(binding),key)
+                family=next(f for f in others if f['slug']==binding['other']['slug'])
+                claim=next(c for c in family['claims'] if c['handle']==binding['other']['handle'])
+                self.assertTrue(claim['lean'],key)
+                self.assertEqual(binding['profile']['upstream_repo'],binding['repo_url'],key)
+                continue
             doc=json.loads((ROOT/binding['board']).read_text())
             row=next(r for r in doc['records'] if r['id']==binding['record_id'])
             self.assertEqual((doc['problem_id'],row['source_commit'],row['score'],row.get('score_relation','attained')),
@@ -313,6 +322,38 @@ class MaintainerTests(unittest.TestCase):
         self.assertEqual([Path(b['profile']['challenge_file']).name for b in pair],['Challenge.lean']*2)
         self.assertEqual(len({statement_path(ROOT,b) for b in pair}),2)
         self.assertEqual(len({b['profile']['challenge_sha256'] for b in pair}),2)
+
+    def test_other_bounds_binding_writes_its_claim_receipt_and_no_board(self):
+        # The dft-e8 receipt, bound to an Other bounds claim in place of its board row.
+        binding=copy.deepcopy(BINDING)
+        for key in ['board','problem_id','record_id']:del binding[key]
+        binding['other']=dict(slug='some-row',handle='some-claim')
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary)
+            write_board_fixture(root,'registry.json')
+            (root/'direct-fixtures').mkdir();(root/'direct-fixtures/UniformFourierE8.lean').write_bytes((ROOT/'direct-fixtures/UniformFourierE8.lean').read_bytes())
+            r,a,run,b=fixture('final',binding=binding);raw=pack(r,a)
+            api=SimpleNamespace(pages=lambda *args,**kwargs:[a])
+            config=copy.deepcopy(CONFIG);config['maintainer_bindings']={'some-claim':binding}
+            importer=SimpleNamespace(root=root,config=config,api=api,notes=[],trusted=lambda _:None,run=lambda _:run,artifact=lambda _:raw)
+            files=collect_maintainer(importer,{},NOW)
+            prefix=f'sources/maintainer-some-claim-{binding["run_id"]}'
+            self.assertEqual(set(files),{STATE,OTHER,prefix+'.json',prefix+'.zip',prefix+'-source.json'})
+            self.assertEqual(json.loads(files[OTHER]),dict(schema_version=1,boards={'some-row':{'some-claim':dict(
+                state='passed',checked_at=NOW,receipt_path=prefix+'.json',receipt_url=run['html_url'],
+                theorem='; '.join(binding['profile']['theorem_names']),source_commit=binding['commit'])}}))
+            for path,content in files.items():
+                target=root/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(content)
+            self.assertEqual(collect_maintainer(importer,{},NOW),{})
+            # A final rejection in a newer artifact replaces the pass.
+            r,a,run,b=fixture('final','rejected',binding=binding);a['id']=124;raw=pack(r,a)
+            self.assertEqual(json.loads(collect_maintainer(importer,{},NOW)[OTHER])['boards']['some-row']['some-claim']['state'],'failed')
+            # A target that is not one slug and one handle is refused, and nothing changes.
+            for target in [dict(slug='Some Row',handle='some-claim'),dict(slug='some-row'),dict(slug='some-row',handle='x',board='y')]:
+                config['maintainer_bindings']={'some-claim':dict(binding,other=target)}
+                importer.notes=[]
+                self.assertEqual(collect_maintainer(importer,{},NOW),{})
+                self.assertTrue(any('some-claim: receipt not admitted' in note for note in importer.notes),target)
 
     def test_transaction_cache_expiry_and_repeat(self):
         with tempfile.TemporaryDirectory() as temporary:

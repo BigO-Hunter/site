@@ -15,6 +15,9 @@ from direct_pr import PREFIX, archive_members
 
 WORKFLOW = '.github/workflows/verify.yml'
 STATE = 'maintainer-receipts.json'
+# A binding with `other` ({slug, handle}) names a claim of an Other bounds row (src/lib/other-bounds.json) in place
+# of a board row. Its receipt goes here; src/lib/other-merge.ts makes the claim Lean Verified when it passed.
+OTHER = 'maintainer-other.json'
 
 
 def encode(value):
@@ -121,6 +124,20 @@ def apply_record(doc, binding, verdict, receipt_path, now):
     return doc
 
 
+def apply_other(doc, binding, verdict, receipt_path):
+    target = binding['other']
+    require(isinstance(target, dict) and set(target) == {'slug', 'handle'} and
+            all(isinstance(target[k], str) and re.fullmatch('[a-z0-9]+(?:-[a-z0-9]+)*', target[k]) for k in target),
+            'Invalid Other bounds claim of a maintainer binding')
+    require(doc.get('schema_version') == 1 and isinstance(doc.get('boards'), dict), 'Wrong Other bounds receipt model')
+    passed = verdict['decision'] == 'lean-verified'
+    doc['boards'].setdefault(target['slug'], {})[target['handle']] = dict(
+        state='passed' if passed else 'failed' if verdict['decision'] == 'blocked' else 'pending',
+        checked_at=verdict['checked_at'], receipt_path=receipt_path, receipt_url=verdict['receipt_url'],
+        theorem='; '.join(binding['profile']['theorem_names']), source_commit=binding['commit'])
+    return doc
+
+
 def choose_receipt(cached, candidates):
     """A final rejection is sticky; no late checkpoint can restore verification."""
     if cached and cached['verdict']['decision'] == 'blocked':
@@ -199,13 +216,18 @@ def _collect_maintainer(importer, files, now):
             checked_at=verdict['checked_at'], description=verdict['reason'], receipt_url=verdict['receipt_url'],
             artifact_path=archive_path, artifact_sha256=selected['artifact']['digest'].removeprefix('sha256:'),
             source_receipt_path=prefix+'-source.json'))
-        board = binding['board']
-        doc = read_json(files[board] if board in files else (root/board).read_bytes())
-        files[board] = encode(apply_record(doc, binding, verdict, receipt_path, now))
+        if 'other' in binding:
+            doc = read_json(files[OTHER]) if OTHER in files else read_json((root/OTHER).read_bytes()) \
+                if (root/OTHER).exists() else dict(schema_version=1, boards={})
+            files[OTHER] = encode(apply_other(doc, binding, verdict, receipt_path))
+        else:
+            board = binding['board']
+            doc = read_json(files[board] if board in files else (root/board).read_bytes())
+            files[board] = encode(apply_record(doc, binding, verdict, receipt_path, now))
         importer.notes.append(f'Maintainer {key}: {verdict["stage"]}: {verdict["reason"]}')
     files[STATE] = encode(state)
     changed = {p:raw for p,raw in files.items() if not (root/p).exists() or (root/p).read_bytes()!=raw}
-    if any(b['board'] in changed for b in config['maintainer_bindings'].values()):
+    if any(b.get('board') in changed for b in config['maintainer_bindings'].values()):
         registry = read_json(changed['registry.json'] if 'registry.json' in changed else (root/'registry.json').read_bytes())
         registry.update(updated_at=now, checked_at=now[:10])
         changed['registry.json'] = encode(registry)
