@@ -144,3 +144,24 @@ export function latex(exps: Q[], names: readonly string[] = T_NAMES): string {
  const parts = names.map((name, i) => qCmp(exps[i], ZERO) === 0 ? '' : name === 'n' ? pow('n', exps[i]) : name === 'log' ? pow('\\log', exps[i], ' n') : qCmp(exps[i], ONE) === 0 ? '\\log\\log n' : `(\\log\\log n)^{${qText(exps[i])}}`);
  return parts.filter(Boolean).join(' ') || '1';
 }
+/** The board table (SsspBoard.astro): one section per density (n, the chart ticks and each point row's density), sparsest
+ * first, with each row that holds there, fastest first. A function row holds at every density; a point row at its own
+ * density and at each sparser one, with from = its own density. A row's home is the densest section it is in (a point row's
+ * own density, m <= n^2 for a function row): only there does the table show its full credit (site#14, 2026-11-05). */
+export function densitySections(board: { records: { id: string; score: string }[]; chart: { ticks: string[] } }, has: (id: string) => boolean = () => true) {
+ const records = board.records.filter(r => has(r.id));
+ const points = records.filter(r => r.score.includes(' ; ')).map(r => ({ id: r.id, t: parse(r.score) }));
+ const functions = records.filter(r => !r.score.includes(' ; ')).map(r => ({ id: r.id, terms: parseFunction(r.score) }));
+ const densities = [...['n', ...board.chart.ticks].map(density), ...points.map(p => p.t.slice(0, 2))].sort(lexCmp).filter((d, i, a) => i === 0 || lexCmp(d, a[i - 1]) !== 0);
+ const sections = densities.map(d => {
+  const rows = [
+   ...functions.map(f => ({ id: f.id, t: timeAt(f.terms, d), from: undefined as Q[] | undefined })),
+   ...points.filter(p => lexCmp(p.t.slice(0, 2), d) >= 0).map(p => ({ id: p.id, t: p.t.slice(2), from: lexCmp(p.t.slice(0, 2), d) > 0 ? p.t.slice(0, 2) : undefined })),
+  ].sort((a, b) => lexCmp(a.t, b.t));
+  return { d, rows: rows.map(r => ({ ...r, best: lexCmp(r.t, rows[0].t) === 0, home: false, homeD: d })) };
+ });
+ const homes = new Map<string, Q[]>();
+ for (const s of sections) for (const r of s.rows) homes.set(r.id, s.d);
+ for (const s of sections) for (const r of s.rows) { r.homeD = homes.get(r.id)!; r.home = lexCmp(r.homeD, s.d) === 0; }
+ return sections;
+}

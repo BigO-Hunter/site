@@ -7,26 +7,14 @@ import {evidenceName,breakthroughLabel} from '../lib/evidence';
 import RecordDate from './RecordDate.astro';
 import AuthorList from './AuthorList.astro';
 import InfoTooltip from './InfoTooltip.astro';
-import {density,parse,parseFunction,timeAt,lexCmp,latex,plain,D_NAMES,type Q} from '../lib/sssp';
+import {densitySections,latex,plain,D_NAMES} from '../lib/sssp';
 import {chartModel} from '../lib/sssp-chart';
 interface Props {records:RecordEntry[];classic?:RecordEntry;}
 const {classic}=Astro.props;
 const records=classic?[classic,...Astro.props.records]:Astro.props.records;
 const board=(import.meta.glob('../data/*.json',{eager:true,import:'default'}) as Record<string,any>)['../data/directed-sssp.json'];
 const byId=new Map(records.map(r=>[r.id,r]));
-const points=board.records.filter((r:any)=>r.score.includes(' ; ')).map((r:any)=>({id:r.id,t:parse(r.score)}));
-const functions=board.records.filter((r:any)=>!r.score.includes(' ; ')).map((r:any)=>({id:r.id,terms:parseFunction(r.score)}));
-const seen=new Map<string,Q[]>();
-for(const d of ['n',...board.chart.ticks])seen.set(d,density(d));
-for(const p of points)seen.set(latex(p.t.slice(0,2),D_NAMES),p.t.slice(0,2));
-const densities=[...seen.values()].sort(lexCmp).filter((d,i,a)=>i===0||lexCmp(d,a[i-1])!==0);
-const sections=densities.map(d=>{
- const rows=[
-  ...functions.map((f:any)=>({id:f.id,t:timeAt(f.terms,d),from:undefined as Q[]|undefined})),
-  ...points.filter((p:any)=>lexCmp(p.t.slice(0,2),d)>=0).map((p:any)=>({id:p.id,t:p.t.slice(2),from:lexCmp(p.t.slice(0,2),d)>0?p.t.slice(0,2):undefined})),
- ].filter(r=>byId.has(r.id)).sort((a,b)=>lexCmp(a.t,b.t));
- return {d,rows:rows.map(r=>({...r,best:lexCmp(r.t,rows[0].t)===0,record:byId.get(r.id)!}))};
-});
+const sections=densitySections(board,id=>byId.has(id)).map(s=>({...s,rows:s.rows.map(r=>({...r,record:byId.get(r.id)!}))}));
 const labels:Record<string,string>={'classical-baseline':'Dijkstra + Fibonacci heap','duan-et-al-stoc-2025':"STOC'25",'duan-et-al-icalp-2026':"ICALP'26"};
 const names:Record<string,string>={...labels,'directed-sssp-2026':'C-HD'};
 const dates:Record<string,string>={};for(const r of records)dates[r.id]=r.date??'9999';
@@ -43,7 +31,7 @@ const receipt=byId.get(cap.row)?.evidenceLevel==='lean-verified'?byId.get(cap.ro
 ---
 <section class="sssp-board" aria-label="Results by edge density">
 <h2>Best results by edge density</h2>
-<p>A result with an edge bound <span set:html={math('D(n)')}/> also holds for every sparser graph, so it is listed under its own density and under each sparser one. The first result in each section is the best known at that density.</p>
+<p>A result with an edge bound <span set:html={math('D(n)')}/> also holds for every sparser graph, so it is listed under its own density and under each sparser one. Its authors and date show once: under its own density, or under <span set:html={math('m\\le n^2')}/> for a time given as a function of <span set:html={math('m')}/>. The first result in each section is the best known at that density.</p>
 <div class="sssp-chart-box"><div class="sssp-chart" role="img" aria-label="Best running time by edge density, ordinal axes"><div class="plot">
  <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
   {model.ys.map((_,y)=><line class="grid" x1="0" x2="100" y1={py(y)} y2={py(y)} vector-effect="non-scaling-stroke"/>)}
@@ -62,11 +50,16 @@ const receipt=byId.get(cap.row)?.evidenceLevel==='lean-verified'?byId.get(cap.ro
 {sections.map(s=><section class="density" aria-label={`m at most ${plain(s.d,D_NAMES)}`}>
  <h3>Graphs with <span set:html={math(`m\\le ${latex(s.d,D_NAMES)}`)}/></h3>
  <div class="results-scroll"><table><thead><tr><th scope="col">Time</th><th scope="col">Evidence level</th><th scope="col">Result</th><th scope="col">Date</th></tr></thead><tbody>
- {s.rows.map(r=><tr data-level={r.record.evidenceLevel} class:list={{best:r.best}}>
-  <td class="bound"><span set:html={math(`O(${latex(r.t)})`)}/>{r.from&&<span class="from"> (from <span set:html={math(`m\\le ${latex(r.from,D_NAMES)}`)}/>)</span>}{r.best&&r.record.methodNote&&<span class="assumptions"><InfoTooltip label="About this bound"><div class="tip-part"><strong class="tip-head">How it is proved</strong>{' '}<span set:html={inlineMath(r.record.methodNote)}/></div></InfoTooltip></span>}</td>
+ {s.rows.map(r=>r.home?<tr id={`sssp-${r.id}`} data-level={r.record.evidenceLevel} class:list={{best:r.best}}>
+  <td class="bound"><span set:html={math(`O(${latex(r.t)})`)}/>{r.best&&r.record.methodNote&&<span class="assumptions"><InfoTooltip label="About this bound"><div class="tip-part"><strong class="tip-head">How it is proved</strong>{' '}<span set:html={inlineMath(r.record.methodNote)}/></div></InfoTooltip></span>}</td>
   <td><a href={r.record.evidenceUrl}>{evidenceName(r.record.evidenceLevel)}</a>{r.record.isBreakthrough&&<span class="breakthrough"> · {breakthroughLabel}</span>}</td>
   <td><strong class="name">{names[r.id]??r.record.title}</strong> <AuthorList authors={r.record.authors}/>{r.record.creditNote&&<p class="credit">{r.record.creditNote}</p>}{r.record.predecessors?.map((u:string)=><p class="credit"><a href={u}>Proof source</a></p>)}</td>
   <td>{r.record.id==='classical-baseline'?'1987':<RecordDate record={r.record}/>}</td>
+ </tr>:<tr data-level={r.record.evidenceLevel} class:list={['repeat',{best:r.best}]}>
+  <td class="bound"><span set:html={math(`O(${latex(r.t)})`)}/>{r.from&&<span class="from"> (from <span set:html={math(`m\\le ${latex(r.from,D_NAMES)}`)}/>)</span>}{r.best&&r.record.methodNote&&<span class="assumptions"><InfoTooltip label="About this bound"><div class="tip-part"><strong class="tip-head">How it is proved</strong>{' '}<span set:html={inlineMath(r.record.methodNote)}/></div></InfoTooltip></span>}</td>
+  <td><a href={r.record.evidenceUrl}>{evidenceName(r.record.evidenceLevel)}</a></td>
+  <td><a class="name" href={`#sssp-${r.id}`}>{names[r.id]??r.record.title}</a> <span class="credit">(authors and date under <span set:html={math(`m\\le ${latex(r.homeD,D_NAMES)}`)}/>)</span></td>
+  <td></td>
  </tr>)}
  </tbody></table></div>
 </section>)}
@@ -91,12 +84,14 @@ const receipt=byId.get(cap.row)?.evidenceLevel==='lean-verified'?byId.get(cap.ro
  .xlab{margin-top:.3rem;transform:translateX(-100%) rotate(-60deg);transform-origin:100% 0}
 }
 .sssp-legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;list-style:none;padding:0;margin:.6rem 0}.swatch{display:inline-block;width:1.4rem;height:.3rem;margin-right:.4rem;vertical-align:middle}
-.sssp-note{font-size:.9rem;max-width:64rem}.density h3{font-size:1.05rem;margin:1.2rem 0 .4rem}.density tr.best td{font-weight:600}.from,.credit{font-weight:400;font-size:.85rem}.credit{margin:.2rem 0 0}
+.sssp-note{font-size:.9rem;max-width:64rem}.density h3{font-size:1.05rem;margin:1.2rem 0 .4rem}.density tr.best td{font-weight:600}.density tr.repeat .name{font-weight:600}.from,.credit{font-weight:400;font-size:.85rem}.credit{margin:.2rem 0 0}
 /* Phones: one card per result, so the tables fit the screen too. */
 @media(max-width:720px){
  .density table,.density tbody{display:block}.density thead{display:none}
  .density tr{display:grid;grid-template-columns:minmax(0,1fr);border-bottom:1px solid var(--line);padding:.4rem 0}.density tr:last-child{border-bottom:0}
  .density td{border:0;padding:.3rem .8rem;min-width:0;overflow-wrap:anywhere}.density td.bound{white-space:normal}
- .density td:nth-child(4)::before{content:'Date: ';font-weight:600}
+ .density td:nth-child(4)::before{content:'Date: ';font-weight:600}.density td:empty{display:none}
+ /* A repeat is one short line: time, evidence level, and a link to the full row. */
+ .density tr.repeat{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:.6rem}.density tr.repeat td{padding:.2rem 0 .2rem .8rem}
 }
 </style>

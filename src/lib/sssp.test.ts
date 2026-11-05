@@ -1,5 +1,5 @@
 import { test } from 'node:test'; import assert from 'node:assert/strict'; import { readFileSync } from 'node:fs';
-import { parse, text, density, lexCmp, timeAt, best, qualifies, qText, latex, D_NAMES, plain, CLASSIC, functionText, parseFunction, functionLatex } from './sssp.ts';
+import { parse, text, density, lexCmp, timeAt, best, qualifies, qText, latex, D_NAMES, plain, CLASSIC, functionText, parseFunction, functionLatex, densitySections } from './sssp.ts';
 // The cases that data/sssp.py, this module and the verifier's parse_sssp agree on.
 const CASES = JSON.parse(readFileSync(new URL('../../data/direct-fixtures/sssp-cases.json', import.meta.url), 'utf8'));
 test('normal forms parse to the shared exponent tuples', () => {
@@ -32,4 +32,16 @@ test('latex', () => { assert.equal(latex(parse(CASES.parse[0].text).slice(2)), '
 test('plain text for aria labels has no TeX', () => {
  assert.deepEqual(['n', 'n log^1/4', 'n log', 'n^2'].map(d => plain(density(d), D_NAMES)), ['n', 'n log^(1/4) n', 'n log n', 'n^2']);
  assert.equal(plain(parse('n log^3/4 ; n log^11/12 loglog^1/2').slice(2)), 'n log^(11/12) n (log log n)^(1/2)');
+});
+test('each board row shows its full credit in exactly one section, its densest (site#14, 2026-11-05)', () => {
+ const board = JSON.parse(readFileSync(new URL('../data/directed-sssp.json', import.meta.url), 'utf8'));
+ const sections = densitySections(board);
+ for (const r of board.records) {
+  const homes = sections.flatMap(s => s.rows.filter(x => x.id === r.id && x.home).map(() => s.d));
+  assert.equal(homes.length, 1, r.id);
+  const last = sections.filter(s => s.rows.some(x => x.id === r.id)).at(-1)!;
+  assert.deepEqual(homes[0], last.d, r.id);
+  if (r.score.includes(' ; ')) assert.deepEqual(homes[0], parse(r.score).slice(0, 2), r.id);
+ }
+ for (const s of sections) for (const x of s.rows) assert.equal(x.home, x.from === undefined && lexCmp(x.homeD, s.d) === 0, x.id);
 });
