@@ -113447,7 +113447,7 @@
     "title": "Archive C verification batching and failed complete speed gates",
     "state": "closed",
     "created_at": "2026-10-27T12:38:18Z",
-    "updated_at": "2026-10-27T13:54:41Z",
+    "updated_at": "2026-11-05T23:07:06Z",
     "closed_at": "2026-10-27T13:41:53Z",
     "merged_at": "2026-10-27T13:41:53Z",
     "user": {
@@ -113888,7 +113888,7 @@
     "title": "Reduce H25 side-verification time by 29% with exact native GF(2)",
     "state": "closed",
     "created_at": "2026-10-27T13:44:17Z",
-    "updated_at": "2026-10-28T00:24:33Z",
+    "updated_at": "2026-11-05T23:06:39Z",
     "closed_at": "2026-10-28T00:24:33Z",
     "merged_at": "2026-10-28T00:24:33Z",
     "user": {
@@ -114791,7 +114791,7 @@
     "title": "Archive complete verification keys and negative 15% cost screen",
     "state": "closed",
     "created_at": "2026-10-27T16:37:18Z",
-    "updated_at": "2026-10-28T00:24:32Z",
+    "updated_at": "2026-11-05T23:06:24Z",
     "closed_at": "2026-10-28T00:24:32Z",
     "merged_at": "2026-10-28T00:24:32Z",
     "user": {
@@ -115274,7 +115274,7 @@
     "title": "Reduce complete H25 certificate qualification time by 28%",
     "state": "closed",
     "created_at": "2026-10-27T20:24:31Z",
-    "updated_at": "2026-10-28T00:24:32Z",
+    "updated_at": "2026-11-05T23:06:04Z",
     "closed_at": "2026-10-28T00:24:32Z",
     "merged_at": "2026-10-28T00:24:32Z",
     "user": {
@@ -115988,7 +115988,7 @@
     "title": "Reduce complete H25 bookkeeping time by 21%",
     "state": "closed",
     "created_at": "2026-10-27T22:20:06Z",
-    "updated_at": "2026-10-28T00:24:31Z",
+    "updated_at": "2026-11-05T23:05:51Z",
     "closed_at": "2026-10-28T00:24:31Z",
     "merged_at": "2026-10-28T00:24:31Z",
     "user": {
@@ -121742,7 +121742,7 @@
     "title": "Bound retained-log memory and preserve fast-exit output-cap checks",
     "state": "closed",
     "created_at": "2026-10-30T22:09:19Z",
-    "updated_at": "2026-10-31T04:04:55Z",
+    "updated_at": "2026-11-05T23:05:35Z",
     "closed_at": "2026-10-31T04:04:54Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -121763,7 +121763,7 @@
     "title": "Add lossless evidence archive and exact restoration controls",
     "state": "closed",
     "created_at": "2026-10-30T22:10:14Z",
-    "updated_at": "2026-10-31T04:04:54Z",
+    "updated_at": "2026-11-05T23:05:20Z",
     "closed_at": "2026-10-31T04:04:54Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -121844,10 +121844,10 @@
   {
     "number": 6321,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
-    "title": "Archive H25 cache source components and hand off N22, P07 and P02",
+    "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-05T21:55:44Z",
+    "updated_at": "2026-11-05T23:05:01Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -121952,7 +121952,7 @@
     "title": "Extract bounded H25 serializer with 140 finite controls and retained failure evidence",
     "state": "open",
     "created_at": "2026-10-31T04:46:48Z",
-    "updated_at": "2026-10-31T05:00:03Z",
+    "updated_at": "2026-11-05T23:04:10Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -121994,7 +121994,7 @@
     "title": "Tooling: reuse same-call inventory SHA with retained checks",
     "state": "open",
     "created_at": "2026-10-31T05:48:09Z",
-    "updated_at": "2026-10-31T06:07:38Z",
+    "updated_at": "2026-11-05T23:04:00Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122078,7 +122078,7 @@
     "title": "Add authentic H25 serializer sources and retain first runtime authentication failure",
     "state": "open",
     "created_at": "2026-10-31T08:28:31Z",
-    "updated_at": "2026-10-31T08:57:51Z",
+    "updated_at": "2026-11-05T23:03:40Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122138,10 +122138,10 @@
   {
     "number": 6335,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6335",
-    "title": "Archive O03 W1-W4 source repair and retained timing-review history",
+    "title": "Archive serializer source repairs and retained timing-review history",
     "state": "open",
     "created_at": "2026-11-01T09:11:45Z",
-    "updated_at": "2026-11-01T09:22:12Z",
+    "updated_at": "2026-11-05T23:03:31Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122372,7 +122372,7 @@
     "title": "Repair bounded G12 custody cleanup and publication-size checks",
     "state": "open",
     "created_at": "2026-11-01T23:48:20Z",
-    "updated_at": "2026-11-02T00:10:29Z",
+    "updated_at": "2026-11-05T23:02:52Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122393,7 +122393,7 @@
     "title": "Record G12 acquisition and raw-error delivery boundaries",
     "state": "open",
     "created_at": "2026-11-01T23:59:58Z",
-    "updated_at": "2026-11-02T00:12:34Z",
+    "updated_at": "2026-11-05T23:02:08Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122474,10 +122474,10 @@
   {
     "number": 6351,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6351",
-    "title": "Clarify original G12 caught-primary and accounting scope",
+    "title": "Clarify caught-primary preservation and accounting requirements",
     "state": "open",
     "created_at": "2026-11-02T03:11:26Z",
-    "updated_at": "2026-11-02T03:27:57Z",
+    "updated_at": "2026-11-05T23:01:21Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122495,10 +122495,10 @@
   {
     "number": 6352,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6352",
-    "title": "Resolve V03 entry preflight and dependency source questions",
+    "title": "Resolve bootstrap entry, preflight and dependency source questions",
     "state": "open",
     "created_at": "2026-11-02T03:13:24Z",
-    "updated_at": "2026-11-02T03:27:58Z",
+    "updated_at": "2026-11-05T23:01:04Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122537,10 +122537,10 @@
   {
     "number": 6354,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6354",
-    "title": "Construct C05 source roots and conditional header prefixes",
+    "title": "Construct compiler source roots and conditional header prefixes",
     "state": "open",
     "created_at": "2026-11-02T04:10:45Z",
-    "updated_at": "2026-11-02T04:20:04Z",
+    "updated_at": "2026-11-05T23:00:39Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122600,10 +122600,10 @@
   {
     "number": 6358,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6358",
-    "title": "Observe C05 namespace prefixes through owned descriptors",
+    "title": "Observe compiler-input namespace prefixes through owned descriptors",
     "state": "open",
     "created_at": "2026-11-02T05:28:04Z",
-    "updated_at": "2026-11-02T05:42:06Z",
+    "updated_at": "2026-11-05T23:00:22Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122684,10 +122684,10 @@
   {
     "number": 6362,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6362",
-    "title": "C05/V03: add input-edge constructors and genuine source-control drafts",
+    "title": "Add compiler input-edge constructors and bootstrap-control drafts",
     "state": "open",
     "created_at": "2026-11-02T08:27:12Z",
-    "updated_at": "2026-11-02T09:23:12Z",
+    "updated_at": "2026-11-05T23:17:14Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122705,10 +122705,10 @@
   {
     "number": 6363,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6363",
-    "title": "C05/V03: pin parent-domain incompatibilities and recover missing source",
+    "title": "Pin bootstrap parent-domain incompatibilities and recover missing source",
     "state": "open",
     "created_at": "2026-11-02T09:11:45Z",
-    "updated_at": "2026-11-02T09:33:55Z",
+    "updated_at": "2026-11-05T22:58:08Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122726,10 +122726,10 @@
   {
     "number": 6364,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6364",
-    "title": "C05: implement bounded GCC13 prefix visit ordering",
+    "title": "Implement bounded GCC 13 prefix visit ordering",
     "state": "open",
     "created_at": "2026-11-02T10:12:40Z",
-    "updated_at": "2026-11-02T10:22:33Z",
+    "updated_at": "2026-11-05T23:17:05Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122747,10 +122747,10 @@
   {
     "number": 6365,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6365",
-    "title": "C05: bind compile source, output and context separately",
+    "title": "Bind compiler source, output and context separately",
     "state": "open",
     "created_at": "2026-11-02T10:12:42Z",
-    "updated_at": "2026-11-02T10:22:34Z",
+    "updated_at": "2026-11-05T23:16:51Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122768,10 +122768,10 @@
   {
     "number": 6366,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6366",
-    "title": "C05: authenticate same-build generated GCC data and record guarded directives",
+    "title": "Authenticate same-build generated GCC data and record guarded directives",
     "state": "open",
     "created_at": "2026-11-02T10:12:45Z",
-    "updated_at": "2026-11-02T10:22:35Z",
+    "updated_at": "2026-11-05T23:16:30Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122789,10 +122789,10 @@
   {
     "number": 6367,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6367",
-    "title": "C05: audit finite input coverage and copied-stage constraints",
+    "title": "Audit finite compiler-input coverage and copied-view constraints",
     "state": "open",
     "created_at": "2026-11-02T10:49:50Z",
-    "updated_at": "2026-11-02T11:02:20Z",
+    "updated_at": "2026-11-05T23:16:17Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122810,10 +122810,10 @@
   {
     "number": 6368,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6368",
-    "title": "V03: verify configured prefixes with an immutable environment literal",
+    "title": "Verify configured bootstrap prefixes with an immutable environment literal",
     "state": "open",
     "created_at": "2026-11-02T12:01:25Z",
-    "updated_at": "2026-11-02T12:50:08Z",
+    "updated_at": "2026-11-05T23:15:57Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122831,10 +122831,10 @@
   {
     "number": 6369,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6369",
-    "title": "V03: add conditional prefix supervision without production completion",
+    "title": "Add conditional prefix supervision without production completion",
     "state": "open",
     "created_at": "2026-11-02T12:11:44Z",
-    "updated_at": "2026-11-02T12:50:22Z",
+    "updated_at": "2026-11-05T23:15:49Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122852,10 +122852,10 @@
   {
     "number": 6370,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6370",
-    "title": "V03: recover the complete selected import graph and original queue inputs",
+    "title": "Recover the complete selected import graph and original queue inputs",
     "state": "open",
     "created_at": "2026-11-02T13:37:52Z",
-    "updated_at": "2026-11-02T13:52:20Z",
+    "updated_at": "2026-11-05T23:15:36Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122873,10 +122873,10 @@
   {
     "number": 6371,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6371",
-    "title": "V03: add a bounded authenticated prefix entry",
+    "title": "Add a bounded authenticated bootstrap prefix entry",
     "state": "open",
     "created_at": "2026-11-02T14:23:53Z",
-    "updated_at": "2026-11-02T15:08:03Z",
+    "updated_at": "2026-11-05T23:14:35Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122915,10 +122915,10 @@
   {
     "number": 6373,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6373",
-    "title": "V03: add the bounded prefix caller and refusal controls",
+    "title": "Add the bounded bootstrap prefix caller and refusal controls",
     "state": "open",
     "created_at": "2026-11-02T15:08:43Z",
-    "updated_at": "2026-11-02T15:21:38Z",
+    "updated_at": "2026-11-05T23:14:26Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122936,10 +122936,10 @@
   {
     "number": 6374,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6374",
-    "title": "V03: add owned-directory prefix stage preparation",
+    "title": "Add owned-directory bootstrap prefix preparation",
     "state": "open",
     "created_at": "2026-11-02T15:10:40Z",
-    "updated_at": "2026-11-02T15:21:39Z",
+    "updated_at": "2026-11-05T23:14:16Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -123002,7 +123002,7 @@
     "title": "Archive Linux 7 channel source audit with bounded static replay",
     "state": "open",
     "created_at": "2026-11-02T17:23:07Z",
-    "updated_at": "2026-11-02T17:34:02Z",
+    "updated_at": "2026-11-05T23:13:53Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -123044,7 +123044,7 @@
     "title": "Archive conditional AT_RANDOM producer-event proof and exact-source replay",
     "state": "open",
     "created_at": "2026-11-02T18:32:36Z",
-    "updated_at": "2026-11-02T18:47:41Z",
+    "updated_at": "2026-11-05T23:13:45Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -123419,10 +123419,10 @@
   {
     "number": 6397,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6397",
-    "title": "Clarify C05 named closure and exact two-command consumer domain",
+    "title": "Clarify compiler-input closure and the exact two-command consumer domain",
     "state": "open",
     "created_at": "2026-11-02T20:41:58Z",
-    "updated_at": "2026-11-02T21:00:26Z",
+    "updated_at": "2026-11-05T23:13:38Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124199,7 +124199,7 @@
     "title": "Retain raw pilot primary errors through cleanup and accounting failures",
     "state": "open",
     "created_at": "2026-11-02T22:35:12Z",
-    "updated_at": "2026-11-02T23:00:23Z",
+    "updated_at": "2026-11-05T23:13:20Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124619,7 +124619,7 @@
     "title": "research: archive conditional GCC libexec generator and phase source frame",
     "state": "open",
     "created_at": "2026-11-02T23:46:04Z",
-    "updated_at": "2026-11-03T00:03:33Z",
+    "updated_at": "2026-11-05T23:13:11Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -125060,7 +125060,7 @@
     "title": "Reject ambiguous ELF mappings in bounded literal discovery",
     "state": "open",
     "created_at": "2026-11-03T00:33:44Z",
-    "updated_at": "2026-11-03T00:41:22Z",
+    "updated_at": "2026-11-05T23:13:03Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126593,7 +126593,7 @@
     "title": "Archive conditional passive guard source and fake controls",
     "state": "open",
     "created_at": "2026-11-03T05:33:25Z",
-    "updated_at": "2026-11-03T05:41:45Z",
+    "updated_at": "2026-11-05T23:12:22Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126677,7 +126677,7 @@
     "title": "Correct full owner/bootstrap source selection and expose missing edges",
     "state": "open",
     "created_at": "2026-11-03T07:32:56Z",
-    "updated_at": "2026-11-03T07:41:30Z",
+    "updated_at": "2026-11-05T23:12:13Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127391,7 +127391,7 @@
     "title": "Recover full caller sources and classify source-loading edges",
     "state": "open",
     "created_at": "2026-11-03T10:54:26Z",
-    "updated_at": "2026-11-03T11:16:04Z",
+    "updated_at": "2026-11-05T23:12:05Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127409,10 +127409,10 @@
   {
     "number": 6588,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6588",
-    "title": "Complete source-bound full-stage preparation with separate mode plans",
+    "title": "Prepare source-bound full callers with separate execution-mode plans",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-04T00:53:58Z",
+    "updated_at": "2026-11-05T23:11:45Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129743,7 +129743,7 @@
     "title": "ci: fetch only exact review-base history for automated planning",
     "state": "open",
     "created_at": "2026-11-03T22:04:16Z",
-    "updated_at": "2026-11-04T00:47:25Z",
+    "updated_at": "2026-11-05T23:07:22Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129953,7 +129953,7 @@
     "title": "Implement fixed manual financial meter and once-only own settlement source",
     "state": "open",
     "created_at": "2026-11-04T04:32:48Z",
-    "updated_at": "2026-11-04T04:39:17Z",
+    "updated_at": "2026-11-05T23:10:52Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129974,7 +129974,7 @@
     "title": "Classify when common-image full guards can fall below independence (no κ)",
     "state": "open",
     "created_at": "2026-11-04T05:33:24Z",
-    "updated_at": "2026-11-04T05:48:12Z",
+    "updated_at": "2026-11-05T23:09:35Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129992,10 +129992,10 @@
   {
     "number": 6711,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6711",
-    "title": "research: bootstrap acquisition driver and accepted HEAD-absent diagnostic",
+    "title": "Add bootstrap acquisition driver and retain the HEAD_ABSENT diagnostic",
     "state": "open",
     "created_at": "2026-11-04T05:49:39Z",
-    "updated_at": "2026-11-04T05:55:25Z",
+    "updated_at": "2026-11-05T23:10:33Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130076,10 +130076,10 @@
   {
     "number": 6715,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6715",
-    "title": "Archive completed H25 S03.08 source adoption and frozen selection",
+    "title": "Archive adopted H25 source graph and frozen selection",
     "state": "open",
     "created_at": "2026-11-04T14:07:42Z",
-    "updated_at": "2026-11-04T14:14:47Z",
+    "updated_at": "2026-11-05T23:10:24Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130415,7 +130415,7 @@
     "title": "Record finite GNU-time source contract and readable retention inputs",
     "state": "open",
     "created_at": "2026-11-05T09:22:51Z",
-    "updated_at": "2026-11-05T09:30:36Z",
+    "updated_at": "2026-11-05T23:10:10Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130496,10 +130496,10 @@
   {
     "number": 6736,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6736",
-    "title": "Complete H25 S03.07 retention source contract",
+    "title": "Complete H25 automatic-retention source contract",
     "state": "open",
     "created_at": "2026-11-05T12:52:55Z",
-    "updated_at": "2026-11-05T13:03:59Z",
+    "updated_at": "2026-11-05T23:09:31Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130667,7 +130667,7 @@
     "title": "Expose adopted H25 full callers and original criteria as readable text",
     "state": "open",
     "created_at": "2026-11-05T20:55:05Z",
-    "updated_at": "2026-11-05T22:34:04Z",
+    "updated_at": "2026-11-05T22:58:25Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130739,6 +130739,27 @@
     },
     "head": {
       "sha": "36a818604eb3561030c95278a472fb7f943862a6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6748,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6748",
+    "title": "research: independently review common-image subspace count law",
+    "state": "open",
+    "created_at": "2026-11-05T23:07:42Z",
+    "updated_at": "2026-11-05T23:16:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "740746e0d458b2e097c55ab5a37e868ca36d9c9a"
     },
     "base": {
       "ref": "main"
