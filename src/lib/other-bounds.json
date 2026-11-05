@@ -3166,7 +3166,7 @@
           "dateKind": "first-stated",
           "url": "https://arxiv.org/abs/2608.13637",
           "lean": true,
-          "leanNote": "Yes. A Lean 4 proof with no sorry is supplied (Lean v4.33.0-rc2). The authors report only the standard axioms. We have not run it.",
+          "leanNote": "Yes. A Lean 4 proof with no sorry is supplied (Lean v4.33.0-rc2). Our verifier rebuilt it from source and checked it with the Lean kernel. It uses only the standard axioms.",
           "evidence": "claimed",
           "note": "Anthropic's post of 10 August 2026 says that a research version of Claude found the proof. The paper by Levent Alpöge and Ralph Furman (arXiv:2608.13637) says that Claude discovered and wrote the argument and that the two authors verified it. It proves \\(\\kappa^{*}\\ge2/3\\), and \\(\\kappa^{*}\\ge H\\) with a better choice of test function. The post shows the day only, so the date is the first Hacker News link to the post.",
           "authors": [
@@ -3175,7 +3175,7 @@
               "url": "https://www.anthropic.com/research/riemann-zeta"
             }
           ],
-          "proofScope": "A written proof in a preprint. A Lean 4 proof of the theorem, with no sorry, is in anthropics/formal-math (folder zeta23, Lean v4.33.0-rc2, Mathlib v4.33.0-rc2). Its audit file reports only the axioms propext, Classical.choice and Quot.sound. Our verifier has not run this proof, so the result stays Claimed.",
+          "proofScope": "A written proof in a preprint. A Lean 4 proof of the theorem, with no sorry, is in anthropics/formal-math (folder zeta23, Lean v4.33.0-rc2, Mathlib commit 51e6992e). Our verifier rebuilt it at commit 16a5ce41 and checked its theorem montgomery_taylor_simple_on_critical_line_mult_cumulative against Anthropic's own statement file. The theorem gives \\(\\kappa^{*}\\ge H\\). It uses only the axioms propext, Classical.choice and Quot.sound.",
           "bound": "\\kappa^{*}\\ge 0.6725"
         },
         {

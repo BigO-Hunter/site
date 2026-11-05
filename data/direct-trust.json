@@ -25879,6 +25879,47 @@
       "score": "n log^3/4 ; n log^11/12",
       "score_relation": "attained",
       "statement_file": "CHDRow.lean"
+    },
+    "critical-line-zeros-anthropic": {
+      "run_id": 41966789367,
+      "controller": "c8a22019a6a09ec350559888d7073bbba96ea0ac",
+      "profile": {
+        "lean_toolchain": "leanprover/lean4:v4.33.0-rc2",
+        "challenge_file": "challenges/critical-line-zeros/Challenge.lean",
+        "challenge_sha256": "6f2a4ba95ab8c5319e541a1cc1b3699c0ae8cef23ea8e68f958e11b07281761e",
+        "solution_module": "Solution",
+        "theorem_names": [
+          "montgomery_taylor_simple_on_critical_line_mult_cumulative"
+        ],
+        "source_subdir": "zeta23",
+        "source_roots": [
+          "Solution",
+          "ChallengeDeps",
+          "Zeta23"
+        ],
+        "permitted_axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "bound": "3/2 - cot(1/sqrt 2)/sqrt 2",
+        "score_relation": "attained",
+        "model": "critical-line-zeros",
+        "upstream_repo": "https://github.com/anthropics/formal-math",
+        "upstream_commit": "16a5ce41304fcdaea4e0be7c132e1c361dc26da5",
+        "tools_file": "profiles/tools-v4.33.0-rc2.json",
+        "manifest_file": "profiles/zeta23-lake-manifest.json",
+        "auto_implicit": true
+      },
+      "other": {
+        "slug": "critical-line-zeros",
+        "handle": "anthropic"
+      },
+      "repo_url": "https://github.com/anthropics/formal-math",
+      "commit": "16a5ce41304fcdaea4e0be7c132e1c361dc26da5",
+      "score": "3/2 - cot(1/sqrt 2)/sqrt 2",
+      "score_relation": "attained",
+      "statement_file": "CriticalLineZeros.lean"
     }
   },
   "reviewed_pr_bindings": [

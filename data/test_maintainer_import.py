@@ -309,6 +309,7 @@ class MaintainerTests(unittest.TestCase):
                 claim=next(c for c in family['claims'] if c['handle']==binding['other']['handle'])
                 self.assertTrue(claim['lean'],key)
                 self.assertEqual(binding['profile']['upstream_repo'],binding['repo_url'],key)
+                self.assertEqual(binding['profile']['model'],binding['other']['slug'],key)
                 continue
             doc=json.loads((ROOT/binding['board']).read_text())
             row=next(r for r in doc['records'] if r['id']==binding['record_id'])
