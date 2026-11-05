@@ -130541,7 +130541,7 @@
     "title": "Independently execute the recursive core and audit full frame restoration",
     "state": "open",
     "created_at": "2026-11-05T14:19:42Z",
-    "updated_at": "2026-11-05T14:19:42Z",
+    "updated_at": "2026-11-05T16:48:07Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130550,6 +130550,27 @@
     },
     "head": {
       "sha": "d4875adf73bc57304c0bb3e7e7283ad37679ce54"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6739,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6739",
+    "title": "Review natural-root descriptor production and geometric preparation costs",
+    "state": "open",
+    "created_at": "2026-11-05T17:15:10Z",
+    "updated_at": "2026-11-05T17:15:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "d4f7d625b2a5fa71f2c9c276b9ea503c28dcee4b"
     },
     "base": {
       "ref": "main"
