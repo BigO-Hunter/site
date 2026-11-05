@@ -99,6 +99,11 @@ class ProgressChart extends HTMLElement {
   input.addEventListener('change',()=>apply(true));
   // Enter also applies the value shown, including the initial one.
   form.addEventListener('submit',event=>{event.preventDefault();apply(true)});
+  // Nil, 2026-11-05: choosing "Last N days" must not need a new number. A click or tap anywhere on the control
+  // (the words, the box) and keyboard focus in the box apply the value shown; a click on the words also moves focus
+  // into the box (it is the label's control), so a typed number then replaces it.
+  label.addEventListener('click',()=>{if(this.days===0)apply(true)});
+  input.addEventListener('focus',()=>{if(this.days===0)apply(true)});
   render();
  }
  private markAt(event:MouseEvent){
