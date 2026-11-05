@@ -130303,5 +130303,47 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6726,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6726",
+    "title": "Conditional κ = 0.00330720 (+3.000e-6, +0.09079% over #6716): two paid idle fragments unlock independent outputs",
+    "state": "open",
+    "created_at": "2026-11-04T23:40:30Z",
+    "updated_at": "2026-11-04T23:40:30Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "zxv",
+      "html_url": "https://github.com/zxv"
+    },
+    "head": {
+      "sha": "435bbe91fb28cb1d7a569ca70c6c4e9eb302d486"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6727,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6727",
+    "title": "Audit the full emitted child-grant producer and exact local bill (no kappa)",
+    "state": "open",
+    "created_at": "2026-11-04T23:59:29Z",
+    "updated_at": "2026-11-05T00:10:00Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "f2954da6de664b143bc38e9e5bbe6942f07511fc"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
