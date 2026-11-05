@@ -311,6 +311,59 @@
      "solved_at": "2026-10-15T10:19:54.248486+00:00",
      "action": "skip",
      "note": "Lead decision 2026-10-17: no link to Anchen0823 (verifier issue #8), and no row because the board had the same value first (2026-10-14 12:55 UTC). Evidence for a later review: 525 supporting prove2.me theorems name Anchen0823/three-sum-1960614 at 8c25c0325de5be4286413f39ca0c9278aad33f52, the source of that row, but the goal header and the top lemmas name a user-supplied certificate on c0ldzy17/three-sum-lean."
+    },
+    {
+     "mission_id": "3872e623-6d66-45b8-941d-0c4c237f6633",
+     "value": "1.92027942",
+     "solved_at": "2026-11-04T06:03:43.518214+00:00",
+     "action": "link",
+     "record_id": "direct-issue-92",
+     "theorem": {
+      "name": "WeightedCache3SUM.bound_192027942",
+      "url": "https://prove2.me/theorems/807964b0-aab0-4733-b4ac-19a05091056f",
+      "statement_path": "envs/0df444a/Theorems/Thm_WeightedCache3SUM_bound_192027942.lean",
+      "statement_sha256": "89b276b6259cee1b220595bba83115d11a731b6d63edea821ff67c07e114912b",
+      "definitions": [
+       "envs/0df444a/Definitions/Def_TrulySubcubicAPSP_SourceSpecification.lean"
+      ]
+     },
+     "solution": {
+      "path": "envs/0df444a/Solutions/Sol_WeightedCache3SUM_bound_192027942.lean",
+      "sha256": "3005ed1739c25cbf783c7d64b473d2fe85e347669f27474c664a2c8900f0cbd5",
+      "author": "@marwahaha"
+     },
+     "same_proof": "The goal statement header names our row source, Jionghan Wang's Race.bound at Wang-jiong-han/3sum-weighted-cache ac885d10bdbf723c3e0549198f9345bedf2a4131. The accepted solution is Race.bound (prove2.me theorem 21b55cef), whose source is Submission.lean at the same commit.",
+     "statement_pattern": "SolvedInTime \\(96013971 / 50000000 : Rat\\)",
+     "statement_value": "96013971/50000000"
+    },
+    {
+     "mission_id": "52b48ac3-c74d-449f-a8cf-ad241decbb58",
+     "value": "1.920279408185",
+     "solved_at": "2026-11-05T02:52:56.3534+00:00",
+     "action": "link",
+     "record_id": "direct-issue-99",
+     "theorem": {
+      "name": "WeightedCache3SUMRefinement.bound_1920279408185",
+      "url": "https://prove2.me/theorems/73b990cc-cf9a-4e7f-ba93-f9fb8159a2ac",
+      "statement_path": "envs/0df444a/Theorems/Thm_WeightedCache3SUMRefinement_bound_1920279408185.lean",
+      "statement_sha256": "f7603fafee18d6f537f4c15dfb5ee9a87ecca18f604e29375305d7545e74edaf",
+      "definitions": [
+       "envs/0df444a/Definitions/Def_TrulySubcubicAPSP_SourceSpecification.lean"
+      ]
+     },
+     "solution": {
+      "path": "envs/0df444a/Solutions/Sol_WeightedCache3SUMRefinement_bound_1920279408185.lean",
+      "sha256": "ae92b60b0e297f4fe9f7eaebcfb38bfce00e2726d536f983bfb695bd7e1cd463",
+      "author": "@marwahaha"
+     },
+     "same_proof": "The goal statement header names our row source, Wang-jiong-han/3sum-weighted-cache at e1ae71db2231f172c6541820e2ce0a54aa14fc64 (Submission.lean). The accepted solution uses WeightedCache3SUMRefinement_e1ae71d.WeightedRace.bound (prove2.me theorem 12344b80), whose source is Submission/Weighted.lean at the same commit, with 384055881637/200000000000 = 1.920279408185."
+    },
+    {
+     "mission_id": "947d913a-6ce0-4cb2-9caa-1307f39a7233",
+     "value": "1.9202796",
+     "solved_at": "2026-11-04T06:16:11.112973+00:00",
+     "action": "skip",
+     "note": "No link to direct-issue-26 (JoshuaQFEX, same value): the goal header names JoshuaQFEX/3sum-bound at eda5da36, but the accepted solution derives the bound from WeightedCache3SUM.bound_192027942 (Wang-jiong-han, our row direct-issue-92), not from JoshuaQFEX's proof. No row: not the best Lean Verified result at its solved time (direct-issue-35, 4800698571997281331/2500000000000000000, Lean Verified since 2026-10-21)."
     }
    ]
   },
