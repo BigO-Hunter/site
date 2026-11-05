@@ -17,7 +17,8 @@ const pending=new Map();
 // Lean Verified direct submissions of Other bounds rows (data/direct_refresh.py); bundles before 2026-10-23 have none.
 // crocswap-certifications.json holds what CrocSwap main certifies (data/crocswap_cert.py; Human Verified on a CrocSwap PR row); bundles before 2026-10-30 have none.
 // method-notes.json holds the reviewed note on how a record is proved, by board and row id; bundles before 2026-10-23 have none.
-const names=['registry.json','submissions.json','chart-cross-check.json',...registry.problems.map(p=>p.data_file),...['prove2me.json','other-reviews.json','direct-other.json','method-notes.json','crocswap-certifications.json'].filter(name=>existsSync(resolve(source,name)))];
+// maintainer-other.json holds the maintainer reruns of Other bounds claims (data/maintainer_import.py); bundles before 2026-11-05 have none.
+const names=['registry.json','submissions.json','chart-cross-check.json',...registry.problems.map(p=>p.data_file),...['prove2me.json','other-reviews.json','direct-other.json','method-notes.json','crocswap-certifications.json','maintainer-other.json'].filter(name=>existsSync(resolve(source,name)))];
 // src/lib/prove2me-campaigns.ts lists the prove2.me campaigns that data/prove2me-trust.json reviews, by board
 // (the race slug, or other-<slug> for an Other bounds row). The pages link each race to its campaign. It is a
 // .ts file in src/lib because the site image copies only src/lib/*.ts, and the site server imports it.
@@ -40,15 +41,20 @@ const copyEvidence=(path,expectedHash)=>{
  pending.set(resolve('public',path),bytes);
  return bytes;
 };
+const copyReceipt=path=>{
+ const receipt=JSON.parse(copyEvidence(path));
+ if(receipt.source_receipt_path)copyEvidence(receipt.source_receipt_path);
+ if(receipt.artifact_path)copyEvidence(receipt.artifact_path,receipt.artifact_sha256);
+ for(const kind of ['log','time'])if(receipt[kind+'_path'])copyEvidence(receipt[kind+'_path'],receipt[kind+'_sha256']);
+};
 for(const data of documents){
  for(const record of data.records??[]){
   if(data.record_metadata?.[record.id]?.source_url_public===false&&record.artifact?.path?.startsWith('sources/'))copyEvidence(record.artifact.path,record.artifact.sha256);
-  const path=record.rerun_status?.receipt_path;if(!path)continue;
-  const receipt=JSON.parse(copyEvidence(path));
-  if(receipt.source_receipt_path)copyEvidence(receipt.source_receipt_path);
-  if(receipt.artifact_path)copyEvidence(receipt.artifact_path,receipt.artifact_sha256);
-  for(const kind of ['log','time'])if(receipt[kind+'_path'])copyEvidence(receipt[kind+'_path'],receipt[kind+'_sha256']);
+  const path=record.rerun_status?.receipt_path;if(path)copyReceipt(path);
  }
 }
+// maintainer-other.json: {boards: {slug: {handle: {receipt_path}}}}.
+const maintainerOther=documents[names.indexOf('maintainer-other.json')];
+for(const claims of Object.values(maintainerOther?.boards??{}))for(const entry of Object.values(claims))copyReceipt(entry.receipt_path);
 for(const [destination,bytes] of pending){mkdirSync(dirname(destination),{recursive:true});writeFileSync(destination,bytes);}
 console.log('Copied reviewed JSON snapshot from '+source);

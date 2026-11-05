@@ -3,6 +3,7 @@ import {readFileSync, existsSync} from 'node:fs';
 import {join} from 'node:path';
 import Layout from '../../layouts/Layout.astro';
 import {problems} from '../../lib/data';
+import otherBounds from '../../lib/other-bounds-data';
 import {receiptSlug, receiptView} from '../../lib/receipt';
 import {localTimeFallback} from '../../lib/freshness';
 import {math} from '../../lib/math';
@@ -12,13 +13,21 @@ export function getStaticPaths() {
   // Astro runs getStaticPaths apart from the rest of this frontmatter, so its helpers live inside it.
   const publicFile = (path: string) => join(process.cwd(), 'public', path.replace(/^\/+/, ''));
   const readJson = (path: string) => existsSync(publicFile(path)) ? JSON.parse(readFileSync(publicFile(path), 'utf8')) : undefined;
-  const byReceipt = new Map<string, {path: string; rows: {board: string; boardName: string; id: string; bound: string; authors: string[]}[]}>();
+  const byReceipt = new Map<string, {path: string; rows: {href: string; boardName: string; id: string; bound: string; authors: string[]}[]}>();
+  const add = (receiptPath: string, row: {href: string; boardName: string; id: string; bound: string; authors: string[]}) => {
+    const path = receiptPath.replace(/^\/+/, '');
+    const entry = byReceipt.get(receiptSlug(path)) ?? {path, rows: []};
+    entry.rows.push(row);
+    byReceipt.set(receiptSlug(path), entry);
+  };
   for (const p of problems) for (const r of p.records) {
     if (!r.evidenceUrl?.startsWith('/receipts/') || !r.rerunStatus?.receipt_path) continue;
-    const path = r.rerunStatus.receipt_path.replace(/^\/+/, '');
-    const entry = byReceipt.get(receiptSlug(path)) ?? {path, rows: []};
-    entry.rows.push({board: p.slug, boardName: problemDisplayName(p.slug, p.title), id: r.id, bound: r.bound, authors: r.authors.map(a => a.name)});
-    byReceipt.set(receiptSlug(path), entry);
+    add(r.rerunStatus.receipt_path, {href: '/' + p.slug, boardName: problemDisplayName(p.slug, p.title), id: r.id, bound: r.bound, authors: r.authors.map(a => a.name)});
+  }
+  // A claim of an Other bounds row that a maintainer rerun made Lean Verified (applyMaintainer in other-merge.ts).
+  for (const f of otherBounds.families) for (const c of f.claims) {
+    const receiptPath = (c as {maintainerReceiptPath?: string}).maintainerReceiptPath;
+    if (c.evidence === 'lean-verified' && receiptPath) add(receiptPath, {href: '/other/' + f.slug, boardName: f.name, id: c.handle, bound: c.bound, authors: c.authors.map(a => a.name)});
   }
   return [...byReceipt].map(([slug, {path, rows}]) => {
     const receipt = readJson(path);
@@ -39,7 +48,7 @@ const early = view.nanoda === 'pending' || view.leanKernel === 'pending' || view
   <p>{ranByVerifier ? 'Our verifier' : 'We'} rebuilt a Lean proof from its source and checked it against the Lean statement of the problem. This page is the receipt of that check.</p>
   <p>{early ? <strong>The first stage passed</strong> : view.passed ? <strong>It passed</strong> : <strong>The receipt does not record a pass</strong>}{view.checkedAt && <> on <time datetime={view.checkedAt} data-local-datetime>{localTimeFallback(view.checkedAt)}</time></>}.{view.summary && <> The verifier’s own words: “{view.summary}”.</>}</p>
   <h2>Rows that use this check</h2>
-  <ul>{rows.map(row => <li><a href={'/' + row.board}>{row.boardName}</a>: <span set:html={math(row.bound)}/>, by {row.authors.join(', ')}</li>)}</ul>
+  <ul>{rows.map(row => <li><a href={row.href}>{row.boardName}</a>: <span set:html={math(row.bound)}/>, by {row.authors.join(', ')}</li>)}</ul>
   <h2>What passed</h2>
   <dl class="checks">
     {(view.statement.file || view.statement.sha256 || view.statement.commit) && <><dt>The statement</dt><dd>

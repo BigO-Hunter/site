@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import data from './other-bounds.json' with {type: 'json'};
-import {mergeProve2me, mergeDirect, claimNumber} from './other-merge.ts';
+import {mergeProve2me, mergeDirect, applyMaintainer, claimNumber} from './other-merge.ts';
 import {otherBoundLeader} from './other-leader.ts';
 import {otherFeedBoard} from './records-feed.ts';
 
@@ -121,4 +121,17 @@ test('a direct claim author takes the profile name; a claim by hand keeps its na
   const merged = mergeDirect(lower as any, direct(60, '3', '3.0') as any, person).families[0] as any;
   assert.deepEqual(merged.claims.find((c: any) => c.handle === 'direct-issue-60').authors, [{name: 'Real Name', url: 'https://github.com/u'}]);
   assert.equal(merged.claims.find((c: any) => c.handle === 'c').authors, undefined);
+});
+
+test('a passed maintainer receipt makes its claim Lean Verified and links the receipt page; others stay', () => {
+  const receipt = (state: string, receipt_path = 'sources/maintainer-b-41964266185.json') => ({boards: {row: {b: {state, receipt_path}}}});
+  const merged = applyMaintainer(base, receipt('passed'));
+  assert.deepEqual(merged.families[0].claims.map(c => c.evidence), ['claimed', 'lean-verified']);
+  assert.equal((merged.families[0].claims[1] as {evidenceUrl?: string}).evidenceUrl, '/receipts/maintainer-b-41964266185');
+  assert.equal((merged.families[0].claims[1] as {maintainerReceiptPath?: string}).maintainerReceiptPath, 'sources/maintainer-b-41964266185.json');
+  assert.equal(merged.families[0].claims[1].url, 'https://example.org/b');
+  for (const state of [receipt('failed'), receipt('pending'), receipt('passed', 'sources/direct-issue-1-2-1.json'), receipt('passed', '../x.json'), {}, undefined])
+    assert.deepEqual(applyMaintainer(base, state), base);
+  assert.throws(() => applyMaintainer(base, {boards: {row: {c: {state: 'passed', receipt_path: 'sources/maintainer-c-1.json'}}}}), /unknown Other bounds claim: row\/c/);
+  assert.throws(() => applyMaintainer(base, {boards: {other: {b: {state: 'passed'}}}}), /other\/b/);
 });

@@ -9,7 +9,7 @@ import {existsSync, readdirSync, readFileSync} from 'node:fs';
 const data = new URL('../../data/', import.meta.url);
 const copy = new URL('../data/', import.meta.url);
 // The files sync-data.mjs copies: keep this list equal to its names.
-const optional = ['prove2me.json', 'other-reviews.json', 'direct-other.json', 'method-notes.json', 'crocswap-certifications.json'];
+const optional = ['prove2me.json', 'other-reviews.json', 'direct-other.json', 'method-notes.json', 'crocswap-certifications.json', 'maintainer-other.json'];
 
 test('every JSON file in src/data is byte-equal to its data/ source, and every synced file has its copy', () => {
   const registry = JSON.parse(readFileSync(new URL('registry.json', data), 'utf8')) as {problems: {data_file: string}[]};

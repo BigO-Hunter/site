@@ -6,6 +6,7 @@
 // current leader by more than the display precision becomes the best handle.
 import {classifyOtherEvidence, type OtherClaimReview, type OtherReviewRepository} from './evidence.ts';
 import {compareExact, otherClaimNumber} from './other-rank.ts';
+import {receiptPageUrl} from './receipt.ts';
 export const OTHER_EPSILON = 0.00001;
 
 type Claim = {handle: string; display: string; value: string; date: string; evidence: string; url: string};
@@ -102,5 +103,23 @@ export function applyReviews<D extends {families: Reviewed[]}>(data: D, state?: 
       const review = claim.review && seen && claim.review.status !== 'merged' ? {...claim.review, status: seen} : claim.review;
       return {...claim, ...(review ? {review} : {}), evidence: classifyOtherEvidence(family.reviewRepository, {...claim, review})};
     })}));
+  return {...data, families} as D;
+}
+
+// A maintainer rerun of our verifier for a claim of other-bounds.json: data/maintainer_import.py validates and archives
+// its receipt and writes data/maintainer-other.json, by slug and handle. A passed receipt makes the claim Lean
+// Verified, and its level links the receipt page (evidenceUrl); a failed or pending one leaves the claim as the rows
+// file says. A receipt for a claim that the rows file does not have stops the build.
+export type MaintainerState = {boards?: Record<string, Record<string, {state?: string; receipt_path?: string}>>};
+export function applyMaintainer<D extends {families: {slug: string; claims: {handle: string; evidence: string}[]}[]}>(data: D, state?: MaintainerState | null): D {
+  for (const [slug, claims] of Object.entries(state?.boards ?? {})) for (const handle of Object.keys(claims))
+    if (!data.families.some(f => f.slug === slug && f.claims.some(c => c.handle === handle)))
+      throw new Error(`Maintainer receipt for an unknown Other bounds claim: ${slug}/${handle}`);
+  const families = data.families.map(family => ({...family, claims: family.claims.map(claim => {
+    const receipt = state?.boards?.[family.slug]?.[claim.handle];
+    const path = receipt?.state === 'passed' ? receipt.receipt_path : undefined;
+    return path && /^sources\/maintainer-[a-z0-9-]+-[1-9][0-9]*\.json$/.test(path)
+      ? {...claim, evidence: 'lean-verified', evidenceUrl: receiptPageUrl(path), maintainerReceiptPath: path} : claim;
+  })}));
   return {...data, families} as D;
 }
