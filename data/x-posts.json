@@ -1125,5 +1125,10 @@
     "status": "posted",
     "at": "2026-11-05T02:33:20.386Z",
     "id": "2118169764665147772"
+  },
+  "[\"other-critical-line-zeros\",\"anthropic:\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"attained\"]:lean": {
+    "status": "unknown",
+    "at": "2026-11-05T05:51:45.215Z",
+    "reason": "reserved before API send"
   }
 }
