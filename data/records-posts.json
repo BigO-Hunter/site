@@ -1936,5 +1936,14 @@
     "authors": [
       "Halit Ziya KARTAL"
     ]
+  },
+  {
+    "key": "[\"directed-sssp\",\"direct-issue-158\",\"n log ; n log^2\",\"attained\"]:lean",
+    "text": "**New record** | **Directed Shortest Paths** | `O(n log^2 n) for m <= n log n` | by MultiAgency swarm | Lean Verified | [bigospeedrun.com/directed-sssp](https://bigospeedrun.com/directed-sssp)",
+    "x_text": "New record!\n\nProblem: Directed Shortest Paths\nNew value: O(n log^2 n) for m <= n log n\nPlayer: MultiAgency swarm\nStatus: Lean Verified",
+    "posted_at": "2026-11-05T19:38:35.800Z",
+    "authors": [
+      "MultiAgency swarm"
+    ]
   }
 ]
