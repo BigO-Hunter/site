@@ -130667,7 +130667,7 @@
     "title": "Expose adopted H25 full callers and original criteria as readable text",
     "state": "open",
     "created_at": "2026-11-05T20:55:05Z",
-    "updated_at": "2026-11-05T21:25:06Z",
+    "updated_at": "2026-11-05T22:34:04Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130718,6 +130718,27 @@
     },
     "head": {
       "sha": "64e7a0e2f140cce90794e11143dc313b9ac9780c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6747,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6747",
+    "title": "research: audit paired sampler law, phase wrap and bit optimality",
+    "state": "open",
+    "created_at": "2026-11-05T22:29:04Z",
+    "updated_at": "2026-11-05T22:35:33Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "36a818604eb3561030c95278a472fb7f943862a6"
     },
     "base": {
       "ref": "main"
