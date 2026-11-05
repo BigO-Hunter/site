@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-157": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "catalan",
+        "repo_url": "https://github.com/darkhipo/catalan-irrationality-measure-410",
+        "commit": "f0df3c8f96111ea150422460aa155c86877979d1",
+        "bound": "410",
+        "authors": []
+      }
+    },
     "direct-issue-139": {
       "route": "issue",
       "submission": {
@@ -1532,6 +1543,24 @@
         "commit": "da94a2a6f593caa1f534f1ab1c84b88ff5d74906",
         "authors": [],
         "source_subdir": "submissions/dft/halitziyakartal-halitziyav6-pi"
+      },
+      "verification": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "checked_at": "2026-11-05T08:38:28.634682Z",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41986137747",
+        "receipt_path": "sources/direct-pr-156-41986137747-1-final.json",
+        "receipt_sha256": "83c2e50796ec7224e8bb29b636aa5a89049acfd5f5201d65065640596f18eb1f",
+        "policy_hash": "ee836e63fa50335ff1108a0a28c1032e5eba19ea6d5e525e9544df5ef0f314ab",
+        "result_artifact_id": 13399774043,
+        "controller_fingerprint": "999f33f0c33fb4fa8717de4978a1bbf6918e7765601bf14370807baf95dd61b5",
+        "pr_identity": {
+          "number": 156,
+          "head": "da94a2a6f593caa1f534f1ab1c84b88ff5d74906",
+          "changed_files_sha256": "77bca5bf152fe21669f77bdc0cd3f0cfd7dbb6c577b4cb0b8a0d53d48af76772",
+          "controller": "c8a22019a6a09ec350559888d7073bbba96ea0ac"
+        },
+        "source_file": "Submission.lean"
       }
     },
     "direct-pr-91": {
@@ -4041,6 +4070,37 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-pr-156:dc980cda002f3705b227b017114d803a1b11aa949ee53d0981b6cdd45343a87b": {
+      "key": "direct-pr-156",
+      "submission": {
+        "schema_version": 1,
+        "problem": "dft",
+        "bound": "31415926535897932384626433/10000000000000000000000000000",
+        "repo_url": "https://github.com/bigospeedrun/verifier",
+        "commit": "da94a2a6f593caa1f534f1ab1c84b88ff5d74906",
+        "authors": [],
+        "source_subdir": "submissions/dft/halitziyakartal-halitziyav6-pi"
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "checked_at": "2026-11-05T08:38:28.634682Z",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41986137747",
+        "receipt_path": "sources/direct-pr-156-41986137747-1-final.json",
+        "receipt_sha256": "83c2e50796ec7224e8bb29b636aa5a89049acfd5f5201d65065640596f18eb1f",
+        "policy_hash": "ee836e63fa50335ff1108a0a28c1032e5eba19ea6d5e525e9544df5ef0f314ab",
+        "result_artifact_id": 13399774043,
+        "controller_fingerprint": "999f33f0c33fb4fa8717de4978a1bbf6918e7765601bf14370807baf95dd61b5",
+        "pr_identity": {
+          "number": 156,
+          "head": "da94a2a6f593caa1f534f1ab1c84b88ff5d74906",
+          "changed_files_sha256": "77bca5bf152fe21669f77bdc0cd3f0cfd7dbb6c577b4cb0b8a0d53d48af76772",
+          "controller": "c8a22019a6a09ec350559888d7073bbba96ea0ac"
+        },
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -4159,6 +4219,11 @@
       "updated_at": "2026-11-04T06:38:42Z",
       "claimed_only": true
     },
+    "141": {
+      "version": "003cfd66f64a6fb07ccd93dbab47133e30d565ab",
+      "updated_at": "2026-11-05T08:41:21Z",
+      "claimed_only": false
+    },
     "144": {
       "version": "bf108752ffc6d70248068d9b5c5d1030755c7c34",
       "updated_at": "2026-11-04T20:57:36Z",
@@ -4199,6 +4264,11 @@
     "147": {
       "version": "14cce8ee41223cd9f1c9298e2c061d4e1765186c2148ff1622e2518543d4a6eb",
       "updated_at": "2026-11-05T00:00:44Z",
+      "not_verified": false
+    },
+    "157": {
+      "version": "27f17bf3efd9768ce14fb11907936dfddaab57e3a71d996a249e7fe3820c490d",
+      "updated_at": "2026-11-05T08:47:32Z",
       "not_verified": false
     }
   }

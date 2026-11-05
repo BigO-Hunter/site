@@ -4566,15 +4566,11 @@
             "id": "direct-pr-156",
             "score": "31415926535897932384626433/10000000000000000000000000000",
             "relation": "attained",
-            "evidence": "Claimed",
+            "evidence": "Lean Verified",
             "authors": [
               "Halit Ziya KARTAL"
             ],
-            "bound": "O(n log^(1 - 0.0031415926) n)",
-            "verification": {
-              "state": "pending",
-              "since": "2026-11-05T06:54:20Z"
-            }
+            "bound": "O(n log^(1 - 0.0031415926) n)"
           },
           {
             "id": "direct-pr-29",
@@ -7279,7 +7275,9 @@
     "[\"other-critical-line-zeros\",\"bhattacharjee-bhattacharya:\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6716\",\"16521/5000000\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6726\",\"2067/625000\",\"attained\"]:record",
-    "[\"other-critical-line-zeros\",\"anthropic:\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"attained\"]:lean"
+    "[\"other-critical-line-zeros\",\"anthropic:\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"attained\"]:lean",
+    "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:lean",
+    "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:record"
   ],
   "deferred": [
     {
@@ -7288,14 +7286,6 @@
       "authors": [
         "aigent-marius"
       ]
-    },
-    {
-      "key": "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:record",
-      "slug": "exact-dft",
-      "authors": [
-        "Halit Ziya KARTAL"
-      ],
-      "hold": true
     }
   ]
 }
