@@ -180,7 +180,9 @@
       ]
     },
     "3sum": {
-      "status": "ok",
+      "status": "held",
+      "reason": "unreviewed proved entry 1.9202796 (mission 947d913a-6ce0-4cb2-9caa-1307f39a7233)",
+      "since": "2026-11-05T06:25:20Z",
       "links": {
         "anthropic-2026": "https://prove2.me/theorems/07f62b7b-6f72-4cec-a1fd-eed6348830bf",
         "direct-issue-4": "https://prove2.me/theorems/faf3da56-8bce-41db-b7fb-332e1861ada2"

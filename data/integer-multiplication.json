@@ -63015,5 +63015,5 @@
       "credit_note": "zxv splits two shared idle jobs of the caller of PR 6716 into paid pieces, so that smaller prefixes retire as independent outputs, on the unchanged native word of PR 6716. The conditional kappa is 0.0033072, 0.091 percent above PR 6716's 0.0033042. The README says that all five framework assumptions remain and that external review is outstanding. It builds on PRs 6716, 6702, 6545, 6348 and 6398."
     }
   },
-  "updated_at": "2026-11-05T02:17:29Z"
+  "updated_at": "2026-11-05T06:17:28Z"
 }
