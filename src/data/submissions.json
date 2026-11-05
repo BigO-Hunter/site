@@ -126631,6 +126631,28 @@
       "claim_files_head": "f2954da6de664b143bc38e9e5bbe6942f07511fc",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6728,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Independently certify the unique literal paid-law tilt bracket (no kappa)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6728",
+      "submitted_at": "2026-11-05T00:26:52Z",
+      "updated_at": "2026-11-05T00:26:52Z",
+      "source_commit": "e3731f3f95c07ba2aff1cc02b27d019988da8068",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-05T00:26:52Z",
+      "checked_at": "2026-11-05",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "e3731f3f95c07ba2aff1cc02b27d019988da8068",
+      "claim_text": "3c53d85c3486fa6e1c16100daa50d1c0f0b90f42d1afebb8e21f859dd0e33b94",
+      "claim_files": [],
+      "claim_files_head": "e3731f3f95c07ba2aff1cc02b27d019988da8068",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
