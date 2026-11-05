@@ -4829,7 +4829,7 @@
             "relation": "attained",
             "evidence": "Claimed",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "O(n^1.9992)",
             "verification": {
@@ -5034,7 +5034,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "O(2^(0.5n))"
           },
@@ -5044,7 +5044,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "O(2^(0.75n))"
           }
@@ -5138,7 +5138,7 @@
             "relation": "attained",
             "evidence": "Claimed",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "O(n log^(2/3) n) for m <= n",
             "verification": {
@@ -5844,7 +5844,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "μ(G) ≤ 528.2327",
             "display": "528.2327"
@@ -5855,7 +5855,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "μ(G) ≤ 528.2315",
             "display": "528.2315"
@@ -5996,7 +5996,7 @@
             "relation": "attained",
             "evidence": "Claimed",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "E[R] ≥ 5.110·10^(-10) E[OPT]",
             "display": "\\approx5.111\\cdot10^{-10}"
@@ -6007,7 +6007,7 @@
             "relation": "attained",
             "evidence": "Claimed",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "E[R] ≥ 5.114·10^(-10) E[OPT]",
             "display": "\\approx5.115\\cdot10^{-10}"
@@ -6095,7 +6095,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.7619d sqrt(n)",
             "display": "3.7619"
@@ -6106,7 +6106,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.7616d sqrt(n)",
             "display": "3.7616"
@@ -6117,7 +6117,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.76155d sqrt(n)",
             "display": "3.76155"
@@ -6128,7 +6128,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.76154d sqrt(n)",
             "display": "3.76154"
@@ -6139,7 +6139,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.76154d sqrt(n)",
             "display": "3.76154"
@@ -6150,7 +6150,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.76154d sqrt(n)",
             "display": "3.76154"
@@ -6161,7 +6161,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.76154d sqrt(n)",
             "display": "3.76154"
@@ -6172,7 +6172,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.761535d sqrt(n)",
             "display": "3.761535"
@@ -6183,7 +6183,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.761455d sqrt(n)",
             "display": "3.761455"
@@ -6194,7 +6194,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.192d sqrt(n)",
             "display": "3.192"
@@ -6205,7 +6205,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.191589d sqrt(n)",
             "display": "3.191589"
@@ -6216,7 +6216,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "AS(f) ≤ 3.191539d sqrt(n)",
             "display": "3.191539"
@@ -6531,7 +6531,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "Maker moves ≤ 20",
             "display": "20"
@@ -6543,7 +6543,7 @@
             "evidence": "Lean Verified",
             "authors": [
               "shjvandekamp",
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "Maker moves ≤ 19",
             "display": "19"
@@ -6717,7 +6717,7 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "η ≥ 1·10^(-237)",
             "display": "1\\cdot10^{-237}"
@@ -6749,7 +6749,7 @@
             "relation": "attained",
             "evidence": "Claimed",
             "authors": [
-              "Dmitri I. Arkhipov"
+              "MultiAgency swarm"
             ],
             "bound": "γ_L > 0.1542",
             "display": "0.1542"

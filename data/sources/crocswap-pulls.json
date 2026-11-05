@@ -130562,7 +130562,7 @@
     "title": "Review natural-root descriptor production and geometric preparation costs",
     "state": "open",
     "created_at": "2026-11-05T17:15:10Z",
-    "updated_at": "2026-11-05T17:15:10Z",
+    "updated_at": "2026-11-05T17:22:38Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130571,6 +130571,27 @@
     },
     "head": {
       "sha": "d4f7d625b2a5fa71f2c9c276b9ea503c28dcee4b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6740,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6740",
+    "title": "Audit full natural-root execution with two separate tape models",
+    "state": "open",
+    "created_at": "2026-11-05T18:00:51Z",
+    "updated_at": "2026-11-05T18:09:21Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "78e47e966ea06ea82641a18cfad71e219dc15566"
     },
     "base": {
       "ref": "main"
