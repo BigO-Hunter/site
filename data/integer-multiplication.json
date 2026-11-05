@@ -62289,7 +62289,7 @@
         589
       ],
       "upstream_selected": false,
-      "credit_note": "The maintainers selected this reviewed conditional result: the independent helper splits of Ali Romman's PR 5599, on the commuting-contact cascade of Pierre-Loic Doulcet's PR 5565. Its 36 source PRs also include Ali Romman's PRs 5580, 5544 and 5545, Joel Pulikkan's PR 5569, DreamingOfClouds' PR 5561 and thu-nmrc's PR 5551. The selected conditional kappa is 0.00310045."
+      "credit_note": "The maintainers selected this reviewed conditional result: the independent helper splits of Ali Romman's PR 5599, on the commuting-contact cascade of Pierre-Loic Doulcet's PR 5565. Its 36 source PRs also include Ali Romman's PRs 5580, 5544 and 5545, Joel Pulikkan's PR 5569, DreamingOfClouds' PR 5561 and THU New Media Research Center· Prof. Shen Yang's PR 5551. The selected conditional kappa is 0.00310045."
     },
     "crocswap-pr-5650": {
       "checked_at": "2026-11-05",
@@ -62924,7 +62924,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6621",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-03T12:52:44Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds keeps the caller of PR 6551 and edits the native word of PR 6529 in three compensated places: a paid-job merge, a re-based register and a moved helper input. The conditional kappa is 0.003297, 0.063 percent above PR 6551's 0.00329492. The complete invoice has 54 fewer paid jobs and the same productive fields."
     },
     "crocswap-pr-6702": {
       "checked_at": "2026-11-05",
@@ -62952,7 +62953,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6702",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-03T23:24:07Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds keeps the package of PR 6621 (the caller of PR 6551 and the retirement of PR 6545) and rewrites its native word once: a public helper register is cut at frame 115 and its later life moves to a new register, with compensating additions at the start and the end. The conditional kappa is 0.0032976, 0.018 percent above PR 6621's 0.003297. The PR says that the package was independently re-audited."
     },
     "crocswap-pr-6716": {
       "checked_at": "2026-11-05",
@@ -62980,7 +62982,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6716",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-04T17:41:35Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "THU New Media Research Center· Prof. Shen Yang gives the caller a new root with five full stages, where two adjacent rank-four stages share an idle bank, and adds a dual pair that permits one more independent input. The native word of PR 6702 is unchanged. The conditional kappa is 0.0033042, 0.200 percent above PR 6702's 0.0032976. The PR says that it implies no independent admission."
     },
     "crocswap-pr-6726": {
       "checked_at": "2026-11-05",
@@ -63008,7 +63011,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6726",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-04T23:40:30Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "zxv splits two shared idle jobs of the caller of PR 6716 into paid pieces, so that smaller prefixes retire as independent outputs, on the unchanged native word of PR 6716. The conditional kappa is 0.0033072, 0.091 percent above PR 6716's 0.0033042. The README says that all five framework assumptions remain and that external review is outstanding. It builds on PRs 6716, 6702, 6545, 6348 and 6398."
     }
   },
   "updated_at": "2026-11-05T02:17:29Z"
