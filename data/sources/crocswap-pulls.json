@@ -130352,7 +130352,7 @@
     "title": "Independently certify the unique literal paid-law tilt bracket (no kappa)",
     "state": "open",
     "created_at": "2026-11-05T00:26:52Z",
-    "updated_at": "2026-11-05T00:26:52Z",
+    "updated_at": "2026-11-05T00:39:34Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130361,6 +130361,27 @@
     },
     "head": {
       "sha": "e3731f3f95c07ba2aff1cc02b27d019988da8068"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6729,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6729",
+    "title": "Review complete mixed-layer propagation and the explicit all-rank majorant",
+    "state": "open",
+    "created_at": "2026-11-05T01:01:46Z",
+    "updated_at": "2026-11-05T01:08:49Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "8261826cf3405543803050309004f5b17b8090b0"
     },
     "base": {
       "ref": "main"
