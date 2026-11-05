@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checked_at": "2026-11-05T05:01:40.485256Z",
+  "description": "Lean and nanoda passed; permitted-axiom audit passed",
+  "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41966789367",
+  "artifact_path": "sources/maintainer-critical-line-zeros-anthropic-41966789367.zip",
+  "artifact_sha256": "821ab0f5eec1f36d9643a2fab9d4722da7e0d98d5a07cbcab0d4259f499a0bec",
+  "source_receipt_path": "sources/maintainer-critical-line-zeros-anthropic-41966789367-source.json"
+}

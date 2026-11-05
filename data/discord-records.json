@@ -6889,7 +6889,7 @@
             "id": "anthropic:\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}",
             "score": "\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}",
             "relation": "attained",
-            "evidence": "Claimed",
+            "evidence": "Lean Verified",
             "authors": [
               "Anthropic"
             ],
@@ -7264,7 +7264,8 @@
     "[\"other-haldane-gap\",\"darkhipo:771/5000\",\"771/5000\",\"attained\"]:record",
     "[\"other-critical-line-zeros\",\"bhattacharjee-bhattacharya:\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6716\",\"16521/5000000\",\"attained\"]:record",
-    "[\"integer-multiplication\",\"crocswap-pr-6726\",\"2067/625000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6726\",\"2067/625000\",\"attained\"]:record",
+    "[\"other-critical-line-zeros\",\"anthropic:\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"attained\"]:lean"
   ],
   "deferred": [
     {
