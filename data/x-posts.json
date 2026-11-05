@@ -1137,8 +1137,8 @@
     "id": "2118276456476188686"
   },
   "[\"directed-sssp\",\"direct-issue-158\",\"n log ; n log^2\",\"attained\"]:lean": {
-    "status": "unknown",
-    "at": "2026-11-05T19:38:37.167Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-05T19:38:38.903Z",
+    "id": "2118427792107016517"
   }
 }
