@@ -126820,6 +126820,28 @@
       "claim_files_head": "b0035249c21ce87fe1ee58d3063e64ad4c03ec3b",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6738,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Independently execute the recursive core and audit full frame restoration",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6738",
+      "submitted_at": "2026-11-05T14:19:42Z",
+      "updated_at": "2026-11-05T14:19:42Z",
+      "source_commit": "d4875adf73bc57304c0bb3e7e7283ad37679ce54",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-05T14:19:42Z",
+      "checked_at": "2026-11-05",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "d4875adf73bc57304c0bb3e7e7283ad37679ce54",
+      "claim_text": "7715c834e7ae8f80026b4deb0505b71e4280c63265969c4a141350ddeea90202",
+      "claim_files": [],
+      "claim_files_head": "d4875adf73bc57304c0bb3e7e7283ad37679ce54",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
