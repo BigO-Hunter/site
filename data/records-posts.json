@@ -1918,5 +1918,14 @@
     "authors": [
       "zxv"
     ]
+  },
+  {
+    "key": "[\"other-critical-line-zeros\",\"anthropic:\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"attained\"]:lean",
+    "text": "**Record verified** | **Zeta zeros on the critical line** | `kappa^(*) ≥ 0.6725` | by Anthropic | Lean Verified | [bigospeedrun.com/other/critical-line-zeros](https://bigospeedrun.com/other/critical-line-zeros)",
+    "x_text": "Record verified!\n\nProblem: Zeta zeros on the critical line\nValue: kappa^(*) ≥ 0.6725\nPlayer: Anthropic\nStatus: Lean Verified",
+    "posted_at": "2026-11-05T05:51:43.639Z",
+    "authors": [
+      "Anthropic"
+    ]
   }
 ]
