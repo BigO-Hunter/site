@@ -1,11 +1,3 @@
 {
-  "queue": [
-    {
-      "pr": 6726,
-      "head": "435bbe91fb28cb1d7a569ca70c6c4e9eb302d486",
-      "title": "Conditional κ = 0.00330720 (+3.000e-6, +0.09079% over #6716): two paid idle fragments unlock independent outputs",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6726",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    }
-  ]
+  "queue": []
 }

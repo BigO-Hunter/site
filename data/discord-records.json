@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6716",
+        "leader": "crocswap-pr-6726",
         "direction": "higher",
         "records": [
           {
@@ -4399,6 +4399,16 @@
               "THU New Media Research Center· Prof. Shen Yang"
             ],
             "bound": "O(n log^(1 - 0.0033042) n)"
+          },
+          {
+            "id": "crocswap-pr-6726",
+            "score": "2067/625000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "zxv"
+            ],
+            "bound": "O(n log^(1 - 0.0033072) n)"
           }
         ],
         "table": "big-o"
@@ -7253,7 +7263,8 @@
     "[\"other-matroid-prophet\",\"darkhipo:\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"\\\\ge5.114935688794994675\\\\cdot10^{-10}\",\"attained\"]:record",
     "[\"other-haldane-gap\",\"darkhipo:771/5000\",\"771/5000\",\"attained\"]:record",
     "[\"other-critical-line-zeros\",\"bhattacharjee-bhattacharya:\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"\\\\tfrac{3125}{3112}\\\\bigl(H-\\\\tfrac{7}{3200}\\\\bigr)\",\"attained\"]:record",
-    "[\"integer-multiplication\",\"crocswap-pr-6716\",\"16521/5000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6716\",\"16521/5000000\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-6726\",\"2067/625000\",\"attained\"]:record"
   ],
   "deferred": [
     {
