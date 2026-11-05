@@ -32,7 +32,7 @@
           "lean": true,
           "leanNote": "Repository has Lean, but this result has exact-arithmetic certificates and a conditional paper.",
           "evidence": "claimed",
-          "note": "Here \\(\\sigma^{\\dagger}\\) is the root in \\((0.8749570194,0.8749570195)\\) of \\(7884s^3-18819s^2+14643s-3686=0\\). The paper is conditional. The bound assumes the released Hecke analytic and transfer inputs and the retuned probe estimates in the linked written argument.",
+          "note": "Here \\(\\sigma^{\\dagger}\\) is the root in \\((0.8749570194,0.8749570195)\\) of \\(7884s^3-18819s^2+14643s-3686=0\\). The paper is conditional. The bound assumes the released Hecke analytic and transfer inputs and the retuned probe estimates in the linked written argument. The source repository was removed from GitHub (not found on 2026-11-05; last push 2026-11-02). The site holds no copy.",
           "authors": [
             {
               "name": "Jizhou Guo",
@@ -1096,10 +1096,6 @@
         {
           "name": "Rogerhu12/openai-math-extensions",
           "url": "https://github.com/Rogerhu12/openai-math-extensions"
-        },
-        {
-          "name": "aster2024/openai-math-followups",
-          "url": "https://github.com/aster2024/openai-math-followups"
         },
         {
           "name": "stevenecreech/math",
@@ -3263,26 +3259,6 @@
   ],
   "followups": [
     {
-      "family": "007",
-      "name": "Ordinary two-point correlations and the corrected Elliott conjecture",
-      "repos": [
-        {
-          "name": "aster2024/openai-math-followups",
-          "url": "https://github.com/aster2024/openai-math-followups"
-        }
-      ]
-    },
-    {
-      "family": "011",
-      "name": "Prime-factor statistics of \\(p-1\\)",
-      "repos": [
-        {
-          "name": "aster2024/openai-math-followups",
-          "url": "https://github.com/aster2024/openai-math-followups"
-        }
-      ]
-    },
-    {
       "family": "017",
       "name": "The irrationality exponent of \\(\\pi\\) is \\(2\\)",
       "repos": [
@@ -3429,16 +3405,6 @@
         {
           "name": "Apsiape/hyperbolic-group-not-sofic",
           "url": "https://github.com/Apsiape/hyperbolic-group-not-sofic"
-        }
-      ]
-    },
-    {
-      "family": "369",
-      "name": "The hot spots conjecture for simply connected planar domains",
-      "repos": [
-        {
-          "name": "aster2024/openai-math-followups",
-          "url": "https://github.com/aster2024/openai-math-followups"
         }
       ]
     }
