@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache source components and hand off N22, P07 and P02",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-05T20:59:57Z",
+    "updated_at": "2026-11-05T21:55:44Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -129533,7 +129533,7 @@
     "title": "Price compatible width menus and resolve the rank-12 dispatch frontier",
     "state": "open",
     "created_at": "2026-11-03T20:16:13Z",
-    "updated_at": "2026-11-03T20:49:36Z",
+    "updated_at": "2026-11-05T22:06:41Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130667,7 +130667,7 @@
     "title": "Expose adopted H25 full callers and original criteria as readable text",
     "state": "open",
     "created_at": "2026-11-05T20:55:05Z",
-    "updated_at": "2026-11-05T20:55:05Z",
+    "updated_at": "2026-11-05T21:25:06Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130681,5 +130681,47 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6745,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6745",
+    "title": "research: audit guard-passing direct compiler invoice faults",
+    "state": "open",
+    "created_at": "2026-11-05T21:18:32Z",
+    "updated_at": "2026-11-05T21:29:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "50027f6de434a8d936871a1b3f776f04d47cd3e2"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6746,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6746",
+    "title": "research: externally audit priced-menu least period and exact onset",
+    "state": "open",
+    "created_at": "2026-11-05T21:56:58Z",
+    "updated_at": "2026-11-05T22:03:21Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "64e7a0e2f140cce90794e11143dc313b9ac9780c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
