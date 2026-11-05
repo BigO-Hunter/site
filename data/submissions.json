@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache source components and hand off N22, P07 and P02",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-04T14:11:40Z",
+      "updated_at": "2026-11-05T09:27:00Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -126700,6 +126700,22 @@
       "claim_files_head": "05da0fe4e09a51e4fa32c2550a205af796e8fc8e",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6732,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Record finite GNU-time source contract and readable retention inputs",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6732",
+      "submitted_at": "2026-11-05T09:22:51Z",
+      "updated_at": "2026-11-05T09:30:36Z",
+      "source_commit": "dd058d2990d3a98692553018387ec19eaf474b42",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-05T09:22:51Z",
+      "checked_at": "2026-11-05",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }
