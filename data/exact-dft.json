@@ -1268,7 +1268,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/16",
       "direct_submission": true,
       "route": "issue",
-      "credit_note": "canghaimeng proves saving 0.00126 in Lean with a new construction of 11,992 live roles and 4,824 helper banks per class. It extends the complex588 development of jeremykothe2 and Ryan Shea, on the community circuit packaged by Dmitri I. Arkhipov. canghaimeng adds the checked scalar adapter, bank schedule, numerical cost certificate and all-length bound. The reduction is OpenAI's.",
+      "credit_note": "canghaimeng proves saving 0.00126 in Lean with a new construction of 11,992 live roles and 4,824 helper banks per class. It extends the complex588 development of jeremykothe2 and Ryan Shea, on the community circuit packaged by MultiAgency swarm. canghaimeng adds the checked scalar adapter, bank schedule, numerical cost certificate and all-length bound. The reduction is OpenAI's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39061582815",
       "verification": "passed"
     },

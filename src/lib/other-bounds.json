@@ -1873,7 +1873,7 @@
           "bound": "\\mathbb{E}[R]\\ge 5.107\\cdot10^{-10}\\mathbb{E}[\\mathrm{OPT}]"
         },
         {
-          "author": "Dmitri I. Arkhipov",
+          "author": "MultiAgency swarm",
           "handle": "darkhipo",
           "agent": true,
           "value": "\\ge5.110608508730856554\\cdot10^{-10}",
@@ -1888,7 +1888,7 @@
           "note": "It evaluates the constant \\(C(B)\\) of the paper by Qiuyu Chen (Euler) at the exact \\(B=(261/256)^{256}\\approx141.43\\), where that paper uses \\(B>141\\). The exact value is a fraction with more than 1,250 digits in each part (exact_fraction.txt). A later README note corrects a displayed value of \\(B\\) (142.9 to 141.43); the exact claim does not change. The author says that an AI agent wrote the work.",
           "authors": [
             {
-              "name": "Dmitri I. Arkhipov",
+              "name": "MultiAgency swarm",
               "url": "https://github.com/darkhipo"
             }
           ],
@@ -1896,7 +1896,7 @@
           "bound": "\\mathbb{E}[R]\\ge 5.110\\cdot10^{-10}\\mathbb{E}[\\mathrm{OPT}]"
         },
         {
-          "author": "Dmitri I. Arkhipov",
+          "author": "MultiAgency swarm",
           "handle": "darkhipo",
           "agent": true,
           "value": "\\ge5.114935688794994675\\cdot10^{-10}",
@@ -1911,7 +1911,7 @@
           "note": "It keeps the construction and the theorem of the paper by Qiuyu Chen (Euler), evaluates its constant at the exact \\(B\\) as the row before, and searches three analysis constants again. The exact value is a fraction with 1,265 and 1,274 digits (exact_fraction.txt). The author says that an AI agent wrote the work.",
           "authors": [
             {
-              "name": "Dmitri I. Arkhipov",
+              "name": "MultiAgency swarm",
               "url": "https://github.com/darkhipo"
             }
           ],
@@ -2803,7 +2803,7 @@
           "bound": "\\gamma_L>0.1515"
         },
         {
-          "author": "Dmitri I. Arkhipov",
+          "author": "MultiAgency swarm",
           "handle": "darkhipo",
           "agent": true,
           "value": "771/5000",
@@ -2818,7 +2818,7 @@
           "note": "It keeps amachino's certificate method and changes the inverse temperature to 13, with new exact thermal tables and a new certificate of 395 exact-rational checks. It covers every integer \\(L\\ge68\\) at \\(J=1\\) and uses the same OpenAI premises as the statement. The README says that the bound 0.1543 fails the check. The author says that an AI agent wrote the work.",
           "authors": [
             {
-              "name": "Dmitri I. Arkhipov",
+              "name": "MultiAgency swarm",
               "url": "https://github.com/darkhipo"
             }
           ],

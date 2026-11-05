@@ -1,7 +1,7 @@
 import type {Author, Link} from './types';
 import type {EvidenceLevel} from './evidence';
 import {receiptPageUrl} from './receipt.ts';
-import {profileName} from './profile-name.ts';
+import {profileName, creditNames} from './profile-name.ts';
 
 type Profile = {login: string; name: string; twitter_username: string | null};
 // The login of a GitHub profile url (https://github.com/<login>, no deeper path); undefined for any other url.
@@ -20,7 +20,7 @@ export function authorFromProfile(author: Link, profiles: Record<string, Profile
  if (!login) return author;
  const profile = profiles[login.toLowerCase()];
  const avatar = githubProfileLogin(author.url) ? avatars[login.toLowerCase()] : undefined;
- return {name: profileName(profile?.name, login), login: profile?.login || login,
+ return {name: creditNames[login.toLowerCase()] ?? profileName(profile?.name, login), login: profile?.login || login,
   url: `https://github.com/${profile?.login || login}`,
   twitterUsername: profile?.twitter_username || undefined, ...(avatar ? {avatar} : {})};
 }

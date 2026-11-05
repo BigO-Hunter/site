@@ -55,39 +55,39 @@
     },
     "direct-issue-54": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/49",
-      "text": "Dmitri I. Arkhipov lowers the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof to \\(\\frac{37619}{10000}\\), inside the proof's own margin; no other proof step changes."
+      "text": "MultiAgency swarm lowers the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof to \\(\\frac{37619}{10000}\\), inside the proof's own margin; no other proof step changes."
     },
     "direct-issue-55": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/54",
-      "text": "Dmitri I. Arkhipov changes a few more internal constants of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already sharpened once before), so the final constant becomes \\(\\frac{2351}{625}\\); no other proof step changes."
+      "text": "MultiAgency swarm changes a few more internal constants of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already sharpened once before), so the final constant becomes \\(\\frac{2351}{625}\\); no other proof step changes."
     },
     "direct-issue-56": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/55",
-      "text": "Dmitri I. Arkhipov changes a few more internal constants of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already sharpened twice before), so the final constant becomes \\(\\frac{75231}{20000}\\); no other proof step changes."
+      "text": "MultiAgency swarm changes a few more internal constants of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already sharpened twice before), so the final constant becomes \\(\\frac{75231}{20000}\\); no other proof step changes."
     },
     "direct-issue-58": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/56",
-      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed three times before) to \\(\\frac{188077}{50000}\\); no other proof step changes."
+      "text": "MultiAgency swarm changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed three times before) to \\(\\frac{188077}{50000}\\); no other proof step changes."
     },
     "direct-issue-60": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/58",
-      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed four times before) to \\(\\frac{37615399}{10000000}\\); no other proof step changes."
+      "text": "MultiAgency swarm changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed four times before) to \\(\\frac{37615399}{10000000}\\); no other proof step changes."
     },
     "direct-issue-62": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/60",
-      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed five times before) to \\(\\frac{376153979}{100000000}\\); no other proof step changes."
+      "text": "MultiAgency swarm changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed five times before) to \\(\\frac{376153979}{100000000}\\); no other proof step changes."
     },
     "direct-issue-63": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/62",
-      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed six times before) to \\(\\frac{188076989}{50000000}\\); no other proof step changes."
+      "text": "MultiAgency swarm changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed six times before) to \\(\\frac{188076989}{50000000}\\); no other proof step changes."
     },
     "direct-issue-64": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/63",
-      "text": "Dmitri I. Arkhipov changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed seven times before) to \\(\\frac{37615342161}{10000000000}\\); no other proof step changes."
+      "text": "MultiAgency swarm changes the final constant of Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed seven times before) to \\(\\frac{37615342161}{10000000000}\\); no other proof step changes."
     },
     "direct-issue-66": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/64",
-      "text": "Dmitri I. Arkhipov adds a charged coupling bound and a sharper tail estimate to Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed eight times before), which changes the final constant to \\(\\frac{18807273}{5000000}\\)."
+      "text": "MultiAgency swarm adds a charged coupling bound and a sharper tail estimate to Anchen0823's Lean Verified \\(\\frac{1881}{500}\\) proof (already changed eight times before), which changes the final constant to \\(\\frac{18807273}{5000000}\\)."
     },
     "direct-pr-90": {
       "predecessor": "https://github.com/bigospeedrun/verifier/pull/41",
@@ -103,15 +103,15 @@
     },
     "direct-issue-93": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/70",
-      "text": "Dmitri I. Arkhipov lowers the coefficient from 3.191588785 to 3.191538244 in their own Lean Verified proof by using a 20-digit lower bound for \\(\\pi\\) in place of a 4-digit one; no new lemma is added. The proof started from Anchen0823's Lean Verified proof. The coupling estimate is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
+      "text": "MultiAgency swarm lowers the coefficient from 3.191588785 to 3.191538244 in its own Lean Verified proof by using a 20-digit lower bound for \\(\\pi\\) in place of a 4-digit one; no new lemma is added. The proof started from Anchen0823's Lean Verified proof. The coupling estimate is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
     },
     "direct-issue-69": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/66",
-      "text": "Dmitri I. Arkhipov lowers the coefficient from 3.7614546 to 3.192 in their own Lean Verified proof by adding Lean proofs of the compensated coupling lemma and of a Wallis estimate, which prove the coefficient \\(8/\\sqrt{2\\pi}\\approx 3.19154\\). The proof started from Anchen0823's Lean Verified proof. The coupling lemma is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
+      "text": "MultiAgency swarm lowers the coefficient from 3.7614546 to 3.192 in its own Lean Verified proof by adding Lean proofs of the compensated coupling lemma and of a Wallis estimate, which prove the coefficient \\(8/\\sqrt{2\\pi}\\approx 3.19154\\). The proof started from Anchen0823's Lean Verified proof. The coupling lemma is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
     },
     "direct-issue-70": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/69",
-      "text": "Dmitri I. Arkhipov lowers the coefficient from 3.192 to 3.191588785 in their own Lean Verified proof by certifying with a sharper lower bound for \\(\\pi\\) that \\(8/\\sqrt{2\\pi}\\) is below 683/214; the machinery is unchanged. The coupling lemma is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
+      "text": "MultiAgency swarm lowers the coefficient from 3.192 to 3.191588785 in its own Lean Verified proof by certifying with a sharper lower bound for \\(\\pi\\) that \\(8/\\sqrt{2\\pi}\\) is below 683/214; the machinery is unchanged. The coupling lemma is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre, and the weighted Walsh grading, the matrix edge recovery and the original coefficient-8 formalization to OpenAI."
     },
     "direct-issue-35": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/31",
@@ -132,7 +132,7 @@
       "text": "Jacob Sussman proves saving 0.0017887045 in Lean with a new recursion that gives the arrays of a circuit jobs of two sizes in a fixed ratio, and a lever that removes 16,576 blocks of rank 48 per round entirely. The circuit is aigent-marius's CrocSwap #2979: its words, run order and dispatch are unchanged. The helper storage table is new, solved with the placement program of Erwan Secousses' #3815. The reduction is OpenAI's."
     },
     "direct-issue-16": {
-      "text": "canghaimeng proves saving 0.00126 in Lean with a new construction of 11,992 live roles and 4,824 helper banks per class. It extends the complex588 development of jeremykothe2 and Ryan Shea, on the community circuit packaged by Dmitri I. Arkhipov. canghaimeng adds the checked scalar adapter, bank schedule, numerical cost certificate and all-length bound. The reduction is OpenAI's."
+      "text": "canghaimeng proves saving 0.00126 in Lean with a new construction of 11,992 live roles and 4,824 helper banks per class. It extends the complex588 development of jeremykothe2 and Ryan Shea, on the community circuit packaged by MultiAgency swarm. canghaimeng adds the checked scalar adapter, bank schedule, numerical cost certificate and all-length bound. The reduction is OpenAI's."
     },
     "direct-pr-3": {
       "text": "Nil Mamano's AI agents prove saving 0.0010221076 in Lean, above Jacob Sussman's 0.0008762478. It builds on Jacob Sussman's E8 unit, Lean engine and Fourier transfer, with devices from CrocSwap: DaysSky's bridged words, Zhihao Chen's nine-stage layout, David Ganz's entrance gauges, Rohan Arun's ordered promotions, eumemic's enlargements and George Lydakis's bank packing. The reduction is OpenAI's."
@@ -145,14 +145,14 @@
     },
     "direct-issue-95": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/87",
-      "text": "Dmitri I. Arkhipov lowers Cinna Davis's Lean Verified bound \\(\\mu(G)\\le 528.23288\\) to \\(\\mu(G)\\le 528.2327\\) with a newly generated degree-130 quadrature polynomial, a two-band Zolotarev construction, and its circle certificate. The rest of the proof is Cinna Davis's, with S. Litsey's design and OpenAI's irrationality argument."
+      "text": "MultiAgency swarm lowers Cinna Davis's Lean Verified bound \\(\\mu(G)\\le 528.23288\\) to \\(\\mu(G)\\le 528.2327\\) with a newly generated degree-130 quadrature polynomial, a two-band Zolotarev construction, and its circle certificate. The rest of the proof is Cinna Davis's, with S. Litsey's design and OpenAI's irrationality argument."
     },
     "direct-issue-49": {
       "text": "Anchen0823 proves in Lean that the average sensitivity of a polynomial threshold function is at most \\(3.762\\,d\\sqrt{n}\\), by proving the refined coupling bound, adding exact binomial absolute moments and extracting a sharper coefficient. The refined coupling bound is due to Prathmesh Lagdive, Vaibhav Aglave and Suraj Damre (coefficient 3.83); the weighted Walsh grading, the matrix edge recovery and the coefficient-8 formalization are OpenAI's. The author states that OpenAI Codex assisted."
     },
     "direct-issue-103": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/95",
-      "text": "Dmitri I. Arkhipov lowers their own Lean Verified bound \\(\\mu(G)\\le 528.2327\\) to \\(\\mu(G)\\le 528.2315\\). The degree-130 two-band polynomial and its roots stay the same; the gain comes from normalizing its leading coefficient exactly. The rest of the proof is Cinna Davis's, with S. Litsey's design and OpenAI's irrationality argument."
+      "text": "MultiAgency swarm lowers its own Lean Verified bound \\(\\mu(G)\\le 528.2327\\) to \\(\\mu(G)\\le 528.2315\\). The degree-130 two-band polynomial and its roots stay the same; the gain comes from normalizing its leading coefficient exactly. The rest of the proof is Cinna Davis's, with S. Litsey's design and OpenAI's irrationality argument."
     },
     "direct-issue-99": {
       "predecessor": "https://github.com/bigospeedrun/verifier/issues/92",
@@ -163,7 +163,7 @@
         "shjvandekamp",
         "darkhipo"
       ],
-      "text": "The 19-move construction and its card certificate are shjvandekamp's (shjvandekamp/math@64e7eb1, 2026-10-15); Dmitri I. Arkhipov's package checks it in Lean."
+      "text": "The 19-move construction and its card certificate are shjvandekamp's (shjvandekamp/math@64e7eb1, 2026-10-15); MultiAgency swarm's package checks it in Lean."
     }
   },
   "withdrawn": {
