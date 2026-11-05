@@ -130429,5 +130429,26 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6733,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6733",
+    "title": "Independently audit the exact second-fragment phase and fresh inputs",
+    "state": "open",
+    "created_at": "2026-11-05T10:51:57Z",
+    "updated_at": "2026-11-05T11:00:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "403b4ed85eea7f99b0c4b4afad22123363492c7a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

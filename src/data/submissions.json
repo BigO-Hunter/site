@@ -126716,6 +126716,28 @@
       "claimed_score": null,
       "record_ids": [],
       "note": "No research package kappa claim."
+    },
+    {
+      "pr_number": 6733,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Independently audit the exact second-fragment phase and fresh inputs",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6733",
+      "submitted_at": "2026-11-05T10:51:57Z",
+      "updated_at": "2026-11-05T11:00:55Z",
+      "source_commit": "403b4ed85eea7f99b0c4b4afad22123363492c7a",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-05T10:51:57Z",
+      "checked_at": "2026-11-05",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "403b4ed85eea7f99b0c4b4afad22123363492c7a",
+      "claim_text": "ec6e46a18156181500ba74e281e674d95f438381797dbb8a32a50e7728320a55",
+      "claim_files": [],
+      "claim_files_head": "403b4ed85eea7f99b0c4b4afad22123363492c7a",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
