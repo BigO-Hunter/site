@@ -130513,5 +130513,26 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6737,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6737",
+    "title": "Review all-depth recursive frame restoration and occurrence costs",
+    "state": "open",
+    "created_at": "2026-11-05T13:29:13Z",
+    "updated_at": "2026-11-05T13:37:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "b0035249c21ce87fe1ee58d3063e64ad4c03ec3b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

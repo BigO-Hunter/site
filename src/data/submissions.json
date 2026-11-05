@@ -126798,6 +126798,28 @@
       "claimed_score": null,
       "record_ids": [],
       "note": "No research package kappa claim."
+    },
+    {
+      "pr_number": 6737,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Review all-depth recursive frame restoration and occurrence costs",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6737",
+      "submitted_at": "2026-11-05T13:29:13Z",
+      "updated_at": "2026-11-05T13:37:10Z",
+      "source_commit": "b0035249c21ce87fe1ee58d3063e64ad4c03ec3b",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-05T13:29:13Z",
+      "checked_at": "2026-11-05",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "b0035249c21ce87fe1ee58d3063e64ad4c03ec3b",
+      "claim_text": "e901f72fd0566b999212dfe46bfebfa3a24cb9e9603517f1ddf4ef6037477d9b",
+      "claim_files": [],
+      "claim_files_head": "b0035249c21ce87fe1ee58d3063e64ad4c03ec3b",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
