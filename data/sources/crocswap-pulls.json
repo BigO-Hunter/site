@@ -130597,5 +130597,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6741,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6741",
+    "title": "research: audit capped flow source against its finite integer law",
+    "state": "open",
+    "created_at": "2026-11-05T18:39:50Z",
+    "updated_at": "2026-11-05T18:46:38Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "3d3065be2b25f3a8838065bf290b8da7dd03909b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

@@ -5119,7 +5119,8 @@
         "leader": null,
         "direction": "lower",
         "frontier": [
-          "directed-sssp-2026"
+          "directed-sssp-2026",
+          "direct-issue-158"
         ],
         "records": [
           {
@@ -5145,6 +5146,16 @@
               "state": "pending",
               "since": "2026-11-03T23:57:56Z"
             }
+          },
+          {
+            "id": "direct-issue-158",
+            "score": "n log ; n log^2",
+            "relation": "attained",
+            "evidence": "Lean Verified",
+            "authors": [
+              "MultiAgency swarm"
+            ],
+            "bound": "O(n log^2 n) for m <= n log n"
           }
         ],
         "table": "big-o"
@@ -7277,7 +7288,8 @@
     "[\"integer-multiplication\",\"crocswap-pr-6726\",\"2067/625000\",\"attained\"]:record",
     "[\"other-critical-line-zeros\",\"anthropic:\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"attained\"]:lean",
     "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:lean",
-    "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:record"
+    "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:record",
+    "[\"directed-sssp\",\"direct-issue-158\",\"n log ; n log^2\",\"attained\"]:lean"
   ],
   "deferred": [
     {

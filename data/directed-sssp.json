@@ -248,6 +248,47 @@
         "kind": "repo-artifact",
         "url": "https://github.com/darkhipo/sssp-chd-row/tree/ffbc94459a4148a3a60ec5aa27920c19af82df28"
       }
+    },
+    {
+      "id": "direct-issue-158",
+      "kind": "improvement",
+      "score": "n log ; n log^2",
+      "score_relation": "attained",
+      "tier": "verified",
+      "submitted_at": "2026-11-05T18:22:16Z",
+      "spec_version": "1",
+      "title": "darkhipo direct directed-sssp submission",
+      "authors": [
+        {
+          "name": "darkhipo",
+          "url": "https://github.com/darkhipo"
+        }
+      ],
+      "predecessors": [],
+      "submission_url": "https://github.com/bigospeedrun/verifier/issues/158",
+      "source_commit": "1129acafbd632f52a2dcaf016da6d7ae977d57e7",
+      "artifact": {
+        "path": "sources/direct-issue-158-submission.json",
+        "sha256": "b8b08b02342428e042f586e946fd06ab600045bd17b5d92b7c54cc2fd4b24160"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/bigospeedrun/verifier/issues/158",
+        "theorem": "Race.bound",
+        "certificate_path": null
+      },
+      "dependencies": [],
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-05T18:22:16Z",
+      "site_observed_at": "2026-11-05T19:31:14Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/darkhipo/sssp-nlogn/blob/1129acafbd632f52a2dcaf016da6d7ae977d57e7/Submission.lean"
+      },
+      "rerun_status": {
+        "state": "passed",
+        "checked_at": "2026-11-05T18:30:11.083068Z",
+        "receipt_path": "sources/direct-issue-158-42083574572-1.json"
+      }
     }
   ],
   "record_metadata": {
@@ -321,9 +362,28 @@
       "direct_submission": true,
       "route": "issue",
       "verification": "pending"
+    },
+    "direct-issue-158": {
+      "checked_at": "2026-11-05",
+      "source_url": "https://github.com/darkhipo/sssp-nlogn/blob/1129acafbd632f52a2dcaf016da6d7ae977d57e7/Submission.lean",
+      "repo": "darkhipo/sssp-nlogn",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Lean and nanoda passed; permitted-axiom audit passed",
+      "upstream_tier": "verified",
+      "site_tier": "verified",
+      "comparison_key": "directed-sssp/comparison-addition-sparse/v1",
+      "publication_date": "2026-11-05T18:22:16Z",
+      "publication_date_precision": "date-time",
+      "publication_date_role": "Submission opened",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/158",
+      "direct_submission": true,
+      "route": "issue",
+      "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42083574572",
+      "verification": "passed"
     }
   },
-  "updated_at": "2026-11-05T00:28:58Z",
+  "updated_at": "2026-11-05T19:31:14Z",
   "chart": {
     "ticks": [
       "n log^1/4",

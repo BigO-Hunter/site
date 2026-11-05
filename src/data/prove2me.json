@@ -695,6 +695,14 @@
         "openai-matrix-nine-fourths-2026": "https://prove2.me/theorems/b5d0688a-7cad-4147-9cf0-bdcc937328ba"
       },
       "rows": []
+    },
+    "other-quasi-riemann": {
+      "status": "ok",
+      "kind": "other",
+      "family": "quasi-riemann",
+      "links": {},
+      "rows": [],
+      "claims": []
     }
   }
 }

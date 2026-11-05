@@ -126886,6 +126886,28 @@
       "claim_files_head": "78e47e966ea06ea82641a18cfad71e219dc15566",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6741,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "research: audit capped flow source against its finite integer law",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6741",
+      "submitted_at": "2026-11-05T18:39:50Z",
+      "updated_at": "2026-11-05T18:46:38Z",
+      "source_commit": "3d3065be2b25f3a8838065bf290b8da7dd03909b",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-05T18:39:50Z",
+      "checked_at": "2026-11-05",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "3d3065be2b25f3a8838065bf290b8da7dd03909b",
+      "claim_text": "9cdb0816a03e4a0dedfa7c83b424e7b92f2897ddb515d87b0acbd6011d5b85d0",
+      "claim_files": [],
+      "claim_files_head": "3d3065be2b25f3a8838065bf290b8da7dd03909b",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
