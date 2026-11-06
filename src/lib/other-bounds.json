@@ -1631,6 +1631,28 @@
           ],
           "proofScope": "The supplied Lean code proves the rational-approximation bound with exponent 400 (theorem catalan_irrationalityMeasure_400 in Challenge.lean, proved in Solution.lean) for all sufficiently large natural denominators and all integer numerators. The README reports that it is kernel-checked with only the standard axioms; no CI build, independent-kernel or comparator result is reported. No site rerun.",
           "bound": "\\mu(G)\\le 400"
+        },
+        {
+          "author": "S. Litsey",
+          "handle": "slitsey",
+          "value": "295",
+          "display": "295",
+          "date": "2026-11-06T17:13:45Z",
+          "dateSource": "https://github.com/slitsey/catalan-irrationality-measure/actions/runs/42259690841",
+          "dateKind": "first-stated",
+          "url": "https://github.com/slitsey/catalan-irrationality-measure/blob/65cfcc216b2fd8a6c52f84a8ea41fb654b11eddb/README.md",
+          "lean": true,
+          "leanNote": "Lean states and proves the bound for all sufficiently large denominators and all integer numerators. The README reports that it is kernel-checked with only the standard axioms, and says that this bound has not been run through lake comparator. The proof needs Lean v4.35.0-rc2, and our verifier uses v4.34.1, so it cannot check it yet. The author’s CI for commit 3cd68738 was still running when we listed it (its Lean build was cancelled and its API documentation build failed), so no CI build, independent-kernel or comparator result is reported. No site rerun.",
+          "evidence": "claimed",
+          "note": "The repository says S. Litsey proves in Lean that the irrationality exponent of Catalan's constant is at most \\(295\\), with no extra assumption: only the axioms propext, Quot.sound and Classical.choice. The method is OpenAI's determinant construction with the design \\((58, 9, 3, 5, 3)\\); the last condition reads \\(295 > d\\rho/(\\eta - 4d\\delta) = 294.956\\ldots\\) with \\(d = 53\\). It uses the quadrature nodes and 33 Lean files of C. Davis. The README says that AI systems wrote the mathematics, the Lean proofs and the text. The repository gave \\(400\\) before.",
+          "authors": [
+            {
+              "name": "S. Litsey",
+              "url": "https://github.com/slitsey"
+            }
+          ],
+          "proofScope": "The supplied Lean code proves the rational-approximation bound with exponent 295 (theorem catalan_irrationalityMeasure_295 in Challenge.lean, proved in Solution.lean) for all sufficiently large natural denominators and all integer numerators. The README reports that it is kernel-checked with only the standard axioms and that it has not been run through lake comparator; no CI build, independent-kernel or comparator result is reported. No site rerun.",
+          "bound": "\\mu(G)\\le 295"
         }
       ],
       "repos": [
