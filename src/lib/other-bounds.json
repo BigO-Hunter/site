@@ -3312,7 +3312,7 @@
       "nameMath": "\\(\\mathbb Z\\) is Diophantine in \\(\\mathbb Q\\)",
       "quantity": "\\text{number of variables}",
       "direction": "lower",
-      "statement": "A polynomial \\(P(q,w_1,\\dots,w_k)\\) with integer coefficients defines \\(\\mathbb Z\\) in \\(\\mathbb Q\\) when, for every rational number \\(q\\), \\(q\\) is an integer exactly when \\(P(q,w_1,\\dots,w_k)=0\\) for some rational numbers \\(w_1,\\dots,w_k\\). The polynomial must be explicit: a public list of its terms, or a public program that writes them out. The score is the number of variables, \\(k+1\\). Fewer variables rank higher; on a tie, a lower degree ranks higher, then fewer nonzero terms, then a smaller largest absolute coefficient. Koenigsmann (2016) showed that \\(\\mathbb Q\\setminus\\mathbb Z\\) is Diophantine in \\(\\mathbb Q\\). Whether \\(\\mathbb Z\\) itself is Diophantine in \\(\\mathbb Q\\) was open, and Mazur's conjectures (1992) predicted that it is not.",
+      "statement": "A polynomial \\(P(q,w_1,\\dots,w_k)\\) with integer coefficients defines \\(\\mathbb Z\\) in \\(\\mathbb Q\\) when, for every rational number \\(q\\), \\(q\\) is an integer exactly when \\(P(q,w_1,\\dots,w_k)=0\\) for some rational numbers \\(w_1,\\dots,w_k\\). The polynomial must be explicit: a public list of its terms, or a public program that writes them out. Results rank by degree first, lower is better; then by the number of variables, \\(k+1\\); then by the number of nonzero terms; then by the largest absolute coefficient. A stated upper bound, such as degree below \\(2\\uparrow\\uparrow 7\\), counts as that value. Elliot Glazer expects that, with no limit on the degree, a definition with under 100 variables is within reach; the open question is then the fewest variables of a quartic. The chart plots the number of variables. Koenigsmann (2016) showed that \\(\\mathbb Q\\setminus\\mathbb Z\\) is Diophantine in \\(\\mathbb Q\\). Whether \\(\\mathbb Z\\) itself is Diophantine in \\(\\mathbb Q\\) was open, and Mazur's conjectures (1992) predicted that it is not.",
       "claims": [
         {
           "author": "Elliot Glazer with Astra 6, Sol 6.1 and Opus 5.5, with auditing from Fable 5.1",
@@ -3335,7 +3335,12 @@
             }
           ],
           "proofScope": "A written proof in a manuscript, with no human review yet. The repository's checks rebuild the polynomial and run finite tests; they do not check the arithmetic argument. The Lean development is incomplete, so it is not a Lean proof of our statement.",
-          "bound": "292{,}890{,}231{,}905\\text{ variables}"
+          "bound": "292{,}890{,}231{,}905\\text{ variables}",
+          "measures": {
+            "degree": "<2^^7",
+            "variables": "292890231905",
+            "coefficient": "<2^^8"
+          }
         },
         {
           "author": "qqwref",
@@ -3357,7 +3362,12 @@
             }
           ],
           "proofScope": "Changes to the written proof and the construction, with finite checks. No human review and no Lean proof.",
-          "bound": "211{,}983{,}774{,}909\\text{ variables}"
+          "bound": "211{,}983{,}774{,}909\\text{ variables}",
+          "measures": {
+            "degree": "<2^(2^45)",
+            "variables": "211983774909",
+            "coefficient": "<2^(2^(2^56))"
+          }
         },
         {
           "author": "Gabe Conant, Sohail Farhangi, James Freitag, Elliot Glazer, Jenn Park and Caroline Terry",
@@ -3400,7 +3410,13 @@
             }
           ],
           "proofScope": "A written proof in a manuscript, with no human review yet. A certificate check, published with the polynomial, shows that the polynomial is equivalent to the system of equations of the manuscript; it does not check the arithmetic argument. The Lean development is incomplete, so it is not a Lean proof of our statement.",
-          "bound": "12{,}504\\text{ variables}"
+          "bound": "12{,}504\\text{ variables}",
+          "measures": {
+            "degree": "4",
+            "variables": "12504",
+            "terms": "135721",
+            "coefficient": "685783949153203534233601"
+          }
         }
       ],
       "repos": [
@@ -3415,7 +3431,13 @@
           "note": "qqwref's copy of the repository, with the simplified construction."
         }
       ],
-      "bestHandle": "z-in-q-version-2"
+      "bestHandle": "z-in-q-version-2",
+      "rankBy": [
+        "degree",
+        "variables",
+        "terms",
+        "coefficient"
+      ]
     }
   ],
   "followups": [

@@ -87,3 +87,36 @@ test('claims closer than a float can tell are ordered by their exact fractions',
   const odd = rankOtherClaims([claim('0.5', '1/3', '2026-10-01'), claim('0.4999999999', '1/2', '2026-10-02')], 'lower');
   assert.deepEqual(odd.map(r => [r.claim.display, r.rank, r.tie]), [['0.5', 1, false], ['0.4999999999', 1, true]]);
 });
+
+import {compareMeasures, parseMeasure, rankByMeasures} from './other-rank.ts';
+test('a measure is a whole number or a stated upper bound; bounds compare as their value (Nil, 2026-11-06)', () => {
+  const lt = (a: string, b: string) => assert.equal(compareMeasures({m: a}, {m: b}, ['m']), -1, `${a} < ${b}`);
+  lt('4', '685783949153203534233601'); lt('685783949153203534233601', '<2^80'); lt('<2^80', '<2^(2^45)'); lt('<2^(2^45)', '<2^^7'); lt('<2^^7', '<2^^8');
+  lt('12{,}504', '211,983,774,909');
+  assert.equal(compareMeasures({m: '<2^80'}, {m: '1208925819614629174706176'}, ['m']), 0, 'an exact value equal to a bound ties with it');
+  assert.equal(compareMeasures({m: '<2^(2^45)'}, {m: '<2^(2^45)'}, ['m']), 0);
+  assert.equal(compareMeasures({m: '4'}, {}, ['m']), -1, 'a missing measure ranks last');
+  assert.equal(compareMeasures({}, {m: '<2^^7'}, ['m']), 1);
+  assert.equal(parseMeasure('about 4'), null);
+  assert.deepEqual(parseMeasure('<2^^1'), {magnitude: 2n, bound: true});
+});
+test('a row with rankBy ranks by its measures in order, then evidence level, then the earlier claim', () => {
+  const claims = [
+    {handle: 'a', display: '1', value: '1', date: '2026-01-01T00:00:00Z', measures: {degree: '<2^^7', variables: '1'}},
+    {handle: 'b', display: '2', value: '2', date: '2026-01-02T00:00:00Z', measures: {degree: '4', variables: '2', terms: '9'}},
+    {handle: 'c', display: '3', value: '3', date: '2026-01-03T00:00:00Z', measures: {degree: '4', variables: '2'}},
+    {handle: 'd', display: '4', value: '4', date: '2026-01-04T00:00:00Z', measures: {degree: '4', variables: '2', terms: '9'}, evidence: 'lean-verified'},
+    {handle: 'e', display: '5', value: '5', date: '2026-01-05T00:00:00Z', measures: {degree: '4', variables: '2', terms: '9'}},
+  ];
+  const ranked = rankByMeasures(claims, ['degree', 'variables', 'terms']);
+  assert.deepEqual(ranked.map(r => [r.claim.handle, r.rank, r.tie]), [['d', 1, false], ['b', 1, true], ['e', 1, true], ['c', 4, false], ['a', 5, false]]);
+  assert.deepEqual(rankOtherClaims(claims, 'lower', ['degree', 'variables', 'terms']).map(r => r.claim.handle), ['d', 'b', 'e', 'c', 'a']);
+  assert.deepEqual(rankOtherClaims(claims, 'lower').map(r => r.claim.handle), ['a', 'b', 'c', 'd', 'e'], 'without rankBy the display number ranks');
+});
+test('Z is Diophantine in Q ranks by degree first: the quartic leads, then qqwref, then the first construction', () => {
+  const f = data.families.find(x => x.slug === 'z-diophantine-in-q')! as any;
+  assert.deepEqual(f.rankBy, ['degree', 'variables', 'terms', 'coefficient']);
+  assert.deepEqual(rankOtherClaims(f.claims as {handle: string; display: string; value: string; date: string}[], f.direction, f.rankBy).map(r => [r.claim.handle, r.rank]), [['z-in-q-version-2', 1], ['qqwref', 2], ['elliotglazer', 3]]);
+  assert.equal(otherBoundLeader(f)!.handle, 'z-in-q-version-2');
+  for (const c of f.claims) for (const name of f.rankBy) if (c.measures[name] !== undefined) assert.notEqual(parseMeasure(c.measures[name]), null, `${c.handle} ${name}`);
+});

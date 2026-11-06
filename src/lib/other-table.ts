@@ -30,9 +30,9 @@ export function baselineClaim(baseline: Baseline | undefined): BaselineClaim | u
 const byValue = (claims: Pick<Claim, 'display' | 'value'>[]) =>
   claims.every(c => parseDegreeClaim(c.display) !== null) || claims.every(c => otherClaimNumber(c) !== null);
 
-export function otherTableRows<C extends Claim>(family: {baseline?: Baseline; claims: C[]; direction: string}): {claim: C | BaselineClaim; rank: number; tie: boolean}[] {
+export function otherTableRows<C extends Claim>(family: {baseline?: Baseline; claims: C[]; direction: string; rankBy?: string[]}): {claim: C | BaselineClaim; rank: number; tie: boolean}[] {
   const base = baselineClaim(family.baseline);
-  if (!base) return rankOtherClaims(family.claims, family.direction);
+  if (!base) return rankOtherClaims(family.claims, family.direction, family.rankBy);
   // In date order, as the claims are: of equal rows at one level the earlier ranks first.
   const at = family.claims.findIndex(c => Date.parse(c.date) > Date.parse(base.date));
   const all: (C | BaselineClaim)[] = at < 0 ? [...family.claims, base] : [...family.claims.slice(0, at), base, ...family.claims.slice(at)];

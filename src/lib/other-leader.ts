@@ -6,7 +6,7 @@ import {rankOtherClaims} from './other-rank.ts';
 export const otherBoundLeader = <C extends {handle: string; display: string; value: string; date: string; evidence?: string}>(row: {bestHandle: string; claims: C[]; direction?: string}): C | undefined => {
   const best = row.claims.findLast(claim => claim.handle === row.bestHandle);
   if (!best || !row.direction) return best;
-  const ranked = rankOtherClaims(row.claims, row.direction);
+  const ranked = rankOtherClaims(row.claims, row.direction, (row as {rankBy?: string[]}).rankBy);
   const own = ranked.find(entry => entry.claim === best);
   return own ? ranked.find(entry => entry.rank === own.rank)!.claim : best;
 };

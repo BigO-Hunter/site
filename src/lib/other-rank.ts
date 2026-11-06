@@ -56,7 +56,8 @@ export const compareExact = (a: [bigint, bigint], b: [bigint, bigint]) => { cons
 const compareDegree = (a: {a: [bigint, bigint]; p: bigint}, b: {a: [bigint, bigint]; p: bigint}) =>
   a.p !== b.p ? (a.p < b.p ? -1 : 1) : compareExact(a.a, b.a);
 
-export function rankOtherClaims<C extends Claim>(claims: C[], direction: string): {claim: C; rank: number; tie: boolean}[] {
+export function rankOtherClaims<C extends Claim>(claims: C[], direction: string, rankBy?: string[]): {claim: C; rank: number; tie: boolean}[] {
+  if (rankBy?.length) return rankByMeasures(claims, rankBy);
   const degrees = claims.map(claim => parseDegreeClaim(claim.display));
   if (claims.length > 0 && degrees.every(d => d !== null)) {
     const sign = direction === 'higher' ? -1 : 1;
@@ -86,5 +87,61 @@ export function rankOtherClaims<C extends Claim>(claims: C[], direction: string)
     const tie = known && i > 0 && order(entry, prev) === 0;
     if (!tie) rank = i + 1;
     return {claim: entry.claim, rank, tie};
+  });
+}
+
+// A row with `rankBy` (Z is Diophantine in Q; Nil, 2026-11-06: degree first, then variables, then nonzero terms, then
+// largest absolute coefficient) ranks its claims by those measures in that order, each lower is better, instead of by
+// the one number of the display. A claim's `measures` map each name to an exact whole number ("4", "12504") or to a
+// stated upper bound ("<2^80", "<2^(2^45)", "<2^^7", a tower of twos): a bound compares as its value, so an exact
+// value beats it only when smaller, and an equal one ties with it. A missing measure (a term count nobody stated)
+// ranks after every stated one. Claims equal on every measure tie: the higher evidence level first, then the earlier.
+export type Measures = Record<string, string | undefined>;
+type Magnitude = bigint | {exp: Magnitude};
+
+// The magnitude of a measure, with its upper bound flag; null for text the grammar does not know.
+export function parseMeasure(text: string): {magnitude: Magnitude; bound: boolean} | null {
+  const bound = text.trim().startsWith('<');
+  const magnitude = parseMagnitude(text.trim().replace(/^<\s*/, '').replaceAll('{,}', '').replaceAll(/[\s,]/g, ''));
+  return magnitude === null ? null : {magnitude, bound};
+}
+function parseMagnitude(text: string): Magnitude | null {
+  if (/^\d+$/.test(text)) return BigInt(text);
+  const tower = /^2\^\^(\d+)$/.exec(text);
+  if (tower) { let m: Magnitude = 2n; for (let i = 1; i < Number(tower[1]); i++) m = {exp: m}; return normal(m); }
+  const power = /^2\^\(?(.+?)\)?$/.exec(text);
+  if (power) { const inner = parseMagnitude(power[1]); return inner === null ? null : normal({exp: inner}); }
+  return null;
+}
+// 2^n with n at most 4096 is a plain whole number, so that "2^80" and a 24-digit coefficient compare exactly.
+const normal = (m: Magnitude): Magnitude => typeof m === 'bigint' ? m : (() => { const e = normal(m.exp); return typeof e === 'bigint' && e <= 4096n ? 2n ** e : {exp: e}; })();
+// A tower with an exponent over 4096 counts as larger than any plain number (none in the data has 1234 digits).
+export function compareMagnitude(a: Magnitude, b: Magnitude): number {
+  if (typeof a === 'bigint' && typeof b === 'bigint') return a < b ? -1 : a > b ? 1 : 0;
+  if (typeof a === 'bigint') return -1;
+  if (typeof b === 'bigint') return 1;
+  return compareMagnitude(a.exp, b.exp);
+}
+// Lower is better for every measure; a missing or unreadable one ranks last.
+export function compareMeasures(a: Measures | undefined, b: Measures | undefined, rankBy: string[]): number {
+  for (const name of rankBy) {
+    const x = a?.[name] === undefined ? null : parseMeasure(a[name]!), y = b?.[name] === undefined ? null : parseMeasure(b[name]!);
+    if (x === null && y === null) continue;
+    if (x === null) return 1;
+    if (y === null) return -1;
+    const c = compareMagnitude(x.magnitude, y.magnitude);
+    if (c) return c;
+  }
+  return 0;
+}
+export function rankByMeasures<C extends Claim & {measures?: Measures}>(claims: C[], rankBy: string[]): {claim: C; rank: number; tie: boolean}[] {
+  const items = claims.map((claim, index) => ({claim, index}));
+  const order = (a: typeof items[number], b: typeof items[number]) => compareMeasures(a.claim.measures, b.claim.measures, rankBy);
+  const sorted = [...items].sort((a, b) => order(a, b) || evidenceOrder(b.claim.evidence) - evidenceOrder(a.claim.evidence) || a.index - b.index);
+  let rank = 0;
+  return sorted.map((item, i) => {
+    const tie = i > 0 && order(item, sorted[i - 1]) === 0;
+    if (!tie) rank = i + 1;
+    return {claim: item.claim, rank, tie};
   });
 }
