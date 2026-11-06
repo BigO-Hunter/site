@@ -4995,7 +4995,7 @@
         "slug": "subset-sum",
         "name": "Subset Sum",
         "url": "https://bigospeedrun.com/subset-sum",
-        "leader": "yannouli-subset-sum-0-4876723-2026",
+        "leader": "jv1000-subset-sum-0-4875755-2026",
         "direction": "lower",
         "records": [
           {
@@ -5037,6 +5037,27 @@
               "Yanni Bills"
             ],
             "bound": "O(2^(0.4876723n))"
+          },
+          {
+            "id": "jv1000-subset-sum-0-4875755-2026",
+            "score": "975151/2000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Jennifer Voitle"
+            ],
+            "bound": "O(2^(0.4875755n))"
+          },
+          {
+            "id": "li-ye-subset-sum-0-4999978-2026",
+            "score": "224999/450000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Baitian Li",
+              "Lixi Ye"
+            ],
+            "bound": "O(2^(0.4999978n))"
           },
           {
             "id": "direct-issue-104",
@@ -6453,6 +6474,17 @@
         "direction": "higher",
         "records": [
           {
+            "id": "openai:1/100000",
+            "score": "1/100000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "OpenAI"
+            ],
+            "bound": "W_r(k) > k^(k floor(log_2r)/100000)",
+            "display": "1/100000"
+          },
+          {
             "id": "rohanarun:1/25",
             "score": "1/25",
             "relation": "attained",
@@ -7478,7 +7510,8 @@
     "[\"other-prime-gaps\",\"romyar1:182\",\"182\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6805\",\"165407/50000000\",\"attained\"]:record",
     "[\"other-z-diophantine-in-q\",\"z-in-q-version-2:12504\",\"12504\",\"attained\"]:record",
-    "[\"other-z-diophantine-in-q\",\"z-in-q-version-6:962\",\"962\",\"attained\"]:record"
+    "[\"other-z-diophantine-in-q\",\"z-in-q-version-6:962\",\"962\",\"attained\"]:record",
+    "[\"subset-sum\",\"jv1000-subset-sum-0-4875755-2026\",\"975151/2000000\",\"attained\"]:record"
   ],
   "deferred": [
     {

@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-06T19:52:40Z",
+    "updated_at": "2026-11-06T21:56:21Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -132172,5 +132172,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6818,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6818",
+    "title": "Preserve startup evidence in H25 optimized-refusal handling",
+    "state": "open",
+    "created_at": "2026-11-06T21:52:16Z",
+    "updated_at": "2026-11-06T21:58:21Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "1479ccf2ec0bc29b7bf741a2d613d79e1f9ec19e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]
