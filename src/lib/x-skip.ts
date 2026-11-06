@@ -18,9 +18,16 @@ export function breakthroughBar(snapshot:FeedSnapshot|undefined,slug:string):{sc
 // never stops the plan: that post goes out as before.
 export function worseThanBreakthrough(post:XEntry,snapshot:FeedSnapshot|undefined):string|undefined {
  const lean=post.key.endsWith(':lean')||/^Status: Lean Verified$/m.test(post.x_text??'');
- // Directed SSSP (Lead, 2026-11-03): X only for a Lean Verified frontier row. The feed posts only frontier rows, so a
- // row that the Vals AI point or its Lean Verified line dominates never gets here.
- if(!lean&&post.key.startsWith('["directed-sssp",'))return 'Directed shortest paths posts on X only for a Lean Verified frontier row (Lead, 2026-11-03): no X post';
+ // Directed SSSP (Lead, 2026-11-03 and 2026-11-06): X only for a Lean Verified record row, a frontier row that is faster
+ // than every row at its density, the function rows (classic Dijkstra, papers) too: recordRows of the saved snapshot. A
+ // snapshot without that list posts nothing.
+ if(post.key.startsWith('["directed-sssp",')){
+  if(!lean)return 'Directed shortest paths posts on X only for a Lean Verified record row (Lead, 2026-11-03): no X post';
+  let id:unknown;
+  try{[,id]=JSON.parse(post.key.slice(0,post.key.lastIndexOf(':')));}catch{id=undefined;}
+  const board=snapshot?.boards.find(b=>b.slug==='directed-sssp');
+  if(typeof id!=='string'||!board?.recordRows?.includes(id))return 'Directed shortest paths: a row that a function row (classic Dijkstra or a paper) matches or beats at its density is no record (Lead, 2026-11-06): no X post';
+ }
  if(!lean)return undefined;
  let slug:unknown,score:unknown;
  try{[slug,,score]=JSON.parse(post.key.slice(0,post.key.lastIndexOf(':')));}catch{return undefined;}

@@ -6,7 +6,7 @@ import {readFileSync} from 'node:fs';
 import {plan,feedBoard} from './records-feed.ts';
 import type {FeedSnapshot,FeedState} from './records-feed.ts';
 import {worseThanBreakthrough} from './x-skip.ts';
-import {boardLeaders,ssspFrontier} from './sssp-board.ts';
+import {boardLeaders,ssspFrontier,ssspRecordRows} from './sssp-board.ts';
 import {landingRecords} from './landing-records.ts';
 import {ranked} from './ranking.ts';
 import {scoreValue} from './chart.ts';
@@ -54,19 +54,58 @@ test('the board posts nothing at race start, then once for each new frontier row
  const result = plan(start.state, snap(next), [], Date.parse('2026-11-04T12:00:00Z'));
  assert.deepEqual(result.messages.map(m => JSON.parse(m.key.slice(0, m.key.lastIndexOf(':')))[1]), ['new', 'dense']);
  assert.match(result.messages[0].content, /^\*\*New claim\*\* \| \*\*Directed Shortest Paths\*\* \| `O\(n log\^\(1\/2\) n\) for m <= n`/);
- assert.match(result.messages[1].x_text!, /^New record!\n\nProblem: Directed Shortest Paths\nNew value: O\(n log\^2 n\) for m <= n log n\n/);
+ // Dijkstra (m + n log n) is O(n log n) at m <= n log n, so 'dense' is a frontier row but no record (Lead, 2026-11-06).
+ assert.match(result.messages[1].content, /^\*\*New Lean Verified bound\*\* \| \*\*Directed Shortest Paths\*\* \| `O\(n log\^2 n\) for m <= n log n`/);
+ assert.match(result.messages[1].x_text!, /^New Lean Verified bound!\n\nProblem: Directed Shortest Paths\nValue: O\(n log\^2 n\) for m <= n log n\n/);
  assert.deepEqual(plan(result.state, snap(next), [], Date.parse('2026-11-04T12:00:00Z')).messages, []);
  // A Lean Verified gain posts only while the row is a frontier row.
  const verified = next.map(r => ['below', 'new'].includes(r.id) ? {...r, evidenceLevel: 'lean-verified'} as RecordEntry : r);
  assert.deepEqual(plan(result.state, snap(verified), [], Date.parse('2026-11-04T13:00:00Z')).messages.map(m => m.key.endsWith(':lean') && JSON.parse(m.key.slice(0, m.key.lastIndexOf(':')))[1]), ['new']);
 });
 
-test('X: a Claimed post on this board is skipped, a Lean Verified one is not', () => {
+test('X: only a Lean Verified record row posts on this board', () => {
  const claim = {key: '["directed-sssp","new","n ; n log^1/2","attained"]:record', x_text: 'New claim!\n\nStatus: Claimed (not verified)'};
- const lean = {key: '["directed-sssp","dense","n log ; n log^2","attained"]:lean', x_text: 'New record!\n\nStatus: Lean Verified'};
- assert.match(worseThanBreakthrough(claim as any, snap(START))!, /only for a Lean Verified frontier row/);
- assert.equal(worseThanBreakthrough(lean as any, snap(START)), undefined);
+ const lean = {key: '["directed-sssp","new","n ; n log^1/2","attained"]:lean', x_text: 'New record!\n\nStatus: Lean Verified'};
+ const dense = {key: '["directed-sssp","dense","n log ; n log^2","attained"]:lean', x_text: 'New Lean Verified bound!\n\nStatus: Lean Verified'};
+ const records = [...START, row('new', 'n ; n log^1/2', 'lean-verified'), row('dense', 'n log ; n log^2', 'lean-verified')];
+ assert.match(worseThanBreakthrough(claim as any, snap(records))!, /only for a Lean Verified record row/);
+ assert.equal(worseThanBreakthrough(lean as any, snap(records)), undefined);
+ // X post 2118427792107016517 (verifier #158): a frontier row that Dijkstra beats at its density.
+ assert.match(worseThanBreakthrough(dense as any, snap(records))!, /is no record/);
+ // A snapshot without record rows (or without the board) posts nothing on this board.
+ const old = snap(records); delete old.boards[0].recordRows;
+ assert.match(worseThanBreakthrough(lean as any, old)!, /is no record/);
+ assert.match(worseThanBreakthrough(lean as any, undefined)!, /is no record/);
  assert.equal(worseThanBreakthrough({...claim, key: claim.key.replace('directed-sssp', 'exact-dft')} as any, snap(START)), undefined);
+});
+
+test('a record row is faster than every row at its density, the function rows too (Lead, 2026-11-06)', () => {
+ const icalp = row('duan-et-al-icalp-2026', 'm log^1/2 + m^1/2 n^1/2 log^1/2 loglog^1/2', 'claimed', '2026-07-01');
+ const ids = (records: RecordEntry[]) => ssspRecordRows(records, lines).map(r => r.id);
+ // Verifier #158 and #147: Dijkstra gives O(n log n) at m <= n log n and O(n^2) at m <= n^2, so neither is a record.
+ assert.deepEqual(ids([...START, row('158', 'n log ; n log^2', 'lean-verified'), row('147', 'n^2 ; n^2', 'lean-verified')]), ['directed-sssp-2026']);
+ assert.deepEqual(ssspFrontier([...START, row('158', 'n log ; n log^2'), row('147', 'n^2 ; n^2')], lines).map(r => r.id), ['directed-sssp-2026', '158', '147']);
+ // At m <= n the STOC row gives n log^(2/3) n and the ICALP row n log^(1/2) n (log log n)^(1/2): a row must beat both.
+ assert.deepEqual(ids([...START, row('a', 'n ; n log^1/2 loglog^1/2')]), ['directed-sssp-2026', 'a']);
+ assert.deepEqual(ids([...START, icalp, row('a', 'n ; n log^1/2 loglog^1/2')]), ['directed-sssp-2026']);
+ assert.deepEqual(ids([...START, icalp, row('b', 'n ; n log^1/2 loglog^1/3')]), ['directed-sssp-2026', 'b']);
+ // A Claimed or Human Verified function row counts as much as a Lean Verified one.
+ assert.deepEqual(ids([row('classical-baseline', 'm + n log', 'claimed'), row('c', 'n log^1/2 ; n log^3/4')]), ['c']);
+});
+
+test('a frontier row that is no record: no Claimed post, one Discord post when it gains Lean Verified, never a record', () => {
+ const start = plan(empty, snap(START));
+ const claimed = [...START, row('147', 'n^2 ; n^2')];
+ const first = plan(start.state, snap(claimed), [], Date.parse('2026-11-05T00:00:00Z'));
+ assert.deepEqual(first.messages, []);
+ const verified = [...START, row('147', 'n^2 ; n^2', 'lean-verified')];
+ const second = plan(first.state, snap(verified), [], Date.parse('2026-11-05T01:00:00Z'));
+ assert.deepEqual(second.messages.map(m => m.content.split(' | ')[0]), ['**New Lean Verified bound**']);
+ assert.deepEqual(plan(second.state, snap(verified), [], Date.parse('2026-11-05T02:00:00Z')).messages, []);
+ // A record row that gains Lean Verified is still "Record verified".
+ const rec = plan(start.state, snap([...START, row('a', 'n ; n log^1/2')]), [], Date.parse('2026-11-05T00:00:00Z'));
+ assert.deepEqual(rec.messages.map(m => m.content.split(' | ')[0]), ['**New claim**']);
+ assert.deepEqual(plan(rec.state, snap([...START, row('a', 'n ; n log^1/2', 'lean-verified')]), [], Date.parse('2026-11-05T01:00:00Z')).messages.map(m => m.content.split(' | ')[0]), ['**Record verified**']);
 });
 
 test('the chat and the landing page read the frontier rows', () => {

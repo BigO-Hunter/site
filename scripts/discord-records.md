@@ -52,6 +52,14 @@ Only rows that would post count: a row that is already reserved or announced, or
 compared. Authors that differ, in names or in number, never compete. A score that is not a number (not `n`,
 `n/d` or `n.m`) in a group switches the rule off for that group.
 
+Directed shortest paths (Lead, 2026-11-03 and 2026-11-06): only point rows ("D ; T") post, and the board has frontier rows
+in place of one leader. A frontier row is a record row only when, at its own density, it is strictly faster than every
+function row of the board (the classic Dijkstra row and the paper rows, at every evidence level); the frontier already puts
+it below every point row that covers its density. A record row posts as a new claim or new record, and its Lean Verified
+post goes to X. A frontier row that is no record posts nothing while Claimed, posts once on Discord as
+"New Lean Verified bound" when it gains Lean Verified, and never goes to X. Verifier #158 (O(n log^2 n) for m <= n log n,
+X post 2118427792107016517 of 2026-11-05) posted as a record before this rule, though Dijkstra gives O(n log n) there.
+
 Local dry run after `npm run build`:
 
 ```sh

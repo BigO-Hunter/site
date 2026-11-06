@@ -3,7 +3,7 @@ import {evidenceName,evidenceLevels} from './evidence.ts';
 import {otherBoundLeader} from './other-leader.ts';
 import type {ChartLine,Problem,RecordEntry} from './types';
 import {parse,plain,D_NAMES,lexCmp} from './sssp.ts';
-import {ssspFrontier} from './sssp-board.ts';
+import {ssspFrontier,ssspRecordRows} from './sssp-board.ts';
 
 // verification: a Claimed direct submission (bigospeedrun/verifier issue or PR) whose Lean check has not
 // passed: 'pending' while it runs (since: the submission time), 'failed' after a final failed outcome,
@@ -16,8 +16,10 @@ export type FeedTable='big-o'|'other-bounds';
 // direction: which score is better on the board. Absent in older snapshots: then no row of the board is superseded (see plan).
 export type FeedDirection='lower'|'higher';
 // frontier: on the directed-sssp board (density-time scores) the ids of the frontier rows, which take the place of the
-// one leader (Lead, 2026-11-03, design note sections 7 and 8); leader is then null.
-export interface FeedBoard {slug:string; name:string; url:string; leader:string|null; records:FeedRecord[]; table?:FeedTable; direction?:FeedDirection; frontier?:string[]}
+// one leader (Lead, 2026-11-03, design note sections 7 and 8); leader is then null. recordRows: the frontier rows that are
+// records (ssspRecordRows: faster than every row at their density, the function rows too). Only these post as a record and
+// go to X; a board with a frontier and no recordRows has no record rows.
+export interface FeedBoard {slug:string; name:string; url:string; leader:string|null; records:FeedRecord[]; table?:FeedTable; direction?:FeedDirection; frontier?:string[]; recordRows?:string[]}
 export interface FeedSnapshot {schema_version:1; boards:FeedBoard[]}
 export interface FeedState {schema_version:1; snapshot:FeedSnapshot; reserved:string[]; deferred?:{key:string;slug:string;authors:string[];hold?:true}[]}
 export interface FeedMessage {key:string; content:string; x_text?:string; authors?:string[]; table?:FeedTable}
@@ -64,11 +66,13 @@ export function feedBoard(problem:Pick<Problem,'slug'|'direction'>&Partial<Pick<
 }
 // Directed SSSP (Lead, 2026-11-03): only point rows "D ; T" post; the function rows (classic, papers) never do. A frontier
 // row is a point row that no other listed point row dominates and that no Lean Verified line dominates (the line of a
-// Lean Verified row, at a density up to its cap: G2). The line does not dominate its own row.
+// Lean Verified row, at a density up to its cap: G2). The line does not dominate its own row. A frontier row that a function
+// row matches or beats at its density is no record (Lead, 2026-11-06): it posts only when it gains Lean Verified, as a new
+// Lean Verified bound, and never on X.
 function ssspFeedBoard(problem:Pick<Problem,'slug'|'direction'>,records:Parameters<typeof feedBoard>[1],name:string,lines:ChartLine[]):FeedBoard {
  const points=records.filter(r=>r.score.includes(' ; '));
  return {slug:problem.slug,name,url:`https://bigospeedrun.com/${problem.slug}`,leader:null,direction:'lower',
-  frontier:ssspFrontier(points,lines).map(r=>r.id),
+  frontier:ssspFrontier(points,lines).map(r=>r.id),recordRows:ssspRecordRows(records,lines).map(r=>r.id),
   records:points.map(r=>{const t=parse(r.score);return {id:r.id,score:r.score,relation:'attained',evidence:evidenceName(r.evidenceLevel),authors:r.authors.map(a=>a.name),
    bound:`O(${plain(t.slice(2))}) for m <= ${plain(t.slice(0,2),D_NAMES)}`,...(r.verification&&evidenceName(r.evidenceLevel)==='Claimed'?{verification:r.verification}:{})};})};
 }
@@ -179,26 +183,31 @@ function identity(board:FeedBoard,record:FeedRecord):string {return JSON.stringi
 function eventKey(board:FeedBoard,record:FeedRecord):string {return identity(board,record)+':'+(record.evidence==='Lean Verified'?'lean':'record');}
 function clean(text:string):string {return text.replace(/[<>@]/g,' ').replace(/\s+/g,' ').trim();}
 function discordText(text:string):string {return text.replace(/[\\`*_~|[\]()]/g,'\\$&');}
-function headline(record:FeedRecord,newRecord:boolean):string {
+// recordRow false: a directed-sssp row that is no record (isRecordRow) and gains Lean Verified. Nil's words in the X
+// correction of 2026-11-06: "a new Lean Verified bound".
+function headline(record:FeedRecord,newRecord:boolean,recordRow=true):string {
+ if(!recordRow)return 'New Lean Verified bound';
  return newRecord?(record.evidence==='Claimed'?'New claim':'New record'):'Record verified';
 }
-export function message(board:FeedBoard,record:FeedRecord,newRecord=true):string {
+export function message(board:FeedBoard,record:FeedRecord,newRecord=true,recordRow=true):string {
  const names=record.authors.map(clean).filter(Boolean);
  const joined=names.length<2?names.join(''):names.slice(0,-1).join(', ')+' and '+names.at(-1);
  const authors=discordText(joined.slice(0,500)||'Unknown author');
- return `**${headline(record,newRecord)}** | **${discordText(clean(board.name))}** | \`${record.bound}\` | by ${authors} | ${record.evidence} | [${board.url.replace(/^https?:\/\//,'')}](${board.url})`;
+ return `**${headline(record,newRecord,recordRow)}** | **${discordText(clean(board.name))}** | \`${record.bound}\` | by ${authors} | ${record.evidence} | [${board.url.replace(/^https?:\/\//,'')}](${board.url})`;
 }
 // Count each URL as X's fixed 23 characters; count Unicode code points elsewhere.
 export function xPostLength(text:string):number {
  return Array.from(text.replace(/https?:\/\/\S+/g,'x'.repeat(23))).length;
 }
-export function xMessage(board:FeedBoard,record:FeedRecord,newRecord=true):string {
+export function xMessage(board:FeedBoard,record:FeedRecord,newRecord=true,recordRow=true):string {
  const names=record.authors.map(name=>name.replace(/[\r\n\t]+/g,' ').trim());
  const status=record.evidence==='Claimed'?'Claimed (not verified)':record.evidence;
- return `${headline(record,newRecord)}!\n\nProblem: ${board.name}\n${newRecord?'New value':'Value'}: ${record.bound}\n${names.length>1?'Players':'Player'}: ${names.join(', ')||'Unknown author'}\nStatus: ${status}`;
+ return `${headline(record,newRecord,recordRow)}!\n\nProblem: ${board.name}\n${newRecord?'New value':'Value'}: ${record.bound}\n${names.length>1?'Players':'Player'}: ${names.join(', ')||'Unknown author'}\nStatus: ${status}`;
 }
 // The row leads its board: the leader, or on the directed-sssp board a frontier row.
 const leads=(board:FeedBoard,id:string)=>board.frontier?board.frontier.includes(id):id===board.leader;
+// The row may post as a record: every row that leads, but on the directed-sssp board only its record rows.
+const isRecordRow=(board:FeedBoard,id:string)=>!board.frontier||(board.recordRows??[]).includes(id);
 export function baseline(snapshot:FeedSnapshot):FeedState {
  const reserved:string[]=[];
  for(const board of snapshot.boards)for(const r of board.records)if(leads(board,r.id)||r.evidence==='Lean Verified')reserved.push(eventKey(board,r));
@@ -320,14 +329,15 @@ export function plan(previous:FeedState,snapshot:FeedSnapshot,posts:(Pick<Record
    // leader (or of an old frontier row) that is still on the board is no new record. A Lean Verified one posts once as
    // "Record verified" (gainedLean). A row that replaces a removed leader with its bound stays a new leader, as before.
    const tie=(r:FeedRecord)=>identity(old!,r)===identity(board,record)||sameBound(board,r,record)&&board.records.some(x=>identity(board,x)===identity(old!,r));
-   const newLeader=board.frontier?leads(board,record.id)&&!(old?.records.some(r=>leads(old,r.id)&&tie(r))):
+   const recordRow=isRecordRow(board,record.id);
+   const newLeader=board.frontier?leads(board,record.id)&&recordRow&&!(old?.records.some(r=>leads(old,r.id)&&tie(r))):
     record.id===board.leader&&(!oldLeader||!tie(oldLeader));
    const gainedLean=record.evidence==='Lean Verified'&&prior?.evidence!=='Lean Verified'&&(!board.frontier||leads(board,record.id));
    const key=eventKey(board,record);
    if(lesser.has(key)){reserved.add(key);deferred.delete(key);continue;}
-   const waiting=leads(board,record.id)&&deferred.has(key);
+   const waiting=leads(board,record.id)&&recordRow&&deferred.has(key);
    // A held direct claim (below) that now leads with Lean Verified posts once, as a new record.
-   const held=leads(board,record.id)&&key!==identity(board,record)+':record'&&deferred.get(identity(board,record)+':record')?.hold===true;
+   const held=leads(board,record.id)&&recordRow&&key!==identity(board,record)+':record'&&deferred.get(identity(board,record)+':record')?.hold===true;
    // Rows imported from prove2.me (data/prove2me_import.py) are old results. When its
    // LEAN_VERIFIED switch flips, a row that does not lead its board posts nothing.
    if(gainedLean&&!newLeader&&!waiting&&record.id.startsWith('prove2me-')&&!leads(board,record.id)){reserved.add(key);continue;}
@@ -354,7 +364,7 @@ export function plan(previous:FeedState,snapshot:FeedSnapshot,posts:(Pick<Record
     const build=(extra:number)=>{
      const places=extra&&record.display?.includes('.')?record.display.split('.')[1].length+extra:0;
      const row=isOther(board.slug)?(record.evidence==='Lean Verified'?{...record,bound:otherPostBound(board,old,record,places)}:record):{...record,bound:postBound(board,record,3+extra)};
-     return {row,content:message(board,row,isNew),x_text:xMessage(board,row,isNew)};
+     return {row,content:message(board,row,isNew,recordRow),x_text:xMessage(board,row,isNew,recordRow)};
     };
     let built=build(0);
     const boardPosts=live.filter(post=>JSON.parse(post.key.slice(0,post.key.lastIndexOf(':')))[0]===board.slug);
