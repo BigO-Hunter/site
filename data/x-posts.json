@@ -1160,5 +1160,10 @@
     "status": "posted",
     "at": "2026-11-06T16:33:16.898Z",
     "id": "2118743530902335546"
+  },
+  "[\"other-z-diophantine-in-q\",\"z-in-q-version-6:962\",\"962\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-06T20:33:28.802Z",
+    "reason": "reserved before API send"
   }
 }
