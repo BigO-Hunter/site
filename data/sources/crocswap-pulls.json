@@ -115211,7 +115211,7 @@
     "title": "Certify the pooled R437 carrier moment ceiling: 0.00173678297, unreachable 17/5000 below width 28571 (no new κ)",
     "state": "closed",
     "created_at": "2026-10-27T19:45:40Z",
-    "updated_at": "2026-10-28T00:24:32Z",
+    "updated_at": "2026-11-06T21:01:50Z",
     "closed_at": "2026-10-28T00:24:32Z",
     "merged_at": "2026-10-28T00:24:31Z",
     "user": {
@@ -132083,6 +132083,90 @@
     },
     "head": {
       "sha": "88c880281843eb2e31ca4e0c5c9ff3b1e9de76a5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6812,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6812",
+    "title": "Prove a 3r-1 compact-switch guard cover from terminal cancellations (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T20:25:55Z",
+    "updated_at": "2026-11-06T20:26:43Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "zhaobenny",
+      "html_url": "https://github.com/zhaobenny"
+    },
+    "head": {
+      "sha": "297ad233e8d00d7a7af4a09dc13fed90ede63dc4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6815,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6815",
+    "title": "Prove sharp 14-ADD relocated-output G20 boundaries and repair allowance",
+    "state": "open",
+    "created_at": "2026-11-06T20:44:01Z",
+    "updated_at": "2026-11-06T20:44:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "zhaobenny",
+      "html_url": "https://github.com/zhaobenny"
+    },
+    "head": {
+      "sha": "e4668a6d4fa6d5ea3dc365bf9215f9976610ed7f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6816,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6816",
+    "title": "Prove sharp dimension growth for column-capped Euclidean resolvents (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T20:44:57Z",
+    "updated_at": "2026-11-06T20:44:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "zhaobenny",
+      "html_url": "https://github.com/zhaobenny"
+    },
+    "head": {
+      "sha": "867ecd59bce6e6a3ae0e894e5aa4f4d0d66e55dd"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6817,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6817",
+    "title": "Prove concave Coxeter batch tariffs with a sharp chronology gap (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T20:50:14Z",
+    "updated_at": "2026-11-06T20:50:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "zhaobenny",
+      "html_url": "https://github.com/zhaobenny"
+    },
+    "head": {
+      "sha": "747364e7f5dd605fe08fd16e2278647a69cd2fda"
     },
     "base": {
       "ref": "main"
