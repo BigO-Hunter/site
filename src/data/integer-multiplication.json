@@ -63086,7 +63086,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6805",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-06T13:59:42Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "CubeJerry advances and subdivides one paid main-register move of the caller of PR 6726, on the native word of PR 6702, to expose an independent helper output. The conditional kappa is 0.00330814, 0.0284 percent above PR 6726's 0.0033072. The PR text credits Ali Romman, DreamingOfClouds (PR 6702), zxv (PR 6726) and PR 6763, an audit by the same author. It says that all five framework assumptions remain and that external mathematical review is outstanding."
     }
   },
   "updated_at": "2026-11-06T20:17:22Z"
