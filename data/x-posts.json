@@ -1145,5 +1145,10 @@
     "status": "posted",
     "at": "2026-11-06T00:34:34.763Z",
     "id": "2118502265514242246"
+  },
+  "[\"directed-sssp\",\"direct-issue-147\",\"n^2 ; n^2\",\"attained\"]:lean": {
+    "status": "skipped",
+    "at": "2026-11-06T08:35:16.581Z",
+    "reason": "Directed shortest paths: a row that a function row (classic Dijkstra or a paper) matches or beats at its density is no record (Lead, 2026-11-06): no X post"
   }
 }
