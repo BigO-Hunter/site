@@ -17,7 +17,7 @@
     "minimum": "n ; n",
     "maximum": "n^2 ; n^3"
   },
-  "checked_at": "2026-11-05",
+  "checked_at": "2026-11-06",
   "sources": [
     {
       "url": "https://doi.org/10.1145/28869.28874",
@@ -346,7 +346,7 @@
       "credit_note": "An outside implementer reports a flaw in Lemma 3.7; not checked by Big O Speedrun."
     },
     "direct-issue-139": {
-      "checked_at": "2026-11-05",
+      "checked_at": "2026-11-06",
       "source_url": "https://github.com/darkhipo/sssp-chd-row/tree/ffbc94459a4148a3a60ec5aa27920c19af82df28",
       "repo": "darkhipo/sssp-chd-row",
       "site_badge": false,
@@ -364,7 +364,7 @@
       "verification": "pending"
     },
     "direct-issue-158": {
-      "checked_at": "2026-11-05",
+      "checked_at": "2026-11-06",
       "source_url": "https://github.com/darkhipo/sssp-nlogn/blob/1129acafbd632f52a2dcaf016da6d7ae977d57e7/Submission.lean",
       "repo": "darkhipo/sssp-nlogn",
       "site_badge": false,
@@ -383,7 +383,7 @@
       "verification": "passed"
     }
   },
-  "updated_at": "2026-11-05T19:31:14Z",
+  "updated_at": "2026-11-06T00:29:18Z",
   "chart": {
     "ticks": [
       "n log^1/4",

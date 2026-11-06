@@ -112523,7 +112523,7 @@
     "title": "Reduce complete precision qualification time by 19% with C bookkeeping",
     "state": "closed",
     "created_at": "2026-10-27T09:25:32Z",
-    "updated_at": "2026-10-27T13:41:53Z",
+    "updated_at": "2026-11-05T23:46:35Z",
     "closed_at": "2026-10-27T13:41:53Z",
     "merged_at": "2026-10-27T13:41:53Z",
     "user": {
@@ -113447,7 +113447,7 @@
     "title": "Archive C verification batching and failed complete speed gates",
     "state": "closed",
     "created_at": "2026-10-27T12:38:18Z",
-    "updated_at": "2026-11-05T23:07:06Z",
+    "updated_at": "2026-11-05T23:32:12Z",
     "closed_at": "2026-10-27T13:41:53Z",
     "merged_at": "2026-10-27T13:41:53Z",
     "user": {
@@ -113888,7 +113888,7 @@
     "title": "Reduce H25 side-verification time by 29% with exact native GF(2)",
     "state": "closed",
     "created_at": "2026-10-27T13:44:17Z",
-    "updated_at": "2026-11-05T23:06:39Z",
+    "updated_at": "2026-11-05T23:42:11Z",
     "closed_at": "2026-10-28T00:24:33Z",
     "merged_at": "2026-10-28T00:24:33Z",
     "user": {
@@ -114791,7 +114791,7 @@
     "title": "Archive complete verification keys and negative 15% cost screen",
     "state": "closed",
     "created_at": "2026-10-27T16:37:18Z",
-    "updated_at": "2026-11-05T23:06:24Z",
+    "updated_at": "2026-11-05T23:30:54Z",
     "closed_at": "2026-10-28T00:24:32Z",
     "merged_at": "2026-10-28T00:24:32Z",
     "user": {
@@ -115274,7 +115274,7 @@
     "title": "Reduce complete H25 certificate qualification time by 28%",
     "state": "closed",
     "created_at": "2026-10-27T20:24:31Z",
-    "updated_at": "2026-11-05T23:06:04Z",
+    "updated_at": "2026-11-05T23:30:33Z",
     "closed_at": "2026-10-28T00:24:32Z",
     "merged_at": "2026-10-28T00:24:32Z",
     "user": {
@@ -115988,7 +115988,7 @@
     "title": "Reduce complete H25 bookkeeping time by 21%",
     "state": "closed",
     "created_at": "2026-10-27T22:20:06Z",
-    "updated_at": "2026-11-05T23:05:51Z",
+    "updated_at": "2026-11-05T23:30:16Z",
     "closed_at": "2026-10-28T00:24:31Z",
     "merged_at": "2026-10-28T00:24:31Z",
     "user": {
@@ -117710,7 +117710,7 @@
     "title": "Share the paired residue sampler bank in 84,578 bytes (no new κ)",
     "state": "closed",
     "created_at": "2026-10-28T13:00:02Z",
-    "updated_at": "2026-10-28T17:36:26Z",
+    "updated_at": "2026-11-05T23:32:41Z",
     "closed_at": "2026-10-28T17:36:26Z",
     "merged_at": "2026-10-28T17:36:26Z",
     "user": {
@@ -117773,7 +117773,7 @@
     "title": "Remove the paired DDG stopping counter with one owned tape cell (no new κ)",
     "state": "closed",
     "created_at": "2026-10-28T13:02:11Z",
-    "updated_at": "2026-10-28T17:36:26Z",
+    "updated_at": "2026-11-06T00:00:57Z",
     "closed_at": "2026-10-28T17:36:26Z",
     "merged_at": "2026-10-28T17:36:26Z",
     "user": {
@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-05T23:05:01Z",
+    "updated_at": "2026-11-06T00:11:35Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -122078,7 +122078,7 @@
     "title": "Add authentic H25 serializer sources and retain first runtime authentication failure",
     "state": "open",
     "created_at": "2026-10-31T08:28:31Z",
-    "updated_at": "2026-11-05T23:03:40Z",
+    "updated_at": "2026-11-06T00:09:33Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122141,7 +122141,7 @@
     "title": "Archive serializer source repairs and retained timing-review history",
     "state": "open",
     "created_at": "2026-11-01T09:11:45Z",
-    "updated_at": "2026-11-05T23:03:31Z",
+    "updated_at": "2026-11-06T00:10:10Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122372,7 +122372,7 @@
     "title": "Repair bounded G12 custody cleanup and publication-size checks",
     "state": "open",
     "created_at": "2026-11-01T23:48:20Z",
-    "updated_at": "2026-11-05T23:02:52Z",
+    "updated_at": "2026-11-05T23:42:21Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122393,7 +122393,7 @@
     "title": "Record G12 acquisition and raw-error delivery boundaries",
     "state": "open",
     "created_at": "2026-11-01T23:59:58Z",
-    "updated_at": "2026-11-05T23:02:08Z",
+    "updated_at": "2026-11-05T23:19:14Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122477,7 +122477,7 @@
     "title": "Clarify caught-primary preservation and accounting requirements",
     "state": "open",
     "created_at": "2026-11-02T03:11:26Z",
-    "updated_at": "2026-11-05T23:01:21Z",
+    "updated_at": "2026-11-05T23:19:00Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122498,7 +122498,7 @@
     "title": "Resolve bootstrap entry, preflight and dependency source questions",
     "state": "open",
     "created_at": "2026-11-02T03:13:24Z",
-    "updated_at": "2026-11-05T23:01:04Z",
+    "updated_at": "2026-11-05T23:40:15Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122540,7 +122540,7 @@
     "title": "Construct compiler source roots and conditional header prefixes",
     "state": "open",
     "created_at": "2026-11-02T04:10:45Z",
-    "updated_at": "2026-11-05T23:00:39Z",
+    "updated_at": "2026-11-05T23:17:58Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122603,7 +122603,7 @@
     "title": "Observe compiler-input namespace prefixes through owned descriptors",
     "state": "open",
     "created_at": "2026-11-02T05:28:04Z",
-    "updated_at": "2026-11-05T23:00:22Z",
+    "updated_at": "2026-11-05T23:17:50Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122687,7 +122687,7 @@
     "title": "Add compiler input-edge constructors and bootstrap-control drafts",
     "state": "open",
     "created_at": "2026-11-02T08:27:12Z",
-    "updated_at": "2026-11-05T23:17:14Z",
+    "updated_at": "2026-11-05T23:48:45Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122708,7 +122708,7 @@
     "title": "Pin bootstrap parent-domain incompatibilities and recover missing source",
     "state": "open",
     "created_at": "2026-11-02T09:11:45Z",
-    "updated_at": "2026-11-05T22:58:08Z",
+    "updated_at": "2026-11-05T23:46:45Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122876,7 +122876,7 @@
     "title": "Add a bounded authenticated bootstrap prefix entry",
     "state": "open",
     "created_at": "2026-11-02T14:23:53Z",
-    "updated_at": "2026-11-05T23:14:35Z",
+    "updated_at": "2026-11-05T23:42:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122939,7 +122939,7 @@
     "title": "Add owned-directory bootstrap prefix preparation",
     "state": "open",
     "created_at": "2026-11-02T15:10:40Z",
-    "updated_at": "2026-11-05T23:14:16Z",
+    "updated_at": "2026-11-05T23:42:58Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -123002,7 +123002,7 @@
     "title": "Archive Linux 7 channel source audit with bounded static replay",
     "state": "open",
     "created_at": "2026-11-02T17:23:07Z",
-    "updated_at": "2026-11-05T23:13:53Z",
+    "updated_at": "2026-11-05T23:47:11Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -123044,7 +123044,7 @@
     "title": "Archive conditional AT_RANDOM producer-event proof and exact-source replay",
     "state": "open",
     "created_at": "2026-11-02T18:32:36Z",
-    "updated_at": "2026-11-05T23:13:45Z",
+    "updated_at": "2026-11-06T00:11:07Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124199,7 +124199,7 @@
     "title": "Retain raw pilot primary errors through cleanup and accounting failures",
     "state": "open",
     "created_at": "2026-11-02T22:35:12Z",
-    "updated_at": "2026-11-05T23:13:20Z",
+    "updated_at": "2026-11-05T23:49:47Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -124619,7 +124619,7 @@
     "title": "research: archive conditional GCC libexec generator and phase source frame",
     "state": "open",
     "created_at": "2026-11-02T23:46:04Z",
-    "updated_at": "2026-11-05T23:13:11Z",
+    "updated_at": "2026-11-05T23:43:50Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -125060,7 +125060,7 @@
     "title": "Reject ambiguous ELF mappings in bounded literal discovery",
     "state": "open",
     "created_at": "2026-11-03T00:33:44Z",
-    "updated_at": "2026-11-05T23:13:03Z",
+    "updated_at": "2026-11-05T23:45:55Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -126677,7 +126677,7 @@
     "title": "Correct full owner/bootstrap source selection and expose missing edges",
     "state": "open",
     "created_at": "2026-11-03T07:32:56Z",
-    "updated_at": "2026-11-05T23:12:13Z",
+    "updated_at": "2026-11-05T23:50:10Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127391,7 +127391,7 @@
     "title": "Recover full caller sources and classify source-loading edges",
     "state": "open",
     "created_at": "2026-11-03T10:54:26Z",
-    "updated_at": "2026-11-05T23:12:05Z",
+    "updated_at": "2026-11-05T23:41:28Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -127412,7 +127412,7 @@
     "title": "Prepare source-bound full callers with separate execution-mode plans",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-05T23:11:45Z",
+    "updated_at": "2026-11-05T23:48:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129743,7 +129743,7 @@
     "title": "ci: fetch only exact review-base history for automated planning",
     "state": "open",
     "created_at": "2026-11-03T22:04:16Z",
-    "updated_at": "2026-11-05T23:07:22Z",
+    "updated_at": "2026-11-06T00:17:50Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129953,7 +129953,7 @@
     "title": "Implement fixed manual financial meter and once-only own settlement source",
     "state": "open",
     "created_at": "2026-11-04T04:32:48Z",
-    "updated_at": "2026-11-05T23:10:52Z",
+    "updated_at": "2026-11-05T23:50:02Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -129995,7 +129995,7 @@
     "title": "Add bootstrap acquisition driver and retain the HEAD_ABSENT diagnostic",
     "state": "open",
     "created_at": "2026-11-04T05:49:39Z",
-    "updated_at": "2026-11-05T23:10:33Z",
+    "updated_at": "2026-11-05T23:41:47Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130079,7 +130079,7 @@
     "title": "Archive adopted H25 source graph and frozen selection",
     "state": "open",
     "created_at": "2026-11-04T14:07:42Z",
-    "updated_at": "2026-11-05T23:10:24Z",
+    "updated_at": "2026-11-05T23:39:33Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130415,7 +130415,7 @@
     "title": "Record finite GNU-time source contract and readable retention inputs",
     "state": "open",
     "created_at": "2026-11-05T09:22:51Z",
-    "updated_at": "2026-11-05T23:10:10Z",
+    "updated_at": "2026-11-05T23:44:04Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130499,7 +130499,7 @@
     "title": "Complete H25 automatic-retention source contract",
     "state": "open",
     "created_at": "2026-11-05T12:52:55Z",
-    "updated_at": "2026-11-05T23:09:31Z",
+    "updated_at": "2026-11-05T23:39:24Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130760,6 +130760,48 @@
     },
     "head": {
       "sha": "740746e0d458b2e097c55ab5a37e868ca36d9c9a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6749,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6749",
+    "title": "research: review shared quotient certificate and state minimum",
+    "state": "open",
+    "created_at": "2026-11-05T23:30:49Z",
+    "updated_at": "2026-11-05T23:36:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "3f0c0a5783408a176f1c85aca6fc60ef9833019e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6750,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6750",
+    "title": "research: review marked reversal rules and exact caller frame",
+    "state": "open",
+    "created_at": "2026-11-05T23:59:34Z",
+    "updated_at": "2026-11-06T00:06:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "fc09e3fddcd9efc50c130f3a2c89808bcd665caa"
     },
     "base": {
       "ref": "main"

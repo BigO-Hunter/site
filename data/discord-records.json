@@ -5625,7 +5625,7 @@
         "slug": "other-catalan",
         "name": "Catalan’s constant",
         "url": "https://bigospeedrun.com/other/catalan",
-        "leader": "slitsey:410",
+        "leader": "slitsey:400",
         "table": "other-bounds",
         "direction": "lower",
         "records": [
@@ -5881,6 +5881,17 @@
             ],
             "bound": "μ(G) ≤ 410",
             "display": "410"
+          },
+          {
+            "id": "slitsey:400",
+            "score": "400",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "S. Litsey"
+            ],
+            "bound": "μ(G) ≤ 400",
+            "display": "400"
           }
         ]
       },
@@ -7289,7 +7300,8 @@
     "[\"other-critical-line-zeros\",\"anthropic:\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"\\\\tfrac32-\\\\tfrac{1}{\\\\sqrt2}\\\\cot\\\\tfrac{1}{\\\\sqrt2}\",\"attained\"]:lean",
     "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:lean",
     "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:record",
-    "[\"directed-sssp\",\"direct-issue-158\",\"n log ; n log^2\",\"attained\"]:lean"
+    "[\"directed-sssp\",\"direct-issue-158\",\"n log ; n log^2\",\"attained\"]:lean",
+    "[\"other-catalan\",\"slitsey:400\",\"400\",\"attained\"]:record"
   ],
   "deferred": [
     {
