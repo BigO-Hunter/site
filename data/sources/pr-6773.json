@@ -1,0 +1,11 @@
+{
+  "number": 6773,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6773",
+  "title": "Prove four-stage rank bounds and coupled incidence rigidity (no new κ)",
+  "body": "Four compatible commuting full stages in a shortest n+1-query root on nq independent inputs have total rank at least 10q. At extreme sites 0,1,n-1,n, equality forces q copies each of ABCD, AB, CD, B and C, plus (n-5)q empty sectors. This holds for arbitrary coupled blocks, so n=4 cannot attain 10q. An explicit extension of #6398 attains the bound for every even n>=6 and q>=1.\n\nThe new result is the coupled extreme-site incidence classification, with stronger placement and directed odd-pair bounds. Credit Ali Romman #6398, thu-nmrc #6717, ToikY #6721/#6734, Cinna Davis and their retained lineage; the local leakage method and scalar six-field root are inherited.\n\n```sh\npython3.12 -B scripts/research_package.py --package research/p104-four-stage-rigidity\n```\nExpected PASS_REGISTERED_RESEARCH_PACKAGE. Normal/optimized replay, seven source pins, 420 closures, 192 formal coefficient matrices, scope/mutation controls, committed-byte/mode checks, unchanged Git-free export and separate source-aware AI proof review passed.\n\nScope: char!=2, even n>=4, q>=1, idempotent stages, two-sided query support, actual chronological prefixes and pairwise commutation. Equality rigidity is only for the stated extreme sites. No uniform 11q floor at n=4, paid invoice, physical supplier, new κ or frontier change is claimed. The five framework assumptions remain. Whether n=4 admits total rank strictly between 10q and 11q remains open. No human/proof-kernel acceptance, selected cold replay or complete-history preflight.\n\nPrepared for @CubeJerry with substantial OpenAI Codex assistance. Base 7c49fe32c55de02c2c873655c804b16e4c3fef0a. Exact dependency pins: ORIGINS.json. [Exact sources, proof and reviews](https://github.com/CubeJerry/integer-mult-bounds/tree/10ecaad298e6a6af7416fbd2baca15674fcadf5b/research/p104-four-stage-rigidity). Published complete tree equals the tested tree.\n\nSelected-baseline source bindings and metadata passed the required orientation check; this was not a construction cold replay.",
+  "created_at": "2026-11-06T09:26:23Z",
+  "updated_at": "2026-11-06T09:26:23Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}
