@@ -1165,5 +1165,10 @@
     "status": "posted",
     "at": "2026-11-06T20:33:30.673Z",
     "id": "2118803986161561935"
+  },
+  "[\"subset-sum\",\"jv1000-subset-sum-0-4875755-2026\",\"975151/2000000\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-06T22:34:36.721Z",
+    "reason": "reserved before API send"
   }
 }
