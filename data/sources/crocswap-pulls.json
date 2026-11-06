@@ -131437,5 +131437,68 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6781,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6781",
+    "title": "Prove and attain the sharp four-field coupled stage rank (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T11:46:46Z",
+    "updated_at": "2026-11-06T11:46:46Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "a7f01042216c9f891157e3884beae9053e049c2f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6782,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6782",
+    "title": "Bound binary pattern cores and exclude the irreducible five-type saving (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T11:47:00Z",
+    "updated_at": "2026-11-06T11:47:00Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "685457252b51b9c7932ece363365bdf0b12c9c31"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6783,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6783",
+    "title": "Exclude every proper-frame recoding of proportional native triples (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T11:47:10Z",
+    "updated_at": "2026-11-06T11:47:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "07cbe3d4509f3697a258c6cae9a70851460f76d9"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

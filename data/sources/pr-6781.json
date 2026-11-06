@@ -1,0 +1,11 @@
+{
+  "number": 6781,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6781",
+  "title": "Prove and attain the sharp four-field coupled stage rank (no new κ)",
+  "body": "Resolve the quantitative n=4 gap left by #6773: the minimum total rank of four commuting full stages is ceil(21q/2), over fields of characteristic different from two and under the inherited actual-prefix/query contract. Construct the q=2 optimum (4,6,6,5), a scalar rank-11 case, and direct sums attaining every q. Classify even-q equality inventories and rule out the stated cost-free idle rank-one trim.\n\nBase: 7c49fe32c55de02c2c873655c804b16e4c3fef0a.\n#6773 source: 10ecaad298e6a6af7416fbd2baca15674fcadf5b. Further source and fixture pins are in ORIGINS.json.\n\nReproduce (Python 3.12, stdlib):\n```sh\npython3 -B scripts/research_package.py --package research/p104-four-field-sharp-rank\n```\nExpected: PASS_SHARP_N4_FOUR_STAGE and PASS_REGISTERED_RESEARCH_PACKAGE.\n\nExecuted: all four registered commands, normal/optimized primary checks, five exact fixtures and 160 formal coefficients; separate integer reconstruction and ordered-reduction review. Fourteen hypothesis/omission controls, independent fixture corruptions and two wrong-multiplier controls reject. Committed bytes/modes and all four Git-free replays pass. The complete remote tree matches the tested contribution.\n\nNo new κ. This is an abstract coefficient-space optimum, not a native supplier or profitable complete invoice. Physical ports/phases, ownership, compiler/precision/tape and outer admission remain open; all five framework assumptions remain. No selected scientific cold replay, hosted CI, full-history preflight or proof-kernel acceptance is claimed.\n\nBy @CubeJerry with substantial OpenAI Codex assistance and separately assigned derivation/construction/review. Credit Ali Romman, thu-nmrc (#6717), ToikY (#6721/#6734), Cinna Davis and the retained query/controller lineage. Apache-2.0.\n\nProof, exact evidence and open questions:\nhttps://github.com/CubeJerry/integer-mult-bounds/tree/a7f01042216c9f891157e3884beae9053e049c2f/research/p104-four-field-sharp-rank",
+  "created_at": "2026-11-06T11:46:46Z",
+  "updated_at": "2026-11-06T11:46:46Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

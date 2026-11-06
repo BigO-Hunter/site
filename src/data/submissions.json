@@ -127775,7 +127775,82 @@
       "checked_at": "2026-11-06",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "a7903f7ee16c85015f3f9a87fd6f3ae5c9053349",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6781,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Prove and attain the sharp four-field coupled stage rank (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6781",
+      "submitted_at": "2026-11-06T11:46:46Z",
+      "updated_at": "2026-11-06T11:46:46Z",
+      "source_commit": "a7f01042216c9f891157e3884beae9053e049c2f",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T11:46:46Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "a7f01042216c9f891157e3884beae9053e049c2f",
+      "claim_text": "3c557e91f39cf8425ee594559fe62e9629d3bc9550fd8ab09355d281e8d7871d",
+      "claim_files": [],
+      "claim_files_head": "a7f01042216c9f891157e3884beae9053e049c2f",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6782,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Bound binary pattern cores and exclude the irreducible five-type saving (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6782",
+      "submitted_at": "2026-11-06T11:47:00Z",
+      "updated_at": "2026-11-06T11:47:00Z",
+      "source_commit": "685457252b51b9c7932ece363365bdf0b12c9c31",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T11:47:00Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "685457252b51b9c7932ece363365bdf0b12c9c31",
+      "claim_text": "bbb39a54fdcd112b7e5bd80f49d57157d52f378498d72b4bea9ae42d0beb5fb9",
+      "claim_files": [
+        [
+          "added",
+          "research/bit-three-relation-core/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "685457252b51b9c7932ece363365bdf0b12c9c31",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6783,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Exclude every proper-frame recoding of proportional native triples (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6783",
+      "submitted_at": "2026-11-06T11:47:10Z",
+      "updated_at": "2026-11-06T11:47:10Z",
+      "source_commit": "07cbe3d4509f3697a258c6cae9a70851460f76d9",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T11:47:10Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "07cbe3d4509f3697a258c6cae9a70851460f76d9",
+      "claim_text": "9c728631d9918fa8653070b960d5f95a0a9c3bdd6600632ff57ec6be38989b85",
+      "claim_files": [],
+      "claim_files_head": "07cbe3d4509f3697a258c6cae9a70851460f76d9",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
