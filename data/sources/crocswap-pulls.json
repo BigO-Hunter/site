@@ -131591,7 +131591,7 @@
     "title": "Prove the sharp inverse envelope under a column cap (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:10:29Z",
-    "updated_at": "2026-11-06T13:20:41Z",
+    "updated_at": "2026-11-06T14:54:51Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131957,6 +131957,27 @@
     },
     "head": {
       "sha": "0ecd4fd79f4f7fc21b2ef7a9cdc73912fa4a804b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6806,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6806",
+    "title": "Prove sharp inverse bounds for fractional column capacities (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T14:49:33Z",
+    "updated_at": "2026-11-06T14:58:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "c9f16c03d67638bf02e3a7cff785480474790718"
     },
     "base": {
       "ref": "main"

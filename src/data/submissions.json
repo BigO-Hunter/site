@@ -127947,7 +127947,7 @@
       "title": "Prove the sharp inverse envelope under a column cap (no κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6788",
       "submitted_at": "2026-11-06T13:10:29Z",
-      "updated_at": "2026-11-06T13:20:41Z",
+      "updated_at": "2026-11-06T14:54:51Z",
       "source_commit": "c1d915303450bec823784befd3ada5a261796a5c",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-06T13:10:29Z",
@@ -128349,6 +128349,28 @@
         ]
       ],
       "claim_files_head": "0ecd4fd79f4f7fc21b2ef7a9cdc73912fa4a804b",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6806,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Prove sharp inverse bounds for fractional column capacities (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6806",
+      "submitted_at": "2026-11-06T14:49:33Z",
+      "updated_at": "2026-11-06T14:58:04Z",
+      "source_commit": "c9f16c03d67638bf02e3a7cff785480474790718",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T14:49:33Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "c9f16c03d67638bf02e3a7cff785480474790718",
+      "claim_text": "4a43de7810adafed5fd25c82be0defdd841fbdba47992799ed911b01e4351fd4",
+      "claim_files": [],
+      "claim_files_head": "c9f16c03d67638bf02e3a7cff785480474790718",
       "claim_files_base": "main",
       "claim_files_result": true
     }
