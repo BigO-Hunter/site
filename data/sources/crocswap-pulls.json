@@ -131122,5 +131122,131 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6766,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6766",
+    "title": "Attain four-query fragments and prove complete-source ceilings (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T08:40:15Z",
+    "updated_at": "2026-11-06T08:40:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "d87e4a38890f6962162d00a68031ab2476f58f6e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6767,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6767",
+    "title": "Exclude proportional pairs of native carrier fusions (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T08:40:26Z",
+    "updated_at": "2026-11-06T08:40:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "c42afdcd69c85dc3fdb359de471d03960270cc96"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6768,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6768",
+    "title": "Prove the sharp zero-primary cap spectrum at every idempotent rank",
+    "state": "open",
+    "created_at": "2026-11-06T09:08:28Z",
+    "updated_at": "2026-11-06T09:08:28Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "48233eac64d0645e385407bee33195d78deb2e52"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6769,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6769",
+    "title": "Determine the sharp net splitting-tax coefficient (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T09:09:10Z",
+    "updated_at": "2026-11-06T09:09:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "e88f9b48e5c2e153438e588a17272d29f4e4f86f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6770,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6770",
+    "title": "Prove the sharp joint dirty-word interval envelope (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T09:09:40Z",
+    "updated_at": "2026-11-06T09:09:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "02f7d03f0d09b1e05ae5c1f7433f07411db9102e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6771,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6771",
+    "title": "Reduce selected compiler height 47.1× with a checked net-tax application",
+    "state": "open",
+    "created_at": "2026-11-06T09:10:24Z",
+    "updated_at": "2026-11-06T09:10:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "223ea940b604c1f8a2bd28093618628ba4a113a4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

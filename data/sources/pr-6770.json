@@ -1,0 +1,11 @@
+{
+  "number": 6770,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6770",
+  "title": "Prove the sharp joint dirty-word interval envelope (no new κ)",
+  "body": "## Summary\n\nProve the sharp height-uniform interval envelope F(h)=floor(h^2/2)+h+2 for the unchanged #628 balanced word: every ordered pair of ideal-leaf cuts, both orientations and shared dirty scratch. The new upper proof matches #1374's credited lower family and closes #5872's gap. #1085's entry invariant and #1278's phase/squarefree results remain explicit premises.\n\nCanonical base and source pin: 7c49fe32c55de02c2c873655c804b16e4c3fef0a. Exact source-file hashes are in SOURCES.json.\n\n## Evidence\n\n```sh\npython3 -B -W error -X dev research/chronological-dirty-intervals/verify.py\n```\n\nExpected: PASS_CHRONOLOGICAL_DIRTY_INTERVALS. Normal/optimized registered and read-only Git-free replays passed: 95,735 prefix boundaries, 89,528 intervals, 2,118 phase identities and 15 controls. A separately written compressed scalar engine checks attaining witnesses through h=32. Separate proof/code review found no unresolved gap under the imported premises.\n\n## Limitations and next questions\n\nNo new κ. The bound is sharp across each height, not necessarily at every n; fixed-n sharpness remains open. Rounded callers, actual error support and the complete precision/physical invoice need separate integration. Five selected assumptions remain. Full-history validation was unavailable in the shallow checkout.\n\n## Attribution\n\n@CubeJerry, with substantial OpenAI Codex assistance. Full proof, predecessor credit and exact review hashes: [research package](https://github.com/CubeJerry/integer-mult-bounds/tree/02f7d03f0d09b1e05ae5c1f7433f07411db9102e/research/chronological-dirty-intervals). Original notices retained; no independent human or proof-kernel acceptance claimed.",
+  "created_at": "2026-11-06T09:09:40Z",
+  "updated_at": "2026-11-06T09:09:40Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}
