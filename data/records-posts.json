@@ -2006,5 +2006,14 @@
     "authors": [
       "Jennifer Voitle"
     ]
+  },
+  {
+    "key": "[\"other-van-der-waerden\",\"openai:1/100000\",\"1/100000\",\"attained\"]:lean",
+    "text": "**Record verified** | **Van der Waerden numbers** | `W_r(k) > k^(k floor(log_2r)/100000)` | by OpenAI | Lean Verified | [bigospeedrun.com/other/van-der-waerden](https://bigospeedrun.com/other/van-der-waerden)",
+    "x_text": "Record verified!\n\nProblem: Van der Waerden numbers\nValue: W_r(k) > k^(k floor(log_2r)/100000)\nPlayer: OpenAI\nStatus: Lean Verified",
+    "posted_at": "2026-11-06T23:33:18.223Z",
+    "authors": [
+      "OpenAI"
+    ]
   }
 ]
