@@ -1997,5 +1997,14 @@
       "Jennifer Park",
       "Caroline Terry"
     ]
+  },
+  {
+    "key": "[\"subset-sum\",\"jv1000-subset-sum-0-4875755-2026\",\"975151/2000000\",\"attained\"]:record",
+    "text": "**New claim** | **Subset Sum** | `O(2^(0.4876n))` | by Jennifer Voitle | Claimed | [bigospeedrun.com/subset-sum](https://bigospeedrun.com/subset-sum)",
+    "x_text": "New claim!\n\nProblem: Subset Sum\nNew value: O(2^(0.4876n))\nPlayer: Jennifer Voitle\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-06T22:34:35.359Z",
+    "authors": [
+      "Jennifer Voitle"
+    ]
   }
 ]
