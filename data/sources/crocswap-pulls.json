@@ -131500,5 +131500,236 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6784,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6784",
+    "title": "Disprove the universal Omega cut and prove the dyadic error asymptotic (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T12:43:22Z",
+    "updated_at": "2026-11-06T12:43:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "c134aa6edc8ed6444bbf7bfcabbed8124ff26c39"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6785,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6785",
+    "title": "Exclude irreducible five-dimensional one-edge binary pattern pools",
+    "state": "open",
+    "created_at": "2026-11-06T13:07:10Z",
+    "updated_at": "2026-11-06T13:16:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "5dbf2c05220bea53d84b510efe5910c4cec8f182"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6786,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6786",
+    "title": "Exclude polynomial constant-trajectory savings for homogeneous operators (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:07:55Z",
+    "updated_at": "2026-11-06T13:15:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "6d38d4c55bf81afec80cc422c98d9b588432acf1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6787,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6787",
+    "title": "Reduce the effective interval onset to 2^751000000 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:09:17Z",
+    "updated_at": "2026-11-06T13:09:17Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "35486fd99b32842d7d5537b38fdec1f4ac80270e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6788,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6788",
+    "title": "Prove the sharp inverse envelope under a column cap (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:10:29Z",
+    "updated_at": "2026-11-06T13:10:29Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "c1d915303450bec823784befd3ada5a261796a5c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6789,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6789",
+    "title": "Optimize dyadic error cuts and prove a quantitative convergence rate (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:10:50Z",
+    "updated_at": "2026-11-06T13:10:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "7c92a140620e65f6c0064fe43fe62bb1a29231e3"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6790,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6790",
+    "title": "Prove a sharp bounded-error cutoff for acyclic decoder rows (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:11:40Z",
+    "updated_at": "2026-11-06T13:11:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "ab1317b6feef935da8286fafee0f361c863125ba"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6791,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6791",
+    "title": "Reduce odd-width optimal sectors to six necessary forms (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:12:01Z",
+    "updated_at": "2026-11-06T13:12:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "ab8322a73cdec766a02cb345912631ee51dd4c4a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6792,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6792",
+    "title": "Exclude dyadic Borel savings in a common integral polynomial algebra (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:13:45Z",
+    "updated_at": "2026-11-06T13:13:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e3c2dc5ab61b3baafa5ca3ea2c6b96c71d8b3120"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6793,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6793",
+    "title": "Prove charge-only ternary guard costs through two additions (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:15:02Z",
+    "updated_at": "2026-11-06T13:15:02Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "3ae29191befb4289cf4a187f685bce8d4f129cf8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6794,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6794",
+    "title": "Improve three-qubit Clifford Gram condition bound to 807 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:16:35Z",
+    "updated_at": "2026-11-06T13:16:35Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "c6252da020819a08ef2b2ff14280146c43ad374c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
