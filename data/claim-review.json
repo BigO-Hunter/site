@@ -1,11 +1,3 @@
 {
-  "queue": [
-    {
-      "pr": 6805,
-      "head": "0ecd4fd79f4f7fc21b2ef7a9cdc73912fa4a804b",
-      "title": "Conditional κ = 0.00330814 (+9.4e-7 over #6726): retimed native helper split",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6805",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    }
-  ]
+  "queue": []
 }

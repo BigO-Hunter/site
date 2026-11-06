@@ -103811,7 +103811,7 @@
       "title": "Require unambiguous, typed metadata in research export receipts",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/5728",
       "submitted_at": "2026-10-26T14:34:20Z",
-      "updated_at": "2026-10-26T15:22:41Z",
+      "updated_at": "2026-11-06T16:08:21Z",
       "source_commit": "70441d90c78bdfc48aed772d2b45e05d5a38e4fb",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-26T15:22:41Z",
@@ -128336,12 +128336,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-06T13:59:42Z",
       "checked_at": "2026-11-06",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "165407/50000000",
+      "record_ids": [
+        "crocswap-pr-6805"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "0ecd4fd79f4f7fc21b2ef7a9cdc73912fa4a804b",
       "claim_text": "ce8804084989667f7eaffa97869f5d0b2a533ac64ae7f20068bb7fca0e449631",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "0ecd4fd79f4f7fc21b2ef7a9cdc73912fa4a804b",
+      "claim_decided": true,
       "claim_files": [
         [
           "added",
@@ -128371,6 +128374,28 @@
       "claim_text": "4a43de7810adafed5fd25c82be0defdd841fbdba47992799ed911b01e4351fd4",
       "claim_files": [],
       "claim_files_head": "c9f16c03d67638bf02e3a7cff785480474790718",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6807,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Test early duplicate-VERIFY rejection with an opt-in patch",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6807",
+      "submitted_at": "2026-11-06T16:06:09Z",
+      "updated_at": "2026-11-06T16:17:05Z",
+      "source_commit": "2081246a26e4bfbb90e742af0275209e2e2623b7",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T16:06:09Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "2081246a26e4bfbb90e742af0275209e2e2623b7",
+      "claim_text": "3726b222008041d2c785aba800564c2d8eb76a203409ad1df5d9100217f5927b",
+      "claim_files": [],
+      "claim_files_head": "2081246a26e4bfbb90e742af0275209e2e2623b7",
       "claim_files_base": "main",
       "claim_files_result": true
     }

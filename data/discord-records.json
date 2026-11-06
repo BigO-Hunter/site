@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6726",
+        "leader": "crocswap-pr-6805",
         "direction": "higher",
         "records": [
           {
@@ -4409,6 +4409,16 @@
               "zxv"
             ],
             "bound": "O(n log^(1 - 0.0033072) n)"
+          },
+          {
+            "id": "crocswap-pr-6805",
+            "score": "165407/50000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "CubeJerry"
+            ],
+            "bound": "O(n log^(1 - 0.00330814) n)"
           }
         ],
         "table": "big-o"
@@ -6988,6 +6998,54 @@
             "display": "\\approx0.6731134"
           }
         ]
+      },
+      {
+        "slug": "other-z-diophantine-in-q",
+        "name": "Z is Diophantine in Q",
+        "url": "https://bigospeedrun.com/other/z-diophantine-in-q",
+        "leader": "z-in-q-version-2:12504",
+        "table": "other-bounds",
+        "direction": "lower",
+        "records": [
+          {
+            "id": "elliotglazer:292890231905",
+            "score": "292890231905",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Elliot Glazer"
+            ],
+            "bound": "292,890,231,905 variables",
+            "display": "292{,}890{,}231{,}905"
+          },
+          {
+            "id": "qqwref:211983774909",
+            "score": "211983774909",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "qqwref"
+            ],
+            "bound": "211,983,774,909 variables",
+            "display": "211{,}983{,}774{,}909"
+          },
+          {
+            "id": "z-in-q-version-2:12504",
+            "score": "12504",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Gabe Conant",
+              "Sohail Farhangi",
+              "James Freitag",
+              "Elliot Glazer",
+              "Jenn Park",
+              "Caroline Terry"
+            ],
+            "bound": "12,504 variables",
+            "display": "12{,}504"
+          }
+        ]
       }
     ]
   },
@@ -7328,7 +7386,9 @@
     "[\"directed-sssp\",\"direct-issue-158\",\"n log ; n log^2\",\"attained\"]:lean",
     "[\"other-catalan\",\"slitsey:400\",\"400\",\"attained\"]:record",
     "[\"directed-sssp\",\"direct-issue-147\",\"n^2 ; n^2\",\"attained\"]:lean",
-    "[\"other-prime-gaps\",\"romyar1:182\",\"182\",\"attained\"]:record"
+    "[\"other-prime-gaps\",\"romyar1:182\",\"182\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-6805\",\"165407/50000000\",\"attained\"]:record",
+    "[\"other-z-diophantine-in-q\",\"z-in-q-version-2:12504\",\"12504\",\"attained\"]:record"
   ],
   "deferred": [
     {

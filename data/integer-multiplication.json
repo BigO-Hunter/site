@@ -39833,6 +39833,52 @@
         }
       ],
       "source_commit": "435bbe91fb28cb1d7a569ca70c6c4e9eb302d486"
+    },
+    {
+      "id": "crocswap-pr-6805",
+      "kind": "improvement",
+      "score": "165407/50000000",
+      "tier": "claimed",
+      "submitted_at": "2026-11-06T13:59:42Z",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T13:59:42Z",
+      "site_observed_at": "2026-11-06T16:17:26Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6805"
+      },
+      "spec_version": "1",
+      "title": "Conditional κ = 0.00330814 (+9.4e-7 over #6726): retimed native helper split",
+      "authors": [
+        {
+          "name": "CubeJerry",
+          "url": "https://github.com/CubeJerry"
+        }
+      ],
+      "predecessors": [
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6702",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6726",
+        "https://github.com/CrocSwap/integer-mult-bounds/pull/6763"
+      ],
+      "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6805",
+      "artifact": {
+        "path": "sources/pr-6805.json",
+        "sha256": "defc9b5fbe8473f3b5ba8f9a9a56a1cd3604e38c346d18d2f08fbcce849b763c"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6805",
+        "theorem": null,
+        "certificate_path": null
+      },
+      "dependencies": [
+        {
+          "id": "openai-109-transfer",
+          "statement": "The OpenAI #109 fixed-tape multiplication reduction and the specific all-size compiler, routing, precision, resampling and exact-recovery interfaces cited by this submission hold. The PR body retains its precise per-construction obligations.",
+          "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6805",
+          "status": "unverified"
+        }
+      ],
+      "source_commit": "0ecd4fd79f4f7fc21b2ef7a9cdc73912fa4a804b"
     }
   ],
   "record_metadata": {
@@ -63013,7 +63059,35 @@
       "race_event_at": "2026-11-04T23:40:30Z",
       "race_event_kind": "PR creation; latest observed score",
       "credit_note": "zxv splits two shared idle jobs of the caller of PR 6716 into paid pieces, so that smaller prefixes retire as independent outputs, on the unchanged native word of PR 6716. The conditional kappa is 0.0033072, 0.091 percent above PR 6716's 0.0033042. The README says that all five framework assumptions remain and that external review is outstanding. It builds on PRs 6716, 6702, 6545, 6348 and 6398."
+    },
+    "crocswap-pr-6805": {
+      "checked_at": "2026-11-06",
+      "source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6805",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Source claim; not independently rerun by bigOspeedrun",
+      "pr_number": 6805,
+      "repo": "CrocSwap/integer-mult-bounds",
+      "merged": false,
+      "merged_at": null,
+      "closed_at": null,
+      "updated_at": "2026-11-06T13:59:42Z",
+      "comparison_key": "crocswap/integer-multiplication-v1",
+      "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
+      "score_source": "Lead review decision; source claim only",
+      "date_precision": "PR creation timestamp; score is latest observed claim, not necessarily original score.",
+      "upstream_selected": false,
+      "record_eligibility_note": "Eligible for the CrocSwap claimed-source race when merged or a published README checkpoint. Open and closed-unmerged PRs cannot hold the record.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "publication_date_precision": "date-time",
+      "race_repo": "CrocSwap/integer-mult-bounds",
+      "publication_date": "2026-11-06T13:59:42Z",
+      "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6805",
+      "race_series": "pr-submissions",
+      "race_event_at": "2026-11-06T13:59:42Z",
+      "race_event_kind": "PR creation; latest observed score"
     }
   },
-  "updated_at": "2026-11-06T15:17:33Z"
+  "updated_at": "2026-11-06T16:17:26Z"
 }
