@@ -3146,6 +3146,29 @@
           ],
           "proofScope": "A written proof in a company paper. The Lean proof of \\(H_1\\le 186\\) in openai/PrimeGaps186 assumes three axioms that are not proved in Lean: two exponential-sum bounds of Deligne type, which are published theorems, and 152 numerical bounds on integrals and constants, which only a Python program checks. So it is not a Lean proof of our statement. The authors say that no person has reviewed the Lean development independently.",
           "bound": "H_1\\le 186"
+        },
+        {
+          "author": "GPT-6 Astra (OpenAI), prompted by Romyar Sharifi",
+          "handle": "romyar1",
+          "agent": true,
+          "value": "182",
+          "display": "182",
+          "date": "2026-09-07T05:30:19Z",
+          "dateSource": "https://github.com/romyar1/prime-gaps-lean/commit/c2f3d7fd201758669d7c9c377bf299394c1b1ff4",
+          "dateKind": "first-stated",
+          "url": "https://www.math.ucla.edu/~sharifi/AI/prime_gaps_182_expository_bundle.pdf",
+          "lean": false,
+          "leanNote": "Conditional. The Lean proof that \\(H_1\\le 182\\) follows from its premises assumes 262 numerical integral inequalities, three finite-field estimates and a local Fourier proposition.",
+          "evidence": "claimed",
+          "note": "The paper credits the proof to GPT-6 Astra, prompted by Romyar Sharifi. It proves this: take a set of 39 integers that, for each prime \\(p\\), misses at least one remainder modulo \\(p\\). Then infinitely many shifts of the set contain at least two primes. It uses such a set whose largest and smallest elements differ by 182. It extends the method of OpenAI's 186 paper, with two companion papers in the same PDF. The time shown is the creation of its Lean repository, the earliest public trace that we found; the paper dates its first version 4 September 2026.",
+          "authors": [
+            {
+              "name": "GPT-6 Astra (OpenAI), prompted by Romyar Sharifi",
+              "url": "https://github.com/romyar1/prime-gaps-lean"
+            }
+          ],
+          "proofScope": "A written proof in a PDF of three papers: the main paper and two companion papers on the Type II and Type III distribution estimates. The Lean development in romyar1/prime-gaps-lean proves the step from the explicit premises to \\(H_1\\le 182\\); its README says that it is not an unconditional Lean proof, so it is not a Lean proof of our statement. No independent check.",
+          "bound": "H_1\\le 182"
         }
       ],
       "repos": [
@@ -3153,9 +3176,14 @@
           "name": "openai/PrimeGaps186",
           "url": "https://github.com/openai/PrimeGaps186",
           "note": "OpenAI's Lean development and numerical certificate. The README lists the three axioms."
+        },
+        {
+          "name": "romyar1/prime-gaps-lean",
+          "url": "https://github.com/romyar1/prime-gaps-lean",
+          "note": "The Lean development for the 182 paper. The README says that the result is conditional and lists the premises: 262 integral inequalities, three finite-field estimates and a local Fourier proposition."
         }
       ],
-      "bestHandle": "openai"
+      "bestHandle": "romyar1"
     },
     {
       "slug": "critical-line-zeros",
