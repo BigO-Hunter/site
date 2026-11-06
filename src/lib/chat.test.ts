@@ -375,7 +375,7 @@ test('a QRH question reaches the quasi-Riemann Other bounds row with its leader,
   // The leader changes with the data; compare with the shown leader, not a fixed claim.
   const leader = otherBoundLeader(otherBounds.families.find(f => f.slug === 'quasi-riemann')!)!;
   assert.equal(row.current.evidence, 'Claimed'); assert.deepEqual(row.current.authors, leader.authors.map(a => a.name));
-  assert.equal(row.current.bound, leader.bound); assert.equal(row.baseline.bound, '\\theta\\le 7/8');
+  assert.equal(row.current.bound, leader.bound); assert.equal(row.baseline?.bound, '\\theta\\le 7/8');
   // The row names its review repository and the rule; the leader's pull request is linked with its status.
   assert.deepEqual((row as {reviewRepository?: object}).reviewRepository, {name: 'GTimG/QuasiRiemannTracker', url: 'https://github.com/GTimG/QuasiRiemannTracker',
     rule: 'A result is Human Verified when GTimG/QuasiRiemannTracker merges its pull request. A result in an open pull request is Claimed.'});

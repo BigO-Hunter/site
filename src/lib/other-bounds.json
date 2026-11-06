@@ -3305,6 +3305,117 @@
         }
       ],
       "bestHandle": "bhattacharjee-bhattacharya"
+    },
+    {
+      "slug": "z-diophantine-in-q",
+      "name": "Z is Diophantine in Q",
+      "nameMath": "\\(\\mathbb Z\\) is Diophantine in \\(\\mathbb Q\\)",
+      "quantity": "\\text{number of variables}",
+      "direction": "lower",
+      "statement": "A polynomial \\(P(q,w_1,\\dots,w_k)\\) with integer coefficients defines \\(\\mathbb Z\\) in \\(\\mathbb Q\\) when, for every rational number \\(q\\), \\(q\\) is an integer exactly when \\(P(q,w_1,\\dots,w_k)=0\\) for some rational numbers \\(w_1,\\dots,w_k\\). The polynomial must be explicit: a public list of its terms, or a public program that writes them out. The score is the number of variables, \\(k+1\\). Fewer variables rank higher; on a tie, a lower degree ranks higher, then fewer nonzero terms, then a smaller largest absolute coefficient. Koenigsmann (2016) showed that \\(\\mathbb Q\\setminus\\mathbb Z\\) is Diophantine in \\(\\mathbb Q\\). Whether \\(\\mathbb Z\\) itself is Diophantine in \\(\\mathbb Q\\) was open, and Mazur's conjectures (1992) predicted that it is not.",
+      "claims": [
+        {
+          "author": "Elliot Glazer with Astra 6, Sol 6.1 and Opus 5.5, with auditing from Fable 5.1",
+          "handle": "elliotglazer",
+          "agent": true,
+          "value": "292890231905",
+          "display": "292{,}890{,}231{,}905",
+          "date": "2026-11-04T19:50:09Z",
+          "dateSource": "https://github.com/elliotglazer/diophantine-z-q/commit/bdc5f4aae05289a7f0bbfc9d92cdbe60ad2c998f",
+          "dateKind": "first-stated",
+          "url": "https://github.com/elliotglazer/diophantine-z-q/blob/97cec7fdd757d9a8e4f468151a47a6d3610fb2f2/diophantine_zq.pdf",
+          "lean": false,
+          "leanNote": "Incomplete. The Lean development proves helper results; its main theorem still contains sorry.",
+          "evidence": "claimed",
+          "note": "The manuscript says that it was developed primarily by OpenAI Codex agents (Astra 6 and Sol 6.1) and Anthropic Claude agents (Opus 5.5), with auditing from Fable 5.1. The polynomial has degree less than \\(2\\uparrow\\uparrow 7\\), and each coefficient is less than \\(2\\uparrow\\uparrow 8\\) in absolute value, where \\(2\\uparrow\\uparrow n\\) is a tower of \\(n\\) twos. The manuscript does not state the number of nonzero terms. It builds on OpenAI's preprint of 6 October 2026 on Hilbert's tenth problem over the rational numbers. The time shown is the first commit of the manuscript to its public repository.",
+          "authors": [
+            {
+              "name": "Elliot Glazer",
+              "url": "https://github.com/elliotglazer"
+            }
+          ],
+          "proofScope": "A written proof in a manuscript, with no human review yet. The repository's checks rebuild the polynomial and run finite tests; they do not check the arithmetic argument. The Lean development is incomplete, so it is not a Lean proof of our statement.",
+          "bound": "292{,}890{,}231{,}905\\text{ variables}"
+        },
+        {
+          "author": "qqwref",
+          "handle": "qqwref",
+          "value": "211983774909",
+          "display": "211{,}983{,}774{,}909",
+          "date": "2026-11-05T23:50:04Z",
+          "dateSource": "https://github.com/qqwref/diophantine-z-q/pull/1",
+          "dateKind": "first-stated",
+          "url": "https://github.com/qqwref/diophantine-z-q/pull/1",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "A pull request in qqwref's copy of Elliot Glazer's repository, merged in that copy only. It simplifies the first construction and replaces its catalogue of primes. The polynomial has degree less than \\(2^{2^{45}}\\), and each coefficient is less than \\(2^{2^{2^{56}}}\\) in absolute value. The pull request does not state the number of nonzero terms.",
+          "authors": [
+            {
+              "name": "qqwref",
+              "url": "https://github.com/qqwref"
+            }
+          ],
+          "proofScope": "Changes to the written proof and the construction, with finite checks. No human review and no Lean proof.",
+          "bound": "211{,}983{,}774{,}909\\text{ variables}"
+        },
+        {
+          "author": "Gabe Conant, Sohail Farhangi, James Freitag, Elliot Glazer, Jenn Park and Caroline Terry",
+          "handle": "z-in-q-version-2",
+          "agent": true,
+          "value": "12504",
+          "display": "12{,}504",
+          "date": "2026-11-06T02:59:53Z",
+          "dateSource": "https://github.com/elliotglazer/diophantine-z-q/releases/tag/quartic-12504-version-2",
+          "dateKind": "first-stated",
+          "url": "https://github.com/elliotglazer/diophantine-z-q/blob/2a2df7d675d4803c9358cc56e897b015959c8558/quartic_12504.pdf",
+          "lean": false,
+          "leanNote": "Incomplete. The main Lean theorem still contains sorry.",
+          "evidence": "claimed",
+          "note": "Version 2 of the manuscript, a collaboration using the collective agentic notes of the six authors. The polynomial has degree 4, 135,721 nonzero terms and largest absolute coefficient 685,783,949,153,203,534,233,601, which is less than \\(2^{80}\\). Its complete list of terms is public. An earlier manuscript by Sohail Farhangi with ChatGPT 6 (11 October 2026) assumes four arithmetic inputs and gives no number of variables, so it is not listed.",
+          "authors": [
+            {
+              "name": "Gabe Conant",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Sohail Farhangi",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "James Freitag",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Elliot Glazer",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Jenn Park",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Caroline Terry",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            }
+          ],
+          "proofScope": "A written proof in a manuscript, with no human review yet. A certificate check, published with the polynomial, shows that the polynomial is equivalent to the system of equations of the manuscript; it does not check the arithmetic argument. The Lean development is incomplete, so it is not a Lean proof of our statement.",
+          "bound": "12{,}504\\text{ variables}"
+        }
+      ],
+      "repos": [
+        {
+          "name": "elliotglazer/diophantine-z-q",
+          "url": "https://github.com/elliotglazer/diophantine-z-q",
+          "note": "The manuscripts, both polynomials and their checks. The README states what the checks cover and that the Lean development is incomplete."
+        },
+        {
+          "name": "qqwref/diophantine-z-q",
+          "url": "https://github.com/qqwref/diophantine-z-q",
+          "note": "qqwref's copy of the repository, with the simplified construction."
+        }
+      ],
+      "bestHandle": "z-in-q-version-2"
     }
   ],
   "followups": [

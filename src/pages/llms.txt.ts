@@ -21,7 +21,7 @@ ${problemLinks.map(([slug,title])=>`- [${title}](${siteOrigin}/${slug}): bounds,
 
 These rows track results that improve a bound. Most rows start from a bound in OpenAI's October 6, 2026 release; a row with a classic baseline starts from a published paper. A listed result is Claimed unless its row names a review repository: ${reviewRules.join('; ')||'no row names one'}. Claimed means its authors published it, and we have not checked it.
 
-${otherBounds.families.map(f=>`- [${f.name}](${siteOrigin}/other/${f.slug}): the ${'label' in f.baseline&&f.baseline.label?f.baseline.label.toLowerCase():'OpenAI baseline'}, improvements with their evidence levels and relevant repositories.`).join('\n')}
+${otherBounds.families.map(f=>`- [${f.name}](${siteOrigin}/other/${f.slug}): ${!f.baseline?'the results':`the ${'label' in f.baseline&&f.baseline.label?f.baseline.label.toLowerCase():'OpenAI baseline'}, improvements`} with their evidence levels and relevant repositories.`).join('\n')}
 
 ## Race boards
 

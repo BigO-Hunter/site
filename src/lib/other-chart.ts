@@ -12,7 +12,7 @@ type Author = {name: string; avatar?: string};
 type Claim = {handle: string; display: string; value: string; bound: string; date: string; dateKind?: string; url: string;
   evidence?: string; agent?: boolean; authors: Author[]};
 type Family = {direction: string; claims: Claim[];
-  baseline: {label?: string; value: string; display?: string; exactValue: string; bound: string; url: string; date: string}};
+  baseline?: {label?: string; value: string; display?: string; exactValue: string; bound: string; url: string; date: string}};
 
 const fraction = (text: string) => /^\s*(\d+)\s*\/\s*(\d+)\s*$/.exec(text);
 const whole = (text: string) => /^\s*(\d+)\s*$/.exec(text);
@@ -40,7 +40,7 @@ export function claimScore(claim: Pick<Claim, 'display' | 'value'>): string | nu
 }
 
 // The classic bound for the dashed line, or undefined for a row whose baseline is OpenAI's release (it is a row).
-const classicNumber = (family: Family) => otherClaimNumber({display: family.baseline.display ?? family.baseline.value, value: family.baseline.exactValue});
+const classicNumber = (baseline: NonNullable<Family['baseline']>) => otherClaimNumber({display: baseline.display ?? baseline.value, value: baseline.exactValue});
 
 // `integer`: every point and the classic bound are whole numbers, so the axis shows whole-number ticks only.
 // A unique id per table row. One author has several rows (one handle), and chartRecords starts a new step only when
@@ -66,7 +66,7 @@ export function otherChart(family: Family, reviewed: (claim: object) => boolean,
   const scores = rows.map(claimScore);
   const ids = otherChartIds(rows);
   if (!rows.length || scores.some(s => s === null)) return undefined;
-  const classic = isClassicBaseline(family.baseline) ? classicNumber(family) : undefined;
+  const classic = family.baseline && isClassicBaseline(family.baseline) ? classicNumber(family.baseline) : undefined;
   if (isClassicBaseline(family.baseline) && (classic === null || classic === undefined)) return undefined;
   const entries = rows.flatMap((claim, i): ChartEntry[] => {
     if (claim.dateKind === 'snapshot') return [];
@@ -77,6 +77,6 @@ export function otherChart(family: Family, reviewed: (claim: object) => boolean,
       isBreakthrough: isTableBreakthrough(family as never, claim), avatar: author?.avatar, initials: initials(author?.name ?? '')}];
   });
   return {entries, higher: family.direction === 'higher', classic: classic ?? undefined,
-    classicBound: classic === undefined ? undefined : family.baseline.bound, omitted: rows.length - entries.length,
+    classicBound: classic === undefined ? undefined : family.baseline?.bound, omitted: rows.length - entries.length,
     integer: entries.every(e => /^\d+$/.test(e.score)) && (classic === undefined || classic === null || Number.isInteger(classic))};
 }

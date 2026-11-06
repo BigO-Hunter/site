@@ -15,7 +15,7 @@ import {otherReviewPrUrl, breakthroughLabel, breakthroughDefinition, type OtherC
 export function getStaticPaths(){return data.families.map(family=>({params:{slug:family.slug},props:{family}}));}
 const {family:f}=Astro.props;
 const board=boardUrl('other-'+f.slug);
-const baselineLabel=('label' in f.baseline&&f.baseline.label)||'OpenAI baseline';
+const baselineLabel=(f.baseline&&'label' in f.baseline&&f.baseline.label)||'OpenAI baseline';
 const hasLean=f.claims.some(c=>c.evidence==='lean-verified');
 // A maintainer rerun of our verifier made a claim Lean Verified (applyMaintainer in other-merge.ts); its level links the receipt page.
 const levelUrl=(c:{url:string})=>(c as {evidenceUrl?:string}).evidenceUrl??c.url;
@@ -33,8 +33,8 @@ const chart=otherChart(f,c=>Boolean(reviewUrl(c)),tex=>math(tex));
 <Layout title={f.name}>
   {'nameMath' in f&&f.nameMath?<h1 set:html={inlineMath(f.nameMath)}/>:<h1>{f.name}</h1>}
   <p set:html={inlineMath(f.statement)}/>
-  {/* A classic baseline (a published paper) carries its own label and only its year. */}
-  {'label' in f.baseline&&f.baseline.label?<p>{baselineLabel}: <a href={f.baseline.url} target="_blank" rel="noopener" set:html={math(f.baseline.display ?? f.baseline.value)}/>, {/^\d{4}$/.test(f.baseline.date)?<>published{'by' in f.baseline&&f.baseline.by&&<> by {f.baseline.by}</>} in {f.baseline.date}</>:<>released <time datetime={f.baseline.date} data-local-datetime>{localTimeFallback(f.baseline.date)}</time></>}.</p>:<p>This race starts from OpenAI's result, released <time datetime={f.baseline.date} data-local-datetime>{localTimeFallback(f.baseline.date)}</time>. It is the row marked {breakthroughLabel} in the table.</p>}
+  {/* A classic baseline (a published paper) carries its own label and only its year. A row with no baseline shows none. */}
+  {!f.baseline?null:'label' in f.baseline&&f.baseline.label?<p>{baselineLabel}: <a href={f.baseline.url} target="_blank" rel="noopener" set:html={math(f.baseline.display ?? f.baseline.value)}/>, {/^\d{4}$/.test(f.baseline.date)?<>published{'by' in f.baseline&&f.baseline.by&&<> by {f.baseline.by}</>} in {f.baseline.date}</>:<>released <time datetime={f.baseline.date} data-local-datetime>{localTimeFallback(f.baseline.date)}</time></>}.</p>:<p>This race starts from OpenAI's result, released <time datetime={f.baseline.date} data-local-datetime>{localTimeFallback(f.baseline.date)}</time>. It is the row marked {breakthroughLabel} in the table.</p>}
   {repo?<ul class="evidence-rules">
     <li><strong>What counts as <a href="/about#evidence-levels" class="human-verified">Human Verified</a>:</strong> A result is Human Verified when <a href={repo.url} target="_blank" rel="noopener">{repo.name}</a>, an independently owned repository, merges its pull request. The level label links to the merged pull request.</li>
     <li><strong>What counts as <a href="/about#evidence-levels" class="claimed">Claimed</a>:</strong> Any other published result, including an open pull request to that repository. Its authors published it, and we have not checked it.</li>

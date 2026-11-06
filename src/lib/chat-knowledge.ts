@@ -11,7 +11,7 @@ export interface OtherBoundsData {
   checkedAt: string;
   families: {
     family?: string; slug: string; name: string; quantity: string; direction: string; statement: string; bestHandle: string;
-    baseline: {bound: string; url: string; date: string; label?: string; by?: string};
+    baseline?: {bound: string; url: string; date: string; label?: string; by?: string};
     reviewRepository?: OtherReviewRepository;
     claims: {handle: string; bound: string; value: string; display: string; note: string; url: string; date: string;
       evidence: string; review?: OtherClaimReview; proofScope: string; authors: {name: string}[]}[];
@@ -53,8 +53,8 @@ function otherBoundRows(data: OtherBoundsData) {
       path: '/other/' + f.slug, title: f.name, aliases: otherBoundAliases(f), ...(f.family ? {openaiFamily: f.family} : {}),
       rankedQuantity: f.quantity, better: f.direction === 'higher' ? 'A higher value is better.' : 'A lower value is better.',
       statement: f.statement,
-      baseline: {kind: f.baseline.label ?? 'OpenAI baseline', bound: f.baseline.bound, source: f.baseline.url, date: f.baseline.date.slice(0, 10),
-        ...(f.baseline.by ? {authors: f.baseline.by} : {})},
+      baseline: f.baseline ? {kind: f.baseline.label ?? 'OpenAI baseline', bound: f.baseline.bound, source: f.baseline.url, date: f.baseline.date.slice(0, 10),
+        ...(f.baseline.by ? {authors: f.baseline.by} : {})} : null,
       ...(f.reviewRepository ? {reviewRepository: {name: f.reviewRepository.name, url: f.reviewRepository.url,
         rule: `A result is Human Verified when ${f.reviewRepository.name} merges its pull request. A result in an open pull request is Claimed.`}} : {}),
       current: {bound: best.bound, exactValue: best.value, conditions: best.note, evidence: evidenceName(best.evidence as EvidenceLevel),

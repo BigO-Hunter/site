@@ -31,7 +31,7 @@ test('a row score is its exact fraction or integer, else the number the ranking 
 test('a page has a chart exactly when every row of its table, and a classic baseline, has a number', () => {
   for (const f of families) {
     const rows = otherTableRows(f).map(r => r.claim);
-    const classic = f.baseline.label ? otherClaimNumber({display: f.baseline.display ?? f.baseline.value, value: f.baseline.exactValue}) : 0;
+    const classic = f.baseline?.label ? otherClaimNumber({display: f.baseline.display ?? f.baseline.value, value: f.baseline.exactValue}) : 0;
     assert.equal(otherChart(f, reviewed) !== undefined, rows.every(c => claimScore(c) !== null) && classic !== null, f.slug);
   }
 });

@@ -5,6 +5,8 @@
 // A row with a Classic baseline (a published paper) keeps that baseline above the table; its agent breakthrough is its
 // first claim marked agent. Only the table shows the baseline row: the leader, the landing page, chat-knowledge and
 // the records feed read the claims, so the race-start row never posts.
+// A row with no baseline (no bound existed before its first claim, as for Z in Q) shows no baseline; like a row with a
+// Classic baseline, its agent breakthrough is its first claim marked agent.
 import {otherClaimNumber, parseDegreeClaim, rankOtherClaims} from './other-rank.ts';
 
 type Baseline = {label?: string; value: string; display?: string; exactValue: string; bound: string; url: string; date: string};
@@ -12,10 +14,12 @@ type Claim = {handle: string; display: string; value: string; date: string; evid
 export type BaselineClaim = {handle: string; display: string; value: string; bound: string; date: string; dateSource: string; dateKind: string;
   url: string; evidence: 'claimed'; note: string; proofScope: string; authors: {name: string; url: string}[]; breakthrough: true};
 
-export const isClassicBaseline = (baseline: {label?: string}) => Boolean(baseline.label);
+export const isClassicBaseline = (baseline: {label?: string} | undefined) => Boolean(baseline?.label);
+// A baseline without a label is OpenAI's release, shown as the row's Agent breakthrough.
+export const isOpenAIBaseline = (baseline: {label?: string} | undefined) => baseline !== undefined && !baseline.label;
 
-export function baselineClaim(baseline: Baseline): BaselineClaim | undefined {
-  if (isClassicBaseline(baseline)) return undefined;
+export function baselineClaim(baseline: Baseline | undefined): BaselineClaim | undefined {
+  if (!baseline || !isOpenAIBaseline(baseline)) return undefined;
   return {handle: 'openai-baseline', display: baseline.display ?? baseline.value, value: baseline.exactValue, bound: baseline.bound,
     date: baseline.date, dateSource: baseline.url, dateKind: 'first-stated', url: baseline.url, evidence: 'claimed', note: '',
     proofScope: 'A written proof in OpenAI\'s preprint, released with the start of this race. We have not checked a Lean proof of it.',
@@ -26,7 +30,7 @@ export function baselineClaim(baseline: Baseline): BaselineClaim | undefined {
 const byValue = (claims: Pick<Claim, 'display' | 'value'>[]) =>
   claims.every(c => parseDegreeClaim(c.display) !== null) || claims.every(c => otherClaimNumber(c) !== null);
 
-export function otherTableRows<C extends Claim>(family: {baseline: Baseline; claims: C[]; direction: string}): {claim: C | BaselineClaim; rank: number; tie: boolean}[] {
+export function otherTableRows<C extends Claim>(family: {baseline?: Baseline; claims: C[]; direction: string}): {claim: C | BaselineClaim; rank: number; tie: boolean}[] {
   const base = baselineClaim(family.baseline);
   if (!base) return rankOtherClaims(family.claims, family.direction);
   // In date order, as the claims are: of equal rows at one level the earlier ranks first.
@@ -38,9 +42,9 @@ export function otherTableRows<C extends Claim>(family: {baseline: Baseline; cla
 
 // The claim that the table labels Agent breakthrough: the OpenAI baseline row, or on a row with a Classic baseline its
 // first claim marked agent.
-export function isTableBreakthrough(family: {baseline: {label?: string; value: string}; claims: Claim[]}, claim: object): boolean {
+export function isTableBreakthrough(family: {baseline?: {label?: string; value: string}; claims: Claim[]}, claim: object): boolean {
   if ('breakthrough' in claim && claim.breakthrough === true) return true;
-  if (!isClassicBaseline(family.baseline)) return false;
+  if (isOpenAIBaseline(family.baseline)) return false;
   const first = family.claims.filter(c => c.agent).sort((a, b) => Date.parse(a.date) - Date.parse(b.date))[0];
   return first !== undefined && first === claim;
 }

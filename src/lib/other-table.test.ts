@@ -9,19 +9,20 @@ import {isVisibleAtEvidence} from './evidence.ts';
 const claim = (handle: string, value: string, date: string, evidence = 'claimed', agent = false) => ({handle, value, display: value, date, evidence, agent});
 const openai = (value: string) => ({value, exactValue: value, bound: value, url: 'https://github.com/openai/math', date: '2026-10-06T14:58:00-07:00'});
 
-test('every row with an OpenAI baseline shows it once, as its Agent breakthrough; a Classic baseline row has no such row', () => {
+test('every row with an OpenAI baseline shows it once, as its Agent breakthrough; a Classic baseline row, or a row with no baseline, has no such row', () => {
   for (const family of data.families as any[]) {
+    const openai = family.baseline !== undefined && !family.baseline.label;
     const rows = otherTableRows(family);
     const base = rows.filter(r => 'breakthrough' in r.claim);
-    assert.equal(rows.length, family.claims.length + (family.baseline.label ? 0 : 1), family.slug);
-    assert.equal(base.length, family.baseline.label ? 0 : 1, family.slug);
-    if (!family.baseline.label) {
+    assert.equal(rows.length, family.claims.length + (openai ? 1 : 0), family.slug);
+    assert.equal(base.length, openai ? 1 : 0, family.slug);
+    if (openai) {
       assert.equal((base[0].claim as {authors: {name: string}[]}).authors[0].name, 'OpenAI', family.slug);
       assert.equal(base[0].claim.evidence, 'claimed', family.slug);
     }
     // The claims keep their order around it.
     assert.deepEqual(rows.map(r => r.claim).filter(c => !('breakthrough' in c)), rankOtherClaims(family.claims, family.direction).map(r => r.claim), family.slug);
-    assert.equal(rows.filter(r => isTableBreakthrough(family, r.claim)).length, family.baseline.label && !family.claims.some((c: any) => c.agent) ? 0 : 1, family.slug);
+    assert.equal(rows.filter(r => isTableBreakthrough(family, r.claim)).length, !openai && !family.claims.some((c: any) => c.agent) ? 0 : 1, family.slug);
   }
 });
 
