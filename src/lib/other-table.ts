@@ -10,7 +10,7 @@
 import {otherClaimNumber, parseDegreeClaim, rankOtherClaims} from './other-rank.ts';
 
 type Baseline = {label?: string; value: string; display?: string; exactValue: string; bound: string; url: string; date: string};
-type Claim = {handle: string; display: string; value: string; date: string; evidence?: string; agent?: boolean};
+type Claim = {handle: string; display: string; value: string; date: string; evidence?: string; agent?: boolean; baseline?: boolean};
 export type BaselineClaim = {handle: string; display: string; value: string; bound: string; date: string; dateSource: string; dateKind: string;
   url: string; evidence: 'claimed'; note: string; proofScope: string; authors: {name: string; url: string}[]; breakthrough: true};
 
@@ -31,7 +31,9 @@ const byValue = (claims: Pick<Claim, 'display' | 'value'>[]) =>
   claims.every(c => parseDegreeClaim(c.display) !== null) || claims.every(c => otherClaimNumber(c) !== null);
 
 export function otherTableRows<C extends Claim>(family: {baseline?: Baseline; claims: C[]; direction: string; rankBy?: string[]}): {claim: C | BaselineClaim; rank: number; tie: boolean}[] {
-  const base = baselineClaim(family.baseline);
+  // A claim with `baseline: true` is OpenAI's baseline result itself, listed as a claim so that a maintainer rerun can
+  // bind to it (van-der-waerden, task 55f01df6): it takes the place of the baseline row.
+  const base = family.claims.some(c => c.baseline) ? undefined : baselineClaim(family.baseline);
   if (!base) return rankOtherClaims(family.claims, family.direction, family.rankBy);
   // In date order, as the claims are: of equal rows at one level the earlier ranks first.
   const at = family.claims.findIndex(c => Date.parse(c.date) > Date.parse(base.date));
@@ -40,10 +42,11 @@ export function otherTableRows<C extends Claim>(family: {baseline?: Baseline; cl
   return [...rankOtherClaims(family.claims, family.direction), {claim: base, rank: family.claims.length + 1, tie: false}];
 }
 
-// The claim that the table labels Agent breakthrough: the OpenAI baseline row, or on a row with a Classic baseline its
+// The claim that the table labels Agent breakthrough: the OpenAI baseline row (or the claim that stands for it), or on a row with a Classic baseline its
 // first claim marked agent.
 export function isTableBreakthrough(family: {baseline?: {label?: string; value: string}; claims: Claim[]}, claim: object): boolean {
   if ('breakthrough' in claim && claim.breakthrough === true) return true;
+  if ('baseline' in claim && claim.baseline === true && isOpenAIBaseline(family.baseline)) return true;
   if (isOpenAIBaseline(family.baseline)) return false;
   const first = family.claims.filter(c => c.agent).sort((a, b) => Date.parse(a.date) - Date.parse(b.date))[0];
   return first !== undefined && first === claim;

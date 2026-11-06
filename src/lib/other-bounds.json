@@ -2170,6 +2170,30 @@
       },
       "claims": [
         {
+          "author": "OpenAI",
+          "handle": "openai",
+          "agent": true,
+          "baseline": true,
+          "value": "1/100000",
+          "display": "1/100000",
+          "date": "2026-10-06T14:58:00-07:00",
+          "dateSource": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf",
+          "dateKind": "first-stated",
+          "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf",
+          "lean": true,
+          "leanNote": "Yes. OpenAI's repository supplies a Lean 4 proof (Lean v4.34.1, Mathlib commit d13f23b7) of its own statement. We have not rerun it yet.",
+          "evidence": "claimed",
+          "note": "OpenAI's result, from its preprint of 23 September 2026 in its release of 6 October 2026, at the start of this race.",
+          "authors": [
+            {
+              "name": "OpenAI",
+              "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf"
+            }
+          ],
+          "proofScope": "A written proof in OpenAI's preprint. A Lean 4 proof is in openai/math (folder lean/OAI/Combinatorics/ProgressionColoring, commit 1581d4cb): its theorem OAI.QuantitativeVanDerWaerden.uniform_lower_bound states \\(W_r(k)>k^{k\\lfloor\\log_2r\\rfloor/100000}\\) for all large \\(k\\), uniformly in \\(r\\ge 2\\), against OpenAI's own statement file. We have not rerun it yet.",
+          "bound": "W_r(k)>k^{k\\lfloor\\log_2r\\rfloor/100000}"
+        },
+        {
           "author": "Rohan Arun",
           "handle": "rohanarun",
           "value": "1/25",

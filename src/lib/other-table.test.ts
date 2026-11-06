@@ -11,7 +11,8 @@ const openai = (value: string) => ({value, exactValue: value, bound: value, url:
 
 test('every row with an OpenAI baseline shows it once, as its Agent breakthrough; a Classic baseline row, or a row with no baseline, has no such row', () => {
   for (const family of data.families as any[]) {
-    const openai = family.baseline !== undefined && !family.baseline.label;
+    // A row whose OpenAI baseline is also listed as a claim (baseline: true) shows that claim in its place.
+    const openai = family.baseline !== undefined && !family.baseline.label && !family.claims.some((c: any) => c.baseline);
     const rows = otherTableRows(family);
     const base = rows.filter(r => 'breakthrough' in r.claim);
     assert.equal(rows.length, family.claims.length + (openai ? 1 : 0), family.slug);
@@ -22,7 +23,7 @@ test('every row with an OpenAI baseline shows it once, as its Agent breakthrough
     }
     // The claims keep their order around it.
     assert.deepEqual(rows.map(r => r.claim).filter(c => !('breakthrough' in c)), rankOtherClaims(family.claims, family.direction, family.rankBy).map(r => r.claim), family.slug);
-    assert.equal(rows.filter(r => isTableBreakthrough(family, r.claim)).length, !openai && !family.claims.some((c: any) => c.agent) ? 0 : 1, family.slug);
+    assert.equal(rows.filter(r => isTableBreakthrough(family, r.claim)).length, !openai && !family.claims.some((c: any) => c.agent || c.baseline) ? 0 : 1, family.slug);
   }
 });
 
@@ -56,4 +57,15 @@ test('the evidence filters of an Other bounds table hide rows by their shown lev
   assert.deepEqual(visible(['lean-verified', 'human-verified', 'claimed']), ['b:1', 'a:2', 'openai-baseline:3']);
   assert.deepEqual(visible(['lean-verified']), ['b:1', 'openai-baseline:3']);
   assert.deepEqual(visible([]), ['openai-baseline:3']);
+});
+
+test('a claim marked baseline stands for the OpenAI baseline row: one row, the Agent breakthrough (van-der-waerden)', () => {
+  const family = (data.families as any[]).find(f => f.slug === 'van-der-waerden');
+  const rows = otherTableRows(family);
+  assert.equal(rows.length, family.claims.length);
+  assert.equal(rows.filter(r => 'breakthrough' in r.claim).length, 0);
+  const openai = rows.find(r => r.claim.handle === 'openai')!;
+  assert.equal(openai.claim.value, family.baseline.exactValue);
+  assert.equal(rows.at(-1)!.claim.handle, 'openai');
+  assert.deepEqual(rows.filter(r => isTableBreakthrough(family, r.claim)).map(r => r.claim.handle), ['openai']);
 });
