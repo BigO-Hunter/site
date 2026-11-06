@@ -1981,5 +1981,21 @@
     "authors": [
       "CubeJerry"
     ]
+  },
+  {
+    "key": "[\"other-z-diophantine-in-q\",\"z-in-q-version-6:962\",\"962\",\"attained\"]:record",
+    "text": "**New claim** | **Z is Diophantine in Q** | `962 variables` | by Stefan Baranczuk, Jose Brox, Gabe Conant, Sohail Farhangi, James Freitag, Elliot Glazer, Jennifer Park and Caroline Terry | Claimed | [bigospeedrun.com/other/z-diophantine-in-q](https://bigospeedrun.com/other/z-diophantine-in-q)",
+    "x_text": "New claim!\n\nProblem: Z is Diophantine in Q\nNew value: 962 variables\nPlayers: Stefan Baranczuk, Jose Brox, Gabe Conant, Sohail Farhangi, James Freitag, Elliot Glazer, Jennifer Park, Caroline Terry\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-06T20:33:27.399Z",
+    "authors": [
+      "Stefan Baranczuk",
+      "Jose Brox",
+      "Gabe Conant",
+      "Sohail Farhangi",
+      "James Freitag",
+      "Elliot Glazer",
+      "Jennifer Park",
+      "Caroline Terry"
+    ]
   }
 ]
