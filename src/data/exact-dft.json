@@ -634,7 +634,9 @@
           "url": "https://github.com/HalitZiyaKARTAL"
         }
       ],
-      "predecessors": [],
+      "predecessors": [
+        "https://github.com/bigospeedrun/verifier/pull/91"
+      ],
       "submission_url": "https://github.com/bigospeedrun/verifier/pull/156",
       "source_commit": "da94a2a6f593caa1f534f1ab1c84b88ff5d74906",
       "artifact": {
@@ -1328,6 +1330,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/pull/156",
       "direct_submission": true,
       "route": "pull_request",
+      "credit_note": "Halit Ziya KARTAL raises the proved saving to 0.0031415926 in their own Lean Verified 0.00312780997 proof by changing its controller to Ali Romman's binary query tree from CrocSwap's integer-multiplication repository, with the thin query that Cinna Davis built. The supplier, the engine and the tensor-power method come from that proof: the construction is Jacob Sussman's.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41986137747",
       "verification": "passed"
     },

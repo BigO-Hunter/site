@@ -164,6 +164,10 @@
         "darkhipo"
       ],
       "text": "The 19-move construction and its card certificate are shjvandekamp's (shjvandekamp/math@64e7eb1, 2026-10-15); MultiAgency swarm's package checks it in Lean."
+    },
+    "direct-pr-156": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/pull/91",
+      "text": "Halit Ziya KARTAL raises the proved saving to 0.0031415926 in their own Lean Verified 0.00312780997 proof by changing its controller to Ali Romman's binary query tree from CrocSwap's integer-multiplication repository, with the thin query that Cinna Davis built. The supplier, the engine and the tensor-power method come from that proof: the construction is Jacob Sussman's."
     }
   },
   "withdrawn": {
