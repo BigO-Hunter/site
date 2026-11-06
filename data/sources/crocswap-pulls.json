@@ -131843,7 +131843,7 @@
     "title": "Prove restored dirty helpers preserve square-zero query capacity (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:53:18Z",
-    "updated_at": "2026-11-06T14:01:45Z",
+    "updated_at": "2026-11-06T17:10:22Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131999,6 +131999,27 @@
     },
     "head": {
       "sha": "2081246a26e4bfbb90e742af0275209e2e2623b7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6808,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6808",
+    "title": "Prove two helpers suffice and are necessary for six query targets",
+    "state": "open",
+    "created_at": "2026-11-06T17:07:24Z",
+    "updated_at": "2026-11-06T17:07:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "518351a389e32e2ccdf0a1ca55580e9c60d65492"
     },
     "base": {
       "ref": "main"
