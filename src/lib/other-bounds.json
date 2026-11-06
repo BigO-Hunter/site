@@ -2181,7 +2181,7 @@
           "dateKind": "first-stated",
           "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf",
           "lean": true,
-          "leanNote": "Yes. OpenAI's repository supplies a Lean 4 proof (Lean v4.34.1, Mathlib commit d13f23b7) of its own statement. We have not rerun it yet.",
+          "leanNote": "Yes. OpenAI's repository supplies a Lean 4 proof (Lean v4.34.1, Mathlib commit d13f23b7) of its own statement. Our verifier rebuilt it from source and checked it with the Lean kernel. It uses only the standard axioms.",
           "evidence": "claimed",
           "note": "OpenAI's result, from its preprint of 23 September 2026 in its release of 6 October 2026, at the start of this race.",
           "authors": [
@@ -2190,7 +2190,7 @@
               "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf"
             }
           ],
-          "proofScope": "A written proof in OpenAI's preprint. A Lean 4 proof is in openai/math (folder lean/OAI/Combinatorics/ProgressionColoring, commit 1581d4cb): its theorem OAI.QuantitativeVanDerWaerden.uniform_lower_bound states \\(W_r(k)>k^{k\\lfloor\\log_2r\\rfloor/100000}\\) for all large \\(k\\), uniformly in \\(r\\ge 2\\), against OpenAI's own statement file. We have not rerun it yet.",
+          "proofScope": "A written proof in OpenAI's preprint. A Lean 4 proof is in openai/math (folder lean/OAI/Combinatorics/ProgressionColoring, commit 1581d4cb): its theorem OAI.QuantitativeVanDerWaerden.uniform_lower_bound states \\(W_r(k)>k^{k\\lfloor\\log_2r\\rfloor/100000}\\) for all large \\(k\\), uniformly in \\(r\\ge 2\\). Our verifier rebuilt it at commit 1581d4cb and checked this theorem against OpenAI's own statement file. It uses only the axioms propext, Classical.choice and Quot.sound.",
           "bound": "W_r(k)>k^{k\\lfloor\\log_2r\\rfloor/100000}"
         },
         {

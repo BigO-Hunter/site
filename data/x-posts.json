@@ -1170,5 +1170,10 @@
     "status": "posted",
     "at": "2026-11-06T22:34:38.366Z",
     "id": "2118834469599916508"
+  },
+  "[\"other-van-der-waerden\",\"openai:1/100000\",\"1/100000\",\"attained\"]:lean": {
+    "status": "skipped",
+    "at": "2026-11-06T21:55:00.000Z",
+    "reason": "OpenAI's own proof, rerun by a maintainer run: Discord only, no X post (Lead, 2026-11-06)"
   }
 }
