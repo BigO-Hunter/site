@@ -16,3 +16,9 @@ test('a credit name replaces the GitHub profile name of its login, also when the
     {name: 'MultiAgency swarm', login: 'darkhipo', url: 'https://github.com/darkhipo', twitterUsername: undefined, avatar: '/avatars/darkhipo-0123456789.png'});
   assert.equal(authorFromProfile({name: 'x', url: 'https://github.com/someone'}, {someone: {login: 'someone', name: 'Some One', twitter_username: null}}).name, 'Some One');
 });
+
+test('the credit of jv1000 follows the paper, also when the profile has another name or none', async () => {
+  const {authorFromProfile} = await import('./record-links.ts');
+  assert.equal(authorFromProfile({name: 'x', url: 'https://github.com/jv1000'}, {jv1000: {login: 'jv1000', name: 'UltrontheCat', twitter_username: null}}).name, 'Jennifer Voitle');
+  assert.equal(authorFromProfile({name: 'x', url: 'https://github.com/jv1000'}, {}).name, 'Jennifer Voitle');
+});
