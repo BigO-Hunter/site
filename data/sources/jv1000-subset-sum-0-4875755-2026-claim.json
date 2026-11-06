@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-11-06T20:16:03Z",
+  "repo": "jv1000/subset-sum",
+  "source_commit": "6026da70f13d677b630cb1afd8fb10ee7a7f6010",
+  "source_url": "https://github.com/jv1000/subset-sum/blob/6026da70f13d677b630cb1afd8fb10ee7a7f6010/exponent-2026/paper/rev8/paper_2026-11-06_rev8g.tex#L77-L79",
+  "claim_date_commit": "7d59afbd7b156e1e1825b37bedacffae0f504532",
+  "publication_date": "2026-11-04T07:15:59Z",
+  "publication_date_basis": "The repository became public 2026-11-04T07:11:57Z (GitHub PublicEvent). Its first commit 7d59afbd (dated 2026-11-04T07:15:59Z) already holds exponent-2026/README.md, which states T = 0.4875754036 and O(2^(0.4875755n)), and lab_notebook/candidate_base.json; both files are unchanged at the pinned commit. GitHub's event log has no push event for that commit, so the date is the commit date, not a confirmed push time. The later snapshots only add files and carry OpenTimestamps stamps. The Discord post came 2026-11-06T14:44:19Z.",
+  "score": "975151/2000000",
+  "theorem": "Theorem 1, main result (paper_2026-11-06_rev8g.tex L77-L79)",
+  "model_check": "The conditional theorem is stated for a uniform randomized word-RAM algorithm that halts on every execution, answers correctly with probability at least 2/3, and uses O(2^(T'n)) word operations on every input of n integers whose bit lengths and target are at most n^c, for every fixed c, in the word-RAM model of the OpenAI paper (paper, Theorem 1 and Section 1). Source comparison, not a proof check; the word length is the OpenAI paper's and is not restated in the theorem.",
+  "files_not_copied": "The repository has no license file, so its files are not copied here. SHA-256 and Git blob ids of the files at the pinned commit:",
+  "files": {
+    "README.md": {
+      "sha256": "eb3d2683b1e44f1be3b4630caaa78f01a4745e1ff7cdef48a2e866be6e900438",
+      "git_blob": "c800dfac119cd6aeef99cd6184607cccfa68fa48"
+    },
+    "Voitle_SubsetSum_certified-0.48758_2026-11-06_rev8g.pdf": {
+      "sha256": "4fdc8cab2b3f9c83ee3a05815e6b27afda3d1825433051a03936f37e31aaec7e",
+      "git_blob": "4da14719dc48b387746c584932588227bedaccc2"
+    },
+    "exponent-2026/paper/rev8/paper_2026-11-06_rev8g.tex": {
+      "sha256": "18899a6e2146db3ba0e818decc4282d5c0857fb54a5d0d2474163c6e66b5e9bd",
+      "git_blob": "e2dc6fc1319bed7c9c70c64b738bcfe47c93bfc5"
+    },
+    "exponent-2026/README.md": {
+      "sha256": "2c2db9628a734c326dc9bcf6f8e9b4f3bd35ada66dbee54adcbb540efd466c77",
+      "git_blob": "11fbcfd8e5bf5551657c85df9d7ee18cea03a084"
+    },
+    "exponent-2026/TIMESTAMP.md": {
+      "sha256": "a34292d3056575fec00c3cc90e1bd62a12ecc0c81a8c451de7badf5910f83270",
+      "git_blob": "885355afcaab10b629f2d34c27da5805d3605b4a"
+    },
+    "exponent-2026/lab_notebook/candidate_base.json": {
+      "sha256": "599204b56f75857ce589a73175cf03e9fb3d4a7efaa477cc504c33e1af7298e3",
+      "git_blob": "1cce42ac92855e95c42dc61fc08921463fc26744"
+    },
+    "exponent-2026/lab_notebook/certify_base.py": {
+      "sha256": "ac369091cd9e8c9b579462f6fb6908570f4bd73f029b265b72ef9015b056d4db",
+      "git_blob": "895f76dd24a8d1afb5a5230069a3dc312f1737ff"
+    }
+  },
+  "verification": "Conditional on the non-numerical lemmas of the OpenAI paper and of Annanay Kapila's written proof (Base), the same premises as the Wharton 0.487676 and Bills 0.4876723 rows. The author certifies the 33 numerical conditions of Base's proof at new parameters with one asymmetric filter (16 cosine and 16 sine terms) in place of Base's 43 cosine-only filters, in ball arithmetic with at least two independent implementations, and re-derives Base's probabilistic core. The paper says it is not peer reviewed and claims no Lean proof and no unconditional theorem. The theorem gives O(2^(T'n)) for every T' > T = 0.4875754036 and, in particular, O(2^(0.4875755n)); T is tau_0 = 0.4875752036 plus 20 eps with eps = 1e-8 (paper, Section 8). The same paper also states a ternary-mask exponent 0.4873407528 that needs an unproved statement [S]; it is not part of the claim and is not listed. No Big O Speedrun proof check. Evidence remains Claimed.",
+  "credits": "Jennifer Voitle (GitHub jv1000), with Claude (Anthropic) and Astra (an OpenAI-based assistant) credited in the text, not as authors. Uses Annanay Kapila's construction (a-kapila/maths-proofs), which builds on OpenAI result #138, Subset Sum in Time O(2^(0.49n)). Related refinements: Joshua Wharton and Yanni Bills."
+}
