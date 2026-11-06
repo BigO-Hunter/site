@@ -1142,8 +1142,8 @@
     "id": "2118427792107016517"
   },
   "[\"other-catalan\",\"slitsey:400\",\"400\",\"attained\"]:record": {
-    "status": "unknown",
-    "at": "2026-11-06T00:34:33.022Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-06T00:34:34.763Z",
+    "id": "2118502265514242246"
   }
 }
