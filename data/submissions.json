@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-06T21:56:21Z",
+      "updated_at": "2026-11-06T22:42:24Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -128594,7 +128594,58 @@
       "checked_at": "2026-11-06",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "1479ccf2ec0bc29b7bf741a2d613d79e1f9ec19e",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6819,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Own private binary-format dispatch before native caller lockdown",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6819",
+      "submitted_at": "2026-11-06T22:34:52Z",
+      "updated_at": "2026-11-06T22:44:20Z",
+      "source_commit": "65b0c1b71e849cbbe2160c211811d18d43e25e55",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T22:34:52Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "65b0c1b71e849cbbe2160c211811d18d43e25e55",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6820,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Sharp recursive budget for hypothetical two-coordinate cut delivery",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6820",
+      "submitted_at": "2026-11-06T22:54:56Z",
+      "updated_at": "2026-11-06T23:09:10Z",
+      "source_commit": "bca4d4a90675b88b45d154935716c8eaecf15956",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T22:54:56Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "bca4d4a90675b88b45d154935716c8eaecf15956",
+      "claim_text": "63492c813888fb1feb2ee6c18332a6fc03d01d1b49ffa4faef85556492b7142b",
+      "claim_files": [
+        [
+          "added",
+          "research/coupled-cut-delivery-fee-budget/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "bca4d4a90675b88b45d154935716c8eaecf15956",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

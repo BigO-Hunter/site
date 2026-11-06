@@ -6477,7 +6477,7 @@
             "id": "openai:1/100000",
             "score": "1/100000",
             "relation": "attained",
-            "evidence": "Claimed",
+            "evidence": "Lean Verified",
             "authors": [
               "OpenAI"
             ],
@@ -7511,7 +7511,8 @@
     "[\"integer-multiplication\",\"crocswap-pr-6805\",\"165407/50000000\",\"attained\"]:record",
     "[\"other-z-diophantine-in-q\",\"z-in-q-version-2:12504\",\"12504\",\"attained\"]:record",
     "[\"other-z-diophantine-in-q\",\"z-in-q-version-6:962\",\"962\",\"attained\"]:record",
-    "[\"subset-sum\",\"jv1000-subset-sum-0-4875755-2026\",\"975151/2000000\",\"attained\"]:record"
+    "[\"subset-sum\",\"jv1000-subset-sum-0-4875755-2026\",\"975151/2000000\",\"attained\"]:record",
+    "[\"other-van-der-waerden\",\"openai:1/100000\",\"1/100000\",\"attained\"]:lean"
   ],
   "deferred": [
     {
