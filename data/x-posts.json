@@ -1150,5 +1150,10 @@
     "status": "skipped",
     "at": "2026-11-06T08:35:16.581Z",
     "reason": "Directed shortest paths: a row that a function row (classic Dijkstra or a paper) matches or beats at its density is no record (Lead, 2026-11-06): no X post"
+  },
+  "[\"other-prime-gaps\",\"romyar1:182\",\"182\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-06T14:35:05.479Z",
+    "reason": "reserved before API send"
   }
 }
