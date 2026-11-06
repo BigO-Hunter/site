@@ -80,7 +80,7 @@ test('every Other bounds row shows its best claim by the row direction', () => {
     const best = exactValue(leader.value) ?? displayed(leader.display);
     for (const claim of row.claims) {
       const value = exactValue(claim.value);
-      if (!value || claim === leader) continue;
+      if (!value || claim === leader || (row as {rankBy?: string[]}).rankBy) continue;
       // An exact rival needs a leader value to compare against.
       assert.ok(best, `${row.slug}: leader ${leader.value} does not parse, so it cannot be compared with ${claim.value}`);
       const order = compare(value, best) * (row.direction === 'higher' ? 1 : -1);

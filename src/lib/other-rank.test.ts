@@ -71,7 +71,7 @@ test('the live contingency tables row keeps its order', () => {
 // claim of its best handle. So the first rank of every row is its leader.
 test('on every Other bounds row, rank 1 is the leader', () => {
   for (const family of data.families) {
-    const ranked = rankOtherClaims(family.claims, family.direction);
+    const ranked = rankOtherClaims(family.claims, family.direction, (family as {rankBy?: string[]}).rankBy);
     const leader = otherBoundLeader(family)!;
     assert.equal(ranked.length, family.claims.length, family.slug);
     assert.ok(ranked.filter(r => r.rank === 1).some(r => r.claim === leader || (r.claim.value === leader.value && r.claim.handle === leader.handle)), `${family.slug}: rank 1 is not the leader ${leader.value}`);
@@ -113,10 +113,16 @@ test('a row with rankBy ranks by its measures in order, then evidence level, the
   assert.deepEqual(rankOtherClaims(claims, 'lower', ['degree', 'variables', 'terms']).map(r => r.claim.handle), ['d', 'b', 'e', 'c', 'a']);
   assert.deepEqual(rankOtherClaims(claims, 'lower').map(r => r.claim.handle), ['a', 'b', 'c', 'd', 'e'], 'without rankBy the display number ranks');
 });
-test('Z is Diophantine in Q ranks by degree first: the quartic leads, then qqwref, then the first construction', () => {
+test('a measure A*B^(X) in another base compares by its size in bits (the 64*3^(2^28) coefficient height)', () => {
+  const lt = (a: string, b: string) => assert.equal(compareMeasures({m: a}, {m: b}, ['m']), -1, `${a} < ${b}`);
+  lt('<2^80', '<2^9566673'); lt('<2^9566673', '64*3^(2^28)'); lt('64*3^(2^28)', '<2^(2^45)'); lt('<2^(2^86098382)', '<2^^7');
+  assert.equal(compareMeasures({m: '64*3^(2^28)'}, {m: '64*3^(2^28)'}, ['m']), 0);
+  assert.deepEqual(parseMeasure('3^(4)'), {magnitude: 81n, bound: false});
+  assert.deepEqual(parseMeasure('5*2^(3)'), {magnitude: 40n, bound: false});
+});
+test('Z is Diophantine in Q with the claims of 2026-11-06: quartics by variables, then the rest by degree bound', () => {
   const f = data.families.find(x => x.slug === 'z-diophantine-in-q')! as any;
-  assert.deepEqual(f.rankBy, ['degree', 'variables', 'terms', 'coefficient']);
-  assert.deepEqual(rankOtherClaims(f.claims as {handle: string; display: string; value: string; date: string}[], f.direction, f.rankBy).map(r => [r.claim.handle, r.rank]), [['z-in-q-version-2', 1], ['qqwref', 2], ['elliotglazer', 3]]);
-  assert.equal(otherBoundLeader(f)!.handle, 'z-in-q-version-2');
-  for (const c of f.claims) for (const name of f.rankBy) if (c.measures[name] !== undefined) assert.notEqual(parseMeasure(c.measures[name]), null, `${c.handle} ${name}`);
+  assert.deepEqual(rankOtherClaims(f.claims as {handle: string; display: string; value: string; date: string}[], f.direction, f.rankBy).map(r => [r.claim.handle, r.rank]),
+    [['z-in-q-version-6', 1], ['z-in-q-version-5', 2], ['josebrox-1315', 3], ['z-in-q-version-4', 4], ['z-in-q-version-3', 5], ['z-in-q-version-2', 6], ['josebrox-41', 7], ['qqwref', 8], ['elliotglazer', 9]]);
+  assert.equal(otherBoundLeader(f)!.handle, 'z-in-q-version-6');
 });

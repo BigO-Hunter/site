@@ -21,7 +21,7 @@ test('every row with an OpenAI baseline shows it once, as its Agent breakthrough
       assert.equal(base[0].claim.evidence, 'claimed', family.slug);
     }
     // The claims keep their order around it.
-    assert.deepEqual(rows.map(r => r.claim).filter(c => !('breakthrough' in c)), rankOtherClaims(family.claims, family.direction).map(r => r.claim), family.slug);
+    assert.deepEqual(rows.map(r => r.claim).filter(c => !('breakthrough' in c)), rankOtherClaims(family.claims, family.direction, family.rankBy).map(r => r.claim), family.slug);
     assert.equal(rows.filter(r => isTableBreakthrough(family, r.claim)).length, !openai && !family.claims.some((c: any) => c.agent) ? 0 : 1, family.slug);
   }
 });

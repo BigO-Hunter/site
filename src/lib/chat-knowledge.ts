@@ -52,7 +52,7 @@ function otherBoundRows(data: OtherBoundsData) {
     if (!best) throw new Error(`Other bounds row ${f.slug} has no current leader.`);
     return {
       path: '/other/' + f.slug, title: f.name, aliases: otherBoundAliases(f), ...(f.family ? {openaiFamily: f.family} : {}),
-      rankedQuantity: f.quantity, better: f.rankBy ? `Results rank by ${f.rankBy.join(', then ')}, each lower is better; the chart plots the ${f.quantity.replace(/\\text\{|\}/g, '')}.` : f.direction === 'higher' ? 'A higher value is better.' : 'A lower value is better.',
+      rankedQuantity: f.quantity, better: f.rankBy ? `Results rank by ${f.rankBy.join(', then ')}, each lower is better; the chart plots the ${f.quantity.replace(/\\text\{|\}/g, '')} of the results with the best ${f.rankBy[0]}.` : f.direction === 'higher' ? 'A higher value is better.' : 'A lower value is better.',
       statement: f.statement,
       baseline: f.baseline ? {kind: f.baseline.label ?? 'OpenAI baseline', bound: f.baseline.bound, source: f.baseline.url, date: f.baseline.date.slice(0, 10),
         ...(f.baseline.by ? {authors: f.baseline.by} : {})} : null,

@@ -3312,7 +3312,7 @@
       "nameMath": "\\(\\mathbb Z\\) is Diophantine in \\(\\mathbb Q\\)",
       "quantity": "\\text{number of variables}",
       "direction": "lower",
-      "statement": "A polynomial \\(P(q,w_1,\\dots,w_k)\\) with integer coefficients defines \\(\\mathbb Z\\) in \\(\\mathbb Q\\) when, for every rational number \\(q\\), \\(q\\) is an integer exactly when \\(P(q,w_1,\\dots,w_k)=0\\) for some rational numbers \\(w_1,\\dots,w_k\\). The polynomial must be explicit: a public list of its terms, or a public program that writes them out. Results rank by degree first, lower is better; then by the number of variables, \\(k+1\\); then by the number of nonzero terms; then by the largest absolute coefficient. A stated upper bound, such as degree below \\(2\\uparrow\\uparrow 7\\), counts as that value. Elliot Glazer expects that, with no limit on the degree, a definition with under 100 variables is within reach; the open question is then the fewest variables of a quartic. The chart plots the number of variables. Koenigsmann (2016) showed that \\(\\mathbb Q\\setminus\\mathbb Z\\) is Diophantine in \\(\\mathbb Q\\). Whether \\(\\mathbb Z\\) itself is Diophantine in \\(\\mathbb Q\\) was open, and Mazur's conjectures (1992) predicted that it is not.",
+      "statement": "A polynomial \\(P(q,w_1,\\dots,w_k)\\) with integer coefficients defines \\(\\mathbb Z\\) in \\(\\mathbb Q\\) when, for every rational number \\(q\\), \\(q\\) is an integer exactly when \\(P(q,w_1,\\dots,w_k)=0\\) for some rational numbers \\(w_1,\\dots,w_k\\). The polynomial must be explicit: a public list of its terms, or a public program that writes them out. Results rank by degree first, lower is better; then by the number of variables, \\(k+1\\); then by the number of nonzero terms; then by the largest absolute coefficient. A stated upper bound, such as degree below \\(2\\uparrow\\uparrow 7\\), counts as that value. Degree 4 is the lowest possible for one defining polynomial (Brox, and the Version 6 manuscript of Glazer and others), so among quartics the number of variables decides. Elliot Glazer expects that, with no limit on the degree, a definition with under 100 variables is within reach; the open question is then the fewest variables of a quartic. The chart plots the number of variables of the degree-4 results and of the first construction. Koenigsmann (2016) showed that \\(\\mathbb Q\\setminus\\mathbb Z\\) is Diophantine in \\(\\mathbb Q\\). Whether \\(\\mathbb Z\\) itself is Diophantine in \\(\\mathbb Q\\) was open, and Mazur's conjectures (1992) predicted that it is not.",
       "claims": [
         {
           "author": "Elliot Glazer with Astra 6, Sol 6.1 and Opus 5.5, with auditing from Fable 5.1",
@@ -3417,6 +3417,269 @@
             "terms": "135721",
             "coefficient": "685783949153203534233601"
           }
+        },
+        {
+          "author": "Gabe Conant, Sohail Farhangi, James Freitag, Elliot Glazer, Jenn Park and Caroline Terry",
+          "handle": "z-in-q-version-3",
+          "value": "9625",
+          "display": "9{,}625",
+          "date": "2026-11-06T14:01:17Z",
+          "dateSource": "https://github.com/elliotglazer/diophantine-z-q/commit/b19971ec",
+          "dateKind": "first-stated",
+          "url": "https://github.com/elliotglazer/diophantine-z-q/releases/tag/quartic-9625-version-3",
+          "lean": false,
+          "leanNote": "Incomplete. The main Lean theorem still contains sorry.",
+          "evidence": "claimed",
+          "note": "Version 3 of the manuscript. Degree 4, 82,476 nonzero terms, largest absolute coefficient 685,783,949,153,203,534,233,601, which is less than \\(2^{80}\\). The polynomial is public. Version 3 is a collaboration using the collective agentic notes of the six authors.",
+          "authors": [
+            {
+              "name": "Gabe Conant",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Sohail Farhangi",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "James Freitag",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Elliot Glazer",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Jenn Park",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Caroline Terry",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            }
+          ],
+          "proofScope": "A written proof in a manuscript, with no human review yet. A certificate check, published with the polynomial, shows that the polynomial is equivalent to the system of equations of the manuscript; it does not check the arithmetic argument. The Lean development is incomplete, so it is not a Lean proof of our statement.",
+          "bound": "9{,}625\\text{ variables}",
+          "measures": {
+            "degree": "4",
+            "variables": "9625",
+            "terms": "82476",
+            "coefficient": "685783949153203534233601"
+          },
+          "agent": true
+        },
+        {
+          "author": "Gabe Conant, Sohail Farhangi, James Freitag, Elliot Glazer, Jenn Park and Caroline Terry",
+          "handle": "z-in-q-version-4",
+          "value": "4973",
+          "display": "4{,}973",
+          "date": "2026-11-06T15:33:16Z",
+          "dateSource": "https://github.com/elliotglazer/diophantine-z-q/commit/bd3478d8",
+          "dateKind": "first-stated",
+          "url": "https://github.com/elliotglazer/diophantine-z-q/releases/tag/quartic-4973-version-4",
+          "lean": false,
+          "leanNote": "Incomplete. The main Lean theorem still contains sorry.",
+          "evidence": "claimed",
+          "note": "Version 4 of the manuscript. Degree 4, 72,925 nonzero terms, largest absolute coefficient 685,783,949,153,203,534,233,890, which is less than \\(2^{80}\\). Its complete list of terms, with every coefficient written out, is public (1.62 MB). The project uses the collective agentic notes of the six authors.",
+          "authors": [
+            {
+              "name": "Gabe Conant",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Sohail Farhangi",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "James Freitag",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Elliot Glazer",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Jenn Park",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Caroline Terry",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            }
+          ],
+          "proofScope": "A written proof in a manuscript, with no human review yet. A certificate check, published with the polynomial, shows that the polynomial is equivalent to the system of equations of the manuscript; it does not check the arithmetic argument. The Lean development is incomplete, so it is not a Lean proof of our statement.",
+          "bound": "4{,}973\\text{ variables}",
+          "measures": {
+            "degree": "4",
+            "variables": "4973",
+            "terms": "72925",
+            "coefficient": "685783949153203534233890"
+          },
+          "agent": true
+        },
+        {
+          "author": "Jose Brox",
+          "handle": "josebrox-41",
+          "value": "41",
+          "display": "41",
+          "date": "2026-11-06T16:33:15Z",
+          "dateSource": "https://x.com/josebrox/status/2118743525831631305",
+          "dateKind": "first-stated",
+          "url": "https://github.com/JoseBrox/diophantine-z-q_improvements/tree/main/research/phase3/finite_fibre/polynomial-41",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "Jose Brox's repository (paper author line: JUVa) gives this as its construction with the fewest variables. Its degree is at most \\(2^{9566673}\\) and its largest absolute coefficient at most \\(2^{2^{86098382}}\\), both stated upper bounds; the polynomial is given as a coefficient graph with 6,018 nodes, not as a list of terms, so its number of terms is not stated. It uses a prime-pattern theorem of Z.-W. Sun (arXiv 2610.20691). The repository calls its results conditional polynomial presentations: they take the arithmetic inputs of Elliot Glazer's construction and Sun's theorem as given. The repository says the research includes computer-assisted manuscript preparation and verification. The time shown is the X post; the files became public at 17:12 UTC.",
+          "authors": [
+            {
+              "name": "Jose Brox",
+              "url": "https://github.com/JoseBrox/diophantine-z-q_improvements"
+            }
+          ],
+          "proofScope": "A written proof in a manuscript in the repository, with no human review yet, conditional on the arithmetic inputs of the Glazer construction and on Sun's prime-pattern theorem. The repository's checks verify the algebra of the construction; they do not check the arithmetic. No Lean proof.",
+          "bound": "41\\text{ variables}",
+          "measures": {
+            "degree": "<2^9566673",
+            "variables": "41",
+            "coefficient": "<2^(2^86098382)"
+          }
+        },
+        {
+          "author": "Jose Brox",
+          "handle": "josebrox-1315",
+          "value": "1315",
+          "display": "1{,}315",
+          "date": "2026-11-06T16:33:15Z",
+          "dateSource": "https://x.com/josebrox/status/2118743525831631305",
+          "dateKind": "first-stated",
+          "url": "https://github.com/JoseBrox/diophantine-z-q_improvements/tree/main/research/phase3/quartic/quartic-direct-translated",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "Jose Brox's repository (paper author line: JUVa) gives this as its smallest quartic. Degree 4, 29,021 nonzero terms, largest absolute coefficient \\(64\\cdot 3^{2^{28}}\\) exactly. The polynomial is public, with its large coefficients written through a fixed constant \\(S=3^{2^{27}}\\). The repository calls its results conditional polynomial presentations: they take the arithmetic inputs of Elliot Glazer's construction as given. Its manuscript also proves that one defining polynomial must have degree at least 4. The repository says the research includes computer-assisted manuscript preparation and verification. The time shown is the X post; the files became public at 17:12 UTC.",
+          "authors": [
+            {
+              "name": "Jose Brox",
+              "url": "https://github.com/JoseBrox/diophantine-z-q_improvements"
+            }
+          ],
+          "proofScope": "A written proof in a manuscript in the repository, with no human review yet, conditional on the arithmetic inputs of the Glazer construction. The repository's checks verify the algebra of the construction; they do not check the arithmetic. No Lean proof.",
+          "bound": "1{,}315\\text{ variables}",
+          "measures": {
+            "degree": "4",
+            "variables": "1315",
+            "terms": "29021",
+            "coefficient": "64*3^(2^28)"
+          }
+        },
+        {
+          "author": "Stefan Baranczuk, Gabe Conant, Sohail Farhangi, James Freitag, Elliot Glazer, Jennifer Park and Caroline Terry",
+          "handle": "z-in-q-version-5",
+          "value": "1272",
+          "display": "1{,}272",
+          "date": "2026-11-06T17:10:13Z",
+          "dateSource": "https://github.com/elliotglazer/diophantine-z-q/commit/81de7e45",
+          "dateKind": "first-stated",
+          "url": "https://github.com/elliotglazer/diophantine-z-q/releases/tag/quartic-1272-version-5",
+          "lean": false,
+          "leanNote": "Incomplete. The main Lean theorem still contains sorry.",
+          "evidence": "claimed",
+          "note": "Version 5 of the manuscript. Degree 4, 48,001 nonzero terms, largest absolute coefficient \\(64\\cdot 3^{2^{28}}\\). The polynomial is public, with its large coefficients written through a fixed constant \\(S=3^{2^{27}}\\). The project uses the collective agentic notes of the seven authors.",
+          "authors": [
+            {
+              "name": "Stefan Baranczuk",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Gabe Conant",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Sohail Farhangi",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "James Freitag",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Elliot Glazer",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Jennifer Park",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Caroline Terry",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            }
+          ],
+          "proofScope": "A written proof in a manuscript, with no human review yet. A certificate check, published with the polynomial, shows that the polynomial is equivalent to the system of equations of the manuscript; it does not check the arithmetic argument. The Lean development is incomplete, so it is not a Lean proof of our statement.",
+          "bound": "1{,}272\\text{ variables}",
+          "measures": {
+            "degree": "4",
+            "variables": "1272",
+            "terms": "48001",
+            "coefficient": "64*3^(2^28)"
+          },
+          "agent": true
+        },
+        {
+          "author": "Stefan Baranczuk, Jose Brox, Gabe Conant, Sohail Farhangi, James Freitag, Elliot Glazer, Jennifer Park and Caroline Terry",
+          "handle": "z-in-q-version-6",
+          "value": "962",
+          "display": "962",
+          "date": "2026-11-06T17:51:20Z",
+          "dateSource": "https://github.com/elliotglazer/diophantine-z-q/commit/a9e834ba",
+          "dateKind": "first-stated",
+          "url": "https://github.com/elliotglazer/diophantine-z-q/releases/tag/quartic-962-version-6",
+          "lean": false,
+          "leanNote": "Incomplete. The main Lean theorem still contains sorry.",
+          "evidence": "claimed",
+          "note": "Version 6 of the manuscript. Degree 4, 55,409 nonzero terms, largest absolute coefficient \\(64\\cdot 3^{2^{28}}\\). The polynomial is public, with its large coefficients written through a fixed constant \\(S=3^{2^{27}}\\). It builds on a reconstruction of Jose Brox's public notes. The manuscript also proves, from those notes, that one defining polynomial must have degree at least 4. The project uses the collective agentic notes of the eight authors.",
+          "authors": [
+            {
+              "name": "Stefan Baranczuk",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Jose Brox",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Gabe Conant",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Sohail Farhangi",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "James Freitag",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Elliot Glazer",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Jennifer Park",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            },
+            {
+              "name": "Caroline Terry",
+              "url": "https://github.com/elliotglazer/diophantine-z-q"
+            }
+          ],
+          "proofScope": "A written proof in a manuscript, with no human review yet. A certificate check, published with the polynomial, shows that the polynomial is equivalent to the system of equations of the manuscript; it does not check the arithmetic argument. The Lean development is incomplete, so it is not a Lean proof of our statement.",
+          "bound": "962\\text{ variables}",
+          "measures": {
+            "degree": "4",
+            "variables": "962",
+            "terms": "55409",
+            "coefficient": "64*3^(2^28)"
+          },
+          "agent": true
         }
       ],
       "repos": [
@@ -3426,12 +3689,17 @@
           "note": "The manuscripts, both polynomials and their checks. The README states what the checks cover and that the Lean development is incomplete."
         },
         {
+          "name": "JoseBrox/diophantine-z-q_improvements",
+          "url": "https://github.com/JoseBrox/diophantine-z-q_improvements",
+          "note": "Jose Brox's constructions, their checks and his manuscript, with the degree-4 lower bound."
+        },
+        {
           "name": "qqwref/diophantine-z-q",
           "url": "https://github.com/qqwref/diophantine-z-q",
           "note": "qqwref's copy of the repository, with the simplified construction."
         }
       ],
-      "bestHandle": "z-in-q-version-2",
+      "bestHandle": "z-in-q-version-6",
       "rankBy": [
         "degree",
         "variables",

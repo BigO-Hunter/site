@@ -111,6 +111,17 @@ function parseMagnitude(text: string): Magnitude | null {
   if (tower) { let m: Magnitude = 2n; for (let i = 1; i < Number(tower[1]); i++) m = {exp: m}; return normal(m); }
   const power = /^2\^\(?(.+?)\)?$/.exec(text);
   if (power) { const inner = parseMagnitude(power[1]); return inner === null ? null : normal({exp: inner}); }
+  // A*B^(X) with another base ("64*3^(2^28)", the Version 5 and 6 quartics): its size is log2(A) + X log2(B), a plain
+  // number when that is at most 4096 bits, else a tower whose exponent is that logarithm rounded. The rounding is the
+  // same for equal text, so equal heights tie; it could misorder two heights within one bit of each other.
+  const product = /^(?:(\d+)\*)?(\d+)\^\(?(.+?)\)?$/.exec(text);
+  if (product) {
+    const a = BigInt(product[1] ?? '1'), b = BigInt(product[2]), x = parseMagnitude(product[3]);
+    if (x === null || b < 2n) return null;
+    if (typeof x !== 'bigint') return {exp: x};
+    const bits = Math.log2(Number(a)) + Number(x) * Math.log2(Number(b));
+    return bits <= 4096 ? a * b ** x : {exp: BigInt(Math.round(bits))};
+  }
   return null;
 }
 // 2^n with n at most 4096 is a plain whole number, so that "2^80" and a 24-digit coefficient compare exactly.

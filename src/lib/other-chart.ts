@@ -4,14 +4,14 @@
 // as +\infty, \log(20)/784 or A d^p has no point on an axis. Each point carries an exact score, so the chart ranks
 // by the rules of the Big O boards (ranking.ts), which give the order of the table for the same numbers.
 import {initials} from './avatars.ts';
-import {otherClaimNumber} from './other-rank.ts';
+import {otherClaimNumber, compareMeasures, type Measures} from './other-rank.ts';
 import {otherTableRows, isTableBreakthrough, isClassicBaseline, shownLevel} from './other-table.ts';
 import type {ChartEntry} from './chart.ts';
 
 type Author = {name: string; avatar?: string};
-type Claim = {handle: string; display: string; value: string; bound: string; date: string; dateKind?: string; url: string;
+type Claim = {handle: string; display: string; value: string; bound: string; date: string; dateKind?: string; url: string; measures?: Measures;
   evidence?: string; agent?: boolean; authors: Author[]};
-type Family = {direction: string; claims: Claim[];
+type Family = {direction: string; claims: Claim[]; rankBy?: string[];
   baseline?: {label?: string; value: string; display?: string; exactValue: string; bound: string; url: string; date: string}};
 
 const fraction = (text: string) => /^\s*(\d+)\s*\/\s*(\d+)\s*$/.exec(text);
@@ -62,7 +62,11 @@ export type OtherChart = {entries: ChartEntry[]; higher: boolean; classic?: numb
 // is known (the page's Human Verified link), as for the level the table shows; `render` makes the HTML of a bound.
 // A row dated by a snapshot (the day we read it) stays in the table only, as an Observed date on the Big O boards.
 export function otherChart(family: Family, reviewed: (claim: object) => boolean, render: (tex: string) => string = tex => tex): OtherChart | undefined {
-  const rows = otherTableRows(family).map(r => r.claim);
+  // A row ranked by measures (rankBy) charts its one number only for the claims that share the leader's first
+  // measure (Z in Q: the degree-4 results), plus its Agent breakthrough row, so the chart ends at the table's first row at
+  // every set of evidence levels, as on every page.
+  const all = otherTableRows(family).map(r => r.claim);
+  const rows = family.rankBy?.length && all.length ? all.filter(c => isTableBreakthrough(family as never, c) || compareMeasures((c as Claim).measures, (all[0] as Claim).measures, family.rankBy!.slice(0, 1)) === 0) : all;
   const scores = rows.map(claimScore);
   const ids = otherChartIds(rows);
   if (!rows.length || scores.some(s => s === null)) return undefined;
