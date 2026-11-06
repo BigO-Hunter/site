@@ -6876,7 +6876,7 @@
         "slug": "other-prime-gaps",
         "name": "Bounded prime gaps",
         "url": "https://bigospeedrun.com/other/prime-gaps",
-        "leader": "openai:186",
+        "leader": "romyar1:182",
         "table": "other-bounds",
         "direction": "lower",
         "records": [
@@ -6920,6 +6920,17 @@
             ],
             "bound": "H_1 ≤ 186",
             "display": "186"
+          },
+          {
+            "id": "romyar1:182",
+            "score": "182",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "GPT-6 Astra (OpenAI), prompted by Romyar Sharifi"
+            ],
+            "bound": "H_1 ≤ 182",
+            "display": "182"
           }
         ]
       },
@@ -7316,7 +7327,8 @@
     "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:record",
     "[\"directed-sssp\",\"direct-issue-158\",\"n log ; n log^2\",\"attained\"]:lean",
     "[\"other-catalan\",\"slitsey:400\",\"400\",\"attained\"]:record",
-    "[\"directed-sssp\",\"direct-issue-147\",\"n^2 ; n^2\",\"attained\"]:lean"
+    "[\"directed-sssp\",\"direct-issue-147\",\"n^2 ; n^2\",\"attained\"]:lean",
+    "[\"other-prime-gaps\",\"romyar1:182\",\"182\",\"attained\"]:record"
   ],
   "deferred": [
     {

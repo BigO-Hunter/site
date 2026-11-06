@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-06T09:43:46Z",
+    "updated_at": "2026-11-06T13:25:20Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -131423,7 +131423,7 @@
     "title": "Document H25 artifact metadata confinement gap",
     "state": "open",
     "created_at": "2026-11-06T09:40:57Z",
-    "updated_at": "2026-11-06T09:47:32Z",
+    "updated_at": "2026-11-06T13:27:12Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131570,7 +131570,7 @@
     "title": "Reduce the effective interval onset to 2^751000000 (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:09:17Z",
-    "updated_at": "2026-11-06T13:09:17Z",
+    "updated_at": "2026-11-06T13:17:38Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131591,7 +131591,7 @@
     "title": "Prove the sharp inverse envelope under a column cap (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:10:29Z",
-    "updated_at": "2026-11-06T13:10:29Z",
+    "updated_at": "2026-11-06T13:20:41Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131612,7 +131612,7 @@
     "title": "Optimize dyadic error cuts and prove a quantitative convergence rate (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:10:50Z",
-    "updated_at": "2026-11-06T13:10:50Z",
+    "updated_at": "2026-11-06T13:20:19Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131633,7 +131633,7 @@
     "title": "Prove a sharp bounded-error cutoff for acyclic decoder rows (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:11:40Z",
-    "updated_at": "2026-11-06T13:11:40Z",
+    "updated_at": "2026-11-06T13:20:22Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131654,7 +131654,7 @@
     "title": "Reduce odd-width optimal sectors to six necessary forms (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:12:01Z",
-    "updated_at": "2026-11-06T13:12:01Z",
+    "updated_at": "2026-11-06T13:19:55Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131675,7 +131675,7 @@
     "title": "Exclude dyadic Borel savings in a common integral polynomial algebra (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:13:45Z",
-    "updated_at": "2026-11-06T13:13:45Z",
+    "updated_at": "2026-11-06T13:22:04Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131696,7 +131696,7 @@
     "title": "Prove charge-only ternary guard costs through two additions (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:15:02Z",
-    "updated_at": "2026-11-06T13:15:02Z",
+    "updated_at": "2026-11-06T13:22:30Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131717,7 +131717,7 @@
     "title": "Improve three-qubit Clifford Gram condition bound to 807 (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:16:35Z",
-    "updated_at": "2026-11-06T13:16:35Z",
+    "updated_at": "2026-11-06T13:24:34Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -131726,6 +131726,237 @@
     },
     "head": {
       "sha": "c6252da020819a08ef2b2ff14280146c43ad374c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6795,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6795",
+    "title": "Reduce aggregate padding from twelve tapes to eight (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:45:54Z",
+    "updated_at": "2026-11-06T13:53:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "e0c7c4a9c5bb7ac19b92170f04bd2c8de59263df"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6796,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6796",
+    "title": "Prove sharp dirty-word intervals at n=2^h+1 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:48:10Z",
+    "updated_at": "2026-11-06T13:57:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "666e561e8ee88dbf839901ba018a0e2d29c55b1f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6797,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6797",
+    "title": "Classify saturated cubic shared-block pairs and count all extremizers (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:48:15Z",
+    "updated_at": "2026-11-06T13:56:53Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "27aa93132008b940d392c02c8d9230291759c776"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6798,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6798",
+    "title": "Prove a rank-four cube parity obstruction (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:48:19Z",
+    "updated_at": "2026-11-06T13:55:56Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "b845894ac5945d4c0ef16da457d2dceb1dd739a2"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6799,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6799",
+    "title": "Prove six-orbit rank chains cannot exclude two arrays in seven calls",
+    "state": "open",
+    "created_at": "2026-11-06T13:53:10Z",
+    "updated_at": "2026-11-06T14:02:27Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "5de51eac590de356e81085c2596dfe3f7c0d2327"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6800,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6800",
+    "title": "Prove restored dirty helpers preserve square-zero query capacity (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:53:18Z",
+    "updated_at": "2026-11-06T14:01:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "c94197e40c9e8a25f643d776160659871e5ce9ac"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6801,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6801",
+    "title": "Compute positive signed halves in linear tape time without work cells",
+    "state": "open",
+    "created_at": "2026-11-06T13:53:40Z",
+    "updated_at": "2026-11-06T14:03:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "f24ba360da3950ea92d773b5e429949719be1060"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6802,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6802",
+    "title": "Save 47,523 instructions in the 512-point NTT multiplier (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:53:42Z",
+    "updated_at": "2026-11-06T14:02:18Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "b792a58669a3bd2372a38db567ba04241b562519"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6803,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6803",
+    "title": "Attain the joint four-six return threshold in five labels (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:56:03Z",
+    "updated_at": "2026-11-06T14:04:27Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "f69317ece54482d1b01c30b1c4934dc0ebdf0e81"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6804,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6804",
+    "title": "Exclude the four-six-cycle fifteen-owner route graph (no κ)",
+    "state": "open",
+    "created_at": "2026-11-06T13:57:46Z",
+    "updated_at": "2026-11-06T14:08:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "petalas",
+      "html_url": "https://github.com/petalas"
+    },
+    "head": {
+      "sha": "2ba6c502f57ae25728c322c402f80e844805c55c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6805,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6805",
+    "title": "Conditional κ = 0.00330814 (+9.4e-7 over #6726): retimed native helper split",
+    "state": "open",
+    "created_at": "2026-11-06T13:59:42Z",
+    "updated_at": "2026-11-06T13:59:42Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "0ecd4fd79f4f7fc21b2ef7a9cdc73912fa4a804b"
     },
     "base": {
       "ref": "main"
