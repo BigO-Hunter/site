@@ -1972,5 +1972,14 @@
     "authors": [
       "GPT-6 Astra (OpenAI), prompted by Romyar Sharifi"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-6805\",\"165407/50000000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.003308) n)` | by CubeJerry | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.003308) n)\nPlayer: CubeJerry\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-06T16:33:13.919Z",
+    "authors": [
+      "CubeJerry"
+    ]
   }
 ]
