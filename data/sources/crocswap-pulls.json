@@ -127538,7 +127538,7 @@
     "title": "Prove a 120N-bit complete-caller retention floor (no κ)",
     "state": "open",
     "created_at": "2026-11-03T11:11:31Z",
-    "updated_at": "2026-11-03T11:20:20Z",
+    "updated_at": "2026-11-06T01:39:15Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130865,6 +130865,48 @@
     },
     "head": {
       "sha": "0c1d7ff68dfe3bf34cafed38ad1220058aa10717"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6754,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6754",
+    "title": "Review causal fiber certificate and retained capacity",
+    "state": "open",
+    "created_at": "2026-11-06T01:37:41Z",
+    "updated_at": "2026-11-06T01:44:29Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "97dfa98b90982da88945f17dfaffed3e5f3f6991"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6755,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6755",
+    "title": "Review four-axis certificate and inverse kernel",
+    "state": "open",
+    "created_at": "2026-11-06T02:05:49Z",
+    "updated_at": "2026-11-06T02:05:49Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "4475dc90bbe6037981bfc8ce0dd55efb6bdbc6a0"
     },
     "base": {
       "ref": "main"
