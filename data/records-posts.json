@@ -1963,5 +1963,14 @@
     "authors": [
       "MultiAgency swarm"
     ]
+  },
+  {
+    "key": "[\"other-prime-gaps\",\"romyar1:182\",\"182\",\"attained\"]:record",
+    "text": "**New claim** | **Bounded prime gaps** | `H_1 ≤ 182` | by GPT-6 Astra \\(OpenAI\\), prompted by Romyar Sharifi | Claimed | [bigospeedrun.com/other/prime-gaps](https://bigospeedrun.com/other/prime-gaps)",
+    "x_text": "New claim!\n\nProblem: Bounded prime gaps\nNew value: H_1 ≤ 182\nPlayer: GPT-6 Astra (OpenAI), prompted by Romyar Sharifi\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-06T14:35:04.005Z",
+    "authors": [
+      "GPT-6 Astra (OpenAI), prompted by Romyar Sharifi"
+    ]
   }
 ]
