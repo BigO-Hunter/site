@@ -131864,7 +131864,7 @@
     "title": "Compute positive signed halves in linear tape time without work cells",
     "state": "open",
     "created_at": "2026-11-06T13:53:40Z",
-    "updated_at": "2026-11-06T14:03:12Z",
+    "updated_at": "2026-11-06T18:37:13Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -132020,6 +132020,27 @@
     },
     "head": {
       "sha": "518351a389e32e2ccdf0a1ca55580e9c60d65492"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6809,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6809",
+    "title": "Compute negative signed halves with a fixed linear marked-tape table",
+    "state": "open",
+    "created_at": "2026-11-06T18:27:59Z",
+    "updated_at": "2026-11-06T18:36:17Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "d54a5f449a0e98c11255c635aadb1703d6bc6b50"
     },
     "base": {
       "ref": "main"
