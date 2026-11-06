@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-06T04:19:58Z",
+      "updated_at": "2026-11-06T05:27:27Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -126797,7 +126797,11 @@
       "checked_at": "2026-11-06",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "0f2a86fa9ef0daf760b77c662a5b762e17848598",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6737,
@@ -126967,7 +126971,11 @@
       "checked_at": "2026-11-06",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "1ac58a84b725bd6f17eec66727edc877c49c7e66",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6745,
@@ -127137,7 +127145,11 @@
       "checked_at": "2026-11-06",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "57cd3615df4c7ada2300ba7295d410ba705c9280",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6753,
@@ -127219,7 +127231,11 @@
       "checked_at": "2026-11-06",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "2818eb6f2343ef75bed10346790ce819332c6038",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6757,
@@ -127328,6 +127344,97 @@
       "claim_text": "f76e9f997e34414b5442568b2b15ad7d1d48872cf0cea24dfe97f75eae2783e5",
       "claim_files": [],
       "claim_files_head": "b78c8938b6d04b7c340c06d4e958947aeecd9270",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6762,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Add reviewed complete-outcome CLOSE source extension",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6762",
+      "submitted_at": "2026-11-06T05:20:55Z",
+      "updated_at": "2026-11-06T05:29:28Z",
+      "source_commit": "3bcf99910a95248452e955d382c59bd23792a39b",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T05:20:55Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "3bcf99910a95248452e955d382c59bd23792a39b",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6763,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Audit the two-fragment caller’s physical contacts and complete invoice (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6763",
+      "submitted_at": "2026-11-06T07:01:11Z",
+      "updated_at": "2026-11-06T07:01:11Z",
+      "source_commit": "c3e0500c7645b1bc228ebe5e5190e304a2da46ca",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T07:01:11Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "c3e0500c7645b1bc228ebe5e5190e304a2da46ca",
+      "claim_text": "3637fd5b9eca119aea977e38993905e9c2e46dc735375b505f23493e00555025",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-fragment-physical-invoice-audit/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "c3e0500c7645b1bc228ebe5e5190e304a2da46ca",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6764,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Prove full-bank and changed-history limits for binary retirement (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6764",
+      "submitted_at": "2026-11-06T07:01:26Z",
+      "updated_at": "2026-11-06T07:01:26Z",
+      "source_commit": "1153341fb288bd4cd3c9eba490b6dec4e2e6d43c",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T07:01:26Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "1153341fb288bd4cd3c9eba490b6dec4e2e6d43c",
+      "claim_text": "d5890320c55f0e8b1c892da5467192c1ae2d4e76a6836ccee14c07ceacc49a88",
+      "claim_files": [],
+      "claim_files_head": "1153341fb288bd4cd3c9eba490b6dec4e2e6d43c",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6765,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Exclude maximal resident-carrier fusions on the current P104 word (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6765",
+      "submitted_at": "2026-11-06T07:02:10Z",
+      "updated_at": "2026-11-06T07:02:10Z",
+      "source_commit": "09cf64682381cd25094a3fa9bbf2500c51c4cde3",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-06T07:02:10Z",
+      "checked_at": "2026-11-06",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "09cf64682381cd25094a3fa9bbf2500c51c4cde3",
+      "claim_text": "3618b5ccce65777ec3044da31490a7ced30162cb76a02119017374f738219574",
+      "claim_files": [],
+      "claim_files_head": "09cf64682381cd25094a3fa9bbf2500c51c4cde3",
       "claim_files_base": "main",
       "claim_files_result": true
     }

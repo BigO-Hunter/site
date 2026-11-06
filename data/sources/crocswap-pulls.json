@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-06T04:19:58Z",
+    "updated_at": "2026-11-06T05:27:27Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -131033,6 +131033,90 @@
     },
     "head": {
       "sha": "b78c8938b6d04b7c340c06d4e958947aeecd9270"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6762,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6762",
+    "title": "Add reviewed complete-outcome CLOSE source extension",
+    "state": "open",
+    "created_at": "2026-11-06T05:20:55Z",
+    "updated_at": "2026-11-06T05:29:28Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "3bcf99910a95248452e955d382c59bd23792a39b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
+  },
+  {
+    "number": 6763,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6763",
+    "title": "Audit the two-fragment caller’s physical contacts and complete invoice (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T07:01:11Z",
+    "updated_at": "2026-11-06T07:01:11Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "c3e0500c7645b1bc228ebe5e5190e304a2da46ca"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6764,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6764",
+    "title": "Prove full-bank and changed-history limits for binary retirement (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T07:01:26Z",
+    "updated_at": "2026-11-06T07:01:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "1153341fb288bd4cd3c9eba490b6dec4e2e6d43c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6765,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6765",
+    "title": "Exclude maximal resident-carrier fusions on the current P104 word (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T07:02:10Z",
+    "updated_at": "2026-11-06T07:02:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "09cf64682381cd25094a3fa9bbf2500c51c4cde3"
     },
     "base": {
       "ref": "main"

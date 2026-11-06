@@ -5120,6 +5120,7 @@
         "direction": "lower",
         "frontier": [
           "directed-sssp-2026",
+          "direct-issue-147",
           "direct-issue-158"
         ],
         "recordRows": [
@@ -5149,6 +5150,16 @@
               "state": "pending",
               "since": "2026-11-03T23:57:56Z"
             }
+          },
+          {
+            "id": "direct-issue-147",
+            "score": "n^2 ; n^2",
+            "relation": "attained",
+            "evidence": "Lean Verified",
+            "authors": [
+              "MultiAgency swarm"
+            ],
+            "bound": "O(n^2) for m <= n^2"
           },
           {
             "id": "direct-issue-158",
@@ -7304,7 +7315,8 @@
     "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:lean",
     "[\"exact-dft\",\"direct-pr-156\",\"31415926535897932384626433/10000000000000000000000000000\",\"attained\"]:record",
     "[\"directed-sssp\",\"direct-issue-158\",\"n log ; n log^2\",\"attained\"]:lean",
-    "[\"other-catalan\",\"slitsey:400\",\"400\",\"attained\"]:record"
+    "[\"other-catalan\",\"slitsey:400\",\"400\",\"attained\"]:record",
+    "[\"directed-sssp\",\"direct-issue-147\",\"n^2 ; n^2\",\"attained\"]:lean"
   ],
   "deferred": [
     {

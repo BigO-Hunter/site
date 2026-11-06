@@ -43,6 +43,48 @@
         "source_file": "Submission.lean"
       }
     },
+    "direct-issue-147": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "directed-sssp",
+        "repo_url": "https://github.com/darkhipo/sssp-n2",
+        "commit": "9fc41bc96366f1acf2c17ae4434dfbc4e64c9813",
+        "bound": "n^2 ; n^2",
+        "authors": []
+      },
+      "verification": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-147-14cce8ee41223cd9f1c9298e2c061d4e1765186c2148ff1622e2518543d4a6eb",
+        "problem_id": "directed-sssp/comparison-addition-sparse",
+        "score": "n^2 ; n^2",
+        "score_relation": "attained",
+        "source_commit": "9fc41bc96366f1acf2c17ae4434dfbc4e64c9813",
+        "source_url": "https://github.com/darkhipo/sssp-n2",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41937244762",
+        "checked_at": "2026-11-05T00:00:15.231148Z",
+        "issue_created_at": "2026-11-04T22:50:29Z",
+        "issue_updated_at_at_verification": "2026-11-04T23:53:52Z",
+        "issue_updated_at_at_import": "2026-11-05T00:00:44Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-147-41937244762-1.json",
+        "receipt_sha256": "c74386afd758871e476dc518cc6760cbb0831690cf9ce5a2888046fc642648d9",
+        "policy_hash": "c9cc2aa144ea301bace52a79d11bb431f259f0849b25a3c2c73512831f2c1748",
+        "result_artifact_id": 13374173524,
+        "controller_fingerprint": "ccee7403be5c74513fa78194a22a6f639908de0347ee83e06d9f038729cafc5c",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
+    },
     "direct-issue-139": {
       "route": "issue",
       "submission": {
@@ -299,7 +341,7 @@
         ],
         "receipt_path": "sources/direct-issue-99-41500988477-1.json",
         "receipt_sha256": "35c8c4fff1b39d9d2f2eae0f579a15a2ace71d1751cc19453bd1c44aacfa774d",
-        "policy_hash": "ee836e63fa50335ff1108a0a28c1032e5eba19ea6d5e525e9544df5ef0f314ab",
+        "policy_hash": "c9cc2aa144ea301bace52a79d11bb431f259f0849b25a3c2c73512831f2c1748",
         "result_artifact_id": 13187050786,
         "controller_fingerprint": "b15d8552e503d033e07cc644f06ae945728d386d8f949fcd1bac788971849768",
         "pr_identity": null,
@@ -3837,7 +3879,7 @@
         ],
         "receipt_path": "sources/direct-issue-99-41500988477-1.json",
         "receipt_sha256": "35c8c4fff1b39d9d2f2eae0f579a15a2ace71d1751cc19453bd1c44aacfa774d",
-        "policy_hash": "ee836e63fa50335ff1108a0a28c1032e5eba19ea6d5e525e9544df5ef0f314ab",
+        "policy_hash": "c9cc2aa144ea301bace52a79d11bb431f259f0849b25a3c2c73512831f2c1748",
         "result_artifact_id": 13187050786,
         "controller_fingerprint": "b15d8552e503d033e07cc644f06ae945728d386d8f949fcd1bac788971849768",
         "pr_identity": null,
@@ -4175,6 +4217,49 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-issue-147:14cce8ee41223cd9f1c9298e2c061d4e1765186c2148ff1622e2518543d4a6eb": {
+      "key": "direct-issue-147",
+      "submission": {
+        "schema_version": 1,
+        "problem": "directed-sssp",
+        "repo_url": "https://github.com/darkhipo/sssp-n2",
+        "commit": "9fc41bc96366f1acf2c17ae4434dfbc4e64c9813",
+        "bound": "n^2 ; n^2",
+        "authors": []
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-147-14cce8ee41223cd9f1c9298e2c061d4e1765186c2148ff1622e2518543d4a6eb",
+        "problem_id": "directed-sssp/comparison-addition-sparse",
+        "score": "n^2 ; n^2",
+        "score_relation": "attained",
+        "source_commit": "9fc41bc96366f1acf2c17ae4434dfbc4e64c9813",
+        "source_url": "https://github.com/darkhipo/sssp-n2",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/41937244762",
+        "checked_at": "2026-11-05T00:00:15.231148Z",
+        "issue_created_at": "2026-11-04T22:50:29Z",
+        "issue_updated_at_at_verification": "2026-11-04T23:53:52Z",
+        "issue_updated_at_at_import": "2026-11-05T00:00:44Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-147-41937244762-1.json",
+        "receipt_sha256": "c74386afd758871e476dc518cc6760cbb0831690cf9ce5a2888046fc642648d9",
+        "policy_hash": "c9cc2aa144ea301bace52a79d11bb431f259f0849b25a3c2c73512831f2c1748",
+        "result_artifact_id": 13374173524,
+        "controller_fingerprint": "ccee7403be5c74513fa78194a22a6f639908de0347ee83e06d9f038729cafc5c",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -4303,11 +4388,6 @@
       "updated_at": "2026-11-04T20:57:36Z",
       "claimed_only": false
     },
-    "147": {
-      "version": "14cce8ee41223cd9f1c9298e2c061d4e1765186c2148ff1622e2518543d4a6eb",
-      "updated_at": "2026-11-05T00:00:44Z",
-      "claimed_only": false
-    },
     "149": {
       "version": "9cee15b68ee079804c7062116632c41473f9c3fe",
       "updated_at": "2026-11-05T01:31:49Z",
@@ -4315,7 +4395,7 @@
     },
     "157": {
       "version": "1e05c8bb7eda6c1d59180b219bba584367d69c16bf84938fca0a479edfbd2e36",
-      "updated_at": "2026-11-06T05:12:58Z",
+      "updated_at": "2026-11-06T05:32:29Z",
       "claimed_only": false
     }
   },
@@ -4340,14 +4420,9 @@
       "updated_at": "2026-11-04T06:38:42Z",
       "not_verified": false
     },
-    "147": {
-      "version": "14cce8ee41223cd9f1c9298e2c061d4e1765186c2148ff1622e2518543d4a6eb",
-      "updated_at": "2026-11-05T00:00:44Z",
-      "not_verified": false
-    },
     "157": {
       "version": "1e05c8bb7eda6c1d59180b219bba584367d69c16bf84938fca0a479edfbd2e36",
-      "updated_at": "2026-11-06T05:12:58Z",
+      "updated_at": "2026-11-06T05:32:29Z",
       "not_verified": false
     }
   }
