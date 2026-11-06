@@ -9,6 +9,7 @@ import AuthorList from './AuthorList.astro';
 import InfoTooltip from './InfoTooltip.astro';
 import {densitySections,latex,plain,D_NAMES} from '../lib/sssp';
 import {chartModel} from '../lib/sssp-chart';
+import {ssspRecordRows} from '../lib/sssp-board';
 interface Props {records:RecordEntry[];classic?:RecordEntry;}
 const {classic}=Astro.props;
 const records=classic?[classic,...Astro.props.records]:Astro.props.records;
@@ -18,7 +19,7 @@ const sections=densitySections(board,id=>byId.has(id)).map(s=>({...s,rows:s.rows
 const labels:Record<string,string>={'classical-baseline':'Dijkstra + Fibonacci heap','duan-et-al-stoc-2025':"STOC'25",'duan-et-al-icalp-2026':"ICALP'26"};
 const names:Record<string,string>={...labels,'directed-sssp-2026':'C-HD'};
 const dates:Record<string,string>={};for(const r of records)dates[r.id]=r.date??'9999';
-const model=chartModel(board,labels,dates);
+const model=chartModel(board,labels,dates,new Set(ssspRecordRows(records,board.chart.lines).map(r=>r.id)));
 // Positions in percent of the plot area. The labels, points and rings are HTML on top of the plot, so they keep their
 // size and shape when the plot scales to its column (Nil, 2026-11-04: no sideways scrollbar at any width).
 const px=(x:number)=>100*x/(model.xs.length-1);

@@ -2,7 +2,7 @@
 // sections 7 and 8). Every generic place that asks for "the leader" of a board asks boardLeaders. No data import here:
 // the site server image has src/lib/*.ts only (image-imports.test.ts), so the chart lines come with the Problem.
 import {ranked} from './ranking.ts';
-import {parse, parseFunction, density, frontier, timeAt, lexCmp} from './sssp.ts';
+import {parse, parseFunction, density, frontier, timeAt, lexCmp, CLASSIC} from './sssp.ts';
 import {evidenceOrder} from './evidence.ts';
 import type {ChartLine, Problem, RecordEntry} from './types';
 
@@ -20,7 +20,9 @@ export function ssspFrontier<T extends Pick<RecordEntry, 'id' | 'score' | 'evide
  * row that covers its density. Only these post as "New record", and only these go to X (Lead, 2026-11-06, after X post
  * 2118427792107016517: verifier #158, O(n log^2 n) for m <= n log n, is a frontier row, but Dijkstra gives O(n log n) there). */
 export function ssspRecordRows<T extends Pick<RecordEntry, 'id' | 'score' | 'evidenceLevel' | 'date'>>(records: T[], lines: ChartLine[] = []): T[] {
- const functions = records.filter(r => !r.score.includes(' ; ')).map(r => parseFunction(r.score));
+ // The classic Dijkstra row (CLASSIC, m + n log n) always counts: the feed's board rows (boardRecords) leave the classical
+ // baseline out, and verifier #147 (n^2 ; n^2), which ties it at m <= n^2, then posted as a record in a dry run (2026-11-06).
+ const functions = [CLASSIC, ...records.filter(r => !r.score.includes(' ; ')).map(r => parseFunction(r.score))];
  return ssspFrontier(records, lines).filter(r => { const t = parse(r.score); return functions.every(f => lexCmp(t.slice(2), timeAt(f, t.slice(0, 2))) < 0); });
 }
 /** The rows that lead a board: its rank-1 rows, or on directed-sssp its frontier rows. */

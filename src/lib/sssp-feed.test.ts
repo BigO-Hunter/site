@@ -89,6 +89,8 @@ test('a record row is faster than every row at its density, the function rows to
  assert.deepEqual(ids([...START, row('a', 'n ; n log^1/2 loglog^1/2')]), ['directed-sssp-2026', 'a']);
  assert.deepEqual(ids([...START, icalp, row('a', 'n ; n log^1/2 loglog^1/2')]), ['directed-sssp-2026']);
  assert.deepEqual(ids([...START, icalp, row('b', 'n ; n log^1/2 loglog^1/3')]), ['directed-sssp-2026', 'b']);
+ // The classic counts also when the rows leave it out (the feed's boardRecords do): #147 ties it at m <= n^2.
+ assert.deepEqual(ids([START[1], START[2], row('147', 'n^2 ; n^2', 'lean-verified')]), ['directed-sssp-2026']);
  // A Claimed or Human Verified function row counts as much as a Lean Verified one.
  assert.deepEqual(ids([row('classical-baseline', 'm + n log', 'claimed'), row('c', 'n log^1/2 ; n log^3/4')]), ['c']);
 });
