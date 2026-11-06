@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-06T13:25:20Z",
+    "updated_at": "2026-11-06T19:52:40Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -131423,7 +131423,7 @@
     "title": "Document H25 artifact metadata confinement gap",
     "state": "open",
     "created_at": "2026-11-06T09:40:57Z",
-    "updated_at": "2026-11-06T13:27:12Z",
+    "updated_at": "2026-11-06T19:54:26Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -132062,6 +132062,27 @@
     },
     "head": {
       "sha": "2b8509a8170c253c769778d3443f85898d494fec"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6811,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6811",
+    "title": "Speed up local overlap inventory parsing without changing coverage",
+    "state": "open",
+    "created_at": "2026-11-06T20:13:34Z",
+    "updated_at": "2026-11-06T20:13:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "zhaobenny",
+      "html_url": "https://github.com/zhaobenny"
+    },
+    "head": {
+      "sha": "88c880281843eb2e31ca4e0c5c9ff3b1e9de76a5"
     },
     "base": {
       "ref": "main"

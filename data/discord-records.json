@@ -7003,7 +7003,7 @@
         "slug": "other-z-diophantine-in-q",
         "name": "Z is Diophantine in Q",
         "url": "https://bigospeedrun.com/other/z-diophantine-in-q",
-        "leader": "z-in-q-version-2:12504",
+        "leader": "z-in-q-version-6:962",
         "table": "other-bounds",
         "direction": "lower",
         "records": [
@@ -7044,6 +7044,95 @@
             ],
             "bound": "12,504 variables",
             "display": "12{,}504"
+          },
+          {
+            "id": "z-in-q-version-3:9625",
+            "score": "9625",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Gabe Conant",
+              "Sohail Farhangi",
+              "James Freitag",
+              "Elliot Glazer",
+              "Jenn Park",
+              "Caroline Terry"
+            ],
+            "bound": "9,625 variables",
+            "display": "9{,}625"
+          },
+          {
+            "id": "z-in-q-version-4:4973",
+            "score": "4973",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Gabe Conant",
+              "Sohail Farhangi",
+              "James Freitag",
+              "Elliot Glazer",
+              "Jenn Park",
+              "Caroline Terry"
+            ],
+            "bound": "4,973 variables",
+            "display": "4{,}973"
+          },
+          {
+            "id": "josebrox-41:41",
+            "score": "41",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Jose Brox"
+            ],
+            "bound": "41 variables",
+            "display": "41"
+          },
+          {
+            "id": "josebrox-1315:1315",
+            "score": "1315",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Jose Brox"
+            ],
+            "bound": "1,315 variables",
+            "display": "1{,}315"
+          },
+          {
+            "id": "z-in-q-version-5:1272",
+            "score": "1272",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Stefan Baranczuk",
+              "Gabe Conant",
+              "Sohail Farhangi",
+              "James Freitag",
+              "Elliot Glazer",
+              "Jennifer Park",
+              "Caroline Terry"
+            ],
+            "bound": "1,272 variables",
+            "display": "1{,}272"
+          },
+          {
+            "id": "z-in-q-version-6:962",
+            "score": "962",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Stefan Baranczuk",
+              "Jose Brox",
+              "Gabe Conant",
+              "Sohail Farhangi",
+              "James Freitag",
+              "Elliot Glazer",
+              "Jennifer Park",
+              "Caroline Terry"
+            ],
+            "bound": "962 variables",
+            "display": "962"
           }
         ]
       }
@@ -7388,7 +7477,8 @@
     "[\"directed-sssp\",\"direct-issue-147\",\"n^2 ; n^2\",\"attained\"]:lean",
     "[\"other-prime-gaps\",\"romyar1:182\",\"182\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6805\",\"165407/50000000\",\"attained\"]:record",
-    "[\"other-z-diophantine-in-q\",\"z-in-q-version-2:12504\",\"12504\",\"attained\"]:record"
+    "[\"other-z-diophantine-in-q\",\"z-in-q-version-2:12504\",\"12504\",\"attained\"]:record",
+    "[\"other-z-diophantine-in-q\",\"z-in-q-version-6:962\",\"962\",\"attained\"]:record"
   ],
   "deferred": [
     {
