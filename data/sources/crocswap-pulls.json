@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-06T03:09:23Z",
+    "updated_at": "2026-11-06T04:19:58Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -130933,5 +130933,110 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6757,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6757",
+    "title": "Prove low-span clean-helper bounds for arbitrary target pairs (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T05:02:47Z",
+    "updated_at": "2026-11-06T05:02:47Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "a079d89c7c49d4ee418828f93e31f319e018c2c1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6758,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6758",
+    "title": "Restore phase covariance in sharp four-axis Gaussian rounding (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T05:03:09Z",
+    "updated_at": "2026-11-06T05:03:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "362b20bc934500bc503e850059f0d34daa5dcae3"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6759,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6759",
+    "title": "Prove the coupled coarse-grid dirty-reader minimax (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T05:03:46Z",
+    "updated_at": "2026-11-06T05:03:46Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "a603802a04e27cac68b48c334317b73057063806"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6760,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6760",
+    "title": "Compress restored helpers without changing the paid call word (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T05:04:36Z",
+    "updated_at": "2026-11-06T05:04:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "3b3d6670d509fd74c1780cfacdf550badf8871db"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6761,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6761",
+    "title": "Prove the four-axis exact-square period obstruction (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-06T05:04:59Z",
+    "updated_at": "2026-11-06T05:04:59Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "b78c8938b6d04b7c340c06d4e958947aeecd9270"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
