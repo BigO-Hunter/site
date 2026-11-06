@@ -587,6 +587,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-05T00:39:57Z",
       "note": "zxv's own package research/p104-paid-idle-fragmentation/ (236 files, RESULT.json files, no CLAIM.json) states candidate.complete_cost.kappa 2067/625000 = 0.0033072 in frozen/two-fragment/RESULT.json, the title's value (+0.000003 over #6716's 0.0033042). It splits two shared idle jobs into paid pieces so that smaller prefixes retire as independent outputs, on the unchanged native supplier of #6716. Conditional on five retained framework assumptions, same sense as all CrocSwap IM rows; the README says external review is outstanding. Open, not draft, created 2026-11-04T23:40:30Z. It is queued because the value sits under a candidate key of RESULT.json, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6805,
+      "head": "0ecd4fd79f4f7fc21b2ef7a9cdc73912fa4a804b",
+      "score": "165407/50000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-06T14:38:25Z",
+      "note": "CubeJerry's own package research/native-retimed-helper-split/ (61 files, RESULT.json, no CLAIM.json) states price.kappa 165407/50000000 = 0.00330814, the title's value (+0.00000094 over #6726's 0.0033072). It advances and subdivides one paid main-register move to expose an independent helper output, on the retained native word of #6702 and the caller of #6726. Conditional on five retained assumptions, same sense as all CrocSwap IM rows; the body says external mathematical review remains open. Open, not draft, created 2026-11-06T13:59:42Z. It is queued because the value sits under the price key of RESULT.json, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
