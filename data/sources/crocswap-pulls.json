@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-06T00:59:00Z",
+    "updated_at": "2026-11-06T03:09:23Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -127118,7 +127118,7 @@
     "title": "Attain sharp four-axis Gaussian grid error with an exact inverse",
     "state": "open",
     "created_at": "2026-11-03T10:09:28Z",
-    "updated_at": "2026-11-03T10:20:15Z",
+    "updated_at": "2026-11-06T02:19:51Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130898,7 +130898,7 @@
     "title": "Review four-axis certificate and inverse kernel",
     "state": "open",
     "created_at": "2026-11-06T02:05:49Z",
-    "updated_at": "2026-11-06T02:05:49Z",
+    "updated_at": "2026-11-06T02:21:09Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -130912,5 +130912,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6756,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6756",
+    "title": "Expose H25 resource contracts and adopted adapter sources for review",
+    "state": "open",
+    "created_at": "2026-11-06T03:01:52Z",
+    "updated_at": "2026-11-06T03:11:33Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "2818eb6f2343ef75bed10346790ce819332c6038"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]
