@@ -193,13 +193,58 @@
           }
         }
       ]
+    },
+    "prime-gaps": {
+      "challenge_file": "challenges/prime-gaps/Statement.lean",
+      "challenge_sha256": "c6b81e94927315c805bd34a30796d8d757156790dff243287811f3c53494f969",
+      "lean_toolchain": "leanprover/lean4:v4.33.1",
+      "manifest_file": "profiles/anthropic-lake-manifest.json",
+      "tools_file": "profiles/anthropic-tools.json",
+      "solution_module": "Submission",
+      "source_roots": [
+        "Submission"
+      ],
+      "theorem_names": [
+        "Race.bound"
+      ],
+      "bound_kind": "gap",
+      "maximum": "100000",
+      "upstream_commit": "1faa7b14e82ddebc2772dfb9153922f01b106477",
+      "runner": "github-split",
+      "solution_dependencies": [
+        {
+          "repo_url": "https://github.com/hanwenzhu/LeanArchitect",
+          "commit": "d9013cc08bd2b5483e837368dfa4cc7ead92a5c2",
+          "source_roots": [
+            "Architect"
+          ],
+          "lean_options": {
+            "autoImplicit": true
+          }
+        },
+        {
+          "repo_url": "https://github.com/kimihiro64/PrimeNumberTheoremAnd",
+          "commit": "0f15a38c619298b5cd786d39a84dd4bb8997324c",
+          "source_roots": [
+            "PrimeNumberTheoremAnd"
+          ]
+        }
+      ],
+      "source_lean_options": {
+        "autoImplicit": false,
+        "maxSynthPendingDepth": 3
+      },
+      "source_data_suffixes": [
+        ".json"
+      ]
     }
   },
   "statement_fixtures": {
     "challenges/subset-sum/Statement.lean": "SubsetSumStatement.lean",
     "challenges/other-snaky/VerifierStatement.lean": "SnakyVerifierStatement.lean",
     "challenges/heilbronn-triangle/VerifierStatement.lean": "HeilbronnVerifierStatement.lean",
-    "challenges/directed-sssp/VerifierStatement.lean": "SsspVerifierStatement.lean"
+    "challenges/directed-sssp/VerifierStatement.lean": "SsspVerifierStatement.lean",
+    "challenges/prime-gaps/Statement.lean": "PrimeGapsStatement.lean"
   },
   "controller_blobs": {
     ".github/ISSUE_TEMPLATE/lean-submission.yml": {

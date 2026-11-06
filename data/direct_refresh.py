@@ -34,7 +34,8 @@ OTHER={'average-sensitivity':dict(bound='\\mathrm{{AS}}(f)\\le {value}d\\sqrt n'
     'catalan':dict(bound='\\mu(G)\\le {value}',statement='BigOSpeedrun.Catalan.Bound'),
     'snaky':dict(bound='\\text{{Maker moves}}\\le {value}',statement='BigOSpeedrun.Snaky.Bound'),
     # A higher saving is better: the shown value is rounded down (display_down), and the row form is a lower bound.
-    'heilbronn-triangle':dict(bound='\\eta\\ge {value}',statement='BigOSpeedrun.HeilbronnTriangle.Bound',higher=True)}
+    'heilbronn-triangle':dict(bound='\\eta\\ge {value}',statement='BigOSpeedrun.HeilbronnTriangle.Bound',higher=True),
+    'prime-gaps':dict(bound='H_1\\le {value}',statement='BigOSpeedrun.PrimeGaps.Bound')}
 # These hosted smoke identities are permanently excluded, even after label edits.
 SMOKE_NUMBERS={1,2}
 # A 'Not verified' report with one of these texts is not the final result of this version: it belongs to an

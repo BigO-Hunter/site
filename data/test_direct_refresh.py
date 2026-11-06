@@ -731,6 +731,11 @@ class RefreshTests(unittest.TestCase):
         # Big O board rows key their record posts by authors, so a credit there is refused.
         with self.assertRaises(r.Rejected):
             r.row_for('direct-issue-5',dict(route='issue',item=self.issue(),submission=d.parse_body(self.issue()['body'])),'2026-10-11T00:00:00Z',None,credit)
+        # Prime gaps (verifier #148): H_1 <= B, a whole number.
+        gaps=dict(sub,problem='prime-gaps',bound='246')
+        listed=r.other_claims({'direct-issue-90':dict(route='issue',item=self.issue(90),submission=gaps,verification=proof)},{},{})['other-prime-gaps']['claims']
+        self.assertEqual((listed[0]['handle'],listed[0]['value'],listed[0]['display'],listed[0]['bound']),('direct-issue-90','246','246','H_1\\le 246'))
+        self.assertIn('BigOSpeedrun.PrimeGaps.Bound (246)',listed[0]['proofScope'])
         # Heilbronn (verifier #105): a saving, higher is better. The shown value is rounded down, never up.
         heilbronn=dict(sub,problem='heilbronn-triangle',bound='2/100866719')
         listed=r.other_claims({'direct-issue-81':dict(route='issue',item=self.issue(81),submission=heilbronn,verification=proof)},{},{})['other-heilbronn-triangle']['claims']
