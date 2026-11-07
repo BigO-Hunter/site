@@ -63167,7 +63167,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6824",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-07T01:37:12Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds lifts two helper inputs of PR 6805's native word onto one shared carrier register, with one repair event, on the caller of PR 6726. The conditional kappa is 0.00330823, 0.0027 percent above PR 6805's 0.00330814. The PR text credits CubeJerry (PR 6805), zxv (PR 6726), THU New Media Research Center· Prof. Shen Yang (PR 6716), Ali Romman and PR 6763. It names Claude Opus 5.5 as the preparing model. The five framework assumptions remain; external review is outstanding."
     }
   },
   "updated_at": "2026-11-07T03:17:25Z"
