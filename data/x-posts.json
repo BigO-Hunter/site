@@ -1175,5 +1175,10 @@
     "status": "skipped",
     "at": "2026-11-06T21:55:00.000Z",
     "reason": "OpenAI's own proof, rerun by a maintainer run: Discord only, no X post (Lead, 2026-11-06)"
+  },
+  "[\"other-catalan\",\"slitsey:295\",\"295\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-07T00:29:48.742Z",
+    "reason": "reserved before API send"
   }
 }
