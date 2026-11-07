@@ -1185,5 +1185,10 @@
     "status": "posted",
     "at": "2026-11-07T03:37:38.692Z",
     "id": "2118910723359392049"
+  },
+  "[\"other-prime-gaps\",\"direct-issue-175:246\",\"246\",\"attained\"]:lean": {
+    "status": "skipped",
+    "at": "2026-11-07T04:32:06.080Z",
+    "reason": "Lean Verified 246 is worse than the breakthrough bound 186 that started the race on this board (Nil, 2026-11-02): no X post"
   }
 }
