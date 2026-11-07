@@ -4345,6 +4345,49 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-issue-176:1e05c8bb7eda6c1d59180b219bba584367d69c16bf84938fca0a479edfbd2e36": {
+      "key": "direct-issue-176",
+      "submission": {
+        "schema_version": 1,
+        "problem": "catalan",
+        "repo_url": "https://github.com/darkhipo/catalan-irrationality-measure-410",
+        "commit": "bfa20018e0bd470805dac30a1916beefe586daa5",
+        "bound": "410",
+        "authors": []
+      },
+      "decision": "setup",
+      "evidence": {
+        "decision": "setup",
+        "reason": "The verifier setup failed before the proof check; this is not a verdict on the proof",
+        "id": "direct-176-1e05c8bb7eda6c1d59180b219bba584367d69c16bf84938fca0a479edfbd2e36",
+        "problem_id": "other/catalan",
+        "score": "410",
+        "score_relation": "attained",
+        "source_commit": "bfa20018e0bd470805dac30a1916beefe586daa5",
+        "source_url": "https://github.com/darkhipo/catalan-irrationality-measure-410",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42336901717",
+        "checked_at": "2026-11-07T05:00:21.334396Z",
+        "issue_created_at": "2026-11-07T04:05:38Z",
+        "issue_updated_at_at_verification": "2026-11-07T04:05:49Z",
+        "issue_updated_at_at_import": "2026-11-07T05:00:33Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-176-42336901717-1.json",
+        "receipt_sha256": "525952e1a4a9c8ffb40d49388f222f89592aaabdfe0480e56db4377041b575e0",
+        "policy_hash": "9a4e833014ee97c3ed036c201ebaa1a7224b959d58b174bc939ad12d4b208aed",
+        "result_artifact_id": 13561063818,
+        "controller_fingerprint": "86b3358eef293a791ddd5490b13f1007735905e68245268a93d18e785f5663ff",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -4490,7 +4533,7 @@
     },
     "176": {
       "version": "1e05c8bb7eda6c1d59180b219bba584367d69c16bf84938fca0a479edfbd2e36",
-      "updated_at": "2026-11-07T04:10:55Z",
+      "updated_at": "2026-11-07T05:00:33Z",
       "claimed_only": false
     }
   },
@@ -4534,11 +4577,6 @@
       "version": "7cccc4a78179fe81606616a0435d636beeca554128ecc2d96e8d1be8347d2457",
       "updated_at": "2026-11-07T03:00:38Z",
       "not_verified": true
-    },
-    "176": {
-      "version": "1e05c8bb7eda6c1d59180b219bba584367d69c16bf84938fca0a479edfbd2e36",
-      "updated_at": "2026-11-07T04:10:55Z",
-      "not_verified": false
     }
   }
 }
