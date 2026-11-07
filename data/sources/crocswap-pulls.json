@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-07T07:35:29Z",
+    "updated_at": "2026-11-07T10:50:47Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -132755,6 +132755,48 @@
     },
     "head": {
       "sha": "1b3f081debf631b690f56a2f67645984a5c70fe4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6846,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6846",
+    "title": "Prove that P104 has no rank-8 complex realisation over any field: a 14-port Hall obstruction (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T10:30:37Z",
+    "updated_at": "2026-11-07T10:30:37Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "01651795be9570c47977a73f9cf3e8eeb3fbe64a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6847,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6847",
+    "title": "Preserve inherited address-space limits in the primary baseline launcher",
+    "state": "open",
+    "created_at": "2026-11-07T10:40:05Z",
+    "updated_at": "2026-11-07T10:57:58Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "efb116491184bd16c5d1ada60d71efdefee61691"
     },
     "base": {
       "ref": "main"
