@@ -128079,7 +128079,7 @@
       "title": "Improve three-qubit Clifford Gram condition bound to 807 (no κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6794",
       "submitted_at": "2026-11-06T13:16:35Z",
-      "updated_at": "2026-11-06T13:24:34Z",
+      "updated_at": "2026-11-07T00:28:25Z",
       "source_commit": "c6252da020819a08ef2b2ff14280146c43ad374c",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-06T13:16:35Z",
