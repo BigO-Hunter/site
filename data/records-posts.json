@@ -2051,5 +2051,14 @@
     "authors": [
       "DreamingOfClouds"
     ]
+  },
+  {
+    "key": "[\"other-catalan\",\"MarcosCarreira:280.59\",\"280.59\",\"attained\"]:record",
+    "text": "**New claim** | **Catalan’s constant** | `μ(G) ≤ 280.59` | by Marcos Costa Santos Carreira | Claimed | [bigospeedrun.com/other/catalan](https://bigospeedrun.com/other/catalan)",
+    "x_text": "New claim!\n\nProblem: Catalan’s constant\nNew value: μ(G) ≤ 280.59\nPlayer: Marcos Costa Santos Carreira\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-07T23:38:17.155Z",
+    "authors": [
+      "Marcos Costa Santos Carreira"
+    ]
   }
 ]
