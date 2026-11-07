@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6824",
+        "leader": "crocswap-pr-6833",
         "direction": "higher",
         "records": [
           {
@@ -4429,6 +4429,16 @@
               "DreamingOfClouds"
             ],
             "bound": "O(n log^(1 - 0.00330823) n)"
+          },
+          {
+            "id": "crocswap-pr-6833",
+            "score": "16859/5000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.0033718) n)"
           }
         ],
         "table": "big-o"
@@ -7547,7 +7557,8 @@
     "[\"other-van-der-waerden\",\"openai:1/100000\",\"1/100000\",\"attained\"]:lean",
     "[\"other-catalan\",\"slitsey:295\",\"295\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6824\",\"330823/100000000\",\"attained\"]:record",
-    "[\"other-prime-gaps\",\"direct-issue-175:246\",\"246\",\"attained\"]:lean"
+    "[\"other-prime-gaps\",\"direct-issue-175:246\",\"246\",\"attained\"]:lean",
+    "[\"integer-multiplication\",\"crocswap-pr-6833\",\"16859/5000000\",\"attained\"]:record"
   ],
   "deferred": [
     {
