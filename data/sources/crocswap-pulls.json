@@ -132529,5 +132529,47 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6835,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6835",
+    "title": "Prove the relay-hub normal form of the P104 native word, a descent-crossing bound and a pair-exchange frame law (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T06:35:55Z",
+    "updated_at": "2026-11-07T06:35:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "44316f3e6023a7f8c516360e22e9efd6f0fe48c5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6836,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6836",
+    "title": "Bound the idle cover of the chain-nested root, its top targets and its best shape (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T07:10:37Z",
+    "updated_at": "2026-11-07T07:10:37Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "99b18108eda17764d55301aae12948b547b17635"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
