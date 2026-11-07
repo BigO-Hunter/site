@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-07T01:15:59Z",
+    "updated_at": "2026-11-07T04:55:12Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -132386,10 +132386,10 @@
   {
     "number": 6828,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6828",
-    "title": "Overlap floor for refined recovery: ≥ 15.79·F^27 (696 bits) at depth 27 (no κ)",
+    "title": "Refined recovery at depth 27: exact minimum zero fiber (1+12ρ₂²⁵+3ρ₂²⁶)·F²⁷, realized by explicit frames; floors for all t≥27 (no κ)",
     "state": "open",
     "created_at": "2026-11-07T04:07:34Z",
-    "updated_at": "2026-11-07T04:07:34Z",
+    "updated_at": "2026-11-07T05:15:46Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -132397,11 +132397,53 @@
       "html_url": "https://github.com/apoursh"
     },
     "head": {
-      "sha": "e713a7b1b2a2b6378d660444a411d539fb8cacb5"
+      "sha": "6197c4b725ef41dfca790b23c354543294490f60"
     },
     "base": {
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6829,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6829",
+    "title": "No facet or ridge shadow of the mode zonotope obstructs R = 1: 422,224 facets, 21,589 ridge flats (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T04:47:35Z",
+    "updated_at": "2026-11-07T05:08:16Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "apoursh",
+      "html_url": "https://github.com/apoursh"
+    },
+    "head": {
+      "sha": "60e4e0c921485645544848d5968dc36b055a6e67"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6830,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6830",
+    "title": "Preserve compiler inputs with owned property-query observations",
+    "state": "open",
+    "created_at": "2026-11-07T04:51:50Z",
+    "updated_at": "2026-11-07T04:58:19Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "39fcd67c991bd72918080b1d2c02feb3d679206d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]
