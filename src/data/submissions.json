@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-06T22:42:24Z",
+      "updated_at": "2026-11-07T01:15:59Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -128673,6 +128673,49 @@
       "claim_files_head": "432a7ddae2e71b16d81a1441c26cfc583132cced",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6822,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Tighten sufficient Clifford Gram conditioning from 807 to 16471/40",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6822",
+      "submitted_at": "2026-11-07T00:54:15Z",
+      "updated_at": "2026-11-07T01:03:38Z",
+      "source_commit": "fcede4106b9f175d2060f41a4feb4eca2b1acbad",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T00:54:15Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "fcede4106b9f175d2060f41a4feb4eca2b1acbad",
+      "claim_text": "b3fde947dff97e267d74ba9d7e74224babca2980c71911403d0d5ac129c7ebf5",
+      "claim_files": [
+        [
+          "added",
+          "research/clifford-order3-conditioning/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "fcede4106b9f175d2060f41a4feb4eca2b1acbad",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6823,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Check security modules and mount topology in the native view entry",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6823",
+      "submitted_at": "2026-11-07T01:12:04Z",
+      "updated_at": "2026-11-07T01:12:04Z",
+      "source_commit": "f497188c5125ce6e2bba67c9d2831bbc62945ea5",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T01:12:04Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }

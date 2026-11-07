@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-06T22:42:24Z",
+    "updated_at": "2026-11-07T01:15:59Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -132256,5 +132256,47 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6822,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6822",
+    "title": "Tighten sufficient Clifford Gram conditioning from 807 to 16471/40",
+    "state": "open",
+    "created_at": "2026-11-07T00:54:15Z",
+    "updated_at": "2026-11-07T01:03:38Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "fcede4106b9f175d2060f41a4feb4eca2b1acbad"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6823,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6823",
+    "title": "Check security modules and mount topology in the native view entry",
+    "state": "open",
+    "created_at": "2026-11-07T01:12:04Z",
+    "updated_at": "2026-11-07T01:12:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "f497188c5125ce6e2bba67c9d2831bbc62945ea5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]
