@@ -6994,6 +6994,17 @@
             ],
             "bound": "H_1 ≤ 182",
             "display": "182"
+          },
+          {
+            "id": "direct-issue-175:246",
+            "score": "246",
+            "relation": "attained",
+            "evidence": "Lean Verified",
+            "authors": [
+              "MultiAgency swarm"
+            ],
+            "bound": "H_1 ≤ 246",
+            "display": "246"
           }
         ]
       },
@@ -7535,7 +7546,8 @@
     "[\"subset-sum\",\"jv1000-subset-sum-0-4875755-2026\",\"975151/2000000\",\"attained\"]:record",
     "[\"other-van-der-waerden\",\"openai:1/100000\",\"1/100000\",\"attained\"]:lean",
     "[\"other-catalan\",\"slitsey:295\",\"295\",\"attained\"]:record",
-    "[\"integer-multiplication\",\"crocswap-pr-6824\",\"330823/100000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6824\",\"330823/100000000\",\"attained\"]:record",
+    "[\"other-prime-gaps\",\"direct-issue-175:246\",\"246\",\"attained\"]:lean"
   ],
   "deferred": [
     {

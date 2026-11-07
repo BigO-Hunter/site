@@ -117427,7 +117427,7 @@
       "title": "Mode-fiber rounding radius R ≤ 3/2 via a balancing lemma (no κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6333",
       "submitted_at": "2026-10-31T13:05:23Z",
-      "updated_at": "2026-10-31T13:48:44Z",
+      "updated_at": "2026-11-07T03:36:15Z",
       "source_commit": "65f279d1d0c59e46974df9fd1b85d56aafca7a46",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T13:48:44Z",
@@ -125037,7 +125037,7 @@
       "title": "Prove optimal refined recovery for longer mode-preserving chains (no κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6660",
       "submitted_at": "2026-11-03T15:17:48Z",
-      "updated_at": "2026-11-03T15:29:35Z",
+      "updated_at": "2026-11-07T04:17:22Z",
       "source_commit": "b6de532eff668a7daf8f2f98668f97af5af41338",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-03T15:17:48Z",
@@ -128803,6 +128803,55 @@
         ]
       ],
       "claim_files_head": "2f56258396838acb84b352a8ab578bf7babc83b5",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6827,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Prove the pure dual-pair retirement criterion and its unit-divisor count (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6827",
+      "submitted_at": "2026-11-07T03:27:48Z",
+      "updated_at": "2026-11-07T04:00:54Z",
+      "source_commit": "f0fbfd64ea8e7396a6e324d9103350b67215d890",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T03:27:48Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "f0fbfd64ea8e7396a6e324d9103350b67215d890",
+      "claim_text": "a2cd95dada96c345ca499cce476243f64a5e93a52bebdbe253cef46920f31624",
+      "claim_files": [],
+      "claim_files_head": "f0fbfd64ea8e7396a6e324d9103350b67215d890",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6828,
+      "author": "apoursh",
+      "author_url": "https://github.com/apoursh",
+      "title": "Overlap floor for refined recovery: ≥ 15.79·F^27 (696 bits) at depth 27 (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6828",
+      "submitted_at": "2026-11-07T04:07:34Z",
+      "updated_at": "2026-11-07T04:07:34Z",
+      "source_commit": "e713a7b1b2a2b6378d660444a411d539fb8cacb5",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T04:07:34Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "e713a7b1b2a2b6378d660444a411d539fb8cacb5",
+      "claim_text": "b01aca95d1fd6fbdde9111360810cebf0ccfb7f7c952b4adf7f53563a2d44799",
+      "claim_files": [
+        [
+          "added",
+          "research/refined-recovery-overlap-floor/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "e713a7b1b2a2b6378d660444a411d539fb8cacb5",
       "claim_files_base": "main",
       "claim_files_result": true
     }
