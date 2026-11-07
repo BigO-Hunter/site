@@ -63,7 +63,7 @@ const profileLogin = url => typeof url === 'string' ? url.match(/^https:\/\/gith
 const addProfileLogins = value => {
   if (Array.isArray(value)) value.forEach(addProfileLogins);
   else if (value && typeof value === 'object') {
-    if (Array.isArray(value.authors)) for (const author of value.authors) { const login = profileLogin(author?.url); if (login) logins.add(login.toLowerCase()); }
+    if (Array.isArray(value.authors)) for (const author of value.authors) { const login = profileLogin(author?.url) ?? (typeof author?.login === 'string' && /^[A-Za-z0-9-]+$/.test(author.login) ? author.login : undefined); if (login) logins.add(login.toLowerCase()); }
     Object.values(value).forEach(addProfileLogins);
   }
 };

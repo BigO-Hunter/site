@@ -3582,7 +3582,7 @@
           "authors": [
             {
               "name": "Jose Brox",
-              "url": "https://github.com/JoseBrox/diophantine-z-q_improvements"
+              "url": "https://github.com/JoseBrox"
             }
           ],
           "proofScope": "A written proof in a manuscript in the repository, with no human review yet, conditional on the arithmetic inputs of the Glazer construction and on Sun's prime-pattern theorem. The repository's checks verify the algebra of the construction; they do not check the arithmetic. No Lean proof.",
@@ -3609,7 +3609,7 @@
           "authors": [
             {
               "name": "Jose Brox",
-              "url": "https://github.com/JoseBrox/diophantine-z-q_improvements"
+              "url": "https://github.com/JoseBrox"
             }
           ],
           "proofScope": "A written proof in a manuscript in the repository, with no human review yet, conditional on the arithmetic inputs of the Glazer construction. The repository's checks verify the algebra of the construction; they do not check the arithmetic. No Lean proof.",
@@ -3695,7 +3695,7 @@
             },
             {
               "name": "Jose Brox",
-              "url": "https://github.com/elliotglazer/diophantine-z-q"
+              "url": "https://github.com/JoseBrox"
             },
             {
               "name": "Gabe Conant",
