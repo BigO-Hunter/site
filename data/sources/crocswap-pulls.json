@@ -133054,5 +133054,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6860,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6860",
+    "title": "Speed exact rank certificates with sparse witness products",
+    "state": "open",
+    "created_at": "2026-11-07T17:23:35Z",
+    "updated_at": "2026-11-07T17:23:35Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "fluorine",
+      "html_url": "https://github.com/fluorine"
+    },
+    "head": {
+      "sha": "4d73d3df7183e0b1a5f3a34cb3e059eefe45a07e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

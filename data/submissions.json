@@ -129687,6 +129687,28 @@
       "claim_files_head": "e5749d17a61bd120eccff00b2abd53b69eeaa2df",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6860,
+      "author": "fluorine",
+      "author_url": "https://github.com/fluorine",
+      "title": "Speed exact rank certificates with sparse witness products",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6860",
+      "submitted_at": "2026-11-07T17:23:35Z",
+      "updated_at": "2026-11-07T17:23:35Z",
+      "source_commit": "4d73d3df7183e0b1a5f3a34cb3e059eefe45a07e",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T17:23:35Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "4d73d3df7183e0b1a5f3a34cb3e059eefe45a07e",
+      "claim_text": "bbe2b9c3f4110cf407ed9ebccd8744c6d528c137db7ff969e4d2a66b80cb5646",
+      "claim_files": [],
+      "claim_files_head": "4d73d3df7183e0b1a5f3a34cb3e059eefe45a07e",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
