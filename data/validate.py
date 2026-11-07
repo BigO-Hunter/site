@@ -31,11 +31,9 @@ if (ROOT/'direct-notes.json').exists():
   assert predecessor_ok(n),key
   # Credited authors (optional; Other bounds rows only, see below): 1-5 distinct GitHub logins, in credit order.
   assert set(n)<={'text','predecessor','authors','credit'},key
-  # A display credit (optional; Other bounds rows only): a plain-text author line and names (direct_refresh.credit_ok).
+  # A display credit (optional; Other bounds and Big O direct rows): a plain-text author line and names (credit_ok).
   if 'credit' in n:
    assert credit_ok(n['credit']),key
-   known=load('direct-submissions.json')['entries'].get(key)
-   assert not known or known['submission']['problem'] not in ('dft','3sum','apsp','subset-sum','directed-sssp'),'Display credit on a board row: '+key
   if 'authors' in n:
    a=n['authors'];assert isinstance(a,list) and 0<len(a)<=5 and len(set(a))==len(a) and all(isinstance(x,str) and re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{0,38}',x) for x in a),key
    known=load('direct-submissions.json')['entries'].get(key)

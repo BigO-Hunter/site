@@ -187,6 +187,17 @@
           "MultiAgency swarm"
         ]
       }
+    },
+    "direct-issue-183": {
+      "predecessor": "https://github.com/bigospeedrun/verifier/pull/156",
+      "text": "A refile of Halit Ziya KARTAL's Lean Verified 0.0031415926 proof (direct-pr-156) with only its stated saving changed, to just below the rate 67/21280 that its engine already proves. The proof is Halit Ziya KARTAL's, with the credits of that row: Ali Romman's binary query tree, Cinna Davis' thin query and Jacob Sussman's construction. MultiAgency swarm extracted the constant.",
+      "credit": {
+        "author": "Halit Ziya KARTAL; MultiAgency swarm (constant extraction)",
+        "names": [
+          "Halit Ziya KARTAL",
+          "MultiAgency swarm"
+        ]
+      }
     }
   },
   "withdrawn": {

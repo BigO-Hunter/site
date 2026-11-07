@@ -411,8 +411,13 @@ def row_for(key,claim,now,old=None,note=None):
         publication_source_url=item['html_url'],direct_submission=True,route=route)
     # A reviewed credit note (data/direct-notes.json) survives the hourly rebuild of direct rows.
     if note:meta['credit_note']=note['text']
-    # Credited authors are for Other bounds rows only (other_claims): a Big O row's authors key its record posts.
-    require(not (note and (note.get('authors') or note.get('credit'))),'Credited authors on a Big O board row: '+key)
+    # Credited logins are for Other bounds rows only (other_claims). A reviewed display credit also names a Big O row's
+    # authors (Lead, 2026-11-07, verifier #183: a refile of Halit Ziya KARTAL's proof with only the constant changed):
+    # the names, in credit order, each linking the submission. The table, the record posts and the chat read them.
+    require(not (note and note.get('authors')),'Credited authors on a Big O board row: '+key)
+    if note and note.get('credit'):
+        require(credit_ok(note['credit']),'Invalid display credit')
+        row['authors']=[dict(name=x,url=item['html_url']) for x in note['credit']['names']]
     if proof:
         row['rerun_status']=dict(state='passed',checked_at=proof['checked_at'],receipt_path=proof['receipt_path'])
         meta['receipt_url']=proof['receipt_url']

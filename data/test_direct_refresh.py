@@ -744,9 +744,16 @@ class RefreshTests(unittest.TestCase):
         # Big O board rows key their record posts by authors, so a credit there is refused.
         with self.assertRaises(r.Rejected):
             r.row_for('direct-issue-5',dict(route='issue',item=self.issue(),submission=d.parse_body(self.issue()['body'])),'2026-10-11T00:00:00Z',None,credit)
-        with self.assertRaises(r.Rejected):
-            r.row_for('direct-issue-5',dict(route='issue',item=self.issue(),submission=d.parse_body(self.issue()['body'])),'2026-10-11T00:00:00Z',None,
-                      dict(text='x',credit=shown['credit']))
+        # A display credit names a Big O row's authors too (Lead, 2026-11-07, verifier #183), each linking the submission;
+        # credited logins stay refused there.
+        big=dict(route='issue',item=self.issue(),submission=d.parse_body(self.issue()['body']))
+        row,meta,_=r.row_for('direct-issue-5',big,'2026-10-11T00:00:00Z',None,dict(text='x',credit=dict(author='A; B',names=['Halit Ziya KARTAL','MultiAgency swarm'])))
+        self.assertEqual(row['authors'],[dict(name='Halit Ziya KARTAL',url=big['item']['html_url']),dict(name='MultiAgency swarm',url=big['item']['html_url'])])
+        self.assertEqual(meta['credit_note'],'x')
+        plain_row=r.row_for('direct-issue-5',big,'2026-10-11T00:00:00Z')[0]
+        self.assertEqual({k:v for k,v in row.items() if k!='authors'},{k:v for k,v in plain_row.items() if k!='authors'})
+        for bad in [dict(text='x',credit=dict(author='A',names=[])),dict(text='x',authors=['x'],credit=shown['credit'])]:
+            with self.subTest(note=bad),self.assertRaises(r.Rejected):r.row_for('direct-issue-5',big,'2026-10-11T00:00:00Z',None,bad)
         # Prime gaps (verifier #148): H_1 <= B, a whole number.
         gaps=dict(sub,problem='prime-gaps',bound='246')
         listed=r.other_claims({'direct-issue-90':dict(route='issue',item=self.issue(90),submission=gaps,verification=proof)},{},{})['other-prime-gaps']['claims']
