@@ -131717,7 +131717,7 @@
     "title": "Improve three-qubit Clifford Gram condition bound to 807 (no κ)",
     "state": "open",
     "created_at": "2026-11-06T13:16:35Z",
-    "updated_at": "2026-11-07T00:28:25Z",
+    "updated_at": "2026-11-07T01:20:22Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -132011,7 +132011,7 @@
     "title": "Prove two helpers suffice and are necessary for six query targets",
     "state": "open",
     "created_at": "2026-11-06T17:07:24Z",
-    "updated_at": "2026-11-06T17:20:14Z",
+    "updated_at": "2026-11-07T02:14:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -132284,7 +132284,7 @@
     "title": "Check security modules and mount topology in the native view entry",
     "state": "open",
     "created_at": "2026-11-07T01:12:04Z",
-    "updated_at": "2026-11-07T01:12:04Z",
+    "updated_at": "2026-11-07T01:19:12Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -132298,5 +132298,47 @@
       "ref": "main"
     },
     "draft": true
+  },
+  {
+    "number": 6824,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6824",
+    "title": "Conditional κ = 0.00330823 (+9e-8 over #6805): lift two helper inputs onto one shared carrier",
+    "state": "open",
+    "created_at": "2026-11-07T01:37:12Z",
+    "updated_at": "2026-11-07T01:37:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "2a7ca44fbda3abaa4df355b183ed7d7478eef7c1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6825,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6825",
+    "title": "Prove paid rank eight optimal for the four-call clean query contract",
+    "state": "open",
+    "created_at": "2026-11-07T01:46:33Z",
+    "updated_at": "2026-11-07T01:57:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "f333cd51356b5cbe24567a203e1f00fb63ab6978"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

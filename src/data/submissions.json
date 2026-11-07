@@ -128079,7 +128079,7 @@
       "title": "Improve three-qubit Clifford Gram condition bound to 807 (no κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6794",
       "submitted_at": "2026-11-06T13:16:35Z",
-      "updated_at": "2026-11-07T00:28:25Z",
+      "updated_at": "2026-11-07T01:20:22Z",
       "source_commit": "c6252da020819a08ef2b2ff14280146c43ad374c",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-06T13:16:35Z",
@@ -128406,7 +128406,7 @@
       "title": "Prove two helpers suffice and are necessary for six query targets",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6808",
       "submitted_at": "2026-11-06T17:07:24Z",
-      "updated_at": "2026-11-06T17:20:14Z",
+      "updated_at": "2026-11-07T02:14:29Z",
       "source_commit": "518351a389e32e2ccdf0a1ca55580e9c60d65492",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-06T17:07:24Z",
@@ -128708,14 +128708,73 @@
       "title": "Check security modules and mount topology in the native view entry",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6823",
       "submitted_at": "2026-11-07T01:12:04Z",
-      "updated_at": "2026-11-07T01:12:04Z",
+      "updated_at": "2026-11-07T01:19:12Z",
       "source_commit": "f497188c5125ce6e2bba67c9d2831bbc62945ea5",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-07T01:12:04Z",
       "checked_at": "2026-11-07",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_files": [],
+      "claim_files_head": "f497188c5125ce6e2bba67c9d2831bbc62945ea5",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6824,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = 0.00330823 (+9e-8 over #6805): lift two helper inputs onto one shared carrier",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6824",
+      "submitted_at": "2026-11-07T01:37:12Z",
+      "updated_at": "2026-11-07T01:37:12Z",
+      "source_commit": "2a7ca44fbda3abaa4df355b183ed7d7478eef7c1",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T01:37:12Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "2a7ca44fbda3abaa4df355b183ed7d7478eef7c1",
+      "claim_text": "f3ac2fdc26295d4284d78faf889e8d3f54c03f595215e7d4037b6ad4e81fb984",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-shared-carrier-input-lift/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "2a7ca44fbda3abaa4df355b183ed7d7478eef7c1",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6825,
+      "author": "ToikY",
+      "author_url": "https://github.com/ToikY",
+      "title": "Prove paid rank eight optimal for the four-call clean query contract",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6825",
+      "submitted_at": "2026-11-07T01:46:33Z",
+      "updated_at": "2026-11-07T01:57:48Z",
+      "source_commit": "f333cd51356b5cbe24567a203e1f00fb63ab6978",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T01:46:33Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "f333cd51356b5cbe24567a203e1f00fb63ab6978",
+      "claim_text": "5f5f19a4b302b601c72dc4fd4362d77842f1b810f1641d42e4d7ec28bf403a5c",
+      "claim_files": [
+        [
+          "added",
+          "research/clean-query-rank-optimum/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "f333cd51356b5cbe24567a203e1f00fb63ab6978",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
