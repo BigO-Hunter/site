@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-07T20:37:38Z",
+    "updated_at": "2026-11-07T21:45:47Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -133112,6 +133112,27 @@
     },
     "head": {
       "sha": "47cf8c9af49d22686264db2762700215032eda90"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6863,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6863",
+    "title": "Connect the waiting-entry caller and retain ordered timer retirement errors",
+    "state": "open",
+    "created_at": "2026-11-07T21:43:33Z",
+    "updated_at": "2026-11-07T21:49:58Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "c009a7514790e865b664ab8cd4688d37787d7eaa"
     },
     "base": {
       "ref": "main"
