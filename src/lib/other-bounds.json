@@ -504,7 +504,8 @@
           "authors": [
             {
               "name": "Hailey Collet",
-              "url": "https://x.com/HaileyStormC"
+              "url": "https://x.com/HaileyStormC",
+              "login": "HaileyStorm"
             }
           ],
           "proofScope": "Yes; lean proves the all-Dirichlet theorem. The author reports local Lean checks that were incomplete when the pull request opened, and asks the tracker for its protected verification. The tracker's check results are on the pull request. No independent rerun.",
@@ -3444,7 +3445,8 @@
             },
             {
               "name": "Elliot Glazer",
-              "url": "https://github.com/elliotglazer/diophantine-z-q"
+              "url": "https://github.com/elliotglazer/diophantine-z-q",
+              "login": "elliotglazer"
             },
             {
               "name": "Jenn Park",
@@ -3492,7 +3494,8 @@
             },
             {
               "name": "Elliot Glazer",
-              "url": "https://github.com/elliotglazer/diophantine-z-q"
+              "url": "https://github.com/elliotglazer/diophantine-z-q",
+              "login": "elliotglazer"
             },
             {
               "name": "Jenn Park",
@@ -3541,7 +3544,8 @@
             },
             {
               "name": "Elliot Glazer",
-              "url": "https://github.com/elliotglazer/diophantine-z-q"
+              "url": "https://github.com/elliotglazer/diophantine-z-q",
+              "login": "elliotglazer"
             },
             {
               "name": "Jenn Park",
@@ -3649,7 +3653,8 @@
             },
             {
               "name": "Elliot Glazer",
-              "url": "https://github.com/elliotglazer/diophantine-z-q"
+              "url": "https://github.com/elliotglazer/diophantine-z-q",
+              "login": "elliotglazer"
             },
             {
               "name": "Jennifer Park",
@@ -3706,7 +3711,8 @@
             },
             {
               "name": "Elliot Glazer",
-              "url": "https://github.com/elliotglazer/diophantine-z-q"
+              "url": "https://github.com/elliotglazer/diophantine-z-q",
+              "login": "elliotglazer"
             },
             {
               "name": "Jennifer Park",
