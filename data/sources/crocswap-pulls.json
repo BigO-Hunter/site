@@ -116912,7 +116912,7 @@
     "title": "P104 cut enlargements (#6064) cannot fund separately paid coordinate delivery",
     "state": "closed",
     "created_at": "2026-10-28T05:15:29Z",
-    "updated_at": "2026-10-28T17:36:27Z",
+    "updated_at": "2026-11-06T23:10:54Z",
     "closed_at": "2026-10-28T17:36:27Z",
     "merged_at": "2026-10-28T17:36:27Z",
     "user": {
@@ -132230,6 +132230,27 @@
     },
     "head": {
       "sha": "bca4d4a90675b88b45d154935716c8eaecf15956"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6821,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6821",
+    "title": "Prove the all-cap formal concave tariff for repeated A2 st",
+    "state": "open",
+    "created_at": "2026-11-06T23:53:37Z",
+    "updated_at": "2026-11-07T00:02:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "432a7ddae2e71b16d81a1441c26cfc583132cced"
     },
     "base": {
       "ref": "main"
