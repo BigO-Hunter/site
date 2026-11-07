@@ -129388,6 +129388,33 @@
       "claim_files_head": "efb116491184bd16c5d1ada60d71efdefee61691",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6848,
+      "author": "apoursh",
+      "author_url": "https://github.com/apoursh",
+      "title": "Refined recovery: max fiber = zero fiber under an ε₀ threshold; exact depth-27 optimum (1+12ρ₂²⁵+3ρ₂²⁶)·F²⁷, 696 bits (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6848",
+      "submitted_at": "2026-11-07T12:11:12Z",
+      "updated_at": "2026-11-07T12:11:13Z",
+      "source_commit": "3b5694fb6eb55cd80ddf8941ac722a1acc68d097",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T12:11:12Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "3b5694fb6eb55cd80ddf8941ac722a1acc68d097",
+      "claim_text": "19e38312aaffd4e07e2bd34040f6d2537a0796d88f493dd9ba288457a53f848a",
+      "claim_files": [
+        [
+          "added",
+          "research/refined-recovery-max-fiber/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "3b5694fb6eb55cd80ddf8941ac722a1acc68d097",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
