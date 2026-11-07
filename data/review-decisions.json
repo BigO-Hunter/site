@@ -603,6 +603,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-07T02:38:11Z",
       "note": "DreamingOfClouds' own package research/p104-shared-carrier-input-lift/ (66 files, RESULT.json, no CLAIM.json) states price.kappa 330823/100000000 = 0.00330823, the title's value (+0.00000009 over #6805's 0.00330814). It lifts two helper inputs of the #6805 native word onto one shared carrier register, with one repair event, on the caller of #6726. Conditional on five retained assumptions, same sense as all CrocSwap IM rows; the README says external review is open. Open, not draft, created 2026-11-07T01:37:12Z. It is queued because the value sits under the price key of RESULT.json, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6833,
+      "head": "ad24ad966b857dbfed50d9121624db84b2eccc92",
+      "score": "16859/5000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-07T07:38:09Z",
+      "note": "DreamingOfClouds' own package research/p104-chain-nested-root/ (71 files, RESULT.json, no CLAIM.json) states price.kappa 16859/5000000 = 0.0033718, the title's value (+0.00006357 over #6824's 0.00330823). It replaces the supplier tree of the #6726 caller by one chain-nested root, on the unchanged native word of #6824. Conditional on five retained assumptions, same sense as all CrocSwap IM rows; the README says external review is open. Open, not draft, created 2026-11-07T06:18:14Z. It is queued because the value sits under the price key of RESULT.json, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
