@@ -1,3 +1,11 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pr": 6833,
+      "head": "ad24ad966b857dbfed50d9121624db84b2eccc92",
+      "title": "Conditional κ = 0.00337180 (+6.36e-5, +1.92% over #6824): replace the supplier tree by a chain-nested root",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6833",
+      "reason": "The PR adds no single own research package CLAIM.json."
+    }
+  ]
 }

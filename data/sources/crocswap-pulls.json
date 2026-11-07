@@ -132487,5 +132487,47 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6833,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6833",
+    "title": "Conditional κ = 0.00337180 (+6.36e-5, +1.92% over #6824): replace the supplier tree by a chain-nested root",
+    "state": "open",
+    "created_at": "2026-11-07T06:18:14Z",
+    "updated_at": "2026-11-07T06:18:14Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "ad24ad966b857dbfed50d9121624db84b2eccc92"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6834,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6834",
+    "title": "Chain-nested root caller on the BIT native word: ordinary BIT saving 0.00385248 (dependency bound, no overall κ)",
+    "state": "open",
+    "created_at": "2026-11-07T06:20:47Z",
+    "updated_at": "2026-11-07T06:20:47Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "fda84512891fc2c173eaa2b964347afa3e5acb36"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

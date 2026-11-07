@@ -129034,6 +129034,56 @@
       "claim_files_head": "99a165a81be808f45c1b6f4b0a809145ac7923d1",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6833,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = 0.00337180 (+6.36e-5, +1.92% over #6824): replace the supplier tree by a chain-nested root",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6833",
+      "submitted_at": "2026-11-07T06:18:14Z",
+      "updated_at": "2026-11-07T06:18:14Z",
+      "source_commit": "ad24ad966b857dbfed50d9121624db84b2eccc92",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T06:18:14Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "ad24ad966b857dbfed50d9121624db84b2eccc92",
+      "claim_text": "4b712567fb32e49f7635b4db4778bebcfd00a5a613842e62e2e822821f2d4c67",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-chain-nested-root/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "ad24ad966b857dbfed50d9121624db84b2eccc92",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6834,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Chain-nested root caller on the BIT native word: ordinary BIT saving 0.00385248 (dependency bound, no overall κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6834",
+      "submitted_at": "2026-11-07T06:20:47Z",
+      "updated_at": "2026-11-07T06:20:47Z",
+      "source_commit": "fda84512891fc2c173eaa2b964347afa3e5acb36",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T06:20:47Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "fda84512891fc2c173eaa2b964347afa3e5acb36",
+      "claim_text": "54eb7439ceccc6b91b375fcd55cbd0cda9ca8b119215784fe6c460406f1e270d",
+      "claim_files": [],
+      "claim_files_head": "fda84512891fc2c173eaa2b964347afa3e5acb36",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
