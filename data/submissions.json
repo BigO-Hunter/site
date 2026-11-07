@@ -129550,6 +129550,28 @@
       "claim_files_head": "f4c55f456065a65ff9e04ec582d484b011dfcd60",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6854,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Prove no subset of ≥97 E8 lines has a rank-8 complex realisation (minimum hitting set 24, spectral + local certificate; no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6854",
+      "submitted_at": "2026-11-07T15:00:39Z",
+      "updated_at": "2026-11-07T15:00:39Z",
+      "source_commit": "3d355ae61f174c5f7101c9eb292722afa5a5f9ac",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T15:00:39Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "3d355ae61f174c5f7101c9eb292722afa5a5f9ac",
+      "claim_text": "3cdac819f0ceb074931de3c714ae6e063b0e67151423e5cdd2b34ce4f1d01d1b",
+      "claim_files": [],
+      "claim_files_head": "3d355ae61f174c5f7101c9eb292722afa5a5f9ac",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

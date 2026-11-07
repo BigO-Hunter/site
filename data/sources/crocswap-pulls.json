@@ -132928,5 +132928,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6854,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6854",
+    "title": "Prove no subset of ≥97 E8 lines has a rank-8 complex realisation (minimum hitting set 24, spectral + local certificate; no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T15:00:39Z",
+    "updated_at": "2026-11-07T15:00:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "3d355ae61f174c5f7101c9eb292722afa5a5f9ac"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
