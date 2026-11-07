@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-175": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "prime-gaps",
+        "repo_url": "https://github.com/darkhipo/prime-gaps-246-lean",
+        "commit": "b28fb4cc3f9be02a3f91623651aea01765c7d3a9",
+        "bound": "246",
+        "authors": []
+      }
+    },
     "direct-issue-158": {
       "route": "issue",
       "submission": {
@@ -4442,8 +4453,13 @@
     },
     "173": {
       "version": "7cccc4a78179fe81606616a0435d636beeca554128ecc2d96e8d1be8347d2457",
-      "updated_at": "2026-11-07T01:47:09Z",
+      "updated_at": "2026-11-07T03:00:38Z",
       "not_verified": true
+    },
+    "175": {
+      "version": "d1541d523e3d80963e79c3cc588fa054a3eb487fdf793494cd609b92f90cc808",
+      "updated_at": "2026-11-07T02:53:11Z",
+      "not_verified": false
     }
   }
 }

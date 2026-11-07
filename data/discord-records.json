@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6805",
+        "leader": "crocswap-pr-6824",
         "direction": "higher",
         "records": [
           {
@@ -4419,6 +4419,16 @@
               "CubeJerry"
             ],
             "bound": "O(n log^(1 - 0.00330814) n)"
+          },
+          {
+            "id": "crocswap-pr-6824",
+            "score": "330823/100000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.00330823) n)"
           }
         ],
         "table": "big-o"
@@ -7524,7 +7534,8 @@
     "[\"other-z-diophantine-in-q\",\"z-in-q-version-6:962\",\"962\",\"attained\"]:record",
     "[\"subset-sum\",\"jv1000-subset-sum-0-4875755-2026\",\"975151/2000000\",\"attained\"]:record",
     "[\"other-van-der-waerden\",\"openai:1/100000\",\"1/100000\",\"attained\"]:lean",
-    "[\"other-catalan\",\"slitsey:295\",\"295\",\"attained\"]:record"
+    "[\"other-catalan\",\"slitsey:295\",\"295\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-6824\",\"330823/100000000\",\"attained\"]:record"
   ],
   "deferred": [
     {
