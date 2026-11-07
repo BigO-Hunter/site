@@ -132823,5 +132823,110 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6849,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6849",
+    "title": "Refined recovery at every depth t≥27: optimum = 13^(8t)/2^104 within 5.5·10⁻⁶; exact tag ⌈8t·log₂13⌉−104 bits (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T12:22:23Z",
+    "updated_at": "2026-11-07T12:22:23Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "apoursh",
+      "html_url": "https://github.com/apoursh"
+    },
+    "head": {
+      "sha": "4cc49d5dec8e88ca5f9e319fed692584cb6684f0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6850,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6850",
+    "title": "Refined recovery: optimum → 13^(8t)/2^104 exponentially; exact tag ⌈8t·log₂13⌉−104 at every depth t≥27 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T12:33:03Z",
+    "updated_at": "2026-11-07T12:33:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "apoursh",
+      "html_url": "https://github.com/apoursh"
+    },
+    "head": {
+      "sha": "1e5406c51f536d0b243827788b71dff8ceefd191"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6851,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6851",
+    "title": "Refined recovery: the second-order term ε_t of the optimum decays at 4.0–14.8 bits per stage (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T12:42:47Z",
+    "updated_at": "2026-11-07T12:42:47Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "apoursh",
+      "html_url": "https://github.com/apoursh"
+    },
+    "head": {
+      "sha": "99ffc8c47c86c55cc912fe71697c35e05030afd5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6852,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6852",
+    "title": "Refined recovery: the second-order term ε_t decays at exactly 4·log₂13 ≈ 14.80 bits per stage (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T12:50:08Z",
+    "updated_at": "2026-11-07T12:50:08Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "apoursh",
+      "html_url": "https://github.com/apoursh"
+    },
+    "head": {
+      "sha": "eec538dddfcf6b8637edf42f58e82cca0dc7a22c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6853,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6853",
+    "title": "Refined recovery: explicit near-optimal frames at t=28–30, within 2.7·10⁻⁷, 5.0·10⁻⁹, 5.0·10⁻¹² of 13^(8t)/2^104 (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T12:53:58Z",
+    "updated_at": "2026-11-07T12:53:58Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "apoursh",
+      "html_url": "https://github.com/apoursh"
+    },
+    "head": {
+      "sha": "f4c55f456065a65ff9e04ec582d484b011dfcd60"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

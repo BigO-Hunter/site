@@ -129415,6 +129415,141 @@
       "claim_files_head": "3b5694fb6eb55cd80ddf8941ac722a1acc68d097",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6849,
+      "author": "apoursh",
+      "author_url": "https://github.com/apoursh",
+      "title": "Refined recovery at every depth t≥27: optimum = 13^(8t)/2^104 within 5.5·10⁻⁶; exact tag ⌈8t·log₂13⌉−104 bits (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6849",
+      "submitted_at": "2026-11-07T12:22:23Z",
+      "updated_at": "2026-11-07T12:22:23Z",
+      "source_commit": "4cc49d5dec8e88ca5f9e319fed692584cb6684f0",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T12:22:23Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "4cc49d5dec8e88ca5f9e319fed692584cb6684f0",
+      "claim_text": "90c3ba82804e22dc58f08adb939c19bc82759825a71ea0824bff6964bc183a4a",
+      "claim_files": [
+        [
+          "added",
+          "research/refined-recovery-all-depths/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "4cc49d5dec8e88ca5f9e319fed692584cb6684f0",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6850,
+      "author": "apoursh",
+      "author_url": "https://github.com/apoursh",
+      "title": "Refined recovery: optimum → 13^(8t)/2^104 exponentially; exact tag ⌈8t·log₂13⌉−104 at every depth t≥27 (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6850",
+      "submitted_at": "2026-11-07T12:33:03Z",
+      "updated_at": "2026-11-07T12:33:03Z",
+      "source_commit": "1e5406c51f536d0b243827788b71dff8ceefd191",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T12:33:03Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "1e5406c51f536d0b243827788b71dff8ceefd191",
+      "claim_text": "5520e7706f62bab8c4a15d76337bdfc7ccec7c54096331797975be7a2ce4aab3",
+      "claim_files": [
+        [
+          "added",
+          "research/refined-recovery-asymptotic/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "1e5406c51f536d0b243827788b71dff8ceefd191",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6851,
+      "author": "apoursh",
+      "author_url": "https://github.com/apoursh",
+      "title": "Refined recovery: the second-order term ε_t of the optimum decays at 4.0–14.8 bits per stage (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6851",
+      "submitted_at": "2026-11-07T12:42:47Z",
+      "updated_at": "2026-11-07T12:42:47Z",
+      "source_commit": "99ffc8c47c86c55cc912fe71697c35e05030afd5",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T12:42:47Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "99ffc8c47c86c55cc912fe71697c35e05030afd5",
+      "claim_text": "db798911f32c2f6ec817265cf2e18cf013844444729747aef98f308a4d117754",
+      "claim_files": [
+        [
+          "added",
+          "research/refined-recovery-eps-rate/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "99ffc8c47c86c55cc912fe71697c35e05030afd5",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6852,
+      "author": "apoursh",
+      "author_url": "https://github.com/apoursh",
+      "title": "Refined recovery: the second-order term ε_t decays at exactly 4·log₂13 ≈ 14.80 bits per stage (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6852",
+      "submitted_at": "2026-11-07T12:50:08Z",
+      "updated_at": "2026-11-07T12:50:08Z",
+      "source_commit": "eec538dddfcf6b8637edf42f58e82cca0dc7a22c",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T12:50:08Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "eec538dddfcf6b8637edf42f58e82cca0dc7a22c",
+      "claim_text": "5c99737f85433e82d7a37b88c2a3c7e8f239453f964e1ebdc5b454b09d73dab9",
+      "claim_files": [
+        [
+          "added",
+          "research/refined-recovery-eps-exact-rate/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "eec538dddfcf6b8637edf42f58e82cca0dc7a22c",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6853,
+      "author": "apoursh",
+      "author_url": "https://github.com/apoursh",
+      "title": "Refined recovery: explicit near-optimal frames at t=28–30, within 2.7·10⁻⁷, 5.0·10⁻⁹, 5.0·10⁻¹² of 13^(8t)/2^104 (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6853",
+      "submitted_at": "2026-11-07T12:53:58Z",
+      "updated_at": "2026-11-07T12:53:58Z",
+      "source_commit": "f4c55f456065a65ff9e04ec582d484b011dfcd60",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T12:53:58Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "f4c55f456065a65ff9e04ec582d484b011dfcd60",
+      "claim_text": "bfe958e80ef676287918c0814b1c0c34d407d4ad2ff2ffffc5ffba9cdd8d1f1f",
+      "claim_files": [
+        [
+          "added",
+          "research/refined-recovery-explicit-frames/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "f4c55f456065a65ff9e04ec582d484b011dfcd60",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
