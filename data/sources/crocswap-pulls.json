@@ -132697,5 +132697,68 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6843,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6843",
+    "title": "Prove scoped coefficient rigidity for P104 frame contractions (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-07T10:14:05Z",
+    "updated_at": "2026-11-07T10:14:05Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "2f94be69001a94ad6577da73930c9c7c6c92fcfa"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6844,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6844",
+    "title": "Prove fixed-word P104 hub-gauge invariance of PURE capacity (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-07T10:14:09Z",
+    "updated_at": "2026-11-07T10:14:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "44e31321b1680ed7824795855fee5b7449cfcf9e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6845,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6845",
+    "title": "Construct mixed cross-side idles and prove two budget obstructions (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-07T10:14:17Z",
+    "updated_at": "2026-11-07T10:14:17Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "1b3f081debf631b690f56a2f67645984a5c70fe4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
