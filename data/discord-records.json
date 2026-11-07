@@ -4467,7 +4467,7 @@
         "slug": "exact-dft",
         "name": "Fourier Transform",
         "url": "https://bigospeedrun.com/exact-dft",
-        "leader": "direct-pr-156",
+        "leader": "direct-issue-183",
         "direction": "higher",
         "records": [
           {
@@ -4571,6 +4571,21 @@
               "canghaimeng"
             ],
             "bound": "O(n log^(1 - 0.00126) n)"
+          },
+          {
+            "id": "direct-issue-183",
+            "score": "3148496239/1000000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Halit Ziya KARTAL",
+              "MultiAgency swarm"
+            ],
+            "bound": "O(n log^(1 - 0.0031484962) n)",
+            "verification": {
+              "state": "pending",
+              "since": "2026-11-07T18:33:31Z"
+            }
           },
           {
             "id": "direct-issue-19",
@@ -7567,6 +7582,15 @@
       "authors": [
         "aigent-marius"
       ]
+    },
+    {
+      "key": "[\"exact-dft\",\"direct-issue-183\",\"3148496239/1000000000000\",\"attained\"]:record",
+      "slug": "exact-dft",
+      "authors": [
+        "Halit Ziya KARTAL",
+        "MultiAgency swarm"
+      ],
+      "hold": true
     }
   ]
 }
