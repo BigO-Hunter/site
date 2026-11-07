@@ -132970,5 +132970,89 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6856,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6856",
+    "title": "Close the P104 block-dimension gap and sharpen the Hall witness",
+    "state": "open",
+    "created_at": "2026-11-07T16:42:51Z",
+    "updated_at": "2026-11-07T16:42:51Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "e1e6f9de0610b44072ff864cba8bb0d46062c02d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6857,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6857",
+    "title": "Bound no-idle query roots and paired productive stages (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-07T16:43:15Z",
+    "updated_at": "2026-11-07T16:43:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "b269b953f1e06583551470b088d4632a282e149c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6858,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6858",
+    "title": "Price whole-bridge carriers and constrain the shortened quotient (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-07T16:43:32Z",
+    "updated_at": "2026-11-07T16:43:32Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "7d34bef131ad06edb833e481d53e3495576d5195"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6859,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6859",
+    "title": "Prove the root hub of P104 chain-nested roots is forced under replay: single-time, piece-adjacent and commuting-split scalings (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T16:49:39Z",
+    "updated_at": "2026-11-07T16:49:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "e5749d17a61bd120eccff00b2abd53b69eeaa2df"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

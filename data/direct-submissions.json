@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-178": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "heilbronn-triangle",
+        "repo_url": "https://github.com/darkhipo/heilbronn-triangle-lean",
+        "commit": "75871160989c6e8eb9d6058af0abf2d9607020f8",
+        "bound": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "authors": []
+      }
+    },
     "direct-issue-175": {
       "route": "issue",
       "submission": {
@@ -4535,6 +4546,11 @@
       "version": "1e05c8bb7eda6c1d59180b219bba584367d69c16bf84938fca0a479edfbd2e36",
       "updated_at": "2026-11-07T05:00:33Z",
       "claimed_only": false
+    },
+    "178": {
+      "version": "2a99093f84c8a98f9042bf13931bc6d6241694d6b190882d7a9bded659a241c2",
+      "updated_at": "2026-11-07T16:53:55Z",
+      "claimed_only": true
     }
   },
   "not_verified_cache": {
@@ -4577,6 +4593,11 @@
       "version": "7cccc4a78179fe81606616a0435d636beeca554128ecc2d96e8d1be8347d2457",
       "updated_at": "2026-11-07T03:00:38Z",
       "not_verified": true
+    },
+    "178": {
+      "version": "2a99093f84c8a98f9042bf13931bc6d6241694d6b190882d7a9bded659a241c2",
+      "updated_at": "2026-11-07T16:53:55Z",
+      "not_verified": false
     }
   }
 }
