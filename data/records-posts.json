@@ -2033,5 +2033,14 @@
     "authors": [
       "DreamingOfClouds"
     ]
+  },
+  {
+    "key": "[\"other-prime-gaps\",\"direct-issue-175:246\",\"246\",\"attained\"]:lean",
+    "text": "**Record verified** | **Bounded prime gaps** | `H_1 ≤ 246` | by MultiAgency swarm | Lean Verified | [bigospeedrun.com/other/prime-gaps](https://bigospeedrun.com/other/prime-gaps)",
+    "x_text": "Record verified!\n\nProblem: Bounded prime gaps\nValue: H_1 ≤ 246\nPlayer: MultiAgency swarm\nStatus: Lean Verified",
+    "posted_at": "2026-11-07T04:32:04.621Z",
+    "authors": [
+      "MultiAgency swarm"
+    ]
   }
 ]
