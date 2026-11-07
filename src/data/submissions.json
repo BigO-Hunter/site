@@ -129572,6 +129572,28 @@
       "claim_files_head": "3d355ae61f174c5f7101c9eb292722afa5a5f9ac",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6855,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Prove the Y-cancellation arrival floor for P104 native words: owned-only X routing and parity-complementary covers (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6855",
+      "submitted_at": "2026-11-07T16:03:07Z",
+      "updated_at": "2026-11-07T16:03:07Z",
+      "source_commit": "0ee784c543441fbae8861ec3af78d59010e0b34c",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-07T16:03:07Z",
+      "checked_at": "2026-11-07",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "0ee784c543441fbae8861ec3af78d59010e0b34c",
+      "claim_text": "8db0a27bfe361bf1bff9ac6123a87bbb14f5409d4b06797585df304ad05ac2fb",
+      "claim_files": [],
+      "claim_files_head": "0ee784c543441fbae8861ec3af78d59010e0b34c",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

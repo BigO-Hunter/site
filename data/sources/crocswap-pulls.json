@@ -132949,5 +132949,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6855,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6855",
+    "title": "Prove the Y-cancellation arrival floor for P104 native words: owned-only X routing and parity-complementary covers (no κ)",
+    "state": "open",
+    "created_at": "2026-11-07T16:03:07Z",
+    "updated_at": "2026-11-07T16:03:07Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "0ee784c543441fbae8861ec3af78d59010e0b34c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
