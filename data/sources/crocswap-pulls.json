@@ -133558,5 +133558,47 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6884,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6884",
+    "title": "Conditional κ = 0.00341603 (+1.610e-5, +0.4736% over #6883): exact-optimum shared cover of the hosted native, BIT pin of #6726",
+    "state": "open",
+    "created_at": "2026-11-08T22:08:52Z",
+    "updated_at": "2026-11-08T22:11:13Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "f33c5bd58d10d6c7244975cd34401ef13237c8a1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6885,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6885",
+    "title": "Authenticate selected control children and retain runner custody",
+    "state": "open",
+    "created_at": "2026-11-08T22:13:05Z",
+    "updated_at": "2026-11-08T22:13:05Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "6f9457478d22fa31c1e26b98ca4ee1ed43129ac4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

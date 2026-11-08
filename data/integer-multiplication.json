@@ -43083,7 +43083,7 @@
       "source_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/build/sections/00-introduction.tex",
       "site_badge": false,
       "eligible_for_record": false,
-      "proof_status": "Source claim; not independently rerun by bigOspeedrun. Proved on prove2.me, which checks each proof with Lean on its server; we reviewed that its Lean statement is this row's statement (same value, same source). Separately, a Lean proof of a stronger saving, kappa = 4222422970/2^46 (about 6e-05), by Kenny Daniel (platypii) with jdb19937, exists on Mathlib's multi-stack machine model (platypii/integer-mult-bounds-lean @ bb582ff, theorem MathlibTM2.mulInTime; the author's axiom audit allows only the standard axioms, and the author's CI on that commit passed (checked 2026-11-08)); it is not our exact multitape statement and we have not rerun it.",
+      "proof_status": "Source claim; not independently rerun by bigOspeedrun. Proved on prove2.me, which checks each proof with Lean on its server; we reviewed that its Lean statement is this row's statement (same value, same source). Separately, a Lean proof of a stronger saving, kappa = 4222422970/2^46 (about 6e-05), by Kenny Daniel (platypii) with jdb19937, exists on Mathlib's multi-stack machine model (platypii/integer-mult-bounds-lean @ 233a518, theorem MathlibTM2.mulInTime; the author's axiom audit allows only the standard axioms, and the author's CI on that commit passed (checked 2026-11-08)); it is not our exact multitape statement and we have not rerun it.",
       "comparison_key": "openai/original-109",
       "date_precision": "Manuscript dated September 23, 2026; submitted_at is observation time.",
       "upstream_tier": "claimed",
@@ -63252,5 +63252,5 @@
       "credit_note": "DreamingOfClouds replaces the supplier tree of the caller of PR 6726 by one chain-nested root, on the unchanged native word of PR 6824. The conditional kappa is 0.0033718, 1.92 percent above PR 6824's 0.00330823. The PR text credits THU New Media Research Center· Prof. Shen Yang (PR 6716), zxv (PR 6726), CubeJerry (PR 6805), Ali Romman, PR 6763 and Jacob Sussman. It names Claude Opus 5.5 as the preparing model. The five framework assumptions remain; external review is outstanding."
     }
   },
-  "updated_at": "2026-11-08T21:17:22Z"
+  "updated_at": "2026-11-08T22:17:22Z"
 }

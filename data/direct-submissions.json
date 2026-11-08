@@ -85,6 +85,17 @@
         "source_file": "Submission.lean"
       }
     },
+    "direct-issue-182": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "catalan",
+        "repo_url": "https://github.com/darkhipo/catalan-irrationality-measure-410",
+        "commit": "063d100faca625a4c91cd59912fabd5da784344c",
+        "bound": "410",
+        "authors": []
+      }
+    },
     "direct-issue-178": {
       "route": "issue",
       "submission": {
@@ -4770,9 +4781,9 @@
       "not_verified": false
     },
     "182": {
-      "version": "d32785367f562f0eeb5ddbbe218fe7e4790e3aeee03dc9a3ee8cdc6bbbd58a3a",
-      "updated_at": "2026-11-08T20:37:56Z",
-      "not_verified": true
+      "version": "7916a3412e0a5bd90bc88c00af7cf8a3fa87b53b27d791733ef56e0472e9593a",
+      "updated_at": "2026-11-08T21:28:39Z",
+      "not_verified": false
     },
     "183": {
       "version": "12a1925b7e4b8a769ed121946bf908dd1c5873b5a2326d7aeeaded444684aa88",
