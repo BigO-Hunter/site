@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-08T02:40:02Z",
+    "updated_at": "2026-11-08T04:49:03Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -133208,7 +133208,7 @@
     "title": "Preserve child identity and working errors through common-runner retirement",
     "state": "open",
     "created_at": "2026-11-08T02:31:49Z",
-    "updated_at": "2026-11-08T02:43:34Z",
+    "updated_at": "2026-11-08T04:54:30Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -133238,6 +133238,27 @@
     },
     "head": {
       "sha": "5a4f80eda5c5c504531019ad44b5ed48c1cee480"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6869,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6869",
+    "title": "Reconcile complete source bindings for the connected verification caller",
+    "state": "open",
+    "created_at": "2026-11-08T04:46:40Z",
+    "updated_at": "2026-11-08T04:53:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "1144f0a715e84b3f08ebe7d0e8ed8a06543f2fad"
     },
     "base": {
       "ref": "main"
