@@ -46,8 +46,7 @@
       "title": "David Harvey and Joris van der Hoeven (2019 preprint; 2021 journal), Integer multiplication in time O(n log n)",
       "authors": [
         {
-          "name": "David Harvey and Joris van der Hoeven (2019 preprint; 2021 journal), Integer multiplication in time O(n log n)",
-          "url": "https://annals.math.princeton.edu/2021/193-2/p04"
+          "name": "David Harvey and Joris van der Hoeven (2019 preprint; 2021 journal), Integer multiplication in time O(n log n)"
         }
       ],
       "predecessors": [],
@@ -81,7 +80,7 @@
       "authors": [
         {
           "name": "OpenAI",
-          "url": "https://github.com/openai/math"
+          "url": "https://github.com/openai"
         }
       ],
       "predecessors": [],
@@ -9907,7 +9906,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -14858,7 +14857,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -23267,7 +23266,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -25172,7 +25171,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -25411,7 +25410,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -25587,7 +25586,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -26337,7 +26336,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -26736,7 +26735,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -28028,7 +28027,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -28146,7 +28145,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -28486,7 +28485,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -28660,7 +28659,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -29925,7 +29924,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -30642,7 +30641,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -37477,7 +37476,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -37907,7 +37906,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -38053,7 +38052,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -38467,7 +38466,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -38627,7 +38626,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [
@@ -38752,7 +38751,7 @@
       "authors": [
         {
           "name": "CrocSwap community",
-          "url": "https://github.com/CrocSwap/integer-mult-bounds"
+          "url": "https://github.com/CrocSwap"
         }
       ],
       "predecessors": [

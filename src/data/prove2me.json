@@ -21,8 +21,7 @@
             "title": "wurtle prove2.me apsp result",
             "authors": [
               {
-                "name": "wurtle",
-                "url": "https://prove2.me/users/2d179df8-bdcc-43d6-ac3c-03247c42e9b2"
+                "name": "wurtle"
               }
             ],
             "predecessors": [],
@@ -77,8 +76,7 @@
             "title": "xuanji prove2.me apsp result",
             "authors": [
               {
-                "name": "xuanji",
-                "url": "https://prove2.me/users/eb748f54-a7e9-4b93-8588-69f5b241260e"
+                "name": "xuanji"
               }
             ],
             "predecessors": [],
@@ -133,8 +131,7 @@
             "title": "xuanji prove2.me apsp result",
             "authors": [
               {
-                "name": "xuanji",
-                "url": "https://prove2.me/users/eb748f54-a7e9-4b93-8588-69f5b241260e"
+                "name": "xuanji"
               }
             ],
             "predecessors": [],
@@ -200,8 +197,7 @@
             "title": "marwahaha prove2.me 3sum result",
             "authors": [
               {
-                "name": "marwahaha",
-                "url": "https://prove2.me/users/1218a2a5-fec3-4902-88f2-735b90eee971"
+                "name": "marwahaha"
               }
             ],
             "predecessors": [],
@@ -256,8 +252,7 @@
             "title": "marwahaha prove2.me 3sum result",
             "authors": [
               {
-                "name": "marwahaha",
-                "url": "https://prove2.me/users/1218a2a5-fec3-4902-88f2-735b90eee971"
+                "name": "marwahaha"
               }
             ],
             "predecessors": [],
@@ -312,8 +307,7 @@
             "title": "xuanji prove2.me 3sum result",
             "authors": [
               {
-                "name": "xuanji",
-                "url": "https://prove2.me/users/eb748f54-a7e9-4b93-8588-69f5b241260e"
+                "name": "xuanji"
               }
             ],
             "predecessors": [],
@@ -380,8 +374,7 @@
           "note": "OpenAI construction at depth 20 with the schedule of the 2.007 mission.",
           "authors": [
             {
-              "name": "abhishekdpseok",
-              "url": "https://prove2.me/submissions/2cc2d774-0919-4c77-8f6e-7bbad4e835e8"
+              "name": "abhishekdpseok"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_2007 on prove2.me states this exponent. Its accepted proof is by abhishekdpseok.",
@@ -404,8 +397,7 @@
           "note": "Finite seed certificate (prove2.me finite_certificate) with a larger depth.",
           "authors": [
             {
-              "name": "Leo Shaposhnik",
-              "url": "https://prove2.me/submissions/cf267e8b-68d1-4d7a-8366-9da5dcf88a33"
+              "name": "Leo Shaposhnik"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_20205 on prove2.me states this exponent. Its accepted proof is by Leo Shaposhnik.",
@@ -428,8 +420,7 @@
           "note": "Finite seed certificate with a further parameter choice.",
           "authors": [
             {
-              "name": "bwdaugherty",
-              "url": "https://prove2.me/submissions/157e0151-e62a-4c18-91fc-8b4c41efbdd4"
+              "name": "bwdaugherty"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.exponent_2_0391 on prove2.me states this exponent. Its accepted proof is by bwdaugherty.",
@@ -452,8 +443,7 @@
           "note": "Separate construction with a 2,363-line Lean proof.",
           "authors": [
             {
-              "name": "Robin Kothari",
-              "url": "https://prove2.me/submissions/39b2d7f4-3948-4bc3-b4bb-9875317f6c37"
+              "name": "Robin Kothari"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_205 on prove2.me states this exponent. Its accepted proof is by Robin Kothari.",
@@ -476,8 +466,7 @@
           "note": "Analytic coupled-tournament construction with a 4,444-line Lean proof.",
           "authors": [
             {
-              "name": "abhishekdpseok",
-              "url": "https://prove2.me/submissions/f80a3f37-72fa-4d56-a094-3e4d351764f3"
+              "name": "abhishekdpseok"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_20635_coupled_tournament on prove2.me states this exponent. Its accepted proof is by abhishekdpseok.",
@@ -500,8 +489,7 @@
           "note": "Seven-level nine-state sensitivity certificate with a 6,491-line Lean proof.",
           "authors": [
             {
-              "name": "Robin Kothari",
-              "url": "https://prove2.me/submissions/819ad4c6-aa25-48ca-82e9-c8df39c182c0"
+              "name": "Robin Kothari"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_2075_nine_state on prove2.me states this exponent. Its accepted proof is by Robin Kothari.",
@@ -524,8 +512,7 @@
           "note": "Eight-layer profile construction with a 6,504-line Lean proof.",
           "authors": [
             {
-              "name": "yousofy",
-              "url": "https://prove2.me/submissions/c6096517-61e7-4f51-bc68-c1521d61eb65"
+              "name": "yousofy"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_2085_eight_layer on prove2.me states this exponent. Its accepted proof is by yousofy.",
@@ -548,8 +535,7 @@
           "note": "Periodic profile construction with a 7,015-line Lean proof.",
           "authors": [
             {
-              "name": "yousofy",
-              "url": "https://prove2.me/submissions/bb3251a4-f00f-4b06-962a-97be2de5db1b"
+              "name": "yousofy"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_2119_periodic on prove2.me states this exponent. Its accepted proof is by yousofy.",
@@ -572,8 +558,7 @@
           "note": "Coupled construction; its 84-line Lean proof uses the accepted prove2.me theorems coupled_n15_periodic_seeds and finite_certificate.",
           "authors": [
             {
-              "name": "yousofy",
-              "url": "https://prove2.me/submissions/f3481863-af82-45e3-8054-0e908f333651"
+              "name": "yousofy"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_21301_coupled on prove2.me states this exponent. Its accepted proof is by yousofy.",
@@ -596,8 +581,7 @@
           "note": "Coupled construction; its 84-line Lean proof uses the accepted prove2.me theorems coupled_gamma_periodic_seeds and finite_certificate.",
           "authors": [
             {
-              "name": "yousofy",
-              "url": "https://prove2.me/submissions/27e9bcac-bca9-497a-b928-de427b981c65"
+              "name": "yousofy"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_21303_gamma on prove2.me states this exponent. Its accepted proof is by yousofy.",
@@ -620,8 +604,7 @@
           "note": "The goal states the exact exponent log(1522813785050025472152230187890625) / log(3738277295413674) = 2.13082557939782394763 (computed 2026-10-21); the listed value 2.1308255793978239 is below it. Its 32-line Lean proof uses the accepted prove2.me theorem reach_source_q5_3738277295413674_strict.",
           "authors": [
             {
-              "name": "yousofy",
-              "url": "https://prove2.me/submissions/5112fcc0-0c63-4f47-8b70-29327b2a8906"
+              "name": "yousofy"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_source_q5_best_3738277295413674 on prove2.me states this exponent. Its accepted proof is by yousofy.",
@@ -644,8 +627,7 @@
           "note": "The goal states the exponent 2131121719190/10^12 = 2.131121719190 exactly (reviewed 2026-10-24). Its 125-line Lean proof uses the accepted prove2.me theorems paley11987_actual_seeds and achieves_strict_from_seeds, which build the Paley-11987 four-phase construction; the proof file has no sorry or axiom.",
           "authors": [
             {
-              "name": "yousofy",
-              "url": "https://prove2.me/submissions/de91c83c-2076-430d-98ac-0ed12f876008"
+              "name": "yousofy"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.paley11987_four_phase on prove2.me states this exponent. Its accepted proof is by yousofy.",
@@ -668,8 +650,7 @@
           "note": "The goal states AchievesExponent (213981/100000 : ℝ) in fully explicit form over Def_SensitivityCampaign (reviewed 2026-10-31). Its 504-line Lean proof uses an accepted 773-module definition closure (Sensitivity213981Formal, twenty-two-level endpoint); a scan of the closure and the proof found no sorry, axiom, opaque, native_decide or metaprogram command.",
           "authors": [
             {
-              "name": "yousofy",
-              "url": "https://prove2.me/submissions/6f660b21-a8eb-48ce-821e-5b5901f930ed"
+              "name": "yousofy"
             }
           ],
           "proofScope": "The Lean theorem SensitivityCampaign.reach_213981 on prove2.me states this exponent. Its accepted proof is by yousofy.",

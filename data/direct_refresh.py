@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 import re
 import sssp
+from author_links import author_entry
 from direct_note_rules import credit_ok
 import shutil
 import subprocess
@@ -413,11 +414,12 @@ def row_for(key,claim,now,old=None,note=None):
     if note:meta['credit_note']=note['text']
     # Credited logins are for Other bounds rows only (other_claims). A reviewed display credit also names a Big O row's
     # authors (Lead, 2026-11-07, verifier #183: a refile of Halit Ziya KARTAL's proof with only the constant changed):
-    # the names, in credit order, each linking the submission. The table, the record posts and the chat read them.
+    # the names, in credit order, each linking its account when the credit names one, else none (author_links.py). The table,
+    # the record posts and the chat read them.
     require(not (note and note.get('authors')),'Credited authors on a Big O board row: '+key)
     if note and note.get('credit'):
         require(credit_ok(note['credit']),'Invalid display credit')
-        row['authors']=[dict(name=x,url=item['html_url']) for x in note['credit']['names']]
+        row['authors']=[author_entry(x,note['credit'].get('accounts',{}).get(x)) for x in note['credit']['names']]
     if proof:
         row['rerun_status']=dict(state='passed',checked_at=proof['checked_at'],receipt_path=proof['receipt_path'])
         meta['receipt_url']=proof['receipt_url']
@@ -491,11 +493,12 @@ def other_claims(claims,withdrawn,notes):
         author,authors=' and '.join(logins),[dict(name=x,url='https://github.com/'+x) for x in logins]
         # A reviewed display credit (Lead, 2026-11-07, prime gaps: the proof is mostly Axiom Math's and Jonas Whidden's
         # work): plain-text author line and names, in credit order, shown wherever the row's author is (table, record
-        # posts, chat). The logins above still check the submitter. Each name links to the submission.
+        # posts, chat). The logins above still check the submitter. A name links its account when the credit names one
+        # (data/author_links.py), else it has no link: never the submission (Lead, 2026-11-08).
         credit=notes.get(key,{}).get('credit')
         if credit:
             require(credit_ok(credit),'Invalid display credit')
-            author,authors=credit['author'],[dict(name=x,url=item['html_url']) for x in credit['names']]
+            author,authors=credit['author'],[author_entry(x,credit.get('accounts',{}).get(x)) for x in credit['names']]
         boards.setdefault('other-'+sub['problem'],{'claims':[]})['claims'].append(dict(
             author=author,handle=key,value=sub['bound'],display=display,date=item['created_at'],dateSource=item['html_url'],dateKind='first-stated',
             url=item['html_url'],lean=True,evidence='lean-verified',note=note,authors=authors,

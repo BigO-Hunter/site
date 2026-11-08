@@ -47,6 +47,8 @@ from datetime import datetime, timedelta, timezone
 from fractions import Fraction
 from pathlib import Path
 
+from author_links import author_entry
+
 ROOT = Path(__file__).resolve().parent
 # Imported rows get Lean Verified when this is True, else Claimed. Nil ruling
 # 2026-10-14 (restated 2026-10-17): a matching verified prove2.me result counts as
@@ -453,7 +455,7 @@ def claim_for(slug, board, entry, trust, higher=True):
                    definitions={p: board['definitions'][p] for p in theorem['definitions']}, lean_verified=LEAN_VERIFIED)
     raw = json_bytes(receipt)
     path = 'sources/' + key + '.json'
-    names = entry['authors']
+    names = [author_entry(a['name'], a.get('url')) for a in entry['authors']]
     claim = dict(author=names[0]['name'], handle='prove2me-' + entry['value'].replace('.', '-'), value=entry['value'],
                  display=('\\ge ' if higher else '\\le ') + shown, date=zulu(entry['solved_at']), dateSource=theorem['url'], dateKind='first-stated',
                  url=theorem['url'], lean=True,
@@ -481,7 +483,7 @@ def row_for(slug, doc, board, entry, trust, previous):
     old = previous.get(key, {}).get('record', {})
     record = dict(id=key, kind='improvement', score=str(value), score_relation='attained', tier=tier,
                   submitted_at=zulu(entry['solved_at']), spec_version=doc['model']['version'],
-                  title=f'{names} prove2.me {slug} result', authors=entry['authors'], predecessors=[],
+                  title=f'{names} prove2.me {slug} result', authors=[author_entry(a['name'], a.get('url')) for a in entry['authors']], predecessors=[],
                   submission_url=theorem['url'], artifact=dict(path=path, sha256=sha(raw)),
                   evidence=dict(paper_url=mission_url, theorem=theorem['name'], certificate_path=None), dependencies=[],
                   upstream_status='not-applicable', upstream_status_at=zulu(entry['solved_at']),

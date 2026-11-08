@@ -5,11 +5,18 @@ from pathlib import Path
 from fractions import Fraction
 from jsonschema import Draft202012Validator,FormatChecker
 sys.dont_write_bytecode=True  # a staged copy of the data folder must stay free of stray files
+from author_links import bad_author_links
 from direct_note_rules import credit_ok,predecessor_ok
 ROOT=Path(__file__).resolve().parent
 TIERS=('verified','certified-conditional','claimed')
 def load(p):return json.loads((ROOT/p).read_text())
 def validate(data,schema):Draft202012Validator(schema,format_checker=FormatChecker()).validate(data)
+def check_author_links(label,doc):
+ # An author link goes to the person's or the organisation's profile: a GitHub profile, else an ORCID record, else the
+ # author has no link. Never a repository, a PDF, a paper, a submission or a page of the work: that link belongs in the
+ # row's source or evidence field (Lead, 2026-11-08, site#17; data/author_links.py).
+ bad=bad_author_links(doc)
+ assert not bad,f"Author link in {label} is not a GitHub profile or an ORCID record (give the profile, or no link): {bad[0][0]!r} {bad[0][1]}"
 def safe_path(rel):
  p=ROOT/rel
  assert not p.is_symlink(),rel
@@ -45,6 +52,8 @@ if (ROOT/'direct-notes.json').exists():
   if '\\' in n['text']:
    known=load('direct-submissions.json')['entries'].get(key)
    assert not known or known['submission']['problem'] not in ('dft','3sum','apsp','subset-sum'),'TeX in the note of a board row: '+key
+for name in ('direct-other.json','prove2me.json'):
+ if (ROOT/name).exists():check_author_links(name,load(name))
 withdrawn={}
 if (ROOT/'direct-notes.json').exists():
  # Direct submissions their submitter withdrew: the refresh lists no row for them, with the reason on record.
@@ -87,7 +96,7 @@ if (ROOT/'crocswap-certifications.json').exists():
 print('Checked',registry['checked_at'])
 print('problem | verified | certified-conditional | claimed (observed maximum/minimum) | records')
 for entry in registry['problems']:
- p=load(entry['data_file']);validate(p,load('schemas/problem-v1.json'));assert p['problem_id']==entry['problem_id'];assert p['model']['id']==p['problem_id'].split('/')[1]
+ p=load(entry['data_file']);check_author_links(entry['data_file'],p);validate(p,load('schemas/problem-v1.json'));assert p['problem_id']==entry['problem_id'];assert p['model']['id']==p['problem_id'].split('/')[1]
  records=p['records'];ids=[r['id'] for r in records];assert len(ids)==len(set(ids));assert set(ids)==set(p['record_metadata']);assert records[0]['kind']=='baseline'
  assert records[0]['submitted_at'] is None
  for row_id in sorted(set(method_notes.get('boards',{}).get(entry['slug'],{}))-set(ids)):print('Warning: method note for a row that is not on the board:',entry['slug'],row_id)

@@ -185,7 +185,10 @@
           "Yunzhou Xie",
           "Jonas Whidden",
           "MultiAgency swarm"
-        ]
+        ],
+        "accounts": {
+          "MultiAgency swarm": "https://github.com/darkhipo"
+        }
       }
     },
     "direct-issue-186": {
@@ -196,7 +199,11 @@
         "names": [
           "Halit Ziya KARTAL",
           "MultiAgency swarm"
-        ]
+        ],
+        "accounts": {
+          "Halit Ziya KARTAL": "https://github.com/HalitZiyaKARTAL",
+          "MultiAgency swarm": "https://github.com/darkhipo"
+        }
       }
     }
   },

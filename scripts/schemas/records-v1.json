@@ -78,8 +78,7 @@
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "name",
-            "url"
+            "name"
           ],
           "properties": {
             "name": {
@@ -88,8 +87,7 @@
             },
             "url": {
               "type": "string",
-              "format": "uri",
-              "pattern": "^https://"
+              "pattern": "^https://(github\\.com/[A-Za-z0-9][A-Za-z0-9-]{0,38}|orcid\\.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X])$"
             }
           }
         },

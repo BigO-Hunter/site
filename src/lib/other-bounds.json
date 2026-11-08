@@ -504,7 +504,7 @@
           "authors": [
             {
               "name": "Hailey Collet",
-              "url": "https://x.com/HaileyStormC",
+              "url": "https://github.com/HaileyStorm",
               "login": "HaileyStorm"
             }
           ],
@@ -2071,16 +2071,13 @@
           "note": "",
           "authors": [
             {
-              "name": "Prathmesh Lagdive",
-              "url": "https://github.com/log-prathm/ptf-average-sensitivity"
+              "name": "Prathmesh Lagdive"
             },
             {
-              "name": "Vaibhav Aglave",
-              "url": "https://github.com/log-prathm/ptf-average-sensitivity"
+              "name": "Vaibhav Aglave"
             },
             {
-              "name": "Suraj Damre",
-              "url": "https://github.com/log-prathm/ptf-average-sensitivity"
+              "name": "Suraj Damre"
             }
           ],
           "proofScope": "No Lean proof is supplied.",
@@ -2240,7 +2237,7 @@
           "authors": [
             {
               "name": "OpenAI",
-              "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Quantitative-Superexponential-Bounds-for-van-der-Waerden-Numbers-September-23-2026/paper.pdf"
+              "url": "https://github.com/openai"
             }
           ],
           "proofScope": "A written proof in OpenAI's preprint. A Lean 4 proof is in openai/math (folder lean/OAI/Combinatorics/ProgressionColoring, commit 1581d4cb): its theorem OAI.QuantitativeVanDerWaerden.uniform_lower_bound states \\(W_r(k)>k^{k\\lfloor\\log_2r\\rfloor/100000}\\) for all large \\(k\\), uniformly in \\(r\\ge 2\\). Our verifier rebuilt it at commit 1581d4cb and checked this theorem against OpenAI's own statement file. It uses only the axioms propext, Classical.choice and Quot.sound.",
@@ -2476,8 +2473,7 @@
           "note": "",
           "authors": [
             {
-              "name": "Nándor Sieben (strategy)",
-              "url": "https://github.com/gotrevor/snaky-15x15"
+              "name": "Nándor Sieben (strategy)"
             },
             {
               "name": "gotrevor",
@@ -3046,20 +3042,16 @@
           "note": "The function is an affine disperser for sublinear dimension, which has an explicit construction in P. Published at FOCS 2016 and in Computational Complexity 32 (2023). The 2022 ECCC revision fixes an error in the case analysis.",
           "authors": [
             {
-              "name": "Magnus Gausdal Find",
-              "url": "https://eccc.weizmann.ac.il/report/2015/166/"
+              "name": "Magnus Gausdal Find"
             },
             {
-              "name": "Alexander Golovnev",
-              "url": "https://eccc.weizmann.ac.il/report/2015/166/"
+              "name": "Alexander Golovnev"
             },
             {
-              "name": "Edward Hirsch",
-              "url": "https://eccc.weizmann.ac.il/report/2015/166/"
+              "name": "Edward Hirsch"
             },
             {
-              "name": "Alexander Kulikov",
-              "url": "https://eccc.weizmann.ac.il/report/2015/166/"
+              "name": "Alexander Kulikov"
             }
           ],
           "proofScope": "A written proof by gate elimination. No Lean proof is supplied.",
@@ -3080,12 +3072,10 @@
           "note": "The function is an affine disperser. Published at STOC 2022.",
           "authors": [
             {
-              "name": "Jiatu Li",
-              "url": "https://eccc.weizmann.ac.il/report/2021/023/"
+              "name": "Jiatu Li"
             },
             {
-              "name": "Tianqi Yang",
-              "url": "https://eccc.weizmann.ac.il/report/2021/023/"
+              "name": "Tianqi Yang"
             }
           ],
           "proofScope": "A written proof by gate elimination. No Lean proof is supplied.",
@@ -3106,12 +3096,10 @@
           "note": "The function is in P. Preprint ECCC TR26-260.",
           "authors": [
             {
-              "name": "Om Swostik Mishra",
-              "url": "https://eccc.weizmann.ac.il/report/2026/260/"
+              "name": "Om Swostik Mishra"
             },
             {
-              "name": "Rahul Santhanam",
-              "url": "https://eccc.weizmann.ac.il/report/2026/260/"
+              "name": "Rahul Santhanam"
             }
           ],
           "proofScope": "A written proof by gate elimination in a preprint. No Lean proof is supplied.",
@@ -3152,8 +3140,7 @@
           "note": "Preprint arXiv:2608.31126. It combines the Bombieri–Vinogradov theorem with newer equidistribution estimates for moduli that have only small prime factors. It uses a set of 49 integers whose largest and smallest elements differ by 240.",
           "authors": [
             {
-              "name": "Julia Stadlmann",
-              "url": "https://arxiv.org/abs/2608.31126"
+              "name": "Julia Stadlmann"
             }
           ],
           "proofScope": "A written proof in a preprint. No Lean proof is supplied.",
@@ -3174,40 +3161,31 @@
           "note": "A preliminary draft (3 September 2026) by nine authors, published by Axiom Math. It optimizes Julia Stadlmann's method with numerical experiments on a computing cluster.",
           "authors": [
             {
-              "name": "François Charton",
-              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+              "name": "François Charton"
             },
             {
-              "name": "Letong Hong",
-              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+              "name": "Letong Hong"
             },
             {
-              "name": "Kenny Lau",
-              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+              "name": "Kenny Lau"
             },
             {
-              "name": "Ken Ono",
-              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+              "name": "Ken Ono"
             },
             {
-              "name": "Guillaume Remy",
-              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+              "name": "Guillaume Remy"
             },
             {
-              "name": "Ho Chung Siu",
-              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+              "name": "Ho Chung Siu"
             },
             {
-              "name": "Ashvin A. Swaminathan",
-              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+              "name": "Ashvin A. Swaminathan"
             },
             {
-              "name": "Jesse Thorner",
-              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+              "name": "Jesse Thorner"
             },
             {
-              "name": "Yunzhou Xie",
-              "url": "https://primegaps.axiommath.ai/bgp212.pdf"
+              "name": "Yunzhou Xie"
             }
           ],
           "proofScope": "A written proof in a draft paper. AxiomProver, an AI system of Axiom Math, generated a Lean certificate of the deduction. That certificate takes the five equidistribution estimates of the paper, the Bombieri–Vinogradov theorem, Harman's decomposition and the numerical certificate as hypotheses, so it is not a Lean proof of our statement.",
@@ -3230,7 +3208,7 @@
           "authors": [
             {
               "name": "OpenAI",
-              "url": "https://github.com/openai/PrimeGaps186"
+              "url": "https://github.com/openai"
             }
           ],
           "proofScope": "A written proof in a company paper. The Lean proof of \\(H_1\\le 186\\) in openai/PrimeGaps186 assumes three axioms that are not proved in Lean: two exponential-sum bounds of Deligne type, which are published theorems, and 152 numerical bounds on integrals and constants, which only a Python program checks. So it is not a Lean proof of our statement. The authors say that no person has reviewed the Lean development independently.",
@@ -3253,7 +3231,7 @@
           "authors": [
             {
               "name": "GPT-6 Astra (OpenAI), prompted by Romyar Sharifi",
-              "url": "https://github.com/romyar1/prime-gaps-lean"
+              "url": "https://github.com/romyar1"
             }
           ],
           "proofScope": "A written proof in a PDF of three papers: the main paper and two companion papers on the Type II and Type III distribution estimates. The Lean development in romyar1/prime-gaps-lean proves the step from the explicit premises to \\(H_1\\le 182\\); its README says that it is not an unconditional Lean proof, so it is not a Lean proof of our statement. No independent check.",
@@ -3311,7 +3289,7 @@
           "authors": [
             {
               "name": "Anthropic",
-              "url": "https://www.anthropic.com/research/riemann-zeta"
+              "url": "https://github.com/anthropics"
             }
           ],
           "proofScope": "A written proof in a preprint. A Lean 4 proof of the theorem, with no sorry, is in anthropics/formal-math (folder zeta23, Lean v4.33.0-rc2, Mathlib commit 51e6992e). Our verifier rebuilt it at commit 16a5ce41 and checked its theorem montgomery_taylor_simple_on_critical_line_mult_cumulative against Anthropic's own statement file. The theorem gives \\(\\kappa^{*}\\ge H\\). It uses only the axioms propext, Classical.choice and Quot.sound.",
@@ -3355,8 +3333,7 @@
           "note": "A second proof of the same constant \\(H\\) as the Claude paper, with a shorter argument: one inequality replaces the matrix argument of that paper. Version 2 of the paper (8 September 2026) also proves that at least \\(0.88762\\) of the zeros are simple or on the critical line.",
           "authors": [
             {
-              "name": "Youness Lamzouri",
-              "url": "https://arxiv.org/abs/2609.02882"
+              "name": "Youness Lamzouri"
             }
           ],
           "proofScope": "A written proof in a preprint. No Lean proof is supplied.",
@@ -3378,12 +3355,10 @@
           "note": "A paper and its check programs, published together as one Zenodo record. It builds on Sunghyeon Jo's \\(0.6730085\\) and adds a bound for zeros that are at least \\(11/20\\) of the mean spacing apart. A computer search in interval arithmetic (arithmetic with guaranteed error bounds), with 10,039,560,518 steps, checks one inequality for eight consecutive zeros. The authors say that their AI system Anaxia found the method, and that the method cannot pass \\(0.67357\\). Here \\(H\\) is the Montgomery–Taylor constant of the statement.",
           "authors": [
             {
-              "name": "Deep Bhattacharjee",
-              "url": "https://zenodo.org/records/23480715"
+              "name": "Deep Bhattacharjee"
             },
             {
-              "name": "Ushashi Bhattacharya",
-              "url": "https://zenodo.org/records/23480715"
+              "name": "Ushashi Bhattacharya"
             }
           ],
           "proofScope": "A written proof with a computer check of one inequality. It is not on arXiv and has no peer review. No Lean proof is supplied, and nobody else has run the check. It builds on Sunghyeon Jo's proof and on the Claude paper, which also have no peer review.",

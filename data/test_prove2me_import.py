@@ -147,7 +147,9 @@ class Prove2meImportTest(unittest.TestCase):
         row = rows[0]
         meta = self.f.doc()['record_metadata'][row['id']]
         self.assertEqual((row['score'], row['tier'], row['submitted_at']), ('29983/10000', 'claimed', '2026-10-06T17:00:00Z'))
-        self.assertEqual(row['authors'], [dict(name='wurtle', url='https://prove2.me/users/u1')])
+        # The reviewed entry carries the prove2.me user page, but an author links only a GitHub profile or an ORCID record
+        # (Lead, 2026-11-08, site#17): the row has the name alone.
+        self.assertEqual(row['authors'], [dict(name='wurtle')])
         self.assertTrue(meta['prove2me'])
         self.assertEqual(meta['site_tier'], 'claimed')
         self.assertNotIn('rerun_status', row)

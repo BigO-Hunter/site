@@ -50,8 +50,7 @@
       "title": "Ellis Horowitz and Sartaj Sahni (1974), Computing Partitions with Applications to the Knapsack Problem",
       "authors": [
         {
-          "name": "Ellis Horowitz and Sartaj Sahni (1974), Computing Partitions with Applications to the Knapsack Problem",
-          "url": "https://doi.org/10.1145/321812.321823"
+          "name": "Ellis Horowitz and Sartaj Sahni (1974), Computing Partitions with Applications to the Knapsack Problem"
         }
       ],
       "predecessors": [],
@@ -293,12 +292,10 @@
       "title": "Baitian Li and Lixi Ye Subset Sum in time O(2^((1/2 - 1/450000)n))",
       "authors": [
         {
-          "name": "Baitian Li",
-          "url": "https://arxiv.org/abs/2610.10446v1"
+          "name": "Baitian Li"
         },
         {
-          "name": "Lixi Ye",
-          "url": "https://arxiv.org/abs/2610.10446v1"
+          "name": "Lixi Ye"
         }
       ],
       "predecessors": [],

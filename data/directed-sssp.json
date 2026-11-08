@@ -58,8 +58,7 @@
       "title": "Fredman and Tarjan (1987), Fibonacci heaps and their uses in improved network optimization algorithms",
       "authors": [
         {
-          "name": "Fredman and Tarjan (1987), Fibonacci heaps and their uses in improved network optimization algorithms",
-          "url": "https://doi.org/10.1145/28869.28874"
+          "name": "Fredman and Tarjan (1987), Fibonacci heaps and their uses in improved network optimization algorithms"
         }
       ],
       "predecessors": [],
@@ -92,24 +91,19 @@
       "title": "Breaking the Sorting Barrier for Directed Single-Source Shortest Paths (STOC 2025)",
       "authors": [
         {
-          "name": "Ran Duan",
-          "url": "https://arxiv.org/abs/2504.17033"
+          "name": "Ran Duan"
         },
         {
-          "name": "Jiayi Mao",
-          "url": "https://arxiv.org/abs/2504.17033"
+          "name": "Jiayi Mao"
         },
         {
-          "name": "Xiao Mao",
-          "url": "https://arxiv.org/abs/2504.17033"
+          "name": "Xiao Mao"
         },
         {
-          "name": "Xinkai Shu",
-          "url": "https://arxiv.org/abs/2504.17033"
+          "name": "Xinkai Shu"
         },
         {
-          "name": "Longhui Yin",
-          "url": "https://arxiv.org/abs/2504.17033"
+          "name": "Longhui Yin"
         }
       ],
       "predecessors": [],
@@ -142,20 +136,16 @@
       "title": "A Faster Directed Single-Source Shortest Path Algorithm (ICALP 2026)",
       "authors": [
         {
-          "name": "Ran Duan",
-          "url": "https://arxiv.org/abs/2602.07868"
+          "name": "Ran Duan"
         },
         {
-          "name": "Xiao Mao",
-          "url": "https://arxiv.org/abs/2602.07868"
+          "name": "Xiao Mao"
         },
         {
-          "name": "Xinkai Shu",
-          "url": "https://arxiv.org/abs/2602.07868"
+          "name": "Xinkai Shu"
         },
         {
-          "name": "Longhui Yin",
-          "url": "https://arxiv.org/abs/2602.07868"
+          "name": "Longhui Yin"
         }
       ],
       "predecessors": [],
@@ -188,8 +178,7 @@
       "title": "C-HD: directed SSSP at m ≤ n log^{3/4} n in time O(n log^{11/12} n)",
       "authors": [
         {
-          "name": "Vals AI",
-          "url": "https://www.vals.ai/blogs/faster-shortest-path-algorithm"
+          "name": "Vals AI"
         }
       ],
       "predecessors": [

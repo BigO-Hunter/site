@@ -23,7 +23,8 @@ export function baselineClaim(baseline: Baseline | undefined): BaselineClaim | u
   return {handle: 'openai-baseline', display: baseline.display ?? baseline.value, value: baseline.exactValue, bound: baseline.bound,
     date: baseline.date, dateSource: baseline.url, dateKind: 'first-stated', url: baseline.url, evidence: 'claimed', note: '',
     proofScope: 'A written proof in OpenAI\'s preprint, released with the start of this race. We have not checked a Lean proof of it.',
-    authors: [{name: 'OpenAI', url: baseline.url}], breakthrough: true};
+    // The author links OpenAI's GitHub profile, never the preprint: that is the row's source (Lead, 2026-11-08, site#17).
+    authors: [{name: 'OpenAI', url: 'https://github.com/openai'}], breakthrough: true};
 }
 
 // Every claim has a number, or every claim is an A d^p claim: the order of rankOtherClaims is then by value.

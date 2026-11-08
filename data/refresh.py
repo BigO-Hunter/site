@@ -617,7 +617,7 @@ def refresh(stage, now):
     rid = 'crocswap-selected-' + hashlib.sha256((score + ':' + selected['certificate_sha256']).encode()).hexdigest()[:16]
     if rid not in records:
         r = copy.deepcopy(template); url = f'https://github.com/{CROC}/blob/{sha}/certificates/selected-result.json'
-        r.update(id=rid, score=score, title='CrocSwap reviewed conditional result: ' + score, submitted_at=head['commit']['committer']['date'], site_observed_at=now, upstream_status='not-applicable', upstream_status_at=head['commit']['committer']['date'], source_commit=sha, source={'kind':'repo-artifact','url':url}, submission_url=url, artifact=artifact(stage,ap), authors=[{'name':'CrocSwap community','url':f'https://github.com/{CROC}'}], predecessors=[f'https://github.com/{CROC}/pull/{n}' for n in selected['source_prs']])
+        r.update(id=rid, score=score, title='CrocSwap reviewed conditional result: ' + score, submitted_at=head['commit']['committer']['date'], site_observed_at=now, upstream_status='not-applicable', upstream_status_at=head['commit']['committer']['date'], source_commit=sha, source={'kind':'repo-artifact','url':url}, submission_url=url, artifact=artifact(stage,ap), authors=[{'name':'CrocSwap community','url':'https://github.com/'+CROC.split('/')[0]}], predecessors=[f'https://github.com/{CROC}/pull/{n}' for n in selected['source_prs']])
         r['evidence']['paper_url']=url
         r['dependencies']=[{'id':'openai-109-transfer','statement':selected['scope'],'source_url':url,'status':'unverified'}]
         records[rid]=r

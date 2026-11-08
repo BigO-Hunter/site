@@ -75,8 +75,7 @@
       "title": "Cooley and Tukey (1965), FFT; Bluestein (1970), all-length reduction",
       "authors": [
         {
-          "name": "Cooley and Tukey (1965), FFT; Bluestein (1970), all-length reduction",
-          "url": "https://doi.org/10.1090/S0025-5718-1965-0178586-1"
+          "name": "Cooley and Tukey (1965), FFT; Bluestein (1970), all-length reduction"
         }
       ],
       "predecessors": [],
@@ -545,11 +544,11 @@
       "authors": [
         {
           "name": "Halit Ziya KARTAL",
-          "url": "https://github.com/bigospeedrun/verifier/issues/186"
+          "url": "https://github.com/HalitZiyaKARTAL"
         },
         {
           "name": "MultiAgency swarm",
-          "url": "https://github.com/bigospeedrun/verifier/issues/186"
+          "url": "https://github.com/darkhipo"
         }
       ],
       "predecessors": [

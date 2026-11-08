@@ -58,8 +58,7 @@
       "title": "Robert W. Floyd (1962), Algorithm 97: Shortest path",
       "authors": [
         {
-          "name": "Robert W. Floyd (1962), Algorithm 97: Shortest path",
-          "url": "https://doi.org/10.1145/367766.368168"
+          "name": "Robert W. Floyd (1962), Algorithm 97: Shortest path"
         }
       ],
       "predecessors": [],
@@ -92,12 +91,11 @@
       "title": "Anthropic formalization; Alman and Vassilevska Williams result",
       "authors": [
         {
-          "name": "Josh Alman and Virginia Vassilevska Williams",
-          "url": "https://arxiv.org/abs/2610.06783"
+          "name": "Josh Alman and Virginia Vassilevska Williams"
         },
         {
           "name": "Anthropic",
-          "url": "https://github.com/anthropics/formal-math"
+          "url": "https://github.com/anthropics"
         }
       ],
       "predecessors": [],
@@ -213,8 +211,7 @@
       "title": "wurtle prove2.me apsp result",
       "authors": [
         {
-          "name": "wurtle",
-          "url": "https://prove2.me/users/2d179df8-bdcc-43d6-ac3c-03247c42e9b2"
+          "name": "wurtle"
         }
       ],
       "predecessors": [],
@@ -253,8 +250,7 @@
       "title": "xuanji prove2.me apsp result",
       "authors": [
         {
-          "name": "xuanji",
-          "url": "https://prove2.me/users/eb748f54-a7e9-4b93-8588-69f5b241260e"
+          "name": "xuanji"
         }
       ],
       "predecessors": [],
@@ -293,8 +289,7 @@
       "title": "xuanji prove2.me apsp result",
       "authors": [
         {
-          "name": "xuanji",
-          "url": "https://prove2.me/users/eb748f54-a7e9-4b93-8588-69f5b241260e"
+          "name": "xuanji"
         }
       ],
       "predecessors": [],
@@ -386,8 +381,7 @@
       "title": "Ruhollah Majdoddin deterministic APSP in time n^(2.9945+o(1))",
       "authors": [
         {
-          "name": "Ruhollah Majdoddin",
-          "url": "https://arxiv.org/abs/2610.17420v1"
+          "name": "Ruhollah Majdoddin"
         }
       ],
       "predecessors": [

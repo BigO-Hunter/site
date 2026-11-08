@@ -1,7 +1,8 @@
 export type ScoreRelation = 'attained' | 'strict-upper-bound';
 import type {EvidenceLevel} from './evidence';
 export interface Link { name: string; url: string }
-export interface Author extends Link { login?: string; twitterUsername?: string; avatar?: string }
+// An author links to its profile (GitHub, else ORCID) or has no link (data/author_links.py; Lead, 2026-11-08, site#17).
+export interface Author { name: string; url?: string; login?: string; twitterUsername?: string; avatar?: string }
 export interface RecordEntry {
  id: string; isBreakthrough?: boolean; reproductionOf?: string; score: string; scoreRelation?: ScoreRelation; evidenceLevel: EvidenceLevel; title: string; date: string; dateLabel: string; publicationYear?: number; repo: string; repoId: number;
  authors: Author[]; evidenceUrl?: string; bound: string; shortBound?: string; evidence: Link[]; predecessors: string[];

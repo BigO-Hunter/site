@@ -58,8 +58,7 @@
       "title": "Folklore quadratic 3SUM algorithm; documented by Gajentaan and Overmars (1995)",
       "authors": [
         {
-          "name": "Folklore; cited account by Anka Gajentaan and Mark H. Overmars",
-          "url": "https://people.csail.mit.edu/virgi/6.s078/papers/gajovermars.pdf"
+          "name": "Folklore; cited account by Anka Gajentaan and Mark H. Overmars"
         }
       ],
       "predecessors": [],
@@ -92,12 +91,11 @@
       "title": "Anthropic formalization; Alman and Vassilevska Williams result",
       "authors": [
         {
-          "name": "Josh Alman and Virginia Vassilevska Williams",
-          "url": "https://arxiv.org/abs/2610.06783"
+          "name": "Josh Alman and Virginia Vassilevska Williams"
         },
         {
           "name": "Anthropic",
-          "url": "https://github.com/anthropics/formal-math"
+          "url": "https://github.com/anthropics"
         }
       ],
       "predecessors": [],
@@ -131,15 +129,13 @@
       "authors": [
         {
           "name": "Anthropic (Lean formalization)",
-          "url": "https://github.com/anthropics/formal-math"
+          "url": "https://github.com/anthropics"
         },
         {
-          "name": "Josh Alman (paper)",
-          "url": "https://arxiv.org/abs/2610.06783"
+          "name": "Josh Alman (paper)"
         },
         {
-          "name": "Virginia Vassilevska Williams (paper)",
-          "url": "https://arxiv.org/abs/2610.06783"
+          "name": "Virginia Vassilevska Williams (paper)"
         }
       ],
       "predecessors": [
@@ -263,8 +259,7 @@
       "title": "marwahaha prove2.me 3sum result",
       "authors": [
         {
-          "name": "marwahaha",
-          "url": "https://prove2.me/users/1218a2a5-fec3-4902-88f2-735b90eee971"
+          "name": "marwahaha"
         }
       ],
       "predecessors": [],
@@ -303,8 +298,7 @@
       "title": "marwahaha prove2.me 3sum result",
       "authors": [
         {
-          "name": "marwahaha",
-          "url": "https://prove2.me/users/1218a2a5-fec3-4902-88f2-735b90eee971"
+          "name": "marwahaha"
         }
       ],
       "predecessors": [],
@@ -343,8 +337,7 @@
       "title": "xuanji prove2.me 3sum result",
       "authors": [
         {
-          "name": "xuanji",
-          "url": "https://prove2.me/users/eb748f54-a7e9-4b93-8588-69f5b241260e"
+          "name": "xuanji"
         }
       ],
       "predecessors": [],

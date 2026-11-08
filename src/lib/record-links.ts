@@ -11,12 +11,12 @@ export function githubProfileLogin(url?: string): string | undefined {
 }
 // The author with the stored avatar of its GitHub profile url, when there is one. The name stays as written. A credit
 // that links a repository or a page (a group author list) names its person's GitHub account in `login`; never a name.
-export function withGithubAvatar<T extends Link & {avatar?: string; login?: string}>(author: T, avatars: Record<string, string>): T & {avatar?: string} {
+export function withGithubAvatar<T extends {name: string; url?: string; avatar?: string; login?: string}>(author: T, avatars: Record<string, string>): T & {avatar?: string} {
  const login = githubProfileLogin(author.url) ?? author.login;
  const avatar = login ? avatars[login.toLowerCase()] : undefined;
  return avatar ? {...author, avatar} : author;
 }
-export function authorFromProfile(author: Link, profiles: Record<string, Profile>, avatars: Record<string, string> = {}): Author {
+export function authorFromProfile(author: {name: string; url?: string}, profiles: Record<string, Profile>, avatars: Record<string, string> = {}): Author {
  const login = author.url?.match(/^https:\/\/github\.com\/([^/?#]+)/)?.[1];
  if (!login) return author;
  const profile = profiles[login.toLowerCase()];

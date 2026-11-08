@@ -729,26 +729,32 @@ class RefreshTests(unittest.TestCase):
         for bad in (['shjvandekamp'],['alice','bad/login']):
             with self.assertRaises(r.Rejected):r.other_claims(credit_claims,{},{'direct-issue-80':dict(credit,authors=bad)})
         # A reviewed display credit (Lead, 2026-11-07, prime gaps): the author line and names replace the logins in
-        # the claim; the logins still check the submitter; each name links to the submission. Plain text only.
+        # the claim; the logins still check the submitter; a name links its account when the credit names one, else it has
+        # no link, never the submission (Lead, 2026-11-08). Plain text only.
         names=['François Charton','Letong Hong','Jonas Whidden','MultiAgency swarm']
         shown=dict(credit,credit=dict(author='Axiom Math: François Charton and Letong Hong; Jonas Whidden; MultiAgency swarm',names=names))
         displayed=r.other_claims(credit_claims,{},{'direct-issue-80':shown})['other-snaky']['claims'][0]
         self.assertEqual(displayed['author'],shown['credit']['author'])
-        self.assertEqual(displayed['authors'],[dict(name=x,url=displayed['url']) for x in names])
+        self.assertEqual(displayed['authors'],[dict(name=x) for x in names])
+        accounted=dict(shown,credit=dict(shown['credit'],accounts={'MultiAgency swarm':'https://github.com/darkhipo'}))
+        self.assertEqual(r.other_claims(credit_claims,{},{'direct-issue-80':accounted})['other-snaky']['claims'][0]['authors'],
+                         [dict(name=x) for x in names[:-1]]+[dict(name='MultiAgency swarm',url='https://github.com/darkhipo')])
         self.assertEqual({k:v for k,v in displayed.items() if k not in ('author','authors')},{k:v for k,v in credited.items() if k not in ('author','authors')})
         for bad in [dict(author='A <b>',names=['A']),dict(author='A',names=[]),dict(author='A',names=['A','A']),dict(author='A',names=['\\(x\\)']),
-                    dict(author=' A',names=['A']),dict(author='A',names=['A'],extra=1),dict(author='A')]:
+                    dict(author=' A',names=['A']),dict(author='A',names=['A'],extra=1),dict(author='A'),
+                    dict(author='A',names=['A'],accounts={'A':'https://github.com/openai/math'}),dict(author='A',names=['A'],accounts={'B':'https://github.com/b'}),
+                    dict(author='A',names=['A'],accounts=['https://github.com/a'])]:
             with self.subTest(credit=bad),self.assertRaises(r.Rejected):
                 r.other_claims(credit_claims,{},{'direct-issue-80':dict(credit,credit=bad)})
         with self.assertRaises(r.Rejected):r.other_claims(credit_claims,{},{'direct-issue-80':dict(credit,authors=['not-the-submitter'],credit=shown['credit'])})
         # Big O board rows key their record posts by authors, so a credit there is refused.
         with self.assertRaises(r.Rejected):
             r.row_for('direct-issue-5',dict(route='issue',item=self.issue(),submission=d.parse_body(self.issue()['body'])),'2026-10-11T00:00:00Z',None,credit)
-        # A display credit names a Big O row's authors too (Lead, 2026-11-07, verifier #183), each linking the submission;
-        # credited logins stay refused there.
+        # A display credit names a Big O row's authors too (Lead, 2026-11-07, verifier #183); a name links its account when the
+        # credit names one, else it has no link (Lead, 2026-11-08); credited logins stay refused there.
         big=dict(route='issue',item=self.issue(),submission=d.parse_body(self.issue()['body']))
-        row,meta,_=r.row_for('direct-issue-5',big,'2026-10-11T00:00:00Z',None,dict(text='x',credit=dict(author='A; B',names=['Halit Ziya KARTAL','MultiAgency swarm'])))
-        self.assertEqual(row['authors'],[dict(name='Halit Ziya KARTAL',url=big['item']['html_url']),dict(name='MultiAgency swarm',url=big['item']['html_url'])])
+        row,meta,_=r.row_for('direct-issue-5',big,'2026-10-11T00:00:00Z',None,dict(text='x',credit=dict(author='A; B',names=['Halit Ziya KARTAL','MultiAgency swarm'],accounts={'Halit Ziya KARTAL':'https://github.com/HalitZiyaKARTAL'})))
+        self.assertEqual(row['authors'],[dict(name='Halit Ziya KARTAL',url='https://github.com/HalitZiyaKARTAL'),dict(name='MultiAgency swarm')])
         self.assertEqual(meta['credit_note'],'x')
         plain_row=r.row_for('direct-issue-5',big,'2026-10-11T00:00:00Z')[0]
         self.assertEqual({k:v for k,v in row.items() if k!='authors'},{k:v for k,v in plain_row.items() if k!='authors'})
