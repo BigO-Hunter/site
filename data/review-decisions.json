@@ -627,6 +627,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-08T21:38:25Z",
       "note": "DreamingOfClouds' own package research/p104-hosted-chain-root/ (27 files, no CLAIM.json, no RESULT.json) states kappa 0.00339993 for the outer statement in its README (tested price 0.00339993007; raw crossing 0.0033999301323957), the title's value (+0.00002813 over #6833's 0.0033718). It hosts a pair of units at every call of the chain-nested root, with a mirrored native word. Conditional on the five framework assumptions of #6833 and on a sixth, A6 (owned ascent), which the README calls load-bearing; the README says the per-call check of the predecessors fails (11,928,436 against 10^7), and that its conservative count exceeds 10^9 by 2 percent. The PR body asks reviewers whether A6, IDLE_ONE and LAMBDA are accepted. Open, not draft, created 2026-11-08T20:27:24Z. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6884,
+      "head": "f33c5bd58d10d6c7244975cd34401ef13237c8a1",
+      "score": "341603/100000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-08T22:38:10Z",
+      "note": "DreamingOfClouds' own package research/p104-hosted-shared-cover/ (30 files, no CLAIM.json, no RESULT.json) states kappa 0.00341603 for the outer statement in its README (tested price 0.0034160307; raw crossing 0.00341603288178402), the title's value (+0.0000161 over #6883's 0.00339993). It keeps the root, caller and hosted pair of #6883 and replaces the native word by an exact-optimum shared cover of the helpers. Conditional on the five framework assumptions of #6833, on A6 (owned ascent) as declared in #6883, and on the BIT pin 0.00376669 taken from the pending #6726; the README says this kappa is above the pin 0.0034 of main, so without a higher admitted BIT saving the outer statement does not cover it. It also rests on pricing the one-site idles as whole H8 jobs (IDLE_ONE, from the pending #6716 and #6726; priced as rank-1 jobs, kappa would be 0.002995) and on the LAMBDA pass of the pending callers, neither on main. Its conservative count is 5.2 percent over 10^9. Open, not draft, created 2026-11-08T22:08:52Z. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
