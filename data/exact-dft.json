@@ -534,6 +534,48 @@
       }
     },
     {
+      "id": "direct-issue-186",
+      "kind": "improvement",
+      "score": "3148496239/1000000000000",
+      "score_relation": "attained",
+      "tier": "claimed",
+      "submitted_at": "2026-11-08T03:58:34Z",
+      "spec_version": "1",
+      "title": "darkhipo direct dft submission",
+      "authors": [
+        {
+          "name": "Halit Ziya KARTAL",
+          "url": "https://github.com/bigospeedrun/verifier/issues/186"
+        },
+        {
+          "name": "MultiAgency swarm",
+          "url": "https://github.com/bigospeedrun/verifier/issues/186"
+        }
+      ],
+      "predecessors": [
+        "https://github.com/bigospeedrun/verifier/pull/156"
+      ],
+      "submission_url": "https://github.com/bigospeedrun/verifier/issues/186",
+      "source_commit": "bf3dee27165e4fec3c39cd8472c1a6bb549abf0b",
+      "artifact": {
+        "path": "sources/direct-issue-186-submission.json",
+        "sha256": "4c4c7bb4ed7786c752819a9cde9ece5bf00bb665a9c40be6389c3e8c32ee80cf"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/bigospeedrun/verifier/issues/186",
+        "theorem": "Race.bound",
+        "certificate_path": null
+      },
+      "dependencies": [],
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-08T03:58:34Z",
+      "site_observed_at": "2026-11-08T04:28:42Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/darkhipo/dft-halitziyav6-rate/tree/bf3dee27165e4fec3c39cd8472c1a6bb549abf0b"
+      }
+    },
+    {
       "id": "direct-issue-19",
       "kind": "improvement",
       "score": "6327/5000000",
@@ -1274,6 +1316,25 @@
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39061582815",
       "verification": "passed"
     },
+    "direct-issue-186": {
+      "checked_at": "2026-11-08",
+      "source_url": "https://github.com/darkhipo/dft-halitziyav6-rate/tree/bf3dee27165e4fec3c39cd8472c1a6bb549abf0b",
+      "repo": "darkhipo/dft-halitziyav6-rate",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Submitted bound; independent verification has not passed.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "comparison_key": "exact-dft/uniform-exact-arithmetic/v1",
+      "publication_date": "2026-11-08T03:58:34Z",
+      "publication_date_precision": "date-time",
+      "publication_date_role": "Submission opened",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/186",
+      "direct_submission": true,
+      "route": "issue",
+      "credit_note": "A refile of Halit Ziya KARTAL's Lean Verified 0.0031415926 proof (direct-pr-156) with only its stated saving changed, to just below the rate 67/21280 that its engine already proves. The proof is Halit Ziya KARTAL's, with the credits of that row: Ali Romman's binary query tree, Cinna Davis' thin query and Jacob Sussman's construction. MultiAgency swarm extracted the constant.",
+      "verification": "pending"
+    },
     "direct-issue-19": {
       "checked_at": "2026-11-08",
       "source_url": "https://github.com/fringewidth/exact-dft-lean/blob/4263d8faad69c5bd9a17b8d0d3f85fdf68e30165/Submission.lean",
@@ -1495,5 +1556,5 @@
       "verification": "passed"
     }
   },
-  "updated_at": "2026-11-08T02:29:41Z"
+  "updated_at": "2026-11-08T04:28:42Z"
 }

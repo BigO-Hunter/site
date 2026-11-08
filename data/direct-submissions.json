@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-186": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "dft",
+        "repo_url": "https://github.com/darkhipo/dft-halitziyav6-rate",
+        "commit": "bf3dee27165e4fec3c39cd8472c1a6bb549abf0b",
+        "bound": "3148496239/1000000000000",
+        "authors": []
+      }
+    },
     "direct-issue-184": {
       "route": "issue",
       "submission": {
@@ -4691,8 +4702,13 @@
     },
     "183": {
       "version": "12a1925b7e4b8a769ed121946bf908dd1c5873b5a2326d7aeeaded444684aa88",
-      "updated_at": "2026-11-08T01:36:54Z",
+      "updated_at": "2026-11-08T04:02:48Z",
       "not_verified": true
+    },
+    "186": {
+      "version": "9d9607b97fc32c6274fa0e44289160d9be8dbe0c314f90b77388c9e0bb888fc8",
+      "updated_at": "2026-11-08T03:59:16Z",
+      "not_verified": false
     }
   }
 }

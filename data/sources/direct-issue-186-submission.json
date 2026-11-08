@@ -1,0 +1,15 @@
+{
+  "route": "issue",
+  "number": 186,
+  "url": "https://github.com/bigospeedrun/verifier/issues/186",
+  "submitter": "darkhipo",
+  "created_at": "2026-11-08T03:58:34Z",
+  "submission": {
+    "schema_version": 1,
+    "problem": "dft",
+    "repo_url": "https://github.com/darkhipo/dft-halitziyav6-rate",
+    "commit": "bf3dee27165e4fec3c39cd8472c1a6bb549abf0b",
+    "bound": "3148496239/1000000000000",
+    "authors": []
+  }
+}
