@@ -2423,7 +2423,7 @@
           "lean": false,
           "leanNote": "Only the algebraic steps, by a third party (verifier pull request 27).",
           "evidence": "claimed",
-          "note": "",
+          "note": "The claim is conditional on the generic-grid and private-valuation lemmas of OpenAI's preprint, and on its Kummer statement, which the source takes as given and does not verify. The author supplies no Lean proof of the composition, and the README says that independent review is not claimed.",
           "authors": [
             {
               "name": "Rohan Arun",
@@ -2914,8 +2914,8 @@
         },
         {
           "name": "darkhipo/haldane-gap-beta13",
-          "url": "https://github.com/darkhipo/haldane-gap-beta13",
-          "note": "Its 0.1542 certificate of November 3, 2026 was retracted by the same account on November 5, 2026. CORRECTION.md says that the shipped checker overwrote the recurrence-computed inputs i, j, r and q with smaller values chosen by hand, so the certificate is invalid for 0.1542 and does not support an improvement over the listed 0.1515. It reports that the checker passes without the overrides at 0.06743. The repository now lives at BigO-Hunter/haldane-gap-beta13: https://github.com/BigO-Hunter/haldane-gap-beta13/blob/2242ec3e8a62bd0465be97003251ffa3a1cc03df/CORRECTION.md"
+          "url": "https://github.com/BigO-Hunter/haldane-gap-beta13/blob/2242ec3e8a62bd0465be97003251ffa3a1cc03df/CORRECTION.md",
+          "note": "Its 0.1542 certificate of November 3, 2026 was retracted by the same account on November 5, 2026. CORRECTION.md says that the shipped checker overwrote the recurrence-computed inputs i, j, r and q with smaller values chosen by hand, so the certificate is invalid for 0.1542 and does not support an improvement over the listed 0.1515. It reports that the checker passes without the overrides at 0.06743. The link goes to CORRECTION.md at commit 2242ec3e. The repository now lives at BigO-Hunter/haldane-gap-beta13."
         }
       ],
       "bestHandle": "amachino"
