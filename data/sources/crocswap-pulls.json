@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-07T22:48:28Z",
+    "updated_at": "2026-11-08T00:00:06Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -127412,7 +127412,7 @@
     "title": "Prepare source-bound full callers with separate execution-mode plans",
     "state": "open",
     "created_at": "2026-11-03T10:55:50Z",
-    "updated_at": "2026-11-05T23:48:29Z",
+    "updated_at": "2026-11-07T05:56:17Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -133133,6 +133133,27 @@
     },
     "head": {
       "sha": "c009a7514790e865b664ab8cd4688d37787d7eaa"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6864,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6864",
+    "title": "Repair caller factory identity and preserve native launch cwd",
+    "state": "open",
+    "created_at": "2026-11-07T23:56:37Z",
+    "updated_at": "2026-11-08T00:05:00Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "c8f7bd582ffc1301b851dde2364c60f1636aac8b"
     },
     "base": {
       "ref": "main"
