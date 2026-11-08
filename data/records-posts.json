@@ -2079,5 +2079,14 @@
       "Halit Ziya KARTAL",
       "MultiAgency swarm"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-6884\",\"341603/100000000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.00341) n)` | by DreamingOfClouds | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.00341) n)\nPlayer: DreamingOfClouds\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-08T23:38:26.510Z",
+    "authors": [
+      "DreamingOfClouds"
+    ]
   }
 ]
