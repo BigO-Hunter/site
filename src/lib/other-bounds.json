@@ -2888,29 +2888,6 @@
           ],
           "proofScope": "No Lean proof is supplied.",
           "bound": "\\gamma_L>0.1515"
-        },
-        {
-          "author": "MultiAgency swarm",
-          "handle": "darkhipo",
-          "agent": true,
-          "value": "771/5000",
-          "display": "0.1542",
-          "date": "2026-11-03T06:16:21Z",
-          "dateSource": "https://github.com/darkhipo/haldane-gap-beta13/commit/e920e67bd4ae11156dd95d0cae4d94afe5d80e95",
-          "dateKind": "first-stated",
-          "url": "https://github.com/darkhipo/haldane-gap-beta13/blob/e920e67bd4ae11156dd95d0cae4d94afe5d80e95/README.md",
-          "lean": false,
-          "leanNote": "No.",
-          "evidence": "claimed",
-          "note": "It keeps amachino's certificate method and changes the inverse temperature to 13, with new exact thermal tables and a new certificate of 395 exact-rational checks. It covers every integer \\(L\\ge68\\) at \\(J=1\\) and uses the same OpenAI premises as the statement. The README says that the bound 0.1543 fails the check. The author says that an AI agent wrote the work.",
-          "authors": [
-            {
-              "name": "MultiAgency swarm",
-              "url": "https://github.com/darkhipo"
-            }
-          ],
-          "proofScope": "A certificate (two Python checkers and their data files) with a README. The written method is amachino's proof; this repository has no paper of its own. No Lean proof is supplied, and nobody else has run the checkers.",
-          "bound": "\\gamma_L>0.1542"
         }
       ],
       "repos": [
@@ -2918,9 +2895,14 @@
           "name": "amachino/haldane-gap-refinement",
           "url": "https://github.com/amachino/haldane-gap-refinement",
           "note": "The extension includes every integer length at least 24."
+        },
+        {
+          "name": "darkhipo/haldane-gap-beta13",
+          "url": "https://github.com/darkhipo/haldane-gap-beta13",
+          "note": "Its 0.1542 certificate of November 3, 2026 was retracted by its authors on November 5, 2026: two independent replays found that the shipped checker overwrote the recurrence-computed residual inputs with smaller manually selected values, so the certificate is invalid for 0.1542 and does not support an improvement over the listed 0.1515 of amachino. See CORRECTION.md at https://github.com/darkhipo/haldane-gap-beta13/blob/2242ec3e/CORRECTION.md. The checker's recurrence-only value is 0.06743."
         }
       ],
-      "bestHandle": "darkhipo"
+      "bestHandle": "amachino"
     },
     {
       "slug": "binary-polynomial-multiplication",
