@@ -1,0 +1,11 @@
+{
+  "number": 6880,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6880",
+  "title": "Prove a rounded finite-core and sparse-halo composition bound (no new κ)",
+  "body": "Prove a common-reference numerical splice from nonlinear rounded finite-core inverses to a complete cyclic/tensor inverse, using sparse inputs copied before core mutation. An explicit direct-Neumann halo replaces the original normal-equation correction. The error bound has no core-count factor; rounding, actual input radii and normalization scales remain charged.\n\nConsumes #4205's finite-core contract, retained via #4253. Complements #4217/#4517's locality/lift and #5081's suffix result by supplying the alternative local defect; predecessor methods are not claimed anew.\n\nBase: 7c49fe32c55de02c2c873655c804b16e4c3fef0a. Exact seven live input Git/SHA256 pins and separate provenance: SOURCES.json.\n\nReproduce (Python 3.12, stdlib):\n```sh\npython3 -B scripts/research_package.py --package research/rounded-core-halo-splice\n```\nExpected: PASS_REGISTERED_RESEARCH_PACKAGE.\n\nExecuted: normal/optimized exact checks on four fixtures, 1,408 outputs and 2,024 saved copies. Twelve controls cover stale inputs, missing period paths, premature cropping, ideal-only radii, unpaid normalizers and recovery-scale/norm errors. Source/commit bytes and both read-only Git-free export replays pass; remote tree matches tested contents. Core test doubles are not executions of the fast predecessor circuit.\n\nNo new κ. Reference row gap and finite-core contract are premises. Global reference/page generation, physical delivery/cost, full suffix/recovery scaling and all five selected assumptions remain. No complete multiplier or human/kernel acceptance.\n\nBy @CubeJerry with substantial OpenAI Codex assistance and separate adversarial review. Credit Cinna Davis (#4100), Jose Manuel (#4205/#4253), Nick Petalas (#4217), Ryanson Jonathan (#4517), JoyboyBrian (#5081), Mason Hale (#2313), and retained analytic lineage. Apache-2.0.\n\nProof, pins, validation and open questions:\nhttps://github.com/CubeJerry/integer-mult-bounds/tree/e212af981b49c299de515f8c23dfb0e5b73e2e95/research/rounded-core-halo-splice",
+  "created_at": "2026-11-08T15:01:00Z",
+  "updated_at": "2026-11-08T15:01:00Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

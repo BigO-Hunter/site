@@ -133411,5 +133411,89 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6877,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6877",
+    "title": "Consolidated root theorem for P104: chain-nested optimality with rigidity, the cost formula, dense supports and the one-extra-unit floor, under an explicit hypothesis ledger (no κ)",
+    "state": "open",
+    "created_at": "2026-11-08T14:39:24Z",
+    "updated_at": "2026-11-08T14:39:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "87dd90faa8d82dc8002c8e0b57e8cc392c0fd487"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6878,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6878",
+    "title": "Preserve node costs through compiler occurrence layouts (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-08T14:59:55Z",
+    "updated_at": "2026-11-08T14:59:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "41febf890fbbb852c6059d4c0cc8c593ae9dfa5c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6879,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6879",
+    "title": "Prove ordinary BIT retained-space bounds with reusable origins (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-08T15:00:29Z",
+    "updated_at": "2026-11-08T15:00:29Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "db7b33f6255b7308d9d7db1563afa39c99b9a27e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6880,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6880",
+    "title": "Prove a rounded finite-core and sparse-halo composition bound (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-08T15:01:00Z",
+    "updated_at": "2026-11-08T15:01:00Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "e212af981b49c299de515f8c23dfb0e5b73e2e95"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
