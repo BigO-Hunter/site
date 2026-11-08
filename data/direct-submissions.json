@@ -10,6 +10,37 @@
         "commit": "bf3dee27165e4fec3c39cd8472c1a6bb549abf0b",
         "bound": "3148496239/1000000000000",
         "authors": []
+      },
+      "verification": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-186-9d9607b97fc32c6274fa0e44289160d9be8dbe0c314f90b77388c9e0bb888fc8",
+        "problem_id": "exact-dft/uniform-exact-arithmetic",
+        "score": "3148496239/1000000000000",
+        "score_relation": "attained",
+        "source_commit": "bf3dee27165e4fec3c39cd8472c1a6bb549abf0b",
+        "source_url": "https://github.com/darkhipo/dft-halitziyav6-rate",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42444892798",
+        "checked_at": "2026-11-08T05:08:08.341725Z",
+        "issue_created_at": "2026-11-08T03:58:34Z",
+        "issue_updated_at_at_verification": "2026-11-08T03:58:44Z",
+        "issue_updated_at_at_import": "2026-11-08T05:08:34Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-186-42444892798-1.json",
+        "receipt_sha256": "b85b503eee4f843d99275695de404a8fc84deba2cdc6d157aa077c91c9547261",
+        "policy_hash": "9a4e833014ee97c3ed036c201ebaa1a7224b959d58b174bc939ad12d4b208aed",
+        "result_artifact_id": 13604853727,
+        "controller_fingerprint": "86b3358eef293a791ddd5490b13f1007735905e68245268a93d18e785f5663ff",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
       }
     },
     "direct-issue-184": {
@@ -4495,6 +4526,49 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-issue-186:9d9607b97fc32c6274fa0e44289160d9be8dbe0c314f90b77388c9e0bb888fc8": {
+      "key": "direct-issue-186",
+      "submission": {
+        "schema_version": 1,
+        "problem": "dft",
+        "repo_url": "https://github.com/darkhipo/dft-halitziyav6-rate",
+        "commit": "bf3dee27165e4fec3c39cd8472c1a6bb549abf0b",
+        "bound": "3148496239/1000000000000",
+        "authors": []
+      },
+      "decision": "lean-verified",
+      "evidence": {
+        "decision": "lean-verified",
+        "reason": "Lean and nanoda passed; permitted-axiom audit passed",
+        "id": "direct-186-9d9607b97fc32c6274fa0e44289160d9be8dbe0c314f90b77388c9e0bb888fc8",
+        "problem_id": "exact-dft/uniform-exact-arithmetic",
+        "score": "3148496239/1000000000000",
+        "score_relation": "attained",
+        "source_commit": "bf3dee27165e4fec3c39cd8472c1a6bb549abf0b",
+        "source_url": "https://github.com/darkhipo/dft-halitziyav6-rate",
+        "authors": [],
+        "workflow_conclusion": "success",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42444892798",
+        "checked_at": "2026-11-08T05:08:08.341725Z",
+        "issue_created_at": "2026-11-08T03:58:34Z",
+        "issue_updated_at_at_verification": "2026-11-08T03:58:44Z",
+        "issue_updated_at_at_import": "2026-11-08T05:08:34Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-186-42444892798-1.json",
+        "receipt_sha256": "b85b503eee4f843d99275695de404a8fc84deba2cdc6d157aa077c91c9547261",
+        "policy_hash": "9a4e833014ee97c3ed036c201ebaa1a7224b959d58b174bc939ad12d4b208aed",
+        "result_artifact_id": 13604853727,
+        "controller_fingerprint": "86b3358eef293a791ddd5490b13f1007735905e68245268a93d18e785f5663ff",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -4704,11 +4778,6 @@
       "version": "12a1925b7e4b8a769ed121946bf908dd1c5873b5a2326d7aeeaded444684aa88",
       "updated_at": "2026-11-08T04:02:48Z",
       "not_verified": true
-    },
-    "186": {
-      "version": "9d9607b97fc32c6274fa0e44289160d9be8dbe0c314f90b77388c9e0bb888fc8",
-      "updated_at": "2026-11-08T03:59:16Z",
-      "not_verified": false
     }
   }
 }

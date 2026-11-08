@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-08T04:49:03Z",
+    "updated_at": "2026-11-08T07:13:33Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -133259,6 +133259,69 @@
     },
     "head": {
       "sha": "1144f0a715e84b3f08ebe7d0e8ed8a06543f2fad"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6870,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6870",
+    "title": "Freeze all six verification changes in a compatible complete source selection",
+    "state": "open",
+    "created_at": "2026-11-08T06:57:42Z",
+    "updated_at": "2026-11-08T07:16:56Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "b467aae70ef3b63ea3c56caa37dfeb8e9ad9eae1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6871,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6871",
+    "title": "Bind full verification callers and retention to genuine source owners",
+    "state": "open",
+    "created_at": "2026-11-08T06:58:45Z",
+    "updated_at": "2026-11-08T06:58:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "167b4f7babb00fff832114bc7cec25d3060b6b73"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6872,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6872",
+    "title": "Document guardian launch hash cycles and the missing authenticated entry",
+    "state": "open",
+    "created_at": "2026-11-08T07:00:16Z",
+    "updated_at": "2026-11-08T07:00:16Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "4e6c90acff9127824831d111580e27a152bc5554"
     },
     "base": {
       "ref": "main"

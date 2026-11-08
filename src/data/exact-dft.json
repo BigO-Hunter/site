@@ -538,7 +538,7 @@
       "kind": "improvement",
       "score": "3148496239/1000000000000",
       "score_relation": "attained",
-      "tier": "claimed",
+      "tier": "verified",
       "submitted_at": "2026-11-08T03:58:34Z",
       "spec_version": "1",
       "title": "darkhipo direct dft submission",
@@ -572,7 +572,12 @@
       "site_observed_at": "2026-11-08T04:28:42Z",
       "source": {
         "kind": "repo-artifact",
-        "url": "https://github.com/darkhipo/dft-halitziyav6-rate/tree/bf3dee27165e4fec3c39cd8472c1a6bb549abf0b"
+        "url": "https://github.com/darkhipo/dft-halitziyav6-rate/blob/bf3dee27165e4fec3c39cd8472c1a6bb549abf0b/Submission.lean"
+      },
+      "rerun_status": {
+        "state": "passed",
+        "checked_at": "2026-11-08T05:08:08.341725Z",
+        "receipt_path": "sources/direct-issue-186-42444892798-1.json"
       }
     },
     {
@@ -1318,13 +1323,13 @@
     },
     "direct-issue-186": {
       "checked_at": "2026-11-08",
-      "source_url": "https://github.com/darkhipo/dft-halitziyav6-rate/tree/bf3dee27165e4fec3c39cd8472c1a6bb549abf0b",
+      "source_url": "https://github.com/darkhipo/dft-halitziyav6-rate/blob/bf3dee27165e4fec3c39cd8472c1a6bb549abf0b/Submission.lean",
       "repo": "darkhipo/dft-halitziyav6-rate",
       "site_badge": false,
       "eligible_for_record": false,
-      "proof_status": "Submitted bound; independent verification has not passed.",
-      "upstream_tier": "claimed",
-      "site_tier": "claimed",
+      "proof_status": "Lean and nanoda passed; permitted-axiom audit passed",
+      "upstream_tier": "verified",
+      "site_tier": "verified",
       "comparison_key": "exact-dft/uniform-exact-arithmetic/v1",
       "publication_date": "2026-11-08T03:58:34Z",
       "publication_date_precision": "date-time",
@@ -1333,7 +1338,8 @@
       "direct_submission": true,
       "route": "issue",
       "credit_note": "A refile of Halit Ziya KARTAL's Lean Verified 0.0031415926 proof (direct-pr-156) with only its stated saving changed, to just below the rate 67/21280 that its engine already proves. The proof is Halit Ziya KARTAL's, with the credits of that row: Ali Romman's binary query tree, Cinna Davis' thin query and Jacob Sussman's construction. MultiAgency swarm extracted the constant.",
-      "verification": "pending"
+      "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42444892798",
+      "verification": "passed"
     },
     "direct-issue-19": {
       "checked_at": "2026-11-08",
@@ -1556,5 +1562,5 @@
       "verification": "passed"
     }
   },
-  "updated_at": "2026-11-08T04:28:42Z"
+  "updated_at": "2026-11-08T07:28:40Z"
 }
