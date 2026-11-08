@@ -1207,8 +1207,8 @@
     "id": "2119272513695879257"
   },
   "[\"exact-dft\",\"direct-issue-186\",\"3148496239/1000000000000\",\"attained\"]:lean": {
-    "status": "unknown",
-    "at": "2026-11-08T07:33:58.746Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-08T07:34:00.349Z",
+    "id": "2119332593342574987"
   }
 }
