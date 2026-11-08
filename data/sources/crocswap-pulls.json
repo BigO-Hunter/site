@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-08T00:00:06Z",
+    "updated_at": "2026-11-08T01:14:16Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -133154,6 +133154,48 @@
     },
     "head": {
       "sha": "c8f7bd582ffc1301b851dde2364c60f1636aac8b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6865,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6865",
+    "title": "Prove the owned-exit cut bound for P104 natives: ≥|W| owned exits per port-clique cut, tight on #6833's native, ruling out one-unit owned shortenings (no κ)",
+    "state": "open",
+    "created_at": "2026-11-08T00:53:23Z",
+    "updated_at": "2026-11-08T00:53:23Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "40648b5c60ac7a7918af5ef2a23f10fd3a971da2"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6866,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6866",
+    "title": "Document post-reap process-group signalling defect and connected repair",
+    "state": "open",
+    "created_at": "2026-11-08T01:10:27Z",
+    "updated_at": "2026-11-08T01:10:27Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "fcba647106f3e2f08de1b39ebed04a13c0a6ef8b"
     },
     "base": {
       "ref": "main"
