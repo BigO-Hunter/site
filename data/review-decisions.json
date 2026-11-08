@@ -619,6 +619,14 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-07T08:46:19Z",
       "note": "DreamingOfClouds' own package research/p104-chain-nested-root/ (73 files, RESULT.json, no CLAIM.json) states price.kappa 16859/5000000 = 0.0033718, the title's value (+0.00006357 over #6824's 0.00330823). It replaces the supplier tree of the #6726 caller by one chain-nested root, on the unchanged native word of #6824. Conditional on five retained assumptions, same sense as all CrocSwap IM rows; the README says external review is open. Open, not draft, created 2026-11-07T06:18:14Z. It is queued because the value sits under the price key of RESULT.json, not in a field the importer reads. Head 51f54e3c adds to the decided head ad24ad96 only IDLE-RANK-ADDENDUM.md, check_idle_rank.py and two README lines; RESULT.json is byte-identical. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6883,
+      "head": "3652e9191530fb02e2e5efe92b2b53386890874d",
+      "score": "339993/100000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-08T21:38:25Z",
+      "note": "DreamingOfClouds' own package research/p104-hosted-chain-root/ (27 files, no CLAIM.json, no RESULT.json) states kappa 0.00339993 for the outer statement in its README (tested price 0.00339993007; raw crossing 0.0033999301323957), the title's value (+0.00002813 over #6833's 0.0033718). It hosts a pair of units at every call of the chain-nested root, with a mirrored native word. Conditional on the five framework assumptions of #6833 and on a sixth, A6 (owned ascent), which the README calls load-bearing; the README says the per-call check of the predecessors fails (11,928,436 against 10^7), and that its conservative count exceeds 10^9 by 2 percent. The PR body asks reviewers whether A6, IDLE_ONE and LAMBDA are accepted. Open, not draft, created 2026-11-08T20:27:24Z. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
