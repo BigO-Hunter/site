@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6833",
+        "leader": "crocswap-pr-6884",
         "direction": "higher",
         "records": [
           {
@@ -4439,6 +4439,26 @@
               "DreamingOfClouds"
             ],
             "bound": "O(n log^(1 - 0.0033718) n)"
+          },
+          {
+            "id": "crocswap-pr-6883",
+            "score": "339993/100000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.00339993) n)"
+          },
+          {
+            "id": "crocswap-pr-6884",
+            "score": "341603/100000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.00341603) n)"
           }
         ],
         "table": "big-o"
@@ -7585,7 +7605,8 @@
     "[\"other-heilbronn-triangle\",\"direct-issue-184:1/138611120630192845449848501984762489503949180120972521287304259199089718296986575839672803644586516021090063092820239685405507227054093124597541492458051962596474875313132928055153805949190893429472432269634916029759500562026384000100000\",\"1/138611120630192845449848501984762489503949180120972521287304259199089718296986575839672803644586516021090063092820239685405507227054093124597541492458051962596474875313132928055153805949190893429472432269634916029759500562026384000100000\",\"attained\"]:lean",
     "[\"exact-dft\",\"direct-issue-186\",\"3148496239/1000000000000\",\"attained\"]:lean",
     "[\"exact-dft\",\"direct-issue-183\",\"3148496239/1000000000000\",\"attained\"]:record",
-    "[\"exact-dft\",\"direct-issue-186\",\"3148496239/1000000000000\",\"attained\"]:record"
+    "[\"exact-dft\",\"direct-issue-186\",\"3148496239/1000000000000\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-6884\",\"341603/100000000\",\"attained\"]:record"
   ],
   "deferred": [
     {

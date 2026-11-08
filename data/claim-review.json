@@ -1,17 +1,10 @@
 {
   "queue": [
     {
-      "pr": 6883,
-      "head": "3652e9191530fb02e2e5efe92b2b53386890874d",
-      "title": "Conditional κ = 0.00339993 (+2.813e-5, +0.834% over #6833): host a pair at every root call with a mirrored native, declared owned ascent",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6883",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    },
-    {
-      "pr": 6884,
-      "head": "f33c5bd58d10d6c7244975cd34401ef13237c8a1",
-      "title": "Conditional κ = 0.00341603 (+1.610e-5, +0.4736% over #6883): exact-optimum shared cover of the hosted native, BIT pin of #6726",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6884",
+      "pr": 6886,
+      "head": "187aa656e9cc9f5f7b6f202c137a9aba8d3c1144",
+      "title": "Conditional κ = 0.003429289 (+0.388% over #6884): remove 24 Y pads from the mirror",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6886",
       "reason": "The PR adds no single own research package CLAIM.json."
     }
   ]
