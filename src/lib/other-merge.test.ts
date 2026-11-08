@@ -1,5 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import data from './other-bounds.json' with {type: 'json'};
 import {mergeProve2me, mergeDirect, applyMaintainer, claimNumber} from './other-merge.ts';
 import {otherBoundLeader} from './other-leader.ts';
@@ -134,4 +135,39 @@ test('a passed maintainer receipt makes its claim Lean Verified and links the re
     assert.deepEqual(applyMaintainer(base, state), base);
   assert.throws(() => applyMaintainer(base, {boards: {row: {c: {state: 'passed', receipt_path: 'sources/maintainer-c-1.json'}}}}), /unknown Other bounds claim: row\/c/);
   assert.throws(() => applyMaintainer(base, {boards: {other: {b: {state: 'passed'}}}}), /other\/b/);
+});
+
+// A reviewed upgrade (Lead, 2026-11-08, verifier #187): a port of a hand claim's own proof makes that claim Lean
+// Verified in place; no second row, the leader and the feed key stay.
+test('a direct result with an upgrade makes its hand claim Lean Verified in place and adds no row', () => {
+  const catalan = {families: [{slug: 'catalan', direction: 'lower', bestHandle: 'm', claims: [
+    {handle: 'slitsey', value: '400', display: '400', date: '2026-11-05T17:56:39Z', evidence: 'claimed', url: 'https://example.org/400', note: 'n400', leanNote: 'old', author: 'S. Litsey', authors: [{name: 'S. Litsey'}]},
+    {handle: 'slitsey', value: '295', display: '295', date: '2026-11-06T17:13:45Z', evidence: 'claimed', url: 'https://example.org/295', note: 'n295', leanNote: 'old', author: 'S. Litsey', authors: [{name: 'S. Litsey'}]},
+    {handle: 'm', value: '280.59', display: '280.59', date: '2026-11-07T19:22:35Z', evidence: 'claimed', url: 'https://example.org/m'}]}]};
+  const result = (extra: object) => ({boards: {'other-catalan': {claims: [direct(187, '295', '295', {receiptPath: 'sources/r.json', note: 'credit text',
+    author: 'S. Litsey; MultiAgency swarm (port)', authors: [{name: 'S. Litsey', url: 'https://github.com/slitsey'}, {name: 'MultiAgency swarm', url: 'https://github.com/darkhipo'}], ...extra})
+    .boards['other-average-sensitivity'].claims[0]]}}});
+  const merged = mergeDirect(catalan as any, result({upgrades: {handle: 'slitsey', value: '295'}}) as any).families[0] as any;
+  assert.deepEqual(merged.claims.map((c: any) => [c.handle, c.value, c.evidence]), [['slitsey', '400', 'claimed'], ['slitsey', '295', 'lean-verified'], ['m', '280.59', 'claimed']]);
+  const up = merged.claims[1];
+  assert.equal(up.date, '2026-11-06T17:13:45Z'); assert.equal(up.url, 'https://example.org/295');
+  assert.equal(up.evidenceUrl, 'https://github.com/bigospeedrun/verifier/issues/187');
+  assert.equal(up.author, 'S. Litsey; MultiAgency swarm (port)'); assert.deepEqual(up.authors.map((a: any) => a.name), ['S. Litsey', 'MultiAgency swarm']);
+  assert.equal(up.note, 'credit text'); assert.equal(up.leanNote, 'Yes'); assert.equal(up.receiptPath, 'sources/r.json'); assert.equal(up.upgrades, undefined);
+  assert.equal(merged.bestHandle, 'm');
+  // Without a note the hand note stays; a missing or ambiguous target stops the build.
+  assert.equal((mergeDirect(catalan as any, result({note: '', upgrades: {handle: 'slitsey', value: '295'}}) as any).families[0] as any).claims[1].note, 'n295');
+  for (const upgrades of [{handle: 'slitsey', value: '294'}, {handle: 'nobody', value: '295'}, {handle: 'slitsey'}])
+    assert.throws(() => mergeDirect(catalan as any, result({upgrades}) as any), /upgrades no single claim/);
+  const twice = {families: [{...catalan.families[0], claims: [...catalan.families[0].claims, catalan.families[0].claims[1]]}]};
+  assert.throws(() => mergeDirect(twice as any, result({upgrades: {handle: 'slitsey', value: '295'}}) as any), /upgrades no single claim/);
+  // Without an upgrade the result is a row of its own, as before.
+  assert.equal((mergeDirect(catalan as any, result({}) as any).families[0] as any).claims.length, 4);
+});
+
+test('every reviewed upgrade in data/direct-notes.json names exactly one hand claim of src/lib/other-bounds.json', () => {
+  const notes = JSON.parse(readFileSync('data/direct-notes.json', 'utf8')).notes as Record<string, {upgrades?: {handle: string; value: string}}>;
+  const claims = (data as any).families.flatMap((f: any) => f.claims) as {handle: string; value: string}[];
+  for (const [key, note] of Object.entries(notes)) if (note.upgrades)
+    assert.equal(claims.filter(c => c.handle === note.upgrades!.handle && c.value === note.upgrades!.value).length, 1, key);
 });

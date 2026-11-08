@@ -10,7 +10,7 @@ from pathlib import Path
 import re
 import sssp
 from author_links import author_entry
-from direct_note_rules import credit_ok
+from direct_note_rules import credit_ok,upgrades_ok
 import shutil
 import subprocess
 import sys
@@ -417,6 +417,7 @@ def row_for(key,claim,now,old=None,note=None):
     # the names, in credit order, each linking its account when the credit names one, else none (author_links.py). The table,
     # the record posts and the chat read them.
     require(not (note and note.get('authors')),'Credited authors on a Big O board row: '+key)
+    require(not (note and note.get('upgrades')),'An upgrade of a hand claim on a Big O board row: '+key)
     if note and note.get('credit'):
         require(credit_ok(note['credit']),'Invalid display credit')
         row['authors']=[author_entry(x,note['credit'].get('accounts',{}).get(x)) for x in note['credit']['names']]
@@ -506,6 +507,12 @@ def other_claims(claims,withdrawn,notes):
             # The Other page links 'at commit <sha> of <repo URL>' (src/lib/source-links.ts): keep this form.
             proofScope='The verifier checked Race.bound : '+row['statement']+' ('+sub['bound']+') at commit '+sub['commit']+' of '+sub['repo_url']+'.',
             bound=row['bound'].format(value=shown),receiptPath=proof['receipt_path']))
+        # A reviewed upgrade (Lead, 2026-11-08, verifier #187: a port of S. Litsey's own 295 proof to the verifier's
+        # toolchain): the result makes that hand claim of the row Lean Verified in place, not a second row (other-merge.ts).
+        upgrades=notes.get(key,{}).get('upgrades')
+        if upgrades:
+            require(upgrades_ok(upgrades) and upgrades['value']==sub['bound'],'Invalid upgrade of a hand claim')
+            boards['other-'+sub['problem']]['claims'][-1]['upgrades']=dict(upgrades)
     return boards
 
 def prepare(root,claims,files,now,final_states=None,config=None,claimed_cache=None,not_verified_cache=None):

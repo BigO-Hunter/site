@@ -86,6 +86,8 @@ class RefreshTests(unittest.TestCase):
         open_claim=dict(route='issue',item=self.issue(5),submission=sub)
         self.assertEqual(r.row_for('direct-issue-5',claims['direct-issue-5'],'2026-10-11T00:00:00Z')[:2],
                          r.row_for('direct-issue-5',open_claim,'2026-10-11T00:00:00Z')[:2])
+        # An upgrade of a hand claim is for Other bounds rows only (other_claims); a Big O row refuses it.
+        with self.assertRaises(r.Rejected):r.row_for('direct-issue-5',open_claim,'2026-10-11T00:00:00Z',None,dict(text='t',upgrades=dict(handle='x',value='1')))
         # An edited body after closing is a new source without a final result.
         edited=closed(5);edited['body']=edited['body'].replace('1/1000','1/1001')
         importer=r.Importer(DiscoveryAPI([edited]))
@@ -711,6 +713,18 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual((listed[0]['handle'],listed[0]['value'],listed[0]['bound']),('direct-issue-70','1091','\\mu(G)\\le 1091'))
         self.assertEqual(listed[0]['display'],'1091')
         self.assertIn('BigOSpeedrun.Catalan.Bound (1091)',listed[0]['proofScope'])
+        # A reviewed upgrade (Lead, 2026-11-08, verifier #187): the claim carries it to other-merge.ts, which upgrades that
+        # hand claim in place. Its value must equal the bound; a bad shape is refused.
+        up=dict(text='A port.',upgrades=dict(handle='slitsey',value='1091'))
+        upgraded=r.other_claims({'direct-issue-70':dict(route='issue',item=self.issue(70),submission=cat,verification=proof)},{},{'direct-issue-70':up})['other-catalan']['claims'][0]
+        self.assertEqual(upgraded['upgrades'],dict(handle='slitsey',value='1091'))
+        self.assertNotIn('upgrades',listed[0])
+        # Only the reduced form names a value (Lead, 2026-11-08).
+        from direct_note_rules import upgrades_ok
+        self.assertEqual([upgrades_ok(dict(handle='slitsey',value=v)) for v in ('295','295/1','590/2','1/3')],[True,False,False,True])
+        for bad in (dict(handle='slitsey',value='295'),dict(handle='slitsey',value='1091/1'),dict(handle='slitsey'),dict(handle='a b',value='1091'),dict(handle='slitsey',value='1091',x='y')):
+            with self.assertRaises(r.Rejected):
+                r.other_claims({'direct-issue-70':dict(route='issue',item=self.issue(70),submission=cat,verification=proof)},{},{'direct-issue-70':dict(up,upgrades=bad)})
         # Snaky (opened after verifier #106's runs) is an Other bounds row: Maker moves.
         snaky=dict(sub,problem='snaky',bound='20')
         listed=r.other_claims({'direct-issue-80':dict(route='issue',item=self.issue(80),submission=snaky,verification=proof)},{},{})['other-snaky']['claims']

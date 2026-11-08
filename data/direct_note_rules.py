@@ -1,5 +1,6 @@
 """Rules for the reviewed credit notes in data/direct-notes.json (shared by validate.py and the tests)."""
 import re
+from fractions import Fraction
 from author_links import is_profile_url
 
 PREDECESSOR=re.compile(r'https://github\.com/[\w.-]+/[\w.-]+/(issues|pull)/\d+')
@@ -23,3 +24,13 @@ def credit_ok(credit):
             and isinstance(credit['names'],list) and 0<len(credit['names'])<=30 and len(set(credit['names']))==len(credit['names'])
             and all(plain(x,120) for x in credit['names'])
             and accounts_ok(credit.get('accounts',{}),credit['names']))
+
+
+def upgrades_ok(upgrades):
+    """The hand claim of an Other bounds row (src/lib/other-bounds.json) that a Lean Verified direct result upgrades in
+    place, by its handle and exact value in reduced form ('295', not '295/1'): {'handle': ..., 'value': ...}. The merge (src/lib/other-merge.ts) stops the
+    build when the row has no such claim or more than one."""
+    return (isinstance(upgrades,dict) and set(upgrades)=={'handle','value'}
+            and isinstance(upgrades['handle'],str) and re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]{0,80}',upgrades['handle']) is not None
+            and isinstance(upgrades['value'],str) and re.fullmatch(r'-?(?:0|[1-9][0-9]*)(?:/[1-9][0-9]*)?',upgrades['value']) is not None
+            and str(Fraction(upgrades['value']))==upgrades['value'])

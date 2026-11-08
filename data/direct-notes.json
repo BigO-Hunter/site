@@ -205,6 +205,24 @@
           "MultiAgency swarm": "https://github.com/darkhipo"
         }
       }
+    },
+    "direct-issue-187": {
+      "text": "S. Litsey's Lean proof of \\(\\mu(G)\\le 295\\) (slitsey/catalan-irrationality-measure@65cfcc2), ported by MultiAgency swarm to Lean v4.34.1, the verifier's version; Litsey's own build needs v4.35.0-rc2. The proof is S. Litsey's, produced by AI systems at the author's request (README), on OpenAI's determinant construction with the quadrature nodes and Lean files of Cinna Davis.",
+      "credit": {
+        "author": "S. Litsey; MultiAgency swarm (port)",
+        "names": [
+          "S. Litsey",
+          "MultiAgency swarm"
+        ],
+        "accounts": {
+          "S. Litsey": "https://github.com/slitsey",
+          "MultiAgency swarm": "https://github.com/darkhipo"
+        }
+      },
+      "upgrades": {
+        "handle": "slitsey",
+        "value": "295"
+      }
     }
   },
   "withdrawn": {

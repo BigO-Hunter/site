@@ -53,9 +53,35 @@ const validDirect = (claim: Claim & {note?: unknown; proofScope?: unknown; leanN
 
 // `person` names an author the way the Big O boards do (GitHub display name, avatar, X handle); the claims by
 // hand and the prove2.me claims keep the names they have.
+//
+// A reviewed upgrade (data/direct-notes.json `upgrades`, Lead, 2026-11-08, verifier #187: a port of S. Litsey's own
+// 295 proof to the verifier's toolchain) names a hand claim of the row by handle and exact value. The direct result
+// then makes that claim Lean Verified in place and adds no row: the claim keeps its handle, value, date and source, so
+// the leader and the feed key stay; it takes the result's authors, Lean notes and receipt, its note when it has one,
+// and its level links the submission (evidenceUrl). A row without exactly one such claim stops the build.
+type Upgrade = {handle: string; value: string};
+const validUpgrade = (u: unknown): u is Upgrade => !!u && typeof u === 'object' && Object.keys(u).sort().join() === 'handle,value' &&
+  typeof (u as Upgrade).handle === 'string' && typeof (u as Upgrade).value === 'string';
 export function mergeDirect<D extends {families: Family[]}>(data: D, state: {boards?: Record<string, {claims?: Claim[]}>} | null | undefined,
   person: (author: {name: string; url: string}) => object = a => a): D {
-  return mergeImported(data, state, validDirect, claim => ({...claim, authors: (claim as any).authors.map(person)}));
+  const prepare = (claim: Claim) => ({...claim, authors: (claim as any).authors.map(person)});
+  const upgrade = (claim: Claim) => (claim as {upgrades?: unknown}).upgrades;
+  const families = data.families.map(family => {
+    const upgrades = (state?.boards?.['other-' + family.slug]?.claims ?? []).filter(c => validDirect(c) && upgrade(c) !== undefined);
+    if (!upgrades.length) return family;
+    let claims = family.claims;
+    for (const result of upgrades) {
+      const u = upgrade(result);
+      const targets = validUpgrade(u) ? claims.filter(c => c.handle === u.handle && c.value === u.value) : [];
+      if (targets.length !== 1) throw new Error(`Direct result ${result.handle} upgrades no single claim of other-${family.slug}`);
+      const {handle: _h, value: _v, display: _d, date: _t, dateSource: _s, dateKind: _k, url, bound: _b, upgrades: _u, note, ...fields} = prepare(result) as any;
+      claims = claims.map(c => c === targets[0] ? {...c, ...fields, ...(note ? {note} : {}), evidenceUrl: url} : c);
+    }
+    return {...family, claims};
+  });
+  const rest = state?.boards ? {...state, boards: Object.fromEntries(Object.entries(state.boards).map(([slug, board]) =>
+    [slug, {...board, claims: (board.claims ?? []).filter(c => !(validDirect(c) && upgrade(c) !== undefined))}]))} : state;
+  return mergeImported({...data, families}, rest, validDirect, prepare);
 }
 
 export function mergeProve2me<D extends {families: Family[]}>(data: D, state: {boards?: Record<string, {claims?: Claim[]}>} | null | undefined): D {
