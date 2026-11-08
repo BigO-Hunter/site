@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-08T07:13:33Z",
+    "updated_at": "2026-11-08T09:06:12Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -133322,6 +133322,27 @@
     },
     "head": {
       "sha": "4e6c90acff9127824831d111580e27a152bc5554"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6873,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6873",
+    "title": "Retain guardian descendants in the authenticated parent through source-owned retirement",
+    "state": "open",
+    "created_at": "2026-11-08T09:01:22Z",
+    "updated_at": "2026-11-08T09:01:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "ae7add49484492b49b0141445fbfd6002858da54"
     },
     "base": {
       "ref": "main"
