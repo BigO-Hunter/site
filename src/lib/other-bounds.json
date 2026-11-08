@@ -2404,14 +2404,14 @@
       "statement": "The quantity is the number of selected edges \\(Nj\\) in the final algebraic-grid proof step. Fewer edges are better. The claim assumes the upstream generic-grid and private-valuation lemmas. The line cases are separate, and no better headline unit-distance exponent is claimed.",
       "baseline": {
         "value": "20\\cdot5=100",
-        "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-weak-pinned-planar-distance-theorem-September-23-2026/paper.pdf",
+        "url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-power-saving-for-planar-unit-distances-September-23-2026/paper.pdf",
         "date": "2026-10-06T14:58:00-07:00",
         "exactValue": "20\\cdot5=100",
         "bound": "Nj\\le 100"
       },
       "xBar": {
         "value": "100",
-        "source": "Exact: the baseline value 20\\cdot5=100 (Nj\\le 100) of the OpenAI row."
+        "source": "Exact: Nj=20\\cdot5=100. OpenAI preprint TeX source build/sections/07-algebra.tex line 314 (\"Take N=20 and j=5\"): https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-power-saving-for-planar-unit-distances-September-23-2026/build/sections/07-algebra.tex"
       },
       "claims": [
         {
