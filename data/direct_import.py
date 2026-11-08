@@ -138,9 +138,9 @@ def parse_body(body):
     match = re.fullmatch(pattern, body.replace('\r\n', '\n'))
     require(match is not None, 'Invalid four-field issue form')
     problem, repo, commit, bound = match.groups()
-    submission = normalize(dict(schema_version=1, problem=problem, repo_url=repo, commit=commit, bound=bound, authors=[]))
-    require(submission['bound'] == bound, 'Bound must already be reduced')
-    return submission
+    # An unreduced bound ('295/1', verifier #187) is accepted and stored reduced, as the verifier's validate_submission
+    # does (bound_text = str(Fraction)), with the same digit limit (Lead, 2026-11-08): a form the verifier checks imports.
+    return normalize(dict(schema_version=1, problem=problem, repo_url=repo, commit=commit, bound=bound, authors=[]))
 
 def checked_receipt(archive, metadata, env, run, revision):
     require(isinstance(archive, bytes) and len(archive) <= MAX_EVIDENCE_BYTES, 'Missing or oversized receipt archive')

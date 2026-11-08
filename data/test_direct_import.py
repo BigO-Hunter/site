@@ -198,7 +198,7 @@ class DirectImportTests(unittest.TestCase):
                          '7b1673206843ef06f0f9ee90e9348b2cc9d90ca01ed935af11f967671123af78')
         for bound in ['0','19','21','100']:
             with self.subTest(bound=bound):self.assertEqual(gate.normalize(dict(sub,bound=bound))['bound'],bound)
-        # A fraction is refused, and so is a bound above the range. (An unreduced 40/2 is refused by parse_body.)
+        # A fraction is refused, and so is a bound above the range. (An unreduced 40/2 is the whole number 20.)
         for bound in ['19/2','101']:
             with self.subTest(bound=bound),self.assertRaises(gate.Rejected):gate.normalize(dict(sub,bound=bound))
         with self.assertRaises(gate.Rejected):gate.challenge_bytes(dict(problem='snaky',bound='39/2'),raw)
@@ -595,9 +595,17 @@ class DirectImportTests(unittest.TestCase):
         with self.assertRaises(gate.Rejected):self.check(raw_receipt_tamper=True)
 
     def test_strict_form_and_reduced_bounds(self):
-        for body in [self.issue['body']+'### Authors\n\nName',self.issue['body'].replace('47171/62500000','94342/125000000'),
+        for body in [self.issue['body']+'### Authors\n\nName',
                      json.dumps(self.env['submission']),self.issue['body'].replace('### Bound','### Unknown')]:
             with self.subTest(body=body),self.assertRaises(gate.Rejected):gate.parse_body(body)
+        # An unreduced bound is stored reduced, as the verifier stores it (Lead, 2026-11-08, verifier #187: '295/1').
+        self.assertEqual(gate.parse_body(self.issue['body'].replace('47171/62500000','94342/125000000')),self.env['submission'])
+        catalan='### Problem\n\ncatalan\n\n### Repository URL\n\nhttps://github.com/u/p\n\n### Commit SHA\n\n'+'a'*40+'\n\n### Bound\n\n{}\n'
+        for raw,stored in [('295/1','295'),('590/2','295'),('295','295'),('1056463/2000','1056463/2000')]:
+            with self.subTest(raw=raw):self.assertEqual(gate.parse_body(catalan.format(raw))['bound'],stored)
+        # The digit limit applies to the bound as written, as in the verifier: 41 digits are refused even when it reduces.
+        for raw in ['295/'+'1'+'0'*40,'1'*41+'/1','295/0','295/01','-295']:
+            with self.subTest(raw=raw),self.assertRaises(gate.Rejected):gate.parse_body(catalan.format(raw))
         self.assertEqual(gate.parse_body(self.issue['body'].replace('\n','\r\n')),self.env['submission'])
         # Blank lines after the last field are allowed, as in the verifier (issue #94: an edited form ended with '\n\n').
         body=self.issue['body'].rstrip('\n')

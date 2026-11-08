@@ -52,11 +52,14 @@ class RefreshTests(unittest.TestCase):
 
     def test_claims_skip_tests_and_invalid_bounds(self):
         issue=self.issue();test=self.issue(1);labeled=self.issue(6);labeled['labels']=[{'name':'test'}]
-        invalid=self.issue(7);invalid['body']=invalid['body'].replace('1/1000','2/2000')
+        invalid=self.issue(7);invalid['body']=invalid['body'].replace('1/1000','0.001')
         flagged=self.issue(8,test_only=True)
-        importer=self.collector(DiscoveryAPI([issue,test,labeled,invalid,flagged]))
+        # An unreduced bound is a valid form, stored reduced (Lead, 2026-11-08, verifier #187: '295/1').
+        unreduced=self.issue(9);unreduced['body']=unreduced['body'].replace('1/1000','2/2000')
+        importer=self.collector(DiscoveryAPI([issue,test,labeled,invalid,flagged,unreduced]))
         claims=importer.collect()
-        self.assertEqual(set(claims),{'direct-issue-5'})
+        self.assertEqual(set(claims),{'direct-issue-5','direct-issue-9'})
+        self.assertEqual(claims['direct-issue-9']['submission']['bound'],'1/1000')
         row,meta,_=r.row_for('direct-issue-5',claims['direct-issue-5'],'2026-10-11T00:00:00Z')
         self.assertEqual(row['tier'],'claimed');self.assertEqual(row['authors'],[dict(name='alice',url='https://github.com/alice')])
         self.assertEqual(meta['publication_date_role'],'Submission opened')
