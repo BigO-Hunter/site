@@ -1758,6 +1758,10 @@
         "exactValue": "2^{-310}",
         "bound": "\\mathbb{E}[R]\\ge 2^{-310}\\mathbb{E}[\\mathrm{OPT}]"
       },
+      "xBar": {
+        "value": "1/2085924839766513752338888384931203236916703635113918720651407820138886450957656787131798913024",
+        "source": "Exact 2^{-310}. OpenAI preprint TeX source build/sections/introduction.tex line 38: https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/One-Sample-Suffices-for-Matroid-Prophet-Inequalities-against-an-Almighty-Adversary-September-23-2026/build/sections/introduction.tex"
+      },
       "claims": [
         {
           "author": "Ryan Shea",
@@ -2150,6 +2154,10 @@
         "exactValue": "\\log B/\\log A,\\quad A=22\\cdot9^{100},\\quad B=9^{20}(2\\cdot9^{20}+1)^{9}",
         "bound": "\\mathrm{bs}(f)\\ge s(f)^{2.000252}"
       },
+      "xBar": {
+        "value": "1000126203569971/500000000000000",
+        "source": "log B/log A rounded down to 15 decimals (2.000252407139942...). OpenAI preprint TeX source build/sections/03-separation.tex lines 235 and 250 (A=22M^{10}, B=M^2k^9, alpha=log B/log A) and build/sections/01-construction.tex line 11 (k=2M^2+1), with M=9^{10}: https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/03-separation.tex"
+      },
       "claims": [
         {
           "author": "robinkothari",
@@ -2401,6 +2409,10 @@
         "exactValue": "20\\cdot5=100",
         "bound": "Nj\\le 100"
       },
+      "xBar": {
+        "value": "100",
+        "source": "Exact: the baseline value 20\\cdot5=100 (Nj\\le 100) of the OpenAI row."
+      },
       "claims": [
         {
           "author": "Rohan Arun",
@@ -2649,6 +2661,10 @@
         "exactValue": "2/(45435(T^2+1)+16),\\quad T=\\binom{\\binom{163}{41}}{3}",
         "bound": "\\eta>3.17\\cdot10^{-236}"
       },
+      "xBar": {
+        "value": "2/62977962658328119330138666876776837106119309987963865046886690167106413508235850732755338335917883554182270166222875901063992208612027211160892977098315909205708359598521945861859131733014882429680799601708624098121229080356687570445451",
+        "source": "Exact. OpenAI preprint TeX source build/sections/08-alteration.tex lines 101-105 (eta=2/(45435k+16)) and build/sections/03-norm-digits.tex lines 14-15 (d=41, M=binom(4d-1,d), T=binom(M,3), k=T^2+1): https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-power-improvement-in-the-Heilbronn-triangle-lower-bound-September-25-2026/build/sections/08-alteration.tex"
+      },
       "claims": [
         {
           "author": "Ivan Blinov",
@@ -2865,6 +2881,10 @@
         "date": "2026-10-06T14:58:00-07:00",
         "exactValue": "\\log(20)/784",
         "bound": "\\gamma_L>\\log(20)/784"
+      },
+      "xBar": {
+        "value": "1910543541807/500000000000000",
+        "source": "log(20)/784 rounded down to 15 decimals (0.003821087083614...). OpenAI preprint TeX source build/introduction.tex line 43: https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-periodic-spin-one-Haldane-gap-September-24-2026/build/introduction.tex"
       },
       "claims": [
         {
@@ -3268,6 +3288,10 @@
         "url": "https://arxiv.org/abs/1802.10521",
         "date": "2020",
         "exactValue": "0.407511457"
+      },
+      "xBar": {
+        "value": "672500703679411/1000000000000000",
+        "source": "H=3/2-(1/sqrt2)cot(1/sqrt2) rounded down to 15 decimals (0.672500703679411...), the value of the Anthropic row (arXiv:2608.13637)."
       },
       "claims": [
         {

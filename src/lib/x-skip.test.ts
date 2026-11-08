@@ -76,16 +76,16 @@ test('the real feed names the breakthrough bar of each board from its own data',
 });
 test('an Other bounds row: the bar is its Agent breakthrough by OpenAI or Anthropic (Lead, 2026-11-07)',()=>{
  // Prime gaps has a Classic baseline (Polymath, 246); its Agent breakthrough is OpenAI's 186, its first claim by agents.
- assert.deepEqual(otherBreakthroughBar('other-prime-gaps'),{score:'186',direction:'lower'});
+ assert.deepEqual(otherBreakthroughBar('other-prime-gaps'),{score:'186',direction:'lower',same:'186'});
  assert.match(worseThanBreakthrough(lean('other-prime-gaps','direct-issue-200','246'),snapshot)!,/worse than the breakthrough bound 186/);
  for(const score of ['186','182'])assert.equal(worseThanBreakthrough(lean('other-prime-gaps','direct-issue-200',score),snapshot),undefined);
  // A row with an OpenAI baseline: the baseline is its Agent breakthrough (Snaky: 21 Maker moves; van der Waerden: higher is better).
- assert.deepEqual(otherBreakthroughBar('other-snaky'),{score:'21',direction:'lower'});
+ assert.deepEqual(otherBreakthroughBar('other-snaky'),{score:'21',direction:'lower',same:'21'});
  assert.ok(worseThanBreakthrough(lean('other-snaky','direct-issue-201','22'),snapshot));
  for(const score of ['21','20'])assert.equal(worseThanBreakthrough(lean('other-snaky','direct-issue-201',score),snapshot),undefined);
  assert.ok(worseThanBreakthrough(lean('other-van-der-waerden','openai','1/200000'),snapshot));
  assert.equal(worseThanBreakthrough(lean('other-van-der-waerden','openai','1/100000'),snapshot),undefined);
- // A Claimed post is not held back; a bar that is not an exact rational (Catalan: +infinity) or a row whose
+ // A Claimed post is not held back; a breakthrough at +infinity (Catalan: every finite bound beats it) or a row whose
  // breakthrough has another author (binary polynomial multiplication: Árpád Csizmadia) gives no bar; no snapshot, no bar.
  assert.equal(worseThanBreakthrough({key:JSON.stringify(['other-prime-gaps','x','246','attained'])+':record',x_text:'Status: Claimed (not verified)'},snapshot),undefined);
  assert.equal(otherBreakthroughBar('other-catalan'),undefined);
@@ -96,5 +96,39 @@ test('an Other bounds row: the bar is its Agent breakthrough by OpenAI or Anthro
  const fam=[{slug:'row',direction:'higher',baseline:{label:'Classic baseline',value:'1/3',exactValue:'1/3',bound:'',url:'',date:'2020'},
   claims:[{handle:'a',display:'1/2',value:'1/2',date:'2026-10-01T00:00:00Z',agent:true,authors:[{name:'Anthropic (Claude)'}]},
           {handle:'b',display:'2/3',value:'2/3',date:'2026-10-02T00:00:00Z',agent:true,authors:[{name:'OpenAI'}]}]}];
- assert.deepEqual(otherBreakthroughBar('other-row',fam),{score:'1/2',direction:'higher'});
+ assert.deepEqual(otherBreakthroughBar('other-row',fam),{score:'1/2',direction:'higher',same:'1/2'});
+});
+test('fail closed (Lead, 2026-11-08): the Heilbronn Lean Verified 7.21e-237 of verifier #184 is worse than the reviewed xBar',()=>{
+ const id='direct-issue-184:x';
+ const s184='1/138611120630192845449848501984762489503949180120972521287304259199089718296986575839672803644586516021090063092820239685405507227054093124597541492458051962596474875313132928055153805949190893429472432269634916029759500562026384000100000';
+ assert.match(otherBreakthroughBar('other-heilbronn-triangle')!.score,/^2\/62977962658328119330138666876776837106/);
+ assert.match(worseThanBreakthrough(lean('other-heilbronn-triangle',id,s184),snapshot)!,/worse than the breakthrough bound about 3\.175714e-236/);
+ // A value above the bar posts (1e-235 > 3.18e-236).
+ assert.equal(worseThanBreakthrough(lean('other-heilbronn-triangle',id,'1/'+10n**235n),snapshot),undefined);
+});
+test('a decimal score and an A d^p score compare with the bar; a score that cannot be compared is held back on an Other row',()=>{
+ // Block sensitivity: OpenAI's log B/log A, about 2.000252; prove2.me scores are decimals.
+ assert.equal(worseThanBreakthrough(lean('other-block-sensitivity','prove2me-2-007','2.007'),snapshot),undefined);
+ assert.ok(worseThanBreakthrough(lean('other-block-sensitivity','prove2me-2-0002','2.0002'),snapshot));
+ // Contingency tables: by the exponent first, then the constant (98,560 d^126).
+ assert.equal(worseThanBreakthrough(lean('other-contingency-tables','a','80{,}000d^{17}'),snapshot),undefined);
+ assert.ok(worseThanBreakthrough(lean('other-contingency-tables','a','99{,}000d^{126}'),snapshot));
+ assert.match(worseThanBreakthrough(lean('other-haldane-gap','a','\\approx0.2'),snapshot)!,/cannot be compared with the breakthrough bound/);
+ // The Lean Verified row of the breakthrough itself (its own value text) is the same bound and posts.
+ assert.equal(worseThanBreakthrough(lean('other-critical-line-zeros','anthropic','\\tfrac32-\\tfrac{1}{\\sqrt2}\\cot\\tfrac{1}{\\sqrt2}'),snapshot),undefined);
+ // Catalan: OpenAI's bound is +infinity, so every finite bound posts.
+ assert.equal(worseThanBreakthrough(lean('other-catalan','a','9999'),snapshot),undefined);
+});
+test('a breakthrough by OpenAI or Anthropic without a comparable bar holds back every Lean Verified post',()=>{
+ const fam=(extra:object)=>[{slug:'row',direction:'higher',baseline:{value:'\\approx1',exactValue:'\\sqrt2/3',bound:'',url:'',date:'2026'},claims:[],...extra}];
+ assert.equal(otherBreakthroughBar('other-row',fam({})),null);
+ assert.equal(otherBreakthroughBar('other-row',fam({xBar:{value:'not a rational',source:''}})),null);
+ assert.deepEqual(otherBreakthroughBar('other-row',fam({xBar:{value:'47/100',source:''}})),{score:'47/100',direction:'higher',same:'\\sqrt2/3'});
+});
+test('every Other bounds row with a breakthrough by OpenAI or Anthropic has a comparable bar (add an xBar), Catalan aside',()=>{
+ const families=(JSON.parse(readFileSync('src/lib/other-bounds.json','utf8')) as {families:{slug:string}[]}).families;
+ const none=families.filter(f=>otherBreakthroughBar('other-'+f.slug)===null).map(f=>f.slug);
+ assert.deepEqual(none,[]);
+ for(const slug of ['heilbronn-triangle','matroid-prophet','block-sensitivity','haldane-gap','critical-line-zeros','unit-distance-grid','contingency-tables'])
+  assert.ok(otherBreakthroughBar('other-'+slug),slug);
 });

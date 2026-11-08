@@ -53,7 +53,7 @@ function exactFraction({claim, number}: {claim: Claim; number: number | null}): 
 }
 export const compareExact = (a: [bigint, bigint], b: [bigint, bigint]) => { const d = a[0] * b[1] - b[0] * a[1]; return d < 0n ? -1 : d > 0n ? 1 : 0; };
 
-const compareDegree = (a: {a: [bigint, bigint]; p: bigint}, b: {a: [bigint, bigint]; p: bigint}) =>
+export const compareDegree = (a: {a: [bigint, bigint]; p: bigint}, b: {a: [bigint, bigint]; p: bigint}) =>
   a.p !== b.p ? (a.p < b.p ? -1 : 1) : compareExact(a.a, b.a);
 
 export function rankOtherClaims<C extends Claim>(claims: C[], direction: string, rankBy?: string[]): {claim: C; rank: number; tie: boolean}[] {
