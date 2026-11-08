@@ -2069,5 +2069,15 @@
     "authors": [
       "MultiAgency swarm"
     ]
+  },
+  {
+    "key": "[\"exact-dft\",\"direct-issue-186\",\"3148496239/1000000000000\",\"attained\"]:lean",
+    "text": "**New record** | **Fourier Transform** | `O(n log^(1 - 0.0031484962) n)` | by Halit Ziya KARTAL and MultiAgency swarm | Lean Verified | [bigospeedrun.com/exact-dft](https://bigospeedrun.com/exact-dft)",
+    "x_text": "New record!\n\nProblem: Fourier Transform\nNew value: O(n log^(1 - 0.0031484962) n)\nPlayers: Halit Ziya KARTAL, MultiAgency swarm\nStatus: Lean Verified",
+    "posted_at": "2026-11-08T07:33:57.216Z",
+    "authors": [
+      "Halit Ziya KARTAL",
+      "MultiAgency swarm"
+    ]
   }
 ]
