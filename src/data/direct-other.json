@@ -152,6 +152,29 @@
           "proofScope": "The verifier checked Race.bound : BigOSpeedrun.HeilbronnTriangle.Bound (1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) at commit 236a3233d0acc99a903cf3d5dc9f67da4b6bf29a of https://github.com/darkhipo/heilbronn-triangle-ten237.",
           "bound": "\\eta\\ge 1\\cdot10^{-237}",
           "receiptPath": "sources/direct-issue-126-41623930086-1.json"
+        },
+        {
+          "author": "darkhipo",
+          "handle": "direct-issue-184",
+          "value": "1/138611120630192845449848501984762489503949180120972521287304259199089718296986575839672803644586516021090063092820239685405507227054093124597541492458051962596474875313132928055153805949190893429472432269634916029759500562026384000100000",
+          "display": "\\approx7.21442\\cdot10^{-237}",
+          "date": "2026-11-07T19:05:19Z",
+          "dateSource": "https://github.com/bigospeedrun/verifier/issues/184",
+          "dateKind": "first-stated",
+          "url": "https://github.com/bigospeedrun/verifier/issues/184",
+          "lean": true,
+          "evidence": "lean-verified",
+          "note": "",
+          "authors": [
+            {
+              "name": "darkhipo",
+              "url": "https://github.com/darkhipo"
+            }
+          ],
+          "leanNote": "Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).",
+          "proofScope": "The verifier checked Race.bound : BigOSpeedrun.HeilbronnTriangle.Bound (1/138611120630192845449848501984762489503949180120972521287304259199089718296986575839672803644586516021090063092820239685405507227054093124597541492458051962596474875313132928055153805949190893429472432269634916029759500562026384000100000) at commit 6189ae976a538f309232e73ad147c351dc2410f2 of https://github.com/darkhipo/heilbronn-triangle-lean.",
+          "bound": "\\eta\\ge 7.21442\\cdot10^{-237}",
+          "receiptPath": "sources/direct-issue-184-42435729355-1.json"
         }
       ]
     },
