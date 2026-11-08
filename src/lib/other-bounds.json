@@ -1676,6 +1676,28 @@
           ],
           "proofScope": "Written proof (version 3 of the note, Section 7, Theorem 50) that rests on the Lean hypotheses of Litsey's repository at commit 65cfcc2. The new inequalities are certified by Python scripts in exponent281/ (exact rational and interval arithmetic for the first and the large case, double precision with explicit error budgets for the column weight and the row-determinant caps). Nothing in the section is formalized in Lean. We did not run the scripts or check the proof.",
           "bound": "\\mu(G)\\le 280.59"
+        },
+        {
+          "author": "S. Litsey",
+          "handle": "slitsey",
+          "value": "270",
+          "display": "270",
+          "date": "2026-11-08T10:03:24Z",
+          "dateSource": "https://github.com/slitsey/catalan-irrationality-measure/actions/runs/42469773200",
+          "dateKind": "first-stated",
+          "url": "https://github.com/slitsey/catalan-irrationality-measure/blob/79135dadab405b3ddd512efbf06f3294b944b826/README.md",
+          "lean": true,
+          "leanNote": "Lean states and proves the bound for all sufficiently large denominators and all integer numerators. The README reports that it is kernel-checked with only the standard axioms, and says that this bound has not been run through lake comparator. The proof needs Lean v4.35.0-rc2, and our verifier uses v4.34.1, so it cannot check it yet. The author’s CI for commit 79135dad failed before any build: its Lean setup could not download the toolchain and a documentation job got an HTTP 504 error. So no CI build, independent-kernel or comparator result is reported. No site rerun.",
+          "evidence": "claimed",
+          "note": "The repository says S. Litsey proves in Lean that the irrationality exponent of Catalan's constant is at most \\(270\\), with no extra assumption: only the axioms propext, Quot.sound and Classical.choice. The README says this bound has not been run through lake comparator. The method is OpenAI's determinant construction with the design \\((58, 9, 3, 5, 3)\\) and new quadrature nodes; the last condition reads \\(270 > d\\rho/(\\eta - 4d\\delta) = 269.786\\ldots\\) with \\(d = 53\\). It also uses two Lean files of Cinna Davis. The README says that AI systems produced the mathematics, the Lean proofs and the text at the author's request: Claude Opus 5.5, Sonnet 5.5 and Haiku 5.5 (Anthropic) and GPT-6.1 Sol (OpenAI). The repository gave \\(295\\) before.",
+          "authors": [
+            {
+              "name": "S. Litsey",
+              "url": "https://github.com/slitsey"
+            }
+          ],
+          "proofScope": "The supplied Lean code proves the rational-approximation bound with exponent 270 (theorem catalan_irrationalityMeasure_270 in Challenge.lean, proved in Solution.lean) for all sufficiently large natural denominators and all integer numerators. The README reports that it is kernel-checked with only the standard axioms and that it has not been run through lake comparator; no CI build, independent-kernel or comparator result is reported. No site rerun.",
+          "bound": "\\mu(G)\\le 270"
         }
       ],
       "repos": [
@@ -1690,7 +1712,7 @@
           "note": "Lean proof of \\(\\mu(G)\\le 528.23288\\), the current leader; our verifier checked it at commit 3c451531."
         }
       ],
-      "bestHandle": "MarcosCarreira"
+      "bestHandle": "slitsey"
     },
     {
       "family": "029",
@@ -2423,7 +2445,7 @@
           "lean": false,
           "leanNote": "Only the algebraic steps, by a third party (verifier pull request 27).",
           "evidence": "claimed",
-          "note": "The claim is conditional on the generic-grid and private-valuation lemmas of OpenAI's preprint, and on its Kummer statement, which the source takes as given and does not verify. The author supplies no Lean proof of the composition, and the README says that independent review is not claimed.",
+          "note": "The claim is conditional on the generic-grid and private-valuation lemmas of OpenAI's preprint, and on its Kummer statement, which the source relies on and does not verify. The author supplies no Lean proof of the composition, and the README says that independent review is not claimed.",
           "authors": [
             {
               "name": "Rohan Arun",
