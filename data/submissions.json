@@ -129995,6 +129995,82 @@
       "claim_files_head": "ae7add49484492b49b0141445fbfd6002858da54",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6874,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Certify uncovered-pivot roots and 90 enlarged-mask costs (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6874",
+      "submitted_at": "2026-11-08T13:19:11Z",
+      "updated_at": "2026-11-08T13:19:11Z",
+      "source_commit": "980b3d10e259fc99db1fa661fe431ae1a2a33dc4",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-08T13:19:11Z",
+      "checked_at": "2026-11-08",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "980b3d10e259fc99db1fa661fe431ae1a2a33dc4",
+      "claim_text": "5ad47a7b424c2e1ecedbac7d34af83899c5d75164c763bb99febe2b3213f30e3",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-uncovered-pivot-root/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "980b3d10e259fc99db1fa661fe431ae1a2a33dc4",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6875,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Exclude multi-channel P104 hubs under the frozen serial schedule (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6875",
+      "submitted_at": "2026-11-08T13:19:20Z",
+      "updated_at": "2026-11-08T13:19:20Z",
+      "source_commit": "52a0dd45b0f96a369dbc82665f55f6bf3e448a6d",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-08T13:19:20Z",
+      "checked_at": "2026-11-08",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "52a0dd45b0f96a369dbc82665f55f6bf3e448a6d",
+      "claim_text": "b03b2ba004602334faf859608a9fb40404c50c274d239878ff22864feab9dcf5",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-two-channel-hub/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "52a0dd45b0f96a369dbc82665f55f6bf3e448a6d",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6876,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Close costly-first G20 compensation with exact native-route floors (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6876",
+      "submitted_at": "2026-11-08T13:19:29Z",
+      "updated_at": "2026-11-08T13:19:29Z",
+      "source_commit": "c9dc7ca0af05829823b53a1ca2a8b36e7e3ec5a6",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-08T13:19:29Z",
+      "checked_at": "2026-11-08",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "c9dc7ca0af05829823b53a1ca2a8b36e7e3ec5a6",
+      "claim_text": "38adc373f3022f25d42f3c4ace73c926f55681792b66e95ff5cd16249a2d9507",
+      "claim_files": [],
+      "claim_files_head": "c9dc7ca0af05829823b53a1ca2a8b36e7e3ec5a6",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

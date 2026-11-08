@@ -1,0 +1,11 @@
+{
+  "number": 6874,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6874",
+  "title": "Certify uncovered-pivot roots and 90 enlarged-mask costs (no new κ)",
+  "body": "## Change and mathematical scope\nNo new κ. Construct the even-L root and correct one excess physical idle incidence in #6868's proxy. All 90 specified L18/pivot8 enlargements lose at κ=.00337180, with no reentry through .01 under the fixed-word, unchanged-native, whole-idle contract. Frames must be data-independent or nondegenerate at D=1,S=-1.\n\n## Task and sources\nBase 7c49fe32c55de02c2c873655c804b16e4c3fef0a. #6868: 5a4f80eda5c5c504531019ad44b5ed48c1cee480; #6833: 51f54e3c31f2f3a3e056a483b3ed66ae916ad06a. Distinct from #6858.\n\n## Validation\n`python3 -B scripts/research_package.py --package research/p104-uncovered-pivot-root`\nExpected: PASS_REGISTERED_RESEARCH_PACKAGE. Eight registered checks, independent geometry/pricing, normal/-O and read-only exports passed. Controls reject missing thin/pivot terms, corrupt inputs and infeasible prices. Complete remote tree matches tested files.\n\n## Limitations and credit\nAll five assumptions remain. Optimistic covers need not be attainable; other masks, dense duals and changed words remain open. No native/compiler admission. Full-history preflight unrun on shallow checkout. @CubeJerry with substantial OpenAI assistance and separate review; credit DreamingOfClouds, Ali Romman and retained lineage.\n\n[Proofs, exact byte pins, receipts and remaining questions](https://github.com/CubeJerry/integer-mult-bounds/tree/980b3d10e259fc99db1fa661fe431ae1a2a33dc4/research/p104-uncovered-pivot-root).",
+  "created_at": "2026-11-08T13:19:11Z",
+  "updated_at": "2026-11-08T13:19:11Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

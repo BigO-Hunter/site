@@ -1,0 +1,11 @@
+{
+  "number": 6876,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6876",
+  "title": "Close costly-first G20 compensation with exact native-route floors (no new κ)",
+  "body": "## Change and mathematical scope\nNo new κ. Close #6324's costly-first gap: 5,114,417 ordered forward-A2 paths with fixed correction frames give 5,114,412 losses and five attained ties for all 0<t<1. Exact non-edge route floors resolve 30 misleading collapsed invoices. With #6324, all 5,164,282 paths in this directed two-step domain are covered. The five new ties also have 11,363 third neighbours without saving.\n\n## Task and sources\nBase 7c49fe32c55de02c2c873655c804b16e4c3fef0a. #5708: 829d01fc031f7323ffcfa423fdfd1f24dcbe3190; #6324: 8bf188237e74ea14b48c7c2cbb1b4c7e82650da5. Distinct from #6664.\n\n## Validation\n`python3 -B scripts/research_package.py --package research/g20-costly-first-compensation`\nExpected: PASS_REGISTERED_RESEARCH_PACKAGE. Seven registered checks, exact shard aggregation, independent domain enumeration and 35-path chronological review passed. Optimized read-only export passed. Controls cover 32,941 words including seed12, four code mutants and corrupt inputs. Remote tree matches tested files.\n\n## Limitations and credit\nFixed 645-frame catalogue; separately charged routes. Exact census, no sampling/early stop. No general depth-three, inverse-insertion or arbitrary-depth exclusion. All five assumptions remain; no supplier/caller admission. Full-history preflight unrun. @CubeJerry with substantial OpenAI assistance and separate review; credit Ali Romman, unpaidmoon, Nick Petalas and #6324.\n\n[Proofs, exact byte pins, receipts and remaining questions](https://github.com/CubeJerry/integer-mult-bounds/tree/c9dc7ca0af05829823b53a1ca2a8b36e7e3ec5a6/research/g20-costly-first-compensation).",
+  "created_at": "2026-11-08T13:19:29Z",
+  "updated_at": "2026-11-08T13:19:29Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

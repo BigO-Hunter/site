@@ -478,7 +478,7 @@
         ],
         "receipt_path": "sources/direct-issue-99-41500988477-1.json",
         "receipt_sha256": "35c8c4fff1b39d9d2f2eae0f579a15a2ace71d1751cc19453bd1c44aacfa774d",
-        "policy_hash": "9a4e833014ee97c3ed036c201ebaa1a7224b959d58b174bc939ad12d4b208aed",
+        "policy_hash": "e1cf3ad6393985a28972d472cf05446cc66f5915509a312e72d971a980e57367",
         "result_artifact_id": 13187050786,
         "controller_fingerprint": "b15d8552e503d033e07cc644f06ae945728d386d8f949fcd1bac788971849768",
         "pr_identity": null,
@@ -4016,7 +4016,7 @@
         ],
         "receipt_path": "sources/direct-issue-99-41500988477-1.json",
         "receipt_sha256": "35c8c4fff1b39d9d2f2eae0f579a15a2ace71d1751cc19453bd1c44aacfa774d",
-        "policy_hash": "9a4e833014ee97c3ed036c201ebaa1a7224b959d58b174bc939ad12d4b208aed",
+        "policy_hash": "e1cf3ad6393985a28972d472cf05446cc66f5915509a312e72d971a980e57367",
         "result_artifact_id": 13187050786,
         "controller_fingerprint": "b15d8552e503d033e07cc644f06ae945728d386d8f949fcd1bac788971849768",
         "pr_identity": null,
@@ -4771,7 +4771,7 @@
     },
     "182": {
       "version": "d32785367f562f0eeb5ddbbe218fe7e4790e3aeee03dc9a3ee8cdc6bbbd58a3a",
-      "updated_at": "2026-11-08T13:09:24Z",
+      "updated_at": "2026-11-08T13:24:21Z",
       "not_verified": true
     },
     "183": {
