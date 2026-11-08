@@ -6870,7 +6870,7 @@
         "slug": "other-haldane-gap",
         "name": "Spin-one Haldane gap",
         "url": "https://bigospeedrun.com/other/haldane-gap",
-        "leader": "darkhipo:771/5000",
+        "leader": "amachino:0.1515",
         "table": "other-bounds",
         "direction": "higher",
         "records": [
@@ -6884,17 +6884,6 @@
             ],
             "bound": "γ_L > 0.1515",
             "display": "0.1515"
-          },
-          {
-            "id": "darkhipo:771/5000",
-            "score": "771/5000",
-            "relation": "attained",
-            "evidence": "Claimed",
-            "authors": [
-              "MultiAgency swarm"
-            ],
-            "bound": "γ_L > 0.1542",
-            "display": "0.1542"
           }
         ]
       },

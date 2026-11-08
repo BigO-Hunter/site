@@ -130169,6 +130169,28 @@
       "claim_files_head": "e212af981b49c299de515f8c23dfb0e5b73e2e95",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6881,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "P104 surplus bound, hub rank law and form-capacity lemma with a hypothesis ledger (no kappa)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6881",
+      "submitted_at": "2026-11-08T17:48:27Z",
+      "updated_at": "2026-11-08T17:48:27Z",
+      "source_commit": "4e9c4e0abe72b2e5c9e8685e2dc4a4f731206df0",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-08T17:48:27Z",
+      "checked_at": "2026-11-08",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "4e9c4e0abe72b2e5c9e8685e2dc4a4f731206df0",
+      "claim_text": "0538a6fa473e2e0b03e6efddee02a939a7441122f32a9d10a9340d3984d88513",
+      "claim_files": [],
+      "claim_files_head": "4e9c4e0abe72b2e5c9e8685e2dc4a4f731206df0",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }
