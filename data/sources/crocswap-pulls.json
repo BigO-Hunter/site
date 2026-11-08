@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-08T11:23:30Z",
+    "updated_at": "2026-11-08T19:52:11Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -133511,6 +133511,27 @@
     },
     "head": {
       "sha": "4e9c4e0abe72b2e5c9e8685e2dc4a4f731206df0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6882,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6882",
+    "title": "Archive native acquisition templates and family completion corrections",
+    "state": "open",
+    "created_at": "2026-11-08T19:43:30Z",
+    "updated_at": "2026-11-08T19:57:51Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "f20dc7e4d2135c3feff666a4e262815fce587f73"
     },
     "base": {
       "ref": "main"
