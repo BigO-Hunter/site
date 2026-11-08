@@ -133537,5 +133537,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6883,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6883",
+    "title": "Conditional κ = 0.00339993 (+2.813e-5, +0.834% over #6833): host a pair at every root call with a mirrored native, declared owned ascent",
+    "state": "open",
+    "created_at": "2026-11-08T20:27:24Z",
+    "updated_at": "2026-11-08T20:27:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "0966edb535d25c0b9165c9c0397eb3fb8151581d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

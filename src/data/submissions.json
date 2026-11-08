@@ -130213,6 +130213,29 @@
       "claim_files_head": "f20dc7e4d2135c3feff666a4e262815fce587f73",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6883,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = 0.00339993 (+2.813e-5, +0.834% over #6833): host a pair at every root call with a mirrored native, declared owned ascent",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6883",
+      "submitted_at": "2026-11-08T20:27:24Z",
+      "updated_at": "2026-11-08T20:27:24Z",
+      "source_commit": "0966edb535d25c0b9165c9c0397eb3fb8151581d",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-08T20:27:24Z",
+      "checked_at": "2026-11-08",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "0966edb535d25c0b9165c9c0397eb3fb8151581d",
+      "claim_text": "75e1a9e6719722182e11ae356c872a6602bbf930238911c33262c104b1dca792",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [],
+      "claim_files_head": "0966edb535d25c0b9165c9c0397eb3fb8151581d",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

@@ -1,3 +1,11 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pr": 6883,
+      "head": "0966edb535d25c0b9165c9c0397eb3fb8151581d",
+      "title": "Conditional κ = 0.00339993 (+2.813e-5, +0.834% over #6833): host a pair at every root call with a mirrored native, declared owned ascent",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6883",
+      "reason": "The PR adds no single own research package CLAIM.json."
+    }
+  ]
 }
