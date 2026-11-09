@@ -131140,12 +131140,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-09T05:59:48Z",
       "checked_at": "2026-11-09",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "178953/50000000",
+      "record_ids": [
+        "crocswap-pr-6918"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "9517ed7e4583d010c15f57f37e0f6e867f1a2ce5",
       "claim_text": "ceab7d5551349f912ff3a19c4f1b69dd4c35db0e9b2ddab755877e4b5c255dc3",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "9517ed7e4583d010c15f57f37e0f6e867f1a2ce5",
+      "claim_decided": true,
       "claim_files": [
         [
           "added",

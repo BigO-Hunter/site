@@ -1,13 +1,6 @@
 {
   "queue": [
     {
-      "pr": 6918,
-      "head": "9517ed7e4583d010c15f57f37e0f6e867f1a2ce5",
-      "title": "Conditional κ = 0.00357906 (+0.246% over #6916): flipped-word helper splits",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6918",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    },
-    {
       "pr": 6919,
       "head": "ec92a321ea909334614e0c9c0ff22716d20daa4b",
       "title": "Conditional κ = 0.00359528269 (+0.453% over #6918): helper splits on top of flips and sinks",
