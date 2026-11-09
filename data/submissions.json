@@ -129073,18 +129073,18 @@
       "title": "Chain-nested root caller on the BIT native word: ordinary BIT saving 0.00385248 (dependency bound, no overall κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6834",
       "submitted_at": "2026-11-07T06:20:47Z",
-      "updated_at": "2026-11-07T06:20:47Z",
-      "source_commit": "fda84512891fc2c173eaa2b964347afa3e5acb36",
+      "updated_at": "2026-11-09T06:27:20Z",
+      "source_commit": "79603d1f7d243f1d034613df84991673a94ad5ae",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-07T06:20:47Z",
       "checked_at": "2026-11-09",
       "claimed_score": null,
       "record_ids": [],
       "note": "No research package kappa claim.",
-      "claim_head": "fda84512891fc2c173eaa2b964347afa3e5acb36",
+      "claim_head": "79603d1f7d243f1d034613df84991673a94ad5ae",
       "claim_text": "54eb7439ceccc6b91b375fcd55cbd0cda9ca8b119215784fe6c460406f1e270d",
       "claim_files": [],
-      "claim_files_head": "fda84512891fc2c173eaa2b964347afa3e5acb36",
+      "claim_files_head": "79603d1f7d243f1d034613df84991673a94ad5ae",
       "claim_files_base": "main",
       "claim_files_result": true
     },
@@ -131083,12 +131083,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-09T03:39:45Z",
       "checked_at": "2026-11-09",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "357027/100000000",
+      "record_ids": [
+        "crocswap-pr-6916"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "ed359c115fa713395da380dcc602761196f5df4a",
       "claim_text": "73169e1bcaecc16d5a77bf4181bb88846034d50247985689fdf31c23bfe15d48",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "ed359c115fa713395da380dcc602761196f5df4a",
+      "claim_decided": true,
       "claim_files": [
         [
           "added",
@@ -131111,12 +131114,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-09T04:14:45Z",
       "checked_at": "2026-11-09",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "441263/125000000",
+      "record_ids": [
+        "crocswap-pr-6917"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "07e81202470957555569d0c1077b2d6915e897fe",
       "claim_text": "8d5e200e1b2f86b3efd16f4e95350d2509d0d1fc4bfbad44c0dd8847d22c7388",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "07e81202470957555569d0c1077b2d6915e897fe",
+      "claim_decided": true,
       "claim_files": [],
       "claim_files_head": "07e81202470957555569d0c1077b2d6915e897fe",
       "claim_files_base": "main",
@@ -131157,14 +131163,48 @@
       "title": "Conditional κ = 0.00359528269 (+0.453% over #6918): helper splits on top of flips and sinks",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6919",
       "submitted_at": "2026-11-09T06:16:22Z",
-      "updated_at": "2026-11-09T06:16:22Z",
+      "updated_at": "2026-11-09T06:27:23Z",
       "source_commit": "ec92a321ea909334614e0c9c0ff22716d20daa4b",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-09T06:16:22Z",
       "checked_at": "2026-11-09",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "ec92a321ea909334614e0c9c0ff22716d20daa4b",
+      "claim_text": "ea0c0daa8b04e800e8290b447f22eb3121e21665be3db3cbd197dea3173984c7",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [],
+      "claim_files_head": "ec92a321ea909334614e0c9c0ff22716d20daa4b",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6920,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional BIT saving = 0.00380058610508 on merged #5708 native: chain-root caller",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6920",
+      "submitted_at": "2026-11-09T06:26:57Z",
+      "updated_at": "2026-11-09T06:43:10Z",
+      "source_commit": "5410f6f68cf21e8e423e152f0b8ef6fdb283a581",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T06:26:57Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "5410f6f68cf21e8e423e152f0b8ef6fdb283a581",
+      "claim_text": "805e85984773fc9efb6f4bcb43b735ef5c4c819e277de31f5cb05afe0084a7ce",
+      "claim_files": [
+        [
+          "added",
+          "research/bit-chain-root-g20/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "5410f6f68cf21e8e423e152f0b8ef6fdb283a581",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

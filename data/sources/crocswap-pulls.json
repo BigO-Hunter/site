@@ -132515,7 +132515,7 @@
     "title": "Chain-nested root caller on the BIT native word: ordinary BIT saving 0.00385248 (dependency bound, no overall κ)",
     "state": "open",
     "created_at": "2026-11-07T06:20:47Z",
-    "updated_at": "2026-11-07T06:20:47Z",
+    "updated_at": "2026-11-09T06:27:20Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -132523,7 +132523,7 @@
       "html_url": "https://github.com/DreamingOfClouds"
     },
     "head": {
-      "sha": "fda84512891fc2c173eaa2b964347afa3e5acb36"
+      "sha": "79603d1f7d243f1d034613df84991673a94ad5ae"
     },
     "base": {
       "ref": "main"
@@ -134300,7 +134300,7 @@
     "title": "Conditional κ = 0.00359528269 (+0.453% over #6918): helper splits on top of flips and sinks",
     "state": "open",
     "created_at": "2026-11-09T06:16:22Z",
-    "updated_at": "2026-11-09T06:16:22Z",
+    "updated_at": "2026-11-09T06:27:23Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134313,6 +134313,27 @@
     "base": {
       "ref": "main"
     },
-    "draft": true
+    "draft": false
+  },
+  {
+    "number": 6920,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6920",
+    "title": "Conditional BIT saving = 0.00380058610508 on merged #5708 native: chain-root caller",
+    "state": "open",
+    "created_at": "2026-11-09T06:26:57Z",
+    "updated_at": "2026-11-09T06:43:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "5410f6f68cf21e8e423e152f0b8ef6fdb283a581"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

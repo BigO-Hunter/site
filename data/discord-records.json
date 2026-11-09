@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6911",
+        "leader": "crocswap-pr-6916",
         "direction": "higher",
         "records": [
           {
@@ -4509,6 +4509,26 @@
               "DreamingOfClouds"
             ],
             "bound": "O(n log^(1 - 0.003519487) n)"
+          },
+          {
+            "id": "crocswap-pr-6916",
+            "score": "357027/100000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "CubeJerry"
+            ],
+            "bound": "O(n log^(1 - 0.00357027) n)"
+          },
+          {
+            "id": "crocswap-pr-6917",
+            "score": "441263/125000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.003530104) n)"
           }
         ],
         "table": "big-o"
@@ -4648,9 +4668,9 @@
             "relation": "attained",
             "evidence": "Lean Verified",
             "authors": [
-              "Halit Ziya KARTAL",
-              "MultiAgency swarm"
+              "Halit Ziya KARTAL"
             ],
+            "refiledBy": "Refiled by MultiAgency swarm",
             "bound": "O(n log^(1 - 0.0031484962) n)"
           },
           {
@@ -7670,7 +7690,8 @@
     "[\"integer-multiplication\",\"crocswap-pr-6884\",\"341603/100000000\",\"attained\"]:record",
     "[\"other-catalan\",\"slitsey:270\",\"270\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6889\",\"34569417/10000000000\",\"attained\"]:record",
-    "[\"integer-multiplication\",\"crocswap-pr-6911\",\"3519487/1000000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6911\",\"3519487/1000000000\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-6916\",\"357027/100000000\",\"attained\"]:record"
   ],
   "deferred": [
     {

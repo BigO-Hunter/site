@@ -545,10 +545,6 @@
         {
           "name": "Halit Ziya KARTAL",
           "url": "https://github.com/HalitZiyaKARTAL"
-        },
-        {
-          "name": "MultiAgency swarm",
-          "url": "https://github.com/darkhipo"
         }
       ],
       "predecessors": [
@@ -1337,6 +1333,7 @@
       "direct_submission": true,
       "route": "issue",
       "credit_note": "A refile of Halit Ziya KARTAL's Lean Verified 0.0031415926 proof (direct-pr-156) with only its stated saving changed, to just below the rate 67/21280 that its engine already proves. The proof is Halit Ziya KARTAL's, with the credits of that row: Ali Romman's binary query tree, Cinna Davis' thin query and Jacob Sussman's construction. MultiAgency swarm extracted the constant.",
+      "refiled_by": "Refiled by MultiAgency swarm",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42444892798",
       "verification": "passed"
     },
@@ -1561,5 +1558,5 @@
       "verification": "passed"
     }
   },
-  "updated_at": "2026-11-09T00:26:07Z"
+  "updated_at": "2026-11-09T07:30:11Z"
 }
