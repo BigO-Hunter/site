@@ -131595,6 +131595,28 @@
       "claim_files_head": "a98df73ddae1d1ea85a62b6bdf2714b28cb7b359",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6938,
+      "author": "theon199",
+      "author_url": "https://github.com/theon199",
+      "title": "Expose stale catalogue selection context without changing frozen pickers (no κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6938",
+      "submitted_at": "2026-11-09T22:48:01Z",
+      "updated_at": "2026-11-09T22:48:01Z",
+      "source_commit": "48f11b95175fcd39bfba0a7ae3fd2f744a7259d1",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T22:48:01Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "48f11b95175fcd39bfba0a7ae3fd2f744a7259d1",
+      "claim_text": "2ab0b0648149dd62f794f2e2bd17ff5f0375285a6780159e2b80a32636db138a",
+      "claim_files": [],
+      "claim_files_head": "48f11b95175fcd39bfba0a7ae3fd2f744a7259d1",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

@@ -134692,5 +134692,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6938,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6938",
+    "title": "Expose stale catalogue selection context without changing frozen pickers (no κ)",
+    "state": "open",
+    "created_at": "2026-11-09T22:48:01Z",
+    "updated_at": "2026-11-09T22:48:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "theon199",
+      "html_url": "https://github.com/theon199"
+    },
+    "head": {
+      "sha": "48f11b95175fcd39bfba0a7ae3fd2f744a7259d1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

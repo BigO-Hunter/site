@@ -7054,7 +7054,7 @@
         "slug": "other-explicit-circuit-lower-bound",
         "name": "Explicit circuit lower bound",
         "url": "https://bigospeedrun.com/other/explicit-circuit-lower-bound",
-        "leader": "mishra-santhanam:7/2",
+        "leader": "mishra-santhanam:4",
         "table": "other-bounds",
         "direction": "higher",
         "records": [
@@ -7095,6 +7095,18 @@
             ],
             "bound": "3.5n-o(n)",
             "display": "3.5n-o(n)"
+          },
+          {
+            "id": "mishra-santhanam:4",
+            "score": "4",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Om Swostik Mishra",
+              "Rahul Santhanam"
+            ],
+            "bound": "4n-O(log n)",
+            "display": "4n-O(\\log n)"
           }
         ]
       },
@@ -7724,7 +7736,8 @@
     "[\"integer-multiplication\",\"crocswap-pr-6916\",\"357027/100000000\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6919\",\"359528269/100000000000\",\"attained\"]:record",
     "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:lean",
-    "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:record"
+    "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:record",
+    "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:4\",\"4\",\"attained\"]:record"
   ],
   "deferred": [
     {

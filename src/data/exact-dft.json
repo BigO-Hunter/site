@@ -629,11 +629,13 @@
       "title": "AnanasClassic direct dft submission",
       "authors": [
         {
-          "name": "AnanasClassic",
+          "name": "Vladislav Kuznetsov",
           "url": "https://github.com/AnanasClassic"
         }
       ],
-      "predecessors": [],
+      "predecessors": [
+        "https://github.com/bigospeedrun/verifier/pull/91"
+      ],
       "submission_url": "https://github.com/bigospeedrun/verifier/issues/190",
       "source_commit": "38d22084f270723dbe769b94bd690c372a08e390",
       "artifact": {
@@ -1414,6 +1416,7 @@
       "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/190",
       "direct_submission": true,
       "route": "issue",
+      "credit_note": "Vladislav Kuznetsov's Lean proof of the saving 0.003363623 for the exact Fourier transform builds on Halit Ziya KARTAL's preceding Lean instantiations. It changes the supplier (22,836 events) and the controller (a paired controller on 40 main roles). The README credits OpenAI (computational model, Fourier reduction), Jacob Sussman (engines, reduction), DreamingOfClouds (two-chain controller), Ali Romman, CubeJerry and Cinna Davis.",
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42648121034",
       "verification": "passed"
     },
@@ -1618,5 +1621,5 @@
       "verification": "passed"
     }
   },
-  "updated_at": "2026-11-09T21:27:18Z"
+  "updated_at": "2026-11-09T23:26:48Z"
 }
