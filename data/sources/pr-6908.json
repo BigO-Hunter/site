@@ -1,0 +1,11 @@
+{
+  "number": 6908,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6908",
+  "title": "Execute a source-bound physical union narrow inverse window (no new κ)",
+  "body": "## Change and mathematical scope\nExecute the actual first narrow-window map `v_J -> F^(-1)(v_J-C0 v_I)` and preserve E-minus-J records and headers. Physical batches cross prefixes, call the inherited seven-product solver for coupling and Schur pages from the same rational Reference, then transpose back and restore all owners. The complete 4x4 union fixture visits 32 records and executes 784 scalar products, with later lines reading earlier updates. No new κ.\n\n## Sources and verification\nBase `7c49fe32c55de02c2c873655c804b16e4c3fef0a`; exact source and retained-code pins in SOURCES.json and DEPENDENCIES.json, including `f821cba68f44048e70e78afb75603ed4dde99f11`. Run `python3 -B scripts/research_package.py --package research/physical-union-inverse-window`; expected `PASS_REGISTERED_RESEARCH_PACKAGE` and `PASS_PHYSICAL_UNION_INVERSE_WINDOW`. Two registered normal/optimized checks passed in the research session, with independent original-Q inverse/page oracles and real-preparer verification. Negative controls cover wrong source, off-block coupling, noncommuting order, partial-batch failure, ownership and headers.\n\n## Limits and credit\nThis is a literal step-5 transaction, not the global union router or broad forward and outer multiplier. Production carve/setup ceilings, dense incoming error and all five assumptions remain open. @CubeJerry with substantial OpenAI Codex assistance and separate source-aware AI review. Credit #4327, #4583, #5059, #4205 and retained predecessors. Apache-2.0.",
+  "created_at": "2026-11-09T02:02:04Z",
+  "updated_at": "2026-11-09T02:02:04Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

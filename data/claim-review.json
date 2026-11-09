@@ -1,24 +1,10 @@
 {
   "queue": [
     {
-      "pr": 6886,
-      "head": "187aa656e9cc9f5f7b6f202c137a9aba8d3c1144",
-      "title": "Conditional κ = 0.003429289 (+0.388% over #6884): remove 24 Y pads from the mirror",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6886",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    },
-    {
-      "pr": 6887,
-      "head": "a3d665bf170a0a3ebc5ea60354ae9e19a199388d",
-      "title": "Conditional κ = 0.003452786 (+0.685% over #6886): choose X and Y merges jointly with shared helpers",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6887",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    },
-    {
-      "pr": 6889,
-      "head": "50f860cc64dbc18a5d64927a4e544418c41421c6",
-      "title": "Conditional κ = 0.0034569417 (+0.120% over #6887): mirror reads X directly on two more ports",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6889",
+      "pr": 6902,
+      "head": "e4d42607f24d7a049b0fca329dc4c34882405c25",
+      "title": "Conditional κ = 0.00351406 (+1.652% over #6889): one native word serves two root chains",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6902",
       "reason": "The PR adds no single own research package CLAIM.json."
     }
   ]

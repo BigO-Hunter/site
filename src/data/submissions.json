@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-09T00:51:27Z",
+      "updated_at": "2026-11-09T02:17:05Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -130300,12 +130300,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-08T22:39:53Z",
       "checked_at": "2026-11-09",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "3429289/1000000000",
+      "record_ids": [
+        "crocswap-pr-6886"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "187aa656e9cc9f5f7b6f202c137a9aba8d3c1144",
       "claim_text": "0072eb51a75aab7cdf15983b5b04cbcdb709ac5f7a20f81e2452ab090747147f",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "187aa656e9cc9f5f7b6f202c137a9aba8d3c1144",
+      "claim_decided": true,
       "claim_files": [],
       "claim_files_head": "187aa656e9cc9f5f7b6f202c137a9aba8d3c1144",
       "claim_files_base": "main",
@@ -130323,12 +130326,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-08T23:42:49Z",
       "checked_at": "2026-11-09",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "1726393/500000000",
+      "record_ids": [
+        "crocswap-pr-6887"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "a3d665bf170a0a3ebc5ea60354ae9e19a199388d",
       "claim_text": "c155d8e335fe3f0b897629524e3639094570d58a0d96b92d7a39a5d1c9757ace",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "a3d665bf170a0a3ebc5ea60354ae9e19a199388d",
+      "claim_decided": true,
       "claim_files": [],
       "claim_files_head": "a3d665bf170a0a3ebc5ea60354ae9e19a199388d",
       "claim_files_base": "main",
@@ -130368,12 +130374,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-09T00:08:05Z",
       "checked_at": "2026-11-09",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "34569417/10000000000",
+      "record_ids": [
+        "crocswap-pr-6889"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "50f860cc64dbc18a5d64927a4e544418c41421c6",
       "claim_text": "917810fdc202c9eaef18e6e6d93adc057afa715cad6babce3af34b784982cc2c",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "50f860cc64dbc18a5d64927a4e544418c41421c6",
+      "claim_decided": true,
       "claim_files": [],
       "claim_files_head": "50f860cc64dbc18a5d64927a4e544418c41421c6",
       "claim_files_base": "main",
@@ -130700,14 +130709,240 @@
       "title": "Conditional κ = 0.00351406 (+1.652% over #6889): one native word serves two root chains",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6902",
       "submitted_at": "2026-11-09T01:04:42Z",
-      "updated_at": "2026-11-09T01:08:34Z",
+      "updated_at": "2026-11-09T01:17:46Z",
       "source_commit": "e4d42607f24d7a049b0fca329dc4c34882405c25",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-09T01:04:42Z",
       "checked_at": "2026-11-09",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "e4d42607f24d7a049b0fca329dc4c34882405c25",
+      "claim_text": "8425b638469e49e4ce48adb8c0e2397e56422c38160e6a3cbe8687ff77fa64ed",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [],
+      "claim_files_head": "e4d42607f24d7a049b0fca329dc4c34882405c25",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6903,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Align delayed-cover fibres with chronological numerical fields (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6903",
+      "submitted_at": "2026-11-09T02:00:28Z",
+      "updated_at": "2026-11-09T02:00:28Z",
+      "source_commit": "938f94109d5f7f568201ef7e9f174f45adca6b2a",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T02:00:28Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "938f94109d5f7f568201ef7e9f174f45adca6b2a",
+      "claim_text": "dbbf5b3fd723e03a1853e26d48c98c60908fd4129b00fa8d01d8d82e43521f2e",
+      "claim_files": [
+        [
+          "added",
+          "research/delayed-cover-chronological-fields/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "938f94109d5f7f568201ef7e9f174f45adca6b2a",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6904,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Join physical sparse halo transport with source-bound Gaussian recovery (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6904",
+      "submitted_at": "2026-11-09T02:00:47Z",
+      "updated_at": "2026-11-09T02:00:47Z",
+      "source_commit": "a99c4dce9f6bf1972b13f0f239e082ac70a9e5e8",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T02:00:47Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "a99c4dce9f6bf1972b13f0f239e082ac70a9e5e8",
+      "claim_text": "d5559d10747a8856c58ec518d5b7b5fcc2069bc138498620d4833a78267d9ac1",
+      "claim_files": [
+        [
+          "added",
+          "research/first-face-reference-join/RESULT.json"
+        ],
+        [
+          "added",
+          "research/shrinking-reference-halo/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "a99c4dce9f6bf1972b13f0f239e082ac70a9e5e8",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6905,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Execute the complete physical fine-gap periodic Gaussian inverse (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6905",
+      "submitted_at": "2026-11-09T02:01:09Z",
+      "updated_at": "2026-11-09T02:01:09Z",
+      "source_commit": "60b10605a31f9c6b492232520fd19213e8a20770",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T02:01:09Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "60b10605a31f9c6b492232520fd19213e8a20770",
+      "claim_text": "9367d060c2b4fd6b412a5a53469152da3c384f1c257a7d54e09430687a5b077e",
+      "claim_files": [
+        [
+          "added",
+          "research/folded-cyclic-tape/RESULT.json"
+        ],
+        [
+          "added",
+          "research/physical-periodic-fine-gap/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "60b10605a31f9c6b492232520fd19213e8a20770",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6906,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Execute certified cached chirp payloads on fixed tapes (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6906",
+      "submitted_at": "2026-11-09T02:01:23Z",
+      "updated_at": "2026-11-09T02:01:23Z",
+      "source_commit": "3c0443b2aa721ce692199ff31abc18e8d917596a",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T02:01:23Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "3c0443b2aa721ce692199ff31abc18e8d917596a",
+      "claim_text": "a9e5ca0bb65f4155a3c89ec4fa21a761b6d13baeb3733bf722d6a85b80a41c01",
+      "claim_files": [
+        [
+          "added",
+          "research/physical-cached-chirp-payload/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "3c0443b2aa721ce692199ff31abc18e8d917596a",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6907,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Implement seven-product matrices in the physical boundary caller (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6907",
+      "submitted_at": "2026-11-09T02:01:39Z",
+      "updated_at": "2026-11-09T02:01:39Z",
+      "source_commit": "f821cba68f44048e70e78afb75603ed4dde99f11",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T02:01:39Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "f821cba68f44048e70e78afb75603ed4dde99f11",
+      "claim_text": "908ede70011cd3ad18e0bf50f84fbebc374fde274f463bccb5db8303fc0d7745",
+      "claim_files": [
+        [
+          "added",
+          "research/physical-seven-product-matrix/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "f821cba68f44048e70e78afb75603ed4dde99f11",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6908,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Execute a source-bound physical union narrow inverse window (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6908",
+      "submitted_at": "2026-11-09T02:02:04Z",
+      "updated_at": "2026-11-09T02:02:04Z",
+      "source_commit": "9c6078ff36ae2110e6cc30ff69a9addbf5a47bf2",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T02:02:04Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "9c6078ff36ae2110e6cc30ff69a9addbf5a47bf2",
+      "claim_text": "dc112e7c2018a8f5d98be590ac10d3a3bfd0d07caa7b6240e4792035cb65b1f5",
+      "claim_files": [
+        [
+          "added",
+          "research/physical-union-inverse-window/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "9c6078ff36ae2110e6cc30ff69a9addbf5a47bf2",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6909,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Execute source-bound banded forward matrix actions on fixed tapes (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6909",
+      "submitted_at": "2026-11-09T02:02:24Z",
+      "updated_at": "2026-11-09T02:02:24Z",
+      "source_commit": "ad6a7bf2213130719e9bf2022d01a30c79638f17",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T02:02:24Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "ad6a7bf2213130719e9bf2022d01a30c79638f17",
+      "claim_text": "fa291271649af7da2f0f85889d86e437cdd99fa1091aa778541a3bae964aec03",
+      "claim_files": [
+        [
+          "added",
+          "research/physical-banded-forward-action/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "ad6a7bf2213130719e9bf2022d01a30c79638f17",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6910,
+      "author": "Clear1nsight",
+      "author_url": "https://github.com/Clear1nsight",
+      "title": "Audit receiver import order before reusing missing-gate controls",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6910",
+      "submitted_at": "2026-11-09T02:06:44Z",
+      "updated_at": "2026-11-09T02:06:44Z",
+      "source_commit": "3ff875875cb608907c175a7e319370b7b2f7c005",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T02:06:44Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "3ff875875cb608907c175a7e319370b7b2f7c005",
+      "claim_text": "7645dfe9801bb0a8100961f69e81fdeddb123e9d064920b139747ad84f63eec8",
+      "claim_files": [],
+      "claim_files_head": "3ff875875cb608907c175a7e319370b7b2f7c005",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

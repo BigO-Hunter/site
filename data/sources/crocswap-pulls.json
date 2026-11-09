@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-09T00:51:27Z",
+    "updated_at": "2026-11-09T02:17:05Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -133943,7 +133943,7 @@
     "title": "Conditional κ = 0.00351406 (+1.652% over #6889): one native word serves two root chains",
     "state": "open",
     "created_at": "2026-11-09T01:04:42Z",
-    "updated_at": "2026-11-09T01:08:34Z",
+    "updated_at": "2026-11-09T01:17:46Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -133956,6 +133956,174 @@
     "base": {
       "ref": "main"
     },
-    "draft": true
+    "draft": false
+  },
+  {
+    "number": 6903,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6903",
+    "title": "Align delayed-cover fibres with chronological numerical fields (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T02:00:28Z",
+    "updated_at": "2026-11-09T02:00:28Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "938f94109d5f7f568201ef7e9f174f45adca6b2a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6904,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6904",
+    "title": "Join physical sparse halo transport with source-bound Gaussian recovery (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T02:00:47Z",
+    "updated_at": "2026-11-09T02:00:47Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "a99c4dce9f6bf1972b13f0f239e082ac70a9e5e8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6905,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6905",
+    "title": "Execute the complete physical fine-gap periodic Gaussian inverse (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T02:01:09Z",
+    "updated_at": "2026-11-09T02:01:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "60b10605a31f9c6b492232520fd19213e8a20770"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6906,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6906",
+    "title": "Execute certified cached chirp payloads on fixed tapes (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T02:01:23Z",
+    "updated_at": "2026-11-09T02:01:23Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "3c0443b2aa721ce692199ff31abc18e8d917596a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6907,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6907",
+    "title": "Implement seven-product matrices in the physical boundary caller (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T02:01:39Z",
+    "updated_at": "2026-11-09T02:01:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "f821cba68f44048e70e78afb75603ed4dde99f11"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6908,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6908",
+    "title": "Execute a source-bound physical union narrow inverse window (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T02:02:04Z",
+    "updated_at": "2026-11-09T02:02:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "9c6078ff36ae2110e6cc30ff69a9addbf5a47bf2"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6909,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6909",
+    "title": "Execute source-bound banded forward matrix actions on fixed tapes (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T02:02:24Z",
+    "updated_at": "2026-11-09T02:02:24Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "ad6a7bf2213130719e9bf2022d01a30c79638f17"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6910,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6910",
+    "title": "Audit receiver import order before reusing missing-gate controls",
+    "state": "open",
+    "created_at": "2026-11-09T02:06:44Z",
+    "updated_at": "2026-11-09T02:06:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "Clear1nsight",
+      "html_url": "https://github.com/Clear1nsight"
+    },
+    "head": {
+      "sha": "3ff875875cb608907c175a7e319370b7b2f7c005"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

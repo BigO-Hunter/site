@@ -1,0 +1,11 @@
+{
+  "number": 6907,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6907",
+  "title": "Implement seven-product matrices in the physical boundary caller (no new κ)",
+  "body": "## Change and mathematical scope\nSupply a fixed-tape exact seven-product matrix kernel and integrate it into #5059's rounded two-pass boundary caller without changing its page semantics. The asymptotic kernel uses `B^(log2 7)` scalar multiplications and charges quadrant routing, parked frames, wide words and retained storage. The B=4 fixture reduces scalar products from 768 to 588, but increases tape actions; no measured small-size speedup is claimed. No new κ.\n\n## Sources and verification\nBase `7c49fe32c55de02c2c873655c804b16e4c3fef0a`, canonical inputs and Git/SHA256 pins in SOURCES.json. Run `python3 -B scripts/research_package.py --package research/physical-seven-product-matrix`; expected `PASS_REGISTERED_RESEARCH_PACKAGE`. Six normal/optimized kernel, caller and independently implemented cubic-oracle checks passed. B=1,2,4,8, signed cancellation, padding, aliases and failure-after-child controls were exercised.\n\n## Limits and credit\nProduction many-line source, setup/grid conversions, full Gaussian/outer caller and all five framework assumptions remain open. @CubeJerry with substantial OpenAI Codex assistance and independent AI verification. Credit #4186, #5059 and inherited scalar-word authors. Apache-2.0.",
+  "created_at": "2026-11-09T02:01:39Z",
+  "updated_at": "2026-11-09T02:01:39Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

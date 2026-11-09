@@ -1,0 +1,11 @@
+{
+  "number": 6909,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6909",
+  "title": "Execute source-bound banded forward matrix actions on fixed tapes (no new κ)",
+  "body": "## Change and mathematical scope\nConstruct a physical fixed-tape forward action for a real band matrix F, including singular F, by embedding `N[2i,2j+1]=-F[i,j]` in a square-zero lift and using the unchanged rounded inverse-page service once. Actual page preparation, staged truncation, input restoration, zero padding and protected output are charged. The complete count is `2(2ceil(2n/b)-1)ceil(r/b)` matrix products, each with `7^log2(b)` scalar leaves. No new κ.\n\n## Sources and verification\nBase `7c49fe32c55de02c2c873655c804b16e4c3fef0a`; retained kernel pin `f821cba68f44048e70e78afb75603ed4dde99f11`, Reference adapter pin `a99c4dce9f6bf1972b13f0f239e082ac70a9e5e8`, full hashes in SOURCES.json. Run `python3 -B scripts/research_package.py --package research/physical-banded-forward-action`; expected `PASS_REGISTERED_RESEARCH_PACKAGE`. All four normal/optimized physical/independent controls passed in the research session. Independent full-Q matrix, singular three-row and short reuse fixtures checked 98/294/6 scalar leaves; controls reject wrong signs, early rounding, aliases, padding and unconsumed returns.\n\n## Limits and credit\nA supplied already-packed RHS is assumed; full broad union routing, setup, tensor/CRT recovery and all five framework assumptions remain open. @CubeJerry with substantial OpenAI Codex assistance and separate AI verification. Credit #5059, #4205, #481 and inherited authors. Apache-2.0.",
+  "created_at": "2026-11-09T02:02:24Z",
+  "updated_at": "2026-11-09T02:02:24Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

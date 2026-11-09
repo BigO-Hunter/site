@@ -1,0 +1,11 @@
+{
+  "number": 6906,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6906",
+  "title": "Execute certified cached chirp payloads on fixed tapes (no new κ)",
+  "body": "## Change and mathematical scope\nImplement a fixed-tape cached-chirp/conjugate-chirp pass with encoded multidimensional counters, source-certified phases, paid scalar-word products and complete cleanup. The cost is `O(T M(W)+TW+d²W)` under the inherited exact word service; 32 complex coefficients per direction and 264 real products pass the main fixture. The cached identity and strongest travel lemma are inherited from #4325/#5987. No new κ.\n\n## Sources and verification\nBase `7c49fe32c55de02c2c873655c804b16e4c3fef0a` and exact live file hashes in SOURCES.json. Run `python3 -B scripts/research_package.py --package research/physical-cached-chirp-payload`; expected `PASS_REGISTERED_RESEARCH_PACKAGE`. Four normal/optimized registered checks passed, with an independent half-angle source oracle, original-coordinate phase checks, signed/carry/ownership controls, and mutation rejection for early rounding and lost carry.\n\n## Limits and credit\nFull chirp convolution, literal elementary coefficient generation, payload-grid conversion and outer FFT/CRT recovery are not built; all five framework assumptions remain. @CubeJerry with substantial OpenAI Codex assistance and separately assigned AI mathematical/physical reviews. Credit #4100, #4325, #5987 and retained authors. Apache-2.0.",
+  "created_at": "2026-11-09T02:01:23Z",
+  "updated_at": "2026-11-09T02:01:23Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

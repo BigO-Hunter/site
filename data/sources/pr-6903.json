@@ -1,0 +1,11 @@
+{
+  "number": 6903,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6903",
+  "title": "Align delayed-cover fibres with chronological numerical fields (no new κ)",
+  "body": "## Change and mathematical scope\nConstruct a 13-tape, all-width raw-field-order adapter for the delayed-cover shape program and its numerical callback. A complete depth-two physical replay returns all 108 prefixes; a coefficient witness distinguishes the wrong order (1 versus 7 modulo 9). Unlike #5055's native directory ordering, this specifically joins #6719's body traversal with the retained evaluator. No new κ.\n\n## Sources and verification\nBase `7c49fe32c55de02c2c873655c804b16e4c3fef0a`. Exact predecessor source Git blobs and SHA256 pins are in `research/delayed-cover-chronological-fields/CUSTODY.json` (including #6719). Run `python3 -B scripts/research_package.py --package research/delayed-cover-chronological-fields`; expected `PASS_REGISTERED_RESEARCH_PACKAGE` and `PASS_DELAYED_COVER_CHRONOLOGICAL_FIELDS`. Normal/optimized and independent dense-interpreter checks passed, including 6,561 complete prefixes and wrong-order, carry, cleanup and source mutation controls.\n\n## Limits and credit\nA selected BIT numerical leaf, complete recursive caller, parameter stock, outer recovery, and all five assumptions remain open. @CubeJerry, with substantial OpenAI Codex assistance and separate AI adversarial verification. Credit #5829, #6719, #5055, #6879 and their predecessor authors. See package PROOF.md/NOTICE.md. Apache-2.0.",
+  "created_at": "2026-11-09T02:00:28Z",
+  "updated_at": "2026-11-09T02:00:28Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

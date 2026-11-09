@@ -1,0 +1,11 @@
+{
+  "number": 6904,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6904",
+  "title": "Join physical sparse halo transport with source-bound Gaussian recovery (no new κ)",
+  "body": "## Change and mathematical scope\nCompose three verified modules: a sparse first-face tape transaction, a shrinking-reference halo evaluator, and a source-bound stream/return codec. Original boundary inputs are copied before core mutation, converted and returned exactly once. Real `Reference(61,3,2,1,8,32)` tests holes and period wrap; 52 saved inputs yield 20 targets. This is the missing physical transport-to-consumer interface, not a new Gaussian lemma. No new κ.\n\n## Sources and verification\nCanonical base `7c49fe32c55de02c2c873655c804b16e4c3fef0a`; component commits `a2f3ce7358e8103f6eccd404e594276e9ccc04d8` and `630c9c2a5d6373ca103c55108bb606b4868bc6fd`, with Git/SHA256 pins in the joined SOURCES.json. Run `python3 -B research/first-face-reference-join/replay_all.py`, expected `PASS_COMPLETE_FIRST_FACE_HALO_PACKAGE`. Registered normal/optimized, independent whole-period and two-axis unequal-radius checks passed. Mutations reject absent wraps, bad keys, payload changes and missing copies.\n\n## Limits and credit\nThe fixture uses a core test double; a same-reference fast core, global source/stock, outer routing and all five framework assumptions remain unresolved. @CubeJerry with substantial OpenAI Codex assistance and independent AI review. Credit #4100, #4870, #4205, #4217, #4517, #5081, #6880 and their authors. Apache-2.0.",
+  "created_at": "2026-11-09T02:00:47Z",
+  "updated_at": "2026-11-09T02:00:47Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}
