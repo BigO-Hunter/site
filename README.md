@@ -1,3 +1,5 @@
+> **BigO-Hunter fork notice.** The org's copy of [bigospeedrun/site](https://github.com/bigospeedrun/site) — the Big O Speedrun leaderboard site. Kept as the working fork staging parse fixes and stale-row audits upstream (branches `fix/other-rank-dpower-parse`, `stale-rows-2026-11-08`). Upstream's README below is unchanged; upstream's MIT license applies. BigO-Hunter is a companion, never the project.
+
 # Big O Speedrun
 
 Live: https://bigospeedrun.com
