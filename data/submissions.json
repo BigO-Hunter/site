@@ -130692,6 +130692,22 @@
       "claim_files_head": "4c7a4f00f09665276e145ac2cc1d12f8b8f9a7ac",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6902,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = 0.00351406 (+1.652% over #6889): one native word serves two root chains",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6902",
+      "submitted_at": "2026-11-09T01:04:42Z",
+      "updated_at": "2026-11-09T01:08:34Z",
+      "source_commit": "e4d42607f24d7a049b0fca329dc4c34882405c25",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T01:04:42Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }

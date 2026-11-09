@@ -133936,5 +133936,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6902,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6902",
+    "title": "Conditional κ = 0.00351406 (+1.652% over #6889): one native word serves two root chains",
+    "state": "open",
+    "created_at": "2026-11-09T01:04:42Z",
+    "updated_at": "2026-11-09T01:08:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "e4d42607f24d7a049b0fca329dc4c34882405c25"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]
