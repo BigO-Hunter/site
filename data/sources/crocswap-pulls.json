@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-08T23:54:24Z",
+    "updated_at": "2026-11-09T00:51:27Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -133700,6 +133700,237 @@
     },
     "head": {
       "sha": "e56a5bcf239fa0cd4ee57459af04c0ba7acb2c03"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6891,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6891",
+    "title": "Connect Full Toeplitz programs to rounded native calls (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:18:19Z",
+    "updated_at": "2026-11-09T00:18:19Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "6d195c61a8087da47744b3662779d6535393ff13"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6892,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6892",
+    "title": "Execute compiler-generated global switches through the physical T74 caller (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:18:41Z",
+    "updated_at": "2026-11-09T00:18:41Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "271f1d4c3128a89d49694e7508c1c88bba8cc981"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6893,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6893",
+    "title": "Execute whole-domain BIT carries and low commit (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:18:57Z",
+    "updated_at": "2026-11-09T00:18:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "dde4e28f4245dff09ac74aeb0254226f9d528b5d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6894,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6894",
+    "title": "Execute actual Full tensor programs through physical H and exact diagonals (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:20:41Z",
+    "updated_at": "2026-11-09T00:20:41Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "d51859e7816771f627033b23db0f9786ada863f8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6895,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6895",
+    "title": "Verify source-level numerical recovery of normalized products (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:20:59Z",
+    "updated_at": "2026-11-09T00:20:59Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "85e0534b3a86dc0237f368ff0e5fb646fe4744ec"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6896,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6896",
+    "title": "Prove recursive native-bank capacity at every allocation prefix (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:24:15Z",
+    "updated_at": "2026-11-09T00:24:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "0ca312ed12585a1dc56bcb3d90354f8c6307dc28"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6897,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6897",
+    "title": "Prove recursive native word-width margins (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:24:38Z",
+    "updated_at": "2026-11-09T00:24:38Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "f04a672856f8f7cf9fc290bbd55ee4a7a77a126b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6898,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6898",
+    "title": "Integrate exact FFT scalars into the physical Full caller (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:25:26Z",
+    "updated_at": "2026-11-09T00:25:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "2882d4414e95a6884f7b588d9da7ca893f800cbf"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6899,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6899",
+    "title": "Connect actual Core interiors to the global physical caller (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:25:59Z",
+    "updated_at": "2026-11-09T00:25:59Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "61d86cbe25657af55b9463bd3f072b6cbf952638"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6900,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6900",
+    "title": "Prove deterministic precision cuts for the current selected caller (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:27:32Z",
+    "updated_at": "2026-11-09T00:27:32Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "c46339035fccd571effb48434d80f572e20f1092"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6901,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6901",
+    "title": "Prove a common precision format for the current ideal compiler (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:27:50Z",
+    "updated_at": "2026-11-09T00:27:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "4c7a4f00f09665276e145ac2cc1d12f8b8f9a7ac"
     },
     "base": {
       "ref": "main"

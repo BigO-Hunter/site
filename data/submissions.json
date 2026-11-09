@@ -117144,7 +117144,7 @@
       "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6321",
       "submitted_at": "2026-10-31T03:25:10Z",
-      "updated_at": "2026-11-08T23:54:24Z",
+      "updated_at": "2026-11-09T00:51:27Z",
       "source_commit": "ca9d90e93dc495e1e5e5ef6d271ff1e4f089cd0c",
       "upstream_status": "merged",
       "upstream_status_at": "2026-10-31T04:04:54Z",
@@ -130403,6 +130403,293 @@
         ]
       ],
       "claim_files_head": "e56a5bcf239fa0cd4ee57459af04c0ba7acb2c03",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6891,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Connect Full Toeplitz programs to rounded native calls (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6891",
+      "submitted_at": "2026-11-09T00:18:19Z",
+      "updated_at": "2026-11-09T00:18:19Z",
+      "source_commit": "6d195c61a8087da47744b3662779d6535393ff13",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:18:19Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "6d195c61a8087da47744b3662779d6535393ff13",
+      "claim_text": "b37c6dd34dacfc9b45729ec6344c9f418c893c8198fbf2600b6b1a8b1f303118",
+      "claim_files": [
+        [
+          "added",
+          "research/full-native-domain-adapter/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "6d195c61a8087da47744b3662779d6535393ff13",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6892,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Execute compiler-generated global switches through the physical T74 caller (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6892",
+      "submitted_at": "2026-11-09T00:18:41Z",
+      "updated_at": "2026-11-09T00:18:41Z",
+      "source_commit": "271f1d4c3128a89d49694e7508c1c88bba8cc981",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:18:41Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "271f1d4c3128a89d49694e7508c1c88bba8cc981",
+      "claim_text": "bdfde54f7df405dace7541f2e27c062736a3f2fc595b3630ddde6f233242c79d",
+      "claim_files": [
+        [
+          "added",
+          "research/compiler-t74-global-boundary/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "271f1d4c3128a89d49694e7508c1c88bba8cc981",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6893,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Execute whole-domain BIT carries and low commit (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6893",
+      "submitted_at": "2026-11-09T00:18:57Z",
+      "updated_at": "2026-11-09T00:18:57Z",
+      "source_commit": "dde4e28f4245dff09ac74aeb0254226f9d528b5d",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:18:57Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "dde4e28f4245dff09ac74aeb0254226f9d528b5d",
+      "claim_text": "20fe7fde8b63d89c99c56bb0fa119ac867a48b334127ca18b70f7fdec86a0e2e",
+      "claim_files": [
+        [
+          "added",
+          "research/bit-whole-low-carry-commit/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "dde4e28f4245dff09ac74aeb0254226f9d528b5d",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6894,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Execute actual Full tensor programs through physical H and exact diagonals (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6894",
+      "submitted_at": "2026-11-09T00:20:41Z",
+      "updated_at": "2026-11-09T00:20:41Z",
+      "source_commit": "d51859e7816771f627033b23db0f9786ada863f8",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:20:41Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "d51859e7816771f627033b23db0f9786ada863f8",
+      "claim_text": "3c00830bf0b105be895e90e3e4ea81bf2ee4cc4e2ae43729885e2bc8d9f078fe",
+      "claim_files": [],
+      "claim_files_head": "d51859e7816771f627033b23db0f9786ada863f8",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6895,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Verify source-level numerical recovery of normalized products (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6895",
+      "submitted_at": "2026-11-09T00:20:59Z",
+      "updated_at": "2026-11-09T00:20:59Z",
+      "source_commit": "85e0534b3a86dc0237f368ff0e5fb646fe4744ec",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:20:59Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "85e0534b3a86dc0237f368ff0e5fb646fe4744ec",
+      "claim_text": "ba6f64164b15abb4082042881bb08d02164c1767ecb970a62051fa654975f6b6",
+      "claim_files": [
+        [
+          "added",
+          "research/normalized-product-source-refinement/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "85e0534b3a86dc0237f368ff0e5fb646fe4744ec",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6896,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Prove recursive native-bank capacity at every allocation prefix (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6896",
+      "submitted_at": "2026-11-09T00:24:15Z",
+      "updated_at": "2026-11-09T00:24:15Z",
+      "source_commit": "0ca312ed12585a1dc56bcb3d90354f8c6307dc28",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:24:15Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "0ca312ed12585a1dc56bcb3d90354f8c6307dc28",
+      "claim_text": "7e6ca91a10614ac21111895d60e2df1daed0f0afce03a5d1757dafd65f62da02",
+      "claim_files": [
+        [
+          "added",
+          "research/recursive-physical-capacity-prefix/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "0ca312ed12585a1dc56bcb3d90354f8c6307dc28",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6897,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Prove recursive native word-width margins (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6897",
+      "submitted_at": "2026-11-09T00:24:38Z",
+      "updated_at": "2026-11-09T00:24:38Z",
+      "source_commit": "f04a672856f8f7cf9fc290bbd55ee4a7a77a126b",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:24:38Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "f04a672856f8f7cf9fc290bbd55ee4a7a77a126b",
+      "claim_text": "0287f493047106822ca3b8521895540215f4940ae5ac8fc0a4d60f867a3c6a07",
+      "claim_files": [
+        [
+          "added",
+          "research/recursive-native-word-margins/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "f04a672856f8f7cf9fc290bbd55ee4a7a77a126b",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6898,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Integrate exact FFT scalars into the physical Full caller (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6898",
+      "submitted_at": "2026-11-09T00:25:26Z",
+      "updated_at": "2026-11-09T00:25:26Z",
+      "source_commit": "2882d4414e95a6884f7b588d9da7ca893f800cbf",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:25:26Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "2882d4414e95a6884f7b588d9da7ca893f800cbf",
+      "claim_text": "91f13486c6138bb835f5020b7d9c0cfecfabc8dcf6ac7405d60efc82a45082fb",
+      "claim_files": [
+        [
+          "added",
+          "research/full-fft-scalar-join/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "2882d4414e95a6884f7b588d9da7ca893f800cbf",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6899,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Connect actual Core interiors to the global physical caller (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6899",
+      "submitted_at": "2026-11-09T00:25:59Z",
+      "updated_at": "2026-11-09T00:25:59Z",
+      "source_commit": "61d86cbe25657af55b9463bd3f072b6cbf952638",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:25:59Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "61d86cbe25657af55b9463bd3f072b6cbf952638",
+      "claim_text": "befaa90c2fb8ad47c1d4f2814ff48605503d542e2cf4b134139aeffd4501e9d7",
+      "claim_files": [],
+      "claim_files_head": "61d86cbe25657af55b9463bd3f072b6cbf952638",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6900,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Prove deterministic precision cuts for the current selected caller (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6900",
+      "submitted_at": "2026-11-09T00:27:32Z",
+      "updated_at": "2026-11-09T00:27:32Z",
+      "source_commit": "c46339035fccd571effb48434d80f572e20f1092",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:27:32Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "c46339035fccd571effb48434d80f572e20f1092",
+      "claim_text": "e44638d40da5675afd2dc4235e8d9b9fffcff76101c723ef51cebb385264fa35",
+      "claim_files": [
+        [
+          "added",
+          "research/selected-caller-quantizer-transparency/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "c46339035fccd571effb48434d80f572e20f1092",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6901,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Prove a common precision format for the current ideal compiler (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6901",
+      "submitted_at": "2026-11-09T00:27:50Z",
+      "updated_at": "2026-11-09T00:27:50Z",
+      "source_commit": "4c7a4f00f09665276e145ac2cc1d12f8b8f9a7ac",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T00:27:50Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "4c7a4f00f09665276e145ac2cc1d12f8b8f9a7ac",
+      "claim_text": "db1ff108bc88ccb7ef38ff06a2782a7e30c72abb110c80687e6c9c8407b8a6d2",
+      "claim_files": [
+        [
+          "added",
+          "research/compiled-root-clifford-precision/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "4c7a4f00f09665276e145ac2cc1d12f8b8f9a7ac",
       "claim_files_base": "main",
       "claim_files_result": true
     }
