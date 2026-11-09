@@ -173,5 +173,12 @@ class ReviewHoldTests(unittest.TestCase):
         # derivations: the lead's releases of verifier derivation holds (read by direct_refresh.py, 2026-10-24).
         self.assertTrue({'approved', 'rejected', 'claims'} <= set(decisions) <= {'approved', 'rejected', 'claims', 'derivations'}, sorted(decisions))
 
+    def test_unreduced_decision_score_is_found(self):
+        # #6887 (2026-11-09): 3452786/1000000000 is 1726393/500000000 reduced. validate.py asserts this check is empty.
+        decisions = {'approved': [], 'rejected': [], 'claims': [
+            {'pr': 1, 'score': '1726393/500000000'}, {'pr': 2, 'score': None}, {'pr': 3, 'score': '3452786/1000000000'}]}
+        self.assertEqual(review_hold.unreduced_scores(decisions), [('claims', 3, '3452786/1000000000')])
+        self.assertEqual(review_hold.unreduced_scores(review_hold.load(review_hold.ROOT, review_hold.DECISIONS)), [])
+
 if __name__ == '__main__':
     unittest.main()

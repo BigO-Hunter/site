@@ -44,6 +44,20 @@ def load(root, path, default=None):
 def dump(root, path, data):
     (root / path).write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
 
+def unreduced_scores(decisions):
+    """Entries of review-decisions.json whose score is not in reduced form, as (list, pr or id, score).
+
+    refresh.py stores the score of an imported row as str(Fraction(score)), and validate.py asserts that form, so a
+    decision written as 3452786/1000000000 (#6887, 2026-11-09) passes until its row is imported and then stops the
+    hourly refresh. A None score (an entry that is not a claim) is skipped."""
+    bad = []
+    for kind in ('approved', 'rejected', 'claims'):
+        for e in decisions.get(kind, []):
+            s = e.get('score')
+            if s is not None and str(Fraction(s)) != s:
+                bad.append((kind, e.get('pr', e.get('id')), s))
+    return bad
+
 def published(root, path):
     """The board file at git HEAD, or None for a board that is not published yet."""
     try:

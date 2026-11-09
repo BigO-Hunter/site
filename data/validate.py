@@ -17,6 +17,12 @@ def check_author_links(label,doc):
  # row's source or evidence field (Lead, 2026-11-08, site#17; data/author_links.py).
  bad=bad_author_links(doc)
  assert not bad,f"Author link in {label} is not a GitHub profile or an ORCID record (give the profile, or no link): {bad[0][0]!r} {bad[0][1]}"
+import review_hold
+# A decision score must be reduced like a row score (Lead, 2026-11-09): the refresh imports the row and then this file's
+# score check (str(Fraction) == score) fails on it, which would stop the hourly refresh (#6887, b4786ac5).
+_decisions=load(review_hold.DECISIONS) if (ROOT/review_hold.DECISIONS).exists() else {}
+_unreduced=review_hold.unreduced_scores(_decisions)
+assert not _unreduced,f"review-decisions.json score is not reduced (write str(Fraction(score))): {_unreduced[0]}"
 def safe_path(rel):
  p=ROOT/rel
  assert not p.is_symlink(),rel
