@@ -131559,14 +131559,20 @@
       "title": "Conditional κ = .00362702 (+0.087% over #6934): seven main contacts on shared wires",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6936",
       "submitted_at": "2026-11-09T16:02:56Z",
-      "updated_at": "2026-11-09T16:02:56Z",
-      "source_commit": "03626137d0bd57f09b0bf9597376183ce6fa9683",
+      "updated_at": "2026-11-09T16:47:14Z",
+      "source_commit": "d360b1182b6d21b1ee2354856abcb50646ad618b",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-09T16:02:56Z",
       "checked_at": "2026-11-09",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_head": "d360b1182b6d21b1ee2354856abcb50646ad618b",
+      "claim_text": "22f9620b9567b1a482c89d1a4dfb87af98ebaea67ff58bbb5e55a9d1d48b74ad",
+      "claim_files": [],
+      "claim_files_head": "d360b1182b6d21b1ee2354856abcb50646ad618b",
+      "claim_files_base": "main",
+      "claim_files_result": true
     },
     {
       "pr_number": 6937,
@@ -131575,14 +131581,20 @@
       "title": "Two-chain family: remaining proofs, objects, backup words and open leads (no new κ)",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6937",
       "submitted_at": "2026-11-09T16:09:18Z",
-      "updated_at": "2026-11-09T16:11:09Z",
+      "updated_at": "2026-11-09T16:18:12Z",
       "source_commit": "a98df73ddae1d1ea85a62b6bdf2714b28cb7b359",
       "upstream_status": "open",
       "upstream_status_at": "2026-11-09T16:09:18Z",
       "checked_at": "2026-11-09",
       "claimed_score": null,
       "record_ids": [],
-      "note": "No research package kappa claim."
+      "note": "No research package kappa claim.",
+      "claim_head": "a98df73ddae1d1ea85a62b6bdf2714b28cb7b359",
+      "claim_text": "c277dd0f98fb7de2541c49fd0a855aa18e9071f61baac22db5648b895dc36175",
+      "claim_files": [],
+      "claim_files_head": "a98df73ddae1d1ea85a62b6bdf2714b28cb7b359",
+      "claim_files_base": "main",
+      "claim_files_result": true
     }
   ]
 }

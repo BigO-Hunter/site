@@ -134657,7 +134657,7 @@
     "title": "Conditional κ = .00362702 (+0.087% over #6934): seven main contacts on shared wires",
     "state": "open",
     "created_at": "2026-11-09T16:02:56Z",
-    "updated_at": "2026-11-09T16:02:56Z",
+    "updated_at": "2026-11-09T16:47:14Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134665,12 +134665,12 @@
       "html_url": "https://github.com/DreamingOfClouds"
     },
     "head": {
-      "sha": "03626137d0bd57f09b0bf9597376183ce6fa9683"
+      "sha": "d360b1182b6d21b1ee2354856abcb50646ad618b"
     },
     "base": {
       "ref": "main"
     },
-    "draft": true
+    "draft": false
   },
   {
     "number": 6937,
@@ -134678,7 +134678,7 @@
     "title": "Two-chain family: remaining proofs, objects, backup words and open leads (no new κ)",
     "state": "open",
     "created_at": "2026-11-09T16:09:18Z",
-    "updated_at": "2026-11-09T16:11:09Z",
+    "updated_at": "2026-11-09T16:18:12Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134691,6 +134691,6 @@
     "base": {
       "ref": "main"
     },
-    "draft": true
+    "draft": false
   }
 ]
