@@ -635,6 +635,30 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-08T22:38:10Z",
       "note": "DreamingOfClouds' own package research/p104-hosted-shared-cover/ (30 files, no CLAIM.json, no RESULT.json) states kappa 0.00341603 for the outer statement in its README (tested price 0.0034160307; raw crossing 0.00341603288178402), the title's value (+0.0000161 over #6883's 0.00339993). It keeps the root, caller and hosted pair of #6883 and replaces the native word by an exact-optimum shared cover of the helpers. Conditional on the five framework assumptions of #6833, on A6 (owned ascent) as declared in #6883, and on the BIT pin 0.00376669 taken from the pending #6726; the README says this kappa is above the pin 0.0034 of main, so without a higher admitted BIT saving the outer statement does not cover it. It also rests on pricing the one-site idles as whole H8 jobs (IDLE_ONE, from the pending #6716 and #6726; priced as rank-1 jobs, kappa would be 0.002995) and on the LAMBDA pass of the pending callers, neither on main. Its conservative count is 5.2 percent over 10^9. Open, not draft, created 2026-11-08T22:08:52Z. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6886,
+      "head": "187aa656e9cc9f5f7b6f202c137a9aba8d3c1144",
+      "score": "3429289/1000000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-09T00:20:00Z",
+      "note": "DreamingOfClouds' own package research/p104-hosted-y-isometry/ (no CLAIM.json, no RESULT.json) states kappa 0.003429289 for the outer statement in its README (tested price 0.00342928907; raw crossing 0.00342928953721633), the title's value. It beats its base #6883 (0.00339993) by +0.8635 percent and #6884 (0.00341603) by +0.3881 percent. The mirror reads Y directly through the forward network's own Y gates and drops 24 Y pads. Conditional on the five framework assumptions of #6833, on A6 (owned ascent) as declared in #6883, on the BIT pin 0.00376669 taken from the pending #6726 (this kappa is above the 0.0034 that main admits), and on pricing the hosted-stage idles as whole H8 jobs with IDLE_ONE and LAMBDA from pending PRs (priced as eight rank-1 jobs each, kappa would be 0.003006). Its conservative count is 0.61 percent over 10^9. Open, not draft, created 2026-11-08T22:39:53Z. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6887,
+      "head": "a3d665bf170a0a3ebc5ea60354ae9e19a199388d",
+      "score": "1726393/500000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-09T00:20:01Z",
+      "note": "DreamingOfClouds' own package research/p104-hosted-joint-merge/ (no CLAIM.json, no RESULT.json) states kappa 0.003452786 for the outer statement in its README (tested price 0.0034527867; raw crossing 0.00345278688457740), the title's value. It beats its base #6883 (0.00339993) by +1.555 percent and #6886 (0.003429289) by +0.685 percent. It chooses the X-side and Y-side merges and the shared helpers jointly. Conditional on the five framework assumptions of #6833, on A6 (owned ascent) as declared in #6883, on a BIT saving above this kappa (the README uses the pin 0.00376669 of the pending #6726 as a choice; the archive values it names are not admitted, and the ledger fails at the 0.0034 that main admits), and on pricing the hosted-stage idles as whole H8 jobs with IDLE_ONE and LAMBDA from pending PRs (priced as eight rank-1 jobs each, kappa would be 0.003024). Its conservative count is 2.28 percent over 10^9. Open, not draft, created 2026-11-08T23:42:49Z. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6889,
+      "head": "50f860cc64dbc18a5d64927a4e544418c41421c6",
+      "score": "34569417/10000000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-09T00:20:02Z",
+      "note": "DreamingOfClouds' own package research/p104-hosted-x-direct-reads/ (no CLAIM.json, no RESULT.json) states kappa 0.0034569417 for the outer statement in its README (tested price 0.00345694177; raw crossing 0.00345694177515779), the title's value. It beats its base #6883 (0.00339993) by +1.677 percent and #6887 (0.003452786) by +0.120 percent. The mirror reads merged X directly on two more ports. Conditional on the same assumptions as #6887: the five framework assumptions of #6833, A6 (owned ascent), a BIT saving above this kappa (the pin 0.00376669 of the pending #6726 is used as a choice; the ledger fails at the 0.0034 that main admits), and the whole H8 pricing of the hosted-stage idles with IDLE_ONE and LAMBDA from pending PRs (priced as eight rank-1 jobs each, kappa would be 0.003027). Its conservative count is 3.46 percent over 10^9. Open, not draft, created 2026-11-09T00:08:05Z. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
