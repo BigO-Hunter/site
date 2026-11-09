@@ -3,7 +3,8 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import data from './other-bounds.json' with {type: 'json'};
 import {rankOtherClaims} from './other-rank.ts';
-import {otherTableRows, isTableBreakthrough, shownLevel} from './other-table.ts';
+import {otherTableRows, isTableBreakthrough, shownLevel, baselineClaim} from './other-table.ts';
+import avatars from './author-avatars.json' with {type: 'json'};
 import {isVisibleAtEvidence} from './evidence.ts';
 
 const claim = (handle: string, value: string, date: string, evidence = 'claimed', agent = false) => ({handle, value, display: value, date, evidence, agent});
@@ -68,4 +69,20 @@ test('a claim marked baseline stands for the OpenAI baseline row: one row, the A
   assert.equal(openai.claim.value, family.baseline.exactValue);
   assert.equal(rows.at(-1)!.claim.handle, 'openai');
   assert.deepEqual(rows.filter(r => isTableBreakthrough(family, r.claim)).map(r => r.claim.handle), ['openai']);
+});
+
+// site#20 (2026-11-10, "still does not appear in Heilbronn triangle"): the OpenAI baseline row is made by baselineClaim, not
+// by other-bounds-data.ts, so it missed the avatar that every other author with a GitHub profile gets. Every OpenAI
+// baseline row (table, chart and landing) now shows OpenAI's picture.
+test('the OpenAI baseline row of every Other bounds row carries OpenAI\'s avatar', () => {
+  const picture = (avatars as Record<string, string>).openai;
+  assert.ok(picture?.startsWith('/avatars/openai-'));
+  const families = (data as {families: {slug: string; baseline?: Parameters<typeof baselineClaim>[0]; claims: any[]; direction: string}[]}).families;
+  const rows = families.filter(f => baselineClaim(f.baseline));
+  assert.ok(rows.some(f => f.slug === 'heilbronn-triangle'));
+  for (const f of rows) {
+    assert.deepEqual(baselineClaim(f.baseline)!.authors, [{name: 'OpenAI', url: 'https://github.com/openai', avatar: picture}], f.slug);
+    const row = otherTableRows(f).find(r => (r.claim as {handle: string}).handle === 'openai-baseline');
+    if (row) assert.equal((row.claim as {authors: {avatar?: string}[]}).authors[0].avatar, picture, f.slug);
+  }
 });
