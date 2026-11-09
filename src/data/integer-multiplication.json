@@ -63805,7 +63805,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6902",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-09T01:04:42Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds serves two chains of PR 6833's root with one native word, built on PR 6889. Conditional kappa 0.00351406. It needs A6 (owned ascent) besides the five framework assumptions, the BIT pin 0.00376669 of pending PR 6726 (above the 0.0034 main admits), a reducible root, HOST2, and LAMBDA priced as ordinary work. Credits: THU New Media Research Center· Prof. Shen Yang, zxv, CubeJerry, Ali Romman, Jacob Sussman. Claude Opus 5.5 prepared it. External review is outstanding."
     },
     "crocswap-pr-6911": {
       "checked_at": "2026-11-09",
@@ -63833,7 +63834,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6911",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-09T02:25:12Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds mixes 96 ports of PR 6902's two-chain form with 8 ports of PR 6889's hosted form. Conditional kappa 0.003519487. It keeps every declaration of PR 6902, adds the per-port root, and needs the BIT pin 0.00376669 of pending PR 6726 (above the 0.0034 main admits). It depends on pending PR 6902. Credits: THU New Media Research Center· Prof. Shen Yang, zxv, CubeJerry, Ali Romman, Jacob Sussman. Claude Opus 5.5 prepared it. External review is outstanding."
     }
   },
   "updated_at": "2026-11-09T05:17:27Z"
