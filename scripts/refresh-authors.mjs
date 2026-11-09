@@ -1,6 +1,6 @@
 import {readFileSync, writeFileSync, renameSync, mkdirSync, existsSync, unlinkSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {avatarDue, avatarCheckedAt} from './avatar-due.mjs';
+import {avatarAccount, avatarDue, avatarCheckedAt} from './avatar-due.mjs';
 import {profileName} from '../src/lib/profile-name.ts';
 
 // Public profile fields only. A failed lookup preserves the last checked profile.
@@ -25,8 +25,8 @@ const removeAvatar = key => {
 };
 async function refreshAvatar(key, profile, checkedAt) {
  if (!/^[a-z0-9-]+$/.test(key)) return;
- // Organization accounts (OpenAI, Anthropic, community repos) show initials, not a logo.
- if (profile.type !== 'User') return removeAvatar(key);
+ // Personal accounts and organizations (OpenAI, Anthropic, CrocSwap) show their GitHub avatar (site#20); others show initials.
+ if (!avatarAccount(profile)) return removeAvatar(key);
  // At most one download per login every 7 days (scripts/avatar-due.mjs): the CDN's two encodings of one
  // picture would otherwise change the site build, and the image, every hour.
  if (!avatarDue({login: key, have: avatars[key], fileExists: avatars[key] && existsSync(`public${avatars[key]}`), checkedAt, now: Date.now()})) return 'kept';

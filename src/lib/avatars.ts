@@ -1,4 +1,4 @@
-// Initials for players without a personal GitHub avatar: organizations, papers and plain names.
+// Initials for players without a GitHub avatar: papers, plain names and accounts that are neither a person nor an organization.
 // Only the first named author counts, so "A and B (2019), Title" gives the initials of A.
 export function initials(name:string):string{
  const lead=name.split(/;|,|\(| and | with | & /)[0].trim();

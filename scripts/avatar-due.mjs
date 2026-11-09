@@ -23,3 +23,8 @@ export function avatarDue({login, have, fileExists, checkedAt, now}) {
  const at = Date.parse(checkedAt ?? '');
  return !Number.isFinite(at) || now - at >= AVATAR_MAX_AGE_MS || at > now + DAY;
 }
+
+// Which GitHub accounts get their avatar copied: personal accounts and organizations (site#20, 2026-11-09: OpenAI,
+// Anthropic and CrocSwap showed initials, because only personal accounts did since 2026-10-13). Any other type
+// (a bot, or a profile without a type) keeps initials.
+export const avatarAccount = profile => profile?.type === 'User' || profile?.type === 'Organization';

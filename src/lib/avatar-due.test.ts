@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {avatarDue, avatarCheckedAt, avatarStagger, AVATAR_MAX_AGE_MS} from '../../scripts/avatar-due.mjs';
+import {avatarAccount, avatarDue, avatarCheckedAt, avatarStagger, AVATAR_MAX_AGE_MS} from '../../scripts/avatar-due.mjs';
 
 const now = Date.parse('2026-11-01T12:00:00Z');
 const kept = {login: 'zxv', have: '/avatars/zxv-4620db8489.png', fileExists: true};
@@ -47,4 +47,12 @@ test('a later fetch stores now, so no login is fetched twice within 7 days (hour
   assert.equal(fetches[1] - fetches[0], AVATAR_MAX_AGE_MS - stagger * 86400e3, 'the first gap carries the stagger');
   for (let i = 2; i < fetches.length; i++) assert.ok(fetches[i] - fetches[i - 1] >= AVATAR_MAX_AGE_MS, `${login} stagger ${stagger}: fetches ${i - 1} and ${i} are under 7 days apart`);
  }
+});
+
+// site#20 (2026-11-09): organizations (OpenAI, Anthropic, CrocSwap) show their GitHub avatar, as personal accounts do.
+test('personal accounts and organizations get an avatar; other account types keep initials', () => {
+  assert.equal(avatarAccount({login: 'openai', type: 'Organization'}), true);
+  assert.equal(avatarAccount({login: 'darkhipo', type: 'User'}), true);
+  for (const profile of [{login: 'x', type: 'Bot'}, {login: 'x'}, null, undefined])
+    assert.equal(avatarAccount(profile), false, JSON.stringify(profile));
 });
