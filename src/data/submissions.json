@@ -131438,6 +131438,44 @@
       "claim_files_head": "c726399fbdb6d80dd13bed760b56572fb4ea1022",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6931,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = .00360410 (+0.245% over #6919): ten more helper splits",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6931",
+      "submitted_at": "2026-11-09T08:29:42Z",
+      "updated_at": "2026-11-09T08:51:16Z",
+      "source_commit": "e084df3698c6329eb2129c417d5ea8694a7e8d09",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T08:29:42Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "e084df3698c6329eb2129c417d5ea8694a7e8d09",
+      "claim_text": "2cdc22c8d03503ba23db4925051299337daa1f180b1ca9b1353dd91ce9de2f94",
+      "claim_files": [],
+      "claim_files_head": "e084df3698c6329eb2129c417d5ea8694a7e8d09",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6932,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = .00362106 (+0.470% over #6931): allow 1/3 and 1/5 as gate scalars",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6932",
+      "submitted_at": "2026-11-09T09:00:20Z",
+      "updated_at": "2026-11-09T09:00:20Z",
+      "source_commit": "f6843451d6c6be44ce8adb3aee16096124c21faf",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T09:00:20Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }
