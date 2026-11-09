@@ -63390,7 +63390,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6883",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-08T20:27:24Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds hosts a pair of units at every call of PR 6833's root. The conditional kappa is 0.00339993. It needs a sixth assumption, A6 (owned ascent), which the README calls load-bearing; IDLE_ONE and LAMBDA come from pending PRs; the per-call check of the predecessors fails (11,928,436 against ten million). Credits: THU New Media Research Center· Prof. Shen Yang, zxv, CubeJerry, Ali Romman, Jacob Sussman. Claude Opus 5.5 prepared it. External review is outstanding."
     },
     "crocswap-pr-6884": {
       "checked_at": "2026-11-09",
@@ -63418,7 +63419,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6884",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-08T22:08:52Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds replaces the native word of PR 6883 by an exact-optimum shared cover of the helpers. The conditional kappa is 0.00341603, above the 0.0034 that main admits: it needs the BIT pin 0.00376669 of pending PR 6726, besides A6 (owned ascent), IDLE_ONE and LAMBDA from pending PRs. Credits: THU New Media Research Center· Prof. Shen Yang, zxv, CubeJerry, Ali Romman, Jacob Sussman. Claude Opus 5.5 prepared it. External review is outstanding."
     }
   },
   "updated_at": "2026-11-09T00:17:25Z"
