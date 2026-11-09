@@ -4707,15 +4707,11 @@
             "id": "direct-issue-190",
             "score": "3363623/1000000000",
             "relation": "attained",
-            "evidence": "Claimed",
+            "evidence": "Lean Verified",
             "authors": [
               "Vladislav Kuznetsov"
             ],
-            "bound": "O(n log^(1 - 0.003363623) n)",
-            "verification": {
-              "state": "pending",
-              "since": "2026-11-09T12:08:28Z"
-            }
+            "bound": "O(n log^(1 - 0.003363623) n)"
           },
           {
             "id": "direct-issue-30",
@@ -7726,7 +7722,9 @@
     "[\"integer-multiplication\",\"crocswap-pr-6889\",\"34569417/10000000000\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6911\",\"3519487/1000000000\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6916\",\"357027/100000000\",\"attained\"]:record",
-    "[\"integer-multiplication\",\"crocswap-pr-6919\",\"359528269/100000000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6919\",\"359528269/100000000000\",\"attained\"]:record",
+    "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:lean",
+    "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:record"
   ],
   "deferred": [
     {
@@ -7742,14 +7740,6 @@
       "authors": [
         "CubeJerry"
       ]
-    },
-    {
-      "key": "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:record",
-      "slug": "exact-dft",
-      "authors": [
-        "Vladislav Kuznetsov"
-      ],
-      "hold": true
     }
   ]
 }

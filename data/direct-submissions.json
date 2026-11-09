@@ -10,6 +10,37 @@
         "commit": "38d22084f270723dbe769b94bd690c372a08e390",
         "bound": "3363623/1000000000",
         "authors": []
+      },
+      "verification": {
+        "decision": "lean-verified",
+        "reason": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+        "id": "direct-190-fdc7b6a6cf17aefc39486fba3a7c35f1265f6aa88a45962ad36acb9e1e128b76",
+        "problem_id": "exact-dft/uniform-exact-arithmetic",
+        "score": "3363623/1000000000",
+        "score_relation": "attained",
+        "source_commit": "38d22084f270723dbe769b94bd690c372a08e390",
+        "source_url": "https://github.com/AnanasClassic/fft-power-saving-lean",
+        "authors": [],
+        "workflow_conclusion": null,
+        "issue_submitter": "AnanasClassic",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42648121034",
+        "checked_at": "2026-11-09T18:00:00.843718Z",
+        "issue_created_at": "2026-11-09T12:08:28Z",
+        "issue_updated_at_at_verification": "2026-11-09T12:08:39Z",
+        "issue_updated_at_at_import": "2026-11-09T18:58:01Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-190-42648121034-1-lean.json",
+        "receipt_sha256": "be8abffaf30a5bf83facf5a3693959478324d2d1753949050f1dfcf828ad9d30",
+        "policy_hash": "f8fbea160900e7fa0182808e91d81ee32cf5a2f78bc5b2f9b75d3dc87506eb88",
+        "result_artifact_id": 13710998327,
+        "controller_fingerprint": "58bc1fd000fb3e6eb1ed0b48b729c1019d74369f87d68f1c370386b38479c74c",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
       }
     },
     "direct-issue-186": {
@@ -4842,11 +4873,6 @@
       "version": "8fe7c8ced358d93c23c7f09c7210d722ded289f89fe2da2da6097e390011d022",
       "updated_at": "2026-11-09T20:11:22Z",
       "not_verified": true
-    },
-    "190": {
-      "version": "fdc7b6a6cf17aefc39486fba3a7c35f1265f6aa88a45962ad36acb9e1e128b76",
-      "updated_at": "2026-11-09T18:58:01Z",
-      "not_verified": false
     }
   }
 }
