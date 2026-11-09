@@ -1247,8 +1247,8 @@
     "id": "2119906672718066109"
   },
   "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:4\",\"4\",\"attained\"]:record": {
-    "status": "unknown",
-    "at": "2026-11-09T23:34:12.529Z",
-    "reason": "reserved before API send"
+    "status": "posted",
+    "at": "2026-11-09T23:34:14.189Z",
+    "id": "2119936631142514822"
   }
 }
