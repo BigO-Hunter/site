@@ -1215,5 +1215,10 @@
     "status": "posted",
     "at": "2026-11-08T23:38:29.848Z",
     "id": "2119575315634635045"
+  },
+  "[\"other-catalan\",\"slitsey:270\",\"270\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-09T00:31:54.648Z",
+    "reason": "reserved before API send"
   }
 }
