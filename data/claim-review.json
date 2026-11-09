@@ -13,6 +13,13 @@
       "title": "Conditional κ = 0.003530104 (+0.302% over #6911): flip mirror pairs around forward gates",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6917",
       "reason": "The PR adds no single own research package CLAIM.json."
+    },
+    {
+      "pr": 6918,
+      "head": "9517ed7e4583d010c15f57f37e0f6e867f1a2ce5",
+      "title": "Conditional κ = 0.00357906 (+0.246% over #6916): flipped-word helper splits",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6918",
+      "reason": "The PR adds no single own research package CLAIM.json."
     }
   ]
 }

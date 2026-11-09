@@ -7669,7 +7669,8 @@
     "[\"exact-dft\",\"direct-issue-186\",\"3148496239/1000000000000\",\"attained\"]:record",
     "[\"integer-multiplication\",\"crocswap-pr-6884\",\"341603/100000000\",\"attained\"]:record",
     "[\"other-catalan\",\"slitsey:270\",\"270\",\"attained\"]:record",
-    "[\"integer-multiplication\",\"crocswap-pr-6889\",\"34569417/10000000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6889\",\"34569417/10000000000\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-6911\",\"3519487/1000000000\",\"attained\"]:record"
   ],
   "deferred": [
     {
@@ -7677,13 +7678,6 @@
       "slug": "integer-multiplication",
       "authors": [
         "aigent-marius"
-      ]
-    },
-    {
-      "key": "[\"integer-multiplication\",\"crocswap-pr-6911\",\"3519487/1000000000\",\"attained\"]:record",
-      "slug": "integer-multiplication",
-      "authors": [
-        "DreamingOfClouds"
       ]
     }
   ]

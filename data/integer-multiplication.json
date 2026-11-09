@@ -43466,7 +43466,7 @@
       "source_url": "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Integer-multiplication-below-n-log-n-September-23-2026/build/sections/00-introduction.tex",
       "site_badge": false,
       "eligible_for_record": false,
-      "proof_status": "Source claim; not independently rerun by bigOspeedrun. Proved on prove2.me, which checks each proof with Lean on its server; we reviewed that its Lean statement is this row's statement (same value, same source). Separately, a Lean proof of a stronger saving, kappa = 4222422970/2^46 (about 6e-05), by Kenny Daniel (platypii) with jdb19937, exists on Mathlib's multi-stack machine model (platypii/integer-mult-bounds-lean @ 233a518, theorem MathlibTM2.mulInTime; the author's axiom audit allows only the standard axioms, and the author's CI on that commit passed (checked 2026-11-08)); it is not our exact multitape statement and we have not rerun it.",
+      "proof_status": "Source claim; not independently rerun by bigOspeedrun. Proved on prove2.me, which checks each proof with Lean on its server; we reviewed that its Lean statement is this row's statement (same value, same source). Separately, a Lean proof of a stronger saving, kappa = 4222422970/2^46 (about 6e-05), by Kenny Daniel (platypii) with jdb19937, exists on Mathlib's multi-stack machine model (platypii/integer-mult-bounds-lean @ 59a56fc, theorem MathlibTM2.mulInTime; the author's axiom audit allows only the standard axioms, and the author's CI on that commit failed (checked 2026-11-09)); it is not our exact multitape statement and we have not rerun it.",
       "comparison_key": "openai/original-109",
       "date_precision": "Manuscript dated September 23, 2026; submitted_at is observation time.",
       "upstream_tier": "claimed",
@@ -63838,5 +63838,5 @@
       "credit_note": "DreamingOfClouds mixes 96 ports of PR 6902's two-chain form with 8 ports of PR 6889's hosted form. Conditional kappa 0.003519487. It keeps every declaration of PR 6902, adds the per-port root, and needs the BIT pin 0.00376669 of pending PR 6726 (above the 0.0034 main admits). It depends on pending PR 6902. Credits: THU New Media Research Center· Prof. Shen Yang, zxv, CubeJerry, Ali Romman, Jacob Sussman. Claude Opus 5.5 prepared it. External review is outstanding."
     }
   },
-  "updated_at": "2026-11-09T05:17:27Z"
+  "updated_at": "2026-11-09T06:17:27Z"
 }

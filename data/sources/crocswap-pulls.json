@@ -134272,5 +134272,47 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6918,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6918",
+    "title": "Conditional κ = 0.00357906 (+0.246% over #6916): flipped-word helper splits",
+    "state": "open",
+    "created_at": "2026-11-09T05:59:48Z",
+    "updated_at": "2026-11-09T05:59:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "9517ed7e4583d010c15f57f37e0f6e867f1a2ce5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6919,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6919",
+    "title": "Conditional κ = 0.00359528269 (+0.453% over #6918): helper splits on top of flips and sinks",
+    "state": "open",
+    "created_at": "2026-11-09T06:16:22Z",
+    "updated_at": "2026-11-09T06:16:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "ec92a321ea909334614e0c9c0ff22716d20daa4b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]

@@ -131121,6 +131121,50 @@
       "claim_files_head": "07e81202470957555569d0c1077b2d6915e897fe",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6918,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Conditional κ = 0.00357906 (+0.246% over #6916): flipped-word helper splits",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6918",
+      "submitted_at": "2026-11-09T05:59:48Z",
+      "updated_at": "2026-11-09T05:59:48Z",
+      "source_commit": "9517ed7e4583d010c15f57f37e0f6e867f1a2ce5",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T05:59:48Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "9517ed7e4583d010c15f57f37e0f6e867f1a2ce5",
+      "claim_text": "ceab7d5551349f912ff3a19c4f1b69dd4c35db0e9b2ddab755877e4b5c255dc3",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-flipped-helper-combination/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "9517ed7e4583d010c15f57f37e0f6e867f1a2ce5",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6919,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = 0.00359528269 (+0.453% over #6918): helper splits on top of flips and sinks",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6919",
+      "submitted_at": "2026-11-09T06:16:22Z",
+      "updated_at": "2026-11-09T06:16:22Z",
+      "source_commit": "ec92a321ea909334614e0c9c0ff22716d20daa4b",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T06:16:22Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }
