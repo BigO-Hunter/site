@@ -133544,7 +133544,7 @@
     "title": "Conditional κ = 0.00339993 (+0.834% over #6833): host a pair of units at every root call",
     "state": "open",
     "created_at": "2026-11-08T20:27:24Z",
-    "updated_at": "2026-11-08T22:42:27Z",
+    "updated_at": "2026-11-09T02:52:29Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -133565,7 +133565,7 @@
     "title": "Conditional κ = 0.00341603 (+0.474% over #6883): share more helpers between native and mirror",
     "state": "open",
     "created_at": "2026-11-08T22:08:52Z",
-    "updated_at": "2026-11-08T22:42:29Z",
+    "updated_at": "2026-11-09T02:52:30Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -133607,7 +133607,7 @@
     "title": "Conditional κ = 0.003429289 (+0.388% over #6884): remove 24 Y pads from the mirror",
     "state": "open",
     "created_at": "2026-11-08T22:39:53Z",
-    "updated_at": "2026-11-08T22:44:03Z",
+    "updated_at": "2026-11-09T02:52:31Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -133628,7 +133628,7 @@
     "title": "Conditional κ = 0.003452786 (+0.685% over #6886): choose X and Y merges jointly with shared helpers",
     "state": "open",
     "created_at": "2026-11-08T23:42:49Z",
-    "updated_at": "2026-11-08T23:52:41Z",
+    "updated_at": "2026-11-09T02:52:32Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -133670,7 +133670,7 @@
     "title": "Conditional κ = 0.0034569417 (+0.120% over #6887): mirror reads X directly on two more ports",
     "state": "open",
     "created_at": "2026-11-09T00:08:05Z",
-    "updated_at": "2026-11-09T00:08:05Z",
+    "updated_at": "2026-11-09T02:52:34Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -133943,7 +133943,7 @@
     "title": "Conditional κ = 0.00351406 (+1.652% over #6889): one native word serves two root chains",
     "state": "open",
     "created_at": "2026-11-09T01:04:42Z",
-    "updated_at": "2026-11-09T01:17:46Z",
+    "updated_at": "2026-11-09T02:52:38Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -133951,7 +133951,7 @@
       "html_url": "https://github.com/DreamingOfClouds"
     },
     "head": {
-      "sha": "e4d42607f24d7a049b0fca329dc4c34882405c25"
+      "sha": "dc232440d60a140cea146f7c57582f236125d05f"
     },
     "base": {
       "ref": "main"
@@ -134120,6 +134120,27 @@
     },
     "head": {
       "sha": "3ff875875cb608907c175a7e319370b7b2f7c005"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6911,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6911",
+    "title": "Conditional κ = 0.003519487 (+0.154% over #6902): 8 ports keep the hosted form",
+    "state": "open",
+    "created_at": "2026-11-09T02:25:12Z",
+    "updated_at": "2026-11-09T02:52:35Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "5c06d893b5542570116f73f3a438ae94f70f45ee"
     },
     "base": {
       "ref": "main"

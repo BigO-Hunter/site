@@ -40027,7 +40027,7 @@
       "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6883",
       "artifact": {
         "path": "sources/pr-6883.json",
-        "sha256": "d97f238a27b97198e079786750e15712c6457e81aefb173af65ba44fee559ae9"
+        "sha256": "54867b4d96b826cb504a5446ac82d3693995640bd3fce80a047743aa57431897"
       },
       "evidence": {
         "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6883",
@@ -40080,7 +40080,7 @@
       "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6884",
       "artifact": {
         "path": "sources/pr-6884.json",
-        "sha256": "a6951683f696cecb216be7299d059fa67dc265fb20671332a90dfbe9996d53a5"
+        "sha256": "66da2d6f66235f60075ca97a41e4b68d497444243b1d1a617219726844e567e4"
       },
       "evidence": {
         "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6884",
@@ -40134,7 +40134,7 @@
       "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6886",
       "artifact": {
         "path": "sources/pr-6886.json",
-        "sha256": "1dd306b304e2b1b7bb6c359181bc8bb83d0d9367b0c6c9015b87f5be5b936c8a"
+        "sha256": "5ed7572e2864ed07baf7e4c916ba4306909c4a721bd5e2f284a71f5ad8b8a704"
       },
       "evidence": {
         "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6886",
@@ -40193,7 +40193,7 @@
       "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6887",
       "artifact": {
         "path": "sources/pr-6887.json",
-        "sha256": "76a754ef306cdc9dabb7bf548c8519c19313f2955cd6e72612bfcb8a249b15f7"
+        "sha256": "4eb82ebf5229d66ee9376c9de8e9e7c37560f07eacd4c957b9901df243b775df"
       },
       "evidence": {
         "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6887",
@@ -40243,7 +40243,7 @@
       "submission_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6889",
       "artifact": {
         "path": "sources/pr-6889.json",
-        "sha256": "65445ac6507b71bee1a7f16f26b398d1c86dbf8d3fdb7cc1af1c7b1abc3a2045"
+        "sha256": "79d93618f5bed76d76f0e33850051dc9263ccb38aaca69fecb44d4f081f557be"
       },
       "evidence": {
         "paper_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6889",
@@ -63538,7 +63538,7 @@
       "merged": false,
       "merged_at": null,
       "closed_at": null,
-      "updated_at": "2026-11-08T22:42:27Z",
+      "updated_at": "2026-11-09T02:52:29Z",
       "comparison_key": "crocswap/integer-multiplication-v1",
       "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
       "score_source": "Lead review decision; source claim only",
@@ -63567,7 +63567,7 @@
       "merged": false,
       "merged_at": null,
       "closed_at": null,
-      "updated_at": "2026-11-08T22:42:29Z",
+      "updated_at": "2026-11-09T02:52:30Z",
       "comparison_key": "crocswap/integer-multiplication-v1",
       "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
       "score_source": "Lead review decision; source claim only",
@@ -63596,7 +63596,7 @@
       "merged": false,
       "merged_at": null,
       "closed_at": null,
-      "updated_at": "2026-11-08T22:44:03Z",
+      "updated_at": "2026-11-09T02:52:31Z",
       "comparison_key": "crocswap/integer-multiplication-v1",
       "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
       "score_source": "Lead review decision; source claim only",
@@ -63624,7 +63624,7 @@
       "merged": false,
       "merged_at": null,
       "closed_at": null,
-      "updated_at": "2026-11-08T23:52:41Z",
+      "updated_at": "2026-11-09T02:52:32Z",
       "comparison_key": "crocswap/integer-multiplication-v1",
       "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
       "score_source": "Lead review decision; source claim only",
@@ -63652,7 +63652,7 @@
       "merged": false,
       "merged_at": null,
       "closed_at": null,
-      "updated_at": "2026-11-09T00:08:05Z",
+      "updated_at": "2026-11-09T02:52:34Z",
       "comparison_key": "crocswap/integer-multiplication-v1",
       "comparison_status": "Same CrocSwap race: numerical within-repo comparison authorized 2026-10-08. Each record retains its stated assumptions; no full proof or cross-repo compatibility claim.",
       "score_source": "Lead review decision; source claim only",
@@ -63670,5 +63670,5 @@
       "race_event_kind": "PR creation; latest observed score"
     }
   },
-  "updated_at": "2026-11-09T02:17:26Z"
+  "updated_at": "2026-11-09T03:17:28Z"
 }
