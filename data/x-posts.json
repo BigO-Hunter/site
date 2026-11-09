@@ -1230,5 +1230,10 @@
     "status": "posted",
     "at": "2026-11-09T06:39:19.094Z",
     "id": "2119681218648101368"
+  },
+  "[\"integer-multiplication\",\"crocswap-pr-6916\",\"357027/100000000\",\"attained\"]:record": {
+    "status": "unknown",
+    "at": "2026-11-09T07:37:47.350Z",
+    "reason": "reserved before API send"
   }
 }
