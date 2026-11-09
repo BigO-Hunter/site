@@ -1,11 +1,3 @@
 {
-  "queue": [
-    {
-      "pr": 6919,
-      "head": "ec92a321ea909334614e0c9c0ff22716d20daa4b",
-      "title": "Conditional κ = 0.00359528269 (+0.453% over #6918): helper splits on top of flips and sinks",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6919",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    }
-  ]
+  "queue": []
 }
