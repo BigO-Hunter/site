@@ -2142,5 +2142,15 @@
     "authors": [
       "Vladislav Kuznetsov"
     ]
+  },
+  {
+    "key": "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:4\",\"4\",\"attained\"]:record",
+    "text": "**New claim** | **Explicit circuit lower bound** | `4n-O(log n)` | by Om Swostik Mishra and Rahul Santhanam | Claimed | [bigospeedrun.com/other/explicit-circuit-lower-bound](https://bigospeedrun.com/other/explicit-circuit-lower-bound)",
+    "x_text": "New claim!\n\nProblem: Explicit circuit lower bound\nNew value: 4n-O(log n)\nPlayers: Om Swostik Mishra, Rahul Santhanam\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-09T23:34:11.114Z",
+    "authors": [
+      "Om Swostik Mishra",
+      "Rahul Santhanam"
+    ]
   }
 ]
