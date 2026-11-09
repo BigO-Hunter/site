@@ -63611,7 +63611,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6886",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-08T22:39:53Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds removes 24 Y pads from the mirror of PR 6884: it reads Y through the forward network's Y gates. Conditional kappa 0.003429289. It needs A6 (owned ascent) besides the five framework assumptions, the BIT pin 0.00376669 of pending PR 6726 (above the 0.0034 that main admits), and IDLE_ONE and LAMBDA from pending PRs. Credits: THU New Media Research Center· Prof. Shen Yang, zxv, CubeJerry, Ali Romman, Jacob Sussman. Claude Opus 5.5 prepared it. External review is outstanding."
     },
     "crocswap-pr-6887": {
       "checked_at": "2026-11-09",
@@ -63639,7 +63640,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6887",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-08T23:42:49Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds chooses the X and Y merges of PR 6886 jointly with the shared helpers. Conditional kappa 0.003452786. It needs A6 (owned ascent) besides the five framework assumptions, a BIT saving above it (the README uses the pin 0.00376669 of pending PR 6726; archive values are not admitted), and IDLE_ONE and LAMBDA from pending PRs. Credits: THU New Media Research Center· Prof. Shen Yang, zxv, CubeJerry, Ali Romman, Jacob Sussman. Claude Opus 5.5 prepared it. External review is outstanding."
     },
     "crocswap-pr-6889": {
       "checked_at": "2026-11-09",
@@ -63667,7 +63669,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6889",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-09T00:08:05Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds lets the mirror of PR 6887 read X directly on two more ports. Conditional kappa 0.0034569417. Like PR 6887 it needs A6 (owned ascent), the BIT pin 0.00376669 of pending PR 6726 (above the 0.0034 that main admits), and IDLE_ONE and LAMBDA from pending PRs. Credits: THU New Media Research Center· Prof. Shen Yang, zxv, CubeJerry, Ali Romman, Jacob Sussman. Claude Opus 5.5 prepared it. External review is outstanding."
     }
   },
   "updated_at": "2026-11-09T03:17:28Z"

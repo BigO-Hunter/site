@@ -659,6 +659,22 @@
       "by": "BOS Ops & Records",
       "at": "2026-11-09T00:20:02Z",
       "note": "DreamingOfClouds' own package research/p104-hosted-x-direct-reads/ (no CLAIM.json, no RESULT.json) states kappa 0.0034569417 for the outer statement in its README (tested price 0.00345694177; raw crossing 0.00345694177515779), the title's value. It beats its base #6883 (0.00339993) by +1.677 percent and #6887 (0.003452786) by +0.120 percent. The mirror reads merged X directly on two more ports. Conditional on the same assumptions as #6887: the five framework assumptions of #6833, A6 (owned ascent), a BIT saving above this kappa (the pin 0.00376669 of the pending #6726 is used as a choice; the ledger fails at the 0.0034 that main admits), and the whole H8 pricing of the hosted-stage idles with IDLE_ONE and LAMBDA from pending PRs (priced as eight rank-1 jobs each, kappa would be 0.003027). Its conservative count is 3.46 percent over 10^9. Open, not draft, created 2026-11-09T00:08:05Z. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6902,
+      "head": "dc232440d60a140cea146f7c57582f236125d05f",
+      "score": "175703/50000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-09T03:45:00Z",
+      "note": "DreamingOfClouds' own package research/p104-two-chain-shared-native/ (no CLAIM.json, no RESULT.json) states kappa 0.00351406 for the outer statement in its README (tested price 0.00351406007; raw crossing 0.00351406186742169), the title's value. It beats its base #6889 (0.0034569417) by +1.652 percent. One native word serves two #6833 root chains on one set of stage variables. Conditional on the five framework assumptions of #6833, on A6 (owned ascent), and on a BIT saving above this kappa: only the pin 0.00376669 of the pending #6726 (or #6834) clears it, and the 0.0034 that main admits and the archive values fail. It also declares departures for review: a reducible root that fails three package family checks, a new caller event HOST2 with same-label second mains, 124 LAMBDA events priced as ordinary work (paid as rank-1 jobs per port there is no crossing), whole H8 pricing of the idles with IDLE_ONE from pending PRs, and no width-2 streams run. All three raw counts are below 10^9. Open, not draft, created 2026-11-09T01:04:42Z; the head moved to dc232440 at 02:51Z (same kappa) and this decision pins that head. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
+    },
+    {
+      "pr": 6911,
+      "head": "5c06d893b5542570116f73f3a438ae94f70f45ee",
+      "score": "3519487/1000000000",
+      "by": "BOS Ops & Records",
+      "at": "2026-11-09T03:45:01Z",
+      "note": "DreamingOfClouds' own package research/p104-mixed-port-root/ (no CLAIM.json, no RESULT.json) states kappa 0.003519487 for the outer statement in its README (tested price 0.00351948707; raw crossing 0.00351948708416676), the title's value. It beats its base #6902 (0.00351406) by +0.154 percent. 96 ports keep the two-chain form of #6902 and 8 ports use the hosted form of #6889, with a per-port root. Conditional on the five framework assumptions of #6833, on A6 (owned ascent), on the BIT pin 0.00376669 of the pending #6726 (this kappa is above the 0.0034 that main admits), on every declaration of #6902, and on the per-port root with cross-type traffic (180 ADD or COPY events and 279 helpers touch both port types). LAMBDA has 206 events priced as ordinary work (paid as rank-1 jobs per port there is no crossing); IDLE_ONE from pending PRs; no width-2 streams run. All three raw counts are below 10^9. Open, not draft, created 2026-11-09T02:25:12Z. It depends on the pending #6902. It is queued because the value sits in prose and in verify scripts, not in a field the importer reads; the PR adds only this one package. Open: Claimed. Proposed by BOS Ops & Records; the Lead decides by pushing."
     }
   ],
   "derivations": [
