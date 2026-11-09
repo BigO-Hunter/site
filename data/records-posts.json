@@ -2115,5 +2115,14 @@
     "authors": [
       "DreamingOfClouds"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-6916\",\"357027/100000000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.00357) n)` | by CubeJerry | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.00357) n)\nPlayer: CubeJerry\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-09T07:37:45.968Z",
+    "authors": [
+      "CubeJerry"
+    ]
   }
 ]
