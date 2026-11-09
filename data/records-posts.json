@@ -2133,5 +2133,14 @@
     "authors": [
       "DreamingOfClouds"
     ]
+  },
+  {
+    "key": "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:lean",
+    "text": "**New record** | **Fourier Transform** | `O(n log^(1 - 0.003363623) n)` | by Vladislav Kuznetsov | Lean Verified | [bigospeedrun.com/exact-dft](https://bigospeedrun.com/exact-dft)",
+    "x_text": "New record!\n\nProblem: Fourier Transform\nNew value: O(n log^(1 - 0.003363623) n)\nPlayer: Vladislav Kuznetsov\nStatus: Lean Verified",
+    "posted_at": "2026-11-09T21:35:08.205Z",
+    "authors": [
+      "Vladislav Kuznetsov"
+    ]
   }
 ]
