@@ -1240,5 +1240,10 @@
     "status": "posted",
     "at": "2026-11-09T11:38:29.606Z",
     "id": "2119756508615586147"
+  },
+  "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:lean": {
+    "status": "unknown",
+    "at": "2026-11-09T21:35:09.827Z",
+    "reason": "reserved before API send"
   }
 }
