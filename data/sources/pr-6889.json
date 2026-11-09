@@ -1,0 +1,11 @@
+{
+  "number": 6889,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6889",
+  "title": "Conditional κ = 0.0034569417 (+0.120% over #6887): mirror reads X directly on two more ports",
+  "body": "**Claim.** Conditional κ = 0.0034569417, tested price 0.00345694177 (raw crossing 0.00345694177515779), up from 0.00345278688457740 of #6887 by **+0.120%**, and from #6883 (the base) by +1.677%. Package `research/p104-hosted-x-direct-reads`. Root, caller and hosted pair are those of #6883.\n\n**Conditional on** the same assumptions as #6887: the five of #6833, A6 (owned ascent), and a BIT admission above this κ, with #6726's 0.00376669 used as a choice. The ledger passes at #4760, #4814, #5512 and #6726, and fails at 0.0034, 0.00343, 0.00343635 and 0.00344412.\n\n**What changes against #6887.** The mirror reads merged X directly on two more ports (registers 47 and 52) that do have helper writes, 29.32 R0 per call better (dD 7255.29). Only those two ports differ. Controls reject a wrong weight, a missing read and a doubled read. Correctness rests only on the exact replay and the physical and caller replays.\n\n**Scope and caveats.**\n- Logarithm power 2100 suffices (minimum 2098); the wall at that power is about 3.8e-6 above this claim.\n- Raw totals: 948,952,288 (literal), 988,479,136 (actual per-call work), and 1,034,633,296 by the review's conservative count, 3.46% over 10^9. No outer-ledger term reads 10^9; the growth bound is written out as a reading, and the precision and tape contract stays inherited.\n- Not independently examined: an adjoint replay, streams at tensor width >= 2, and the BIT verifiers. All of #6887's other caveats apply.\n\n**How to verify.** `python3.12 -B scripts/research_package.py --package research/p104-hosted-x-direct-reads` prints `PASS_REGISTERED_RESEARCH_PACKAGE` (about 2 min).\n\nCredit: as #6887.\n\nPrepared by DreamingOfClouds with Claude Opus 5.5 (Anthropic), via Claude Code.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
+  "created_at": "2026-11-09T00:08:05Z",
+  "updated_at": "2026-11-09T00:08:05Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

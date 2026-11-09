@@ -5721,7 +5721,7 @@
         "slug": "other-catalan",
         "name": "Catalan’s constant",
         "url": "https://bigospeedrun.com/other/catalan",
-        "leader": "MarcosCarreira:280.59",
+        "leader": "slitsey:270",
         "table": "other-bounds",
         "direction": "lower",
         "records": [
@@ -6010,6 +6010,17 @@
             ],
             "bound": "μ(G) ≤ 280.59",
             "display": "280.59"
+          },
+          {
+            "id": "slitsey:270",
+            "score": "270",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "S. Litsey"
+            ],
+            "bound": "μ(G) ≤ 270",
+            "display": "270"
           }
         ]
       },
@@ -7606,7 +7617,8 @@
     "[\"exact-dft\",\"direct-issue-186\",\"3148496239/1000000000000\",\"attained\"]:lean",
     "[\"exact-dft\",\"direct-issue-183\",\"3148496239/1000000000000\",\"attained\"]:record",
     "[\"exact-dft\",\"direct-issue-186\",\"3148496239/1000000000000\",\"attained\"]:record",
-    "[\"integer-multiplication\",\"crocswap-pr-6884\",\"341603/100000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-6884\",\"341603/100000000\",\"attained\"]:record",
+    "[\"other-catalan\",\"slitsey:270\",\"270\",\"attained\"]:record"
   ],
   "deferred": [
     {

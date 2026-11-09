@@ -121847,7 +121847,7 @@
     "title": "Archive H25 cache sources and remaining N22, P07 and P02 work",
     "state": "closed",
     "created_at": "2026-10-31T03:25:10Z",
-    "updated_at": "2026-11-08T22:27:17Z",
+    "updated_at": "2026-11-08T23:54:24Z",
     "closed_at": "2026-10-31T04:04:55Z",
     "merged_at": "2026-10-31T04:04:54Z",
     "user": {
@@ -133616,6 +133616,90 @@
     },
     "head": {
       "sha": "187aa656e9cc9f5f7b6f202c137a9aba8d3c1144"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6887,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6887",
+    "title": "Conditional κ = 0.003452786 (+0.685% over #6886): choose X and Y merges jointly with shared helpers",
+    "state": "open",
+    "created_at": "2026-11-08T23:42:49Z",
+    "updated_at": "2026-11-08T23:52:41Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "a3d665bf170a0a3ebc5ea60354ae9e19a199388d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6888,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6888",
+    "title": "P104 root duality, Gram-class floor for 16 to 24 deleted lines, and flag-chain flattening (no kappa)",
+    "state": "open",
+    "created_at": "2026-11-08T23:54:48Z",
+    "updated_at": "2026-11-08T23:54:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "936a8a19896a56afbf428da6f7c29c175f348935"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6889,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6889",
+    "title": "Conditional κ = 0.0034569417 (+0.120% over #6887): mirror reads X directly on two more ports",
+    "state": "open",
+    "created_at": "2026-11-09T00:08:05Z",
+    "updated_at": "2026-11-09T00:08:05Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "50f860cc64dbc18a5d64927a4e544418c41421c6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6890,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6890",
+    "title": "Prove the selected P104 all-column caller algebra (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T00:17:11Z",
+    "updated_at": "2026-11-09T00:17:11Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "e56a5bcf239fa0cd4ee57459af04c0ba7acb2c03"
     },
     "base": {
       "ref": "main"
