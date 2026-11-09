@@ -9,7 +9,9 @@ import {ssspFrontier,ssspRecordRows} from './sssp-board.ts';
 // passed: 'pending' while it runs (since: the submission time), 'failed' after a final failed outcome,
 // 'held' while a maintainer reviews it (derivation hold or the verifier's review label).
 export interface FeedVerification {state:'pending'|'failed'|'held'; since:string}
-export interface FeedRecord {id:string; score:string; relation:string; evidence:string; authors:string[]; bound:string; display?:string; verification?:FeedVerification}
+// refiledBy: the refiler line of a refile of another author's proof (Nil, 2026-11-09): the post names it on its own line,
+// never among the authors.
+export interface FeedRecord {id:string; score:string; relation:string; evidence:string; authors:string[]; refiledBy?:string; bound:string; display?:string; verification?:FeedVerification}
 // table: the landing-page table of the board. 'big-o' (also when absent, in older
 // snapshots) posts to the Big O records channel; 'other-bounds' to the Other bounds one.
 export type FeedTable='big-o'|'other-bounds';
@@ -57,11 +59,11 @@ export function plainBound(slug:string,score:string,relation='attained',digits?:
  if(slug==='subset-sum')return epsilon?`O(2^((${value} + epsilon)n))${epsilon}`:`O(2^(${value}n))`;
  return epsilon?`O(n^(${value} + epsilon))${epsilon}`:`O(n^${value})`;
 }
-export function feedBoard(problem:Pick<Problem,'slug'|'direction'>&Partial<Pick<Problem,'chartLines'>>,records:(Pick<RecordEntry,'id'|'score'|'scoreRelation'|'date'|'repoId'|'evidenceLevel'|'authors'>&Partial<Pick<RecordEntry,'verification'>>)[],name:string):FeedBoard {
+export function feedBoard(problem:Pick<Problem,'slug'|'direction'>&Partial<Pick<Problem,'chartLines'>>,records:(Pick<RecordEntry,'id'|'score'|'scoreRelation'|'date'|'repoId'|'evidenceLevel'|'authors'>&Partial<Pick<RecordEntry,'verification'|'refiledBy'>>)[],name:string):FeedBoard {
  if(problem.slug==='directed-sssp')return ssspFeedBoard(problem,records,name,problem.chartLines??[]);
  const digits=boundPrecision(records.map(r=>r.score),problem.slug==='integer-multiplication'||problem.slug==='exact-dft');
  return {slug:problem.slug,name,url:`https://bigospeedrun.com/${problem.slug}`,leader:ranked(records,problem.direction)[0]?.record.id??null,direction:problem.direction==='higher-is-better'?'higher':'lower',
- records:records.map(r=>({id:r.id,score:r.score,relation:r.scoreRelation??'attained',evidence:evidenceName(r.evidenceLevel),authors:r.authors.map(a=>a.name),bound:plainBound(problem.slug,r.score,r.scoreRelation,digits),
+ records:records.map(r=>({id:r.id,score:r.score,relation:r.scoreRelation??'attained',evidence:evidenceName(r.evidenceLevel),authors:r.authors.map(a=>a.name),...(r.refiledBy?{refiledBy:r.refiledBy}:{}),bound:plainBound(problem.slug,r.score,r.scoreRelation,digits),
   ...(r.verification&&evidenceName(r.evidenceLevel)==='Claimed'?{verification:r.verification}:{})}))};
 }
 // Directed SSSP (Lead, 2026-11-03): only point rows "D ; T" post; the function rows (classic, papers) never do. A frontier
@@ -73,7 +75,7 @@ function ssspFeedBoard(problem:Pick<Problem,'slug'|'direction'>,records:Paramete
  const points=records.filter(r=>r.score.includes(' ; '));
  return {slug:problem.slug,name,url:`https://bigospeedrun.com/${problem.slug}`,leader:null,direction:'lower',
   frontier:ssspFrontier(points,lines).map(r=>r.id),recordRows:ssspRecordRows(records,lines).map(r=>r.id),
-  records:points.map(r=>{const t=parse(r.score);return {id:r.id,score:r.score,relation:'attained',evidence:evidenceName(r.evidenceLevel),authors:r.authors.map(a=>a.name),
+  records:points.map(r=>{const t=parse(r.score);return {id:r.id,score:r.score,relation:'attained',evidence:evidenceName(r.evidenceLevel),authors:r.authors.map(a=>a.name),...(r.refiledBy?{refiledBy:r.refiledBy}:{}),
    bound:`O(${plain(t.slice(2))}) for m <= ${plain(t.slice(0,2),D_NAMES)}`,...(r.verification&&evidenceName(r.evidenceLevel)==='Claimed'?{verification:r.verification}:{})};})};
 }
 // A post's value never claims more than the proof (Lead, 2026-10-24): rounded down on a higher-is-better
@@ -167,7 +169,7 @@ export function plainTex(tex:string):string {
 // An Other bounds row (src/lib/other-bounds.json) as a feed board. Its slug is 'other-<slug>',
 // so it never meets a Big O slug. A claim's id is its author handle and exact value: a later
 // date edit keeps the id. The leader is the row's newest claim by its best author, or an equal claim with a higher evidence level (other-leader.ts).
-export interface OtherClaim {handle:string; value:string; display:string; bound:string; evidence:string; date:string; authors:{name:string}[]}
+export interface OtherClaim {handle:string; value:string; display:string; bound:string; evidence:string; date:string; authors:{name:string}[]; refiledBy?:string}
 export interface OtherRow {slug:string; name:string; bestHandle:string; claims:OtherClaim[]; direction?:string}
 export function otherFeedBoard(row:OtherRow):FeedBoard {
  const id=(c:OtherClaim)=>c.handle+':'+c.value;
@@ -175,7 +177,7 @@ export function otherFeedBoard(row:OtherRow):FeedBoard {
  const leader=otherBoundLeader(row);
  return {slug:'other-'+row.slug,name:row.name,url:`https://bigospeedrun.com/other/${row.slug}`,leader:leader?id(leader):null,table:'other-bounds',...(row.direction==='lower'||row.direction==='higher'?{direction:row.direction}:{}),
   records:row.claims.map(c=>({id:id(c),score:c.value,relation:c.display.startsWith('<')?'strict-upper-bound':'attained',evidence:level(c.evidence),
-   authors:c.authors.map(a=>a.name),bound:plainTex(c.bound),...(c.display?{display:c.display}:{})}))};
+   authors:c.authors.map(a=>a.name),...(c.refiledBy?{refiledBy:c.refiledBy}:{}),bound:plainTex(c.bound),...(c.display?{display:c.display}:{})}))};
 }
 const isOther=(slug:string)=>slug.startsWith('other-');
 export const HOLD_LIMIT=24*60*60*1000;
@@ -193,7 +195,8 @@ export function message(board:FeedBoard,record:FeedRecord,newRecord=true,recordR
  const names=record.authors.map(clean).filter(Boolean);
  const joined=names.length<2?names.join(''):names.slice(0,-1).join(', ')+' and '+names.at(-1);
  const authors=discordText(joined.slice(0,500)||'Unknown author');
- return `**${headline(record,newRecord,recordRow)}** | **${discordText(clean(board.name))}** | \`${record.bound}\` | by ${authors} | ${record.evidence} | [${board.url.replace(/^https?:\/\//,'')}](${board.url})`;
+ const refiled=record.refiledBy?` | ${discordText(clean(record.refiledBy).slice(0,120))}`:'';
+ return `**${headline(record,newRecord,recordRow)}** | **${discordText(clean(board.name))}** | \`${record.bound}\` | by ${authors}${refiled} | ${record.evidence} | [${board.url.replace(/^https?:\/\//,'')}](${board.url})`;
 }
 // Count each URL as X's fixed 23 characters; count Unicode code points elsewhere.
 export function xPostLength(text:string):number {
@@ -202,7 +205,7 @@ export function xPostLength(text:string):number {
 export function xMessage(board:FeedBoard,record:FeedRecord,newRecord=true,recordRow=true):string {
  const names=record.authors.map(name=>name.replace(/[\r\n\t]+/g,' ').trim());
  const status=record.evidence==='Claimed'?'Claimed (not verified)':record.evidence;
- return `${headline(record,newRecord,recordRow)}!\n\nProblem: ${board.name}\n${newRecord?'New value':'Value'}: ${record.bound}\n${names.length>1?'Players':'Player'}: ${names.join(', ')||'Unknown author'}\nStatus: ${status}`;
+ return `${headline(record,newRecord,recordRow)}!\n\nProblem: ${board.name}\n${newRecord?'New value':'Value'}: ${record.bound}\n${names.length>1?'Players':'Player'}: ${names.join(', ')||'Unknown author'}\n${record.refiledBy?record.refiledBy.replace(/[\r\n\t]+/g,' ').trim()+'\n':''}Status: ${status}`;
 }
 // The row leads its board: the leader, or on the directed-sssp board a frontier row.
 const leads=(board:FeedBoard,id:string)=>board.frontier?board.frontier.includes(id):id===board.leader;

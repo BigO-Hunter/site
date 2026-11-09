@@ -8,7 +8,7 @@ import {breakthroughLabel, breakthroughDefinition} from '../lib/evidence';
 import type {EvidenceLevel} from '../lib/evidence';
 interface Row {
   href:string; name:string; nameMath?:string; classic?:string; breakthrough?:string; source?:string; breakthroughAuthors?:Author[];
-  latest:{bound:string;url:string;evidenceLevel:EvidenceLevel;date:string;endpoint?:boolean;evidenceUrl?:string;authors?:Author[]}[]; endpoint?:boolean;
+  latest:{bound:string;url:string;evidenceLevel:EvidenceLevel;date:string;endpoint?:boolean;evidenceUrl?:string;authors?:Author[];refiledBy?:string}[]; endpoint?:boolean;
 }
 interface Props {rows:Row[];id?:string;label:string;classic?:boolean;}
 const {rows,id,label,classic=false}=Astro.props;

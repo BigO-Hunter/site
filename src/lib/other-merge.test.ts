@@ -171,3 +171,21 @@ test('every reviewed upgrade in data/direct-notes.json names exactly one hand cl
   for (const [key, note] of Object.entries(notes)) if (note.upgrades)
     assert.equal(claims.filter(c => c.handle === note.upgrades!.handle && c.value === note.upgrades!.value).length, 1, key);
 });
+
+// Nil, 2026-11-09: the refiler line of an upgrading port reaches the upgraded claim; the authors are the original author.
+test('an upgrade carries the refiler line, not the refiler as an author', () => {
+  const catalan = {families: [{slug: 'catalan', direction: 'lower', bestHandle: 'slitsey', claims: [
+    {handle: 'slitsey', value: '295', display: '295', date: '2026-11-06T17:13:45Z', evidence: 'claimed', url: 'https://example.org/295'}]}]};
+  const state = {boards: {'other-catalan': {claims: [direct(187, '295', '295', {author: 'S. Litsey', authors: [{name: 'S. Litsey', url: 'https://github.com/slitsey'}],
+    refiledBy: 'Ported by MultiAgency swarm', upgrades: {handle: 'slitsey', value: '295'}}).boards['other-average-sensitivity'].claims[0]]}}};
+  const claim = (mergeDirect(catalan as any, state as any).families[0] as any).claims[0];
+  assert.equal(claim.refiledBy, 'Ported by MultiAgency swarm'); assert.deepEqual(claim.authors.map((a: any) => a.name), ['S. Litsey']);
+});
+
+test('the reviewed refiles in data/direct-notes.json credit the original author alone (Nil, 2026-11-09)', () => {
+  const notes = JSON.parse(readFileSync('data/direct-notes.json', 'utf8')).notes as Record<string, {credit?: {names: string[]; refiledBy?: string}}>;
+  assert.deepEqual(notes['direct-issue-186'].credit, {author: 'Halit Ziya KARTAL', names: ['Halit Ziya KARTAL'], accounts: {'Halit Ziya KARTAL': 'https://github.com/HalitZiyaKARTAL'}, refiledBy: 'Refiled by MultiAgency swarm'});
+  assert.deepEqual(notes['direct-issue-187'].credit, {author: 'S. Litsey', names: ['S. Litsey'], accounts: {'S. Litsey': 'https://github.com/slitsey'}, refiledBy: 'Ported by MultiAgency swarm'});
+  for (const [key, note] of Object.entries(notes)) if (note.credit?.refiledBy)
+    assert.ok(!note.credit.names.includes(note.credit.refiledBy.replace(/^(Refiled|Ported) by /, '')), key);
+});

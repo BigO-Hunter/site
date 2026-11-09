@@ -421,6 +421,8 @@ def row_for(key,claim,now,old=None,note=None):
     if note and note.get('credit'):
         require(credit_ok(note['credit']),'Invalid display credit')
         row['authors']=[author_entry(x,note['credit'].get('accounts',{}).get(x)) for x in note['credit']['names']]
+        # A refile of another author's proof (Nil, 2026-11-09): the refiler line, apart from the authors.
+        if note['credit'].get('refiledBy'):meta['refiled_by']=note['credit']['refiledBy']
     if proof:
         row['rerun_status']=dict(state='passed',checked_at=proof['checked_at'],receipt_path=proof['receipt_path'])
         meta['receipt_url']=proof['receipt_url']
@@ -500,13 +502,14 @@ def other_claims(claims,withdrawn,notes):
         if credit:
             require(credit_ok(credit),'Invalid display credit')
             author,authors=credit['author'],[author_entry(x,credit.get('accounts',{}).get(x)) for x in credit['names']]
+        refiled=credit.get('refiledBy') if credit else None
         boards.setdefault('other-'+sub['problem'],{'claims':[]})['claims'].append(dict(
             author=author,handle=key,value=sub['bound'],display=display,date=item['created_at'],dateSource=item['html_url'],dateKind='first-stated',
             url=item['html_url'],lean=True,evidence='lean-verified',note=note,authors=authors,
             leanNote='Yes: the Big O Speedrun verifier checked this Lean proof (Lean kernel and the permitted-axiom audit).',
             # The Other page links 'at commit <sha> of <repo URL>' (src/lib/source-links.ts): keep this form.
             proofScope='The verifier checked Race.bound : '+row['statement']+' ('+sub['bound']+') at commit '+sub['commit']+' of '+sub['repo_url']+'.',
-            bound=row['bound'].format(value=shown),receiptPath=proof['receipt_path']))
+            bound=row['bound'].format(value=shown),receiptPath=proof['receipt_path'],**({'refiledBy':refiled} if refiled else {})))
         # A reviewed upgrade (Lead, 2026-11-08, verifier #187: a port of S. Litsey's own 295 proof to the verifier's
         # toolchain): the result makes that hand claim of the row Lean Verified in place, not a second row (other-merge.ts).
         upgrades=notes.get(key,{}).get('upgrades')

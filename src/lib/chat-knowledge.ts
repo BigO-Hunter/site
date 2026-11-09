@@ -15,7 +15,7 @@ export interface OtherBoundsData {
     rankBy?: string[];
     reviewRepository?: OtherReviewRepository;
     claims: {handle: string; bound: string; value: string; display: string; note: string; url: string; date: string;
-      evidence: string; review?: OtherClaimReview; proofScope: string; authors: {name: string}[]}[];
+      evidence: string; review?: OtherClaimReview; proofScope: string; authors: {name: string}[]; refiledBy?: string}[];
     repos: {name: string; url: string; note?: string}[];
   }[];
 }
@@ -60,7 +60,7 @@ function otherBoundRows(data: OtherBoundsData) {
         rule: `A result is Human Verified when ${f.reviewRepository.name} merges its pull request. A result in an open pull request is Claimed.`}} : {}),
       current: {bound: best.bound, exactValue: best.value, conditions: best.note, evidence: evidenceName(best.evidence as EvidenceLevel),
         ...(f.reviewRepository && best.review ? {reviewPullRequest: otherReviewPrUrl(f.reviewRepository, best.review), reviewStatus: best.review.status} : {}),
-        authors: best.authors.map(a => a.name), date: best.date.slice(0, 10), source: best.url, proofScope: best.proofScope},
+        authors: best.authors.map(a => a.name), ...(best.refiledBy ? {refiledBy: best.refiledBy} : {}), date: best.date.slice(0, 10), source: best.url, proofScope: best.proofScope},
       claimCount: f.claims.length,
       ...(prove2meCampaignForOther(f.slug) ? {prove2meCampaign: prove2meCampaignForOther(f.slug)} : {}),
       relevantRepos: f.repos.map(r => ({name: r.name, url: r.url, ...(r.note ? {note: r.note} : {})})),
@@ -124,7 +124,7 @@ export function createKnowledge(problems: Problem[], updatedAt: string,
       const digits = sssp ? 0 : boundPrecision(records.map(r => r.score), p.symbol === 'kappa');
       const leaders = (entries: RecordEntry[]) => boardLeaders(p, entries).map(r => ({
           id: r.id, bound: sssp ? r.bound : tableBound(r, p.symbol === 'kappa', digits), exactScore: r.score, scoreRelation: r.scoreRelation,
-          evidence: evidenceName(r.evidenceLevel), authors: r.authors, date: r.date,
+          evidence: evidenceName(r.evidenceLevel), authors: r.authors, ...(r.refiledBy ? {refiledBy: r.refiledBy} : {}), date: r.date,
           dateMeaning: r.dateLabel, assumptions: r.dependencies, comparisonNote: r.comparisonNote,
           ...(r.methodNote ? {method: r.methodNote} : {}),
           // The reviewed credit note that the record table shows (record_metadata credit_note), with the earlier entry it names.

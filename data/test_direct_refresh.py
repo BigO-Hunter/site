@@ -777,6 +777,20 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual({k:v for k,v in row.items() if k!='authors'},{k:v for k,v in plain_row.items() if k!='authors'})
         for bad in [dict(text='x',credit=dict(author='A',names=[])),dict(text='x',authors=['x'],credit=shown['credit'])]:
             with self.subTest(note=bad),self.assertRaises(r.Rejected):r.row_for('direct-issue-5',big,'2026-10-11T00:00:00Z',None,bad)
+        # A refile of another author's proof (Nil, 2026-11-09, ask 021e0e9f): the original author alone in the names, the
+        # refiler line apart (Big O row metadata refiled_by, Other claim refiledBy). The refiler may not also be a name.
+        refile=dict(text='x',credit=dict(author='Halit Ziya KARTAL',names=['Halit Ziya KARTAL'],refiledBy='Refiled by MultiAgency swarm'))
+        row,meta,_=r.row_for('direct-issue-5',big,'2026-10-11T00:00:00Z',None,refile)
+        self.assertEqual(([a['name'] for a in row['authors']],meta['refiled_by']),(['Halit Ziya KARTAL'],'Refiled by MultiAgency swarm'))
+        self.assertNotIn('refiled_by',r.row_for('direct-issue-5',big,'2026-10-11T00:00:00Z',None,dict(text='x',credit=dict(author='A',names=['A'])))[1])
+        ported=dict(credit,credit=dict(author='S. Litsey',names=['S. Litsey'],refiledBy='Ported by MultiAgency swarm'))
+        claim=r.other_claims(credit_claims,{},{'direct-issue-80':ported})['other-snaky']['claims'][0]
+        self.assertEqual((claim['author'],[a['name'] for a in claim['authors']],claim['refiledBy']),('S. Litsey',['S. Litsey'],'Ported by MultiAgency swarm'))
+        self.assertNotIn('refiledBy',r.other_claims(credit_claims,{},{'direct-issue-80':shown})['other-snaky']['claims'][0])
+        from direct_note_rules import credit_ok
+        for line,ok in [('Refiled by MultiAgency swarm',True),('Ported by MultiAgency swarm',True),('Refiled by Halit Ziya KARTAL',False),
+                        ('By MultiAgency swarm',False),('Refiled by ',False),('Refiled by <b>x</b>',False),(' Refiled by x',False),(7,False)]:
+            with self.subTest(line=line):self.assertEqual(credit_ok(dict(author='Halit Ziya KARTAL',names=['Halit Ziya KARTAL'],refiledBy=line)),ok)
         # Prime gaps (verifier #148): H_1 <= B, a whole number.
         gaps=dict(sub,problem='prime-gaps',bound='246')
         listed=r.other_claims({'direct-issue-90':dict(route='issue',item=self.issue(90),submission=gaps,verification=proof)},{},{})['other-prime-gaps']['claims']

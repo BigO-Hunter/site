@@ -195,29 +195,27 @@
       "predecessor": "https://github.com/bigospeedrun/verifier/pull/156",
       "text": "A refile of Halit Ziya KARTAL's Lean Verified 0.0031415926 proof (direct-pr-156) with only its stated saving changed, to just below the rate 67/21280 that its engine already proves. The proof is Halit Ziya KARTAL's, with the credits of that row: Ali Romman's binary query tree, Cinna Davis' thin query and Jacob Sussman's construction. MultiAgency swarm extracted the constant.",
       "credit": {
-        "author": "Halit Ziya KARTAL; MultiAgency swarm (constant extraction)",
+        "author": "Halit Ziya KARTAL",
         "names": [
-          "Halit Ziya KARTAL",
-          "MultiAgency swarm"
+          "Halit Ziya KARTAL"
         ],
         "accounts": {
-          "Halit Ziya KARTAL": "https://github.com/HalitZiyaKARTAL",
-          "MultiAgency swarm": "https://github.com/darkhipo"
-        }
+          "Halit Ziya KARTAL": "https://github.com/HalitZiyaKARTAL"
+        },
+        "refiledBy": "Refiled by MultiAgency swarm"
       }
     },
     "direct-issue-187": {
       "text": "S. Litsey's Lean proof of \\(\\mu(G)\\le 295\\) (slitsey/catalan-irrationality-measure@65cfcc2), ported by MultiAgency swarm to Lean v4.34.1, the verifier's version; Litsey's own build needs v4.35.0-rc2. The proof is S. Litsey's, produced by AI systems at the author's request (README), on OpenAI's determinant construction with the quadrature nodes and Lean files of Cinna Davis.",
       "credit": {
-        "author": "S. Litsey; MultiAgency swarm (port)",
+        "author": "S. Litsey",
         "names": [
-          "S. Litsey",
-          "MultiAgency swarm"
+          "S. Litsey"
         ],
         "accounts": {
-          "S. Litsey": "https://github.com/slitsey",
-          "MultiAgency swarm": "https://github.com/darkhipo"
-        }
+          "S. Litsey": "https://github.com/slitsey"
+        },
+        "refiledBy": "Ported by MultiAgency swarm"
       },
       "upgrades": {
         "handle": "slitsey",

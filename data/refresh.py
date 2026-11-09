@@ -499,7 +499,7 @@ def list_pulls(stage, now, force_full=False):
 # A new CrocSwap row starts from a copy of crocswap-pr-61. These fields belong to that one row (a reviewed note,
 # credits, a prove2.me upgrade or a rerun), so a copy drops them, and its tier starts at Claimed (lead, 2026-11-02).
 ROW_ONLY_RECORD = ('rerun_status', 'provenance')
-ROW_ONLY_METADATA = ('credit_note', 'credits', 'notes_url', 'listing_status', 'claim_date_commit', 'upstream_readme',
+ROW_ONLY_METADATA = ('credit_note', 'refiled_by', 'credits', 'notes_url', 'listing_status', 'claim_date_commit', 'upstream_readme',
                      'prove2me', 'prove2me_upgrade', 'receipt_url')
 
 def row_template(record, meta):

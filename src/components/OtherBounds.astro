@@ -18,7 +18,7 @@ const rows=data.families.map(f=>{
     // A Lean Verified leader's label opens its evidence: the prove2.me theorem page for an import. A Human
     // Verified leader's label opens the pull request that the row's review repository merged.
     latest:[{bound:best.bound,url:best.url,evidenceLevel:best.evidence as EvidenceLevel,date:best.date,
-      evidenceUrl:best.evidence==='lean-verified'?(best as {evidenceUrl?:string}).evidenceUrl??best.url:best.evidence==='human-verified'&&repo&&review?otherReviewPrUrl(repo,review):undefined,authors:best.authors}]};
+      evidenceUrl:best.evidence==='lean-verified'?(best as {evidenceUrl?:string}).evidenceUrl??best.url:best.evidence==='human-verified'&&repo&&review?otherReviewPrUrl(repo,review):undefined,authors:best.authors,refiledBy:(best as {refiledBy?:string}).refiledBy}]};
 });
 ---
 <section aria-labelledby="other-bounds">

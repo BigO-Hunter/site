@@ -18,9 +18,18 @@ def credit_ok(credit):
     """A display credit (Big O direct rows and Other bounds rows): {'author': one plain-text line, 'names': 1 to 30 distinct
     names}, in credit order, and optionally 'accounts', the profile of a named person (a GitHub profile or an ORCID record,
     from the public record; author_links.py). A name without an account is shown without a link. Plain text: no markup,
-    no TeX, no control characters, no leading or trailing space."""
+    no TeX, no control characters, no leading or trailing space.
+
+    Optionally 'refiledBy': on a refile or port of another author's proof, the line that names the refiler, such as
+    'Refiled by MultiAgency swarm' or 'Ported by MultiAgency swarm'. The credited author is the original author alone, and
+    the refiler is no co-author (Nil, 2026-11-09, ask 021e0e9f): the line shows apart from the names, which must not
+    hold the refiler."""
     plain=lambda x,n:isinstance(x,str) and 0<len(x.strip())==len(x)<=n and not re.search(r'[<>&$\\]',x) and all(ord(c)>=32 for c in x)
-    return (isinstance(credit,dict) and {'author','names'}<=set(credit)<={'author','names','accounts'} and plain(credit['author'],500)
+    refiled=credit.get('refiledBy') if isinstance(credit,dict) else None
+    if refiled is not None and not (plain(refiled,120) and re.fullmatch(r'(Refiled|Ported) by (.+)',refiled)
+                                    and re.fullmatch(r'(?:Refiled|Ported) by (.+)',refiled).group(1) not in credit.get('names',[])):
+        return False
+    return (isinstance(credit,dict) and {'author','names'}<=set(credit)<={'author','names','accounts','refiledBy'} and plain(credit['author'],500)
             and isinstance(credit['names'],list) and 0<len(credit['names'])<=30 and len(set(credit['names']))==len(credit['names'])
             and all(plain(x,120) for x in credit['names'])
             and accounts_ok(credit.get('accounts',{}),credit['names']))

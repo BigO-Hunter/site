@@ -584,3 +584,18 @@ test('3-SAT alpha rounds down in the table and in posts',()=>{
  // A denominator that is a power of 10 stays a decimal.
  assert.equal(plainBound('3sat','49/100'),'O*(2^(n/(log n)^(0.49 - o(1))))');
 });
+
+// Nil, 2026-11-09 (ask 021e0e9f): on a refile of another author's proof the original author alone is credited; the
+// refiler line is its own part of the post, never among the authors.
+test('a refile names the original author alone and the refiler on its own line (Discord and X)',()=>{
+ const r={...row('direct-issue-186','Lean Verified','3148496239/1000000000000'),authors:['Halit Ziya KARTAL'],refiledBy:'Refiled by MultiAgency swarm'};
+ assert.equal(message(board([r],r.id),r,false),`**Record verified** | **Fourier Transform** | \`${r.bound}\` | by Halit Ziya KARTAL | Refiled by MultiAgency swarm | Lean Verified | [bigospeedrun.com/exact-dft](https://bigospeedrun.com/exact-dft)`);
+ assert.equal(xMessage(board([r],r.id),r,false),`Record verified!\n\nProblem: Fourier Transform\nValue: ${r.bound}\nPlayer: Halit Ziya KARTAL\nRefiled by MultiAgency swarm\nStatus: Lean Verified`);
+ // Without the line the text is as before.
+ assert.ok(!message(board(),row()).includes('Refiled'));assert.ok(!xMessage(board(),row()).includes('Refiled'));
+ // The boards carry the line from the table rows and the Other claims.
+ const fb=feedBoard({slug:'exact-dft',direction:'higher-is-better'},[{id:'x',score:'1/1000',scoreRelation:'attained',date:'2026-11-08',repoId:'r',evidenceLevel:'lean-verified',authors:[{name:'Halit Ziya KARTAL',url:''}],refiledBy:'Refiled by MultiAgency swarm'} as any],'Fourier Transform');
+ assert.equal(fb.records[0].refiledBy,'Refiled by MultiAgency swarm');assert.deepEqual(fb.records[0].authors,['Halit Ziya KARTAL']);
+ const ob=otherFeedBoard({slug:'catalan',name:'Catalan',bestHandle:'slitsey',direction:'lower',claims:[{handle:'slitsey',value:'295',display:'295',bound:'\\mu(G)\\le 295',evidence:'lean-verified',date:'2026-11-06T17:13:45Z',authors:[{name:'S. Litsey'}],refiledBy:'Ported by MultiAgency swarm'}]});
+ assert.equal(ob.records[0].refiledBy,'Ported by MultiAgency swarm');assert.deepEqual(ob.records[0].authors,['S. Litsey']);
+});

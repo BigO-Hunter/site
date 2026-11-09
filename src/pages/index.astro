@@ -25,7 +25,7 @@ const rows = [
   const records=boardRecords(problem);
   const breakthroughRecord=problem.records.find(record=>record.id===row.breakthroughId)!;
   const breakthrough=breakthroughRecord.shortBound??breakthroughRecord.bound;
-  const latest=landingRecords(records,problem.direction,problem.chartLines).map(record=>({bound:record.shortBound??record.bound,url:record.evidence[0]?.url??'/'+row.slug,evidenceLevel:record.evidenceLevel,date:record.date,endpoint:record.scoreRelation==='strict-upper-bound',evidenceUrl:record.evidenceLevel==='claimed'?undefined:record.evidenceUrl,authors:record.authors}));
+  const latest=landingRecords(records,problem.direction,problem.chartLines).map(record=>({bound:record.shortBound??record.bound,url:record.evidence[0]?.url??'/'+row.slug,evidenceLevel:record.evidenceLevel,date:record.date,endpoint:record.scoreRelation==='strict-upper-bound',evidenceUrl:record.evidenceLevel==='claimed'?undefined:record.evidenceUrl,authors:record.authors,refiledBy:record.refiledBy}));
   return {...row,href:'/'+row.slug,name:problemDisplayName(row.slug),breakthrough,breakthroughAuthors:breakthroughRecord.authors,latest,endpoint:latest.some(record=>record.endpoint)};
 });
 
