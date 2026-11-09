@@ -134608,5 +134608,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6934,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6934",
+    "title": "Conditional κ = .00362386 (+0.077% over #6932): rebuilt word, smaller caller",
+    "state": "open",
+    "created_at": "2026-11-09T13:06:18Z",
+    "updated_at": "2026-11-09T13:06:18Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "4e13b7acdbea1c9f12aa88126435360eecea7401"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]

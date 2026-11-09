@@ -131507,6 +131507,22 @@
       "claim_files_head": "a967c521074c2c7450255ae237fda9c439ee1b35",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6934,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = .00362386 (+0.077% over #6932): rebuilt word, smaller caller",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6934",
+      "submitted_at": "2026-11-09T13:06:18Z",
+      "updated_at": "2026-11-09T13:06:18Z",
+      "source_commit": "4e13b7acdbea1c9f12aa88126435360eecea7401",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T13:06:18Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }
