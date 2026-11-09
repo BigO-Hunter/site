@@ -619,6 +619,42 @@
       }
     },
     {
+      "id": "direct-issue-190",
+      "kind": "improvement",
+      "score": "3363623/1000000000",
+      "score_relation": "attained",
+      "tier": "claimed",
+      "submitted_at": "2026-11-09T12:08:28Z",
+      "spec_version": "1",
+      "title": "AnanasClassic direct dft submission",
+      "authors": [
+        {
+          "name": "AnanasClassic",
+          "url": "https://github.com/AnanasClassic"
+        }
+      ],
+      "predecessors": [],
+      "submission_url": "https://github.com/bigospeedrun/verifier/issues/190",
+      "source_commit": "38d22084f270723dbe769b94bd690c372a08e390",
+      "artifact": {
+        "path": "sources/direct-issue-190-submission.json",
+        "sha256": "e949dd51825d6d20d19fd616170891c13f15ebead805efbc804fba937584047b"
+      },
+      "evidence": {
+        "paper_url": "https://github.com/bigospeedrun/verifier/issues/190",
+        "theorem": "Race.bound",
+        "certificate_path": null
+      },
+      "dependencies": [],
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T12:08:28Z",
+      "site_observed_at": "2026-11-09T12:30:45Z",
+      "source": {
+        "kind": "repo-artifact",
+        "url": "https://github.com/AnanasClassic/fft-power-saving-lean/tree/38d22084f270723dbe769b94bd690c372a08e390"
+      }
+    },
+    {
       "id": "direct-issue-30",
       "kind": "improvement",
       "score": "2532237/2000000000",
@@ -1357,6 +1393,24 @@
       "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/39211915423",
       "verification": "passed"
     },
+    "direct-issue-190": {
+      "checked_at": "2026-11-09",
+      "source_url": "https://github.com/AnanasClassic/fft-power-saving-lean/tree/38d22084f270723dbe769b94bd690c372a08e390",
+      "repo": "AnanasClassic/fft-power-saving-lean",
+      "site_badge": false,
+      "eligible_for_record": false,
+      "proof_status": "Submitted bound; independent verification has not passed.",
+      "upstream_tier": "claimed",
+      "site_tier": "claimed",
+      "comparison_key": "exact-dft/uniform-exact-arithmetic/v1",
+      "publication_date": "2026-11-09T12:08:28Z",
+      "publication_date_precision": "date-time",
+      "publication_date_role": "Submission opened",
+      "publication_source_url": "https://github.com/bigospeedrun/verifier/issues/190",
+      "direct_submission": true,
+      "route": "issue",
+      "verification": "pending"
+    },
     "direct-issue-30": {
       "checked_at": "2026-11-09",
       "source_url": "https://github.com/ptweezy/exact-dft-lean/blob/f9357424312209f85e0c7e28dce0e6bb01986608/Submission.lean",
@@ -1558,5 +1612,5 @@
       "verification": "passed"
     }
   },
-  "updated_at": "2026-11-09T07:30:11Z"
+  "updated_at": "2026-11-09T12:30:45Z"
 }

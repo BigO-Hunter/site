@@ -1,0 +1,15 @@
+{
+  "route": "issue",
+  "number": 190,
+  "url": "https://github.com/bigospeedrun/verifier/issues/190",
+  "submitter": "AnanasClassic",
+  "created_at": "2026-11-09T12:08:28Z",
+  "submission": {
+    "schema_version": 1,
+    "problem": "dft",
+    "repo_url": "https://github.com/AnanasClassic/fft-power-saving-lean",
+    "commit": "38d22084f270723dbe769b94bd690c372a08e390",
+    "bound": "3363623/1000000000",
+    "authors": []
+  }
+}

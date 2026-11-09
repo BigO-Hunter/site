@@ -1,6 +1,17 @@
 {
   "schema_version": 1,
   "entries": {
+    "direct-issue-190": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "dft",
+        "repo_url": "https://github.com/AnanasClassic/fft-power-saving-lean",
+        "commit": "38d22084f270723dbe769b94bd690c372a08e390",
+        "bound": "3363623/1000000000",
+        "authors": []
+      }
+    },
     "direct-issue-186": {
       "route": "issue",
       "submission": {
@@ -4775,6 +4786,11 @@
       "version": "2a99093f84c8a98f9042bf13931bc6d6241694d6b190882d7a9bded659a241c2",
       "updated_at": "2026-11-07T16:53:55Z",
       "claimed_only": true
+    },
+    "189": {
+      "version": "1a76cdac3c39d1dbd5e702b48d20167f6bb945a4",
+      "updated_at": "2026-11-09T12:04:53Z",
+      "claimed_only": false
     }
   },
   "not_verified_cache": {
@@ -4832,6 +4848,11 @@
       "version": "8fe7c8ced358d93c23c7f09c7210d722ded289f89fe2da2da6097e390011d022",
       "updated_at": "2026-11-09T10:51:20Z",
       "not_verified": true
+    },
+    "190": {
+      "version": "fdc7b6a6cf17aefc39486fba3a7c35f1265f6aa88a45962ad36acb9e1e128b76",
+      "updated_at": "2026-11-09T12:08:39Z",
+      "not_verified": false
     }
   }
 }
