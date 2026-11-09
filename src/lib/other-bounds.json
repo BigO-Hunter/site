@@ -3108,6 +3108,30 @@
           ],
           "proofScope": "A written proof by gate elimination in a preprint. No Lean proof is supplied.",
           "bound": "3.5n-o(n)"
+        },
+        {
+          "author": "Om Swostik Mishra and Rahul Santhanam",
+          "handle": "mishra-santhanam",
+          "value": "4",
+          "display": "4n-O(\\log n)",
+          "date": "2026-11-03T00:48:00+02:00",
+          "dateSource": "https://eccc.weizmann.ac.il/report/2026/260/",
+          "dateKind": "first-stated",
+          "url": "https://eccc.weizmann.ac.il/report/2026/260/",
+          "lean": false,
+          "leanNote": "No.",
+          "evidence": "claimed",
+          "note": "The function is in P. Revision 1 of ECCC TR26-260 raises the \\(3.5n-o(n)\\) of the first version of the same report to \\(4n-O(\\log n)\\), which is stronger than \\(4n-o(n)\\). The method is gate elimination with substitutions on independent parameters.",
+          "authors": [
+            {
+              "name": "Om Swostik Mishra"
+            },
+            {
+              "name": "Rahul Santhanam"
+            }
+          ],
+          "proofScope": "A written proof by gate elimination in a preprint revision. No Lean proof is supplied.",
+          "bound": "4n-O(\\log n)"
         }
       ],
       "repos": [],
