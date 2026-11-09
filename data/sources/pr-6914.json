@@ -1,0 +1,11 @@
+{
+  "number": 6914,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6914",
+  "title": "Realize all 23 owned rises under retained operator and ownership contracts (no new κ)",
+  "body": "## Change and mathematical scope\nRealize all 23 owned rises of #6902 using exact phase-bearing monomial adapters and one completed positive child on the same current field. The retained contracts allow arbitrary contents, prior reads and intervening scalar contacts.\n\nRank mass 56 is already paid; 2,019 adapter records fit the existing 23,000 allowance. The full 38,334-event lifetime scan retains peak 30 and 53 dirty clears. This resolves the additional A6 direction/content implication under retained contracts, without proving those contracts. No new κ.\n\n## Sources and verification\nBase: 7c49fe32c55de02c2c873655c804b16e4c3fef0a.\nHead: 11aa5341e740a8d9dd14ab54437a45840686e991.\nSource #6902: e4d42607f24d7a049b0fca329dc4c34882405c25; exact pins in SOURCES.json/RETAINED.json.\n\nRun:\n`python3 -B scripts/research_package.py --package research/owned-ascent-contract`\n\nFresh Python 3.12.14 replay passed all four registered normal/optimized checks: 11,776 basis cases, 6,029,312 exact entries, complete lifetimes and phase/alias/erasure controls. Expected: PASS_REGISTERED_RESEARCH_PACKAGE. Committed bytes/modes and whitespace pass. Later #6902 changes leave executable inputs unchanged.\n\n## Limits and credit\nPhysical erasure, complete allocation/control, native/caller admission, BIT and all five assumptions remain. Fresh finite-template constants and distinct occurrence banks are required. Frontier unchanged.\n\n@CubeJerry with substantial OpenAI Codex assistance; distinct algorithms share their original author. Credit DreamingOfClouds, #5241/#4416, Matarener (#5445), Ali Romman (#5377), Chris R/Clear1nsight, #2479 and retained authors. Apache-2.0.",
+  "created_at": "2026-11-09T03:39:13Z",
+  "updated_at": "2026-11-09T03:39:13Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

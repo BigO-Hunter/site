@@ -1,0 +1,11 @@
+{
+  "number": 6913,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6913",
+  "title": "Lower global LAMBDA gates to charged ordinary passes (no new κ)",
+  "body": "## Change and mathematical scope\nLower #6902's global LAMBDA normalizers to initialized scratch, COPY-as-addition, fixed translation, Gaussian-dyadic combination and clear, at every positive width. The coefficients remain outside tensor powers. All 12,896 uses are separately charged; no recursive Gaussian child or target credit is introduced.\n\nThe conservative raw total including an extra 12,896,000 route debit is 983,967,328, below 10^9. Scratch peak remains 30; E_out≤2E+D+R retains dirty residuals. No new κ.\n\n## Sources and verification\nBase: 7c49fe32c55de02c2c873655c804b16e4c3fef0a.\nHead: 5cca8d4442d434a873ef905ffdea4b80bf9f2e34.\nSource #6902: e4d42607f24d7a049b0fca329dc4c34882405c25; exact pins in SOURCES.json/RETAINED.json.\n\nRun:\n`python3 -B scripts/research_package.py --package research/global-lambda-lowering`\n\nFresh Python 3.12.14 replay passed all four registered normal/optimized checks, source/mutation controls, dense width-two execution and code-disjoint Fourier oracle. Expected: PASS_REGISTERED_RESEARCH_PACKAGE. Committed bytes/modes and whitespace pass. Later #6902 changes leave executable inputs unchanged.\n\n## Limits and credit\nThe allowance is finite route accounting, not tape steps. Physical movement, owned erasure, compiler, BIT and all five assumptions remain. No supplier admission or frontier change.\n\n@CubeJerry with substantial OpenAI Codex assistance. Checkers differ in mechanism/code, not original authorship. Credit DreamingOfClouds, zxv, #6763/#6735, Matarener (#5445) and retained authors. Apache-2.0.",
+  "created_at": "2026-11-09T03:38:47Z",
+  "updated_at": "2026-11-09T03:38:47Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}

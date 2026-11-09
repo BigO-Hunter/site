@@ -134146,5 +134146,131 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6912,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6912",
+    "title": "Simplify shared-native caller constants while preserving every boundary (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T03:36:31Z",
+    "updated_at": "2026-11-09T03:36:31Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "16bfe27268808ead5b9a1ad0048a50483c430156"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6913,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6913",
+    "title": "Lower global LAMBDA gates to charged ordinary passes (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T03:38:47Z",
+    "updated_at": "2026-11-09T03:38:47Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "5cca8d4442d434a873ef905ffdea4b80bf9f2e34"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6914,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6914",
+    "title": "Realize all 23 owned rises under retained operator and ownership contracts (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T03:39:13Z",
+    "updated_at": "2026-11-09T03:39:13Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "11aa5341e740a8d9dd14ab54437a45840686e991"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6915,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6915",
+    "title": "Classify paired-root commutants and prove the four-thin boundary (no new κ)",
+    "state": "open",
+    "created_at": "2026-11-09T03:39:30Z",
+    "updated_at": "2026-11-09T03:39:30Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "74bbc383040ec6e50ac4f2b1a7ef7b97648cd8a0"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6916,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6916",
+    "title": "Conditional κ = 0.00357027 (+1.443% over #6911): 68 causal helper splits",
+    "state": "open",
+    "created_at": "2026-11-09T03:39:45Z",
+    "updated_at": "2026-11-09T03:44:35Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "ed359c115fa713395da380dcc602761196f5df4a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6917,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6917",
+    "title": "Conditional κ = 0.003530104 (+0.302% over #6911): flip mirror pairs around forward gates",
+    "state": "open",
+    "created_at": "2026-11-09T04:14:45Z",
+    "updated_at": "2026-11-09T04:14:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "07e81202470957555569d0c1077b2d6915e897fe"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": true
   }
 ]

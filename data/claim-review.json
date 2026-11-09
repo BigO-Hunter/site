@@ -13,6 +13,13 @@
       "title": "Conditional κ = 0.003519487 (+0.154% over #6902): 8 ports keep the hosted form",
       "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6911",
       "reason": "The PR adds no single own research package CLAIM.json."
+    },
+    {
+      "pr": 6916,
+      "head": "ed359c115fa713395da380dcc602761196f5df4a",
+      "title": "Conditional κ = 0.00357027 (+1.443% over #6911): 68 causal helper splits",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6916",
+      "reason": "The PR adds no single own research package CLAIM.json."
     }
   ]
 }

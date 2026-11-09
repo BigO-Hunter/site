@@ -130966,6 +130966,148 @@
       "claim_files_head": "5c06d893b5542570116f73f3a438ae94f70f45ee",
       "claim_files_base": "main",
       "claim_files_result": true
+    },
+    {
+      "pr_number": 6912,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Simplify shared-native caller constants while preserving every boundary (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6912",
+      "submitted_at": "2026-11-09T03:36:31Z",
+      "updated_at": "2026-11-09T03:36:31Z",
+      "source_commit": "16bfe27268808ead5b9a1ad0048a50483c430156",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T03:36:31Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "16bfe27268808ead5b9a1ad0048a50483c430156",
+      "claim_text": "04f504ef460b31c2b47bd11838e1c479fab57bacbcddbe1a5ccf2837d060a222",
+      "claim_files": [],
+      "claim_files_head": "16bfe27268808ead5b9a1ad0048a50483c430156",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6913,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Lower global LAMBDA gates to charged ordinary passes (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6913",
+      "submitted_at": "2026-11-09T03:38:47Z",
+      "updated_at": "2026-11-09T03:38:47Z",
+      "source_commit": "5cca8d4442d434a873ef905ffdea4b80bf9f2e34",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T03:38:47Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "5cca8d4442d434a873ef905ffdea4b80bf9f2e34",
+      "claim_text": "419bef15f433ac3aad39652d48b14e2eb1f019947022d03389151147b5fd1e80",
+      "claim_files": [
+        [
+          "added",
+          "research/global-lambda-lowering/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "5cca8d4442d434a873ef905ffdea4b80bf9f2e34",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6914,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Realize all 23 owned rises under retained operator and ownership contracts (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6914",
+      "submitted_at": "2026-11-09T03:39:13Z",
+      "updated_at": "2026-11-09T03:39:13Z",
+      "source_commit": "11aa5341e740a8d9dd14ab54437a45840686e991",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T03:39:13Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "11aa5341e740a8d9dd14ab54437a45840686e991",
+      "claim_text": "d2ae3fdb80e0f75f445761e52c29157cbdc934f1a3007ca6305194d10707d574",
+      "claim_files": [
+        [
+          "added",
+          "research/owned-ascent-contract/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "11aa5341e740a8d9dd14ab54437a45840686e991",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6915,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Classify paired-root commutants and prove the four-thin boundary (no new κ)",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6915",
+      "submitted_at": "2026-11-09T03:39:30Z",
+      "updated_at": "2026-11-09T03:39:30Z",
+      "source_commit": "74bbc383040ec6e50ac4f2b1a7ef7b97648cd8a0",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T03:39:30Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim.",
+      "claim_head": "74bbc383040ec6e50ac4f2b1a7ef7b97648cd8a0",
+      "claim_text": "5f50b8820cca02e00caffefb31dfc4657472879f1dfda9d1efb8f78b9c48051c",
+      "claim_files": [],
+      "claim_files_head": "74bbc383040ec6e50ac4f2b1a7ef7b97648cd8a0",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6916,
+      "author": "CubeJerry",
+      "author_url": "https://github.com/CubeJerry",
+      "title": "Conditional κ = 0.00357027 (+1.443% over #6911): 68 causal helper splits",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6916",
+      "submitted_at": "2026-11-09T03:39:45Z",
+      "updated_at": "2026-11-09T03:44:35Z",
+      "source_commit": "ed359c115fa713395da380dcc602761196f5df4a",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T03:39:45Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "The PR adds no single own research package CLAIM.json.",
+      "claim_head": "ed359c115fa713395da380dcc602761196f5df4a",
+      "claim_text": "73169e1bcaecc16d5a77bf4181bb88846034d50247985689fdf31c23bfe15d48",
+      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_files": [
+        [
+          "added",
+          "research/p104-shared-native-helper-splits/RESULT.json"
+        ]
+      ],
+      "claim_files_head": "ed359c115fa713395da380dcc602761196f5df4a",
+      "claim_files_base": "main",
+      "claim_files_result": true
+    },
+    {
+      "pr_number": 6917,
+      "author": "DreamingOfClouds",
+      "author_url": "https://github.com/DreamingOfClouds",
+      "title": "Conditional κ = 0.003530104 (+0.302% over #6911): flip mirror pairs around forward gates",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6917",
+      "submitted_at": "2026-11-09T04:14:45Z",
+      "updated_at": "2026-11-09T04:14:45Z",
+      "source_commit": "07e81202470957555569d0c1077b2d6915e897fe",
+      "upstream_status": "open",
+      "upstream_status_at": "2026-11-09T04:14:45Z",
+      "checked_at": "2026-11-09",
+      "claimed_score": null,
+      "record_ids": [],
+      "note": "No research package kappa claim."
     }
   ]
 }

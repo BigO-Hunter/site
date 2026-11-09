@@ -1,0 +1,11 @@
+{
+  "number": 6912,
+  "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6912",
+  "title": "Simplify shared-native caller constants while preserving every boundary (no new κ)",
+  "body": "## Change and mathematical scope\nReduce the frozen #6902 caller from 2,492 events to 1,194 by rewriting 38 constant blocks. Every nonconstant anchor and native boundary is preserved. The ordinary-work allowance falls by 172,789,760; paid/productive histograms are unchanged. No new κ.\n\n## Sources and verification\nBase: 7c49fe32c55de02c2c873655c804b16e4c3fef0a.\nHead: 16bfe27268808ead5b9a1ad0048a50483c430156.\nSource #6902: e4d42607f24d7a049b0fca329dc4c34882405c25; hashes in SOURCES.json.\n\nRun:\n`python3 -B scripts/research_package.py --package research/p104-caller-constant-blocks`\n\nFresh Python 3.12.14 replay passed all three registered checks, including normal/optimized checks and the separate exact whole-caller oracle. All 60,800 changed-block entries and mutation controls pass. Expected: PASS_REGISTERED_RESEARCH_PACKAGE. Committed bytes/modes and whitespace pass. Latest #6902 changes leave these caller/native/root inputs unchanged.\n\n## Limits and credit\nNo runtime benchmark, rounded-execution equality or supplier admission. All five framework assumptions remain; selected frontier unchanged. Proof, prior separate AI review and next questions are included.\n\n@CubeJerry with substantial OpenAI Astra/Codex assistance. Credit DreamingOfClouds (#6902/#6833), zxv (#6726), thu-nmrc (#6716) and retained authors. Apache-2.0.",
+  "created_at": "2026-11-09T03:36:31Z",
+  "updated_at": "2026-11-09T03:36:31Z",
+  "closed_at": null,
+  "merged_at": null,
+  "state": "open"
+}
