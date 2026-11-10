@@ -30,8 +30,8 @@ PACKAGE_FIELD = {'CLAIM.json': 'kappa', 'RESULT.json': 'conditional_kappa', 'ARI
 RESULT_SINCE_PR = 3945
 # A title that names a kappa value, without a structured claim, goes to the lead:
 # 'κ = 0.0017', 'kappa 0.1', 'kappa from 0.00172 to 0.00173', 'kappa>=0.1',
-# 'kappa of 0.0017', 'new record 0.0017'. The title only routes to review; it never lists.
-NAMES_KAPPA = re.compile(r'(?:κ|kappa)\s*(?:=|≈|:|>=|≥|<=|≤|>|<|\b(?:of|from|to|at|is|now|reaches|becomes)\b)?\s*[-−]?\d'
+# 'kappa of 0.0017', 'κ .00362702' (no leading zero), 'new record 0.0017'. The title only routes to review; it never lists.
+NAMES_KAPPA = re.compile(r'(?:κ|kappa)\s*(?:=|≈|:|>=|≥|<=|≤|>|<|\b(?:of|from|to|at|is|now|reaches|becomes)\b)?\s*[-−]?\.?\d'
                          r'|\bnew (?:record|best|bound|leader)\b\D{0,20}\d*\.\d', re.I)
 # Packages of PRs listed from their titles before 2026-10-17 (surveyed that day: every
 # scored PR since #2850). Another PR that adds one of these paths does not own it.

@@ -237,8 +237,10 @@ class RefreshTests(unittest.TestCase):
             cost=f'research/p104-pr{number}/RESULT.json'
             self.assertEqual(self.claim({cost:'added'},{'complete_cost':{'kappa':exact,'kappa_decimal':'0.0031','outer':{'parameters':{'kappa':exact}}}},title=title)[:2],
                              (exact,cost),number)
-        # A leading-dot title kappa ('κ .0031') is read for a RESULT.json match only: with no match it stays silent as before.
-        self.assertEqual(self.claim({cost:'added'},{'complete_cost':{'kappa':'1564193/500000000'}},title='Conditional κ .0031 via something'),(None,None,None))
+        # A leading-dot title kappa ('κ .0031') names a kappa like any other (2026-11-10, #6931 to #6936): with no RESULT.json
+        # match it goes to the lead, unless a known leader is at or above it.
+        self.assertEqual(self.claim({cost:'added'},{'complete_cost':{'kappa':'1564193/500000000'}},title='Conditional κ .0031 via something'),(None,None,'The PR adds no single own research package CLAIM.json.'))
+        self.assertEqual(self.claim({cost:'added'},{'complete_cost':{'kappa':'1564193/500000000'}},title='Conditional κ .0031 via something',leader=refresh.Fraction('0.0032')),(None,None,None))
         # A complete_cost.kappa the title does not state stays with the lead.
         cost='research/p104-other/RESULT.json'
         score,path,reason=self.claim({cost:'added'},{'complete_cost':{'kappa':'1564193/500000000'}},title='Conditional κ = 0.0031 via something')
@@ -467,10 +469,22 @@ class RefreshTests(unittest.TestCase):
 
     def test_names_kappa_routing(self):
         for t in ['κ = 0.0017','Kappa 0.1 budget screens','kappa from 0.00172 to 0.00173','kappa>=0.1','kappa ≥ 0.1',
-                  'raise kappa of 0.0017','New record 0.001729','new best: 0.0017','research: κ = 0.001729737950064278551242895823']:
+                  'raise kappa of 0.0017','New record 0.001729','new best: 0.0017','research: κ = 0.001729737950064278551242895823',
+                  'Conditional κ .00362702 (+0.0872% over #6934)','kappa .00362386','κ=.0036']:
             self.assertTrue(refresh.NAMES_KAPPA.search(t),t)
-        for t in ['Implement aligned bit circuits','Kappa-preserving refactor','rank-seven restore block']:
+        for t in ['Implement aligned bit circuits','Kappa-preserving refactor','rank-seven restore block','kappa.py checker',
+                  'Remove empty-root credits from the paired BIT supplier at 0.00385248 (no new κ)']:
             self.assertFalse(refresh.NAMES_KAPPA.search(t),t)
+
+    def test_title_kappa_without_leading_zero_goes_to_review(self):
+        # #6931, #6932, #6934, #6936 (2026-11-09): the title writes kappa as .00362702 with no leading zero; the
+        # importer read no claim and queued nothing, so the PR had no row and no decision.
+        self.assertEqual(refresh.title_kappas('Conditional κ .00362702 (+0.0872% over #6934)'),[refresh.Fraction('0.00362702')])
+        own={'research/p104-main-wire-native/README.md':'added'}
+        reason=self.claim(own,None,title='Conditional κ .00362702 (+0.0872% over #6934): shared main wires',leader=refresh.Fraction('0.00359528269'))[2]
+        self.assertEqual(reason,'The PR adds no single own research package CLAIM.json.')
+        # "no new κ" names no value: still silent, like any PR without a claim.
+        self.assertEqual(self.claim({'research/x/README.md':'added'},None,title='Remove empty-root credits from the paired BIT supplier at 0.00385248 (no new κ)',leader=refresh.Fraction('0.00359528269')),(None,None,None))
 
     def test_claim_state(self):
         head='h'*40
