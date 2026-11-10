@@ -134738,10 +134738,10 @@
   {
     "number": 6940,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6940",
-    "title": "Record that two F2 thin maps on the three-leaf paired star need total…",
+    "title": "Record that two F2 thin maps on the three-leaf paired star need total rank 8",
     "state": "open",
     "created_at": "2026-11-10T02:11:03Z",
-    "updated_at": "2026-11-10T02:11:03Z",
+    "updated_at": "2026-11-10T02:17:07Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134762,7 +134762,7 @@
     "title": "Prove the six-source c=7 diagonal equality case is empty.",
     "state": "open",
     "created_at": "2026-11-10T02:11:06Z",
-    "updated_at": "2026-11-10T02:11:06Z",
+    "updated_at": "2026-11-10T02:17:21Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134780,10 +134780,10 @@
   {
     "number": 6942,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6942",
-    "title": "Cursor/three signed old once a03a",
+    "title": "Character-exclude the all-old-once three signed frames",
     "state": "open",
     "created_at": "2026-11-10T02:11:32Z",
-    "updated_at": "2026-11-10T02:11:32Z",
+    "updated_at": "2026-11-10T02:17:31Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134804,7 +134804,7 @@
     "title": "Record length-30 sojourn obstructions for eight singleton sources",
     "state": "open",
     "created_at": "2026-11-10T02:11:33Z",
-    "updated_at": "2026-11-10T02:11:33Z",
+    "updated_at": "2026-11-10T02:17:41Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134825,7 +134825,7 @@
     "title": "Certify the centre sign-character split into 216-dimensional blocks",
     "state": "open",
     "created_at": "2026-11-10T02:11:36Z",
-    "updated_at": "2026-11-10T02:11:36Z",
+    "updated_at": "2026-11-10T02:17:51Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134843,10 +134843,10 @@
   {
     "number": 6945,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6945",
-    "title": "Prove the declared active-feedback decoder keeps one y0 coupling mono…",
+    "title": "Prove the declared active-feedback decoder keeps one y0 coupling monomial",
     "state": "open",
     "created_at": "2026-11-10T02:11:38Z",
-    "updated_at": "2026-11-10T02:11:38Z",
+    "updated_at": "2026-11-10T02:18:02Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134867,7 +134867,7 @@
     "title": "Bound the odd-character port window by 36.",
     "state": "open",
     "created_at": "2026-11-10T02:11:40Z",
-    "updated_at": "2026-11-10T02:11:40Z",
+    "updated_at": "2026-11-10T02:18:15Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134888,7 +134888,7 @@
     "title": "Record a swap-free route for the helper-462 matcher.",
     "state": "open",
     "created_at": "2026-11-10T02:11:41Z",
-    "updated_at": "2026-11-10T02:11:41Z",
+    "updated_at": "2026-11-10T02:18:25Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134909,7 +134909,7 @@
     "title": "Record that the E6 4-frame code matches the bit-lane iterator.",
     "state": "open",
     "created_at": "2026-11-10T02:11:43Z",
-    "updated_at": "2026-11-10T02:11:43Z",
+    "updated_at": "2026-11-10T02:18:35Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -134930,7 +134930,7 @@
     "title": "Record that the selected pricing rejects the PR5679 BIT component.",
     "state": "open",
     "created_at": "2026-11-10T02:11:45Z",
-    "updated_at": "2026-11-10T02:11:45Z",
+    "updated_at": "2026-11-10T02:18:45Z",
     "closed_at": null,
     "merged_at": null,
     "user": {

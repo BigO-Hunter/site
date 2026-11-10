@@ -4206,7 +4206,7 @@
             "relation": "attained",
             "evidence": "Claimed",
             "authors": [
-              "CubeJerry"
+              "Jerry Jiaheng Chen"
             ],
             "bound": "O(n log^(1 - 0.003127804) n)"
           },
@@ -4416,7 +4416,7 @@
             "relation": "attained",
             "evidence": "Claimed",
             "authors": [
-              "CubeJerry"
+              "Jerry Jiaheng Chen"
             ],
             "bound": "O(n log^(1 - 0.00330814) n)"
           },
@@ -4516,7 +4516,7 @@
             "relation": "attained",
             "evidence": "Claimed",
             "authors": [
-              "CubeJerry"
+              "Jerry Jiaheng Chen"
             ],
             "bound": "O(n log^(1 - 0.00357027) n)"
           },
@@ -4536,7 +4536,7 @@
             "relation": "attained",
             "evidence": "Claimed",
             "authors": [
-              "CubeJerry"
+              "Jerry Jiaheng Chen"
             ],
             "bound": "O(n log^(1 - 0.00357906) n)"
           },
