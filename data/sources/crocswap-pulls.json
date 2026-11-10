@@ -136813,5 +136813,1244 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 7039,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7039",
+    "title": "Prove no constant insertion makes the valuation-1 e coefficient I",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:25Z",
+    "updated_at": "2026-11-10T11:33:27Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "e4ddcd2fde8c46b7e528e8806ab72d9bf7690978"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7040,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7040",
+    "title": "Record the idempotent triples after rows (1, 1, 0, 0)",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:28Z",
+    "updated_at": "2026-11-10T11:33:31Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "2bac9bfafe5fa009bce2141c07b703c977b18456"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7041,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7041",
+    "title": "Record one c=7 floor word that realizes both missed masks.",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:30Z",
+    "updated_at": "2026-11-10T11:32:49Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "004d6b729294743e9342354ef39f69eb5903cc6f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7042,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7042",
+    "title": "Exhibit c=6 floor words that keep the multiset (6,6,6,7,7,7).",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:33Z",
+    "updated_at": "2026-11-10T11:33:13Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "807149a85d185b8272aa1fda43ba6d8d7c541cfe"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7043,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7043",
+    "title": "Record that the (0, 15) weight-3 shape forces no 12 at (18, 21).",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:35Z",
+    "updated_at": "2026-11-10T11:33:18Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "4628769582285b5fd8a9d59352e229337b53733c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7044,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7044",
+    "title": "Prove the c=5 adjacent centre on sum 13 freezes no coordinate.",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:38Z",
+    "updated_at": "2026-11-10T11:32:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "53b56df645f591ea26da3c6f5b478dd88c50e1f8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7045,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7045",
+    "title": "Prove non-complement c=7 pairs (10, 14) and (11, 13) have cover 3.",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:40Z",
+    "updated_at": "2026-11-10T11:32:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "59561147fe88ee9a1192715994b84faa0343c3f9"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7046,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7046",
+    "title": "Host P104 frame 1 and intersect its new monomials with the recorded forty.",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:43Z",
+    "updated_at": "2026-11-10T11:32:53Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "e7271f9d709149590071f11a29dfe702d427b59a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7047,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7047",
+    "title": "Prove no F2 sum of letters hosts the P104 frame-0 indicator.",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:45Z",
+    "updated_at": "2026-11-10T11:32:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "44953245c5cf2d382e1c0f3095d3866930c310e1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7048,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7048",
+    "title": "Record that the 40 frame-0 monomials are not selected-invoice primitives.",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:47Z",
+    "updated_at": "2026-11-10T11:33:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "19eac371b963b5dd4a3bf2902bca6e3e009758a1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7049,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7049",
+    "title": "Prove the next F8 nullity-7 paired-star class has rank sum at least 8.",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:49Z",
+    "updated_at": "2026-11-10T11:33:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "a3fcb6e27824efb64b8355b93b8e9b6e1bb1b538"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7050,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7050",
+    "title": "Prove every-stage internal gaps need thin rank at least q g / 2",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:52Z",
+    "updated_at": "2026-11-10T11:33:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "d176f84f39ff5678b2bd3dabb53c47099a31584b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7051,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7051",
+    "title": "Prove the (1,1,0,2) three-frame profile admits no seven-call word.",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:53Z",
+    "updated_at": "2026-11-10T11:33:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "7af3a03dade6bd166ad08d7afc6879b0726fe100"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7052,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7052",
+    "title": "Prove a D-exponent (0,-1) owner index leaves the x1 residual",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:56Z",
+    "updated_at": "2026-11-10T11:33:58Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "00b08c5ae3a0f8a3645773978c5a557684e29e91"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7053,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7053",
+    "title": "Prove one rank-q internal map raises the paired-star external bound to q(g-1)",
+    "state": "open",
+    "created_at": "2026-11-10T11:24:58Z",
+    "updated_at": "2026-11-10T11:33:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "29dd6962ab581f703700585dcbe201b704158c4a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7054,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7054",
+    "title": "Record a 26-shear one-scale zero-swap word for helper-462.",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:01Z",
+    "updated_at": "2026-11-10T11:33:05Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "ae1cf2af174cd4f8c89089a27fc58e470b5452bd"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7055,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7055",
+    "title": "Prove one-scale zero-swap helper-462 words need at least 9 shears.",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:03Z",
+    "updated_at": "2026-11-10T11:33:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "0a6361ec1b63621ca5f985218892e0cdc79502ae"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7056,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7056",
+    "title": "Prove D1^4 = I leaves the residual x1 monomial nonzero",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:05Z",
+    "updated_at": "2026-11-10T11:34:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "8478d087599b63180b1189415cfa0c7804eee377"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7057,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7057",
+    "title": "Record geometric multiplicity 10 for eigenvalue 0 on the pinned 48-by-48 matrix",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:08Z",
+    "updated_at": "2026-11-10T11:34:25Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "00fcc9e83ee6955c0c1503850ac5d8dee93780da"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7058,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7058",
+    "title": "Record separate c=5 weight-2-family and all-ones-window centre counterexamples",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:10Z",
+    "updated_at": "2026-11-10T11:32:35Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "4e96381d07be0014aae34361a9b8dd3c4df9a39c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7059,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7059",
+    "title": "Record that c=1 movers miss the 8-dimensional dihedral summand.",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:13Z",
+    "updated_at": "2026-11-10T11:34:16Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "d061211f41ca41259b9afb130f216363b3bf96a6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7060,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7060",
+    "title": "Record the characteristic polynomial over Q(i) of one eigenvalue-i 48-space",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:15Z",
+    "updated_at": "2026-11-10T11:34:21Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "b9e2d3683f7a2ca042e38a4041f418284672b61e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7061,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7061",
+    "title": "Record the characteristic polynomial of A_1 on the 80-dimensional isotypic summand",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:20Z",
+    "updated_at": "2026-11-10T11:34:07Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "c85ea666dd8f04af5fe5b4261a96936ae173f5df"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7062,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7062",
+    "title": "Record the characteristic polynomial of one weight-3 c=3 joint space.",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:22Z",
+    "updated_at": "2026-11-10T11:34:35Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "d2d59844d7a1f3f739d7add8eeec0d740a3aeca8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7063,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7063",
+    "title": "Record equal degree-8 factors for odd-sign weight-4 pairs.",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:24Z",
+    "updated_at": "2026-11-10T11:34:30Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "5ab4e2d63c07a63ef82891a4b16e0f3a9b2701c4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7064,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7064",
+    "title": "Record geometric multiplicity 12 for eigenvalue 2 on the pinned 216-by-216 matrix",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:27Z",
+    "updated_at": "2026-11-10T11:34:52Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "e2957af0cafbf33d5ab672a4e6491939226ef922"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7065,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7065",
+    "title": "Record the characteristic polynomial of A_1 on the 128-dimensional dihedral isotypic component",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:29Z",
+    "updated_at": "2026-11-10T11:34:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "ee0202a8eafa4c0b84bef97ecfb5691f6affc9c6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7066,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7066",
+    "title": "Record geometric multiplicity 24 for eigenvalue 0 on the other three 216 joint sign spaces",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:32Z",
+    "updated_at": "2026-11-10T11:34:56Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "6b5dbc2c3acdf119b3aba91a8a8499d62ac73008"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7067,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7067",
+    "title": "Classify length-6 support for five frames plus one old projector",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:34Z",
+    "updated_at": "2026-11-10T11:33:54Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "e6aac77f79560add2c47c761d9defff96934d88d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7068,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7068",
+    "title": "Record the characteristic polynomial of the 84-dimensional X_3=+1 subspace",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:36Z",
+    "updated_at": "2026-11-10T11:34:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "f9af520c844d23ffb9936ff4402533983aebbb30"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7069,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7069",
+    "title": "Prove odd signs on u keep the X_3 trace -48",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:39Z",
+    "updated_at": "2026-11-10T11:34:43Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "044d055bc5d6f9eb4c8b199c9062785023c7b604"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7070,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7070",
+    "title": "Record that one length-27 P112 generating set returns the eight-word intersection stream.",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:42Z",
+    "updated_at": "2026-11-10T11:35:13Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "93cd7d9f5d1108d28dca7ef0409acc8f0fd07f95"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7071,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7071",
+    "title": "Record a c=1 stabilizer transporter of one 8-dimensional joint basis",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:44Z",
+    "updated_at": "2026-11-10T11:34:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "eda1117b3989bc24ea0f8331cbac774f4bfe0593"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7072,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7072",
+    "title": "Record the next moving P112 simple root's transported weight-16 equality.",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:46Z",
+    "updated_at": "2026-11-10T11:35:00Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "ff8c16cf81f3ad0aa5db866cbe2a11d48757ddba"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7073,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7073",
+    "title": "Record that a dimension-36 intersection-counter copy returns the P112 eight-word set",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:49Z",
+    "updated_at": "2026-11-10T11:35:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "6c18f6cf8c6c54f1ab7784cb78b0ee17b3e8d0aa"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7074,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7074",
+    "title": "Record that one added route does not save a dirty one-move G20 failure",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:51Z",
+    "updated_at": "2026-11-10T11:35:17Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "1c8a25af3e93df4d81165b3367bd9e87aee0c369"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7075,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7075",
+    "title": "Record that low_weight_words matches the reflected P112 transported supports",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:54Z",
+    "updated_at": "2026-11-10T11:35:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "812837d0b6a97e471535b8acb2c5b0888280e1d9"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7076,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7076",
+    "title": "Classify six once-each signed frames: support, but no word",
+    "state": "open",
+    "created_at": "2026-11-10T11:25:57Z",
+    "updated_at": "2026-11-10T11:33:49Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "bfe9d70e825e09753e77dffa888edbadc55a0c74"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7077,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7077",
+    "title": "Record the ordinary bill of the witness F1=Q, F2=C1 Q",
+    "state": "open",
+    "created_at": "2026-11-10T11:27:45Z",
+    "updated_at": "2026-11-10T11:32:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "e7072eaa9c4a4ba0cca40705428959137828331b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7078,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7078",
+    "title": "Prove no second after-cover keeps the one-weight gap and equals C (no κ)",
+    "state": "open",
+    "created_at": "2026-11-10T11:27:48Z",
+    "updated_at": "2026-11-10T11:32:33Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "476611734791425ad59a7893cfdd5666c52c026c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7079,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7079",
+    "title": "Record that two moved corrections do not emit on length-6 G20 intervals",
+    "state": "open",
+    "created_at": "2026-11-10T11:27:51Z",
+    "updated_at": "2026-11-10T11:32:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "887181f78545095ec88684c280468f486fbabde7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7080,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7080",
+    "title": "Record that the intersection-counter engine returns the D6 16-word set",
+    "state": "open",
+    "created_at": "2026-11-10T11:27:53Z",
+    "updated_at": "2026-11-10T11:32:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "a8d3fd99d171503c1c39cd969aaeba1c2d4e41cf"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7081,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7081",
+    "title": "Record that one reflected D6 anchor pair keeps the transported support set",
+    "state": "open",
+    "created_at": "2026-11-10T11:27:55Z",
+    "updated_at": "2026-11-10T11:32:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "5c4ddf86adb842b2ca9a8e96f29e2bbb5089c958"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7082,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7082",
+    "title": "Cut one moved 48-eigenspace by a 12-dimensional A_1 subspace",
+    "state": "open",
+    "created_at": "2026-11-10T11:27:57Z",
+    "updated_at": "2026-11-10T11:32:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "082e3809255a5eb1620b8c0ac5fc258ca3c1310c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7083,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7083",
+    "title": "Prove four rank-one frames plus one old call miss length-5 support (no κ)",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:00Z",
+    "updated_at": "2026-11-10T11:32:01Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "977b3451cea127c598cb07315180fc6c6bc4f4b6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7084,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7084",
+    "title": "Record nested and crossed pure products for the g=31, q=26 paired star.",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:02Z",
+    "updated_at": "2026-11-10T11:31:59Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "d346ad3a0e38d474ab401295bc20713fe9f1c000"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7085,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7085",
+    "title": "Prove one interleaved g=31, q=26 word misses the endpoint.",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:04Z",
+    "updated_at": "2026-11-10T11:31:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "8bbea693c0da10bb8987010b03054ee48632fa9e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7086,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7086",
+    "title": "Record that one unsplit call per stage still needs thin rank 8",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:06Z",
+    "updated_at": "2026-11-10T11:31:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "9581c3371d407094dafb071559ffc8eb42470256"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7087,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7087",
+    "title": "Witness a characteristic-3 rank-32 pattern on P120.",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:08Z",
+    "updated_at": "2026-11-10T11:31:41Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "043b334e7249e8b79e437a0765773a7e2fc8b8e8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7088,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7088",
+    "title": "Record the length-28 flat-step budget forcing a rank-7 arc (no κ)",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:10Z",
+    "updated_at": "2026-11-10T11:31:38Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "95597fbf2565c9c6a83710709efac12620cc3199"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7089,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7089",
+    "title": "Record that saved bank bridge_query2:0 autonomizes the query-4 row",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:12Z",
+    "updated_at": "2026-11-10T11:32:17Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "3a007633e5f96dcfba428eec4b4f3e32c5c2bd28"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7090,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7090",
+    "title": "Prove that one thin map misses the three-leaf paired star for every q.",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:15Z",
+    "updated_at": "2026-11-10T11:32:11Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "d4eae2b9bfee7dc0aa23f8187b2fb89b29dcdede"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7091,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7091",
+    "title": "Prove one nullity-32 paired-star class has Schur rank at least 4",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:18Z",
+    "updated_at": "2026-11-10T11:31:50Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "39759c6a7ed78cafb73e7705d7c0633104d58f5c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7092,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7092",
+    "title": "Record that the helper-462 landing permutation needs 18 odd-denominator shears",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:20Z",
+    "updated_at": "2026-11-10T11:31:44Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "e1378eac4f2b277a39112807ffc018bfd1c51bde"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7093,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7093",
+    "title": "Record that a rank-4 length-30 sojourn needs at least 17 layer-0 points (no κ)",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:23Z",
+    "updated_at": "2026-11-10T11:31:33Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "94b36d4649b5d29829959409acbc1906ef0b4379"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7094,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7094",
+    "title": "Show a no-edge pattern-dimension-4 pool has irreducible joint image 5.",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:25Z",
+    "updated_at": "2026-11-10T11:32:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "b5f0a0df3d22e8ad40d67d6be4d1c7ff24d180c5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7095,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7095",
+    "title": "Record that three or more moved corrections do not emit on length-5 G20 intervals.",
+    "state": "open",
+    "created_at": "2026-11-10T11:28:27Z",
+    "updated_at": "2026-11-10T11:32:29Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "b97d14029225dbac298f96ad24e19eceb6d60258"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7096,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7096",
+    "title": "Prove the g=13 leaf-2 block stays nonzero when stage 0 is not first.",
+    "state": "open",
+    "created_at": "2026-11-10T11:46:25Z",
+    "updated_at": "2026-11-10T11:47:28Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "bfef0c9787f13a8052190bfefaf62ba1400e1177"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7097,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7097",
+    "title": "Prove an after-stage-0 leaf correction misses the g=13 block.",
+    "state": "open",
+    "created_at": "2026-11-10T11:46:26Z",
+    "updated_at": "2026-11-10T11:47:23Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "97bc92e76e5954f46befbe5c6790b6f2107e0d3a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
