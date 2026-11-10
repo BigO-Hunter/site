@@ -1,3 +1,11 @@
 {
-  "queue": []
+  "queue": [
+    {
+      "pr": 7000,
+      "head": "93effe2a135bf57b9e484cb630d8dd057159aec9",
+      "title": "Conditional κ = 0.00363005817 (+0.0838% over #6936): shared wires and two helper splits",
+      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7000",
+      "reason": "The PR adds no single own research package CLAIM.json."
+    }
+  ]
 }
