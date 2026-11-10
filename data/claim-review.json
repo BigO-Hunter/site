@@ -1,18 +1,3 @@
 {
-  "queue": [
-    {
-      "pr": 7003,
-      "head": "ec30476096b2f9aed718152a2fa3712d1c4e884d",
-      "title": "Conditional κ = 0.00363166992 (+0.00000161175 over #7000): five MOVE fusions",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7003",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    },
-    {
-      "pr": 7004,
-      "head": "2ee11a4460f23abf06d16b12f18c8ef9aca889f1",
-      "title": "Conditional κ = 0.00363206219 (+0.00000039227 over #7003): peer MOVE retiming",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7004",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    }
-  ]
+  "queue": []
 }

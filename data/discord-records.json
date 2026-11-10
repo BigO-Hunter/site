@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-7000",
+        "leader": "crocswap-pr-7004",
         "direction": "higher",
         "records": [
           {
@@ -4599,6 +4599,26 @@
               "Jerry Jiaheng Chen"
             ],
             "bound": "O(n log^(1 - 0.00363005817) n)"
+          },
+          {
+            "id": "crocswap-pr-7003",
+            "score": "22697937/6250000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "ToikY"
+            ],
+            "bound": "O(n log^(1 - 0.00363166992) n)"
+          },
+          {
+            "id": "crocswap-pr-7004",
+            "score": "363206219/100000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "ToikY"
+            ],
+            "bound": "O(n log^(1 - 0.00363206219) n)"
           }
         ],
         "table": "big-o"
@@ -7788,7 +7808,8 @@
     "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:lean",
     "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:record",
     "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:4\",\"4\",\"attained\"]:record",
-    "[\"integer-multiplication\",\"crocswap-pr-7000\",\"363005817/100000000000\",\"attained\"]:record"
+    "[\"integer-multiplication\",\"crocswap-pr-7000\",\"363005817/100000000000\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-7004\",\"363206219/100000000000\",\"attained\"]:record"
   ],
   "deferred": [
     {

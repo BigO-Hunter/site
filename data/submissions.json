@@ -133132,12 +133132,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-10T07:20:00Z",
       "checked_at": "2026-11-10",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "22697937/6250000000",
+      "record_ids": [
+        "crocswap-pr-7003"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "ec30476096b2f9aed718152a2fa3712d1c4e884d",
       "claim_text": "221d32f635e8e5251d1c20b24fe135f87c3d7584b95973e747b212ffd0993a29",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "ec30476096b2f9aed718152a2fa3712d1c4e884d",
+      "claim_decided": true,
       "claim_files": [
         [
           "added",
@@ -133160,12 +133163,15 @@
       "upstream_status": "open",
       "upstream_status_at": "2026-11-10T07:44:10Z",
       "checked_at": "2026-11-10",
-      "claimed_score": null,
-      "record_ids": [],
+      "claimed_score": "363206219/100000000000",
+      "record_ids": [
+        "crocswap-pr-7004"
+      ],
       "note": "The PR adds no single own research package CLAIM.json.",
       "claim_head": "2ee11a4460f23abf06d16b12f18c8ef9aca889f1",
       "claim_text": "8561607005bd4ce55fdc64614fa02c77bc8bd15666579764829f520904d78141",
-      "review_reason": "The PR adds no single own research package CLAIM.json.",
+      "claim_path_head": "2ee11a4460f23abf06d16b12f18c8ef9aca889f1",
+      "claim_decided": true,
       "claim_files": [
         [
           "added",
