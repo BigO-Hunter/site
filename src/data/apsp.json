@@ -633,10 +633,10 @@
       "site_observed_at": "2026-11-10T13:20:13Z",
       "source": {
         "kind": "repo-artifact",
-        "url": "https://github.com/BigO-Hunter/apsp-bound/blob/0505cdf826e1c4b207a2263a0130e4b6d0f6ff53/.machine-build/machine/FILING_DRAFT_CLAIMED.md"
+        "url": "https://github.com/BigO-Hunter/apsp-bound/blob/519aaa7d6f8e25852ac68e5e9803ac2f011adbd6/.machine-build/machine/FILING_DRAFT_CLAIMED.md"
       },
       "spec_version": "1",
-      "title": "MultiAgency swarm conditional APSP reduction at exponent 2.994999 (four named premises)",
+      "title": "MultiAgency swarm conditional APSP reduction at exponent 2.994999 (five named premises)",
       "authors": [
         {
           "name": "shresh",
@@ -663,40 +663,46 @@
         "https://github.com/shreshth-s/thin-matrix-results",
         "https://github.com/bigospeedrun/verifier/pull/6"
       ],
-      "submission_url": "https://github.com/BigO-Hunter/apsp-bound/blob/0505cdf826e1c4b207a2263a0130e4b6d0f6ff53/.machine-build/machine/FILING_DRAFT_CLAIMED.md",
-      "source_commit": "3e5a9f2f75d230a5597afcae53c0f5598756265f",
+      "submission_url": "https://github.com/BigO-Hunter/apsp-bound/blob/519aaa7d6f8e25852ac68e5e9803ac2f011adbd6/.machine-build/machine/FILING_DRAFT_CLAIMED.md",
+      "source_commit": "3f3310a70cb901a4898d499988acb333f3e0575a",
       "artifact": {
         "path": "sources/multiagency-apsp-2-994999-claim.json",
-        "sha256": "f151a89c792409afdd3d28067c790b8364bc5eb3ffc37ef9e4460ad8eec3af0f"
+        "sha256": "9f8ba7d29ea83c1746f2e8371cb508237c9bbf32e33e45bc422e01b342be2491"
       },
       "evidence": {
         "paper_url": "https://arxiv.org/abs/2610.06783",
-        "theorem": "ThinMatrix.CallerUniversalBody.twinUniv_of: (premises) -> EndStatement.APSP.SolvedInTime (2994999/1000000)",
+        "theorem": "ThinMatrix.CallerUniversalBody.twinUniv_socket_clock: (bundle at univNeed + hcT) -> EndStatement.APSP.SolvedInTime (2994999/1000000)",
         "certificate_path": null
       },
       "dependencies": [
         {
-          "id": "fill-1-rows-image",
-          "statement": "The rows table is the memory image at the rows buffer (the cache boundary). Both direct routes were measured refuted; the cache-slot producer is landed but the call is not wired.",
-          "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3e5a9f2f75d230a5597afcae53c0f5598756265f/.machine-build/machine/CallerUniversalBody.lean",
+          "id": "cache-boundary-at-univSocket",
+          "statement": "The cache boundary at the disclosed socket univSocket: Light.Solves cacheTask cacheProg cacheProc cacheTime univSocket. The rows image is produced by the call, not assumed.",
+          "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3f3310a70cb901a4898d499988acb333f3e0575a/.machine-build/machine/CallerUniversalBody.lean",
           "status": "unverified"
         },
         {
           "id": "hret-oracle-return",
           "statement": "The oracle's return: the delivery is the bracket fold seeded at row t's head.",
-          "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3e5a9f2f75d230a5597afcae53c0f5598756265f/.machine-build/machine/CallerUniversalBody.lean",
+          "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3f3310a70cb901a4898d499988acb333f3e0575a/.machine-build/machine/CallerUniversalBody.lean",
           "status": "unverified"
         },
         {
           "id": "htt-tight-clock",
-          "statement": "The tight clock: Tt 0 <= callerTt x.n, from the re-clocked selection round.",
-          "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3e5a9f2f75d230a5597afcae53c0f5598756265f/.machine-build/machine/CallerUniversalBody.lean",
+          "statement": "The tight clock: Tt 0 <= callerTt x.n, from the re-clocked selection round. Index 0, forced by the mask-generic flag budget.",
+          "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3f3310a70cb901a4898d499988acb333f3e0575a/.machine-build/machine/CallerUniversalBody.lean",
           "status": "unverified"
         },
         {
           "id": "hident-min-plus-identity",
           "statement": "MinPlusIdentity: the head's delivery is every entry.",
-          "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3e5a9f2f75d230a5597afcae53c0f5598756265f/.machine-build/machine/CallerUniversalBody.lean",
+          "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3f3310a70cb901a4898d499988acb333f3e0575a/.machine-build/machine/CallerUniversalBody.lean",
+          "status": "unverified"
+        },
+        {
+          "id": "hcT-cache-clock-budget",
+          "statement": "The cache solver's clock budget: univCallB + cacheTime (n*n) U <= (2*log2 U + 6)*(770*(n*n)), uniform in U. univHdom turns it into CallerHdom (univTn cacheTime), so hdom is a theorem.",
+          "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3f3310a70cb901a4898d499988acb333f3e0575a/.machine-build/machine/CallerUniversalHdom.lean",
           "status": "unverified"
         }
       ]
@@ -868,8 +874,8 @@
       "listing_status": "research-draft",
       "open_race": false,
       "license_status": "arXiv non-exclusive license; the paper is not copied, only its hash",
-      "credits": "Ruhollah Majdoddin. Builds on Alman and Vassilevska Williams (arXiv:2610.06783) and Schönhage's five-term partial-product tensor.",
-      "credit_note": "Ruhollah Majdoddin lowers the deterministic APSP exponent from Josh Alman and Virginia Vassilevska Williams' 2.99942 to 2.9945 plus o(1). Schönhage's five-term partial-product tensor extends their matrix theorem from eps below 0.1204 to eps below 0.172, and reductions that call the counting version of the triangle problem adaptively and build composite moduli one prime at a time keep all of its saving."
+      "credits": "Ruhollah Majdoddin. Builds on Alman and Vassilevska Williams (arXiv:2610.06783) and Sch\u00f6nhage's five-term partial-product tensor.",
+      "credit_note": "Ruhollah Majdoddin lowers the deterministic APSP exponent from Josh Alman and Virginia Vassilevska Williams' 2.99942 to 2.9945 plus o(1). Sch\u00f6nhage's five-term partial-product tensor extends their matrix theorem from eps below 0.1204 to eps below 0.172, and reductions that call the counting version of the triangle problem adaptively and build composite moduli one prime at a time keep all of its saving."
     },
     "joshuaqfex-apsp-2026": {
       "checked_at": "2026-10-20",
@@ -978,17 +984,17 @@
     },
     "multiagency-apsp-2994999-2026": {
       "checked_at": "2026-11-10",
-      "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/0505cdf826e1c4b207a2263a0130e4b6d0f6ff53/.machine-build/machine/FILING_DRAFT_CLAIMED.md",
+      "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/519aaa7d6f8e25852ac68e5e9803ac2f011adbd6/.machine-build/machine/FILING_DRAFT_CLAIMED.md",
       "repo": "BigO-Hunter/apsp-bound",
       "site_badge": false,
       "eligible_for_record": true,
-      "proof_status": "A machine-checked CONDITIONAL reduction, not an unconditional bound. ThinMatrix.CallerUniversalBody.twinUniv_of proves EndStatement.APSP.SolvedInTime (2994999/1000000) from four named premises, with the standard three axioms only ([propext, Classical.choice, Quot.sound]), no sorryAx and no native_decide; the build receipt is machine/.machine-build/machine/CallerUniversalBody.verification.txt at 3e5a9f2. The premises are NOT proved and the bundle is NOT witnessed inhabited: the rows image (the cache boundary), the oracle return, the tight clock and the (min,+) identity are named. The reduction was vacuous-as-green before commit 06a523e repaired a false flag conjunct; after the repair the bundle is consistent and its inhabitance is unproved. No Big O Speedrun proof check has run. Evidence remains Claimed, conditional.",
+      "proof_status": "A machine-checked CONDITIONAL reduction, not an unconditional bound. ThinMatrix.CallerUniversalBody.twinUniv_socket_clock proves EndStatement.APSP.SolvedInTime (2994999/1000000) from the premise bundle at univNeed plus the cache solver's clock budget hcT, with the standard three axioms only ([propext, Classical.choice, Quot.sound]), no sorryAx and no native_decide; the receipt is .machine-build/machine/CallerUniversalHdom.verification.txt at 3f3310a. Four of the five named premises are the upstream oracle/cache/identity boundary; the fifth, hcT, is the cache solver's own clock and is disclosed as STRONGER than the hdom it replaced. The premises are NOT proved and the bundle is NOT witnessed inhabited. The rows image is no longer a premise: the entry body calls the cache and takes it from the call's post. The reduction was vacuous-as-green before commit 06a523e repaired a false flag conjunct; after the repair the bundle is consistent and its inhabitance is unproved. No Big O Speedrun proof check has run. Evidence remains Claimed, conditional.",
       "upstream_tier": "claimed",
       "site_tier": "claimed",
       "comparison_key": "apsp/word-ram/v1",
-      "comparison_status": "The root statement is EndStatement.APSP.SolvedInTime (2994999/1000000), the same statement class as the landed Race.bound in verified/Submission.lean, so the score is the challenge's own exponent for the challenge's own statement, not an interpretation of a paper. What the row does not carry is the unconditionality: the four premises above are the upstream oracle/cache/identity boundary, and the board counts a row Lean Verified only when the root statement is proved with no named premises. This row is therefore NOT Lean Verified, and its rank is above (worse than) the leading Claimed rows 2.99294792 and 2.9929479187094, so the row was not the best bound when it appeared.",
+      "comparison_status": "The root statement is EndStatement.APSP.SolvedInTime (2994999/1000000), the same statement class as the landed Race.bound in verified/Submission.lean, so the score is the challenge's own exponent for the challenge's own statement, not an interpretation of a paper. What the row does not carry is the unconditionality: four of the five named premises are the upstream oracle/cache/identity boundary and the fifth is the cache solver's clock, and the board counts a row Lean Verified only when the root statement is proved with no named premises. This row is therefore NOT Lean Verified, and its rank is above (worse than) the leading Claimed rows 2.99294792 and 2.9929479187094, so the row was not the best bound when it appeared and does not lead now.",
       "scope": "Directed integer weights of polynomial magnitude, no negative cycles, all-pairs distances; deterministic worst case.",
-      "exact_statement": "Conditional on the four named premises: APSP on directed graphs with polynomially bounded integer weights and no negative cycles is solved in time 2994999/1000000 in the word RAM of EndStatement.",
+      "exact_statement": "Conditional on the five named premises (the cache boundary at univSocket, the oracle's return, the tight clock at index 0, the (min,+) identity, and the cache solver's clock budget): APSP on directed graphs with polynomially bounded integer weights and no negative cycles is solved in time 2994999/1000000 in the word RAM of EndStatement.",
       "score_interpretation": "Attained exponent 2.994999 = 2994999/1000000: the Lean root statement is an exact SolvedInTime at that rational, not an open endpoint with an epsilon. The constant is not exhibited; the statement is asymptotic in n.",
       "publication_date_precision": "date-time",
       "publication_date": "2026-11-10T12:20:42Z",
@@ -998,7 +1004,7 @@
       "open_race": false,
       "license_status": "No license file; source files are not copied, only their hashes",
       "credits": "shresh (shreshth-s) for the composite-incidence construction and the oracle functional chain; Josh Alman and Virginia Vassilevska Williams (arXiv:2610.06783); Li Xuanji for the verified ten-term construction and word-RAM compiler; Joshua Wharton (QFEX) for the canonical adapter arrangement and the checked selection round; Hrishik Sai Bojnal for the verified frontier being refined. Filed by the MultiAgency swarm (@darkhipo).",
-      "credit_note": "MultiAgency swarm proves a conditional reduction at 2.994999 rather than an unconditional bound. The universal body drives shresh's scheduled selection rounds over one fixed program and composes the twin at ThinMatrix.Twin.race_bound, which yields the challenge's own root statement SolvedInTime (2994999/1000000) from four named premises: the rows image at the cache boundary, the oracle's return, the tight clock, and (min,+) identity. Li Xuanji's verified ten-term construction and its word-RAM compiler are the pinned statement the root uses; Joshua Wharton's adapter arrangement and checked selection round are the driver; Hrishik Sai Bojnal's verified frontier is what is being refined. The premises are named, not proved, so the row is Claimed and not Lean Verified."
+      "credit_note": "MultiAgency swarm proves a conditional reduction at 2.994999 rather than an unconditional bound. The universal body drives shresh's scheduled selection rounds over one fixed program and composes the twin at ThinMatrix.Twin.race_bound, which yields the challenge's own root statement SolvedInTime (2994999/1000000) from five named premises: the cache boundary at the disclosed socket, the oracle's return, the tight clock at index 0, (min,+) identity, and the cache solver's clock budget. The rows image is produced by the cache call, not assumed, and the composite's domination is a theorem (univHdom), so the cache's clock is the one class-(iii) name left. Li Xuanji's verified ten-term construction and its word-RAM compiler are the pinned statement the root uses; Joshua Wharton's adapter arrangement and checked selection round are the driver; Hrishik Sai Bojnal's verified frontier is what is being refined. The premises are named, not proved, so the row is Claimed and not Lean Verified."
     }
   },
   "updated_at": "2026-11-10T00:27:54Z"

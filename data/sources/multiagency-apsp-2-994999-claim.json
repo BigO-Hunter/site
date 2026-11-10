@@ -1,15 +1,15 @@
 {
-  "checked_at": "2026-11-10T13:20:13Z",
+  "checked_at": "2026-11-10T17:31:56Z",
   "repo": "BigO-Hunter/apsp-bound",
-  "source_commit": "3e5a9f2f75d230a5597afcae53c0f5598756265f",
-  "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3e5a9f2f75d230a5597afcae53c0f5598756265f/.machine-build/machine/CallerUniversalBody.lean",
-  "filed_revision": "0505cdf826e1c4b207a2263a0130e4b6d0f6ff53",
-  "filed_revision_url": "https://github.com/BigO-Hunter/apsp-bound/blob/0505cdf826e1c4b207a2263a0130e4b6d0f6ff53/.machine-build/machine/FILING_DRAFT_CLAIMED.md",
+  "source_commit": "3f3310a70cb901a4898d499988acb333f3e0575a",
+  "source_url": "https://github.com/BigO-Hunter/apsp-bound/blob/3f3310a70cb901a4898d499988acb333f3e0575a/.machine-build/machine/CallerUniversalHdom.lean",
+  "filed_revision": "519aaa7d6f8e25852ac68e5e9803ac2f011adbd6",
+  "filed_revision_url": "https://github.com/BigO-Hunter/apsp-bound/blob/519aaa7d6f8e25852ac68e5e9803ac2f011adbd6/.machine-build/machine/FILING_DRAFT_CLAIMED.md",
   "publication_date": "2026-11-10T12:20:42Z",
-  "publication_date_basis": "The commit 3e5a9f2 (2026-11-10T12:20:42Z) that first states the reduction theorem twinUniv_of and writes its build receipt. The premise list as filed, with the flag-conjunct repair at 06a523e, is in machine/.machine-build/machine/FILING_DRAFT_CLAIMED.md at 0505cdf, which is a descendant of the firing commit.",
+  "publication_date_basis": "The commit 3e5a9f2 (2026-11-10T12:20:42Z) that first states the reduction theorem twinUniv_of and writes its build receipt; the row's publication date is unchanged by later passes over the same score. The premise list's FINAL shape - the hdom transfer at 3f3310a and the filing draft at 519aaa7 - is in machine/.machine-build/machine/FILING_DRAFT_CLAIMED.md at that tip, and supersedes the as-filed shape at 0505cdf.",
   "score": "2994999/1000000",
-  "theorem": "ThinMatrix.CallerUniversalBody.twinUniv_of, at .machine-build/machine/CallerUniversalBody.lean. Statement shape: (premises) -> EndStatement.APSP.SolvedInTime (2994999/1000000).",
-  "root_statement": "EndStatement.APSP.SolvedInTime (2994999/1000000), the root Submission shape of verified/Submission/EndStatement.lean. The composition is ThinMatrix.Twin.race_bound (machine/TwinRaceBound.lean) at P := callerProgramUniv stage cacheProg restoreProg cs, p := 0, Tn := univTn.",
+  "theorem": "ThinMatrix.CallerUniversalBody.twinUniv_socket_clock, at .machine-build/machine/CallerUniversalHdom.lean. Statement shape: UnivBundle (at need := univNeed) and hcT -> EndStatement.APSP.SolvedInTime (2994999/1000000). The hdom form twinUniv_of stays in the tree as the same theorem with the domination passed in; univHdom proves CallerHdom (univTn cacheTime) from hcT, so hdom is no longer a hypothesis of the firing theorem.",
+  "root_statement": "EndStatement.APSP.SolvedInTime (2994999/1000000), the root Submission shape of verified/Submission/EndStatement.lean. The composition is ThinMatrix.Twin.race_bound (machine/TwinRaceBound.lean) at P := callerProgramUniv stage cacheProc cacheProg restoreProg cs, p := 0, Tn := univTn cacheTime.",
   "label": "CLAIMED-conditional - upstream's own oracle-shape boundary. NOT Lean Verified.",
   "proof_state": {
     "reduction_proved": true,
@@ -21,39 +21,51 @@
     "sorry_ax": 0,
     "native_decide": false,
     "premise_bundle_inhabited": false,
-    "premise_bundle_consistency": "Consistent with the premises and not witnessed. Before the repair at 06a523e one conjunct (the flag budget at k := x.n) was false, so the reduction was vacuous-as-green; after it, satisfiability is merely unproved.",
-    "lean_verified": false
+    "premise_bundle_consistency": "Consistent with the premises and not witnessed. Before the repair at 06a523e one conjunct (the flag budget at k := x.n) was false, so the reduction was vacuous-as-green; after it, satisfiability is merely unproved. Separately from consistency: the bundle is no longer OVER-NAMED - the flag conjunct is gone (a tautology at k := 0) and the two resource sockets are derived from one witness term, so the bundle states six conjuncts (the cache boundary plus five inhabitant-supplied facts) where it stated nine.",
+    "lean_verified": false,
+    "domination_transferred": "The composite's domination obligation (hdom) is now a THEOREM: univHdom proves CallerHdom (univTn cacheTime) from the cache solver's own clock budget hcT. Axioms of univHdom, apTime_univ_le_sq_log, twinUniv_of_clock and twinUniv_socket_clock: [propext, Classical.choice, Quot.sound] only."
   },
   "premises": [
     {
-      "id": "fill-1-rows-image",
-      "statement": "The rows table is the memory image at the rows buffer: for every p < n and i < n, rows p i as an integer is mu (fr + n + p*n + i). This is the class (ii) cache boundary, not instance arithmetic: both direct routes were measured refuted (the copy pass costs 13n^2+6n against n+12 slack, and setting rb := x.a contradicts MatInst.Pre.belowA). The producer is the cache call; CacheFill.cacheReads_of_solves and CacheFill.reads_persist are landed, the call itself is not wired.",
-      "site": "UnivBundle, FILL 1 conjunct",
+      "id": "cache-boundary-at-univSocket",
+      "class": "(ii) D7 oracle/cache boundary",
+      "statement": "The cache boundary, at the disclosed socket: Light.Solves cacheTask cacheProg cacheProc cacheTime univSocket (UnivBundle's conjunct 1), where univSocket s U is Light.DenseRestartSelectionLoop.need s U - word (s+1)(U+1)+1, cells 0, depth 4. This is the only named premise that is a SOLVER CONTRACT rather than an oracle fact, and it is the cache solver's own body (the L2/L3 cone), which this lane composes against and does not claim. The rows image is NOT a premise: the entry body calls the cache (entryBodyUniv = call (cacheProcInP cacheProc) univCacheArgs Tmp ;; .set Tmp (k 0) ;; mpBodyUniv stage) and takes the image from that call's post, via the landed CacheFill.cacheReads_of_solves and CacheFill.reads_persist. The earlier flat memory-image premise (FILL 1) is gone. cells = 0 is disclosed: the cache writes only below its own free pointer (cacheTask.Pre), and the caller's socket carries eight cells of slack above the stack, so an L2/L3 body needing scratch takes up to eight cells for free.",
+      "site": "UnivBundle conjunct 1 (CallerUniversalBody.lean:1972)",
       "status": "unverified"
     },
     {
       "id": "hret-oracle-return",
+      "class": "(ii) D7 oracle boundary",
       "statement": "The oracle's return: the delivery is the bracket fold seeded at row t's head. Supplied by the oracle functional chain of the composite-incidence construction; not derivable from instance arithmetic.",
-      "site": "UnivBundle, the bracketAccumulate conjunct",
+      "site": "UnivBundle conjunct 3",
       "status": "unverified"
     },
     {
       "id": "htt-tight-clock",
-      "statement": "The tight clock: Tt 0 <= callerTt x.n. The producer is the re-clocked selection round's solvedIn; it is not derivable from taskTime (instanceSize ...), which is about 100n^4 against 25n^2.",
-      "site": "UnivBundle, the clock conjunct",
+      "class": "(ii) D7 oracle boundary",
+      "statement": "The tight clock: Tt 0 <= callerTt x.n. The index is 0, not x.n: the wire is generic in k and demands the flag budget for every mask the schedule reaches, and the schedule clears one flag per round, so a mask-generic budget forces k := 0. The producer is the re-clocked selection round's solvedIn; it is not derivable from taskTime (instanceSize ...), which is about 100n^4 against 25n^2.",
+      "site": "UnivBundle conjunct 4",
       "status": "unverified"
     },
     {
       "id": "hident-min-plus-identity",
-      "statement": "MinPlusIdentity: the head's delivery is every entry, so the bracket accumulation is (min,+)-product entrywise. The construction identity of the upstream boundary.",
-      "site": "UnivBundle, the identity conjunct",
+      "class": "(ii) D7 identity boundary",
+      "statement": "MinPlusIdentity: the head's delivery is every entry, so the bracket accumulation is the (min,+) product entrywise. The construction identity of the upstream boundary.",
+      "site": "UnivBundle conjunct 5",
+      "status": "unverified"
+    },
+    {
+      "id": "hcT-cache-clock-budget",
+      "class": "(iii) image arithmetic / domination",
+      "statement": "The cache solver's clock budget: univCallB + cacheTime (n*n) U <= (2*log2 U + 6) * (770*(n*n)) for every n >= 1 and every U. Not a bundle conjunct - it is the one class-(iii) name left. univHdom (CallerUniversalHdom.lean) turns it into CallerHdom (univTn cacheTime), which is what makes the composite's domination a theorem; apTime_univ_le_sq_log supplied the O(n^2 log^2 n) step at k := 0. It cannot be derived in this tree: Light.Solves bounds a run ABOVE by its claimed clock, so nothing bounds cacheTime, and univTn carries cacheTime (n*n) U as a free argument. Disclosed as STRONGER than the hdom it replaces: hdom took a sup over U <= n^kappa, hcT is uniform in U. What it buys is justifiability - the party that lands the cache boundary knows its own clock, and nobody can justify a domination statement about a composite whose largest term belongs to that other party.",
+      "site": "CallerUniversalHdom.lean, twinUniv_socket_clock's hcT",
       "status": "unverified"
     }
   ],
-  "closed_or_routed": "The certified stage socket at k := 0 (stageSlot_any landed), hok (closes with the need witness below and Need.Ok.mono), the KeptBut frame (write set {x.c} inside [x.c, x.c+n^2)), NeedCovers and PolyNeed (one witness, both). The flag budget left the premise list at the repair: at k := 0 it is the tautology 0 <= (flagged n mask).card.",
-  "need_witness": "need n U = (word := (n^2 + 4n + 1)*(U+1) + 8, cells := n^2 + 4n + 8, depth := 1). It covers the four numeric facts of NeedCovers, hok under Need.Ok.mono, and PolyNeed.",
-  "build_receipt": ".machine-build/machine/CallerUniversalBody.verification.txt at 3e5a9f2: workspace .machine-build/machine, Lean 4.33.1, mathlib 0df444a360eaa60; build attempt 1, child rc=0, 0 errors, 0 sorryAx; axiom banner 'twinUniv_of' [propext, Classical.choice, Quot.sound].",
-  "verification": "One machine-checked conditional reduction. The root statement EndStatement.APSP.SolvedInTime (2994999/1000000) is proved from named premises with standard axioms only and no sorry. The premises are not inhabited and are not claimed to hold: the cache boundary (the rows image), the oracle return, the tight clock and the (min,+) identity are named, not proved. No Big O Speedrun proof check has run. Evidence remains Claimed, conditional.",
-  "what_is_not_claimed": "Not Lean Verified. Not an unconditional Race.bound. The premise bundle is not witnessed inhabited. Route (c), the cache-slot producer of the rows image, is not wired yet, and the completeCost domination transfer to univTn under route (c)'s extra cache clock is not re-derived.",
+  "closed_or_routed": "GONE from the premise list: FILL 1 (the rows image) - the cache call produces it; hflag - at k := 0 it reads 0 <= (flagged _ _).card and univSolves proves it by fun _ => Nat.zero_le _; hokC and hokS - both DERIVED by one lemma, stackSocket_ok, at s = n*n and s = n*n + 4n, from the caller's own Ok plus NeedCovers. THEOREMS at the witness: NeedCovers (needCovers_univNeed, eight numeric facts) and Light.PolyNeed (polyNeed_univNeed = unfold univNeed; poly_need []). THEOREM now: hdom, via univHdom. BUNDLE-SUPPLIED rather than named premises of the filing form: the certified stage slot at k := 0 (stageSlot_any is landed; its hRR is supplied by the cache call's post) and the KeptBut frame (write set {x.c} inside [x.c, x.c+n*n) by Pre.belowC).",
+  "need_witness": "univNeed n U = (word := (n*n + 4*n + 5)*(U+1) + 8, cells := n*n + 4*n + 8, depth := 5). word covers 2U+1, mpRounds U <= 2*log2 U + 6, 2^signedLevels U <= 4U+2 and the nested stage socket's own word (n*n+4n+1)(U+1)+1; cells covers 4n + n*n; depth 5 covers the stage's depth 4 one call down. Two disclosed corrections to FILL1_CENSUS.md row 9: depth is 5, not 1 (the stage's socket is Light.DenseRestartSelectionLoop.need, depth 4, asked at d+1, so the caller needs d+1+4), and the word bracket is +5, not +1 (at n = 0 the census word U+9 does not dominate 4U+2 for U >= 3; the +5 bracket gives 5U+13, which does, and it costs nothing because the slack was already there).",
+  "build_receipt": ".machine-build/machine/CallerUniversalHdom.verification.txt at 3f3310a: workspace .machine-build/machine; Lean 4.33.1; mathlib 0df444a360eaa60; run 1 rc=0 in 43 s, run 2 rc=0 in 54 s (re-run: deterministic); 0 errors, 0 sorryAx, no native_decide; axiom banners for apTime_univ_le_sq_log, univHdom, twinUniv_of_clock and twinUniv_socket_clock all [propext, Classical.choice, Quot.sound]. The socket instantiation and the two derived sockets are receipted in .machine-build/machine/CallerUniversalBody.verification.txt (fifth-pass section). The receipt also records a false lemma caught by the machine and deleted rather than swept away (hcT_of_cacheClock: 18 + c <= A does not follow from c <= A; omega produced c = A on the first elaboration).",
+  "verification": "One machine-checked conditional reduction, now with its domination obligation proved rather than named. twinUniv_socket_clock proves EndStatement.APSP.SolvedInTime (2994999/1000000) from the bundle at univNeed plus the cache solver's clock budget hcT, with the standard three axioms only and no sorry. The premises are not inhabited and are not claimed to hold: the cache boundary at univSocket, the oracle return, the tight clock at index 0, and the (min,+) identity are named, not proved, and hcT is the cache solver's own obligation. The rows image is no longer among them: it is produced by the cache call. No Big O Speedrun proof check has run. Evidence remains Claimed, conditional.",
+  "what_is_not_claimed": "Not Lean Verified. Not an unconditional Race.bound. The premise bundle is not witnessed inhabited: nobody has exhibited tests, Tt, rows discharging the stage slot, hret, hTt, hident or hkept, nor a cacheProg/cacheProc discharging the cache boundary at univSocket. hcT is not derived here and cannot be: it is a fact about the cache solver's run, uniform in U, which this lane discloses as stronger than the hdom it replaces. The row never led a frontier and does not lead one now: 2994999/1000000 is above (worse than) the leading Claimed rows 2.99294792 and 2.9929479187094.",
   "credits": "shresh (shreshth-s) for the composite-incidence construction and the oracle functional chain; Josh Alman and Virginia Vassilevska Williams for arXiv:2610.06783; Li Xuanji for the verified ten-term construction and word-RAM compiler whose pinned statement the root uses; Joshua Wharton (QFEX) for the canonical adapter arrangement, the checked selection round and the machine-obligations record; Hrishik Sai Bojnal for the verified frontier being refined and the refined numerical certificate. Filed by the MultiAgency swarm (GitHub account darkhipo)."
 }
