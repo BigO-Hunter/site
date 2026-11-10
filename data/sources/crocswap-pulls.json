@@ -134734,5 +134734,215 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6940,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6940",
+    "title": "Record that two F2 thin maps on the three-leaf paired star need total…",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:03Z",
+    "updated_at": "2026-11-10T02:11:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "9888af91b9f9e6dc55efd4172858a7d6093d484b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6941,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6941",
+    "title": "Prove the six-source c=7 diagonal equality case is empty.",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:06Z",
+    "updated_at": "2026-11-10T02:11:06Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "05422fc1cf644b186c2ed0d8addae6cf3a6a64a1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6942,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6942",
+    "title": "Cursor/three signed old once a03a",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:32Z",
+    "updated_at": "2026-11-10T02:11:32Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "84f70e14432a975bcdaeae37fcfecbf3890bda67"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6943,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6943",
+    "title": "Record length-30 sojourn obstructions for eight singleton sources",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:33Z",
+    "updated_at": "2026-11-10T02:11:33Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "c1cf726df3a06e50ef655ae91e8c8aac942b19a7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6944,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6944",
+    "title": "Certify the centre sign-character split into 216-dimensional blocks",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:36Z",
+    "updated_at": "2026-11-10T02:11:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "26ceb7a0b4e04d4377a31aaa849dcb13e06e4cbc"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6945,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6945",
+    "title": "Prove the declared active-feedback decoder keeps one y0 coupling mono…",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:38Z",
+    "updated_at": "2026-11-10T02:11:38Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "99a352c2f428de0e4c07688e0aedf4ed76ad467a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6946,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6946",
+    "title": "Bound the odd-character port window by 36.",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:40Z",
+    "updated_at": "2026-11-10T02:11:40Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "9cdb8b7054ee780aa5fde1c45e2eaec98247be49"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6947,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6947",
+    "title": "Record a swap-free route for the helper-462 matcher.",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:41Z",
+    "updated_at": "2026-11-10T02:11:41Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "60ff33d90472d69bce722549fa0aaf863d0b21bb"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6948,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6948",
+    "title": "Record that the E6 4-frame code matches the bit-lane iterator.",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:43Z",
+    "updated_at": "2026-11-10T02:11:43Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "f770aeb71385a5e14b38ca6e1e0df6cccde6c646"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6949,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6949",
+    "title": "Record that the selected pricing rejects the PR5679 BIT component.",
+    "state": "open",
+    "created_at": "2026-11-10T02:11:45Z",
+    "updated_at": "2026-11-10T02:11:45Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "c0915326ae206e89c1de73fc26b7f4668164f407"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]
