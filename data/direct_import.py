@@ -227,9 +227,11 @@ theorem Race.bound : ∃ order solve W, DFTProgram order solve W ∧
         target = f'theorem Race.bound : EndStatement.{problem}.SolvedInTime (({n} : Rat) / {d}) := by\n  sorry\n'
     return base + ('\n-- Big O Speedrun exact-bound target; generated from validated integers.\n' + target).encode()
 
-# A job of a submissions run: the reusable check workflow names it after its matrix entry (issue number, submitter
-# login, route, and true for a split build) and its own job.
-CHECK_JOB = re.compile(r'check \(([1-9][0-9]*), [A-Za-z0-9][A-Za-z0-9-]{0,38}, (issue|pull_request)(?:, true)?\) / (build|verify|report|pr_verify)')
+# A job of a submissions run, named after its matrix entry (issue number, submitter login, route, and true for a split
+# build): a job of the reusable check workflow, or the report job of submissions.yml (verifier#190: before 6872df1,
+# report ran inside the reusable workflow as "check (...) / report").
+MATRIX_ENTRY = r'\(([1-9][0-9]*), [A-Za-z0-9][A-Za-z0-9-]{0,38}, (issue|pull_request)(?:, true)?\)'
+CHECK_JOB = re.compile(r'check ' + MATRIX_ENTRY + r' / (build|verify|report|pr_verify)|(report) ' + MATRIX_ENTRY)
 
 def own_jobs_finished(jobs, run, number):
     """A final issue result while other jobs of its run still run (lead, 2026-11-02: run 41393097953 checked #94 and
@@ -242,9 +244,11 @@ def own_jobs_finished(jobs, run, number):
         require(isinstance(job, dict) and job.get('run_id') == run['id'] and job.get('run_attempt') == run['run_attempt']
                 and job.get('head_sha') == run['head_sha'], 'Job run mismatch')
         match = CHECK_JOB.fullmatch(job.get('name') or '')
-        if match and int(match[1]) == number and match[2] == 'issue':
-            require(match[3] not in own, 'Duplicate job of the issue')
-            own[match[3]] = job
+        if match:
+            issue, route, kind = match.group(1, 2, 3) if match[1] else match.group(5, 6, 4)
+            if int(issue) == number and route == 'issue':
+                require(kind not in own, 'Duplicate job of the issue')
+                own[kind] = job
     require({'verify', 'report'} <= own.keys(), 'Missing job of the issue')
     for name, job in own.items():
         require(job.get('status') == 'completed', 'A job of the issue has not finished')

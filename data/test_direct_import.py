@@ -309,10 +309,12 @@ class DirectImportTests(unittest.TestCase):
         receipt['kernels']['nanoda']['reason']='unknown'
         self.assertEqual(self.check(run=run,publisher=publisher)['decision'],'pending')
 
-    def jobs(self, own=('completed','success'), other=('in_progress',None), split=False):
-        """The jobs of run 123 attempt 2, as in run 41393097953 (#94 finished, #99 still running): issue 7 and issue 8."""
+    def jobs(self, own=('completed','success'), other=('in_progress',None), split=False, top_report=False):
+        """The jobs of run 123 attempt 2, as in run 41393097953 (#94 finished, #99 still running): issue 7 and issue 8.
+        top_report: report is a job of submissions.yml, not of the reusable check workflow (verifier#190)."""
         def job(number,name,status,conclusion):
-            entry=f'check ({number}, submitter, issue{", true" if split and number==7 else ""}) / {name}'
+            entry=f'({number}, submitter, issue{", true" if split and number==7 else ""})'
+            entry=f'report {entry}' if top_report and name=='report' else f'check {entry} / {name}'
             return dict(id=len(name)+number,name=entry,status=status,conclusion=conclusion,run_id=123,run_attempt=2,head_sha=self.revision)
         jobs=[dict(id=1,name='select',status='completed',conclusion='success',run_id=123,run_attempt=2,head_sha=self.revision)]
         for number,(status,conclusion) in [(7,own),(8,other)]:
@@ -328,6 +330,13 @@ class DirectImportTests(unittest.TestCase):
         self.assertEqual(self.check(run=running,jobs=self.jobs())['decision'],'lean-verified')
         self.assertEqual(self.check(run=running,jobs=self.jobs(split=True))['decision'],'lean-verified')
         self.assertEqual(self.check(run=running,jobs=self.jobs(other=('completed','failure')))['decision'],'lean-verified')
+        # verifier#190: the report job of submissions.yml counts as the report of its issue.
+        for split in [False,True]:
+            self.assertEqual(self.check(run=running,jobs=self.jobs(split=split,top_report=True))['decision'],'lean-verified')
+        failed=[dict(j,conclusion='failure') if j['name']=='report (7, submitter, issue)' else j for j in self.jobs(top_report=True)]
+        with self.assertRaises(gate.Rejected):self.check(run=running,jobs=failed)
+        both=self.jobs()+[j for j in self.jobs(top_report=True) if j['name']=='report (7, submitter, issue)']
+        with self.assertRaises(gate.Rejected):self.check(run=running,jobs=both)
         # Without the jobs, an unfinished run stays unadmitted, as before.
         with self.assertRaises(gate.Rejected):self.check(run=running)
         # (b) Its own job still runs, or (c) failed or was cancelled: rejected (read again when the run completes).
