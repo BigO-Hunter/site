@@ -7,7 +7,7 @@
         "slug": "integer-multiplication",
         "name": "Integer Multiplication",
         "url": "https://bigospeedrun.com/integer-multiplication",
-        "leader": "crocswap-pr-6919",
+        "leader": "crocswap-pr-7000",
         "direction": "higher",
         "records": [
           {
@@ -4549,6 +4549,56 @@
               "DreamingOfClouds"
             ],
             "bound": "O(n log^(1 - 0.00359528269) n)"
+          },
+          {
+            "id": "crocswap-pr-6931",
+            "score": "360410481/100000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.00360410481) n)"
+          },
+          {
+            "id": "crocswap-pr-6932",
+            "score": "362105861/100000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.00362105861) n)"
+          },
+          {
+            "id": "crocswap-pr-6934",
+            "score": "362385973/100000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.00362385973) n)"
+          },
+          {
+            "id": "crocswap-pr-6936",
+            "score": "181350941/50000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "DreamingOfClouds"
+            ],
+            "bound": "O(n log^(1 - 0.00362701882) n)"
+          },
+          {
+            "id": "crocswap-pr-7000",
+            "score": "363005817/100000000000",
+            "relation": "attained",
+            "evidence": "Claimed",
+            "authors": [
+              "Jerry Jiaheng Chen"
+            ],
+            "bound": "O(n log^(1 - 0.00363005817) n)"
           }
         ],
         "table": "big-o"
@@ -7737,7 +7787,8 @@
     "[\"integer-multiplication\",\"crocswap-pr-6919\",\"359528269/100000000000\",\"attained\"]:record",
     "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:lean",
     "[\"exact-dft\",\"direct-issue-190\",\"3363623/1000000000\",\"attained\"]:record",
-    "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:4\",\"4\",\"attained\"]:record"
+    "[\"other-explicit-circuit-lower-bound\",\"mishra-santhanam:4\",\"4\",\"attained\"]:record",
+    "[\"integer-multiplication\",\"crocswap-pr-7000\",\"363005817/100000000000\",\"attained\"]:record"
   ],
   "deferred": [
     {

@@ -1,13 +1,6 @@
 {
   "queue": [
     {
-      "pr": 7000,
-      "head": "93effe2a135bf57b9e484cb630d8dd057159aec9",
-      "title": "Conditional κ = 0.00363005817 (+0.0838% over #6936): shared wires and two helper splits",
-      "url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7000",
-      "reason": "The PR adds no single own research package CLAIM.json."
-    },
-    {
       "pr": 7003,
       "head": "ec30476096b2f9aed718152a2fa3712d1c4e884d",
       "title": "Conditional κ = 0.00363166992 (+0.00000161175 over #7000): five MOVE fusions",
