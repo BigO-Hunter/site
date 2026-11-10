@@ -80771,7 +80771,7 @@
     "title": "Audit conditional CRT last-K two-slice streaming tariff",
     "state": "open",
     "created_at": "2026-10-20T12:05:13Z",
-    "updated_at": "2026-10-20T21:03:38Z",
+    "updated_at": "2026-11-10T07:41:51Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -80779,7 +80779,7 @@
       "html_url": "https://github.com/ToikY"
     },
     "head": {
-      "sha": "45fc0750436ae5cc14b95fba81c030a3d7df3412"
+      "sha": "f1d4c33b4fa61843db81c01f7ed92f851c2d732b"
     },
     "base": {
       "ref": "main"
@@ -80834,7 +80834,7 @@
     "title": "Audit uniform Beneš compiler with charged sequential arena scans",
     "state": "open",
     "created_at": "2026-10-20T12:37:14Z",
-    "updated_at": "2026-10-20T21:04:42Z",
+    "updated_at": "2026-11-10T07:41:39Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -80842,7 +80842,7 @@
       "html_url": "https://github.com/ToikY"
     },
     "head": {
-      "sha": "519d811cc48693ad9969d6d7994bef3940167005"
+      "sha": "317a241a47c8fdd5a11a36497ca836fe34a411c4"
     },
     "base": {
       "ref": "main"
@@ -122582,7 +122582,7 @@
     "title": "Repair PR6319 pinned-byte reads for multiline paths and Git context",
     "state": "open",
     "created_at": "2026-11-02T04:56:29Z",
-    "updated_at": "2026-11-02T16:39:51Z",
+    "updated_at": "2026-11-10T07:39:35Z",
     "closed_at": null,
     "merged_at": null,
     "user": {
@@ -122590,7 +122590,7 @@
       "html_url": "https://github.com/ToikY"
     },
     "head": {
-      "sha": "170867c0a8f92375dfc489dd090bad5daee7b090"
+      "sha": "f89867618f14364ed67ec858dace1c1f0dc770ac"
     },
     "base": {
       "ref": "main"
@@ -135242,10 +135242,10 @@
   {
     "number": 6964,
     "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6964",
-    "title": "Record the characteristic polynomial of one 216-dimensional A1 joint …",
+    "title": "Record the characteristic polynomial of one 216-dimensional A1 joint eigenspace",
     "state": "closed",
     "created_at": "2026-11-10T02:54:53Z",
-    "updated_at": "2026-11-10T07:02:38Z",
+    "updated_at": "2026-11-10T08:11:15Z",
     "closed_at": "2026-11-10T07:02:38Z",
     "merged_at": "2026-11-10T07:02:38Z",
     "user": {
@@ -135266,7 +135266,7 @@
     "title": "Classify the signed permutations that split every c=3 centre character.",
     "state": "closed",
     "created_at": "2026-11-10T02:54:55Z",
-    "updated_at": "2026-11-10T07:02:38Z",
+    "updated_at": "2026-11-10T08:11:24Z",
     "closed_at": "2026-11-10T07:02:38Z",
     "merged_at": "2026-11-10T07:02:38Z",
     "user": {
@@ -135287,7 +135287,7 @@
     "title": "Prove length-28 double sojourns use at least four sources.",
     "state": "closed",
     "created_at": "2026-11-10T02:54:57Z",
-    "updated_at": "2026-11-10T07:02:38Z",
+    "updated_at": "2026-11-10T08:11:32Z",
     "closed_at": "2026-11-10T07:02:38Z",
     "merged_at": "2026-11-10T07:02:38Z",
     "user": {
@@ -136052,6 +136052,300 @@
     },
     "head": {
       "sha": "ed1a0a83dfe5d28db9a971bcfc1403bcdc03a49b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7003,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7003",
+    "title": "Conditional κ = 0.00363166992 (+0.00000161175 over #7000): five MOVE fusions",
+    "state": "open",
+    "created_at": "2026-11-10T07:20:00Z",
+    "updated_at": "2026-11-10T07:20:00Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "ec30476096b2f9aed718152a2fa3712d1c4e884d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7004,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7004",
+    "title": "Conditional κ = 0.00363206219 (+0.00000039227 over #7003): peer MOVE retiming",
+    "state": "open",
+    "created_at": "2026-11-10T07:44:10Z",
+    "updated_at": "2026-11-10T07:44:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "ToikY",
+      "html_url": "https://github.com/ToikY"
+    },
+    "head": {
+      "sha": "2ee11a4460f23abf06d16b12f18c8ef9aca889f1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7005,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7005",
+    "title": "Prove consecutive paired-star words need thin rank at least g q.",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:29Z",
+    "updated_at": "2026-11-10T08:11:39Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "1750566c34c9fb117dc4afc4ce2bdacca7da036b"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7006,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7006",
+    "title": "Record a partial F4 census of two thin maps on the three-leaf paired star",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:31Z",
+    "updated_at": "2026-11-10T08:11:51Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "8889385a5bbe64df6f1378047b35d89e1aea355c"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7007,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7007",
+    "title": "Record the P112 punctured frame code's weight-16 set equality.",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:34Z",
+    "updated_at": "2026-11-10T08:12:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "44fee3229a7e0cf6decdf892815a1d5af1567dcb"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7008,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7008",
+    "title": "Prove the c=1 ++ 216-space is reducible under its signed normalizer.",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:35Z",
+    "updated_at": "2026-11-10T08:12:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "c1430a32f9b58aefd5bdbe43ca145004ebca98c3"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7009,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7009",
+    "title": "Split the c=1 sign characters that g and t move",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:38Z",
+    "updated_at": "2026-11-10T08:12:18Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "fbb3c3f5651dc5871bacdd6e897340514de3297a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7010,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7010",
+    "title": "Prove that adjacent paired-star halves need ceil(g/2) thin maps.",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:41Z",
+    "updated_at": "2026-11-10T08:12:26Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "32999d634cdd718ce6fb77648f54e4e674d7f395"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7011,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7011",
+    "title": "Record that three F2 thin maps meet total rank 6 on the three-leaf paired star",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:44Z",
+    "updated_at": "2026-11-10T08:12:37Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "9a63d6d99158f5ced1058df403d3e3b9847fcc17"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7012,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7012",
+    "title": "Record a 25-shear two-scale zero-swap word for helper-462.",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:46Z",
+    "updated_at": "2026-11-10T08:12:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "38aaf6a0d63d9bd15b3ae95df6829b94770dccc4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7013,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7013",
+    "title": "Prove the (0,2,1,1) three-frame profile admits no seven-call word.",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:48Z",
+    "updated_at": "2026-11-10T08:12:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "ed127d7ab6067daf8a48def1445da5864ad113df"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7014,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7014",
+    "title": "Exhibit a 104 by 13 factorisation of the P104 window over F_5.",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:50Z",
+    "updated_at": "2026-11-10T08:13:02Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "949c0ada285aae619468ae49317c8d9f4df130f7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7015,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7015",
+    "title": "Record that rank 3 blocks a universal length-30 singleton word",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:54Z",
+    "updated_at": "2026-11-10T08:13:13Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "c5b463fe80dd0bcc234c12a6b1ed688ae855db06"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 7016,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7016",
+    "title": "Prove one off-diagonal pair cannot finish the c=7 weight-3 count.",
+    "state": "open",
+    "created_at": "2026-11-10T07:57:56Z",
+    "updated_at": "2026-11-10T08:13:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "unpaidmoon",
+      "html_url": "https://github.com/unpaidmoon"
+    },
+    "head": {
+      "sha": "3a89abb195ec9a63476c12042df5fbb0760e3534"
     },
     "base": {
       "ref": "main"

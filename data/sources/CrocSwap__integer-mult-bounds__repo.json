@@ -73,7 +73,7 @@
   "clone_url": "https://github.com/CrocSwap/integer-mult-bounds.git",
   "svn_url": "https://github.com/CrocSwap/integer-mult-bounds",
   "homepage": null,
-  "size": 2707135,
+  "size": 2840489,
   "stargazers_count": 318,
   "watchers_count": 318,
   "language": "Python",
@@ -87,7 +87,7 @@
   "mirror_url": null,
   "archived": false,
   "disabled": false,
-  "open_issues_count": 304,
+  "open_issues_count": 318,
   "license": {
     "key": "apache-2.0",
     "name": "Apache License 2.0",
@@ -103,7 +103,7 @@
   "topics": [],
   "visibility": "public",
   "forks": 313,
-  "open_issues": 304,
+  "open_issues": 318,
   "watchers": 318,
   "default_branch": "main",
   "permissions": {
