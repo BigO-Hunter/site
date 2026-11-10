@@ -2152,5 +2152,14 @@
       "Om Swostik Mishra",
       "Rahul Santhanam"
     ]
+  },
+  {
+    "key": "[\"integer-multiplication\",\"crocswap-pr-7000\",\"363005817/100000000000\",\"attained\"]:record",
+    "text": "**New claim** | **Integer Multiplication** | `O(n log^(1 - 0.00363) n)` | by Jerry Jiaheng Chen | Claimed | [bigospeedrun.com/integer-multiplication](https://bigospeedrun.com/integer-multiplication)",
+    "x_text": "New claim!\n\nProblem: Integer Multiplication\nNew value: O(n log^(1 - 0.00363) n)\nPlayer: Jerry Jiaheng Chen\nStatus: Claimed (not verified)",
+    "posted_at": "2026-11-10T09:37:08.473Z",
+    "authors": [
+      "Jerry Jiaheng Chen"
+    ]
   }
 ]
