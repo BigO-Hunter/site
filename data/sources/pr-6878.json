@@ -4,8 +4,8 @@
   "title": "Preserve node costs through compiler occurrence layouts (no new κ)",
   "body": "Construct occurrence-specific injections, complete complements and inverse returns through the retained compiler. Complete 145-axis canonicalizers replace the 265-axis audit representation. Whole-field conjugation aligns scalar contacts.\n\nThe actual layer requests one bit offset; outer rounds already pay for other offsets. A complete finite event sum preserves the ordinary node tariff, with an explicit compact-control guard valid at K=128G. This extends #5480 using #5445/#4268 and substitutes into #6115's existing recurrence without claiming that recurrence anew.\n\nBase: 7c49fe32c55de02c2c873655c804b16e4c3fef0a. Exact 21 input Git/SHA256 pins: SOURCES.json.\n\nReproduce (Python 3.12, stdlib):\n```sh\npython3 -B scripts/research_package.py --package research/selected-compiler-occurrence-layout\n```\nExpected: PASS_REGISTERED_RESEARCH_PACKAGE.\n\nExecuted: six normal/optimized checks; 1,297,520 basis checks, 8,064 contacts, 84 reservation domains, independent exact tensor/scalar checks and 2,415 offset schedules. Controls reject aliases, missing complements/returns, bad stock, misaligned contacts and extra plane sweeps. Committed bytes/modes and six read-only Git-free export replays pass. Remote tree matches tested contents.\n\nNo new κ. Quantified matching/batching/descent are imported. Selected-rate primitives, owned backing, updated precision/stock constants, dispatcher and analytic recovery remain inherited or unverified; all five assumptions remain. Nonmaterialization alone is not a proof gap. No selected cold replay, full-history audit or human/kernel acceptance.\n\nBy @CubeJerry with substantial OpenAI Codex assistance and separate source-aware review. Credit JoyboyBrian (#5480), Matarener (#5445), Jacob Alan Sussman (#4268), DLamdata (#6115), and retained native/compiler lineage. Apache-2.0.\n\nProof, pins, validation and open questions:\nhttps://github.com/CubeJerry/integer-mult-bounds/tree/41febf890fbbb852c6059d4c0cc8c593ae9dfa5c/research/selected-compiler-occurrence-layout",
   "created_at": "2026-11-08T14:59:55Z",
-  "updated_at": "2026-11-08T14:59:55Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T07:01:01Z",
+  "closed_at": "2026-11-10T07:01:00Z",
+  "merged_at": "2026-11-10T07:01:00Z",
+  "state": "closed"
 }

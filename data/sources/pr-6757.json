@@ -4,8 +4,8 @@
   "title": "Prove low-span clean-helper bounds for arbitrary target pairs (no new κ)",
   "body": "Extend #6698's common-rational-flag theorem to a common flag over Qbar, retaining F_2 coefficients. Every pair of invertible rational m-by-m targets needs at least 2m paid calls when the rank-one frame span is at most m+1, with any number of exactly restored helpers. A quadratic address extension suffices; commuting relatives and invertible pencils satisfy the general mt bound.\n\nThis resolves #6698's irreducible-quadratic pair obligation. Sharp rational examples lie outside the old flag premise. A feasible nontriangularizable triple records the remaining boundary, not a counterexample.\n\nBase: 7c49fe32c55de02c2c873655c804b16e4c3fef0a.\n#6698 source: e7b08ac9ef4ea5b5517d9d325ae6aeae445d3f91.\nExact source bytes, Git/SHA256 pins and the retention ancestor are preserved.\n\nReproduce (CPython 3.12, stdlib):\n```sh\npython3 -B scripts/research_package.py --package research/clean-helper-algebraic-flag-bound\n```\nExpected: PASS_EXACT_FINITE_CONTROLS and PASS_REGISTERED_RESEARCH_PACKAGE.\n\nExecuted: normal/-O exact formal identities and seven rejection controls; separate AI proof and regular-representation checks; committed bytes/modes, export integrity and both Git-free replays with read-only permissions. Missing cleanup, rank-two frames, bad scalar idempotence and incorrect address arithmetic reject. Complete remote tree equals the tested tree.\n\nNo new κ. This is the exact whole-matrix scalar-idempotent model. Nontriangularizable triples, larger spans, nonidentity helper outputs and free address maps remain outside scope. Native/caller costs and all five selected assumptions remain. No human/formal acceptance, hosted CI or selected cold replay. Full-history preflight refused the shallow checkout.\n\nBy @CubeJerry with substantial OpenAI Codex assistance and separate proof review. Credit Nick Petalas (#6698/#5988), unpaidmoon (#6338), Ali Romman (#468), eumemic (#288) and retained lineage. Apache-2.0.\n\nProof, pins and open questions:\nhttps://github.com/CubeJerry/integer-mult-bounds/tree/a079d89c7c49d4ee418828f93e31f319e018c2c1/research/clean-helper-algebraic-flag-bound",
   "created_at": "2026-11-06T05:02:47Z",
-  "updated_at": "2026-11-06T05:02:47Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T06:56:00Z",
+  "closed_at": "2026-11-10T06:55:59Z",
+  "merged_at": "2026-11-10T06:55:59Z",
+  "state": "closed"
 }

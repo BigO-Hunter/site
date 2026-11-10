@@ -4,8 +4,8 @@
   "title": "Classify paired-root commutants and prove the four-thin boundary (no new κ)",
   "body": "## Change and mathematical scope\nProve an exact correspondence between grouped primal commutants and dual thin-reflection commutants for corank-two roots with at least two full stages, each a consecutive orthogonal pair. Zero/two-thin roots decompose over the field; four thin queries suffice for indecomposability. Exact six-field and 38-field witnesses and a Gram-connectivity counterexample are included.\n\nThe 38-field witness removes 208 rank-one entries from both paid and target histograms, leaving every signed moment unchanged. No new κ or physical caller.\n\n## Sources and verification\nBase: 7c49fe32c55de02c2c873655c804b16e4c3fef0a.\nHead: 74bbc383040ec6e50ac4f2b1a7ef7b97648cd8a0.\nCredit #6888 at 936a8a19896a56afbf428da6f7c29c175f348935 for duality; frozen #6902 source e4d42607f24d7a049b0fca329dc4c34882405c25 supplies the root/interface. Pins: SOURCES.json.\n\nRun:\n`python3 -B scripts/research_package.py --package research/p104-paired-root-commutant`\n\nFresh Python 3.12.14 replay passed all three registered checks: normal/optimized exact rational checks and the separately implemented 45-case F3/F5/F7 oracle, including mutation controls. Expected: PASS_REGISTERED_RESEARCH_PACKAGE. Committed bytes/modes and whitespace pass. Latest #6902 changes leave root/native inputs unchanged.\n\n## Limits and credit\nCharacteristic two excluded. Field decomposition need not respect dyadic bases or masks; scalar commutant proves indecomposability, not irreducibility. Physical costs, admission and all five assumptions remain. Frontier unchanged.\n\n@CubeJerry with substantial OpenAI Astra/Codex assistance and documented prior separate AI review. Credit DreamingOfClouds (#6888/#6902/#6833) and retained authors. Apache-2.0.",
   "created_at": "2026-11-09T03:39:30Z",
-  "updated_at": "2026-11-09T03:39:30Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T07:01:00Z",
+  "closed_at": "2026-11-10T07:00:59Z",
+  "merged_at": "2026-11-10T07:00:59Z",
+  "state": "closed"
 }

@@ -4,8 +4,8 @@
   "title": "Audit receiver import order before reusing missing-gate controls",
   "body": "## Change and mathematical scope\n\nThe current control receiver imports `hashlib` before checking for missing gates at the validator call. The missing-gate control requires the gate error to come first. This source audit proves the discrepancy for each of the four gates and recovers the exact historical pre-import guard and declaration inverse.\n\nThe contribution is a source audit of import ordering. It leaves the selected receiver, scientific workload and accepted comparison unchanged.\n\n## Task and overlap\n\nBase: `7c49fe32c55de02c2c873655c804b16e4c3fef0a`. This follows [the original investigation, #6321](https://github.com/CrocSwap/integer-mult-bounds/pull/6321) and its [maintained handoff](https://github.com/CrocSwap/integer-mult-bounds/pull/6321#issuecomment-6713710045). [#6885](https://github.com/CrocSwap/integer-mult-bounds/pull/6885) at `6f9457478d22fa31c1e26b98ca4ee1ed43129ac4` supplies the selected receiver and stage binding; [#6882](https://github.com/CrocSwap/integer-mult-bounds/pull/6882) supplies the earlier family judgement context. The scope is narrowed to the exact receiver prelude and literal source inverse.\n\n## Validation\n\n`python3 -B research/h25-receiver-import-order-audit/check_prelude.py` verifies the pinned public input, byte transformation, unchanged validator, initial import order, and complete declaration inverse. This is static source verification. No receiver, fixture, target or native operation was executed. No runtime qualification or performance claim is made.\n\n## Open next questions\n\nCheck that the actual owning parent's four gate records precede the new staged receiver, then bind the exact preconfigured import image and independently authorized instrumentation. The parent still needs actual owned observations for all four cases in both original modes. Restoring the guard without changing the current late-binding route would prevent that receiver from importing.\n\nCredit the selected source and original launch boundary to #6885 and the earlier family integration to #6882. The audit and checker were prepared with AI assistance.\n",
   "created_at": "2026-11-09T02:06:44Z",
-  "updated_at": "2026-11-09T02:06:44Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T07:00:59Z",
+  "closed_at": "2026-11-10T07:00:59Z",
+  "merged_at": "2026-11-10T07:00:59Z",
+  "state": "closed"
 }

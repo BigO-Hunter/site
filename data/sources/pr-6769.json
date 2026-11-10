@@ -4,8 +4,8 @@
   "title": "Determine the sharp net splitting-tax coefficient (no new κ)",
   "body": "## Summary\n\nDetermine the least net splitting coefficient for 0<t<1. It is finite exactly when sigma>=1; for sigma>1 only two adjacent quotient candidates are needed. The exact family t=1/2, sigma=1+1/(2n) has optimal q=n(n+1); in particular N(1/2,3/2)=8/27. The full completion charge remains paid.\n\nThis resolves the net-coefficient question in #6390 and strengthens #4480's bound. Credit #4433/#4832 for the preceding higher-moment framework. Canonical base: 7c49fe32c55de02c2c873655c804b16e4c3fef0a. Pending #6390 is pinned at f9e68f40b0da7236a7fad415f7172218c0666d27; all source bytes and other pins are in SOURCES.json.\n\n## Evidence\n\n```sh\npython3 -B -W error research/sharp-net-splitting-tax/verify.py\n```\n\nExpected: PASS_SHARP_NET_SPLITTING_TAX. Normal/optimized registered and portable replays passed: 16 parameter pairs, 4,608 literal splits, 4,844 separate exact fixtures, 13 semantic controls and eight actual corrupted-package rejections. Two separate mathematical reviews found no unresolved gap.\n\n## Limitations and next questions\n\nNo new κ. This is a written universal coefficient theorem with finite corroboration, not a complete native compiler admission. The [companion application](https://github.com/CubeJerry/integer-mult-bounds/blob/223ea940b604c1f8a2bd28093618628ba4a113a4/research/selected6030-smaller-compiler/JOINT-PROOF.md) now supplies a checked selected-source example. Further applications and physical obligations remain open; all five framework assumptions remain. Full-history validation was unavailable in the shallow checkout.\n\n## Attribution\n\n@CubeJerry, with substantial OpenAI Codex assistance. Predecessor credit, licenses, exact coverage and review receipts: [research package](https://github.com/CubeJerry/integer-mult-bounds/tree/e88f9b48e5c2e153438e588a17272d29f4e4f86f/research/sharp-net-splitting-tax). Independent human and proof-kernel acceptance are unclaimed.",
   "created_at": "2026-11-06T09:09:10Z",
-  "updated_at": "2026-11-06T09:09:10Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T06:55:59Z",
+  "closed_at": "2026-11-10T06:55:59Z",
+  "merged_at": "2026-11-10T06:55:59Z",
+  "state": "closed"
 }

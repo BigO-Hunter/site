@@ -4,8 +4,8 @@
   "title": "Execute the complete physical fine-gap periodic Gaussian inverse (no new κ)",
   "body": "## Change and mathematical scope\nJoin a source-bound ordinary-run inverse with a folded cyclic boundary solver into a complete fixed-tape periodic inverse. The caller executes both run passes, boundary products, folded Schur solve, unequal-precision conversions, period wrap and holes, with input/page restoration and protected output. New is the complete physical/numerical composition; the Schur algebra and inherited word multiplication are credited. No new κ.\n\n## Sources and verification\nBase `7c49fe32c55de02c2c873655c804b16e4c3fef0a`, dependent component commits `41defd0faaad9656e5f0c3d15445cb94e61077ea` and `d8c9d2c366925682e03cb9e38bc1a9c7d8d16c1b`; exact files in SOURCES.json. Run `python3 -B scripts/research_package.py --package research/physical-periodic-fine-gap`, expected `PASS_REGISTERED_RESEARCH_PACKAGE`. Normal/optimized physical tests, independent original-rational-matrix oracle, input ownership and adverse rounding/wrap controls passed; an extended 18-target fixture was also checked.\n\n## Limits and credit\nThe full tensor/FFT/CRT caller, globally priced page preparation and all five assumptions remain open; no unconditional result. @CubeJerry with substantial OpenAI Codex assistance and separate AI reviews. Credit #5571, #4879, #5319, #3851, #3787 and retained authors. Apache-2.0.",
   "created_at": "2026-11-09T02:01:09Z",
-  "updated_at": "2026-11-09T02:01:09Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T07:01:00Z",
+  "closed_at": "2026-11-10T07:01:00Z",
+  "merged_at": "2026-11-10T07:00:59Z",
+  "state": "closed"
 }

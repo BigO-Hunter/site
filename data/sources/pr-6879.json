@@ -4,8 +4,8 @@
   "title": "Prove ordinary BIT retained-space bounds with reusable origins (no new κ)",
   "body": "Construct a source-faithful reusable-origin realization of the old ordinary BIT helper with retained backing K_entry+C V for one call and K_entry+C max_i V_i for completed histories. An actual q=3 digit-bucket witness refutes the history-free K V_current reading: erased cells remain visited after a smaller call.\n\nBinds ordinary movement and recursive segment reuse to #5814/#5829; distinct from #6098/#6152's planner histories. Polynomial ancestor preparation/absorption already appears in #2234 and is credited as inherited.\n\nBase: 7c49fe32c55de02c2c873655c804b16e4c3fef0a. Exact 14 input Git/SHA256 pins: SOURCES.json.\n\nReproduce (Python 3.12, stdlib):\n```sh\npython3 -B scripts/research_package.py --package research/ordinary-bit-retained-space\n```\nExpected: PASS_ORDINARY_BIT_RETAINED_SPACE and PASS_REGISTERED_RESEARCH_PACKAGE.\n\nExecuted: normal/optimized checks, 441 payload cases, 1,599,798 metered moves, 15 interval walks and 1,961 padding checks. Seven controls reject wrong order, live-only accounting, missing erasure, append-only origins and omitted history. A shrinking/reuse history retains 19,694 cells versus nine live. Committed bytes/modes and both read-only Git-free export replays pass; complete remote tree matches tested contents.\n\nNo new κ. This constructs a schedule, not the final production dispatcher. Precision, markers and visited blanks remain charged; changed finite constants do not automatically preserve the selected numerical tariff. Final native/fallback, evaluator invocation and dispatcher binding remain; all five assumptions remain. No full multiplier, full-history audit or human/kernel acceptance.\n\nBy @CubeJerry with substantial OpenAI Codex assistance and separate source review. Credit Mason Hale (#5814), Ali Romman (#5829), JoyboyBrian (#6098), Nick Petalas (#6152), Jose Manuel (#2234), and retained stream/copy lineage. Apache-2.0.\n\nProof, pins, validation and open questions:\nhttps://github.com/CubeJerry/integer-mult-bounds/tree/db7b33f6255b7308d9d7db1563afa39c99b9a27e/research/ordinary-bit-retained-space",
   "created_at": "2026-11-08T15:00:29Z",
-  "updated_at": "2026-11-08T15:00:29Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T07:01:00Z",
+  "closed_at": "2026-11-10T07:01:00Z",
+  "merged_at": "2026-11-10T07:01:00Z",
+  "state": "closed"
 }

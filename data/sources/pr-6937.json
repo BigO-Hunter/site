@@ -4,8 +4,8 @@
   "title": "Two-chain family: remaining proofs, objects, backup words and open leads (no new κ)",
   "body": "No new kappa. This note gives the remaining results, proofs, exact objects, backup words and open leads for the two-chain family, each with its status (proved by hand, replayed exact, model, conditional) and the smallest test that would settle it. No human has reviewed anything in it.\n\nContents: proofs (rounded division, share law with its 2F+2R exact case, t=-1 native criterion, level-mix, split lemma, waist, pairing as sums of squares); exact objects (two L=3 rho=1 roots, the E-free root with its one new caller op, `check.py`); backup words as data (`wh` .0036275819188 first, chain not run; `ft` .00362710048; `sr0` .00360666479; `rbf` .00362232643); open leads with numbers; and the scope of what is finished.\n\n`check.py` (about a minute, standard library) recomputes hashes, the `sr0` and `rbf` kappas from invoices, the E-free root and the L=3 roots, each with a failing control. Credit to Romman (#5599), CubeJerry (#6912, #6914, #6916), unpaidmoon (#6930), icekylinx (#104).\n\nPrepared by DreamingOfClouds with Claude Opus 5.5 (Anthropic), via Claude Code.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n",
   "created_at": "2026-11-09T16:09:18Z",
-  "updated_at": "2026-11-09T16:18:12Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T07:00:59Z",
+  "closed_at": "2026-11-10T07:00:59Z",
+  "merged_at": "2026-11-10T07:00:59Z",
+  "state": "closed"
 }

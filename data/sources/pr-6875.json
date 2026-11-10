@@ -4,8 +4,8 @@
   "title": "Exclude multi-channel P104 hubs under the frozen serial schedule (no new κ)",
   "body": "## Change and mathematical scope\nNo new κ. Under the frozen scalar/serial, common-boundary old-helper and stationary-buffer contract, all 4,296 eligible cuts across 77 groups have pairing rank at most one. Arbitrary intermediate frames cannot add a two-pivot meeting without changing that contract. Addresses #5803 using #5786/#5800.\n\n## Task and sources\nBase 7c49fe32c55de02c2c873655c804b16e4c3fef0a. #6824 source: 2a7ca44fbda3abaa4df355b183ed7d7478eef7c1.\n\n## Validation\n`python3 -B scripts/research_package.py --package research/p104-two-channel-hub`\nExpected: PASS_REGISTERED_RESEARCH_PACKAGE. Six registered checks passed. Independent histories/nullspaces/ranks cover every certified cut on all 801 axes; separate physical coverage checks 689,190 eligible grid cases. Normal/-O read-only exports passed unchanged. Controls include rank-two, dirty cancellation, corrupt source, omitted midpoint and uncovered contact cases. Complete remote tree matches tested files.\n\n## Limitations and credit\nRetiming, extra relocations, changed contacts and transported pivots remain open. Retiming search failure is not an impossibility theorem. All five assumptions remain; no native/compiler admission. Full-history preflight unrun on shallow checkout. @CubeJerry with substantial OpenAI assistance and separate review; credit Ali Romman, ToikY, DreamingOfClouds and retained lineage.\n\n[Proofs, exact byte pins, receipts and remaining questions](https://github.com/CubeJerry/integer-mult-bounds/tree/52a0dd45b0f96a369dbc82665f55f6bf3e448a6d/research/p104-two-channel-hub).",
   "created_at": "2026-11-08T13:19:20Z",
-  "updated_at": "2026-11-08T13:19:20Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T07:01:00Z",
+  "closed_at": "2026-11-10T07:01:00Z",
+  "merged_at": "2026-11-10T07:01:00Z",
+  "state": "closed"
 }

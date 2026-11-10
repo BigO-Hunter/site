@@ -4,8 +4,8 @@
   "title": "Prove the two-relation rank bound at arbitrary helper width (no new κ)",
   "body": "Extend #720 and #1456 to arbitrary finite scalar width and word length: in the formal binary rank-one-idempotent model, at most two integral frame relations force every diagonal target to use a disjoint subset of paid frames. Total target rank cannot exceed paid rank. The new all-width image classification and arbitrary odd-core argument exclude eight calls of span six for three invertible 3x3 targets. The historical four-register census in #1846 is credited, not claimed as new.\n\nBase and inherited source revision: 7c49fe32c55de02c2c873655c804b16e4c3fef0a.\nExact #720/#1456/#5921 proof blobs: SOURCES.json.\nProof SHA256: ad05bccffaf0fe11120312d8514146e5433d7032bbc65bd9d57974e06a6c3f82.\n\nReproduce (Python 3.12, stdlib):\n```sh\npython3 -B scripts/research_package.py --package research/bit-two-relation-any-registers\n```\nExpected: `PASS_TWO_RELATION_ANY_REGISTERS` and `PASS_REGISTERED_RESEARCH_PACKAGE`.\n\nExecuted: all 4,964 historical pattern planes, 108,165 width-five planes, 20,097 odd-core prefix cases, invariant-block and exact-endpoint controls. Missing planes, invalid invariant spaces, deleted calls and missing cleanup are rejected. Separate written review checked the universal reduction and the precise inherited #720 lemma. Normal/-O, metadata, certificate regeneration, committed-byte/mode, export and Git-free replay passed.\n\nNo new κ. Torsion-free exponents, binary rank-one idempotents and exact diagonal monomial endpoints are required. The #720 theorem is inherited; finite checks do not prove unbounded quantifiers. Span five, three or more relations, other alphabets and physical supplier costs remain open. All five selected assumptions remain.\n\nBy @CubeJerry with substantial OpenAI Codex assistance and separately assigned mathematical review. Credit David Govea (#720), woklerx (#1456/#1846), Nick Petalas (#5921), Ali Romman and the pinned lineage. No human/proof-kernel acceptance.\n\nProof, pins and limits: https://github.com/CubeJerry/integer-mult-bounds/tree/e62a9d0d4143e11c190fcb4d81d83dc1662da782/research/bit-two-relation-any-registers\nComplete remote Git tree matches the tested contribution.",
   "created_at": "2026-11-06T09:37:51Z",
-  "updated_at": "2026-11-06T09:37:51Z",
-  "closed_at": null,
-  "merged_at": null,
-  "state": "open"
+  "updated_at": "2026-11-10T06:55:59Z",
+  "closed_at": "2026-11-10T06:55:59Z",
+  "merged_at": "2026-11-10T06:55:59Z",
+  "state": "closed"
 }
