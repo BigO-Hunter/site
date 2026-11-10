@@ -64572,5 +64572,5 @@
       "credit_note": "Jerry Jiaheng Chen composes the sixteen shared wires of PR 6937 with the two splits of PR 6936 (both by DreamingOfClouds), adds one wire and two helper splits, on the caller of PR 6980. Conditional kappa 0.00363005817. It needs the five framework assumptions, A6, the odd scalars, and the paired BIT package of PR 7001, weakened to 0.00376669. Its proof is a width-512 replay, not all-width. OpenAI Codex assisted. Doug Colkitt landed it on 2026-11-10. External review is outstanding."
     }
   },
-  "updated_at": "2026-11-10T09:17:32Z"
+  "updated_at": "2026-11-10T10:02:33Z"
 }
