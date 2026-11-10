@@ -64452,7 +64452,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6931",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-09T08:29:42Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds adds ten helper splits to the word of PR 6919. Conditional kappa 0.00360410481. It needs the five framework assumptions, A6 (owned ascent), the per-port root, and the BIT pin 0.00376669 of PR 6726. Credits: Ali Romman, Jerry Jiaheng Chen, DreamingOfClouds. Claude Opus 5.5 prepared it. Doug Colkitt landed it on CrocSwap main on 2026-11-10, with the PRs it builds on. External review is outstanding."
     },
     "crocswap-pr-6932": {
       "checked_at": "2026-11-10",
@@ -64480,7 +64481,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6932",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-09T09:00:20Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds adds ten more helper splits to PR 6931. Conditional kappa 0.00362105861. It needs the five framework assumptions, A6, the per-port root, the BIT pin 0.00376669 of PR 6726, and a declared odd-scalar clause (scalars 1/3 and 1/5, outside the dyadic alphabet; maintainer acceptance not claimed). Credits: IceKylin, Ali Romman, Jerry Jiaheng Chen, DreamingOfClouds. Claude Opus 5.5 prepared it. Doug Colkitt landed it on CrocSwap main on 2026-11-10. External review is outstanding."
     },
     "crocswap-pr-6934": {
       "checked_at": "2026-11-10",
@@ -64508,7 +64510,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6934",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-09T13:06:18Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds rebuilds the word of PR 6932. Conditional kappa 0.00362385973. It needs the five framework assumptions, A6, the BIT pin 0.00376669 of PR 6726, the declared odd-scalar clause of PR 6932 (maintainer acceptance not claimed), and the type A caller blocks of PR 6912 as data. Credits: IceKylin, Jerry Jiaheng Chen, unpaidmoon (PR 6930), Ali Romman, DreamingOfClouds. Claude Opus 5.5 prepared it. Doug Colkitt landed it on CrocSwap main on 2026-11-10. External review is outstanding."
     },
     "crocswap-pr-6936": {
       "checked_at": "2026-11-10",
@@ -64536,7 +64539,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6936",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-09T16:02:56Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "DreamingOfClouds moves seven main-to-main contacts onto shared wires. Conditional kappa 0.00362701882. It needs the five framework assumptions, A6, the BIT pin 0.00376669 of PR 6726, the declared odd-scalar clause of PR 6932 (acceptance not claimed), and the type A caller of PR 6912 as data. Credits: IceKylin, Jerry Jiaheng Chen, unpaidmoon (PR 6930), Ali Romman, DreamingOfClouds. Claude Opus 5.5 prepared it. Doug Colkitt landed it on CrocSwap main on 2026-11-10. External review is outstanding."
     },
     "crocswap-pr-7000": {
       "checked_at": "2026-11-10",
@@ -64564,7 +64568,8 @@
       "publication_source_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/7000",
       "race_series": "pr-submissions",
       "race_event_at": "2026-11-10T05:39:55Z",
-      "race_event_kind": "PR creation; latest observed score"
+      "race_event_kind": "PR creation; latest observed score",
+      "credit_note": "Jerry Jiaheng Chen composes the sixteen shared wires of PR 6937 with the two splits of PR 6936 (both by DreamingOfClouds), adds one wire and two helper splits, on the caller of PR 6980. Conditional kappa 0.00363005817. It needs the five framework assumptions, A6, the odd scalars, and the paired BIT package of PR 7001, weakened to 0.00376669. Its proof is a width-512 replay, not all-width. OpenAI Codex assisted. Doug Colkitt landed it on 2026-11-10. External review is outstanding."
     }
   },
   "updated_at": "2026-11-10T09:17:32Z"
