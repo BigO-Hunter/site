@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checked_at": "2026-11-10T03:13:48.882190Z",
+  "description": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+  "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42734672790",
+  "artifact_path": "sources/direct-issue-190-42734672790-1-lean.zip",
+  "artifact_sha256": "6b768e7d57f464415b33cb1229893684809f5cf2f2eaaa90144ef1ac5f13cfc1",
+  "source_receipt_path": "sources/direct-issue-190-42734672790-1-lean-source.json"
+}

@@ -657,8 +657,8 @@
       },
       "rerun_status": {
         "state": "passed",
-        "checked_at": "2026-11-09T18:00:00.843718Z",
-        "receipt_path": "sources/direct-issue-190-42648121034-1-lean.json"
+        "checked_at": "2026-11-10T03:13:48.882190Z",
+        "receipt_path": "sources/direct-issue-190-42734672790-1-lean.json"
       }
     },
     {
@@ -1417,7 +1417,7 @@
       "direct_submission": true,
       "route": "issue",
       "credit_note": "Vladislav Kuznetsov's Lean proof of the saving 0.003363623 for the exact Fourier transform builds on Halit Ziya KARTAL's preceding Lean instantiations. It changes the supplier (22,836 events) and the controller (a paired controller on 40 main roles). The README credits OpenAI (computational model, Fourier reduction), Jacob Sussman (engines, reduction), DreamingOfClouds (two-chain controller), Ali Romman, CubeJerry and Cinna Davis.",
-      "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42648121034",
+      "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42734672790",
       "verification": "passed"
     },
     "direct-issue-30": {
@@ -1621,5 +1621,5 @@
       "verification": "passed"
     }
   },
-  "updated_at": "2026-11-10T00:27:54Z"
+  "updated_at": "2026-11-10T03:30:48Z"
 }
