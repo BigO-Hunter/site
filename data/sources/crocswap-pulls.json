@@ -135301,5 +135301,698 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6967,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6967",
+    "title": "Research: Coded Gaussian leaf",
+    "state": "open",
+    "created_at": "2026-11-10T03:28:43Z",
+    "updated_at": "2026-11-10T03:28:43Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "61edc4fe348f0aeadc82a3b642a802cbfb03aed8"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6968,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6968",
+    "title": "Research: Exact scalar tables",
+    "state": "open",
+    "created_at": "2026-11-10T03:29:15Z",
+    "updated_at": "2026-11-10T03:29:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "13193a22b1070a74a8580c5d3ea27470443f815a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6969,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6969",
+    "title": "Research: Core/halo source bridge",
+    "state": "open",
+    "created_at": "2026-11-10T03:29:34Z",
+    "updated_at": "2026-11-10T03:29:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "73d5adaba2b7dc662e86eb901e81369a3f73be9f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6970,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6970",
+    "title": "Research: Odd-word precision grid",
+    "state": "open",
+    "created_at": "2026-11-10T03:30:04Z",
+    "updated_at": "2026-11-10T03:30:04Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "e45e844303e04947cf6591fb46b43bf8a7bc5356"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6971,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6971",
+    "title": "Research: SWAP tables",
+    "state": "open",
+    "created_at": "2026-11-10T03:30:29Z",
+    "updated_at": "2026-11-10T03:30:29Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "e2e707fd99125ef0005ad16435d90e5d3a82f31e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6972,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6972",
+    "title": "Research: Nonempty production windows",
+    "state": "open",
+    "created_at": "2026-11-10T03:30:55Z",
+    "updated_at": "2026-11-10T03:30:55Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "f248a5f1b4f9ad5f0a5c9c7d7e81dea52c9afdcf"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6973,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6973",
+    "title": "Research: Group scale ledger",
+    "state": "open",
+    "created_at": "2026-11-10T03:31:23Z",
+    "updated_at": "2026-11-10T03:31:23Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "76a84e1c4bfa4035e5ee85410dbfc4541f0da168"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6974,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6974",
+    "title": "Research: Atomic MOVE",
+    "state": "open",
+    "created_at": "2026-11-10T03:32:54Z",
+    "updated_at": "2026-11-10T03:32:54Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "41b67c290c1533de25bfba19d4dec27e1aaf0970"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6975,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6975",
+    "title": "Research: QSELF ownership lowering",
+    "state": "open",
+    "created_at": "2026-11-10T03:33:09Z",
+    "updated_at": "2026-11-10T03:33:09Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "4e2fd1b6abed49c202a057fd5c73ead0a460f976"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6976,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6976",
+    "title": "Research: Remaining diagonal",
+    "state": "open",
+    "created_at": "2026-11-10T03:33:18Z",
+    "updated_at": "2026-11-10T03:33:18Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "b00d64b6204e83d468dde2db7480a2822e6940aa"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6977,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6977",
+    "title": "Research: Production Reference gap",
+    "state": "open",
+    "created_at": "2026-11-10T03:33:52Z",
+    "updated_at": "2026-11-10T03:33:52Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "9a07c08c014259bb23c0a2b5844a1b67d91892f6"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6978,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6978",
+    "title": "Research: Source-complete native leaves",
+    "state": "open",
+    "created_at": "2026-11-10T03:34:10Z",
+    "updated_at": "2026-11-10T03:34:10Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "12e58dfdad9371a26f9978c814779da344fd80b4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6979,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6979",
+    "title": "Research: Serial monomial leaf",
+    "state": "open",
+    "created_at": "2026-11-10T03:35:03Z",
+    "updated_at": "2026-11-10T03:35:03Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "2ec95e06c2a16e73f9da9a8fe41912710135daaf"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6980,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6980",
+    "title": "Research: QUERY-only caller",
+    "state": "open",
+    "created_at": "2026-11-10T03:35:32Z",
+    "updated_at": "2026-11-10T03:35:32Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "617903497387a98f7ca929ad0b6928dd32abffec"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6981,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6981",
+    "title": "Research: Reference/ideal compression join",
+    "state": "open",
+    "created_at": "2026-11-10T03:35:43Z",
+    "updated_at": "2026-11-10T03:35:43Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "4509310a9a58d4c41c74029f899cbf36be1af9a1"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6982,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6982",
+    "title": "Research: Fine-catalogue obstruction",
+    "state": "open",
+    "created_at": "2026-11-10T03:36:34Z",
+    "updated_at": "2026-11-10T03:36:34Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "96211247643059ae48af4c7d9dc960034798935d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6983,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6983",
+    "title": "Research: Complete direct MOVE",
+    "state": "open",
+    "created_at": "2026-11-10T03:36:47Z",
+    "updated_at": "2026-11-10T03:36:47Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "a61652557fa88cd0b24c1b28445cf519f6b1213e"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6984,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6984",
+    "title": "Research: Restricted three-query optimum",
+    "state": "open",
+    "created_at": "2026-11-10T03:36:59Z",
+    "updated_at": "2026-11-10T03:36:59Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "18041465a778f8cad956dc1c31f1ee2420eb1b97"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6985,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6985",
+    "title": "Research: Current-word precision envelope",
+    "state": "open",
+    "created_at": "2026-11-10T03:37:12Z",
+    "updated_at": "2026-11-10T03:37:12Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "56bc9383594a3efc303148e00bb746851abd1ed5"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6986,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6986",
+    "title": "Research: Leaf cutoff transport",
+    "state": "open",
+    "created_at": "2026-11-10T03:37:30Z",
+    "updated_at": "2026-11-10T03:37:30Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "785000b8f400609943cd9ff04843317af4ae67a4"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6987,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6987",
+    "title": "Research: Cached chirp/cyclic join",
+    "state": "open",
+    "created_at": "2026-11-10T03:38:05Z",
+    "updated_at": "2026-11-10T03:38:05Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "8db3cc1e98ba295cec4d752478431515e159c34f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6988,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6988",
+    "title": "Research: Rounded scalar tables",
+    "state": "open",
+    "created_at": "2026-11-10T03:38:15Z",
+    "updated_at": "2026-11-10T03:38:15Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "6476455a1cf7cd29d6a2a81c3b6f02fd3a3bbf57"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6989,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6989",
+    "title": "Research: Rounded positive leaf",
+    "state": "open",
+    "created_at": "2026-11-10T03:38:36Z",
+    "updated_at": "2026-11-10T03:38:36Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "3a6b01655f9f0893cef52563a63d79b3295bc67d"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6990,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6990",
+    "title": "Research: Compact rounded ADD",
+    "state": "open",
+    "created_at": "2026-11-10T03:38:48Z",
+    "updated_at": "2026-11-10T03:38:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "38cd824c60f2bb5c6f2603f848a9487cb3a57965"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6991,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6991",
+    "title": "Research: Fine expansion admission",
+    "state": "open",
+    "created_at": "2026-11-10T03:39:16Z",
+    "updated_at": "2026-11-10T03:39:16Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "ceb3947872f996789072e37a56c0758c7720b844"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6992,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6992",
+    "title": "Research: Rounded global Lambda",
+    "state": "open",
+    "created_at": "2026-11-10T03:39:57Z",
+    "updated_at": "2026-11-10T03:39:57Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "591394d8b791f6e8ac6e1aa36f8c3ea5389178c2"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6993,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6993",
+    "title": "Research: Deferred Gaussian recovery",
+    "state": "open",
+    "created_at": "2026-11-10T03:40:08Z",
+    "updated_at": "2026-11-10T03:40:08Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "1ab10aa78c4b27345c76806d1d32c7b9de481219"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6994,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6994",
+    "title": "Research: Actual #6936 MOVE port",
+    "state": "open",
+    "created_at": "2026-11-10T03:40:22Z",
+    "updated_at": "2026-11-10T03:40:22Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "3e1309c2c28d61e854aae1fe6545509b9fe7684f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6995,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6995",
+    "title": "Research: Original-q field extraction",
+    "state": "open",
+    "created_at": "2026-11-10T03:40:37Z",
+    "updated_at": "2026-11-10T03:40:37Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "5355dd7f95fb3364de123d5c468d13cd8124416f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6996,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6996",
+    "title": "Research: Rounded selected MOVE",
+    "state": "open",
+    "created_at": "2026-11-10T03:40:48Z",
+    "updated_at": "2026-11-10T03:40:48Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "e573186e695f85cb5dbb32ee13ba20ca3159d62a"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6997,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6997",
+    "title": "Research: Serial pass lower bound",
+    "state": "open",
+    "created_at": "2026-11-10T03:41:25Z",
+    "updated_at": "2026-11-10T03:41:25Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "3775157c26dc752feab5d888d416b0cfa11c04a7"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6998,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6998",
+    "title": "Research: ADD tariff conversion audit",
+    "state": "open",
+    "created_at": "2026-11-10T03:41:33Z",
+    "updated_at": "2026-11-10T03:41:33Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "8603be687bd309e167405c136459ca899497277f"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
+  },
+  {
+    "number": 6999,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6999",
+    "title": "Research: Scalar finite-state microcontrol",
+    "state": "open",
+    "created_at": "2026-11-10T03:41:40Z",
+    "updated_at": "2026-11-10T03:41:41Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "CubeJerry",
+      "html_url": "https://github.com/CubeJerry"
+    },
+    "head": {
+      "sha": "1a13aa8c5b891685ca0c035c898e12da55961b12"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

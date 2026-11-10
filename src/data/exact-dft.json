@@ -657,8 +657,8 @@
       },
       "rerun_status": {
         "state": "passed",
-        "checked_at": "2026-11-10T03:13:48.882190Z",
-        "receipt_path": "sources/direct-issue-190-42734672790-1-lean.json"
+        "checked_at": "2026-11-10T03:35:20.945301Z",
+        "receipt_path": "sources/direct-issue-190-42734672790-1.json"
       }
     },
     {
@@ -1406,7 +1406,7 @@
       "repo": "AnanasClassic/fft-power-saving-lean",
       "site_badge": false,
       "eligible_for_record": false,
-      "proof_status": "Lean and permitted-axiom audit passed; nanoda advisory check pending",
+      "proof_status": "Lean and nanoda passed; permitted-axiom audit passed",
       "upstream_tier": "verified",
       "site_tier": "verified",
       "comparison_key": "exact-dft/uniform-exact-arithmetic/v1",
@@ -1621,5 +1621,5 @@
       "verification": "passed"
     }
   },
-  "updated_at": "2026-11-10T03:30:48Z"
+  "updated_at": "2026-11-10T04:27:01Z"
 }
