@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "status": "timeout",
+  "checked_at": "2026-11-10T00:15:39.762847Z",
+  "description": "The proof check ran out of time; this is not a verdict on the proof",
+  "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42648121034",
+  "artifact_path": "sources/direct-issue-187-42648121034-1.zip",
+  "artifact_sha256": "be6cf02b3b71cd2a89dca96eae6e2075000baf28e93237466afac3b79231aefe",
+  "source_receipt_path": "sources/direct-issue-187-42648121034-1-source.json"
+}

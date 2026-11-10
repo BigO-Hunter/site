@@ -134713,5 +134713,26 @@
       "ref": "main"
     },
     "draft": false
+  },
+  {
+    "number": 6939,
+    "html_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/6939",
+    "title": "P104: Whitehead native objects and price targets",
+    "state": "open",
+    "created_at": "2026-11-09T23:25:17Z",
+    "updated_at": "2026-11-09T23:38:30Z",
+    "closed_at": null,
+    "merged_at": null,
+    "user": {
+      "login": "DreamingOfClouds",
+      "html_url": "https://github.com/DreamingOfClouds"
+    },
+    "head": {
+      "sha": "3cc206cfa79264b0e22adfe924368240854395ee"
+    },
+    "base": {
+      "ref": "main"
+    },
+    "draft": false
   }
 ]

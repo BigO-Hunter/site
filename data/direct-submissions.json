@@ -21,7 +21,7 @@
         "source_commit": "38d22084f270723dbe769b94bd690c372a08e390",
         "source_url": "https://github.com/AnanasClassic/fft-power-saving-lean",
         "authors": [],
-        "workflow_conclusion": null,
+        "workflow_conclusion": "failure",
         "issue_submitter": "AnanasClassic",
         "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42648121034",
         "checked_at": "2026-11-09T18:00:00.843718Z",
@@ -41,6 +41,17 @@
         "controller_fingerprint": "58bc1fd000fb3e6eb1ed0b48b729c1019d74369f87d68f1c370386b38479c74c",
         "pr_identity": null,
         "source_file": "Submission.lean"
+      }
+    },
+    "direct-issue-187": {
+      "route": "issue",
+      "submission": {
+        "schema_version": 1,
+        "problem": "catalan",
+        "repo_url": "https://github.com/BigO-Hunter/catalan-295-litsey-port",
+        "commit": "588b7d649184ed7c8c761db73ff1542932614fb3",
+        "bound": "295",
+        "authors": []
       }
     },
     "direct-issue-186": {
@@ -4654,6 +4665,49 @@
         "pr_identity": null,
         "source_file": "Submission.lean"
       }
+    },
+    "direct-issue-187:8fe7c8ced358d93c23c7f09c7210d722ded289f89fe2da2da6097e390011d022": {
+      "key": "direct-issue-187",
+      "submission": {
+        "schema_version": 1,
+        "problem": "catalan",
+        "repo_url": "https://github.com/BigO-Hunter/catalan-295-litsey-port",
+        "commit": "588b7d649184ed7c8c761db73ff1542932614fb3",
+        "bound": "295",
+        "authors": []
+      },
+      "decision": "timeout",
+      "evidence": {
+        "decision": "timeout",
+        "reason": "The proof check ran out of time; this is not a verdict on the proof",
+        "id": "direct-187-8fe7c8ced358d93c23c7f09c7210d722ded289f89fe2da2da6097e390011d022",
+        "problem_id": "other/catalan",
+        "score": "295",
+        "score_relation": "attained",
+        "source_commit": "588b7d649184ed7c8c761db73ff1542932614fb3",
+        "source_url": "https://github.com/BigO-Hunter/catalan-295-litsey-port",
+        "authors": [],
+        "workflow_conclusion": "failure",
+        "issue_submitter": "darkhipo",
+        "receipt_url": "https://github.com/bigospeedrun/verifier/actions/runs/42648121034",
+        "checked_at": "2026-11-10T00:15:39.762847Z",
+        "issue_created_at": "2026-11-08T21:56:08Z",
+        "issue_updated_at_at_verification": "2026-11-09T15:31:09Z",
+        "issue_updated_at_at_import": "2026-11-10T00:15:59Z",
+        "derivation_hold": false,
+        "review_required": [
+          "authorship",
+          "first publication date",
+          "historical record eligibility"
+        ],
+        "receipt_path": "sources/direct-issue-187-42648121034-1.json",
+        "receipt_sha256": "24dace86f8cf613feb8d5b454cc937942cd1dc7a0330cbe35186a8efacd42302",
+        "policy_hash": "f8fbea160900e7fa0182808e91d81ee32cf5a2f78bc5b2f9b75d3dc87506eb88",
+        "result_artifact_id": 13722881806,
+        "controller_fingerprint": "58bc1fd000fb3e6eb1ed0b48b729c1019d74369f87d68f1c370386b38479c74c",
+        "pr_identity": null,
+        "source_file": "Submission.lean"
+      }
     }
   },
   "claimed_only_cache": {
@@ -4867,11 +4921,6 @@
     "183": {
       "version": "12a1925b7e4b8a769ed121946bf908dd1c5873b5a2326d7aeeaded444684aa88",
       "updated_at": "2026-11-08T04:02:48Z",
-      "not_verified": true
-    },
-    "187": {
-      "version": "8fe7c8ced358d93c23c7f09c7210d722ded289f89fe2da2da6097e390011d022",
-      "updated_at": "2026-11-09T20:11:22Z",
       "not_verified": true
     }
   }
